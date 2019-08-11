@@ -1,0 +1,44 @@
+{
+	"name": "ainoblocks",
+	"title": "Aino Blocks",
+	"description": "A WordPress block collection for site building.",
+	"version": "0.0.1",
+	"tested_up_to": "5.2",
+	"license": "GPL-2.0",
+	"author": "Elmastudio",
+	"repository": "elmastudio/aino-blocks",
+	"bugs": {
+		"url": "https://github.com/elmastudio/aino-blocks/issues"
+	},
+	"main": "scr/blocks.js",
+	"scripts": {
+		"dev": "cross-env webpack --watch",
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"test:e2e": "wp-scripts test-e2e",
+		"test:unit": "wp-scripts test-unit-js"
+	},
+	"devDependencies": {
+		"@wordpress/babel-preset-default": "^1.2.0",
+		"@wordpress/scripts": "^3.4.0",
+		"babel-core": "^6.26.3",
+		"babel-eslint": "^8.2.3",
+		"babel-loader": "^7.1.4",
+		"classnames": "^2.2.5",
+		"cross-env": "^5.1.5",
+		"css-loader": "^3.2.0",
+		"eslint": "^4.19.1",
+		"extract-text-webpack-plugin": "^3.0.2",
+		"node-sass": "^4.9.0",
+		"postcss-loader": "^2.1.5",
+		"raw-loader": "^0.5.1",
+		"sass-loader": "^6.0.7",
+		"style-loader": "^0.19.1",
+		"webpack": "^3.11.0"
+	}
+}

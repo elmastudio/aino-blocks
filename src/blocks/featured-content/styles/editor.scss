@@ -1,0 +1,59 @@
+.wp-block-ainoblocks-featured-content {
+	grid-template-areas:
+		"featured-content-media featured-content-content"
+		"resizer resizer";
+	align-items: center;
+}
+
+.wp-block-ainoblocks-featured-content.has-media-on-the-right {
+	grid-template-areas:
+		"featured-content-content featured-content-media"
+		"resizer resizer";
+}
+
+.wp-block-ainoblocks-featured-content .__resizable_base__ {
+	grid-area: resizer;
+}
+
+.wp-block-ainoblocks-featured-content .editor-media-container__resizer {
+	grid-area: featured-content-media;
+	// The resizer sets a inline width but as we are using a grid layout,
+	// we set the width on container.
+	width: 100% !important;
+}
+
+.wp-block-ainoblocks-featured-content.is-image-fill .editor-media-container__resizer {
+	// The resizer sets an inline height but for the image fill we set it to full height.
+	height: 100% !important;
+}
+
+.wp-block-ainoblocks-featured-content .block-editor-inner-blocks {
+	word-break: break-word;
+	grid-area: featured-content-content;
+	text-align: initial;
+	padding: 0 8% 0 8%;
+}
+
+.wp-block-ainoblocks-featured-content > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-editor-block-list__block {
+	max-width: unset;
+}
+
+div.block-library-ainoblocks-featured-content__media-container {
+	min-height: 500px;
+}
+
+figure.block-library-ainoblocks-featured-content__media-container {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.wp-block-ainoblocks-featured-content .block-library-ainoblocks-featured-content__media-container img,
+.wp-block-ainoblocks-featured-content .block-library-ainoblocks-featured-content__media-container video {
+	vertical-align: middle;
+	width: 100%;
+}
+
+.editor-media-container__resizer .components-resizable-box__handle {
+	display: none;
+}

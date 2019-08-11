@@ -1,0 +1,60 @@
+.wp-block-ainoblocks-author {
+
+	& p {
+		margin: 0;
+	}
+
+	&__avatar {
+		padding-bottom: 4px;
+	}
+
+	&__avatar img {
+		width: 40px;
+	}
+
+	&.avatar-m .wp-block-ainoblocks-author__avatar img {
+		width: 56px;
+	}
+
+	&__text-wrapper {
+		font-size: 14px;
+		line-height: 1.43;
+		margin: 0;
+	}
+
+	&__name {
+		font-weight: bold;
+	}
+
+	&__info {
+		display: block;
+		color: #b3b9ce;
+	}
+
+	&.floated-right, &.floated-left {
+		display: flex;
+		align-items: center;
+	}
+
+	&.floated-left {
+		flex-direction: row;
+		.wp-block-ainoblocks-author__avatar {
+			padding: 0 12px 0 0;
+		}
+	}
+
+	&.floated-right {
+		flex-direction: row-reverse;
+		.wp-block-ainoblocks-author__avatar {
+			padding: 0 0 0 12px;
+		}
+	}
+
+	&__image-wrapper {
+		line-height: 0;
+	}
+
+	.wp-block-ainoblocks-card & {
+		padding-top: 16px;
+	}
+}

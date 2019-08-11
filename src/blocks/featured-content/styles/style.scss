@@ -1,0 +1,101 @@
+.wp-block-ainoblocks-featured-content {
+	display: block;
+	@media (min-width: 52.500em) {
+		display: grid;
+	}
+	grid-template-rows: auto;
+	align-items: center;
+	grid-template-areas: "featured-content-media featured-content-content";
+	grid-template-columns: 48% auto;
+
+	&.has-media-on-the-right {
+		grid-template-areas: "featured-content-content featured-content-media";
+		grid-template-columns: auto 48%;
+	}
+}
+
+.wp-block-ainoblocks-featured-content.is-vertically-aligned-top {
+	align-items: start;
+}
+
+.wp-block-ainoblocks-featured-content.is-vertically-aligned-center {
+	align-items: center;
+}
+
+.wp-block-ainoblocks-featured-content.is-vertically-aligned-bottom {
+	align-items: end;
+}
+
+.wp-block-ainoblocks-featured-content .wp-block-ainoblocks-featured-content__media {
+	grid-area: featured-content-media;
+	margin: 0;
+}
+
+.wp-block-ainoblocks-featured-content .wp-block-ainoblocks-featured-content__content {
+	word-break: break-word;
+	grid-area: featured-content-content;
+	padding: 24px 0 0;
+	width: 100%;
+
+	p {
+		margin: 0;
+	}
+
+	h1:first-child,
+	h2:first-child,
+	h3:first-child,
+	h4:first-child,
+	h5:first-child,
+	h6:first-child {
+		margin-top: 0;
+	}
+
+	h1:not(:first-child),
+	h2:not(:first-child),
+	h3:not(:first-child),
+	h4:not(:first-child),
+	h5:not(:first-child),
+	h6:not(:first-child) {
+		margin-top: 8px;
+	}
+
+	.wp-block-button {
+		margin: 24px 0 0;
+	}
+
+	@media (min-width: 52.500em) {
+		padding: 0 0 0 24.358974358974359%;
+	}
+}
+
+.wp-block-ainoblocks-featured-content.has-media-on-the-right .wp-block-ainoblocks-featured-content__content {
+
+	@media (min-width: 52.500em) {
+		padding: 0 24.358974358974359% 0 0;
+	}
+}
+
+.wp-block-ainoblocks-featured-content > figure > img,
+.wp-block-ainoblocks-featured-content > figure > video {
+	max-width: unset;
+	width: 100%;
+	vertical-align: middle;
+}
+
+.wp-block-ainoblocks-featured-content.is-image-fill figure {
+	height: 100%;
+	min-height: 250px;
+	background-size: cover;
+}
+
+.wp-block-ainoblocks-featured-content.is-image-fill figure > img {
+	// The image is visually hidden but accessible to assistive technologies.
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
