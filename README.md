@@ -1,2 +1,2 @@
-# aino-blocks
+# Aino Blocks
 Aino Blocks WordPress Plugin
