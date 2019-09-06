@@ -39,6 +39,11 @@
 		"raw-loader": "^0.5.1",
 		"sass-loader": "^6.0.7",
 		"style-loader": "^0.19.1",
+		"memize": "^1.0.5",
 		"webpack": "^3.11.0"
+	},
+	"dependencies": {
+		"@types/lodash.memoize": "^4.1.6",
+		"memize": "^1.0.5"
 	}
 }

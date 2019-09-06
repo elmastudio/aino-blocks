@@ -1,0 +1,32 @@
+.wp-block-ainoblocks-advanced-buttons {
+
+	.wp-block-ainoblocks-advanced-buttons__inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.editor-inner-blocks>.editor-block-list__layout {
+		display: flex;
+		justify-content: center;
+	}
+
+	&.alignleft .wp-block-ainoblocks-advanced-buttons__inner,
+	.alignleft>.editor-inner-blocks>.editor-block-list__layout {
+		justify-content: flex-start;
+	}
+
+	&.alignright .wp-block-ainoblocks-advanced-buttons__inner,
+	.alignright>.editor-inner-blocks>.editor-block-list__layout {
+		justify-content: flex-end;
+	}
+}
+
+#page .wp-block-ainoblocks-advanced-buttons {
+
+	.alignleft,
+	.alignright {
+		float: none;
+		display: block;
+	}
+}
