@@ -7,16 +7,15 @@ import classnames from 'classnames';
  * WordPress dependencies
  */
 const { __, _x } = wp.i18n;
-const {
-	Component,
-	Fragment,
-} = wp.element;
+const { Component, Fragment } = wp.element;
 const {
 	InspectorControls,
 	BlockControls,
 	BlockAlignmentToolbar,
 	BlockVerticalAlignmentToolbar,
 	PanelColorSettings,
+	getColorClassName,
+	withColors,
 	InnerBlocks,
 } = wp.blockEditor;
 const {
