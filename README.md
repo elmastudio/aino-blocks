@@ -8,7 +8,6 @@ __Tested up to:__ WordPress 5.2
 __License:__ GPLv2 or later
 __License URI:__ http://www.gnu.org/licenses/gpl-2.0.html
 
-<<<<<<< Updated upstream
 #### :pushpin:  Please note:
 It’s important to install the official Gutenberg plugin in combination with the Aino blocks plugin, since we are working with the group block which is currently not yet published as a core plugin, but will be in the next WordPress update.
 
