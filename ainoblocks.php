@@ -3,8 +3,8 @@
  * Plugin Name: Aino Blocks - Site Building Block Collection
  * Plugin URI: https://wpaino.com
  * Description: A collection of easy-to-use site building blocks for the WordPress Gutenberg editor.
- * Version: 0.0.1
- * Author: elmastudio
+ * Version: 0.0.2
+ * Author: Elmastudio
  * Author URI: https://www.elmastudio.de/en/
  * Text Domain: ainoblocks
  * Domain Path: /languages
