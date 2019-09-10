@@ -14,8 +14,6 @@ It’s important to install the official Gutenberg plugin in combination with th
 
 ## Changelog  
 =======
-## Changelog
->>>>>>> Stashed changes
 
 ### 0.0.2
 New: Advanced Button Block
