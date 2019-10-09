@@ -20,7 +20,7 @@ const { attributes, name } = metadata;
 
 const settings = {
 	title: __('Advanced Buttons', 'ainoblocks'),
-	description: __('A row of button links with advanced customization options.', 'ainoblocks'),
+	description: __('A row of buttons with advanced customization options.', 'ainoblocks'),
 	icon: icons.advancedButtons,
 	keywords: [
 		__('button', 'ainoblocks'),

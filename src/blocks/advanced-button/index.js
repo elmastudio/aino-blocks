@@ -32,7 +32,7 @@ const settings = {
 	],
 	attributes,
 	styles: [
-		{ name: 'primary', label: _x('Primary', 'block style'), isDefault: true },
+		{ name: 'primary', label: _x('Fill', 'block style'), isDefault: true },
 		{ name: 'outline', label: __('Outline') },
 		{ name: 'ghost', label: _x('Ghost', 'block style') },
 	],

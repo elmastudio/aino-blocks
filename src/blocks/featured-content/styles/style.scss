@@ -1,8 +1,10 @@
 .wp-block-ainoblocks-featured-content {
 	display: block;
-	@media (min-width: 52.500em) {
+
+	@media (min-width: 48.500em) {
 		display: grid;
 	}
+
 	grid-template-rows: auto;
 	align-items: center;
 	grid-template-areas: "featured-content-media featured-content-content";
@@ -59,18 +61,18 @@
 		margin-top: 8px;
 	}
 
-	.wp-block-button {
+	.wp-block-ainoblocks-advanced-buttons {
 		margin: 24px 0 0;
 	}
 
-	@media (min-width: 52.500em) {
+	@media (min-width: 48.500em) {
 		padding: 0 0 0 24.358974358974359%;
 	}
 }
 
 .wp-block-ainoblocks-featured-content.has-media-on-the-right .wp-block-ainoblocks-featured-content__content {
 
-	@media (min-width: 52.500em) {
+	@media (min-width: 48.500em) {
 		padding: 0 24.358974358974359% 0 0;
 	}
 }

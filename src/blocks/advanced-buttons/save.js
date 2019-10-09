@@ -10,13 +10,14 @@ const { InnerBlocks } = wp.blockEditor;
 
 export default function save({ attributes, className }) {
 	const {
+		align,
 		items,
 	} = attributes;
 
 	const innerClasses = classnames(
 		'wp-block-ainoblocks-advanced-buttons__inner', {
-
-		}
+		'has-margins': items > 1,
+	}
 	);
 
 	return (

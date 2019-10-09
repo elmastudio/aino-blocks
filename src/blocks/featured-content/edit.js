@@ -22,7 +22,6 @@ const {
 	TextareaControl,
 	ToggleControl,
 	Toolbar,
-	ExternalLink,
 	FocalPointPicker,
 } = wp.components;
 
@@ -34,13 +33,13 @@ import MediaContainer from './media-container';
 /**
  * Constants
  */
-const ALLOWED_BLOCKS = ['core/image', 'core/spacer', 'core/heading', 'core/paragraph', 'core/button', 'core/list'];
+const ALLOWED_BLOCKS = ['core/image', 'core/spacer', 'core/heading', 'core/paragraph', 'core/button', 'ainoblocks/advanced-button', 'ainoblocks/advanced-buttons'];
 
 const TEMPLATE = [
 	['core/paragraph', { placeholder: _x('Subtitle…', 'content placeholder'), content: _x('Add a Subtitle', 'content placeholder') }],
 	['core/heading', { placeholder: _x('Heading…', 'content placeholder'), content: _x('Add a Heading', 'content placeholder'), level: 2, className: 'App', }],
 	['core/paragraph', { placeholder: _x('Content…', 'content placeholder'), content: _x('Replace the sample text with your content.', 'content placeholder') }],
-	['core/button', { placeholder: 'Example text' }],
+	['ainoblocks/advanced-buttons'],
 ];
 
 /**

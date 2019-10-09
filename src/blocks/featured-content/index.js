@@ -25,7 +25,7 @@ const { registerBlockType } = wp.blocks;
  */
 export default registerBlockType('ainoblocks/featured-content', {
 	title: __('Featured Content', 'ainoblocks'),
-	description: __('Feature content with media, headline, text and buttons.', 'ainoblocks'),
+	description: __('Feature content with media, heading, text and buttons.', 'ainoblocks'),
 	icon: icons.featuredContent,
 	keywords: [
 		__('image', 'ainoblocks'),

@@ -1,4 +1,5 @@
 .block-editor-block-list__block[data-type="ainoblocks/advanced-button"] {
+
 	&[data-align="center"] {
 		text-align: center;
 	}
@@ -6,6 +7,10 @@
 	&[data-align="right"] {
 		/*!rtl:ignore*/
 		text-align: right;
+	}
+
+	.block-editor-url-input input[type=text] {
+		width: 100%;
 	}
 }
 

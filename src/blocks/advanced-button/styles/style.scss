@@ -60,12 +60,7 @@
 		font-size: 14px;
 		text-transform: uppercase;
 		line-height: 1.36;
-		letter-spacing: 3px;
-	}
-
-	&.is-fullwidth {
-		width: 100%;
-		display: block;
+		letter-spacing: 2px;
 	}
 }
 
@@ -77,10 +72,10 @@
 	}
 
 	.is-style-primary & {
-		box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+		box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
 
 		&:hover {
-			box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+			box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
 		}
 	}
 
