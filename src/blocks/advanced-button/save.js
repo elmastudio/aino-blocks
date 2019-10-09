@@ -24,10 +24,7 @@ export default function save({ attributes }) {
 		rel,
 		size,
 		borderRadius,
-		marginLeft,
-		marginRight,
 		uppercase,
-		fullwidth,
 	} = attributes;
 
 	const textClass = getColorClassName('color', textColor);
@@ -39,14 +36,11 @@ export default function save({ attributes }) {
 		'has-background': backgroundColor || customBackgroundColor,
 		[backgroundClass]: backgroundClass,
 		'is-uppercase': uppercase,
-		'is-fullwidth': fullwidth,
 	});
 
 	const buttonStyle = {
 		backgroundColor: backgroundClass ? undefined : customBackgroundColor,
 		color: textClass ? undefined : customTextColor,
-		marginLeft: marginLeft ? marginLeft + 'px' : undefined,
-		marginLeft: marginRight ? marginRight + 'px' : undefined,
 	};
 
 	return (

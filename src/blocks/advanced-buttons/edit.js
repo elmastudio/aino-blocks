@@ -46,13 +46,17 @@ class AdvancedButtonsEdit extends Component {
 		} = this.props;
 
 		const {
+			align,
 			items,
 		} = attributes;
+
+		const classNames = classnames(className, `align${align}`, {
+		});
 
 		const classes = classnames(
 			'wp-block-ainoblocks-advanced-buttons__inner', {
 
-			}
+		}
 		);
 
 		return (
@@ -63,7 +67,7 @@ class AdvancedButtonsEdit extends Component {
 					/>
 				)}
 
-				<div className={className}>
+				<div className={classNames}>
 					<div className={classes}>
 						<InnerBlocks
 							allowedBlocks={ALLOWED_BLOCKS}

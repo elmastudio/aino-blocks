@@ -1,32 +1,37 @@
 .wp-block-ainoblocks-advanced-buttons {
+	display: flex;
 
-	.wp-block-ainoblocks-advanced-buttons__inner {
-		display: flex;
-		align-items: center;
+	&.aligncenter {
 		justify-content: center;
 	}
 
-	.editor-inner-blocks>.editor-block-list__layout {
-		display: flex;
-		justify-content: center;
-	}
-
-	&.alignleft .wp-block-ainoblocks-advanced-buttons__inner,
-	.alignleft>.editor-inner-blocks>.editor-block-list__layout {
+	&.alignleft {
 		justify-content: flex-start;
 	}
 
-	&.alignright .wp-block-ainoblocks-advanced-buttons__inner,
-	.alignright>.editor-inner-blocks>.editor-block-list__layout {
+	&.alignright {
 		justify-content: flex-end;
 	}
-}
 
-#page .wp-block-ainoblocks-advanced-buttons {
+	.wp-block-ainoblocks-advanced-buttons__inner {
 
-	.alignleft,
-	.alignright {
-		float: none;
 		display: block;
+
+		@media (min-width: 37.500em) {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+		.wp-block-ainoblocks-advanced-button {
+
+			@media (min-width: 37.500em) {
+				margin-left: 16px;
+
+				&:first-of-type {
+					margin-left: 0;
+				}
+			}
+		}
 	}
 }

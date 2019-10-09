@@ -114,10 +114,7 @@ class AdvancedButtonEdit extends Component {
 			placeholder,
 			size,
 			borderRadius,
-			marginLeft,
-			marginRight,
 			uppercase,
-			fullwidth,
 		} = attributes;
 
 		const sizeOptions = [
@@ -142,17 +139,15 @@ class AdvancedButtonEdit extends Component {
 					onChange={(value) => setAttributes({ text: value })}
 					className={classnames(
 						'wp-block-ainoblocks-advanced-button__link', size, borderRadius, {
-							'has-custom-background': backgroundColor,
-							'has-custom-text-color': textColor,
-							'is-uppercase': uppercase,
-							'is-fullwidth': fullwidth,
-						}
+						'has-custom-background': backgroundColor,
+						'has-custom-text-color': textColor,
+						'is-uppercase': uppercase,
+					}
 					)}
 					style={{
 						backgroundColor: backgroundColor.color,
 						borderColor: backgroundColor.color,
 						color: textColor.color,
-						marginLeft: marginLeft,
 					}}
 				/>
 				<BaseControl
@@ -166,7 +161,6 @@ class AdvancedButtonEdit extends Component {
 						onChange={(value) => setAttributes({ url: value })}
 						disableSuggestions={!isSelected}
 						id={linkId}
-						isFullWidth
 						hasBorder
 					/>
 				</BaseControl>
@@ -184,31 +178,11 @@ class AdvancedButtonEdit extends Component {
 							options={borderRadiusOptions}
 							onChange={borderRadius => setAttributes({ borderRadius })}
 						/>
-						<RangeControl
-							label={__("Margin Left", "ainoblocks")}
-							value={marginLeft}
-							onChange={marginLeft => setAttributes({ marginLeft })}
-							min={0}
-							max={48}
-						/>
-						<RangeControl
-							label={__("Margin Right", "ainoblocks")}
-							value={marginRight}
-							onChange={marginRight => setAttributes({ marginRight })}
-							min={0}
-							max={48}
-						/>
 						<ToggleControl
 							label={__('Uppercase Text', 'ainoblocks')}
 							checked={!!uppercase}
 							onChange={() => setAttributes({ uppercase: !uppercase })}
 							help={!!uppercase ? __('Uppercase text is used.', 'ainoblocks') : __('Toggle for uppercase text.', 'ainoblocks')}
-						/>
-						<ToggleControl
-							label={__('Full Width', 'ainoblocks')}
-							checked={!!fullwidth}
-							onChange={() => setAttributes({ fullwidth: !fullwidth })}
-							help={!!fullwidth ? __('Button stretches to full width.', 'ainoblocks') : __('Toggle for full width button.', 'ainoblocks')}
 						/>
 					</PanelBody>
 					<PanelColorSettings

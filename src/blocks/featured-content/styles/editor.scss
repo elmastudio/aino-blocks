@@ -31,8 +31,23 @@
 	word-break: break-word;
 	grid-area: featured-content-content;
 	text-align: initial;
-	padding: 0 8% 0 8%;
+	justify-self: end;
+	@media (min-width: 76.500em) {
+		max-width: 472px;
+	}
+
+	.block-editor-inner-blocks {
+		max-width: 100%;
+		padding-left: 0;
+	}
+
+	.block-editor-block-list__block .block-editor-block-list__layout {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
+
+
 
 .wp-block-ainoblocks-featured-content > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-editor-block-list__block {
 	max-width: unset;
@@ -52,6 +67,7 @@ figure.block-library-ainoblocks-featured-content__media-container {
 .wp-block-ainoblocks-featured-content .block-library-ainoblocks-featured-content__media-container video {
 	vertical-align: middle;
 	width: 100%;
+	max-width: 576px;
 }
 
 .editor-media-container__resizer .components-resizable-box__handle {

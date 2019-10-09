@@ -42,35 +42,17 @@
 			"type": "string",
 			"default": "radius-round"
 		},
-		"marginLeft": {
-			"type": "number",
-			"default": "0"
-		},
-		"marginRight": {
-			"type": "number",
-			"default": "0"
-		},
 		"uppercase": {
-			"type": "boolean",
-			"default": false
-		},
-		"fullwidth": {
 			"type": "boolean",
 			"default": false
 		},
 		"backgroundColor": {
 			"type": "string"
 		},
-		"backgroundHoverColor": {
-			"type": "string"
-		},
 		"textColor": {
 			"type": "string"
 		},
 		"customBackgroundColor": {
-			"type": "string"
-		},
-		"customBackgroundHoverColor": {
 			"type": "string"
 		},
 		"customTextColor": {
