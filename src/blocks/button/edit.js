@@ -35,7 +35,7 @@ const { getComputedStyle } = window;
 
 const applyFallbackStyles = withFallbackStyles((node, ownProps) => {
 	if (node) {
-		node.classList.add('wp-block-ainoblocks-advanced-button-wrapper');
+		node.classList.add('wp-block-ainoblocks-button-wrapper');
 	}
 
 	const { textColor, backgroundColor } = ownProps;
@@ -53,7 +53,7 @@ const NEW_TAB_REL = 'noreferrer noopener';
 /**
  * Block edit function
  */
-class AdvancedButtonEdit extends Component {
+class buttonEdit extends Component {
 
 	constructor() {
 		super(...arguments);
@@ -95,7 +95,6 @@ class AdvancedButtonEdit extends Component {
 		const {
 			attributes,
 			backgroundColor,
-			backgroundHoverColor,
 			textColor,
 			setBackgroundColor,
 			setTextColor,
@@ -129,7 +128,7 @@ class AdvancedButtonEdit extends Component {
 			{ value: 'radius-circular', label: __('circular', 'ainoblocks') }
 		];
 
-		const linkId = `wp-block-ainoblocks-advanced-button__inline-link-${instanceId}`;
+		const linkId = `wp-block-ainoblocks-button__inline-link-${instanceId}`;
 
 		return (
 			<div className={className} title={title}>
@@ -138,7 +137,7 @@ class AdvancedButtonEdit extends Component {
 					value={text}
 					onChange={(value) => setAttributes({ text: value })}
 					className={classnames(
-						'wp-block-ainoblocks-advanced-button__link', size, borderRadius, {
+						'wp-block-ainoblocks-button__link', size, borderRadius, {
 						'has-custom-background': backgroundColor,
 						'has-custom-text-color': textColor,
 						'is-uppercase': uppercase,
@@ -152,10 +151,10 @@ class AdvancedButtonEdit extends Component {
 				/>
 				<BaseControl
 					label={__('Link', 'ainoblocks')}
-					className="wp-block-ainoblocks-advanced-button__inline-link"
+					className="wp-block-ainoblocks-button__inline-link"
 					id={linkId}>
 					<URLInput
-						className="wp-block-ainoblocks-advanced-button__inline-link-input"
+						className="wp-block-ainoblocks-button__inline-link-input"
 						value={url}
 						autoFocus={false}
 						onChange={(value) => setAttributes({ url: value })}
@@ -165,7 +164,7 @@ class AdvancedButtonEdit extends Component {
 					/>
 				</BaseControl>
 				<InspectorControls>
-					<PanelBody title={__('Advanced Button Settings', 'ainoblocks')}>
+					<PanelBody title={__('Button Settings', 'ainoblocks')}>
 						<SelectControl
 							label={__('Size', 'ainoblocks')}
 							value={size}
@@ -228,4 +227,4 @@ export default compose([
 	withInstanceId,
 	withColors('backgroundColor', { textColor: 'color' }),
 	applyFallbackStyles,
-])(AdvancedButtonEdit);
+])(buttonEdit);

@@ -1,0 +1,29 @@
+{
+	"name": "badge",
+	"category": "ainoblocks",
+	"attributes": {
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "span"
+		},
+		"placeholder": {
+			"type": "string"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"alignment": {
+			"type": "string"
+		},
+		"borderRadius": {
+			"type": "number"
+		},
+		"gradient": {
+			"type": "string"
+		}
+	}
+}

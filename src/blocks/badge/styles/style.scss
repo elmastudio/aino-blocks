@@ -1,0 +1,17 @@
+.wp-block-ainoblocks-badge {
+
+	margin: 0 0 24px;
+
+	& span {
+		padding: 7px 16px;
+		font-size: 13px;
+		line-height: 0.92;
+		background: #616aff;
+		color: #fff;
+	}
+
+	@media (min-width: 48.5em) {
+		margin: 0 0 32px;
+	}
+
+}

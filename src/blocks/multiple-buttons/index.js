@@ -19,23 +19,20 @@ import './styles/editor.scss';
 const { attributes, name } = metadata;
 
 const settings = {
-	title: __('Advanced Button', 'ainoblocks'),
-	description: __('A single button within the Advanced Buttons block.', 'ainoblocks'),
-	parent: ['ainoblocks/advanced-buttons'],
-	icon: icons.advancedButton,
+	title: __('Multiple Buttons', 'ainoblocks'),
+	description: __('A row of buttons with customization options.', 'ainoblocks'),
+	icon: icons.multipleButtons,
 	keywords: [
 		__('button', 'ainoblocks'),
+		__('buttons', 'ainoblocks'),
 		__('link', 'ainoblocks'),
 		__('cta', 'ainoblocks'),
-		__('buttons', 'ainoblocks'),
 		__('aino blocks', 'ainoblocks'),
 	],
 	attributes,
-	styles: [
-		{ name: 'primary', label: _x('Fill', 'block style'), isDefault: true },
-		{ name: 'outline', label: __('Outline') },
-		{ name: 'ghost', label: _x('Ghost', 'block style') },
-	],
+	supports: {
+		align: ['left', 'right', 'center'],
+	},
 	edit,
 	save,
 };

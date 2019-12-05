@@ -6,7 +6,7 @@ const { __, _x } = wp.i18n;
 /**
  * Internal dependencies
  */
-import icons from './../../utils/icons';
+import icon from './icon';
 import edit from './edit';
 import metadata from './block.json';
 import save from './save';
@@ -19,20 +19,20 @@ import './styles/editor.scss';
 const { attributes, name } = metadata;
 
 const settings = {
-	title: __('Advanced Buttons', 'ainoblocks'),
-	description: __('A row of buttons with advanced customization options.', 'ainoblocks'),
-	icon: icons.advancedButtons,
+	title: __('Hero', 'ainoblocks'),
+	description: __('Include a fullscreen featured header area at the top of your front page. You can add an image or video, multiple buttons, a heading, and explanation text.', 'ainoblocks'),
+	icon,
 	keywords: [
-		__('button', 'ainoblocks'),
-		__('buttons', 'ainoblocks'),
-		__('link', 'ainoblocks'),
-		__('cta', 'ainoblocks'),
+		__('header', 'ainoblocks'),
+		__('hero', 'ainoblocks'),
+		__('featured', 'ainoblocks'),
+		__('front page', 'ainoblocks'),
 		__('aino blocks', 'ainoblocks'),
 	],
-	attributes,
 	supports: {
-		align: ['left', 'right', 'center'],
+		align: ['full'],
 	},
+	attributes,
 	edit,
 	save,
 };

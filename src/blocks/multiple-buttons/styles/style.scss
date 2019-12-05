@@ -1,4 +1,4 @@
-.wp-block-ainoblocks-advanced-buttons {
+.wp-block-ainoblocks-multiple-buttons {
 	display: flex;
 
 	&.aligncenter {
@@ -13,7 +13,7 @@
 		justify-content: flex-end;
 	}
 
-	.wp-block-ainoblocks-advanced-buttons__inner {
+	.wp-block-ainoblocks-multiple-buttons__inner {
 
 		display: block;
 
@@ -23,7 +23,7 @@
 			align-items: center;
 		}
 
-		.wp-block-ainoblocks-advanced-button {
+		.wp-block-ainoblocks-button {
 
 			@media (min-width: 37.500em) {
 				margin-left: 16px;

@@ -14,8 +14,6 @@ const {
 	BlockAlignmentToolbar,
 	BlockVerticalAlignmentToolbar,
 	PanelColorSettings,
-	getColorClassName,
-	withColors,
 	InnerBlocks,
 } = wp.blockEditor;
 const {

@@ -1,5 +1,5 @@
 
-.wp-block-ainoblocks-advanced-button {
+.wp-block-ainoblocks-button {
 	color: #ffffff;
 
 	&.aligncenter {
@@ -12,8 +12,8 @@
 	}
 }
 
-.wp-block-ainoblocks-advanced-button__link {
-	background-color: #000000;
+.wp-block-ainoblocks-button__link {
+	background-color: #616aff;
 	border: none;
 	border-radius: 16px;
 	color: inherit;
@@ -64,7 +64,11 @@
 	}
 }
 
-.wp-block-ainoblocks-advanced-button__link {
+.wp-block-ainoblocks-button__link {
+
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+
 
 	&:hover {
 		-webkit-transform: translateY(-2px);
@@ -80,13 +84,13 @@
 	}
 
 	.is-style-outline & {
-		color: #000000;
-		border: 1px solid #000000;
+		color: #616aff;
+		border: 1px solid #616aff;
 		background-color: transparent !important;
 	}
 
 	.is-style-ghost & {
-		color: #000000;
+		color: #616aff;
 		border: none;
 		background-color: transparent;
 	}

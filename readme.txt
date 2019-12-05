@@ -4,7 +4,7 @@ Plugin URI: https://wpaino.com
 Contributors: elmastudio
 Tags: page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.0
-Tested up to: 5.2.4
+Tested up to: 5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,9 +12,13 @@ A WordPress block collection for site building.
 
 == Description ==
 
-A block collection for site building.
+Gutenberg blocks for site building.
 
 == Changelog ==
+
+= 0.1.0 =
+New: Hero Block.
+New: Badge Block.
 
 = 0.0.3 =
 Enhance: Advanced Buttons Block.
