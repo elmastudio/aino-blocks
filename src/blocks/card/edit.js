@@ -10,9 +10,6 @@ const { __, _x } = wp.i18n;
 const { Component, Fragment } = wp.element;
 const {
 	InspectorControls,
-	BlockControls,
-	BlockAlignmentToolbar,
-	BlockVerticalAlignmentToolbar,
 	PanelColorSettings,
 	InnerBlocks,
 } = wp.blockEditor;
@@ -39,38 +36,26 @@ class CardEdit extends Component {
 			setAttributes,
 		} = this.props;
 		const {
-			containerWidth,
+			align,
 			backgroundColor,
 			borderColor,
-			shadowColor,
 			backgroundRadius,
 			shadowName,
 			padding,
 		} = attributes;
 		const shadowNameOptions = [
-			{ value: "shadow-a", label: __("shadow a", "ainoblocks") },
-			{ value: "shadow-b", label: __("shadow b", "ainoblocks") },
+			{ value: "shadow-a", label: __("small", "ainoblocks") },
+			{ value: "shadow-b", label: __("large", "ainoblocks") },
 			{ value: "shadow-none", label: __("none", "ainoblocks") }
 		];
+		const MIN_BORDER_RADIUS_VALUE = 0;
+		const MAX_BORDER_RADIUS_VALUE = 50;
+		const INITIAL_BORDER_RADIUS_POSITION = 0;
 
 		return (
 			<Fragment>
-				<BlockControls>
-					<BlockAlignmentToolbar
-						value={containerWidth}
-						onChange={containerWidth => setAttributes({ containerWidth })}
-						controls={['wide', 'full']}
-					/>
-				</BlockControls>
 				<InspectorControls>
 					<PanelBody title={__("Card Settings", "ainoblocks")}>
-						<RangeControl
-							label={__("Border Radius", "ainoblocks")}
-							value={backgroundRadius}
-							onChange={backgroundRadius => setAttributes({ backgroundRadius })}
-							min={0}
-							max={50}
-						/>
 						<SelectControl
 							label={__("Shadow", "ainoblocks")}
 							value={shadowName}
@@ -86,7 +71,7 @@ class CardEdit extends Component {
 					</PanelBody>
 					<PanelColorSettings
 						title={__("Color Settings", "ainoblocks")}
-						initialOpen={false}
+						initialOpen={true}
 						colorSettings={[
 							{
 								value: backgroundColor,
@@ -102,19 +87,23 @@ class CardEdit extends Component {
 								},
 								label: __("Border Color", "ainoblocks"),
 							},
-							{
-								value: shadowColor,
-								onChange: shadowColor => {
-									setAttributes({ shadowColor });
-								},
-								label: __("Shadow Color", "ainoblocks"),
-							},
 						]}
 					>
 					</PanelColorSettings>
+					<PanelBody title={__("Border settings", "ainoblocks")}>
+						<RangeControl
+							label={__("Border Radius", "ainoblocks")}
+							value={backgroundRadius}
+							min={MIN_BORDER_RADIUS_VALUE}
+							max={MAX_BORDER_RADIUS_VALUE}
+							initialPosition={INITIAL_BORDER_RADIUS_POSITION}
+							allowReset
+							onChange={backgroundRadius => setAttributes({ backgroundRadius })}
+						/>
+					</PanelBody>
 				</InspectorControls>
 				<div
-					className={classnames(className, shadowName, {
+					className={classnames(className, shadowName, align, {
 						'has-background': backgroundColor,
 						'has-border': borderColor,
 						'has-padding': padding,
@@ -123,7 +112,6 @@ class CardEdit extends Component {
 						backgroundColor: backgroundColor,
 						borderColor: borderColor,
 						borderRadius: backgroundRadius,
-						shadowColor: shadowColor,
 					}}>
 					<InnerBlocks />
 				</div>

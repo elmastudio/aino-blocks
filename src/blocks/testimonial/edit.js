@@ -51,19 +51,9 @@ class TestimonialEdit extends Component {
 			className,
 			setAttributes,
 		} = this.props;
-		const {
-			containerWidth,
-		} = attributes;
 
 		return (
 			<Fragment>
-				<BlockControls>
-					<BlockAlignmentToolbar
-						value={containerWidth}
-						onChange={containerWidth => setAttributes({ containerWidth })}
-						controls={['wide', 'full']}
-					/>
-				</BlockControls>
 
 				<div
 					className={classnames(className)}
@@ -71,7 +61,7 @@ class TestimonialEdit extends Component {
 					<InnerBlocks
 						template={TEMPLATE}
 						allowedBlocks={ALLOWED_BLOCKS}
-						templateLock={false}
+						templateLock="insert"
 						templateInsertUpdatesSelection={false}
 					/>
 				</div>

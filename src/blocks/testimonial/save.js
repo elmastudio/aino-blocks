@@ -8,22 +8,14 @@ import classnames from 'classnames';
  */
 const {
 	InnerBlocks,
-} = wp.blockEditor;
+} = wp.editor;
 
-export default function save({ attributes }) {
-
-	const {
-		containerWidth,
-	} = attributes;
-
-	const classes = classnames({
-		[`align${containerWidth}`]: containerWidth,
-	});
+export default function save({ }) {
 
 	return (
 
-		<div className={classes}>
+		<div>
 			<InnerBlocks.Content />
-		</div >
+		</div>
 	);
 }

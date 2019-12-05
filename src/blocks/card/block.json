@@ -1,0 +1,29 @@
+{
+	"name": "card",
+	"category": "ainoblocks",
+	"attributes": {
+		"align": {
+			"type": "string"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"borderColor": {
+			"type": "string"
+		},
+		"imgRadius": {
+			"type": "string"
+		},
+		"backgroundRadius": {
+			"type": "number",
+			"default": 0
+		},
+		"shadowName": {
+			"type": "string"
+		},
+		"padding": {
+			"type": "boolean",
+			"default": true
+		}
+	}
+}

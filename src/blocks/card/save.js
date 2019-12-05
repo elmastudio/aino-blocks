@@ -13,7 +13,7 @@ const {
 export default function save({ attributes }) {
 
 	const {
-		containerWidth,
+		align,
 		backgroundColor,
 		borderColor,
 		backgroundRadius,
@@ -21,8 +21,7 @@ export default function save({ attributes }) {
 		padding,
 	} = attributes;
 
-	const classes = classnames(shadowName, {
-		[`align${containerWidth}`]: containerWidth,
+	const cardClasses = classnames(classnames, shadowName, {
 		'has-background': backgroundColor,
 		'has-border': borderColor,
 		'has-padding': padding,
@@ -30,7 +29,7 @@ export default function save({ attributes }) {
 
 	return (
 		<div
-			className={classes}
+			className={cardClasses}
 			style={{
 				backgroundColor: backgroundColor,
 				borderColor: borderColor,
