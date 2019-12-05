@@ -16,8 +16,7 @@
 			"type": "string",
 			"source": "attribute",
 			"selector": "figure img",
-			"attribute": "alt",
-			"default": ""
+			"attribute": "alt"
 		},
 		"mediaPosition": {
 			"type": "string",
@@ -37,7 +36,7 @@
 		},
 		"mediaWidth": {
 			"type": "number",
-			"default": 50
+			"default": "50"
 		},
 		"verticalAlignment": {
 			"type": "string"

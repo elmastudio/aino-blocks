@@ -6,7 +6,7 @@ const { __, _x } = wp.i18n;
 /**
  * Internal dependencies
  */
-import icons from './../../utils/icons';
+import icon from './icon';
 import edit from './edit';
 import metadata from './block.json';
 import save from './save';
@@ -22,7 +22,7 @@ const settings = {
 	title: __('Button', 'ainoblocks'),
 	description: __('A single button within a multiple buttons block.', 'ainoblocks'),
 	parent: ['ainoblocks/multiple-buttons'],
-	icon: icons.button,
+	icon,
 	keywords: [
 		__('button', 'ainoblocks'),
 		__('link', 'ainoblocks'),
