@@ -16,7 +16,7 @@ It’s important to install the official Gutenberg plugin in combination with th
 =======
 
 ### 0.1.0
-New: Hero Block.
+New: Hero Block.  
 New: Badge Block.
 
 ### 0.0.3
