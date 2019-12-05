@@ -23,6 +23,7 @@ import * as featuredContent from './blocks/featured-content';
 import * as button from './blocks/button';
 import * as multipleButtons from './blocks/multiple-buttons';
 import * as hero from './blocks/hero';
+import * as imageText from './blocks/image-text';
 
 export function registerBlocks() {
 	[
@@ -34,6 +35,7 @@ export function registerBlocks() {
 		button,
 		multipleButtons,
 		hero,
+		imageText,
 	].forEach(block => {
 		if (!block) {
 			return;
