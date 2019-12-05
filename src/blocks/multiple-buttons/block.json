@@ -1,0 +1,13 @@
+{
+	"name": "multiple-buttons",
+	"category": "ainoblocks",
+	"attributes": {
+		"align": {
+			"type": "string"
+		},
+		"items": {
+			"type": "number",
+			"default": "2"
+		}
+	}
+}

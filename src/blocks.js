@@ -16,20 +16,24 @@ import './utils/block-category';
 
 // Register Blocks
 import * as card from './blocks/card';
+import * as badge from './blocks/badge';
 import * as author from './blocks/author';
 import * as testimonial from './blocks/testimonial';
 import * as featuredContent from './blocks/featured-content';
-import * as advancedButton from './blocks/advanced-button';
-import * as advancedButtons from './blocks/advanced-buttons';
+import * as button from './blocks/button';
+import * as multipleButtons from './blocks/multiple-buttons';
+import * as hero from './blocks/hero';
 
 export function registerBlocks() {
 	[
 		card,
+		badge,
 		author,
 		testimonial,
 		featuredContent,
-		advancedButton,
-		advancedButtons,
+		button,
+		multipleButtons,
+		hero,
 	].forEach(block => {
 		if (!block) {
 			return;

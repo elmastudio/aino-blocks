@@ -1,0 +1,44 @@
+
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=full]>.block-editor-block-list__block-edit .wp-block-ainoblocks-hero.has-media-right.is-media-overflow .wp-block-ainoblocks-hero__media,
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=full]>.block-editor-block-list__block-edit .wp-block-ainoblocks-hero.has-media-left.is-media-overflow .wp-block-ainoblocks-hero__media {
+	width: auto;
+}
+
+.wp-block-ainoblocks-hero > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-editor-block-list__block {
+	max-width: unset;
+}
+
+.wp-block-ainoblocks-hero__media {
+	min-height: 500px;
+}
+
+.wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__media img,
+.wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__media video {
+	vertical-align: middle;
+	width: 100%;
+}
+
+.wp-block-ainoblocks-hero .block-editor-block-list__block[data-type="core/heading"] h2.hero-display {
+	font-size: 40px;
+	line-height: 1.2;
+
+	@media (min-width: 76.5em) {
+		font-size: 78px;
+		line-height: 1.09;
+	}
+}
+
+.editor-media-container__resizer .components-resizable-box__handle {
+	display: none;
+}
+
+.wp-block-ainoblocks-hero .__resizable_base__ {
+	grid-area: resizer;
+}
+
+.wp-block-ainoblocks-hero .editor-media-container__resizer {
+	grid-area: hero-media;
+	// The resizer sets a inline width but as we are using a grid layout,
+	// we set the width on container.
+	width: 100% !important;
+}

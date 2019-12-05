@@ -19,7 +19,7 @@ const { InnerBlocks } = wp.blockEditor;
 /**
  * Constants
  */
-const ALLOWED_BLOCKS = ['ainoblocks/advanced-button'];
+const ALLOWED_BLOCKS = ['ainoblocks/button'];
 
 /**
  * Returns the layouts configuration for a given number of items.
@@ -29,13 +29,13 @@ const ALLOWED_BLOCKS = ['ainoblocks/advanced-button'];
  * @return {Object[]} Columns layout configuration.
  */
 const getCount = memoize((count) => {
-	return times(count, () => ['ainoblocks/advanced-button']);
+	return times(count, () => ['ainoblocks/button']);
 });
 
 /**
  * Block edit function
  */
-class AdvancedButtonsEdit extends Component {
+class MultipleButtonsEdit extends Component {
 
 	render() {
 		const {
@@ -54,7 +54,7 @@ class AdvancedButtonsEdit extends Component {
 		});
 
 		const classes = classnames(
-			'wp-block-ainoblocks-advanced-buttons__inner', {
+			'wp-block-ainoblocks-multiple-buttons__inner', {
 
 		}
 		);
@@ -82,4 +82,4 @@ class AdvancedButtonsEdit extends Component {
 	}
 }
 
-export default AdvancedButtonsEdit;
+export default MultipleButtonsEdit;

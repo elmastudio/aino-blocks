@@ -15,7 +15,7 @@ export default function save({ attributes, className }) {
 	} = attributes;
 
 	const innerClasses = classnames(
-		'wp-block-ainoblocks-advanced-buttons__inner', {
+		'wp-block-ainoblocks-multiple-buttons__inner', {
 		'has-margins': items > 1,
 	}
 	);

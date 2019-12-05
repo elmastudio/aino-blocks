@@ -30,7 +30,7 @@ export default function save({ attributes }) {
 	const textClass = getColorClassName('color', textColor);
 	const backgroundClass = getColorClassName('background-color', backgroundColor);
 
-	const buttonClasses = classnames('wp-block-ainoblocks-advanced-button__link', size, borderRadius, {
+	const buttonClasses = classnames('wp-block-ainoblocks-button__link', size, borderRadius, {
 		'has-text-color': textColor || customTextColor,
 		[textClass]: textClass,
 		'has-background': backgroundColor || customBackgroundColor,
@@ -40,6 +40,7 @@ export default function save({ attributes }) {
 
 	const buttonStyle = {
 		backgroundColor: backgroundClass ? undefined : customBackgroundColor,
+		borderColor: backgroundClass ? undefined : customBackgroundColor,
 		color: textClass ? undefined : customTextColor,
 	};
 

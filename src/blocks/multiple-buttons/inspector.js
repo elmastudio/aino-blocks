@@ -24,7 +24,7 @@ class Inspector extends Component {
 		return (
 			<Fragment>
 				<InspectorControls>
-					<PanelBody title={__('Advanced Buttons Settings', 'ainoblocks')}>
+					<PanelBody title={__('Multiple Buttons Settings', 'ainoblocks')}>
 						<RangeControl
 							label={__('Number of Buttons', 'ainoblocks')}
 							value={items}
