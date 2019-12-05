@@ -1,45 +1,41 @@
 /**
- * External dependencies
- */
-import classnames from 'classnames';
-import noop from 'lodash/noop';
+* WordPress dependencies
+*/
+const { __, _x } = wp.i18n;
 
 /**
  * Internal dependencies
  */
-import icons from './../../utils/icons';
-import attributes from './attributes';
+import icon from './icon';
 import edit from './edit';
+import metadata from './block.json';
 import save from './save';
 import './styles/style.scss';
 import './styles/editor.scss';
 
 /**
-* WordPress dependencies
-*/
-const { __ } = wp.i18n;
-const { registerBlockType } = wp.blocks;
-
-/**
  * Register block
  */
-export default registerBlockType('ainoblocks/featured-content', {
+const { attributes, name } = metadata;
+
+const settings = {
 	title: __('Featured Content', 'ainoblocks'),
-	description: __('Feature content with media, heading, text and buttons.', 'ainoblocks'),
-	icon: icons.featuredContent,
+	description: __('Present content with media, sub and main heading, text and buttons. It is a popular block to show your product, services, or portfolio.', 'ainoblocks'),
+	icon,
 	keywords: [
-		__('image', 'ainoblocks'),
-		__('video', 'ainoblocks'),
 		__('featured', 'ainoblocks'),
-		__('front page', 'ainoblocks'),
+		__('tour', 'ainoblocks'),
+		__('services', 'ainoblocks'),
+		__('image', 'ainoblocks'),
 		__('aino blocks', 'ainoblocks'),
 	],
 	supports: {
 		align: ['wide', 'full'],
 		anchor: true,
 	},
-	category: 'ainoblocks',
 	attributes,
 	edit,
 	save,
-});
+};
+
+export { name, settings };

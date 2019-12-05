@@ -1,13 +1,5 @@
 {
 	"name": "testimonial",
 	"category": "ainoblocks",
-	"attributes": {
-		"align": {
-			"type": "string"
-		},
-		"items": {
-			"type": "number",
-			"default": "2"
-		}
-	}
+	"attributes": {}
 }

@@ -28,7 +28,7 @@ export default function save({ attributes }) {
 
 	return (
 		<div
-			className={classnames()}
+			className={classnames}
 			style={{ textAlign: alignment }}
 		>
 			{!RichText.isEmpty(content) && (

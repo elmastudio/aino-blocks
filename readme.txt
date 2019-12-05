@@ -16,6 +16,9 @@ Gutenberg blocks for site building.
 
 == Changelog ==
 
+= 0.1.1 =
+Enhance: Restructure files of existing blocks.
+
 = 0.1.0 =
 New: Hero Block.
 New: Badge Block.
