@@ -6,7 +6,7 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-const { __ } = wp.i18n;
+const { __, _x } = wp.i18n;
 const {
 	Component,
 	Fragment,
@@ -26,10 +26,12 @@ const {
  * @constant
  * @type {string[]}
 */
-const ALLOWED_BLOCKS = ['core/image', 'core/paragraph', 'ainoblocks/card'];
+const ALLOWED_BLOCKS = ['core/image', 'core/heading', 'core/paragraph', 'ainoblocks/card'];
 const TEMPLATE = [
 
 	['ainoblocks/card', {}, [
+		['core/image'],
+		['core/heading', { placeholder: _x('Heading…', 'content placeholder'), content: _x('Add a Heading', 'content placeholder'), level: 4, className: 'h-image-text', }],
 		['core/paragraph', { placeholder: 'Write text...' }],
 	]
 	]
@@ -60,7 +62,6 @@ class ImageTextEdit extends Component {
 					<InnerBlocks
 						template={TEMPLATE}
 						allowedBlocks={ALLOWED_BLOCKS}
-						templateLock="insert"
 						templateInsertUpdatesSelection={false}
 					/>
 				</div>

@@ -20,7 +20,7 @@ const { attributes, name } = metadata;
 
 const settings = {
 	title: __('Image and Text', 'ainoblocks'),
-	description: __('Insert a card with image and text. You can customize the border background color and shadow. It works great in multicolumn layouts. You can use this block to differentiate your values or services.', 'ainoblocks'),
+	description: __('Insert a card with image and text. Customize the border background color and shadow. Works great in multicolumn layouts. Use to differentiate your values or services.', 'ainoblocks'),
 	icon,
 	keywords: [
 		__('image', 'ainoblocks'),

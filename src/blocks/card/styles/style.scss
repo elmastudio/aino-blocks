@@ -8,8 +8,9 @@
 	-webkit-box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.15), 0 0 4px 0 rgba(0, 0, 0, 0.04);
 
 	&.has-padding {
-		padding: 40px;
+		padding: 24px;
 	}
+
 	&.has-border {
 		border-width: 1px;
 		border-style: solid;
@@ -32,5 +33,52 @@
 	p,
 	blockquote {
 		margin-bottom: 0;
+	}
+}
+
+.wp-block-column:nth-last-child(2):first-child,
+.wp-block-column:nth-last-child(2):first-child ~ * {
+
+		.wp-block-ainoblocks-card {
+
+			&.has-padding {
+
+				@media (min-width: 76.500em) {
+					padding: 56px;
+				}
+
+			}
+	}
+}
+
+.wp-block-column:nth-last-child(3):first-child,
+.wp-block-column:nth-last-child(3):first-child ~ * {
+
+		.wp-block-ainoblocks-card {
+
+			&.has-padding {
+
+				@media (min-width: 76.500em) {
+					padding: 32px;
+				}
+
+			}
+	}
+}
+
+.wp-block-column:nth-last-child(5):first-child,
+.wp-block-column:nth-last-child(5):first-child ~ *,
+.wp-block-column:nth-last-child(6):first-child,
+.wp-block-column:nth-last-child(6):first-child ~ * {
+
+		.wp-block-ainoblocks-card {
+
+			&.has-padding {
+
+				@media (min-width: 76.500em) {
+					padding: 16px;
+				}
+
+			}
 	}
 }
