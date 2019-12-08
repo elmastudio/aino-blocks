@@ -9,6 +9,11 @@
 
 	&.has-padding {
 		padding: 24px;
+
+		@media (min-width: 37.500em) {
+			padding: 56px;
+		}
+
 	}
 
 	&.has-border {
@@ -60,6 +65,21 @@
 
 				@media (min-width: 76.500em) {
 					padding: 32px;
+				}
+
+			}
+	}
+}
+
+.wp-block-column:nth-last-child(4):first-child,
+.wp-block-column:nth-last-child(4):first-child ~ * {
+
+		.wp-block-ainoblocks-card {
+
+			&.has-padding {
+
+				@media (min-width: 76.500em) {
+					padding: 24px;
 				}
 
 			}

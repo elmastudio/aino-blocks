@@ -5,6 +5,9 @@
     margin-bottom: 0; }
   .wp-block-ainoblocks-card.has-padding {
     padding: 24px; }
+    @media (min-width: 37.5em) {
+      .wp-block-ainoblocks-card.has-padding {
+        padding: 56px; } }
   .wp-block-ainoblocks-card.has-border {
     border-width: 1px;
     border-style: solid; }
@@ -30,6 +33,11 @@
   .wp-block-column:nth-last-child(3):first-child .wp-block-ainoblocks-card.has-padding,
   .wp-block-column:nth-last-child(3):first-child ~ * .wp-block-ainoblocks-card.has-padding {
     padding: 32px; } }
+
+@media (min-width: 76.5em) {
+  .wp-block-column:nth-last-child(4):first-child .wp-block-ainoblocks-card.has-padding,
+  .wp-block-column:nth-last-child(4):first-child ~ * .wp-block-ainoblocks-card.has-padding {
+    padding: 24px; } }
 
 @media (min-width: 76.5em) {
   .wp-block-column:nth-last-child(5):first-child .wp-block-ainoblocks-card.has-padding,
@@ -396,26 +404,25 @@
   .page .site-header {
     position: absolute;
     z-index: 1000; } }
-.wp-block-column .wp-block-ainoblocks-image-text {
+.wp-block-ainoblocks-image-text {
   margin-bottom: 32px; }
-  .wp-block-column .wp-block-ainoblocks-image-text:last-child {
-    margin-bottom: 0; }
-  @media (min-width: 37.5em) {
-    .wp-block-column .wp-block-ainoblocks-image-text {
-      margin-bottom: 48px; } }
-  .wp-block-column .wp-block-ainoblocks-image-text:last-child {
-    margin-bottom: 0; }
-
-.wp-block-ainoblocks-image-text .h-image-text {
-  margin-bottom: 4px; }
-
-.wp-block-ainoblocks-image-text h2.h-image-text,
-.wp-block-ainoblocks-image-text h3.h-image-text,
-.wp-block-ainoblocks-image-text h4.h-image-text {
-  margin-top: 24px; }
-
-.wp-block-ainoblocks-image-text h5.h-image-text {
-  margin-top: 20px; }
-
-.wp-block-ainoblocks-image-text h6.h-image-text {
-  margin-top: 16px; }
+  .wp-block-column .wp-block-ainoblocks-image-text {
+    margin-bottom: 32px; }
+    .wp-block-column .wp-block-ainoblocks-image-text:last-child {
+      margin-bottom: 0; }
+    @media (min-width: 37.5em) {
+      .wp-block-column .wp-block-ainoblocks-image-text {
+        margin-bottom: 48px; } }
+    .wp-block-column .wp-block-ainoblocks-image-text:last-child {
+      margin-bottom: 0; }
+  .wp-block-ainoblocks-image-text h2.h-image-text,
+  .wp-block-ainoblocks-image-text h3.h-image-text,
+  .wp-block-ainoblocks-image-text h4.h-image-text {
+    margin-top: 24px;
+    margin-bottom: 4px; }
+  .wp-block-ainoblocks-image-text h5.h-image-text {
+    margin-top: 20px;
+    margin-bottom: 4px; }
+  .wp-block-ainoblocks-image-text h6.h-image-text {
+    margin-top: 16px;
+    margin-bottom: 4px; }

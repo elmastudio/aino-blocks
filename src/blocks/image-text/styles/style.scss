@@ -1,5 +1,7 @@
 .wp-block-ainoblocks-image-text {
 
+	margin-bottom: 32px;
+
 	.wp-block-column & {
 		margin-bottom: 32px;
 
@@ -16,21 +18,20 @@
 		}
 	}
 
-	.h-image-text {
-		margin-bottom: 4px;
-	}
-
 	h2.h-image-text,
 	h3.h-image-text,
 	h4.h-image-text {
 		margin-top: 24px;
+		margin-bottom: 4px;
 	}
 
 	h5.h-image-text {
 		margin-top: 20px;
+		margin-bottom: 4px;
 	}
 
 	h6.h-image-text {
 		margin-top: 16px;
+		margin-bottom: 4px;
 	}
 }
