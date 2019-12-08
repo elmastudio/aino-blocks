@@ -16,6 +16,9 @@ Gutenberg blocks for site building.
 
 == Changelog ==
 
+= 0.1.2 =
+New: Image & Text Block.
+
 = 0.1.1 =
 Enhance: Restructure files of existing blocks.
 
