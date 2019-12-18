@@ -25,8 +25,16 @@
 
 		.wp-block-ainoblocks-button {
 
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+
 			@media (min-width: 37.500em) {
 				margin-left: 16px;
+
+				&:not(:last-child) {
+					margin-bottom: 0;
+				}
 
 				&:first-of-type {
 					margin-left: 0;

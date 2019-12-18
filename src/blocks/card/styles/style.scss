@@ -48,8 +48,26 @@
 
 			&.has-padding {
 
+				@media (min-width: 37.500em) {
+					padding: 24px;
+				}
+
 				@media (min-width: 76.500em) {
 					padding: 56px;
+				}
+
+			}
+	}
+}
+
+.wp-block-column {
+
+		.wp-block-ainoblocks-card {
+
+			&.has-padding {
+
+				@media (min-width: 37.500em) {
+					padding: 24px;
 				}
 
 			}
