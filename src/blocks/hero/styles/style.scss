@@ -190,7 +190,11 @@
 }
 
 // Experimental: For Page Template "Hero"
-@media (min-width: 76.500em) {
+@media (min-width: 48.5em) {
+
+	body {
+		overflow-x: hidden;
+	}
 	.content-wrap .site-content {
 		margin-top: 0;
 	}
@@ -198,7 +202,7 @@
 	.page .site-header {
 		position: absolute;
 		z-index: 1000;
-		width: 100%;
-		overflow: hidden;
+		left: 0;
+		right: 0;
 	}
 }
