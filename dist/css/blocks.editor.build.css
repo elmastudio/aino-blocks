@@ -179,3 +179,5 @@ figure.block-library-ainoblocks-featured-content__media-container {
 .wp-block-ainoblocks-hero .editor-media-container__resizer {
   grid-area: hero-media;
   width: 100% !important; }
+.wp-block-ainoblocks-image-text {
+  position: relative; }

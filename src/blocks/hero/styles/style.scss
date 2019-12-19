@@ -41,6 +41,14 @@
 		grid-area: hero-media;
 	}
 
+	&.hide-media .wp-block-ainoblocks-hero__container {
+
+		@media (min-width: 48.5em) {
+			max-width: 784px;
+			grid-template-columns: 100% auto !important;
+		}
+	}
+
 	&.is-media-overflow .wp-block-ainoblocks-hero__container {
 
 		@media (min-width: 76.5em) {
@@ -111,6 +119,7 @@
 			font-size: 40px;
 			line-height: 1.2;
 			margin-top: 0;
+			margin-bottom: 16px;
 			padding: 0;
 
 			@media (min-width: 48.5em) {
@@ -189,5 +198,7 @@
 	.page .site-header {
 		position: absolute;
 		z-index: 1000;
+		width: 100%;
+		overflow: hidden;
 	}
 }
