@@ -46,6 +46,7 @@ export default function save({ attributes }) {
 		'has-media-left': 'left' === mediaPosition,
 		'has-media-right': 'right' === mediaPosition,
 		'has-media-below': 'below' === mediaPosition,
+		'hide-media': 'hide' === mediaPosition,
 		[backgroundClass]: backgroundClass,
 		[`content-vertically-aligned-${verticalContentAlignment}`]: verticalContentAlignment,
 		'is-image-fill': imageFill,
