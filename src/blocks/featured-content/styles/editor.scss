@@ -3,6 +3,11 @@
 		"featured-content-media featured-content-content"
 		"resizer resizer";
 	align-items: center;
+
+	.block-editor & {
+			padding-top: 0;
+			padding-bottom: 0;
+	}
 }
 
 .wp-block-ainoblocks-featured-content.has-media-right {

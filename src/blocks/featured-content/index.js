@@ -20,7 +20,7 @@ const { attributes, name } = metadata;
 
 const settings = {
 	title: __('Featured Content', 'ainoblocks'),
-	description: __('Present content with media, sub and main heading, text and buttons. It is a popular block to show your product, services, or portfolio.', 'ainoblocks'),
+	description: __('A popular block to feature your products or services.', 'ainoblocks'),
 	icon,
 	keywords: [
 		__('featured', 'ainoblocks'),

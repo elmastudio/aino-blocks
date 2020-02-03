@@ -146,7 +146,7 @@ class featuredContentEdit extends Component {
 
 		const temporaryMediaWidth = this.state.mediaWidth;
 		const classNames = classnames(className, {
-			'has-media-on-the-right': 'right' === mediaPosition,
+			'has-media-right': 'right' === mediaPosition,
 			'is-selected': isSelected,
 			[backgroundColor.class]: backgroundColor.class,
 			[`is-vertically-aligned-${verticalAlignment}`]: verticalAlignment,
