@@ -5,7 +5,7 @@
 	align-items: center;
 }
 
-.wp-block-ainoblocks-featured-content.has-media-on-the-right {
+.wp-block-ainoblocks-featured-content.has-media-right {
 	grid-template-areas:
 		"featured-content-content featured-content-media"
 		"resizer resizer";
@@ -48,7 +48,7 @@
 	}
 }
 
-.wp-block-ainoblocks-featured-content.has-media-on-the-right .block-editor-inner-blocks {
+.wp-block-ainoblocks-featured-content.has-media-right .block-editor-inner-blocks {
 	justify-self: start;
 }
 

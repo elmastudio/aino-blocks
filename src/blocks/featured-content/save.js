@@ -42,7 +42,7 @@ export default function save({ attributes }) {
 	};
 	const backgroundClass = getColorClassName('background-color', backgroundColor);
 	const className = classnames({
-		'has-media-on-the-right': 'right' === mediaPosition,
+		'has-media-right': 'right' === mediaPosition,
 		[backgroundClass]: backgroundClass,
 		[`is-vertically-aligned-${verticalAlignment}`]: verticalAlignment,
 		'is-image-fill': imageFill,
