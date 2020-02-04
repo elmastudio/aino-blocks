@@ -291,8 +291,8 @@
       padding-right: 24px; } }
   @media (min-width: 48.5em) {
     .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
-      padding-top: 96px;
-      padding-bottom: 96px;
+      padding-top: 144px;
+      padding-bottom: 144px;
       display: grid;
       grid-template-rows: auto;
       align-items: center;
@@ -313,7 +313,11 @@
   padding-right: 24px; }
 
 .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__media {
-  grid-area: hero-media; }
+  grid-area: hero-media;
+  padding-top: 48px; }
+  @media (min-width: 48.5em) {
+    .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__media {
+      padding-top: 0; } }
 
 @media (min-width: 48.5em) {
   .wp-block-ainoblocks-hero.hide-media .wp-block-ainoblocks-hero__container {
@@ -346,8 +350,8 @@
   display: block; }
   @media (min-width: 76.5em) {
     .wp-block-ainoblocks-hero.has-media-below .wp-block-ainoblocks-hero__container {
-      padding-top: 96px;
-      padding-bottom: 96px; } }
+      padding-top: 144px;
+      padding-bottom: 144px; } }
   .wp-block-ainoblocks-hero.has-media-below .wp-block-ainoblocks-hero__container .wp-block-ainoblocks-hero__media {
     margin-left: auto;
     margin-right: auto;
@@ -368,12 +372,14 @@
     font-size: 40px;
     line-height: 1.2;
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 0;
     padding: 0; }
     @media (min-width: 48.5em) {
       .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__content h2.hero-display {
         font-size: 78px;
         line-height: 1.09; } }
+  .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__content .hero-text {
+    margin-top: 16px; }
   .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__content .wp-block-ainoblocks-multiple-buttons {
     margin-top: 24px;
     margin-bottom: 0; }
@@ -391,7 +397,7 @@
   align-self: end; }
   @media (min-width: 48.5em) {
     .wp-block-ainoblocks-hero.content-vertically-aligned-bottom .wp-block-ainoblocks-hero__content {
-      padding-bottom: 96px; } }
+      padding-bottom: 144px; } }
 
 .wp-block-ainoblocks-hero.is-image-fill figure {
   height: 100%;
@@ -410,9 +416,9 @@
 
 @media (min-width: 48.5em) {
   .entry-content .wp-block-ainoblocks-hero.has-media-below .wp-block-ainoblocks-hero__container {
-    padding-top: 96px; } }
+    padding-top: 144px; } }
 
-@media (min-width: 76.5em) {
+@media (min-width: 48.5em) {
   .entry-content .wp-block-ainoblocks-hero.has-media-below .wp-block-ainoblocks-hero__container .wp-block-ainoblocks-hero__media {
     padding-top: 72px; } }
 
