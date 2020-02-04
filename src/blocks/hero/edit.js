@@ -43,7 +43,7 @@ const ALLOWED_BLOCKS = ['core/cover', 'core/image', 'core/spacer', 'core/heading
 const TEMPLATE = [
 	['ainoblocks/badge', { placeholder: _x('Write Badge text…', 'content placeholder'), content: _x('Write Badge text…', 'content placeholder') }],
 	['core/heading', { placeholder: _x('Write heading…', 'content placeholder'), content: _x('Write heading…', 'content placeholder'), className: 'hero-display', }],
-	['core/paragraph', { placeholder: _x('Start writing here…', 'content placeholder'), content: _x('Start writing here…', 'content placeholder') }],
+	['core/paragraph', { placeholder: _x('Start writing here…', 'content placeholder'), content: _x('Start writing here…', 'content placeholder'), className: 'hero-text', }],
 	['ainoblocks/multiple-buttons'],
 ];
 
