@@ -124,6 +124,10 @@
       display: grid;
       padding-top: 144px;
       padding-bottom: 144px; } }
+  .wp-block-ainoblocks-featured-content.no-padding-top {
+    padding-top: 0; }
+  .wp-block-ainoblocks-featured-content.no-padding-bottom {
+    padding-bottom: 0; }
   .wp-block-ainoblocks-featured-content.is-vertically-aligned-top {
     align-items: start; }
   .wp-block-ainoblocks-featured-content.is-vertically-aligned-center {
@@ -132,17 +136,31 @@
     align-items: end; }
   .wp-block-ainoblocks-featured-content .wp-block-ainoblocks-featured-content__media {
     grid-area: featured-content-media;
-    margin: 0; }
+    margin: 0;
+    padding-bottom: 24px; }
     @media (min-width: 48.5em) {
       .wp-block-ainoblocks-featured-content .wp-block-ainoblocks-featured-content__media {
         padding-right: 24px; } }
   .wp-block-ainoblocks-featured-content .wp-block-ainoblocks-featured-content__content {
     grid-area: featured-content-content;
     margin: 0; }
+    .wp-block-ainoblocks-featured-content .wp-block-ainoblocks-featured-content__content .fc-subtitle {
+      margin-bottom: 16px; }
+    .wp-block-ainoblocks-featured-content .wp-block-ainoblocks-featured-content__content .fc-heading {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .wp-block-ainoblocks-featured-content .wp-block-ainoblocks-featured-content__content .fc-text {
+      margin-top: 16px;
+      margin-bottom: 0; }
     @media (min-width: 48.5em) {
       .wp-block-ainoblocks-featured-content .wp-block-ainoblocks-featured-content__content {
         padding-left: 24px;
         padding-right: 0; } }
+    .wp-block-ainoblocks-featured-content .wp-block-ainoblocks-featured-content__content .wp-block-ainoblocks-multiple-buttons {
+      margin-top: 24px; }
+      @media (min-width: 48.5em) {
+        .wp-block-ainoblocks-featured-content .wp-block-ainoblocks-featured-content__content .wp-block-ainoblocks-multiple-buttons {
+          margin-top: 32px; } }
   .wp-block-ainoblocks-featured-content.has-media-right {
     grid-template-areas: "featured-content-content featured-content-media";
     grid-template-columns: auto 48%; }
@@ -160,21 +178,6 @@
   max-width: unset;
   width: 100%;
   vertical-align: middle; }
-
-.wp-block-ainoblocks-featured-content.is-image-fill figure {
-  height: 100%;
-  min-height: 250px;
-  background-size: cover; }
-
-.wp-block-ainoblocks-featured-content.is-image-fill figure > img {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0; }
 .wp-block-ainoblocks-button {
   color: #ffffff; }
   .wp-block-ainoblocks-button.aligncenter {

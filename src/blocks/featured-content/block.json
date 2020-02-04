@@ -41,11 +41,13 @@
 		"verticalAlignment": {
 			"type": "string"
 		},
-		"imageFill": {
-			"type": "boolean"
+		"paddingTop": {
+			"type": "boolean",
+			"default": true
 		},
-		"focalPoint": {
-			"type": "object"
+		"paddingBottom": {
+			"type": "boolean",
+			"default": true
 		}
 	}
 }

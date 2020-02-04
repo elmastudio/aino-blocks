@@ -32,8 +32,8 @@ export default function save({ attributes }) {
 		mediaWidth,
 		mediaId,
 		verticalAlignment,
-		imageFill,
-		focalPoint,
+		paddingTop,
+		paddingBottom,
 	} = attributes;
 
 	const mediaTypeRenders = {
@@ -43,11 +43,11 @@ export default function save({ attributes }) {
 	const backgroundClass = getColorClassName('background-color', backgroundColor);
 	const className = classnames({
 		'has-media-right': 'right' === mediaPosition,
+		'no-padding-top': false === paddingTop,
+		'no-padding-bottom': false === paddingBottom,
 		[backgroundClass]: backgroundClass,
 		[`is-vertically-aligned-${verticalAlignment}`]: verticalAlignment,
-		'is-image-fill': imageFill,
 	});
-	const backgroundStyles = imageFill ? imageFillStyles(mediaUrl, focalPoint) : {};
 
 	let gridTemplateColumns;
 	if (mediaWidth !== DEFAULT_MEDIA_WIDTH) {
@@ -59,7 +59,7 @@ export default function save({ attributes }) {
 	};
 	return (
 		<div className={className} style={style}>
-			<figure className="wp-block-ainoblocks-featured-content__media" style={backgroundStyles}>
+			<figure className="wp-block-ainoblocks-featured-content__media">
 				{(mediaTypeRenders[mediaType] || noop)()}
 			</figure>
 			<div className="wp-block-ainoblocks-featured-content__content">

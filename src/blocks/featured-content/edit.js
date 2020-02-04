@@ -36,9 +36,9 @@ import MediaContainer from './media-container';
 const ALLOWED_BLOCKS = ['core/image', 'core/spacer', 'core/heading', 'core/paragraph', 'core/button', 'ainoblocks/button', 'ainoblocks/multiple-buttons'];
 
 const TEMPLATE = [
-	['core/paragraph', { placeholder: _x('Subtitle…', 'content placeholder'), content: _x('Add a Subtitle', 'content placeholder') }],
-	['core/heading', { placeholder: _x('Heading…', 'content placeholder'), content: _x('Add a Heading', 'content placeholder'), level: 2, className: 'featured-heading', }],
-	['core/paragraph', { placeholder: _x('Content…', 'content placeholder'), content: _x('Replace the sample text with your content.', 'content placeholder') }],
+	['core/paragraph', { placeholder: _x('Subtitle…', 'content placeholder'), content: _x('Add a Subtitle', 'content placeholder'), className: 'fc-subtitle', }],
+	['core/heading', { placeholder: _x('Heading…', 'content placeholder'), content: _x('Add a Heading', 'content placeholder'), level: 2, className: 'fc-heading', }],
+	['core/paragraph', { placeholder: _x('Content…', 'content placeholder'), content: _x('Replace the sample text with your content.', 'content placeholder'), className: 'fc-text', }],
 	['ainoblocks/multiple-buttons'],
 ];
 
@@ -86,8 +86,6 @@ class featuredContentEdit extends Component {
 			mediaId: media.id,
 			mediaType,
 			mediaUrl: src || media.url,
-			imageFill: undefined,
-			focalPoint: undefined,
 		});
 	}
 
@@ -110,7 +108,7 @@ class featuredContentEdit extends Component {
 
 	renderMediaArea() {
 		const { attributes } = this.props;
-		const { mediaAlt, mediaId, mediaPosition, mediaType, mediaUrl, mediaWidth, imageFill, focalPoint } = attributes;
+		const { mediaAlt, mediaId, mediaPosition, mediaType, mediaUrl, mediaWidth } = attributes;
 
 		return (
 			<MediaContainer
@@ -118,7 +116,7 @@ class featuredContentEdit extends Component {
 				onSelectMedia={this.onSelectMedia}
 				onWidthChange={this.onWidthChange}
 				commitWidthChange={this.commitWidthChange}
-				{...{ mediaAlt, mediaId, mediaType, mediaUrl, mediaPosition, mediaWidth, imageFill, focalPoint }}
+				{...{ mediaAlt, mediaId, mediaType, mediaUrl, mediaPosition, mediaWidth }}
 			/>
 		);
 	}
@@ -140,17 +138,18 @@ class featuredContentEdit extends Component {
 			mediaWidth,
 			verticalAlignment,
 			mediaUrl,
-			imageFill,
-			focalPoint,
+			paddingTop,
+			paddingBottom,
 		} = attributes;
 
 		const temporaryMediaWidth = this.state.mediaWidth;
 		const classNames = classnames(className, {
 			'has-media-right': 'right' === mediaPosition,
+			'no-padding-top': false === paddingTop,
+			'no-padding-bottom': false === paddingBottom,
 			'is-selected': isSelected,
 			[backgroundColor.class]: backgroundColor.class,
 			[`is-vertically-aligned-${verticalAlignment}`]: verticalAlignment,
-			'is-image-fill': imageFill,
 		});
 		const widthString = `${temporaryMediaWidth || mediaWidth}%`;
 		const style = {
@@ -181,28 +180,23 @@ class featuredContentEdit extends Component {
 		};
 		const mediaTextGeneralSettings = (
 			<PanelBody title={__('Featured Content Settings')}>
-
-				{mediaType === 'image' && (<ToggleControl
-					label={__('Crop image to fill entire column')}
-					checked={imageFill}
-					onChange={() => setAttributes({
-						imageFill: !imageFill,
-					})}
-				/>)}
-				{imageFill && (<FocalPointPicker
-					label={__('Focal Point Picker')}
-					url={mediaUrl}
-					value={focalPoint}
-					onChange={(value) => setAttributes({ focalPoint: value })}
-				/>)}
 				{mediaType === 'image' && (<TextareaControl
 					label={__('Alt Text (Alternative Text)')}
 					value={mediaAlt}
 					onChange={onMediaAltChange}
 				/>)}
+				<ToggleControl
+					label={__("Add padding to top", "ainoblocks")}
+					checked={!!paddingTop}
+					onChange={() => setAttributes({ paddingTop: !paddingTop })}
+				/>
+				<ToggleControl
+					label={__("Add padding to bottom", "ainoblocks")}
+					checked={!!paddingBottom}
+					onChange={() => setAttributes({ paddingBottom: !paddingBottom })}
+				/>
 			</PanelBody>
 		);
-
 
 		return (
 			<Fragment>

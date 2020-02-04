@@ -3,11 +3,18 @@
 	padding-top:48px;
 	padding-bottom:48px;
 
-
 	@media (min-width: 48.500em) {
 		display: grid;
 		padding-top: 144px;
 		padding-bottom: 144px;
+	}
+
+	&.no-padding-top {
+		padding-top: 0;
+	}
+
+	&.no-padding-bottom {
+		padding-bottom: 0;
 	}
 
 	grid-template-rows: auto;
@@ -30,6 +37,7 @@
 	.wp-block-ainoblocks-featured-content__media {
 		grid-area: featured-content-media;
 		margin: 0;
+		padding-bottom: 24px;
 
 		@media (min-width: 48.500em) {
 			padding-right: 24px;
@@ -40,12 +48,33 @@
 		grid-area: featured-content-content;
 		margin: 0;
 
+		.fc-subtitle {
+			margin-bottom: 16px;
+		}
+
+		.fc-heading {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.fc-text {
+			margin-top: 16px;
+			margin-bottom: 0;
+		}
+
 		@media (min-width: 48.500em) {
 			padding-left: 24px;
 			padding-right: 0;
 		}
-	}
 
+		.wp-block-ainoblocks-multiple-buttons {
+			margin-top: 24px;
+
+			@media (min-width: 48.500em) {
+				margin-top: 32px;
+			}
+		}
+	}
 
 	&.has-media-right {
 		grid-template-areas: "featured-content-content featured-content-media";
@@ -69,28 +98,9 @@
 	}
 }
 
-
 .wp-block-ainoblocks-featured-content > figure > img,
 .wp-block-ainoblocks-featured-content > figure > video {
-	max-width: unset;
-	width: 100%;
-	vertical-align: middle;
-}
-
-.wp-block-ainoblocks-featured-content.is-image-fill figure {
-	height: 100%;
-	min-height: 250px;
-	background-size: cover;
-}
-
-.wp-block-ainoblocks-featured-content.is-image-fill figure > img {
-	// The image is visually hidden but accessible to assistive technologies.
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	border: 0;
-}
+		max-width: unset;
+		width: 100%;
+		vertical-align: middle;
+	}
