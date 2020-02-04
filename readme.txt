@@ -3,7 +3,7 @@ Author URI: https://www.elmastudio.de/en
 Plugin URI: https://wpaino.com
 Contributors: elmastudio
 Tags: page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
-Requires at least: 5.0
+Requires at least: 5.3
 Tested up to: 5.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,6 +15,9 @@ A WordPress block collection for site building.
 Gutenberg blocks for site building.
 
 == Changelog ==
+
+= 0.2.0 =
+Enhance: Featured Content block.
 
 = 0.1.3 =
 Enhance: Hero block.

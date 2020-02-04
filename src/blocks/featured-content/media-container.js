@@ -18,11 +18,10 @@ import icon from './media-container-icon';
  */
 const ALLOWED_MEDIA_TYPES = ['image', 'video'];
 
-export function imageFillStyles(url, focalPoint) {
+export function imageFillStyles(url) {
 	return url ?
 		{
 			backgroundImage: `url(${url})`,
-			backgroundPosition: focalPoint ? `${focalPoint.x * 100}% ${focalPoint.y * 100}%` : `50% 50%`,
 		} :
 		{};
 }
@@ -63,12 +62,11 @@ class MediaContainer extends Component {
 	}
 
 	renderImage() {
-		const { mediaAlt, mediaUrl, className, imageFill, focalPoint } = this.props;
-		const backgroundStyles = imageFill ? imageFillStyles(mediaUrl, focalPoint) : {};
+		const { mediaAlt, mediaUrl, className } = this.props;
 		return (
 			<Fragment>
 				{this.renderToolbarEditButton()}
-				<figure className={className} style={backgroundStyles}>
+				<figure className={className}>
 					<img src={mediaUrl} alt={mediaAlt} />
 				</figure>
 			</Fragment>
