@@ -98,6 +98,10 @@
 			padding-bottom: 144px;
 		}
 
+		.wp-block-ainoblocks-hero__content {
+			max-width: 728px;
+		}
+
 		.wp-block-ainoblocks-hero__media {
 			margin-left: auto;
 			margin-right: auto;
@@ -198,16 +202,22 @@
 	}
 }
 
-// Experimental: For Page Template "Hero"
-@media (min-width: 76.500em) {
-	.content-wrap .site-content {
-		margin-top: 0;
-	}
-
-	.page .site-header {
+// Hero block on Aino theme page template "Hero"
+.tpl-hero {
+	.site-header {
 		position: absolute;
-		z-index: 1000;
+		z-index: 10;
 		width: 100%;
 		overflow: hidden;
+	}
+
+	.wp-block-ainoblocks-hero__container {
+		padding-top: 104px;
+	}
+
+	@media (min-width: 48.5em) {
+		.wp-block-ainoblocks-hero__container {
+			padding-top: 0;
+		}
 	}
 }
