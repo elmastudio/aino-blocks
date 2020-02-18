@@ -16,6 +16,10 @@ Gutenberg blocks for site building.
 
 == Changelog ==
 
+= 0.2.1 =
+Enhance: Editor icons update.
+Enhance: Hero block styles.
+
 = 0.2.0 =
 Enhance: Featured Content block.
 
