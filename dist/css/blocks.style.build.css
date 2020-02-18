@@ -406,9 +406,8 @@
 
 .tpl-hero .site-header {
   position: absolute;
-  z-index: 10;
-  width: 100%;
-  overflow: hidden; }
+  z-index: 100;
+  width: 100%; }
 
 .tpl-hero .wp-block-ainoblocks-hero__container {
   padding-top: 104px; }
