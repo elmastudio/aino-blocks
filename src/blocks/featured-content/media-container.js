@@ -117,6 +117,7 @@ class MediaContainer extends Component {
 			const enablePositions = {
 				right: mediaPosition === 'left',
 				left: mediaPosition === 'right',
+				below: mediaPosition === 'below',
 			};
 
 			let mediaElement = null;

@@ -3,6 +3,11 @@
 	padding-top:48px;
 	padding-bottom:48px;
 
+	grid-template-rows: auto;
+	align-items: center;
+	grid-template-areas: "featured-content-media featured-content-content";
+	grid-template-columns: 48% auto;
+
 	@media (min-width: 48.500em) {
 		display: grid;
 		padding-top: 144px;
@@ -17,21 +22,16 @@
 		padding-bottom: 0;
 	}
 
-	grid-template-rows: auto;
-	align-items: center;
-	grid-template-areas: "featured-content-media featured-content-content";
-	grid-template-columns: 48% auto;
-
 	&.is-vertically-aligned-top {
 		align-items: start;
 	}
 
-	&.is-vertically-aligned-center {
-		align-items: center;
-	}
-
 	&.is-vertically-aligned-bottom {
 		align-items: end;
+	}
+
+	&.is-text-aligned-center {
+		text-align: center !important;
 	}
 
 	.wp-block-ainoblocks-featured-content__media {
@@ -93,6 +93,79 @@
 			@media (min-width: 48.500em) {
 				padding-left: 24px;
 				padding-right: 0;
+			}
+		}
+	}
+
+	&.has-media-below {
+		display: flex;
+		flex-direction: column-reverse;
+
+		.wp-block-ainoblocks-featured-content__media {
+			padding-top: 40px;
+			width: 100%;
+			padding-bottom: 0;
+		}
+
+		@media (min-width: 48.500em) {
+
+			.wp-block-ainoblocks-featured-content__content {
+				padding-left: 0;
+				max-width: 680px;
+				grid-template-areas: none;
+				align-self: flex-start;
+			}
+
+			&.is-text-aligned-center {
+
+				.wp-block-ainoblocks-featured-content__content {
+					align-self: center;
+				}
+			}
+
+			&.is-text-aligned-right {
+
+				.wp-block-ainoblocks-featured-content__content {
+					align-self: flex-end;
+				}
+			}
+
+			.wp-block-ainoblocks-featured-content__media {
+				padding-top: 72px;
+				padding-right: 0;
+				grid-template-areas: none;
+			}
+		}
+	}
+
+	&.is-text-aligned-center {
+
+		.wp-block-ainoblocks-featured-content__content {
+
+			.fc-subtitle,
+			.fc-heading,
+			.fc-text {
+				text-align: center;
+			}
+
+			.wp-block-ainoblocks-multiple-buttons {
+				justify-content: center !important;
+			}
+		}
+	}
+
+	&.is-text-aligned-right {
+
+		.wp-block-ainoblocks-featured-content__content {
+
+			.fc-subtitle,
+			.fc-heading,
+			.fc-text {
+				text-align: right;
+			}
+
+			.wp-block-ainoblocks-multiple-buttons {
+				justify-content: flex-end;
 			}
 		}
 	}

@@ -6,6 +6,9 @@
 			"type": "string",
 			"default": "wide"
 		},
+		"alignment": {
+			"type": "string"
+		},
 		"backgroundColor": {
 			"type": "string"
 		},

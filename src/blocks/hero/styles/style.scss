@@ -207,12 +207,19 @@
 
 	.site-header {
 		position: absolute;
-		z-index: 100;
+		z-index: 10;
 		width: 100%;
 	}
 
 	.wp-block-ainoblocks-hero__container {
 		padding-top: 104px;
+	}
+
+	&.has-header-search {
+
+		.wp-block-ainoblocks-hero__container {
+			padding-top: 160px;
+		}
 	}
 
 	@media (min-width: 48.5em) {

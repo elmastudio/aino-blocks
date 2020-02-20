@@ -16,6 +16,9 @@ Gutenberg blocks for site building.
 
 == Changelog ==
 
+= 0.2.2 =
+New: Featured Content block "media below" option.
+
 = 0.2.1 =
 Enhance: Editor icons update.
 Enhance: Hero block styles.
