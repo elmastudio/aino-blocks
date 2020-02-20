@@ -5,12 +5,18 @@ import classnames from 'classnames';
 import get from 'lodash/get';
 
 /**
+ * Internal dependencies
+ */
+import icons from './icons';
+
+/**
  * WordPress dependencies
  */
 const { __, _x } = wp.i18n;
 const { Component, Fragment } = wp.element;
 const {
 	BlockControls,
+	AlignmentToolbar,
 	BlockVerticalAlignmentToolbar,
 	InnerBlocks,
 	InspectorControls,
@@ -22,7 +28,6 @@ const {
 	TextareaControl,
 	ToggleControl,
 	Toolbar,
-	FocalPointPicker,
 } = wp.components;
 
 /**
@@ -131,25 +136,27 @@ class featuredContentEdit extends Component {
 			setBackgroundColor,
 		} = this.props;
 		const {
-			align,
+			alignment,
 			mediaAlt,
 			mediaPosition,
 			mediaType,
 			mediaWidth,
 			verticalAlignment,
-			mediaUrl,
 			paddingTop,
 			paddingBottom,
 		} = attributes;
 
 		const temporaryMediaWidth = this.state.mediaWidth;
-		const classNames = classnames(className, {
+		const classNames = classnames(className, alignment, {
+			'has-media-left': 'left' === mediaPosition,
 			'has-media-right': 'right' === mediaPosition,
+			'has-media-below': 'below' === mediaPosition,
 			'no-padding-top': false === paddingTop,
 			'no-padding-bottom': false === paddingBottom,
 			'is-selected': isSelected,
 			[backgroundColor.class]: backgroundColor.class,
 			[`is-vertically-aligned-${verticalAlignment}`]: verticalAlignment,
+			[`is-text-aligned-${alignment}`]: alignment,
 		});
 		const widthString = `${temporaryMediaWidth || mediaWidth}%`;
 		const style = {
@@ -163,14 +170,20 @@ class featuredContentEdit extends Component {
 		}];
 		const toolbarControls = [{
 			icon: 'align-pull-left',
-			title: __('Show media on left'),
+			title: __('Show media on left', 'ainoblocks'),
 			isActive: mediaPosition === 'left',
 			onClick: () => setAttributes({ mediaPosition: 'left' }),
 		}, {
 			icon: 'align-pull-right',
-			title: __('Show media on right'),
+			title: __('Show media on right', 'ainoblocks'),
 			isActive: mediaPosition === 'right',
 			onClick: () => setAttributes({ mediaPosition: 'right' }),
+		},
+		{
+			icon: icons.alignPullBelow,
+			title: __('Show media below', 'ainoblocks'),
+			isActive: mediaPosition === 'below',
+			onClick: () => setAttributes({ mediaPosition: 'below' }),
 		}];
 		const onMediaAltChange = (newMediaAlt) => {
 			setAttributes({ mediaAlt: newMediaAlt });
@@ -209,6 +222,10 @@ class featuredContentEdit extends Component {
 					/>
 				</InspectorControls>
 				<BlockControls>
+					<AlignmentToolbar
+						value={alignment}
+						onChange={alignment => setAttributes({ alignment })}
+					/>
 					<Toolbar
 						controls={toolbarControls}
 					/>
