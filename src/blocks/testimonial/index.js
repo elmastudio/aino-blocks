@@ -2,6 +2,7 @@
 * WordPress dependencies
 */
 const { __, _x } = wp.i18n;
+const { registerBlockCollection } = wp.blocks;
 
 /**
  * Internal dependencies
@@ -21,6 +22,7 @@ const { attributes, name } = metadata;
 const settings = {
 	title: __('Testimonial', 'ainoblocks'),
 	description: __('Insert a testimonial or review with the option to add author information. Works great in combination with the Columns block.', 'ainoblocks'),
+	category: typeof registerBlockCollection === 'function' ? 'common' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('testimonial', 'ainoblocks'),

@@ -1,6 +1,5 @@
 {
 	"name": "author",
-	"category": "ainoblocks",
 	"attributes": {
 		"imgURL": {
 			"type": "string",

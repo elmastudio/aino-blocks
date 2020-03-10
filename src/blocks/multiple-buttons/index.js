@@ -2,6 +2,7 @@
 * WordPress dependencies
 */
 const { __, _x } = wp.i18n;
+const { registerBlockCollection } = wp.blocks;
 
 /**
  * Internal dependencies
@@ -21,6 +22,7 @@ const { attributes, name } = metadata;
 const settings = {
 	title: __('Multiple Buttons', 'ainoblocks'),
 	description: __('A row of buttons with customization options.', 'ainoblocks'),
+	category: typeof registerBlockCollection === 'function' ? 'layout' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('button', 'ainoblocks'),

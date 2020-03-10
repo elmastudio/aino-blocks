@@ -1,6 +1,5 @@
 {
 	"name": "badge",
-	"category": "ainoblocks",
 	"attributes": {
 		"content": {
 			"type": "string",

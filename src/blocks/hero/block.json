@@ -1,6 +1,5 @@
 {
 	"name": "hero",
-	"category": "ainoblocks",
 	"attributes": {
 		"align": {
 			"type": "string",
