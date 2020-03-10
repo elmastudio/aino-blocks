@@ -14,7 +14,10 @@ const category = {
 // Register block category
 import './utils/block-category';
 
-// Register Blocks
+// Register extensions
+import './extensions/spacing';
+
+// Register blocks
 import * as hero from './blocks/hero';
 import * as card from './blocks/card';
 import * as badge from './blocks/badge';

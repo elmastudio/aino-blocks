@@ -6,15 +6,19 @@ Tags: page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.3
 Tested up to: 5.3.2
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A WordPress block collection for site building.
+A WordPress block collection for easy site building.
 
 == Description ==
 
 Gutenberg blocks for site building.
 
 == Changelog ==
+
+= 0.3.0 =
+New: Extension Spacing Settings for top and bottom spacing of blocks. Currently available for Aino Featured Content, Group, Cover blocks.
+Enhance: Block icon updates.
 
 = 0.2.2 =
 New: Featured Content block "media below" option.

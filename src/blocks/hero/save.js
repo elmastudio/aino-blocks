@@ -22,19 +22,16 @@ const DEFAULT_MEDIA_WIDTH = 50;
 export default function save({ attributes }) {
 
 	const {
-		align,
 		backgroundColor,
 		customBackgroundColor,
 		mediaAlt,
 		mediaPosition,
 		mediaType,
 		mediaUrl,
-		mediaWidth,
 		mediaOverflow,
 		mediaId,
 		verticalContentAlignment,
 		imageFill,
-		focalPoint,
 	} = attributes;
 
 	const mediaTypeRenders = {
@@ -52,28 +49,23 @@ export default function save({ attributes }) {
 		'is-image-fill': imageFill,
 		'is-media-overflow': mediaOverflow,
 	});
-	const backgroundStyles = imageFill ? imageFillStyles(mediaUrl, focalPoint) : {};
 
-	let gridTemplateColumns;
-	if (mediaWidth !== DEFAULT_MEDIA_WIDTH) {
-		gridTemplateColumns = 'right' === mediaPosition ? `auto ${mediaWidth}%` : `${mediaWidth}% auto`;
-	}
-	const styleGridColumns = {
-		gridTemplateColumns,
-	};
 	const styleBackground = {
 		backgroundColor: backgroundClass ? undefined : customBackgroundColor,
 	};
 	return (
 		<div className={className} style={styleBackground}>
 
-			<div className="wp-block-ainoblocks-hero__container" style={styleGridColumns}>
+			<div className="wp-block-ainoblocks-hero__container">
 				<div className="wp-block-ainoblocks-hero__content">
 					<InnerBlocks.Content />
 				</div>
-				<figure className="wp-block-ainoblocks-hero__media" style={backgroundStyles}>
-					{(mediaTypeRenders[mediaType] || noop)()}
-				</figure>
+
+				{'hide' !== mediaPosition && (
+					<figure className="wp-block-ainoblocks-hero__media">
+						{(mediaTypeRenders[mediaType] || noop)()}
+					</figure>
+				)}
 			</div>
 		</div>
 	);

@@ -1,7 +1,5 @@
 .wp-block-ainoblocks-featured-content {
 	display: block;
-	padding-top:48px;
-	padding-bottom:48px;
 
 	grid-template-rows: auto;
 	align-items: center;
@@ -10,8 +8,6 @@
 
 	@media (min-width: 48.500em) {
 		display: grid;
-		padding-top: 144px;
-		padding-bottom: 144px;
 	}
 
 	&.no-padding-top {
@@ -41,6 +37,7 @@
 
 		@media (min-width: 48.500em) {
 			padding-right: 24px;
+			padding-bottom: 0;
 		}
 	}
 
