@@ -2,6 +2,7 @@
 * WordPress dependencies
 */
 const { __, _x } = wp.i18n;
+const { registerBlockCollection } = wp.blocks;
 
 /**
  * Internal dependencies
@@ -20,7 +21,8 @@ const { attributes, name } = metadata;
 
 const settings = {
 	title: __('Card', 'ainoblocks'),
-	description: __('Insert a card to highlight important content such as quotes or special notices. The card has a box style format that can be customised in different ways. You can add images, text, and any other kind of block inside the card.', 'ainoblocks'),
+	description: __('Insert a card to highlight important content such as quotes or special notices. The card has a box style format that can be customised.', 'ainoblocks'),
+	category: typeof registerBlockCollection === 'function' ? 'layout' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('card', 'ainoblocks'),

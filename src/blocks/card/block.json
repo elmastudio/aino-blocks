@@ -1,6 +1,5 @@
 {
 	"name": "card",
-	"category": "ainoblocks",
 	"attributes": {
 		"align": {
 			"type": "string"

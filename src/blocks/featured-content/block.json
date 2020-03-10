@@ -1,6 +1,5 @@
 {
 	"name": "featured-content",
-	"category": "ainoblocks",
 	"attributes": {
 		"align": {
 			"type": "string",

@@ -2,6 +2,7 @@
 * WordPress dependencies
 */
 const { __, _x } = wp.i18n;
+const { registerBlockCollection } = wp.blocks;
 
 /**
  * Internal dependencies
@@ -21,6 +22,7 @@ const { attributes, name } = metadata;
 const settings = {
 	title: __('Hero', 'ainoblocks'),
 	description: __('Include a fullscreen featured header area at the top of your front page. You can add an image or video, multiple buttons, a heading, and explanation text.', 'ainoblocks'),
+	category: typeof registerBlockCollection === 'function' ? 'layout' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('header', 'ainoblocks'),

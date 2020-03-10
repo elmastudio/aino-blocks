@@ -2,6 +2,7 @@
 * WordPress dependencies
 */
 const { __, _x } = wp.i18n;
+const { registerBlockCollection } = wp.blocks;
 
 /**
  * Internal dependencies
@@ -21,6 +22,7 @@ const { attributes, name } = metadata;
 const settings = {
 	title: __('Author', 'ainoblocks'),
 	description: __('This is an author block.', 'ainoblocks'),
+	category: typeof registerBlockCollection === 'function' ? 'common' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('author', 'ainoblocks'),

@@ -1,6 +1,5 @@
 {
 	"name": "button",
-	"category": "ainoblocks",
 	"attributes": {
 		"url": {
 			"type": "string",
