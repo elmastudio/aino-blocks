@@ -22,7 +22,6 @@ const DEFAULT_MEDIA_WIDTH = 50;
 export default function save({ attributes }) {
 
 	const {
-		align,
 		alignment,
 		backgroundColor,
 		customBackgroundColor,
@@ -33,8 +32,6 @@ export default function save({ attributes }) {
 		mediaWidth,
 		mediaId,
 		verticalAlignment,
-		paddingTop,
-		paddingBottom,
 	} = attributes;
 
 	const mediaTypeRenders = {
@@ -46,8 +43,6 @@ export default function save({ attributes }) {
 		'has-media-right': 'left' === mediaPosition,
 		'has-media-right': 'right' === mediaPosition,
 		'has-media-below': 'below' === mediaPosition,
-		'no-padding-top': false === paddingTop,
-		'no-padding-bottom': false === paddingBottom,
 		[backgroundClass]: backgroundClass,
 		[`is-vertically-aligned-${verticalAlignment}`]: verticalAlignment,
 		[`is-text-aligned-${alignment}`]: alignment,

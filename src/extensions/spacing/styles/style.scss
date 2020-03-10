@@ -1,0 +1,18 @@
+[class*="wp-block-"] {
+
+	&.spacing-top-true {
+		padding-top: 48px;
+
+		@media (min-width: 48.500em) {
+			padding-top: 144px;
+		}
+	}
+
+	&.spacing-bottom-true {
+		padding-bottom: 48px;
+
+		@media (min-width: 48.500em) {
+			padding-bottom: 144px;
+		}
+	}
+}

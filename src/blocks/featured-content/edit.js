@@ -127,6 +127,7 @@ class featuredContentEdit extends Component {
 	}
 
 	render() {
+
 		const {
 			attributes,
 			className,
@@ -135,6 +136,7 @@ class featuredContentEdit extends Component {
 			setAttributes,
 			setBackgroundColor,
 		} = this.props;
+
 		const {
 			alignment,
 			mediaAlt,
@@ -142,32 +144,33 @@ class featuredContentEdit extends Component {
 			mediaType,
 			mediaWidth,
 			verticalAlignment,
-			paddingTop,
-			paddingBottom,
 		} = attributes;
 
 		const temporaryMediaWidth = this.state.mediaWidth;
+
 		const classNames = classnames(className, alignment, {
 			'has-media-left': 'left' === mediaPosition,
 			'has-media-right': 'right' === mediaPosition,
 			'has-media-below': 'below' === mediaPosition,
-			'no-padding-top': false === paddingTop,
-			'no-padding-bottom': false === paddingBottom,
 			'is-selected': isSelected,
 			[backgroundColor.class]: backgroundColor.class,
 			[`is-vertically-aligned-${verticalAlignment}`]: verticalAlignment,
 			[`is-text-aligned-${alignment}`]: alignment,
 		});
+
 		const widthString = `${temporaryMediaWidth || mediaWidth}%`;
+
 		const style = {
 			gridTemplateColumns: 'right' === mediaPosition ? `auto ${widthString}` : `${widthString} auto`,
 			backgroundColor: backgroundColor.color,
 		};
+
 		const colorSettings = [{
 			value: backgroundColor.color,
 			onChange: setBackgroundColor,
 			label: __('Background Color'),
 		}];
+
 		const toolbarControls = [{
 			icon: 'align-pull-left',
 			title: __('Show media on left', 'ainoblocks'),
@@ -185,12 +188,15 @@ class featuredContentEdit extends Component {
 			isActive: mediaPosition === 'below',
 			onClick: () => setAttributes({ mediaPosition: 'below' }),
 		}];
+
 		const onMediaAltChange = (newMediaAlt) => {
 			setAttributes({ mediaAlt: newMediaAlt });
 		};
+
 		const onVerticalAlignmentChange = (alignment) => {
 			setAttributes({ verticalAlignment: alignment });
 		};
+
 		const mediaTextGeneralSettings = (
 			<PanelBody title={__('Featured Content Settings')}>
 				{mediaType === 'image' && (<TextareaControl
@@ -198,16 +204,6 @@ class featuredContentEdit extends Component {
 					value={mediaAlt}
 					onChange={onMediaAltChange}
 				/>)}
-				<ToggleControl
-					label={__("Add padding to top", "ainoblocks")}
-					checked={!!paddingTop}
-					onChange={() => setAttributes({ paddingTop: !paddingTop })}
-				/>
-				<ToggleControl
-					label={__("Add padding to bottom", "ainoblocks")}
-					checked={!!paddingBottom}
-					onChange={() => setAttributes({ paddingBottom: !paddingBottom })}
-				/>
 			</PanelBody>
 		);
 

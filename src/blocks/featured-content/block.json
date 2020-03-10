@@ -43,14 +43,6 @@
 		},
 		"verticalAlignment": {
 			"type": "string"
-		},
-		"paddingTop": {
-			"type": "boolean",
-			"default": true
-		},
-		"paddingBottom": {
-			"type": "boolean",
-			"default": true
 		}
 	}
 }

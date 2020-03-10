@@ -27,7 +27,6 @@ const {
 	TextareaControl,
 	ToggleControl,
 	Toolbar,
-	FocalPointPicker,
 } = wp.components;
 
 /**
@@ -118,7 +117,7 @@ class heroEdit extends Component {
 		const { attributes } = this.props;
 		const { mediaAlt, mediaId, mediaPosition, mediaType, mediaUrl, mediaWidth, mediaOverflow, imageFill, focalPoint } = attributes;
 
-		if ('right' === mediaPosition || 'left' === mediaPosition || 'below' === mediaPosition) {
+		if ('hide' !== mediaPosition) {
 			return (
 				<MediaContainer
 					className="wp-block-ainoblocks-hero__media"
@@ -147,10 +146,8 @@ class heroEdit extends Component {
 			mediaType,
 			mediaWidth,
 			verticalContentAlignment,
-			mediaUrl,
 			mediaOverflow,
 			imageFill,
-			focalPoint,
 		} = attributes;
 
 		const temporaryMediaWidth = this.state.mediaWidth;
@@ -167,9 +164,6 @@ class heroEdit extends Component {
 			'is-media-overflow': mediaOverflow,
 		});
 		const widthString = `${temporaryMediaWidth || mediaWidth}%`;
-		const styleGridColumns = {
-			gridTemplateColumns: 'right' === mediaPosition ? `auto ${widthString}` : `${widthString} auto`,
-		};
 		const styleBackground = {
 			backgroundColor: backgroundColor.color,
 		};
@@ -247,15 +241,20 @@ class heroEdit extends Component {
 				</BlockControls>
 
 				<div className={classNames} style={styleBackground}>
-					<div className="wp-block-ainoblocks-hero__container" style={styleGridColumns}>
-						<InnerBlocks
-							template={TEMPLATE}
-							templateInsertUpdatesSelection={false}
-						/>
-						{this.renderMediaArea()}
+					<div className="wp-block-ainoblocks-hero__container">
+
+						<div className="wp-block-ainoblocks-hero__content">
+							<InnerBlocks
+								template={TEMPLATE}
+								templateInsertUpdatesSelection={false}
+							/>
+						</div>
+						<figure className="wp-block-ainoblocks-hero__media">
+							{this.renderMediaArea()}
+						</figure>
 					</div>
 				</div>
-			</Fragment>
+			</Fragment >
 		);
 	}
 }

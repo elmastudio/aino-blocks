@@ -6,10 +6,10 @@ const { Path, SVG } = wp.components;
 export default <SVG className="components-ainoblocks-svg" aria-hidden role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 	<path fill="#fff" d="M4.5 2.5h4c1.105 0 2 0.895 2 2v4c0 1.105-0.895 2-2 2h-4c-1.105 0-2-0.895-2-2v-4c0-1.105 0.895-2 2-2z"></path>
 	<path fill="#fff" d="M15.5 13.5h4c1.105 0 2 0.895 2 2v4c0 1.105-0.895 2-2 2h-4c-1.105 0-2-0.895-2-2v-4c0-1.105 0.895-2 2-2z"></path>
-	<path fill="#408321" d="M4.5 13.5h4c1.105 0 2 0.895 2 2v4c0 1.105-0.895 2-2 2h-4c-1.105 0-2-0.895-2-2v-4c0-1.105 0.895-2 2-2z"></path>
-	<path fill="none" stroke="#111" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1" d="M4.5 2.5h4c1.105 0 2 0.895 2 2v4c0 1.105-0.895 2-2 2h-4c-1.105 0-2-0.895-2-2v-4c0-1.105 0.895-2 2-2z"></path>
-	<path fill="none" stroke="#111" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1" d="M4.5 13.5h4c1.105 0 2 0.895 2 2v4c0 1.105-0.895 2-2 2h-4c-1.105 0-2-0.895-2-2v-4c0-1.105 0.895-2 2-2z"></path>
-	<path fill="none" stroke="#111" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1" d="M15.5 13.5h4c1.105 0 2 0.895 2 2v4c0 1.105-0.895 2-2 2h-4c-1.105 0-2-0.895-2-2v-4c0-1.105 0.895-2 2-2z"></path>
-	<path fill="none" stroke="#111" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1" d="M21.5 6.5h-8"></path>
-	<path fill="none" stroke="#111" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1" d="M17.5 10.5v-8"></path>
+	<path fill="#e5c1f1" d="M4.5 13.5h4c1.105 0 2 0.895 2 2v4c0 1.105-0.895 2-2 2h-4c-1.105 0-2-0.895-2-2v-4c0-1.105 0.895-2 2-2z"></path>
+	<path fill="#111" d="M8.5 2h-4c-1.381 0-2.5 1.119-2.5 2.5v4c0 1.381 1.119 2.5 2.5 2.5h4c1.381 0 2.5-1.119 2.5-2.5v-4c0-1.381-1.119-2.5-2.5-2.5zM4.5 3h4c0.828 0 1.5 0.672 1.5 1.5v4c0 0.828-0.672 1.5-1.5 1.5h-4c-0.828 0-1.5-0.672-1.5-1.5v-4c0-0.828 0.672-1.5 1.5-1.5z"></path>
+	<path fill="#111" d="M8.5 13h-4c-1.381 0-2.5 1.119-2.5 2.5v4c0 1.381 1.119 2.5 2.5 2.5h4c1.381 0 2.5-1.119 2.5-2.5v-4c0-1.381-1.119-2.5-2.5-2.5zM4.5 14h4c0.828 0 1.5 0.672 1.5 1.5v4c0 0.828-0.672 1.5-1.5 1.5h-4c-0.828 0-1.5-0.672-1.5-1.5v-4c0-0.828 0.672-1.5 1.5-1.5z"></path>
+	<path fill="#111" d="M19.5 13h-4c-1.381 0-2.5 1.119-2.5 2.5v4c0 1.381 1.119 2.5 2.5 2.5h4c1.381 0 2.5-1.119 2.5-2.5v-4c0-1.381-1.119-2.5-2.5-2.5zM15.5 14h4c0.828 0 1.5 0.672 1.5 1.5v4c0 0.828-0.672 1.5-1.5 1.5h-4c-0.828 0-1.5-0.672-1.5-1.5v-4c0-0.828 0.672-1.5 1.5-1.5z"></path>
+	<path fill="#111" d="M21.5 6c0.276 0 0.5 0.224 0.5 0.5 0 0.245-0.177 0.45-0.41 0.492l-0.090 0.008h-8c-0.276 0-0.5-0.224-0.5-0.5 0-0.245 0.177-0.45 0.41-0.492l0.090-0.008h8z"></path>
+	<path fill="#111" d="M17.5 2c0.245 0 0.45 0.177 0.492 0.41l0.008 0.090v8c0 0.276-0.224 0.5-0.5 0.5-0.245 0-0.45-0.177-0.492-0.41l-0.008-0.090v-8c0-0.276 0.224-0.5 0.5-0.5z"></path>
 </SVG>;

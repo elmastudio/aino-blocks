@@ -4,9 +4,9 @@
 const { Path, SVG } = wp.components;
 
 export default <SVG className="components-ainoblocks-svg" aria-hidden role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M5.5 1.5h13c1.105 0 2 0.895 2 2v17c0 1.105-0.895 2-2 2h-13c-1.105 0-2-0.895-2-2v-17c0-1.105 0.895-2 2-2z"></path>
-	<path fill="#99dcf2" d="M15 11.5c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
-	<path fill="#99dcf2" d="M6.5 22.5v-3c0-1.657 1.343-3 3-3h5c1.657 0 3 1.343 3 3v3z"></path>
-	<path fill="none" stroke="#111" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1" d="M15 11.5c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
-	<path fill="none" stroke="#111" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1" d="M5.5 1.5h13c1.105 0 2 0.895 2 2v17c0 1.105-0.895 2-2 2h-13c-1.105 0-2-0.895-2-2v-17c0-1.105 0.895-2 2-2z"></path>
-	<path fill="none" stroke="#111" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1" d="M6.5 22.5v-3c0-1.657 1.343-3 3-3h5c1.657 0 3 1.343 3 3v3"></path>
-	<path fill="none" stroke="#111" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1" d="M10 4.5h4"></path></SVG>;
+	<path fill="#e5c1f1" d="M6.5 22.5v-3c0-1.657 1.343-3 3-3h5c1.657 0 3 1.343 3 3v3z"></path>
+	<path fill="#e5c1f1" d="M15 11.5c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+	<path fill="#111" d="M18.5 1h-13c-1.381 0-2.5 1.119-2.5 2.5v17c0 1.381 1.119 2.5 2.5 2.5h13c1.381 0 2.5-1.119 2.5-2.5v-17c0-1.381-1.119-2.5-2.5-2.5zM5.5 2h13c0.828 0 1.5 0.672 1.5 1.5v17c0 0.828-0.672 1.5-1.5 1.5h-13c-0.828 0-1.5-0.672-1.5-1.5v-17c0-0.828 0.672-1.5 1.5-1.5z"></path>
+	<path fill="#111" d="M14.5 16c1.869 0 3.395 1.464 3.495 3.308l0.005 0.192v3c0 0.276-0.224 0.5-0.5 0.5-0.245 0-0.45-0.177-0.492-0.41l-0.008-0.090v-3c0-1.325-1.032-2.41-2.336-2.495l-0.164-0.005h-5c-1.325 0-2.41 1.032-2.495 2.336l-0.005 0.164v3c0 0.276-0.224 0.5-0.5 0.5-0.245 0-0.45-0.177-0.492-0.41l-0.008-0.090v-3c0-1.869 1.464-3.395 3.308-3.495l0.192-0.005h5z"></path>
+	<path fill="#111" d="M12 8c-1.933 0-3.5 1.567-3.5 3.5s1.567 3.5 3.5 3.5c1.933 0 3.5-1.567 3.5-3.5s-1.567-3.5-3.5-3.5zM12 9c1.381 0 2.5 1.119 2.5 2.5s-1.119 2.5-2.5 2.5c-1.381 0-2.5-1.119-2.5-2.5s1.119-2.5 2.5-2.5z"></path>
+	<path fill="#111" d="M14 4c0.276 0 0.5 0.224 0.5 0.5 0 0.245-0.177 0.45-0.41 0.492l-0.090 0.008h-4c-0.276 0-0.5-0.224-0.5-0.5 0-0.245 0.177-0.45 0.41-0.492l0.090-0.008h4z"></path></SVG>;
