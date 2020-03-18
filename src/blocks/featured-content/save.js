@@ -32,6 +32,10 @@ export default function save({ attributes }) {
 		mediaWidth,
 		mediaId,
 		verticalAlignment,
+		contentGridLineStart,
+		contentGridLineEnd,
+		mediaGridLineStart,
+		mediaGridLineEnd,
 	} = attributes;
 
 	const mediaTypeRenders = {
@@ -40,8 +44,6 @@ export default function save({ attributes }) {
 	};
 	const backgroundClass = getColorClassName('background-color', backgroundColor);
 	const className = classnames({
-		'has-media-right': 'left' === mediaPosition,
-		'has-media-right': 'right' === mediaPosition,
 		'has-media-below': 'below' === mediaPosition,
 		[backgroundClass]: backgroundClass,
 		[`is-vertically-aligned-${verticalAlignment}`]: verticalAlignment,
@@ -56,12 +58,23 @@ export default function save({ attributes }) {
 		backgroundColor: backgroundClass ? undefined : customBackgroundColor,
 		gridTemplateColumns,
 	};
+
+	const styleContent = {
+		gridColumnStart: contentGridLineStart,
+		gridColumnEnd: contentGridLineEnd,
+	};
+
+	const styleMedia = {
+		gridColumnStart: mediaGridLineStart,
+		gridColumnEnd: mediaGridLineEnd,
+	};
+
 	return (
 		<div className={className} style={style}>
-			<figure className="wp-block-ainoblocks-featured-content__media">
+			<figure className="wp-block-ainoblocks-featured-content__media" style={styleMedia}>
 				{(mediaTypeRenders[mediaType] || noop)()}
 			</figure>
-			<div className="wp-block-ainoblocks-featured-content__content">
+			<div className="wp-block-ainoblocks-featured-content__content" style={styleContent}>
 				<InnerBlocks.Content />
 			</div>
 		</div>

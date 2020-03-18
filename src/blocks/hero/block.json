@@ -19,8 +19,7 @@
 			"default": ""
 		},
 		"mediaPosition": {
-			"type": "string",
-			"default": "right"
+			"type": "string"
 		},
 		"mediaId": {
 			"type": "number"
@@ -47,8 +46,17 @@
 		"imageFill": {
 			"type": "boolean"
 		},
-		"focalPoint": {
-			"type": "object"
+		"contentGridLineStart": {
+			"type": "number"
+		},
+		"contentGridLineEnd": {
+			"type": "number"
+		},
+		"mediaGridLineStart": {
+			"type": "number"
+		},
+		"mediaGridLineEnd": {
+			"type": "number"
 		}
 	}
 }

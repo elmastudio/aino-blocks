@@ -16,6 +16,14 @@
 	.block-editor-inner-blocks .block-editor-block-list__layout {
 		display: flex;
 		justify-content: flex-start;
+
+		.wp-block {
+			margin-left: 16px;
+
+			&:first-of-type {
+				margin-left: 0;
+			}
+		}
 	}
 
 	&.aligncenter {

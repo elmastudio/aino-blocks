@@ -17,8 +17,6 @@ const {
  */
 import imageFillStyles from './media-container';
 
-const DEFAULT_MEDIA_WIDTH = 50;
-
 export default function save({ attributes }) {
 
 	const {
@@ -32,6 +30,10 @@ export default function save({ attributes }) {
 		mediaId,
 		verticalContentAlignment,
 		imageFill,
+		contentGridLineStart,
+		contentGridLineEnd,
+		mediaGridLineStart,
+		mediaGridLineEnd,
 	} = attributes;
 
 	const mediaTypeRenders = {
@@ -40,8 +42,6 @@ export default function save({ attributes }) {
 	};
 	const backgroundClass = getColorClassName('background-color', backgroundColor);
 	const className = classnames({
-		'has-media-left': 'left' === mediaPosition,
-		'has-media-right': 'right' === mediaPosition,
 		'has-media-below': 'below' === mediaPosition,
 		'hide-media': 'hide' === mediaPosition,
 		[backgroundClass]: backgroundClass,
@@ -53,16 +53,27 @@ export default function save({ attributes }) {
 	const styleBackground = {
 		backgroundColor: backgroundClass ? undefined : customBackgroundColor,
 	};
+
+	const styleContent = {
+		gridColumnStart: contentGridLineStart,
+		gridColumnEnd: contentGridLineEnd,
+	};
+
+	const styleMedia = {
+		gridColumnStart: mediaGridLineStart,
+		gridColumnEnd: mediaGridLineEnd,
+	};
+
 	return (
 		<div className={className} style={styleBackground}>
 
 			<div className="wp-block-ainoblocks-hero__container">
-				<div className="wp-block-ainoblocks-hero__content">
+				<div className="wp-block-ainoblocks-hero__content" style={styleContent}>
 					<InnerBlocks.Content />
 				</div>
 
 				{'hide' !== mediaPosition && (
-					<figure className="wp-block-ainoblocks-hero__media">
+					<figure className="wp-block-ainoblocks-hero__media" style={styleMedia}>
 						{(mediaTypeRenders[mediaType] || noop)()}
 					</figure>
 				)}

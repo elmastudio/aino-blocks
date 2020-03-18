@@ -16,6 +16,7 @@ import './utils/block-category';
 
 // Register extensions
 import './extensions/spacing';
+import './extensions/font-sizes';
 
 // Register blocks
 import * as hero from './blocks/hero';

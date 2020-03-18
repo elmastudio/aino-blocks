@@ -39,7 +39,7 @@
 		},
 		"borderRadius": {
 			"type": "string",
-			"default": "radius-round"
+			"default": "radius-square"
 		},
 		"uppercase": {
 			"type": "boolean",
