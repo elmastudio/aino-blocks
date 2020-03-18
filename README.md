@@ -12,7 +12,17 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ## Changelog
 =======
 
-### 0.2.2
+### 0.5.0. 
+New: Heading Font Size Extension: Adds font size option to heading block.  
+
+### 0.4.0   
+New: Support for Block Collections API. Fixes issue #25   
+   
+### 0.3.0   
+New: Extension Spacing Settings for top and bottom spacing of blocks. Currently available for Aino Featured Content, Group, Cover blocks.   
+Enhance: Block icon updates.   
+
+### 0.2.2   
 New: Featured Content block "media below" option.  
 
 ### 0.2.1
