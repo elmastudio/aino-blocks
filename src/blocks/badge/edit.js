@@ -20,7 +20,6 @@ const {
 } = wp.blockEditor;
 const {
 	PanelBody,
-	SelectControl,
 	RangeControl,
 } = wp.components;
 

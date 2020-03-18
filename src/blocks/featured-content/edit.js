@@ -13,7 +13,10 @@ import icons from './icons';
  * WordPress dependencies
  */
 const { __, _x } = wp.i18n;
-const { Component, Fragment } = wp.element;
+const {
+	Component,
+	Fragment
+} = wp.element;
 const {
 	BlockControls,
 	AlignmentToolbar,
@@ -28,7 +31,11 @@ const {
 	TextareaControl,
 	ToggleControl,
 	Toolbar,
+	RangeControl,
 } = wp.components;
+const {
+	compose,
+} = wp.compose;
 
 /**
  * Internal dependencies
@@ -117,7 +124,7 @@ class featuredContentEdit extends Component {
 
 		return (
 			<MediaContainer
-				className="block-library-ainoblocks-featured-content__media-container"
+				className="wp-block-ainoblocks-featured-content__media"
 				onSelectMedia={this.onSelectMedia}
 				onWidthChange={this.onWidthChange}
 				commitWidthChange={this.commitWidthChange}
@@ -144,6 +151,10 @@ class featuredContentEdit extends Component {
 			mediaType,
 			mediaWidth,
 			verticalAlignment,
+			contentGridLineStart,
+			contentGridLineEnd,
+			mediaGridLineStart,
+			mediaGridLineEnd,
 		} = attributes;
 
 		const temporaryMediaWidth = this.state.mediaWidth;
@@ -157,6 +168,16 @@ class featuredContentEdit extends Component {
 			[`is-vertically-aligned-${verticalAlignment}`]: verticalAlignment,
 			[`is-text-aligned-${alignment}`]: alignment,
 		});
+
+		const styleContent = {
+			gridColumnStart: contentGridLineStart,
+			gridColumnEnd: contentGridLineEnd,
+		};
+
+		const styleMedia = {
+			gridColumnStart: mediaGridLineStart,
+			gridColumnEnd: mediaGridLineEnd,
+		};
 
 		const widthString = `${temporaryMediaWidth || mediaWidth}%`;
 
@@ -197,7 +218,7 @@ class featuredContentEdit extends Component {
 			setAttributes({ verticalAlignment: alignment });
 		};
 
-		const mediaTextGeneralSettings = (
+		const featuredContentGeneralSettings = (
 			<PanelBody title={__('Featured Content Settings')}>
 				{mediaType === 'image' && (<TextareaControl
 					label={__('Alt Text (Alternative Text)')}
@@ -207,15 +228,65 @@ class featuredContentEdit extends Component {
 			</PanelBody>
 		);
 
+		const contentGridSettings = (
+			<PanelBody
+				title={__('Content Grid Settings', 'ainoblocks')}
+				initialOpen={false}
+			>
+				<RangeControl
+					label={__('Grid Line Start', 'ainoblocks')}
+					value={contentGridLineStart}
+					onChange={(contentGridLineStart) => setAttributes({ contentGridLineStart })}
+					min={1}
+					max={13}
+					allowReset={true}
+				/>
+				<RangeControl
+					label={__('Grid Line End', 'ainoblocks')}
+					value={contentGridLineEnd}
+					onChange={(contentGridLineEnd) => setAttributes({ contentGridLineEnd })}
+					min={1}
+					max={13}
+					allowReset={true}
+				/>
+			</PanelBody>
+		);
+
+		const mediaGridSettings = (
+			<PanelBody
+				title={__('Media Grid Settings', 'ainoblocks')}
+				initialOpen={false}
+			>
+				<RangeControl
+					label={__('Grid Line Start', 'ainoblocks')}
+					value={mediaGridLineStart}
+					onChange={(mediaGridLineStart) => setAttributes({ mediaGridLineStart })}
+					min={1}
+					max={13}
+					allowReset={true}
+				/>
+				<RangeControl
+					label={__('Grid Line End', 'ainoblocks')}
+					value={mediaGridLineEnd}
+					onChange={(mediaGridLineEnd) => setAttributes({ mediaGridLineEnd })}
+					min={1}
+					max={13}
+					allowReset={true}
+				/>
+			</PanelBody>
+		);
+
 		return (
 			<Fragment>
 				<InspectorControls>
-					{mediaTextGeneralSettings}
+					{featuredContentGeneralSettings}
 					<PanelColorSettings
 						title={__('Color Settings')}
 						initialOpen={false}
 						colorSettings={colorSettings}
 					/>
+					{contentGridSettings}
+					{mediaGridSettings}
 				</InspectorControls>
 				<BlockControls>
 					<AlignmentToolbar
@@ -231,15 +302,22 @@ class featuredContentEdit extends Component {
 					/>
 				</BlockControls>
 				<div className={classNames} style={style} >
-					{this.renderMediaArea()}
-					<InnerBlocks
-						template={TEMPLATE}
-						templateInsertUpdatesSelection={false}
-					/>
+
+					<div className="wp-block-ainoblocks-featured-content__media" style={styleMedia}>
+						{this.renderMediaArea()}
+					</div>
+					<div className="wp-block-ainoblocks-featured-content__content" style={styleContent}>
+						<InnerBlocks
+							template={TEMPLATE}
+							templateInsertUpdatesSelection={false}
+						/>
+					</div>
 				</div>
 			</Fragment>
 		);
 	}
 }
 
-export default withColors('backgroundColor')(featuredContentEdit);
+export default compose([
+	withColors('backgroundColor'),
+])(featuredContentEdit);

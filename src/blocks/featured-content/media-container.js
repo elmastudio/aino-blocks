@@ -66,7 +66,7 @@ class MediaContainer extends Component {
 		return (
 			<Fragment>
 				{this.renderToolbarEditButton()}
-				<figure className={className}>
+				<figure>
 					<img src={mediaUrl} alt={mediaAlt} />
 				</figure>
 			</Fragment>

@@ -69,7 +69,7 @@ class MediaContainer extends Component {
 		return (
 			<Fragment>
 				{this.renderToolbarEditButton()}
-				<figure className={className} style={backgroundStyles}>
+				<figure style={backgroundStyles}>
 					<img src={mediaUrl} alt={mediaAlt} />
 				</figure>
 			</Fragment>
@@ -81,7 +81,7 @@ class MediaContainer extends Component {
 		return (
 			<Fragment>
 				{this.renderToolbarEditButton()}
-				<figure className={className}>
+				<figure style={backgroundStyles}>
 					<video controls src={mediaUrl} />
 				</figure>
 			</Fragment>

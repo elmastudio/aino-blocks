@@ -16,6 +16,9 @@ Gutenberg blocks for site building.
 
 == Changelog ==
 
+= 0.5.0 =
+New: Heading Font Size Extension: Adds font size option to heading block.
+
 = 0.4.0 =
 New: Support for Block Collections API. Fixes issue #25
 
