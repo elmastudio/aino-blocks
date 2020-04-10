@@ -16,7 +16,6 @@ const {
 	ToggleControl,
 	BaseControl,
 	SelectControl,
-	RangeControl,
 } = wp.components;
 
 const {
@@ -110,9 +109,9 @@ class buttonEdit extends Component {
 			title,
 			linkTarget,
 			rel,
-			placeholder,
 			size,
 			borderRadius,
+			borderWidth,
 			uppercase,
 		} = attributes;
 
@@ -128,27 +127,42 @@ class buttonEdit extends Component {
 			{ value: 'radius-circular', label: __('circular', 'ainoblocks') }
 		];
 
+		const borderWidthOptions = [
+			{ value: 'border-width-thin', label: __('thin', 'ainoblocks') },
+			{ value: 'border-width-medium', label: __('medium', 'ainoblocks') },
+			{ value: 'border-width-thick', label: __('thick', 'ainoblocks') }
+		];
+
+		const styles = {
+			backgroundColor: backgroundColor.color,
+			color: textColor.color,
+			boxShadow: borderWidth === 'border-width-medium' ? 'inset 0 0 0 2px' + backgroundColor.color : 'inset 0 0 0 1px' + backgroundColor.color,
+			boxShadow: borderWidth === 'border-width-thick' ? 'inset 0 0 0 3px' + backgroundColor.color : 'inset 0 0 0 1px' + backgroundColor.color,
+		};
+
 		const linkId = `wp-block-ainoblocks-button__inline-link-${instanceId}`;
 
 		return (
 			<div className={className} title={title}>
-				<RichText
-					placeholder={__('Enter text…', 'ainoblocks')}
-					value={text}
-					onChange={(value) => setAttributes({ text: value })}
+				<a
 					className={classnames(
-						'wp-block-ainoblocks-button__link', size, borderRadius, {
+						'wp-block-ainoblocks-button__link', size, borderRadius, borderWidth, {
 						'has-custom-background': backgroundColor,
 						'has-custom-text-color': textColor,
 						'is-uppercase': uppercase,
 					}
 					)}
-					style={{
-						backgroundColor: backgroundColor.color,
-						borderColor: backgroundColor.color,
-						color: textColor.color,
-					}}
-				/>
+					style={styles}
+				>
+					<span>
+						<RichText
+							placeholder={__('Enter text…', 'ainoblocks')}
+							value={text}
+							onChange={(value) => setAttributes({ text: value })}
+
+						/>
+					</span>
+				</a>
 				<BaseControl
 					label={__('Link', 'ainoblocks')}
 					className="wp-block-ainoblocks-button__inline-link"
@@ -177,6 +191,12 @@ class buttonEdit extends Component {
 							options={borderRadiusOptions}
 							onChange={borderRadius => setAttributes({ borderRadius })}
 						/>
+						<SelectControl
+							label={__('Border Width', 'ainoblocks')}
+							value={borderWidth}
+							options={borderWidthOptions}
+							onChange={borderWidth => setAttributes({ borderWidth })}
+						/>
 						<ToggleControl
 							label={__('Uppercase Text', 'ainoblocks')}
 							checked={!!uppercase}
@@ -201,7 +221,6 @@ class buttonEdit extends Component {
 						]}
 					>
 					</PanelColorSettings>
-
 					<PanelBody
 						title={__('Link Settings', 'ainoblocks')}
 						initialOpen={false}
@@ -218,7 +237,7 @@ class buttonEdit extends Component {
 						/>
 					</PanelBody>
 				</InspectorControls>
-			</div>
+			</div >
 		);
 	}
 }

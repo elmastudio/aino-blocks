@@ -17,7 +17,10 @@ import './styles/editor.scss';
 /**
  * Register block
  */
-const { attributes, name } = metadata;
+const {
+	attributes,
+	name
+} = metadata;
 
 const settings = {
 	title: __('Button', 'ainoblocks'),
@@ -34,9 +37,10 @@ const settings = {
 	],
 	attributes,
 	styles: [
-		{ name: 'primary', label: _x('Fill', 'block style'), isDefault: true },
-		{ name: 'outline', label: __('Outline') },
-		{ name: 'ghost', label: _x('Ghost', 'block style') },
+		{ name: 'primary', label: _x('Fill', 'ainoblocks'), isDefault: true },
+		{ name: 'outline', label: __('Outline', 'ainoblocks') },
+		{ name: '3outline', label: _x('3D Outline', 'ainoblocks') },
+		{ name: 'ghost', label: _x('Ghost', 'ainoblocks') },
 	],
 	edit,
 	save,

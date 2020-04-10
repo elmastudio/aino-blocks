@@ -40,22 +40,24 @@ export default function save({ attributes }) {
 
 	const buttonStyle = {
 		backgroundColor: backgroundClass ? undefined : customBackgroundColor,
-		borderColor: backgroundClass ? undefined : customBackgroundColor,
+		boxShadow: 'inset 0 0 0 1px ' + customBackgroundColor,
 		color: textClass ? undefined : customTextColor,
 	};
 
 	return (
 		<div>
-			<RichText.Content
-				tagName="a"
+			<a
 				className={buttonClasses}
 				href={url}
 				title={title}
 				style={buttonStyle}
-				value={text}
 				target={linkTarget}
 				rel={rel}
-			/>
+			>
+
+				<RichText.Content value={text} />
+
+			</a>
 		</div>
 	);
 }

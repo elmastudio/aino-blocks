@@ -16,6 +16,10 @@ Gutenberg blocks for site building.
 
 == Changelog ==
 
+= 0.6.0 =
+New: Spacing top and bottom option with small, medium, large spacing setting. Currently for the blocks Group, Cover, Columns and Featured Content.
+New: New 3d Borders button style
+
 = 0.5.0 =
 New: Heading Font Size Extension: Adds font size option to heading block.
 

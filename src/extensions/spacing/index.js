@@ -2,6 +2,7 @@
  * External dependencies
  */
 import classnames from 'classnames';
+import get from 'lodash/get';
 
 /**
  * Internal Dependencies
@@ -15,22 +16,24 @@ import './styles/style.scss';
 const { __, _x } = wp.i18n;
 const { addFilter } = wp.hooks;
 const { Component, Fragment } = wp.element;
+const { hasBlockSupport } = wp.blocks;
 const {
 	InspectorControls
 } = wp.blockEditor;
 const {
 	PanelBody,
-	ToggleControl,
+	SelectControl,
 } = wp.components;
 const {
-	createHigherOrderComponent
+	createHigherOrderComponent,
+	compose,
 } = wp.compose;
-
 
 // Enable spacing control on the following blocks
 const enableSpacingControlOnBlocks = [
 	'core/cover',
 	'core/group',
+	'core/columns',
 	'ainoblocks/featured-content',
 ];
 
@@ -49,12 +52,12 @@ function spacingAttributes(settings) {
 
 		settings.attributes = Object.assign(settings.attributes, {
 			spacingTop: {
-				type: 'boolean',
-				default: false,
+				type: 'string',
+				default: 'spacing-top-none',
 			},
 			spacingBottom: {
-				type: 'boolean',
-				default: false,
+				type: 'string',
+				default: 'spacing-bottom-none',
 			}
 		});
 	}
@@ -80,6 +83,20 @@ function spacingInspectorControls(BlockEdit) {
 				);
 			}
 
+			const spacingTopValues = [
+				{ value: 'spacing-top-none', label: __('none', 'ainoblocks') },
+				{ value: 'spacing-top-s', label: __('small', 'ainoblocks') },
+				{ value: 'spacing-top-m', label: __('medium', 'ainoblocks') },
+				{ value: 'spacing-top-l', label: __('large', 'ainoblocks') }
+			];
+
+			const spacingBottomValues = [
+				{ value: 'spacing-bottom-none', label: __('none', 'ainoblocks') },
+				{ value: 'spacing-bottom-s', label: __('small', 'ainoblocks') },
+				{ value: 'spacing-bottom-m', label: __('medium', 'ainoblocks') },
+				{ value: 'spacing-bottom-l', label: __('large', 'ainoblocks') }
+			];
+
 			const {
 				attributes,
 				setAttributes,
@@ -99,17 +116,17 @@ function spacingInspectorControls(BlockEdit) {
 							title={__('Spacing Settings', 'ainoblocks')}
 							initialOpen={false}
 						>
-							<ToggleControl
+							<SelectControl
 								label={__('Spacing top', 'ainoblocks')}
-								help={!!spacingTop ? __('Spacing to top is added.', 'ainoblocks') : __('Toggle to add spacing to top.', 'ainoblocks')}
-								checked={!!spacingTop}
-								onChange={spacingTop => props.setAttributes({ spacingTop })}
+								value={spacingTop}
+								options={spacingTopValues}
+								onChange={spacingTop => setAttributes({ spacingTop })}
 							/>
-							<ToggleControl
+							<SelectControl
 								label={__('Spacing bottom', 'ainoblocks')}
-								help={!!spacingBottom ? __('Spacing to bottom is added.', 'ainoblocks') : __('Toggle to add spacing to bottom.', 'ainoblocks')}
-								checked={!!spacingBottom}
-								onChange={spacingBottom => props.setAttributes({ spacingBottom })}
+								value={spacingBottom}
+								options={spacingBottomValues}
+								onChange={spacingBottom => setAttributes({ spacingBottom })}
 							/>
 						</PanelBody>
 					</InspectorControls>
@@ -119,6 +136,20 @@ function spacingInspectorControls(BlockEdit) {
 	});
 	return withInspectorControls(BlockEdit);
 }
+
+/**
+ * Override the default block element to add	wrapper props.
+ *
+ * @param  {Function} BlockListBlock Original component
+ * @return {Function} Wrapped component
+ */
+
+const withCustomClassName = createHigherOrderComponent((BlockListBlock) => {
+
+	return (props) => {
+		return <BlockListBlock {...props} className={'blocktestme'} />;
+	};
+}, 'withCustomClassName');
 
 /**
  * Add custom element class in save element.
@@ -139,10 +170,11 @@ function modifySpacingSaveSettings(el, block, attributes) {
 		} = attributes;
 
 		if (spacingTop) {
-			el.props.className = classnames(el.props.className, 'spacing-top-true');
+			el.props.className = classnames(el.props.className, spacingTop);
 		}
+
 		if (spacingBottom) {
-			el.props.className = classnames(el.props.className, 'spacing-bottom-true');
+			el.props.className = classnames(el.props.className, spacingBottom);
 		}
 	}
 
@@ -166,4 +198,9 @@ addFilter(
 	'blocks.getSaveElement',
 	'ainoblocks/modify-spacing-save-settings',
 	modifySpacingSaveSettings
+);
+
+addFilter('editor.BlockListBlock',
+	'ainoblocks/modify-spacing-save-settings',
+	withCustomClassName
 );
