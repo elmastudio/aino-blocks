@@ -41,6 +41,10 @@
 			"type": "string",
 			"default": "radius-square"
 		},
+		"borderWidth": {
+			"type": "string",
+			"default": "border-width-thin"
+		},
 		"uppercase": {
 			"type": "boolean",
 			"default": false
