@@ -3,12 +3,12 @@ Author URI: https://www.elmastudio.de/en
 Plugin URI: https://wpaino.com
 Contributors: elmastudio
 Tags: page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
-Requires at least: 5.3
-Tested up to: 5.3.2
+Requires at least: 5.4
+Tested up to: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A WordPress block collection for easy site building.
+A WordPress editor block collection for site building.
 
 == Description ==
 
@@ -18,7 +18,8 @@ Gutenberg blocks for site building.
 
 = 0.6.0 =
 New: Spacing top and bottom option with small, medium, large spacing setting. Currently for the blocks Group, Cover, Columns and Featured Content.
-New: New 3d Borders button style
+New: New 3d Borders button style.
+Enhance: Deleted custom Heading font size palette in order to support default Aino theme font size palette. Possible since Gutenberg plugin version 7.9.
 
 = 0.5.0 =
 New: Heading Font Size Extension: Adds font size option to heading block.
