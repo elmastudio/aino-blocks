@@ -11,6 +11,7 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ## Changelog  
 =======
 
+### 0.6.0. 
 **New:** Spacing top and bottom option with small, medium, large spacing setting. Currently for the blocks Group, Cover, Columns and Featured Content.  
 **New:** New 3d Borders button style.  
 **Enhance:** Deleted custom Heading font size palette in order to support default Aino theme font size palette. Possible since Gutenberg plugin version 7.9.  
