@@ -99,17 +99,15 @@
 			}
 		}
 
-		h2.hero-display {
-			font-size: 40px;
-			line-height: 1.2;
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
 			margin-top: 0;
 			margin-bottom: 0;
 			padding: 0;
-
-			@media (min-width: 48.5em) {
-				font-size: 78px;
-				line-height: 1.09;
-			}
 		}
 
 		.hero-text {
