@@ -12,7 +12,7 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 =======
   
 ### 0.6.1. 
-**Enhance:** Deleted custom Hero heading CSS class in order to support Aino Heding font size palette.  
+**Enhance:** Deleted custom Hero heading CSS class in order to support Aino Heading font size palette.  
 
 ### 0.6.0. 
 **New:** Spacing top and bottom option with small, medium, large spacing setting. Currently for the blocks Group, Cover, Columns and Featured Content.  
