@@ -1,15 +1,7 @@
-.lock
-/*.min.js
-/*.build.js
+composer.lock
 /node_modules/
-/build/
 /vendor/
 /logs/
 /reports/
-.vscode/
+.cache
 .DS_Store
-*.log
-phpcs.xml
-yarn.lock
-/wordpress
-*.cache
