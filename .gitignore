@@ -3,9 +3,5 @@ composer.lock
 /vendor/
 /logs/
 /reports/
-
-# You want to have .DS_Store and other environment files/packages in your .gitignore_global configuration.
-# @see https://knowthecode.io/labs/local-development-environment-setup-mac/install-configure-git
-# I'll include it here to help out.
+.cache
 .DS_Store
-.DS_Store?
