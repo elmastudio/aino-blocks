@@ -1,11 +1,15 @@
-composer.lock
+.lock
+/*.min.js
+/*.build.js
 /node_modules/
+/build/
 /vendor/
 /logs/
 /reports/
-
-# You want to have .DS_Store and other environment files/packages in your .gitignore_global configuration.
-# @see https://knowthecode.io/labs/local-development-environment-setup-mac/install-configure-git
-# I'll include it here to help out.
+.vscode/
 .DS_Store
-.DS_Store?
+*.log
+phpcs.xml
+yarn.lock
+/wordpress
+*.cache
