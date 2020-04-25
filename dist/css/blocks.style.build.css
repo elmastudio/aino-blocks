@@ -410,10 +410,8 @@
     color: inherit;
     cursor: pointer;
     display: inline-block;
-    font-size: 16px;
-    line-height: 19px;
     margin: 0;
-    padding: 19px 32px 18px;
+    line-height: 1;
     text-align: center;
     text-decoration: none;
     overflow-wrap: break-word;
@@ -422,35 +420,76 @@
       transform: translateY(-2px); }
     .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link:hover, .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link:focus, .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link:active, .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link:visited {
       color: inherit; }
-    @media (min-width: 48.5em) {
-      .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.size-s {
-        padding: 11px 24px 10px;
-        border-radius: 12px; } }
-    @media (min-width: 48.5em) {
-      .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.size-l {
-        padding: 27px 40px 26px;
-        border-radius: 20px; } }
+    .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.size-s {
+      padding: 12px 24px;
+      border-radius: 12px; }
+      .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.size-s.fontsize-m {
+        padding: 10px 24px; }
+      .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.size-s.fontsize-l {
+        padding: 8px 24px; }
+    .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.size-m {
+      padding: 20px 32px;
+      border-radius: 16px; }
+      .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.size-m.fontsize-m {
+        padding: 18px 32px; }
+      .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.size-m.fontsize-l {
+        padding: 16px 32px; }
+    .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.size-l {
+      padding: 28px 40px;
+      border-radius: 20px; }
+      .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.size-l.fontsize-m {
+        padding: 26px 40px; }
+      .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.size-l.fontsize-l {
+        padding: 24px 40px; }
+    .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.fontsize-s {
+      font-size: 16px; }
+    .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.fontsize-m {
+      font-size: 20px; }
+    .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.fontsize-l {
+      font-size: 24px; }
+    .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase {
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+      .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase.fontsize-s {
+        font-size: 14px; }
+        .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase.fontsize-s.size-s {
+          padding: 13px 24px; }
+        .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase.fontsize-s.size-m {
+          padding: 21px 32px; }
+        .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase.fontsize-s.size-l {
+          padding: 29px 40px; }
+      .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase.fontsize-m {
+        font-size: 18px; }
+        .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase.fontsize-m.size-s {
+          padding: 11px 24px; }
+        .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase.fontsize-m.size-m {
+          padding: 19px 32px; }
+        .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase.fontsize-m.size-l {
+          padding: 27px 40px; }
+      .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase.fontsize-l {
+        font-size: 22px; }
+        .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase.fontsize-l.size-s {
+          padding: 9px 24px; }
+        .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase.fontsize-l.size-m {
+          padding: 17px 32px; }
+        .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase.fontsize-l.size-l {
+          padding: 25px 40px; }
     .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.radius-square {
       border-radius: 0; }
     .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.radius-circular {
       border-radius: 999em; }
-    .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.is-uppercase {
-      font-size: 14px;
-      text-transform: uppercase;
-      line-height: 1.36;
-      letter-spacing: 2px; }
   .wp-block-ainoblocks-button.is-style-primary .wp-block-ainoblocks-button__link {
-    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0); }
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
     .wp-block-ainoblocks-button.is-style-primary .wp-block-ainoblocks-button__link:hover {
       box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1); }
   .wp-block-ainoblocks-button.is-style-outline .wp-block-ainoblocks-button__link {
     color: #1765d8;
-    box-shadow: inset 0px 0px 0px 1px #1765d8;
+    box-shadow: inset 0 0 0 1px #1765d8;
     background-color: transparent !important; }
     .wp-block-ainoblocks-button.is-style-outline .wp-block-ainoblocks-button__link.border-width-medium {
-      box-shadow: inset 0px 0px 0px 2px #1765d8; }
+      box-shadow: inset 0 0 0 2px #1765d8; }
     .wp-block-ainoblocks-button.is-style-outline .wp-block-ainoblocks-button__link.border-width-thick {
-      box-shadow: inset 0px 0px 0px 3px #1765d8; }
+      box-shadow: inset 0 0 0 3px #1765d8; }
   .wp-block-ainoblocks-button.is-style-3outline .wp-block-ainoblocks-button__link {
     position: relative;
     color: #1765d8;

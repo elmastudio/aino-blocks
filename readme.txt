@@ -5,6 +5,7 @@ Contributors: elmastudio
 Tags: page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.4
 Tested up to: 5.4
+Stable tag: 0.7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,8 +17,11 @@ Gutenberg blocks for site building.
 
 == Changelog ==
 
+= 0.7.0 =
+New: Button block font size option (small, medium, large).
+
 = 0.6.1 =
-Enhance: Deleted custom Hero heading CSS class in order to support Aino Heding font size palette.
+Enhance: Deleted custom Hero heading CSS class in order to support Aino Heading font size palette.
 
 = 0.6.0 =
 New: Spacing top and bottom option with small, medium, large spacing setting. Currently for the blocks Group, Cover, Columns and Featured Content.

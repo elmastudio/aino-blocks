@@ -110,6 +110,7 @@ class buttonEdit extends Component {
 			linkTarget,
 			rel,
 			size,
+			fontSize,
 			borderRadius,
 			borderWidth,
 			uppercase,
@@ -119,6 +120,12 @@ class buttonEdit extends Component {
 			{ value: 'size-s', label: __('small', 'ainoblocks') },
 			{ value: 'size-m', label: __('medium', 'ainoblocks') },
 			{ value: 'size-l', label: __('large', 'ainoblocks') }
+		];
+
+		const fontSizeOptions = [
+			{ value: 'fontsize-s', label: __('small', 'ainoblocks') },
+			{ value: 'fontsize-m', label: __('medium', 'ainoblocks') },
+			{ value: 'fontsize-l', label: __('large', 'ainoblocks') }
 		];
 
 		const borderRadiusOptions = [
@@ -146,7 +153,7 @@ class buttonEdit extends Component {
 			<div className={className} title={title}>
 				<a
 					className={classnames(
-						'wp-block-ainoblocks-button__link', size, borderRadius, borderWidth, {
+						'wp-block-ainoblocks-button__link', size, fontSize, borderRadius, borderWidth, {
 						'has-custom-background': backgroundColor,
 						'has-custom-text-color': textColor,
 						'is-uppercase': uppercase,
@@ -184,6 +191,12 @@ class buttonEdit extends Component {
 							value={size}
 							options={sizeOptions}
 							onChange={size => setAttributes({ size })}
+						/>
+						<SelectControl
+							label={__('Font Size', 'ainoblocks')}
+							value={fontSize}
+							options={fontSizeOptions}
+							onChange={fontSize => setAttributes({ fontSize })}
 						/>
 						<SelectControl
 							label={__('Border Radius', 'ainoblocks')}
