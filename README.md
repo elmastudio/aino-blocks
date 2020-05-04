@@ -10,7 +10,10 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog  
 =======
-  
+
+### 0.7.0. 
+**New:** Button block font size option (small, medium, large).  
+
 ### 0.6.1. 
 **Enhance:** Deleted custom Hero heading CSS class in order to support Aino Heading font size palette.  
 
