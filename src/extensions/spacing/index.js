@@ -7,7 +7,6 @@ import get from 'lodash/get';
 /**
  * Internal Dependencies
  */
-import './styles/editor.scss';
 import './styles/style.scss';
 
 /**
@@ -138,7 +137,7 @@ function spacingInspectorControls(BlockEdit) {
 }
 
 /**
- * Override the default block element to add	wrapper props.
+ * Override the default block element to add wrapper props.
  *
  * @param  {Function} BlockListBlock Original component
  * @return {Function} Wrapped component
@@ -147,7 +146,30 @@ function spacingInspectorControls(BlockEdit) {
 const withCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 
 	return (props) => {
-		return <BlockListBlock {...props} className={'blocktestme'} />;
+
+		const {
+			attributes,
+			setAttributes,
+			className,
+		} = props;
+
+		const {
+			spacingTop,
+			spacingBottom,
+		} = attributes;
+
+		const classNames = classnames(className, {
+			'spacing-top-none'   : 'spacing-top-none'    === spacingTop,
+			'spacing-top-s'      : 'spacing-top-s'       === spacingTop,
+			'spacing-top-m'      : 'spacing-top-m'       === spacingTop,
+			'spacing-top-l'      : 'spacing-top-l'       === spacingTop,
+			'spacing-bottom-none': 'spacing-bottom-none' === spacingBottom,
+			'spacing-bottom-s'   : 'spacing-bottom-s'    === spacingBottom,
+			'spacing-bottom-m'   : 'spacing-bottom-m'    === spacingBottom,
+			'spacing-bottom-l'   : 'spacing-bottom-l'    === spacingBottom,
+		});
+
+		return <BlockListBlock {...props} className={classNames} />;
 	};
 }, 'withCustomClassName');
 
