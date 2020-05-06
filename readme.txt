@@ -1,13 +1,13 @@
 === Aino Blocks ===
-Author URI: https://www.elmastudio.de/en
-Plugin URI: https://wpaino.com
-Contributors: elmastudio
-Tags: page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
+Author URI       : https: //www.elmastudio.de/en
+Plugin URI       : https: //wpaino.com
+Contributors     : elmastudio
+Tags             : page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.4
-Tested up to: 5.4
-Stable tag: 0.7.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tested up to     : 5.4.1
+Stable tag       : 0.8.0
+License          : GPLv2 or later
+License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
 
 A WordPress editor block collection for site building.
 
@@ -16,6 +16,10 @@ A WordPress editor block collection for site building.
 Gutenberg blocks for site building.
 
 == Changelog ==
+
+= 0.8.0 =
+Enhance: Max width of blocks.
+Enhance: Spacing top and bottom inspector setting.
 
 = 0.7.0 =
 New: Button block font size option (small, medium, large).

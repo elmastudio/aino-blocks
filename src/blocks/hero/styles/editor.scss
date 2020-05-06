@@ -3,11 +3,16 @@
 	width: auto;
 }
 
-.wp-block-ainoblocks-hero > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-editor-block-list__block {
+.wp-block-ainoblocks-hero>.block-editor-inner-blocks>.block-editor-block-list__layout>.block-editor-block-list__block {
 	max-width: unset;
 }
 
-.edit-post-visual-editor .wp-block-ainoblocks-hero .block-editor-inner-blocks {
+.wp-block .wp-block-ainoblocks-hero__content .block-editor-inner-blocks {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.wp-block-ainoblocks-hero .block-editor-inner-blocks {
 
 	.wp-block-ainoblocks-multiple-buttons {
 
