@@ -4,12 +4,16 @@ A WordPress editor block collection for easy site building.
 __Contributors:__ elmastudio  
 __Tags:__ page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks   
 __Requires at least:__ 5.4   
-__Tested up to:__ WordPress 5.4  
+__Tested up to:__ WordPress 5.4.1  
 __License:__ GPLv2 or later  
 __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html  
 
 ## Changelog  
 =======
+
+### 0.8.0.  
+**Enhance:** Max width of blocks.  
+**Enhance:** Spacing top and bottom inspector setting.  
 
 ### 0.7.0. 
 **New:** Button block font size option (small, medium, large).  
