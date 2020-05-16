@@ -5,7 +5,7 @@ Contributors     : elmastudio
 Tags             : page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.4
 Tested up to     : 5.4.1
-Stable tag       : 0.8.0
+Stable tag       : 0.9.0
 License          : GPLv2 or later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,6 +16,9 @@ A WordPress editor block collection for site building.
 Gutenberg blocks for site building.
 
 == Changelog ==
+
+= 0.9.0 =
+Enhance: Expanded Hero block media settings and moved setting to inspector.
 
 = 0.8.0 =
 Enhance: Max width of blocks.
@@ -40,7 +43,7 @@ New: Support for Block Collections API. Fixes issue #25
 
 = 0.3.0 =
 New: Extension Spacing Settings for top and bottom spacing of blocks. Currently available for Aino Featured Content, Group, Cover blocks.
-Enhance: Block icon updates.
+Enhance: Block icon updates. Deleted setting inside toolbar.
 
 = 0.2.2 =
 New: Featured Content block "media below" option.
