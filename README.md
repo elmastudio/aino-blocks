@@ -11,6 +11,9 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ## Changelog  
 =======
 
+### 0.9.0.  
+**Enhance:** Expanded Hero block media settings and moved setting to inspector.  
+
 ### 0.8.0.  
 **Enhance:** Max width of blocks.  
 **Enhance:** Spacing top and bottom inspector setting.  
