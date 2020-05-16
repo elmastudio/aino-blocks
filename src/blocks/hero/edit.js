@@ -12,7 +12,10 @@ import icons from './icons';
 /**
  * WordPress dependencies
  */
-const { __, _x } = wp.i18n;
+const {
+	__,
+	_x
+} = wp.i18n;
 const {
 	Component,
 	Fragment
@@ -28,9 +31,9 @@ const {
 const {
 	PanelBody,
 	TextareaControl,
-	ToggleControl,
-	Toolbar,
 	RangeControl,
+	SelectControl,
+	ToggleControl,
 } = wp.components;
 const {
 	compose,
@@ -47,9 +50,19 @@ import MediaContainer from './media-container';
 const ALLOWED_BLOCKS = ['core/image', 'core/heading', 'core/paragraph', 'ainoblocks/button', 'ainoblocks/multiple-buttons'];
 
 const TEMPLATE = [
-	['ainoblocks/badge', { placeholder: _x('Write Badge text…', 'content placeholder'), content: _x('Write Badge text…', 'content placeholder') }],
-	['core/heading', { placeholder: _x('Write heading…', 'content placeholder'), content: _x('Write heading…', 'content placeholder'), }],
-	['core/paragraph', { placeholder: _x('Start writing here…', 'content placeholder'), content: _x('Start writing here…', 'content placeholder'), className: 'hero-text', }],
+	['ainoblocks/badge', {
+		placeholder: _x('Write Badge text…', 'content placeholder'),
+		content: _x('Write Badge text…', 'content placeholder')
+	}],
+	['core/heading', {
+		placeholder: _x('Write heading…', 'content placeholder'),
+		content: _x('Write heading…', 'content placeholder'),
+	}],
+	['core/paragraph', {
+		placeholder: _x('Start writing here…', 'content placeholder'),
+		content: _x('Start writing here…', 'content placeholder'),
+		className: 'hero-text',
+	}],
 	['ainoblocks/multiple-buttons'],
 ];
 
@@ -70,7 +83,9 @@ class heroEdit extends Component {
 	}
 
 	onSelectMedia(media) {
-		const { setAttributes } = this.props;
+		const {
+			setAttributes
+		} = this.props;
 
 		let mediaType;
 		let src;
@@ -98,7 +113,6 @@ class heroEdit extends Component {
 			mediaType,
 			mediaUrl: src || media.url,
 			imageFill: undefined,
-			mediaOverflow: undefined,
 		});
 	}
 
@@ -109,7 +123,9 @@ class heroEdit extends Component {
 	}
 
 	commitWidthChange(width) {
-		const { setAttributes } = this.props;
+		const {
+			setAttributes
+		} = this.props;
 
 		setAttributes({
 			mediaWidth: applyWidthConstraints(width),
@@ -120,17 +136,43 @@ class heroEdit extends Component {
 	}
 
 	renderMediaArea() {
-		const { attributes } = this.props;
-		const { mediaAlt, mediaId, mediaPosition, mediaType, mediaUrl, mediaWidth, mediaOverflow, imageFill } = attributes;
+		const {
+			attributes
+		} = this.props;
+
+		const {
+			mediaAlt,
+			mediaId,
+			mediaPosition,
+			mediaHeight,
+			mediaType,
+			mediaUrl,
+			mediaWidth,
+			imageFill,
+		} = attributes;
 
 		if ('hide' !== mediaPosition) {
-			return (
-				<MediaContainer
-					className="wp-block-ainoblocks-hero__media"
-					onSelectMedia={this.onSelectMedia}
-					onWidthChange={this.onWidthChange}
-					commitWidthChange={this.commitWidthChange}
-					{...{ mediaAlt, mediaId, mediaType, mediaUrl, mediaPosition, mediaWidth, mediaOverflow, imageFill }}
+			return ( <
+				MediaContainer className = "wp-block-ainoblocks-hero__media"
+				onSelectMedia = {
+					this.onSelectMedia
+				}
+				onWidthChange = {
+					this.onWidthChange
+				}
+				commitWidthChange = {
+					this.commitWidthChange
+				} {
+					...{
+						mediaAlt,
+						mediaId,
+						mediaType,
+						mediaUrl,
+						mediaPosition,
+						mediaWidth,
+						imageFill
+					}
+				}
 				/>
 			);
 		}
@@ -138,99 +180,113 @@ class heroEdit extends Component {
 
 	render() {
 
-		const {
-			attributes,
-			className,
-			backgroundColor,
-			isSelected,
-			setAttributes,
-			setBackgroundColor,
-		} = this.props;
+			const {
+				attributes,
+				className,
+				backgroundColor,
+				isSelected,
+				setAttributes,
+				setBackgroundColor,
+			} = this.props;
 
-		const {
-			align,
-			mediaAlt,
-			mediaPosition,
-			mediaType,
-			mediaWidth,
-			verticalContentAlignment,
-			mediaOverflow,
-			imageFill,
-			contentGridLineStart,
-			contentGridLineEnd,
-			mediaGridLineStart,
-			mediaGridLineEnd,
-		} = attributes;
+			const {
+				align,
+				mediaAlt,
+				mediaPosition,
+				mediaHeight,
+				mediaType,
+				mediaWidth,
+				verticalContentAlignment,
+				imageFill,
+				contentGridLineStart,
+				contentGridLineEnd,
+				mediaGridLineStart,
+				mediaGridLineEnd,
+			} = attributes;
 
-		const temporaryMediaWidth = this.state.mediaWidth;
+			const mediaPositionOptions = [{
+					value: 'media-right',
+					label: __('Media right', 'ainoblocks')
+				},
+				{
+					value: 'media-left',
+					label: __('Media left', 'ainoblocks')
+				},
+				{
+					value: 'media-below',
+					label: __('Media below', 'ainoblocks')
+				},
+				{
+					value: 'media-hide',
+					label: __('Hide media', 'ainoblocks')
+				}
+			];
 
-		const classNames = classnames(className, {
-			[`align${align}`]: align,
-			'has-media-below': 'below' === mediaPosition,
-			'hide-media': 'hide' === mediaPosition,
-			'is-selected': isSelected,
-			[backgroundColor.class]: backgroundColor.class,
-			[`content-vertically-aligned-${verticalContentAlignment}`]: verticalContentAlignment,
-			'is-image-fill': imageFill,
-			'is-media-overflow': mediaOverflow,
-		});
+			const temporaryMediaWidth = this.state.mediaWidth;
 
-		const styleContent = {
-			gridColumnStart: contentGridLineStart,
-			gridColumnEnd: contentGridLineEnd,
-		};
+			const classNames = classnames(className, {
+				[`align${align}`]: align,
+				'media-right'     : 'media-right'      === mediaPosition,
+				'media-left'      : 'media-left'       === mediaPosition,
+				'media-below'     : 'media-below'      === mediaPosition,
+				'media-hide'      : 'media-hide'       === mediaPosition,
+				'media-fullheight': mediaHeight,
+				'is-selected': isSelected,
+				[backgroundColor.class]: backgroundColor.class,
+				[`content-vertically-aligned-${verticalContentAlignment}`]: verticalContentAlignment,
+				'is-image-fill': imageFill,
+			});
 
-		const styleMedia = {
-			gridColumnStart: mediaGridLineStart,
-			gridColumnEnd: mediaGridLineEnd,
-		};
+			const styleContent = {
+				gridColumnStart: contentGridLineStart,
+				gridColumnEnd: contentGridLineEnd,
+			};
 
-		const widthString = `${temporaryMediaWidth || mediaWidth}%`;
+			const styleMedia = {
+				gridColumnStart: mediaGridLineStart,
+				gridColumnEnd: mediaGridLineEnd,
+			};
 
-		const styleBackground = {
-			backgroundColor: backgroundColor.color,
-		};
+			const widthString = `${temporaryMediaWidth || mediaWidth}%`;
 
-		const colorSettings = [{
-			value: backgroundColor.color,
-			onChange: setBackgroundColor,
-			label: __('Background Color', 'ainoblocks'),
-		}];
+			const styleBackground = {
+				backgroundColor: backgroundColor.color,
+			};
 
-		const toolbarControls = [
-			{
-				icon: icons.alignPullBelow,
-				title: __('Show media below', 'ainoblocks'),
-				isActive: mediaPosition === 'below',
-				onClick: () => setAttributes({ mediaPosition: 'below' }),
-			},
-			{
-				icon: icons.mediaHide,
-				title: __('Hide media, content only', 'ainoblocks'),
-				isActive: mediaPosition === 'hide',
-				onClick: () => setAttributes({ mediaPosition: 'hide' }),
-			}
-		];
+			const colorSettings = [{
+				value: backgroundColor.color,
+				onChange: setBackgroundColor,
+				label: __('Background Color', 'ainoblocks'),
+			}];
 
-		const onMediaAltChange = (newMediaAlt) => {
-			setAttributes({ mediaAlt: newMediaAlt });
-		};
+			const onMediaAltChange = (newMediaAlt) => {
+				setAttributes({
+					mediaAlt: newMediaAlt
+				});
+			};
 
-		const onVerticalContentAlignmentChange = (alignment) => {
-			setAttributes({ verticalContentAlignment: alignment });
-		};
+			const onVerticalContentAlignmentChange = (alignment) => {
+				setAttributes({
+					verticalContentAlignment: alignment
+				});
+			};
 
 		const heroSettings = (
 			<PanelBody
 				title={__('Hero Settings', 'ainoblocks')}
-				initialOpen={false}
+				initialOpen={true}
 			>
+				<SelectControl
+					label={__('Media Position', 'ainoblocks')}
+					value={mediaPosition}
+					options={mediaPositionOptions}
+					onChange={mediaPosition => setAttributes({ mediaPosition })}
+				/>
 				<ToggleControl
-					label={__('Overflow media to screen edge', 'ainoblocks')}
-					checked={mediaOverflow}
-					onChange={() => setAttributes({
-						mediaOverflow: !mediaOverflow,
-					})}
+					label={__('Media height 100%', 'ainoblocks')}
+					checked={!!mediaHeight}
+					onChange={() => setAttributes({ mediaHeight: !mediaHeight })}
+					help={!!mediaHeight ? __('Media is full-height.', 'ainoblocks') : __('Toggle for full-height media.', 'ainoblocks')}
 				/>
 				{mediaType === 'image' && (<TextareaControl
 					label={__('Alt text (alternative text)', 'ainoblocks')}
@@ -302,9 +358,6 @@ class heroEdit extends Component {
 					{mediaGridSettings}
 				</InspectorControls>
 				<BlockControls>
-					<Toolbar
-						controls={toolbarControls}
-					/>
 					<BlockVerticalAlignmentToolbar
 						onChange={onVerticalContentAlignmentChange}
 						value={verticalContentAlignment}

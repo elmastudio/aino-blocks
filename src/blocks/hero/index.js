@@ -1,8 +1,13 @@
 /**
-* WordPress dependencies
-*/
-const { __, _x } = wp.i18n;
-const { registerBlockCollection } = wp.blocks;
+ * WordPress dependencies
+ */
+const {
+	__,
+	_x
+} = wp.i18n;
+const {
+	registerBlockCollection
+} = wp.blocks;
 
 /**
  * Internal dependencies
@@ -17,11 +22,14 @@ import './styles/editor.scss';
 /**
  * Register block
  */
-const { attributes, name } = metadata;
+const {
+	attributes,
+	name
+} = metadata;
 
 const settings = {
 	title: __('Hero', 'ainoblocks'),
-	description: __('Include a fullscreen featured header area at the top of your front page. You can add an image or video, multiple buttons, a heading, and explanation text.', 'ainoblocks'),
+	description: __('Include a fullscreen featured header area at the top of your front page.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'layout' : 'ainoblocks',
 	icon,
 	keywords: [
@@ -39,4 +47,7 @@ const settings = {
 	save,
 };
 
-export { name, settings };
+export {
+	name,
+	settings
+};

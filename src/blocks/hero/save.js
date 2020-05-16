@@ -17,16 +17,18 @@ const {
  */
 import imageFillStyles from './media-container';
 
-export default function save({ attributes }) {
+export default function save({
+	attributes
+}) {
 
 	const {
 		backgroundColor,
 		customBackgroundColor,
 		mediaAlt,
 		mediaPosition,
+		mediaHeight,
 		mediaType,
 		mediaUrl,
-		mediaOverflow,
 		mediaId,
 		verticalContentAlignment,
 		imageFill,
@@ -37,17 +39,31 @@ export default function save({ attributes }) {
 	} = attributes;
 
 	const mediaTypeRenders = {
-		image: () => <img src={mediaUrl} alt={mediaAlt} className={(mediaId && mediaType === 'image') ? `wp-image-${mediaId}` : null} />,
-		video: () => <video controls src={mediaUrl} />,
+		image: () => < img src = {
+			mediaUrl
+		}
+		alt = {
+			mediaAlt
+		}
+		className = {
+			(mediaId && mediaType === 'image') ? `wp-image-${mediaId}` : null
+		}
+		/>,
+		video: () => < video controls src = {
+			mediaUrl
+		}
+		/>,
 	};
 	const backgroundClass = getColorClassName('background-color', backgroundColor);
 	const className = classnames({
-		'has-media-below': 'below' === mediaPosition,
-		'hide-media': 'hide' === mediaPosition,
+		'media-right'     : 'media-right'      === mediaPosition,
+		'media-left'      : 'media-left'       === mediaPosition,
+		'media-below'     : 'media-below'      === mediaPosition,
+		'media-hide'      : 'media-hide'       === mediaPosition,
+		'media-fullheight': mediaHeight,
 		[backgroundClass]: backgroundClass,
 		[`content-vertically-aligned-${verticalContentAlignment}`]: verticalContentAlignment,
 		'is-image-fill': imageFill,
-		'is-media-overflow': mediaOverflow,
 	});
 
 	const styleBackground = {

@@ -21,6 +21,10 @@
 		"mediaPosition": {
 			"type": "string"
 		},
+		"mediaHeight": {
+			"type": "boolean",
+			"default": false
+		},
 		"mediaId": {
 			"type": "number"
 		},
@@ -36,9 +40,6 @@
 		"mediaWidth": {
 			"type": "number",
 			"default": "50"
-		},
-		"mediaOverflow": {
-			"type": "boolean"
 		},
 		"verticalContentAlignment": {
 			"type": "string"
