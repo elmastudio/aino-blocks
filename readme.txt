@@ -19,6 +19,7 @@ Gutenberg blocks for site building.
 
 = 1.0.0 =
 New: Grid container block, which brings new possibility to build layouts with the help of a CSS grid.
+Enhance: Block icons.
 
 = 0.9.0 =
 Enhance: Expanded Hero block media settings and moved setting to inspector.
