@@ -1,0 +1,19 @@
+{
+	"name": "grid-item",
+	"attributes": {
+		"gridColumnStart": {
+			"type": "number"
+		},
+		"gridColumnEnd": {
+			"type": "number"
+		},
+		"stackOrder": {
+			"type": "number",
+			"default": "1"
+		},
+		"gutter": {
+			"type": "boolean",
+			"default": true
+		}
+	}
+}

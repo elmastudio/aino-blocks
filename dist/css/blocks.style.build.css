@@ -33,6 +33,34 @@
   @media (min-width: 48.5em) {
     [class*="wp-block-"].spacing-bottom-l {
       padding-bottom: 192px; } }
+.wp-block-ainoblocks-grid-item {
+  padding-left: 24px;
+  padding-right: 24px;
+  grid-row-start: 1;
+  grid-row-end: 2; }
+  .wp-block-ainoblocks-grid-item.no-gutter {
+    padding-left: 0;
+    padding-right: 0; }
+  .wp-block-ainoblocks-grid-item :last-child {
+    margin-bottom: 0 !important; }
+  .wp-block-ainoblocks-grid-item:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2; }
+  .wp-block-ainoblocks-grid-item:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 6; }
+  .wp-block-ainoblocks-grid-item:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 10; }
+.wp-block-ainoblocks-grid-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+  .wp-block-ainoblocks-grid-container__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 8.33333%);
+    position: relative;
+    background: red;
+    justify-content: center; }
 .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
   max-width: 90rem;
   display: block;

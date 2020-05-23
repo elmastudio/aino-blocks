@@ -1,0 +1,19 @@
+
+.wp-block-ainoblocks-grid-container {
+
+	.block-editor-block-list__layout {
+
+		background-color: yellowgreen;
+
+		.block-editor-block-list__layout {
+			display: block;
+			margin: 0;
+			background-color: transparent;
+		}
+	}
+}
+
+	.wp-block[data-type="ainoblocks/grid-item"] {
+		margin: 0;
+		max-width: 100%;
+	}

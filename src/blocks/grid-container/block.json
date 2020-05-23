@@ -1,0 +1,12 @@
+{
+	"name": "grid-container",
+	"attributes": {
+		"backgroundColor": {
+			"type": "string"
+		},
+		"items": {
+			"type": "number",
+			"default": "3"
+		}
+	}
+}

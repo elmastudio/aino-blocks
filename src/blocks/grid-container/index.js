@@ -28,20 +28,20 @@ const {
 } = metadata;
 
 const settings = {
-	title: __('Multiple Buttons', 'ainoblocks'),
-	description: __('A row of buttons with customization options.', 'ainoblocks'),
+	title: __('Grid Container', 'ainoblocks'),
+	description: __('A grid container with a 12-column grid and a flexible number of grid items.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'layout' : 'ainoblocks',
 	icon,
 	keywords: [
-		__('button', 'ainoblocks'),
-		__('buttons', 'ainoblocks'),
-		__('link', 'ainoblocks'),
-		__('cta', 'ainoblocks'),
-		__('aino blocks', 'ainoblocks'),
+		__('grid', 'ainoblocks'),
+		__('container', 'ainoblocks'),
+		__('items', 'ainoblocks'),
+		__('layout', 'ainoblocks'),
+		__('aino', 'ainoblocks'),
 	],
 	attributes,
 	supports: {
-		align: ['left', 'right', 'center'],
+		align: ['wide'],
 	},
 	edit,
 	save,

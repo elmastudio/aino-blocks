@@ -12,7 +12,10 @@ import icons from './icons';
 /**
  * WordPress dependencies
  */
-const { __, _x } = wp.i18n;
+const {
+	__,
+	_x
+} = wp.i18n;
 const {
 	Component,
 	Fragment

@@ -5,7 +5,7 @@ Contributors     : elmastudio
 Tags             : page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.4
 Tested up to     : 5.4.1
-Stable tag       : 0.9.0
+Stable tag       : 1.0.0
 License          : GPLv2 or later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,6 +16,9 @@ A WordPress editor block collection for site building.
 Gutenberg blocks for site building.
 
 == Changelog ==
+
+= 1.0.0 =
+New: Grid container block, which brings new possibility to build layouts with the help of a CSS grid.
 
 = 0.9.0 =
 Enhance: Expanded Hero block media settings and moved setting to inspector.

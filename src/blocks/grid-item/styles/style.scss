@@ -1,0 +1,30 @@
+.wp-block-ainoblocks-grid-item {
+	padding-left: 24px;
+	padding-right: 24px;
+	grid-row-start: 1;
+	grid-row-end: 2;
+
+	&.no-gutter {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	:last-child {
+		margin-bottom: 0 !important;
+	}
+
+	&:nth-child(1) {
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	&:nth-child(2) {
+		grid-column-start: 2;
+		grid-column-end: 6;
+	}
+
+	&:nth-child(3) {
+		grid-column-start: 4;
+		grid-column-end: 10;
+	}
+}
