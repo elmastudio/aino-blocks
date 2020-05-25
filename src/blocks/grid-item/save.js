@@ -19,19 +19,16 @@ export default function save({ attributes, className }) {
 		gutter,
 	} = attributes;
 
-	const gridStyles = {
-		gridColumnStart: gridColumnStart,
-		gridColumnEnd: gridColumnEnd,
-		zIndex: stackOrder,
-	};
+	const classNames = classnames(className, {
+		[`grid-column_start__${gridColumnStart}`]: gridColumnStart,
+		[`grid-column_end__${gridColumnEnd}`]: gridColumnEnd,
+		[`stack-order__${stackOrder}`]: stackOrder,
+		'no-gutter': ! gutter,
+	});
 
 	return (
-		<div className={classnames(className, {
-			'no-gutter': ! gutter,
-		})}
-		style={gridStyles}
-		>
-			<InnerBlocks.Content />
+		<div className={classNames} >
+			< InnerBlocks.Content />
 		</div >
 	);
 }

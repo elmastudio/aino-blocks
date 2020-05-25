@@ -4,9 +4,10 @@
 
 	&__inner {
 		display: grid;
-		grid-template-columns: repeat(12, 8.33333333%); // 120px columns on 1440px screens.
+		grid-template-columns: repeat(12, 1fr); // 120px columns on 1440px screens.
 		position: relative;
-		background: red;
 		justify-content: center;
+		word-break: break-word;
+		overflow-wrap: break-word;
 	}
 }

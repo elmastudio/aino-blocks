@@ -2,10 +2,12 @@
 	"name": "grid-item",
 	"attributes": {
 		"gridColumnStart": {
-			"type": "number"
+			"type": "number",
+			"default": "1"
 		},
 		"gridColumnEnd": {
-			"type": "number"
+			"type": "number",
+			"default": "4"
 		},
 		"stackOrder": {
 			"type": "number",

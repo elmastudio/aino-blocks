@@ -8,11 +8,15 @@ import get from 'lodash/get';
  * WordPress dependencies
  */
 const { __, _x } = wp.i18n;
+const { addFilter } = wp.hooks;
 const {
 	Component,
 	Fragment,
 } = wp.element;
-const { compose } = wp.compose;
+const {
+	compose,
+	createHigherOrderComponent
+} = wp.compose;
 const {
 	InspectorControls,
 	InnerBlocks,
@@ -47,11 +51,8 @@ class GridItemEdit extends Component {
 			gutter,
 		} = attributes;
 
-		const gridStyles = {
-			gridColumnStart: gridColumnStart,
-			gridColumnEnd: gridColumnEnd,
-			zIndex: stackOrder,
-		};
+		const classNames = classnames(className, {
+		});
 
 		return (
 			<Fragment>
@@ -78,8 +79,9 @@ class GridItemEdit extends Component {
 							help={__('An item with greater stack order is always in front of an item with a lower stack order.', 'ainoblocks')}
 							value={stackOrder}
 							onChange={(stackOrder) => setAttributes({ stackOrder })}
+							initialPosition={1}
 							min={1}
-							max={100}
+							max={10}
 						/>
 						<ToggleControl
 							label={__('Add end gutters', 'ainoblocks')}
@@ -89,13 +91,8 @@ class GridItemEdit extends Component {
 						/>
 					</PanelBody>
 				</InspectorControls>
-				<div
-					className={classnames(className, {
-						'no-gutter': ! gutter,
-					})}
 
-					style={gridStyles}
-				>
+				<div className={classNames} >
 					<InnerBlocks
 					templateLock={ false }
 					renderAppender={
@@ -113,3 +110,43 @@ class GridItemEdit extends Component {
 export default compose(
 		
 )(GridItemEdit);
+
+/**
+ * Override the default block element to add wrapper props.
+ *
+ * @param {Function} BlockListBlock Original component
+ * @return {Function} Wrapped component
+ */
+
+const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
+
+	return (props) => {
+
+		const {
+			attributes,
+			className,
+		} = props;
+
+		const {
+			gridColumnStart,
+			gridColumnEnd,
+			stackOrder,
+			gutter,
+		} = attributes;
+
+		const classNames = classnames(className, {
+			[`grid-column_start__${gridColumnStart}`]: gridColumnStart,
+			[`grid-column_end__${gridColumnEnd}`]: gridColumnEnd,
+			[`stack-order__${stackOrder}`]: stackOrder,
+			'no-gutter': ! gutter,
+		});
+
+		return <BlockListBlock {...props} className={classNames} />;
+	};
+}, 'addCustomClassName');
+
+addFilter('editor.BlockListBlock',
+	'ainoblocks/modify-spacing-save-settings',
+	addCustomClassName
+);
+

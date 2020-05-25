@@ -1,19 +1,9 @@
 
-.wp-block-ainoblocks-grid-container {
-
-	.block-editor-block-list__layout {
-
-		background-color: yellowgreen;
-
-		.block-editor-block-list__layout {
-			display: block;
-			margin: 0;
-			background-color: transparent;
-		}
-	}
-}
-
-	.wp-block[data-type="ainoblocks/grid-item"] {
-		margin: 0;
-		max-width: 100%;
+.wp-block-ainoblocks-grid-container > .block-editor-inner-blocks > .block-editor-block-list__layout {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr); // 120px columns on 1440px screens.
+		position: relative;
+		justify-content: center;
+		word-break: break-word;
+		overflow-wrap: break-word;
 	}
