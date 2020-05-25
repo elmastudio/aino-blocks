@@ -113,7 +113,7 @@ function spacingInspectorControls(BlockEdit) {
 					<BlockEdit {...props} />
 					<InspectorControls>
 						<PanelBody
-							title={__('Spacing Settings', 'ainoblocks')}
+							title={__('Spacing', 'ainoblocks')}
 							initialOpen={false}
 						>
 							<SelectControl

@@ -9,6 +9,14 @@
 			"type": "number",
 			"default": "4"
 		},
+		"alignItem": {
+			"type": "string",
+			"default": "start"
+		},
+		"justifyItem": {
+			"type": "string",
+			"default": "start"
+		},
 		"stackOrder": {
 			"type": "number",
 			"default": "1"

@@ -15,7 +15,7 @@ const {
 } = wp.element;
 const {
 	compose,
-	createHigherOrderComponent
+	createHigherOrderComponent,
 } = wp.compose;
 const {
 	InspectorControls,
@@ -24,6 +24,7 @@ const {
 const {
 	PanelBody,
 	RangeControl,
+	SelectControl,
 	ToggleControl,
 } = wp.components;
 
@@ -47,9 +48,47 @@ class GridItemEdit extends Component {
 		const {
 			gridColumnStart,
 			gridColumnEnd,
+			alignItem,
+			justifyItem,
 			stackOrder,
 			gutter,
 		} = attributes;
+
+		const alignItemOptions = [{
+				value: 'start',
+				label: __('start', 'ainoblocks')
+			},
+			{
+				value: 'end',
+				label: __('end', 'ainoblocks')
+			},
+			{
+				value: 'center',
+				label: __('center', 'ainoblocks')
+			},
+			{
+				value: 'stretch',
+				label: __('stretch', 'ainoblocks')
+			}
+		];
+
+		const justifyItemOptions = [{
+				value: 'start',
+				label: __('start', 'ainoblocks')
+			},
+			{
+				value: 'end',
+				label: __('end', 'ainoblocks')
+			},
+			{
+				value: 'center',
+				label: __('center', 'ainoblocks')
+			},
+			{
+				value: 'stretch',
+				label: __('stretch', 'ainoblocks')
+			}
+		];
 
 		const classNames = classnames(className, {
 		});
@@ -57,7 +96,7 @@ class GridItemEdit extends Component {
 		return (
 			<Fragment>
 				<InspectorControls>
-					<PanelBody title={__("Grid Item Settings", "ainoblocks")}>
+					<PanelBody title={__('Grid Item Settings', 'ainoblocks')}>
 						<RangeControl
 						label={__('Grid Column Start', 'ainoblocks')}
 						value={gridColumnStart}
@@ -74,6 +113,38 @@ class GridItemEdit extends Component {
 							max={13}
 							allowReset={true}
 						/>
+						<ToggleControl
+							label={__('Add end gutters', 'ainoblocks')}
+							checked={!!gutter}
+							onChange={() => setAttributes({ gutter: !gutter })}
+							help={!!gutter ? __('Toogle off to remove the spacing left and right of the grid item.', 'ainoblocks') : __('Toggle on for space left and right of the grid item.', 'ainoblocks')}
+						/>
+					</PanelBody>
+
+					<PanelBody
+						title={__('Aligment', 'ainoblocks')}
+						initialOpen={false}
+					>
+						<SelectControl
+							label={__('Align item', 'ainoblocks')}
+							help={__('Aligns an item inside its grid area along the vertical column axis.', 'ainoblocks')}
+							value={alignItem}
+							options={alignItemOptions}
+							onChange={alignItem => setAttributes({ alignItem })}
+						/>
+						<SelectControl
+							label={__('Justify item', 'ainoblocks')}
+							help={__('Aligns an item inside its grid area on the horizontal row axis.', 'ainoblocks')}
+							value={justifyItem}
+							options={justifyItemOptions}
+							onChange={justifyItem => setAttributes({ justifyItem })}
+						/>
+					</PanelBody>
+
+					<PanelBody
+						title={__('Stacking', 'ainoblocks')}
+						initialOpen={false}
+					>
 						<RangeControl
 							label={__('Stack Order', 'ainoblocks')}
 							help={__('An item with greater stack order is always in front of an item with a lower stack order.', 'ainoblocks')}
@@ -82,12 +153,6 @@ class GridItemEdit extends Component {
 							initialPosition={1}
 							min={1}
 							max={10}
-						/>
-						<ToggleControl
-							label={__('Add end gutters', 'ainoblocks')}
-							checked={!!gutter}
-							onChange={() => setAttributes({ gutter: !gutter })}
-							help={!!gutter ? __('Toogle off to remove the spacing left and right of the grid item.', 'ainoblocks') : __('Toggle on for space left and right of the grid item.', 'ainoblocks')}
 						/>
 					</PanelBody>
 				</InspectorControls>
@@ -130,6 +195,8 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 		const {
 			gridColumnStart,
 			gridColumnEnd,
+			alignItem,
+			justifyItem,
 			stackOrder,
 			gutter,
 		} = attributes;
@@ -137,6 +204,8 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 		const classNames = classnames(className, {
 			[`grid-column_start__${gridColumnStart}`]: gridColumnStart,
 			[`grid-column_end__${gridColumnEnd}`]: gridColumnEnd,
+			[`align-self__${alignItem}`]: alignItem,
+			[`justify-self__${justifyItem}`]: justifyItem,
 			[`stack-order__${stackOrder}`]: stackOrder,
 			'no-gutter': ! gutter,
 		});
@@ -149,4 +218,3 @@ addFilter('editor.BlockListBlock',
 	'ainoblocks/modify-spacing-save-settings',
 	addCustomClassName
 );
-

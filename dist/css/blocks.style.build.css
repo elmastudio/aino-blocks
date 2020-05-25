@@ -95,6 +95,22 @@
     grid-column-end: 12; }
   .wp-block-ainoblocks-grid-item.grid-column_end__13 {
     grid-column-end: 13; }
+  .wp-block-ainoblocks-grid-item.align-self__start {
+    align-self: start; }
+  .wp-block-ainoblocks-grid-item.align-self__end {
+    align-self: end; }
+  .wp-block-ainoblocks-grid-item.align-self__center {
+    align-self: center; }
+  .wp-block-ainoblocks-grid-item.align-self__stretch {
+    align-self: stretch; }
+  .wp-block-ainoblocks-grid-item.justify-self__start {
+    justify-self: start; }
+  .wp-block-ainoblocks-grid-item.justify-self__end {
+    justify-self: end; }
+  .wp-block-ainoblocks-grid-item.justify-self__center {
+    justify-self: center; }
+  .wp-block-ainoblocks-grid-item.justify-self__stretch {
+    justify-self: stretch; }
   .wp-block-ainoblocks-grid-item.stack-order__1 {
     z-index: 1; }
   .wp-block-ainoblocks-grid-item.stack-order__2 {

@@ -130,6 +130,44 @@
 		}
 	}
 
+	&.align-self {
+
+		&__start {
+			align-self: start;
+		}
+
+		&__end {
+			align-self: end;
+		}
+
+		&__center {
+			align-self: center;
+		}
+
+		&__stretch {
+			align-self: stretch;
+		}
+	}
+
+	&.justify-self {
+
+		&__start {
+			justify-self: start;
+		}
+
+		&__end {
+			justify-self: end;
+		}
+
+		&__center {
+			justify-self: center;
+		}
+
+		&__stretch {
+			justify-self: stretch;
+		}
+	}
+
 	&.stack-order {
 
 		&__1 {
