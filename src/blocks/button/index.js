@@ -51,7 +51,7 @@ const settings = {
 			label: __('Outline', 'ainoblocks')
 		},
 		{
-			name: '3outline',
+			name: '3doutline',
 			label: __('3D Outline', 'ainoblocks')
 		},
 		{

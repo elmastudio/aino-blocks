@@ -2,12 +2,16 @@
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 
+
 	&__inner {
-		display: grid;
-		grid-template-columns: repeat(12, 1fr); // 120px columns on 1440px screens.
-		position: relative;
-		justify-content: center;
-		word-break: break-word;
-		overflow-wrap: break-word;
+	position: relative;
+	word-break: break-word;
+	overflow-wrap: break-word;
+
+		@media (min-width: 48.5em) {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr); // 120px column width on 1440px screens.
+			justify-content: center;
+		}
 	}
 }
