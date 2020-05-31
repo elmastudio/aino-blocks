@@ -52,6 +52,8 @@ class GridItemEdit extends Component {
 			justifyItem,
 			stackOrder,
 			gutter,
+			overlapLeft,
+			overlapRight,
 		} = attributes;
 
 		const alignItemOptions = [{
@@ -118,6 +120,18 @@ class GridItemEdit extends Component {
 							checked={!!gutter}
 							onChange={() => setAttributes({ gutter: !gutter })}
 							help={!!gutter ? __('Toogle off to remove the spacing left and right of the grid item.', 'ainoblocks') : __('Toggle on for space left and right of the grid item.', 'ainoblocks')}
+						/>
+						<ToggleControl
+							label={__('Overlap to left', 'ainoblocks')}
+							checked={!!overlapLeft}
+							onChange={() => setAttributes({ overlapLeft: !overlapLeft })}
+							help={!!overlapLeft ? __('Toogle off to position grid item within grid container.', 'ainoblocks') : __('Toggle on to overlap grid item to left screen edge.', 'ainoblocks')}
+						/>
+						<ToggleControl
+							label={__('Overlap to right', 'ainoblocks')}
+							checked={!!overlapRight}
+							onChange={() => setAttributes({ overlapRight: !overlapRight })}
+							help={!!overlapRight ? __('Toogle off to position grid item within grid container.', 'ainoblocks') : __('Toggle on to overlap grid item to right screen edge.', 'ainoblocks')}
 						/>
 					</PanelBody>
 
@@ -199,6 +213,8 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			justifyItem,
 			stackOrder,
 			gutter,
+			overlapLeft,
+			overlapRight,
 		} = attributes;
 
 		const classNames = classnames(className, {
@@ -208,6 +224,8 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			[`justify-self__${justifyItem}`]: justifyItem,
 			[`stack-order__${stackOrder}`]: stackOrder,
 			'no-gutter': ! gutter,
+			'overlap-left': overlapLeft,
+			'overlap-right': overlapRight,
 		});
 
 		return <BlockListBlock {...props} className={classNames} />;

@@ -1,4 +1,4 @@
-.wp-block-ainoblocks-grid-container > .block-editor-inner-blocks > .block-editor-block-list__layout {
+.wp-block-ainoblocks-grid-container>.block-editor-inner-blocks>.block-editor-block-list__layout {
 	position: relative;
 	word-break: break-word;
 	overflow-wrap: break-word;
@@ -17,11 +17,12 @@
 		linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 16.666666693333334% 1px / 1px,
 		linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 8.333333363333334% 1px / 1px,
 		linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 0% 1px / 1px,
-		linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)) 1px 100% / 100% 1px,
-		linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)) 1px 0% / 100% 1px;
-		background-repeat:no-repeat;
+		linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 1px 100% / 100% 1px,
+		linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 1px 0% / 100% 1px;
+	background-repeat: no-repeat;
 
 	@media (min-width: 48.5em) {
+		max-width: 90rem;
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		justify-content: center;

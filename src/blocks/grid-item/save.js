@@ -19,6 +19,8 @@ export default function save({ attributes, className }) {
 		justifyItem,
 		stackOrder,
 		gutter,
+		overlapLeft,
+		overlapRight,
 	} = attributes;
 
 	const classNames = classnames(className, {
@@ -28,6 +30,8 @@ export default function save({ attributes, className }) {
 		[`justify-self__${justifyItem}`]: justifyItem,
 		[`stack-order__${stackOrder}`]: stackOrder,
 		'no-gutter': ! gutter,
+		'overlap-left': overlapLeft,
+		'overlap-right': overlapRight,
 	});
 
 	return (
