@@ -32,10 +32,10 @@ export default function save({
 		mediaId,
 		verticalContentAlignment,
 		imageFill,
-		contentGridLineStart,
-		contentGridLineEnd,
-		mediaGridLineStart,
-		mediaGridLineEnd,
+		contentGridColumnStart,
+		contentGridColumnEnd,
+		mediaGridColumnStart,
+		mediaGridColumnEnd,
 	} = attributes;
 
 	const mediaTypeRenders = {
@@ -71,13 +71,13 @@ export default function save({
 	};
 
 	const styleContent = {
-		gridColumnStart: contentGridLineStart,
-		gridColumnEnd: contentGridLineEnd,
+		gridColumnStart: contentGridColumnStart,
+		gridColumnEnd: contentGridColumnEnd,
 	};
 
 	const styleMedia = {
-		gridColumnStart: mediaGridLineStart,
-		gridColumnEnd: mediaGridLineEnd,
+		gridColumnStart: mediaGridColumnStart,
+		gridColumnEnd: mediaGridColumnEnd,
 	};
 
 	return (

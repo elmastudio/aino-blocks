@@ -41,7 +41,7 @@ const settings = {
 	],
 	attributes,
 	supports: {
-		align: ['wide', 'full']
+		align: ['wide']
 	},
 	edit,
 	save,

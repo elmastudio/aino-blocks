@@ -11,6 +11,12 @@
 		"customBackgroundColor": {
 			"type": "string"
 		},
+		"gradient": {
+			"type": "string"
+		},
+		"customGradient": {
+			"type": "string"
+		},
 		"mediaAlt": {
 			"type": "string",
 			"source": "attribute",
@@ -47,16 +53,16 @@
 		"imageFill": {
 			"type": "boolean"
 		},
-		"contentGridLineStart": {
+		"contentGridColumnStart": {
 			"type": "number"
 		},
-		"contentGridLineEnd": {
+		"contentGridColumnEnd": {
 			"type": "number"
 		},
-		"mediaGridLineStart": {
+		"mediaGridColumnStart": {
 			"type": "number"
 		},
-		"mediaGridLineEnd": {
+		"mediaGridColumnEnd": {
 			"type": "number"
 		}
 	}
