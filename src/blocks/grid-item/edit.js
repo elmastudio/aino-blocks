@@ -27,6 +27,10 @@ const {
 	SelectControl,
 	ToggleControl,
 } = wp.components;
+const {
+	withDispatch,
+	withSelect,
+} = wp.data;
 
 /**
  * Block edit function
@@ -50,6 +54,7 @@ class GridItemEdit extends Component {
 			gridColumnEnd,
 			alignItem,
 			justifyItem,
+			stacking,
 			stackOrder,
 			gutter,
 			overlapLeft,
@@ -159,6 +164,12 @@ class GridItemEdit extends Component {
 						title={__('Stacking', 'ainoblocks')}
 						initialOpen={false}
 					>
+						<ToggleControl
+							label={__('Stacking', 'ainoblocks')}
+							checked={!!stacking}
+							onChange={() => setAttributes({ stacking: !stacking })}
+							help={!!stacking ? __('Toogle off to show grid items below the previous grid item.', 'ainoblocks') : __('Toggle on to allow stacking of grid item.', 'ainoblocks')}
+						/>
 						<RangeControl
 							label={__('Stack Order', 'ainoblocks')}
 							help={__('An item with greater stack order is always in front of an item with a lower stack order.', 'ainoblocks')}
@@ -173,12 +184,12 @@ class GridItemEdit extends Component {
 
 				<div className={classNames} >
 					<InnerBlocks
-					templateLock={ false }
-					renderAppender={
-						hasChildBlocks
-							? undefined
-							: () => <InnerBlocks.ButtonBlockAppender />
-					}
+						templateLock={ false }
+						renderAppender={
+							hasChildBlocks
+								? undefined
+								: () => <InnerBlocks.ButtonBlockAppender />
+						}
 					/>
 				</div>
 			</Fragment>
@@ -187,7 +198,6 @@ class GridItemEdit extends Component {
 }
 
 export default compose(
-		
 )(GridItemEdit);
 
 /**
@@ -211,6 +221,7 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			gridColumnEnd,
 			alignItem,
 			justifyItem,
+			stacking,
 			stackOrder,
 			gutter,
 			overlapLeft,
@@ -224,6 +235,7 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			[`justify-self__${justifyItem}`]: justifyItem,
 			[`stack-order__${stackOrder}`]: stackOrder,
 			'no-gutter': ! gutter,
+			'no-stacking': ! stacking,
 			'overlap-left': overlapLeft,
 			'overlap-right': overlapRight,
 		});

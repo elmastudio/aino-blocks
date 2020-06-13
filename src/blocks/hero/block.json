@@ -11,12 +11,6 @@
 		"customBackgroundColor": {
 			"type": "string"
 		},
-		"gradient": {
-			"type": "string"
-		},
-		"customGradient": {
-			"type": "string"
-		},
 		"mediaAlt": {
 			"type": "string",
 			"source": "attribute",

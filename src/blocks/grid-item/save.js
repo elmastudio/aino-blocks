@@ -17,6 +17,7 @@ export default function save({ attributes, className }) {
 		gridColumnEnd,
 		alignItem,
 		justifyItem,
+		stacking,
 		stackOrder,
 		gutter,
 		overlapLeft,
@@ -30,6 +31,7 @@ export default function save({ attributes, className }) {
 		[`justify-self__${justifyItem}`]: justifyItem,
 		[`stack-order__${stackOrder}`]: stackOrder,
 		'no-gutter': ! gutter,
+		'no-stacking': ! stacking,
 		'overlap-left': overlapLeft,
 		'overlap-right': overlapRight,
 	});

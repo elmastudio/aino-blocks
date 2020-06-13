@@ -1,6 +1,12 @@
 .wp-block-ainoblocks-grid-item {
-	grid-row-start: 1;
-	grid-row-end: 2;
+
+		grid-row-start: 1;
+		grid-row-end: 2;
+
+	&.no-stacking {
+		grid-row-start: auto;
+		grid-row-end: auto;
+	}
 
 	@media (min-width: 48.50em) {
 		padding-left: 24px;
