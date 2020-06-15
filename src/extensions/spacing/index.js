@@ -12,7 +12,7 @@ import './styles/style.scss';
 /**
  * WordPress Dependencies
  */
-const { __, _x } = wp.i18n;
+const { __ } = wp.i18n;
 const { addFilter } = wp.hooks;
 const { Component, Fragment } = wp.element;
 const { hasBlockSupport } = wp.blocks;
@@ -22,6 +22,7 @@ const {
 const {
 	PanelBody,
 	SelectControl,
+	RangeControl,
 } = wp.components;
 const {
 	createHigherOrderComponent,
@@ -35,6 +36,7 @@ const enableSpacingControlOnBlocks = [
 	'core/columns',
 	'ainoblocks/featured-content',
 	'ainoblocks/grid-container',
+	'ainoblocks/grid-item',
 ];
 
 /**
@@ -51,13 +53,21 @@ function spacingAttributes(settings) {
 	if (typeof settings.attributes !== 'undefined' && enableSpacingControlOnBlocks.includes(settings.name)) {
 
 		settings.attributes = Object.assign(settings.attributes, {
-			spacingTop: {
-				type: 'string',
-				default: 'spacing-top-none',
+			paddingTop: {
+				type: 'number',
+				default: '0',
 			},
-			spacingBottom: {
-				type: 'string',
-				default: 'spacing-bottom-none',
+			paddingBottom: {
+				type: 'number',
+				default: '0',
+			},
+			paddingLeft: {
+				type: 'number',
+				default: '0',
+			},
+			paddingRight: {
+				type: 'number',
+				default: '0',
 			}
 		});
 	}
@@ -83,29 +93,16 @@ function spacingInspectorControls(BlockEdit) {
 				);
 			}
 
-			const spacingTopValues = [
-				{ value: 'spacing-top-none', label: __('none', 'ainoblocks') },
-				{ value: 'spacing-top-s', label: __('small', 'ainoblocks') },
-				{ value: 'spacing-top-m', label: __('medium', 'ainoblocks') },
-				{ value: 'spacing-top-l', label: __('large', 'ainoblocks') }
-			];
-
-			const spacingBottomValues = [
-				{ value: 'spacing-bottom-none', label: __('none', 'ainoblocks') },
-				{ value: 'spacing-bottom-s', label: __('small', 'ainoblocks') },
-				{ value: 'spacing-bottom-m', label: __('medium', 'ainoblocks') },
-				{ value: 'spacing-bottom-l', label: __('large', 'ainoblocks') }
-			];
-
 			const {
 				attributes,
 				setAttributes,
-				className,
 			} = props;
 
 			const {
-				spacingTop,
-				spacingBottom,
+				paddingTop,
+				paddingBottom,
+				paddingLeft,
+				paddingRight,
 			} = attributes;
 
 			return (
@@ -116,17 +113,41 @@ function spacingInspectorControls(BlockEdit) {
 							title={__('Spacing', 'ainoblocks')}
 							initialOpen={false}
 						>
-							<SelectControl
-								label={__('Spacing top', 'ainoblocks')}
-								value={spacingTop}
-								options={spacingTopValues}
-								onChange={spacingTop => setAttributes({ spacingTop })}
+							<RangeControl
+								label={__('Padding Top', 'ainoblocks')}
+								value={paddingTop}
+								onChange={(paddingTop) => setAttributes({ paddingTop })}
+								initialPosition={0}
+								min={0}
+								max={11}
+								allowReset={true}
 							/>
-							<SelectControl
-								label={__('Spacing bottom', 'ainoblocks')}
-								value={spacingBottom}
-								options={spacingBottomValues}
-								onChange={spacingBottom => setAttributes({ spacingBottom })}
+							<RangeControl
+								label={__('Padding Bottom', 'ainoblocks')}
+								value={paddingBottom}
+								onChange={(paddingBottom) => setAttributes({ paddingBottom })}
+								initialPosition={0}
+								min={0}
+								max={11}
+								allowReset={true}
+							/>
+							<RangeControl
+								label={__('Padding Left', 'ainoblocks')}
+								value={paddingLeft}
+								onChange={(paddingLeft) => setAttributes({ paddingLeft })}
+								initialPosition={0}
+								min={0}
+								max={11}
+								allowReset={true}
+							/>
+							<RangeControl
+								label={__('Padding Right', 'ainoblocks')}
+								value={paddingRight}
+								onChange={(paddingRight) => setAttributes({ paddingRight })}
+								initialPosition={0}
+								min={0}
+								max={11}
+								allowReset={true}
 							/>
 						</PanelBody>
 					</InspectorControls>
@@ -144,35 +165,32 @@ function spacingInspectorControls(BlockEdit) {
  * @return {Function} Wrapped component
  */
 
-const withCustomClassName = createHigherOrderComponent((BlockListBlock) => {
+const withSpacingClassName = createHigherOrderComponent((BlockListBlock) => {
 
 	return (props) => {
 
 		const {
 			attributes,
-			setAttributes,
 			className,
 		} = props;
 
 		const {
-			spacingTop,
-			spacingBottom,
+			paddingTop,
+			paddingBottom,
+			paddingLeft,
+			paddingRight,
 		} = attributes;
 
 		const classNames = classnames(className, {
-			'spacing-top-none'   : 'spacing-top-none'    === spacingTop,
-			'spacing-top-s'      : 'spacing-top-s'       === spacingTop,
-			'spacing-top-m'      : 'spacing-top-m'       === spacingTop,
-			'spacing-top-l'      : 'spacing-top-l'       === spacingTop,
-			'spacing-bottom-none': 'spacing-bottom-none' === spacingBottom,
-			'spacing-bottom-s'   : 'spacing-bottom-s'    === spacingBottom,
-			'spacing-bottom-m'   : 'spacing-bottom-m'    === spacingBottom,
-			'spacing-bottom-l'   : 'spacing-bottom-l'    === spacingBottom,
+			[`pt-${paddingTop}`]   : paddingTop,
+			[`pb-${paddingBottom}`]: paddingBottom,
+			[`pl-${paddingLeft}`]  : paddingLeft,
+			[`pr-${paddingRight}`] : paddingRight,
 		});
 
 		return <BlockListBlock {...props} className={classNames} />;
 	};
-}, 'withCustomClassName');
+}, 'withSpacingClassName');
 
 /**
  * Add custom element class in save element.
@@ -188,16 +206,26 @@ function modifySpacingSaveSettings(el, block, attributes) {
 	if (enableSpacingControlOnBlocks.includes(block.name)) {
 
 		const {
-			spacingTop,
-			spacingBottom,
+			paddingTop,
+			paddingBottom,
+			paddingLeft,
+			paddingRight,
 		} = attributes;
 
-		if (spacingTop) {
-			el.props.className = classnames(el.props.className, spacingTop);
+		if (paddingTop) {
+			el.props.className = classnames(el.props.className, paddingTop);
 		}
 
-		if (spacingBottom) {
-			el.props.className = classnames(el.props.className, spacingBottom);
+		if (paddingBottom) {
+			el.props.className = classnames(el.props.className, paddingBottom);
+		}
+
+		if (paddingLeft) {
+			el.props.className = classnames(el.props.className, paddingLeft);
+		}
+
+		if (paddingRight) {
+			el.props.className = classnames(el.props.className, paddingRight);
 		}
 	}
 
@@ -225,5 +253,5 @@ addFilter(
 
 addFilter('editor.BlockListBlock',
 	'ainoblocks/modify-spacing-save-settings',
-	withCustomClassName
+	withSpacingClassName
 );
