@@ -23,7 +23,7 @@
 		},
 		"stacking": {
 			"type": "boolean",
-			"default": true
+			"default": false
 		},
 		"gutter": {
 			"type": "boolean",

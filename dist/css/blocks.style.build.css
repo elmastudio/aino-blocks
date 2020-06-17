@@ -1,241 +1,241 @@
-[class*="wp-block-"].pt-0 {
+[class*="wp-block-"].pt__0 {
   padding-top: 0; }
 
-[class*="wp-block-"].pt-1 {
+[class*="wp-block-"].pt__1 {
   padding-top: 0.5rem; }
 
-[class*="wp-block-"].pt-2 {
+[class*="wp-block-"].pt__2 {
   padding-top: 1rem; }
 
-[class*="wp-block-"].pt-3 {
+[class*="wp-block-"].pt__3 {
   padding-top: 1.5rem; }
 
-[class*="wp-block-"].pt-4 {
+[class*="wp-block-"].pt__4 {
   padding-top: 1.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pt-4 {
+    [class*="wp-block-"].pt__4 {
       padding-top: 2rem; } }
 
-[class*="wp-block-"].pt-5 {
+[class*="wp-block-"].pt__5 {
   padding-top: 2rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pt-5 {
+    [class*="wp-block-"].pt__5 {
       padding-top: 2.5rem; } }
 
-[class*="wp-block-"].pt-6 {
+[class*="wp-block-"].pt__6 {
   padding-top: 2rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pt-6 {
+    [class*="wp-block-"].pt__6 {
       padding-top: 3rem; } }
 
-[class*="wp-block-"].pt-7 {
+[class*="wp-block-"].pt__7 {
   padding-top: 2.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pt-7 {
+    [class*="wp-block-"].pt__7 {
       padding-top: 3.5rem; } }
 
-[class*="wp-block-"].pt-8 {
+[class*="wp-block-"].pt__8 {
   padding-top: 2.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pt-8 {
+    [class*="wp-block-"].pt__8 {
       padding-top: 4.5rem; } }
 
-[class*="wp-block-"].pt-9 {
+[class*="wp-block-"].pt__9 {
   padding-top: 3rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pt-9 {
+    [class*="wp-block-"].pt__9 {
       padding-top: 6rem; } }
 
-[class*="wp-block-"].pt-10 {
+[class*="wp-block-"].pt__10 {
   padding-top: 3rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pt-10 {
+    [class*="wp-block-"].pt__10 {
       padding-top: 9rem; } }
 
-[class*="wp-block-"].pt-11 {
+[class*="wp-block-"].pt__11 {
   padding-top: 3.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pt-11 {
+    [class*="wp-block-"].pt__11 {
       padding-top: 12rem; } }
 
-[class*="wp-block-"].pb-0 {
+[class*="wp-block-"].pb__0 {
   padding-bottom: 0; }
 
-[class*="wp-block-"].pb-1 {
+[class*="wp-block-"].pb__1 {
   padding-bottom: 0.5rem; }
 
-[class*="wp-block-"].pb-2 {
+[class*="wp-block-"].pb__2 {
   padding-bottom: 1rem; }
 
-[class*="wp-block-"].pb-3 {
+[class*="wp-block-"].pb__3 {
   padding-bottom: 1.5rem; }
 
-[class*="wp-block-"].pb-4 {
+[class*="wp-block-"].pb__4 {
   padding-bottom: 1.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pb-4 {
+    [class*="wp-block-"].pb__4 {
       padding-bottom: 2rem; } }
 
-[class*="wp-block-"].pb-5 {
+[class*="wp-block-"].pb__5 {
   padding-bottom: 2rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pb-5 {
+    [class*="wp-block-"].pb__5 {
       padding-bottom: 2.5rem; } }
 
-[class*="wp-block-"].pb-6 {
+[class*="wp-block-"].pb__6 {
   padding-bottom: 2rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pb-6 {
+    [class*="wp-block-"].pb__6 {
       padding-bottom: 3rem; } }
 
-[class*="wp-block-"].pb-7 {
+[class*="wp-block-"].pb__7 {
   padding-bottom: 2.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pb-7 {
+    [class*="wp-block-"].pb__7 {
       padding-bottom: 3.5rem; } }
 
-[class*="wp-block-"].pb-8 {
+[class*="wp-block-"].pb__8 {
   padding-bottom: 2.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pb-8 {
+    [class*="wp-block-"].pb__8 {
       padding-bottom: 4.5rem; } }
 
-[class*="wp-block-"].pb-9 {
+[class*="wp-block-"].pb__9 {
   padding-bottom: 3rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pb-9 {
+    [class*="wp-block-"].pb__9 {
       padding-bottom: 6rem; } }
 
-[class*="wp-block-"].pb-10 {
+[class*="wp-block-"].pb__10 {
   padding-bottom: 3rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pb-10 {
+    [class*="wp-block-"].pb__10 {
       padding-bottom: 9rem; } }
 
-[class*="wp-block-"].pb-11 {
+[class*="wp-block-"].pb__11 {
   padding-bottom: 3.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pb-11 {
+    [class*="wp-block-"].pb__11 {
       padding-bottom: 12rem; } }
 
-[class*="wp-block-"].pl-0 {
+[class*="wp-block-"].pl__0 {
   padding-left: 0; }
 
-[class*="wp-block-"].pl-1 {
+[class*="wp-block-"].pl__1 {
   padding-left: 0.5rem; }
 
-[class*="wp-block-"].pl-2 {
+[class*="wp-block-"].pl__2 {
   padding-left: 1rem; }
 
-[class*="wp-block-"].pl-3 {
+[class*="wp-block-"].pl__3 {
   padding-left: 1.5rem; }
 
-[class*="wp-block-"].pl-4 {
+[class*="wp-block-"].pl__4 {
   padding-left: 1.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pl-4 {
+    [class*="wp-block-"].pl__4 {
       padding-left: 2rem; } }
 
-[class*="wp-block-"].pl-5 {
+[class*="wp-block-"].pl__5 {
   padding-left: 2rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pl-5 {
+    [class*="wp-block-"].pl__5 {
       padding-left: 2.5rem; } }
 
-[class*="wp-block-"].pl-6 {
+[class*="wp-block-"].pl__6 {
   padding-left: 2rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pl-6 {
+    [class*="wp-block-"].pl__6 {
       padding-left: 3rem; } }
 
-[class*="wp-block-"].pl-7 {
+[class*="wp-block-"].pl__7 {
   padding-left: 2.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pl-7 {
+    [class*="wp-block-"].pl__7 {
       padding-left: 3.5rem; } }
 
-[class*="wp-block-"].pl-8 {
+[class*="wp-block-"].pl__8 {
   padding-left: 2.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pl-8 {
+    [class*="wp-block-"].pl__8 {
       padding-left: 4.5rem; } }
 
-[class*="wp-block-"].pl-9 {
+[class*="wp-block-"].pl__9 {
   padding-left: 3rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pl-9 {
+    [class*="wp-block-"].pl__9 {
       padding-left: 6rem; } }
 
-[class*="wp-block-"].pl-10 {
+[class*="wp-block-"].pl__10 {
   padding-left: 3rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pl-10 {
+    [class*="wp-block-"].pl__10 {
       padding-left: 9rem; } }
 
-[class*="wp-block-"].pl-11 {
+[class*="wp-block-"].pl__11 {
   padding-left: 3.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pl-11 {
+    [class*="wp-block-"].pl__11 {
       padding-left: 12rem; } }
 
-[class*="wp-block-"].pr-0 {
+[class*="wp-block-"].pr__0 {
   padding-right: 0; }
 
-[class*="wp-block-"].pr-1 {
+[class*="wp-block-"].pr__1 {
   padding-right: 0.5rem; }
 
-[class*="wp-block-"].pr-2 {
+[class*="wp-block-"].pr__2 {
   padding-right: 1rem; }
 
-[class*="wp-block-"].pr-3 {
+[class*="wp-block-"].pr__3 {
   padding-right: 1.5rem; }
 
-[class*="wp-block-"].pr-4 {
+[class*="wp-block-"].pr__4 {
   padding-right: 1.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pr-4 {
+    [class*="wp-block-"].pr__4 {
       padding-right: 2rem; } }
 
-[class*="wp-block-"].pr-5 {
+[class*="wp-block-"].pr__5 {
   padding-right: 2rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pr-5 {
+    [class*="wp-block-"].pr__5 {
       padding-right: 2.5rem; } }
 
-[class*="wp-block-"].pr-6 {
+[class*="wp-block-"].pr__6 {
   padding-right: 2rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pr-6 {
+    [class*="wp-block-"].pr__6 {
       padding-right: 3rem; } }
 
-[class*="wp-block-"].pr-7 {
+[class*="wp-block-"].pr__7 {
   padding-right: 2.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pr-7 {
+    [class*="wp-block-"].pr__7 {
       padding-right: 3.5rem; } }
 
-[class*="wp-block-"].pr-8 {
+[class*="wp-block-"].pr__8 {
   padding-right: 2.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pr-8 {
+    [class*="wp-block-"].pr__8 {
       padding-right: 4.5rem; } }
 
-[class*="wp-block-"].pr-9 {
+[class*="wp-block-"].pr__9 {
   padding-right: 3rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pr-9 {
+    [class*="wp-block-"].pr__9 {
       padding-right: 6rem; } }
 
-[class*="wp-block-"].pr-10 {
+[class*="wp-block-"].pr__10 {
   padding-right: 3rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pr-10 {
+    [class*="wp-block-"].pr__10 {
       padding-right: 9rem; } }
 
-[class*="wp-block-"].pr-11 {
+[class*="wp-block-"].pr__11 {
   padding-right: 3.5rem; }
   @media (min-width: 48.5em) {
-    [class*="wp-block-"].pr-11 {
+    [class*="wp-block-"].pr__11 {
       padding-right: 12rem; } }
 .wp-block-ainoblocks-grid-item {
   grid-row-start: 1;
@@ -527,7 +527,7 @@
   padding-top: 160px; }
 
 .tpl-hero .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
-  padding-top: 128px; }
+  padding-top: 0; }
 
 @media (min-width: 71.25em) {
   .tpl-hero.has-header-search .wp-block-ainoblocks-hero__container {

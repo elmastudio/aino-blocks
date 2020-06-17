@@ -5,7 +5,8 @@
   padding-left: 24px;
   padding-right: 24px;
   grid-row-start: 1;
-  grid-row-end: 2; }
+  grid-row-end: 2;
+  border: 1px dashed red; }
   .editor-styles-wrapper .wp-block-ainoblocks-grid-container .wp-block[data-type="ainoblocks/grid-item"] .wp-block-ainoblocks-grid-item {
     padding-left: 0 !important;
     padding-right: 0 !important; }
@@ -119,7 +120,7 @@
   position: relative;
   word-break: break-word;
   overflow-wrap: break-word;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 100% 1px/1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 91.66667% 1px/1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 83.33333% 1px/1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 75.0% 1px/1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 66.66667% 1px/1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 58.33333% 1px/1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 50.0% 1px/1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 41.66667% 1px/1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 33.33333% 1px/1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 25.0% 1px/1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 16.66667% 1px/1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 8.33333% 1px/1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 0% 1px/1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 1px 100%/100% 1px, linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) 1px 0%/100% 1px;
+  background: linear-gradient(#3399FF, #3399FF) 100% 1px/1px, linear-gradient(#3399FF, #3399FF) 91.66667% 1px/1px, linear-gradient(#3399FF, #3399FF) 83.33333% 1px/1px, linear-gradient(#3399FF, #3399FF) 75.0% 1px/1px, linear-gradient(#3399FF, #3399FF) 66.66667% 1px/1px, linear-gradient(#3399FF, #3399FF) 58.33333% 1px/1px, linear-gradient(#3399FF, #3399FF) 50.0% 1px/1px, linear-gradient(#3399FF, #3399FF) 41.66667% 1px/1px, linear-gradient(#3399FF, #3399FF) 33.33333% 1px/1px, linear-gradient(#3399FF, #3399FF) 25.0% 1px/1px, linear-gradient(#3399FF, #3399FF) 16.66667% 1px/1px, linear-gradient(#3399FF, #3399FF) 8.33333% 1px/1px, linear-gradient(#3399FF, #3399FF) 0% 1px/1px, linear-gradient(#3399FF, #3399FF) 1px 100%/100% 1px, linear-gradient(#3399FF, #3399FF) 1px 0%/100% 1px;
   background-repeat: no-repeat; }
   @media (min-width: 48.5em) {
     .wp-block-ainoblocks-grid-container > .block-editor-inner-blocks > .block-editor-block-list__layout {

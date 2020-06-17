@@ -34,9 +34,9 @@ const enableSpacingControlOnBlocks = [
 	'core/cover',
 	'core/group',
 	'core/columns',
+	'core/padding',
 	'ainoblocks/featured-content',
 	'ainoblocks/grid-container',
-	'ainoblocks/grid-item',
 ];
 
 /**
@@ -182,10 +182,10 @@ const withSpacingClassName = createHigherOrderComponent((BlockListBlock) => {
 		} = attributes;
 
 		const classNames = classnames(className, {
-			[`pt-${paddingTop}`]   : paddingTop,
-			[`pb-${paddingBottom}`]: paddingBottom,
-			[`pl-${paddingLeft}`]  : paddingLeft,
-			[`pr-${paddingRight}`] : paddingRight,
+			[`pt__${paddingTop}`]   : paddingTop,
+			[`pb__${paddingBottom}`]: paddingBottom,
+			[`pl__${paddingLeft}`]  : paddingLeft,
+			[`pr__${paddingRight}`] : paddingRight,
 		});
 
 		return <BlockListBlock {...props} className={classNames} />;
@@ -213,19 +213,19 @@ function modifySpacingSaveSettings(el, block, attributes) {
 		} = attributes;
 
 		if (paddingTop) {
-			el.props.className = classnames(el.props.className, paddingTop);
+			el.props.className = classnames(el.props.className, `pt__${paddingTop}`);
 		}
 
 		if (paddingBottom) {
-			el.props.className = classnames(el.props.className, paddingBottom);
+			el.props.className = classnames(el.props.className, `pb__${paddingBottom}`);
 		}
 
 		if (paddingLeft) {
-			el.props.className = classnames(el.props.className, paddingLeft);
+			el.props.className = classnames(el.props.className, `pl__${paddingLeft}`);
 		}
 
 		if (paddingRight) {
-			el.props.className = classnames(el.props.className, paddingRight);
+			el.props.className = classnames(el.props.className, `pr__${paddingRight}`);
 		}
 	}
 
