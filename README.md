@@ -1,15 +1,22 @@
 # Aino Blocks
-A WordPress editor block collection for easy site building.  
+A WordPress editor block collection for page building.  
 
 __Contributors:__ elmastudio  
 __Tags:__ page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks   
 __Requires at least:__ 5.4   
-__Tested up to:__ WordPress 5.4.1  
+__Tested up to:__ WordPress 5.4.2  
 __License:__ GPLv2 or later  
 __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html  
 
 ## Changelog  
 =======
+
+### 1.0.0.
+**New:** 12-column Grid container block with grid item block.  
+**New:** Spacing top/bottom setting Grid container block.  
+**New:** Spacing top/bottom setting in Group block.  
+**Enhance:**  New Block icons.  
+**Enhance:**  Hero block grid settings.  
 
 ### 0.9.0.  
 **Enhance:** Expanded Hero block media settings and moved setting to inspector.  
