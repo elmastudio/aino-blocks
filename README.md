@@ -11,6 +11,16 @@ __Tested up to:__ WordPress 5.4.2
 __License:__ GPLv2 or later  
 __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html  
 
+
+### Let's socialize
+
+-   [Download the Aino theme WordPress.org](https://wordpress.org/themes/aino/)
+-   [Follow us on Twitter](https://twitter.com/wp_aino)
+-   [Like Aino on Facebook](https://www.facebook.com/wpaino/)
+-   [Follow us on Insta](https://www.instagram.com/wpainodesign/)
+-   [Find helpful tutorials on YouTube](https://www.youtube.com/channel/UCzt3chbLnh7BZp1bwua1eTg/)
+
+
 ## Changelog  
 =======
 
