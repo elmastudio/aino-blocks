@@ -28,3 +28,8 @@
 		justify-content: center;
 	}
 }
+
+.wp-block .block-editor-block-list__block[data-type="ainoblocks/grid-container"] .wp-block-ainoblocks-grid-container {
+	padding-left: 0;
+	padding-right: 0;
+}

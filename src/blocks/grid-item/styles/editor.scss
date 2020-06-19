@@ -19,6 +19,16 @@
 		padding-right: 0;
 	}
 
+	&.no-stacking {
+		grid-row-start: auto;
+		grid-row-end: auto;
+	}
+
+	.block-list-appender {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
 	.wp-block-ainoblocks-grid-item {
 		width: 100%;
 

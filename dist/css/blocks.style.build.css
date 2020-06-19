@@ -251,7 +251,7 @@
         padding-left: 0;
         padding-right: 0; } }
   .wp-block-ainoblocks-grid-item :last-child {
-    margin-bottom: 0 !important; }
+    margin-bottom: 0; }
   .wp-block-ainoblocks-grid-item.grid-column_start__1 {
     grid-column-start: 1; }
   .wp-block-ainoblocks-grid-item.grid-column_start__2 {
