@@ -22,7 +22,7 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 -   [Follow us on Insta](https://www.instagram.com/wpainodesign/)
 -   [Find helpful tutorials on YouTube](https://www.youtube.com/channel/UCzt3chbLnh7BZp1bwua1eTg/)
 
-## Installation
+### Installation
 
 1. We recommend to install the [Gutenberg](https://wordpress.org/plugins/gutenberg/) plugin.
 2. Install and activate the Aino theme from the [WordPress theme directory](https://wordpress.org/themes/aino/).
