@@ -1,6 +1,6 @@
 # Aino Blocks: A block collection for page building
-
-[![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)]
+	
+[![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/elmastudio/aino-blocks/blob/master/LICENSE)
 
 A WordPress editor block collection for page building.  
 
