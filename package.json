@@ -2,7 +2,7 @@
 	"name": "ainoblocks",
 	"title": "Aino Blocks",
 	"description": "A WordPress editor block collection for site building.",
-	"version": "0.9.0",
+	"version": "1.0.0",
 	"tested_up_to": "5.4.1",
 	"license": "GPL-2.0",
 	"author": "Elmastudio",

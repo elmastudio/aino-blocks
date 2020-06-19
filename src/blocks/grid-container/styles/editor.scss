@@ -1,0 +1,35 @@
+.wp-block-ainoblocks-grid-container>.block-editor-inner-blocks>.block-editor-block-list__layout {
+	position: relative;
+	word-break: break-word;
+	overflow-wrap: break-word;
+
+	background:
+		linear-gradient(#3399FF, #3399FF) 100% 1px / 1px,
+		linear-gradient(#3399FF, #3399FF) 91.6666666% 1px / 1px,
+		linear-gradient(#3399FF, #3399FF) 83.333333333333334% 1px / 1px,
+		linear-gradient(#3399FF, #3399FF) 75.000000003333334% 1px / 1px,
+		linear-gradient(#3399FF, #3399FF) 66.666666673333334% 1px / 1px,
+		linear-gradient(#3399FF, #3399FF) 58.333333343333334% 1px / 1px,
+		linear-gradient(#3399FF, #3399FF) 50.000000013333334% 1px / 1px,
+		linear-gradient(#3399FF, #3399FF) 41.666666683333334% 1px / 1px,
+		linear-gradient(#3399FF, #3399FF) 33.333333353333334% 1px / 1px,
+		linear-gradient(#3399FF, #3399FF) 25.000000023333334% 1px / 1px,
+		linear-gradient(#3399FF, #3399FF) 16.666666693333334% 1px / 1px,
+		linear-gradient(#3399FF, #3399FF) 8.333333363333334% 1px / 1px,
+		linear-gradient(#3399FF, #3399FF) 0% 1px / 1px,
+		linear-gradient(#3399FF, #3399FF) 1px 100% / 100% 1px,
+		linear-gradient(#3399FF, #3399FF) 1px 0% / 100% 1px;
+	background-repeat: no-repeat;
+
+	@media (min-width: 48.5em) {
+		max-width: 90rem;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		justify-content: center;
+	}
+}
+
+.wp-block .block-editor-block-list__block[data-type="ainoblocks/grid-container"] .wp-block-ainoblocks-grid-container {
+	padding-left: 0;
+	padding-right: 0;
+}

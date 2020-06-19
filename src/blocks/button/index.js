@@ -1,8 +1,13 @@
 /**
-* WordPress dependencies
-*/
-const { __, _x } = wp.i18n;
-const { registerBlockCollection } = wp.blocks;
+ * WordPress dependencies
+ */
+const {
+	__,
+	_x
+} = wp.i18n;
+const {
+	registerBlockCollection
+} = wp.blocks;
 
 /**
  * Internal dependencies
@@ -36,14 +41,29 @@ const settings = {
 		__('aino blocks', 'ainoblocks'),
 	],
 	attributes,
-	styles: [
-		{ name: 'primary', label: _x('Fill', 'ainoblocks'), isDefault: true },
-		{ name: 'outline', label: __('Outline', 'ainoblocks') },
-		{ name: '3outline', label: _x('3D Outline', 'ainoblocks') },
-		{ name: 'ghost', label: _x('Ghost', 'ainoblocks') },
+	styles: [{
+			name: 'primary',
+			label: _x('Fill', 'ainoblocks'),
+			isDefault: true
+		},
+		{
+			name: 'outline',
+			label: __('Outline', 'ainoblocks')
+		},
+		{
+			name: '3doutline',
+			label: __('3D Outline', 'ainoblocks')
+		},
+		{
+			name: 'ghost',
+			label: __('Ghost', 'ainoblocks')
+		},
 	],
 	edit,
 	save,
 };
 
-export { name, settings };
+export {
+	name,
+	settings
+};

@@ -1,0 +1,16 @@
+{
+	"name": "grid-container",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "wide"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"items": {
+			"type": "number",
+			"default": "1"
+		}
+	}
+}

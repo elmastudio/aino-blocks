@@ -11,7 +11,9 @@ const {
 	getColorClassName,
 } = wp.blockEditor;
 
-export default function save({ attributes }) {
+export default function save({
+	attributes
+}) {
 	const {
 		url,
 		text,

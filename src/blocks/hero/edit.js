@@ -12,10 +12,7 @@ import icons from './icons';
 /**
  * WordPress dependencies
  */
-const {
-	__,
-	_x
-} = wp.i18n;
+const {__, _x } = wp.i18n;
 const {
 	Component,
 	Fragment
@@ -198,10 +195,10 @@ class heroEdit extends Component {
 				mediaWidth,
 				verticalContentAlignment,
 				imageFill,
-				contentGridLineStart,
-				contentGridLineEnd,
-				mediaGridLineStart,
-				mediaGridLineEnd,
+				contentGridColumnStart,
+				contentGridColumnEnd,
+				mediaGridColumnStart,
+				mediaGridColumnEnd,
 			} = attributes;
 
 			const mediaPositionOptions = [{
@@ -238,13 +235,13 @@ class heroEdit extends Component {
 			});
 
 			const styleContent = {
-				gridColumnStart: contentGridLineStart,
-				gridColumnEnd: contentGridLineEnd,
+				gridColumnStart: contentGridColumnStart,
+				gridColumnEnd: contentGridColumnEnd,
 			};
 
 			const styleMedia = {
-				gridColumnStart: mediaGridLineStart,
-				gridColumnEnd: mediaGridLineEnd,
+				gridColumnStart: mediaGridColumnStart,
+				gridColumnEnd: mediaGridColumnEnd,
 			};
 
 			const widthString = `${temporaryMediaWidth || mediaWidth}%`;
@@ -303,17 +300,17 @@ class heroEdit extends Component {
 				initialOpen={false}
 			>
 				<RangeControl
-					label={__('Grid Line Start', 'ainoblocks')}
-					value={contentGridLineStart}
-					onChange={(contentGridLineStart) => setAttributes({ contentGridLineStart })}
+					label={__('Grid Column Start', 'ainoblocks')}
+					value={contentGridColumnStart}
+					onChange={(contentGridColumnStart) => setAttributes({ contentGridColumnStart })}
 					min={1}
 					max={13}
 					allowReset={true}
 				/>
 				<RangeControl
-					label={__('Grid Line End', 'ainoblocks')}
-					value={contentGridLineEnd}
-					onChange={(contentGridLineEnd) => setAttributes({ contentGridLineEnd })}
+					label={__('Grid Column End', 'ainoblocks')}
+					value={contentGridColumnEnd}
+					onChange={(contentGridColumnEnd) => setAttributes({ contentGridColumnEnd })}
 					min={1}
 					max={13}
 					allowReset={true}
@@ -327,17 +324,17 @@ class heroEdit extends Component {
 				initialOpen={false}
 			>
 				<RangeControl
-					label={__('Grid Line Start', 'ainoblocks')}
-					value={mediaGridLineStart}
-					onChange={(mediaGridLineStart) => setAttributes({ mediaGridLineStart })}
+					label={__('Grid Column Start', 'ainoblocks')}
+					value={mediaGridColumnStart}
+					onChange={(mediaGridColumnStart) => setAttributes({ mediaGridColumnStart })}
 					min={1}
 					max={13}
 					allowReset={true}
 				/>
 				<RangeControl
-					label={__('Grid Line End', 'ainoblocks')}
-					value={mediaGridLineEnd}
-					onChange={(mediaGridLineEnd) => setAttributes({ mediaGridLineEnd })}
+					label={__('Grid Column End', 'ainoblocks')}
+					value={mediaGridColumnEnd}
+					onChange={(mediaGridColumnEnd) => setAttributes({ mediaGridColumnEnd })}
 					min={1}
 					max={13}
 					allowReset={true}

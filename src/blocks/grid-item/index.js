@@ -1,10 +1,7 @@
 /**
  * WordPress dependencies
  */
-const {
-	__,
-	_x
-} = wp.i18n;
+const {__, _x} = wp.i18n;
 const {
 	registerBlockCollection
 } = wp.blocks;
@@ -28,21 +25,19 @@ const {
 } = metadata;
 
 const settings = {
-	title: __('Multiple Buttons', 'ainoblocks'),
-	description: __('A row of buttons with customization options.', 'ainoblocks'),
+	title: __('Grid Item', 'ainoblocks'),
+	description: __('A grid item in a grid container block.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'layout' : 'ainoblocks',
+	parent: ['ainoblocks/grid-container'],
 	icon,
 	keywords: [
-		__('button', 'ainoblocks'),
-		__('buttons', 'ainoblocks'),
-		__('link', 'ainoblocks'),
-		__('cta', 'ainoblocks'),
-		__('aino blocks', 'ainoblocks'),
+		__('grid', 'ainoblocks'),
+		__('layout', 'ainoblocks'),
+		__('column', 'ainoblocks'),
+		__('rows', 'ainoblocks'),
+		__('aino', 'ainoblocks'),
 	],
 	attributes,
-	supports: {
-		align: ['left', 'right', 'center'],
-	},
 	edit,
 	save,
 };

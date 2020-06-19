@@ -18,6 +18,8 @@ import './utils/block-category';
 import './extensions/spacing';
 
 // Register blocks
+import * as gridItem from './blocks/grid-item';
+import * as gridContainer from './blocks/grid-container';
 import * as hero from './blocks/hero';
 import * as card from './blocks/card';
 import * as badge from './blocks/badge';
@@ -30,6 +32,8 @@ import * as imageText from './blocks/image-text';
 
 export function registerBlocks() {
 	[
+		gridItem,
+		gridContainer,
 		card,
 		badge,
 		author,

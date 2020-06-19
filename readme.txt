@@ -4,18 +4,25 @@ Plugin URI       : https: //wpaino.com
 Contributors     : elmastudio
 Tags             : page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.4
-Tested up to     : 5.4.1
-Stable tag       : 0.9.0
+Tested up to     : 5.4.2
+Stable tag       : 1.0.0
 License          : GPLv2 or later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
 
-A WordPress editor block collection for site building.
+A WordPress block collection for page building.
 
 == Description ==
 
-Gutenberg blocks for site building.
+WordPress editor blocks for page building.
 
 == Changelog ==
+
+= 1.0.0 =
+New: 12-column Grid container block with grid item block.
+New: Spacing top/bottom setting Grid container block.
+New: Spacing top/bottom setting in Group block.
+Enhance: New Block icons.
+Enhance: Hero block grid settings.
 
 = 0.9.0 =
 Enhance: Expanded Hero block media settings and moved setting to inspector.

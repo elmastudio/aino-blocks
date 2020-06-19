@@ -1,0 +1,41 @@
+{
+	"name": "grid-item",
+	"attributes": {
+		"gridColumnStart": {
+			"type": "number",
+			"default": "1"
+		},
+		"gridColumnEnd": {
+			"type": "number",
+			"default": "5"
+		},
+		"alignItem": {
+			"type": "string",
+			"default": "start"
+		},
+		"justifyItem": {
+			"type": "string",
+			"default": "start"
+		},
+		"stackOrder": {
+			"type": "number",
+			"default": "1"
+		},
+		"stacking": {
+			"type": "boolean",
+			"default": false
+		},
+		"gutter": {
+			"type": "boolean",
+			"default": true
+		},
+		"overlapLeft": {
+			"type": "boolean",
+			"default": false
+		},
+		"overlapRight": {
+			"type": "boolean",
+			"default": false
+		}
+	}
+}

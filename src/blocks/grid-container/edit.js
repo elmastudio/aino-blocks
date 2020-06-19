@@ -24,7 +24,7 @@ const {
 /**
  * Constants
  */
-const ALLOWED_BLOCKS = ['ainoblocks/button'];
+const ALLOWED_BLOCKS = ['ainoblocks/grid-item'];
 
 /**
  * Returns the layouts configuration for a given number of items.
@@ -34,13 +34,13 @@ const ALLOWED_BLOCKS = ['ainoblocks/button'];
  * @return {Object[]} Columns layout configuration.
  */
 const getCount = memoize((count) => {
-	return times(count, () => ['ainoblocks/button']);
+	return times(count, () => ['ainoblocks/grid-item']);
 });
 
 /**
  * Block edit function
  */
-class MultipleButtonsEdit extends Component {
+class GridContainerEdit extends Component {
 
 	render() {
 			const {
@@ -57,12 +57,6 @@ class MultipleButtonsEdit extends Component {
 
 			const classNames = classnames(className, `align${align}`, {});
 
-			const classes = classnames(
-				'wp-block-ainoblocks-multiple-buttons__inner', {
-
-				}
-			);
-
 		return (
 			<Fragment>
 				{isSelected && (
@@ -72,18 +66,16 @@ class MultipleButtonsEdit extends Component {
 				)}
 
 				<div className={classNames}>
-					<div className={classes}>
-						<InnerBlocks
-							allowedBlocks={ALLOWED_BLOCKS}
-							template={getCount(items)}
-							templateLock="all"
-							templateInsertUpdatesSelection={false}
-						/>
-					</div>
+					<InnerBlocks
+						allowedBlocks={ALLOWED_BLOCKS}
+						template={getCount(items)}
+						templateLock="all"
+						templateInsertUpdatesSelection={false}
+					/>
 				</div>
 			</Fragment>
 		);
 	}
 }
 
-export default MultipleButtonsEdit;
+export default GridContainerEdit;

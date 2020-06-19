@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Aino Blocks - Site Building Blocks
+ * Plugin Name: Aino Blocks - Page Building Blocks
  * Plugin URI : https: //wpaino.com
- * Description: A collection of site building blocks for the WordPress Gutenberg editor.
- * Version    : 0.9.0
+ * Description: A collection of page building blocks for the WordPress Gutenberg editor.
+ * Version    : 1.0.0
  * Author     : Elmastudio
  * Author URI : https: //www.elmastudio.de/en/
  * Text Domain: ainoblocks

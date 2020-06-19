@@ -1,0 +1,236 @@
+.wp-block-ainoblocks-grid-item {
+
+		grid-row-start: 1;
+		grid-row-end: 2;
+
+	&.no-stacking {
+		grid-row-start: auto;
+		grid-row-end: auto;
+	}
+
+	@media (min-width: 48.50em) {
+		padding-left: 24px;
+		padding-right: 24px;
+
+		&.no-gutter {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	:last-child {
+		margin-bottom: 0;
+	}
+
+	&.grid-column_start {
+
+		&__1 {
+			grid-column-start: 1;
+		}
+
+		&__2 {
+			grid-column-start: 2;
+		}
+
+		&__3 {
+			grid-column-start: 3;
+		}
+
+		&__4 {
+			grid-column-start: 4;
+		}
+
+		&__5 {
+			grid-column-start: 5;
+		}
+
+		&__6 {
+			grid-column-start: 6;
+		}
+
+		&__7 {
+			grid-column-start: 7;
+		}
+
+		&__8 {
+			grid-column-start: 8;
+		}
+
+		&__9 {
+			grid-column-start: 9;
+		}
+
+		&__10 {
+			grid-column-start: 10;
+		}
+
+		&__11 {
+			grid-column-start: 11;
+		}
+
+		&__12 {
+			grid-column-start: 12;
+		}
+
+		&__13 {
+			grid-column-start: 13;
+		}
+	}
+
+	&.grid-column_end {
+
+		&__1 {
+			grid-column-end: 1;
+		}
+
+		&__2 {
+			grid-column-end: 2;
+		}
+
+		&__3 {
+			grid-column-end: 3;
+		}
+
+		&__4 {
+			grid-column-end: 4;
+		}
+
+		&__5 {
+			grid-column-end: 5;
+		}
+
+		&__6 {
+			grid-column-end: 6;
+		}
+
+		&__7 {
+			grid-column-end: 7;
+		}
+
+		&__8 {
+			grid-column-end: 8;
+		}
+
+		&__9 {
+			grid-column-end: 9;
+		}
+
+		&__10 {
+			grid-column-end: 10;
+		}
+
+		&__11 {
+			grid-column-end: 11;
+		}
+
+		&__12 {
+			grid-column-end: 12;
+		}
+
+		&__13 {
+			grid-column-end: 13;
+		}
+	}
+
+	&.align-self {
+
+		&__start {
+			align-self: start;
+		}
+
+		&__end {
+			align-self: end;
+		}
+
+		&__center {
+			align-self: center;
+		}
+
+		&__stretch {
+			align-self: stretch;
+		}
+	}
+
+	&.justify-self {
+
+		&__start {
+			justify-self: start;
+		}
+
+		&__end {
+			justify-self: end;
+		}
+
+		&__center {
+			justify-self: center;
+		}
+
+		&__stretch {
+			justify-self: stretch;
+		}
+	}
+
+	&.stack-order {
+
+		&__1 {
+			z-index: 1;
+		}
+
+		&__2 {
+			z-index: 2;
+		}
+
+		&__3 {
+			z-index: 3;
+		}
+
+		&__4 {
+			z-index: 4;
+		}
+
+		&__5 {
+			z-index: 5;
+		}
+
+		&__6 {
+			z-index: 6;
+		}
+
+		&__7 {
+			z-index: 7;
+		}
+
+		&__8 {
+			z-index: 8;
+		}
+
+		&__9 {
+			z-index: 9;
+		}
+
+		&__10 {
+			z-index: 10;
+		}
+	}
+
+	&.overlap-right {
+		grid-column-end: 13;
+		margin-right: -1.5rem;
+	}
+
+	&.overlap-left {
+		grid-column-start: 1;
+		margin-left: -1.5rem;
+	}
+
+	@media (min-width: 37.5em) {
+
+		&.overlap-right {
+			margin-right: -3rem;
+		}
+
+		&.overlap-left {
+			margin-left: -3rem;
+		}
+	}
+}
