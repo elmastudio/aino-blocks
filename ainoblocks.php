@@ -54,5 +54,5 @@ function _get_plugin_url() {
 // Enqueue JS and CSS.
 require_once __DIR__ . '/lib/enqueue-scripts.php';
 
-// Block Templates.
-require_once __DIR__ . '/lib/block-templates.php';
+// Block Patterns.
+require_once __DIR__ . '/lib/block-patterns.php';
