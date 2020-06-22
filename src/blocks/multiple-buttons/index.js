@@ -30,7 +30,7 @@ const {
 const settings = {
 	title: __('Multiple Buttons', 'ainoblocks'),
 	description: __('A row of buttons with customization options.', 'ainoblocks'),
-	category: typeof registerBlockCollection === 'function' ? 'layout' : 'ainoblocks',
+	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('button', 'ainoblocks'),

@@ -30,7 +30,7 @@ const {
 const settings = {
 	title: __('Grid Container', 'ainoblocks'),
 	description: __('A grid container with a 12-column grid and a flexible number of grid items.', 'ainoblocks'),
-	category: typeof registerBlockCollection === 'function' ? 'layout' : 'ainoblocks',
+	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('grid', 'ainoblocks'),

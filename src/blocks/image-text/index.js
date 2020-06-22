@@ -22,7 +22,7 @@ const { attributes, name } = metadata;
 const settings = {
 	title: __('Image and Text', 'ainoblocks'),
 	description: __('Insert a card with image and text. Customize the border background color and shadow. Works great in multicolumn layouts. Use to differentiate your values or services.', 'ainoblocks'),
-	category: typeof registerBlockCollection === 'function' ? 'common' : 'ainoblocks',
+	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('image', 'ainoblocks'),

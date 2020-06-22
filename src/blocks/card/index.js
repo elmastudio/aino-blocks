@@ -22,7 +22,7 @@ const { attributes, name } = metadata;
 const settings = {
 	title: __('Card', 'ainoblocks'),
 	description: __('Insert a card to highlight important content such as quotes or special notices. The card has a box style format that can be customised.', 'ainoblocks'),
-	category: typeof registerBlockCollection === 'function' ? 'layout' : 'ainoblocks',
+	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('card', 'ainoblocks'),

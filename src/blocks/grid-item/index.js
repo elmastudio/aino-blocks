@@ -27,7 +27,7 @@ const {
 const settings = {
 	title: __('Grid Item', 'ainoblocks'),
 	description: __('A grid item in a grid container block.', 'ainoblocks'),
-	category: typeof registerBlockCollection === 'function' ? 'layout' : 'ainoblocks',
+	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	parent: ['ainoblocks/grid-container'],
 	icon,
 	keywords: [

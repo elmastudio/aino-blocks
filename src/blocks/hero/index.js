@@ -30,7 +30,7 @@ const {
 const settings = {
 	title: __('Hero', 'ainoblocks'),
 	description: __('Include a fullscreen featured header area at the top of your front page.', 'ainoblocks'),
-	category: typeof registerBlockCollection === 'function' ? 'layout' : 'ainoblocks',
+	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('header', 'ainoblocks'),
