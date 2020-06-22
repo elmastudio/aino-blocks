@@ -19,6 +19,7 @@ WordPress editor blocks for page building.
 
 = 1.0.1 =
 Enhance: Card block spacing setting.
+Enhance: Update block categories.
 
 = 1.0.0 =
 New: 12-column Grid container block with grid item block.
