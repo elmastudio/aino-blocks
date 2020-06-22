@@ -958,7 +958,6 @@
     /*rtl:ignore*/
     text-align: right; }
   .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link {
-    background-color: #1765d8;
     border: none;
     border-radius: 16px;
     color: inherit;
@@ -970,6 +969,8 @@
     text-decoration: none;
     overflow-wrap: break-word;
     transition: all 0.2s ease; }
+    .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link:not(.has-background) {
+      background-color: #1765d8; }
     .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link:hover {
       transform: translateY(-2px); }
     .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link:hover, .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link:focus, .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link:active, .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link:visited {
