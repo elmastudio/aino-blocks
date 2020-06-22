@@ -32,6 +32,10 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+### 1.0.1.
+**Enhance:** Card block spacing setting.  
+**Enhance:** Update block categories.  
+
 ### 1.0.0.
 **New:** 12-column Grid container block with grid item block.  
 **New:** Spacing top/bottom setting Grid container block.  
