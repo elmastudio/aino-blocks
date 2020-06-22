@@ -22,7 +22,7 @@ const { attributes, name } = metadata;
 const settings = {
 	title: __('Author', 'ainoblocks'),
 	description: __('This is an author block.', 'ainoblocks'),
-	category: typeof registerBlockCollection === 'function' ? 'common' : 'ainoblocks',
+	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('author', 'ainoblocks'),

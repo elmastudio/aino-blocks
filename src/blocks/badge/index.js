@@ -22,7 +22,7 @@ const { attributes, name } = metadata;
 const settings = {
 	title: __('Badge', 'ainoblocks'),
 	description: __('This is a badge block.', 'ainoblocks'),
-	category: typeof registerBlockCollection === 'function' ? 'common' : 'ainoblocks',
+	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('badge', 'ainoblocks'),

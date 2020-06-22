@@ -22,7 +22,7 @@ const { attributes, name } = metadata;
 const settings = {
 	title: __('Featured Content', 'ainoblocks'),
 	description: __('A popular block to feature your products or services.', 'ainoblocks'),
-	category: typeof registerBlockCollection === 'function' ? 'layout' : 'ainoblocks',
+	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('featured', 'ainoblocks'),
