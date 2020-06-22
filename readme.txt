@@ -5,7 +5,7 @@ Contributors     : elmastudio
 Tags             : page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.4
 Tested up to     : 5.4.2
-Stable tag       : 1.0.0
+Stable tag       : 1.0.1
 License          : GPLv2 or later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,6 +16,9 @@ A WordPress block collection for page building.
 WordPress editor blocks for page building.
 
 == Changelog ==
+
+= 1.0.1 =
+Enhance: Card block spacing setting.
 
 = 1.0.0 =
 New: 12-column Grid container block with grid item block.

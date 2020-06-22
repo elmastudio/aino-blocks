@@ -13,23 +13,28 @@ const {
 export default function save({ attributes }) {
 
 	const {
-		align,
 		backgroundColor,
 		borderColor,
 		backgroundRadius,
 		shadowName,
-		padding,
+		paddingTop,
+		paddingBottom,
+		paddingLeft,
+		paddingRight,
 	} = attributes;
 
-	const cardClasses = classnames(classnames, shadowName, {
-		'has-background': backgroundColor,
-		'has-border': borderColor,
-		'has-padding': padding,
+	const classes = classnames(classnames, shadowName, {
+		'has-background'        : backgroundColor,
+		'has-border'            : borderColor,
+		[`pt__${paddingTop}`]   : paddingTop,
+		[`pb__${paddingBottom}`]: paddingBottom,
+		[`pl__${paddingLeft}`]  : paddingLeft,
+		[`pr__${paddingRight}`] : paddingRight,
 	});
 
 	return (
 		<div
-			className={cardClasses}
+			className={classes}
 			style={{
 				backgroundColor: backgroundColor,
 				borderColor: borderColor,
