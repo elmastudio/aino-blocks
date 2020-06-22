@@ -17,7 +17,7 @@
 			padding-right: 0;
 		}
 
-		@media (min-width: 76.50em) {
+		@media (min-width: 48.50em) {
 			padding-top: 144px;
 			padding-bottom: 144px;
 			display: grid;
@@ -215,16 +215,6 @@
 
 		.wp-block-ainoblocks-hero__container {
 			padding-top: 80px;
-		}
-	}
-
-	@media (min-width: 71.25em) {
-
-		&.has-header-search {
-
-			.wp-block-ainoblocks-hero__container {
-				padding-top: 0;
-			}
 		}
 	}
 }

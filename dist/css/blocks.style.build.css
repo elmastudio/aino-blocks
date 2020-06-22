@@ -635,7 +635,7 @@
     .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
       padding-left: 0;
       padding-right: 0; } }
-  @media (min-width: 76.5em) {
+  @media (min-width: 48.5em) {
     .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
       padding-top: 144px;
       padding-bottom: 144px;
@@ -768,10 +768,6 @@
 
 .tpl-hero .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
   padding-top: 80px; }
-
-@media (min-width: 71.25em) {
-  .tpl-hero.has-header-search .wp-block-ainoblocks-hero__container {
-    padding-top: 0; } }
 .wp-block-ainoblocks-card {
   box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.15), 0 0 4px 0 rgba(0, 0, 0, 0.04);
   -webkit-box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.15), 0 0 4px 0 rgba(0, 0, 0, 0.04); }
