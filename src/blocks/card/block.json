@@ -20,9 +20,21 @@
 		"shadowName": {
 			"type": "string"
 		},
-		"padding": {
-			"type": "boolean",
-			"default": true
+		"paddingTop": {
+			"type": "number",
+			"default": 3
+		},
+		"paddingBottom": {
+			"type": "number",
+			"default": 3
+		},
+		"paddingLeft": {
+			"type": "number",
+			"default": 3
+		},
+		"paddingRight": {
+			"type": "number",
+			"default": 3
 		}
 	}
 }

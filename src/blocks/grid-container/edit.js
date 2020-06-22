@@ -69,8 +69,8 @@ class GridContainerEdit extends Component {
 					<InnerBlocks
 						allowedBlocks={ALLOWED_BLOCKS}
 						template={getCount(items)}
-						templateLock="all"
-						templateInsertUpdatesSelection={false}
+						templateLock={ false }
+						templateInsertUpdatesSelection={true}
 					/>
 				</div>
 			</Fragment>

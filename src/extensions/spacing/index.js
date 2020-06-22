@@ -34,9 +34,6 @@ const enableSpacingControlOnBlocks = [
 	'core/cover',
 	'core/group',
 	'core/columns',
-	'core/padding',
-	'ainoblocks/featured-content',
-	'ainoblocks/grid-container',
 ];
 
 /**
