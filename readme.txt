@@ -17,6 +17,9 @@ WordPress editor blocks for page building.
 
 == Changelog ==
 
+= 1.1.0 =
+New: Add first block pattern.
+
 = 1.0.1 =
 Enhance: Card block spacing setting.
 Enhance: Update block categories.

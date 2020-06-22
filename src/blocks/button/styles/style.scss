@@ -11,7 +11,6 @@
 	}
 
 	.wp-block-ainoblocks-button__link {
-		background-color: #1765d8;
 		border: none;
 		border-radius: 16px;
 		color: inherit;
@@ -24,6 +23,10 @@
 		overflow-wrap: break-word;
 		-webkit-transition: all 0.2s ease;
 		transition: all 0.2s ease;
+
+		&:not(.has-background) {
+			background-color: #1765d8;
+		}
 
 		&:hover {
 			-webkit-transform: translateY(-2px);
