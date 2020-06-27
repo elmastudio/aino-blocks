@@ -13,7 +13,39 @@ A WordPress block collection for page building.
 
 == Description ==
 
-WordPress editor blocks for page building.
+The Aino blocks plugin brings you a collection of page building blocks for the Gutenberg editor. With Aino blocks and the free <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino theme</a> you can build creative, individual page layouts in the WordPress editor. 
+
+## Currently available blocks
+* Grid container block
+* Hero block
+* Featured Content block
+* Card block
+* Badge block
+* Author block
+* Testimonial block
+* Multiple Buttons block
+* Image & Text block
+
+== Installation ==
+
+1. Install the Aino Blocks plugin either via the WordPress plugin directory or by uploading the files to your server at wp-content/plugins.
+2. Activate the Aino Blocks WordPress plugin through the 'Plugins' menu in WordPress.
+3. Use the Aino Blocks blocks on your next page or post.
+
+== Frequently Asked Questions ==
+
+= What are the requirements to use the Aino Blocks plugin? =
+
+You only need to have the latest version of WordPress on your website, to begin with. We also recommend installing and activating the Gutenberg plugin.
+
+= What WordPress themes work with Aino blocks? =
+Any block-ready WordPress theme will work with Aino blocks. Since we created the free [Aino theme](https://wordpress.org/themes/aino/) specifically to work in combination with the Aino blocks we recommend you to check it out.
+
+= How do I get started using Aino blocks? =
+After the Aino blocks plugin is installed, you will see the Aino blocks collection in your Blocks library on any page and post. You can now choose a block and insert it into your editor.
+
+= Does Aino come with Block patterns? =
+Yes, you can use block patterns if you have the latest Gutenberg plugin version installed. You can see the first Aino blocks pattern inside the pattern library. We will create more free block patterns shortly.
 
 == Changelog ==
 
