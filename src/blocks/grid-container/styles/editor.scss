@@ -21,7 +21,7 @@
 		linear-gradient(#3399FF, #3399FF) 1px 0% / 100% 1px;
 	background-repeat: no-repeat;
 
-	@media (min-width: 48.5em) {
+	@media (min-width: 48em) {
 		max-width: 90rem;
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
@@ -32,4 +32,22 @@
 .wp-block .block-editor-block-list__block[data-type="ainoblocks/grid-container"] .wp-block-ainoblocks-grid-container {
 	padding-left: 0;
 	padding-right: 0;
+}
+
+.wp-block-ainoblocks-grid-container {
+
+
+	.block-editor-inner-blocks .block-editor-block-list__layout :not(.wp-block-ainoblocks-grid-item) {
+
+		.block-list-appender:last-child {
+			background: blue;
+		}
+
+		.block-editor-button-block-appender.block-list-appender__toggle {
+			position: absolute;
+			min-width: 120px;
+			margin-left: 0;
+			align-items: center;
+		}
+	}
 }

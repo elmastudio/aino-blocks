@@ -6,7 +6,7 @@
 	grid-template-areas: "featured-content-media featured-content-content";
 	grid-template-columns: 48% auto;
 
-	@media (min-width: 48.500em) {
+	@media (min-width: 48em) {
 		display: grid;
 	}
 
@@ -35,7 +35,7 @@
 		margin: 0;
 		padding-bottom: 24px;
 
-		@media (min-width: 48.500em) {
+		@media (min-width: 48em) {
 			padding-right: 24px;
 			padding-bottom: 0;
 		}
@@ -59,7 +59,7 @@
 			margin-bottom: 0;
 		}
 
-		@media (min-width: 48.500em) {
+		@media (min-width: 48em) {
 			padding-left: 24px;
 			padding-right: 0;
 		}
@@ -67,7 +67,7 @@
 		.wp-block-ainoblocks-multiple-buttons {
 			margin-top: 24px;
 
-			@media (min-width: 48.500em) {
+			@media (min-width: 48em) {
 				margin-top: 32px;
 			}
 		}
@@ -79,7 +79,7 @@
 
 		.wp-block-ainoblocks-featured-content__content {
 
-			@media (min-width: 48.500em) {
+			@media (min-width: 48em) {
 				padding-left: 0;
 				padding-right: 24px;
 			}
@@ -87,7 +87,7 @@
 
 		.wp-block-ainoblocks-featured-content__media {
 
-			@media (min-width: 48.500em) {
+			@media (min-width: 48em) {
 				padding-left: 24px;
 				padding-right: 0;
 			}
@@ -104,7 +104,7 @@
 			padding-bottom: 0;
 		}
 
-		@media (min-width: 48.500em) {
+		@media (min-width: 48em) {
 
 			.wp-block-ainoblocks-featured-content__content {
 				padding-left: 0;

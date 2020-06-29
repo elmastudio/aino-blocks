@@ -5,7 +5,7 @@
 	overflow: visible;
 	max-width: 100vw;
 
-	@media (min-width: 48.50em) {
+	@media (min-width: 48em) {
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
 	}
@@ -20,7 +20,7 @@
 		word-break: break-word;
 		overflow-wrap: break-word;
 
-		@media (min-width: 48.5em) {
+		@media (min-width: 48em) {
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
 			justify-content: center;

@@ -128,7 +128,7 @@
   overflow-wrap: break-word;
   background: linear-gradient(#3399FF, #3399FF) 100% 1px/1px, linear-gradient(#3399FF, #3399FF) 91.66667% 1px/1px, linear-gradient(#3399FF, #3399FF) 83.33333% 1px/1px, linear-gradient(#3399FF, #3399FF) 75.0% 1px/1px, linear-gradient(#3399FF, #3399FF) 66.66667% 1px/1px, linear-gradient(#3399FF, #3399FF) 58.33333% 1px/1px, linear-gradient(#3399FF, #3399FF) 50.0% 1px/1px, linear-gradient(#3399FF, #3399FF) 41.66667% 1px/1px, linear-gradient(#3399FF, #3399FF) 33.33333% 1px/1px, linear-gradient(#3399FF, #3399FF) 25.0% 1px/1px, linear-gradient(#3399FF, #3399FF) 16.66667% 1px/1px, linear-gradient(#3399FF, #3399FF) 8.33333% 1px/1px, linear-gradient(#3399FF, #3399FF) 0% 1px/1px, linear-gradient(#3399FF, #3399FF) 1px 100%/100% 1px, linear-gradient(#3399FF, #3399FF) 1px 0%/100% 1px;
   background-repeat: no-repeat; }
-  @media (min-width: 48.5em) {
+  @media (min-width: 48em) {
     .wp-block-ainoblocks-grid-container > .block-editor-inner-blocks > .block-editor-block-list__layout {
       max-width: 90rem;
       display: grid;
@@ -138,6 +138,15 @@
 .wp-block .block-editor-block-list__block[data-type="ainoblocks/grid-container"] .wp-block-ainoblocks-grid-container {
   padding-left: 0;
   padding-right: 0; }
+
+.wp-block-ainoblocks-grid-container .block-editor-inner-blocks .block-editor-block-list__layout :not(.wp-block-ainoblocks-grid-item) .block-list-appender:last-child {
+  background: blue; }
+
+.wp-block-ainoblocks-grid-container .block-editor-inner-blocks .block-editor-block-list__layout :not(.wp-block-ainoblocks-grid-item) .block-editor-button-block-appender.block-list-appender__toggle {
+  position: absolute;
+  min-width: 120px;
+  margin-left: 0;
+  align-items: center; }
 .wp-block .wp-block-ainoblocks-hero__content .block-editor-inner-blocks {
   padding-left: 0;
   padding-right: 0; }
