@@ -37,7 +37,6 @@ export function registerBlocks() {
 		badge,
 		author,
 		testimonial,
-		featuredContent,
 		button,
 		multipleButtons,
 		hero,

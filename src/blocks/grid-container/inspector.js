@@ -24,8 +24,6 @@ class Inspector extends Component {
 		return (
 			<Fragment>
 				<InspectorControls>
-					<PanelBody title={__('Grid Container Settings', 'ainoblocks')}>
-					</PanelBody>
 				</InspectorControls>
 			</Fragment>
 		);
