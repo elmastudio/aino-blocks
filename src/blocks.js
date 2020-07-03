@@ -25,7 +25,6 @@ import * as card from './blocks/card';
 import * as badge from './blocks/badge';
 import * as author from './blocks/author';
 import * as testimonial from './blocks/testimonial';
-import * as featuredContent from './blocks/featured-content';
 import * as button from './blocks/button';
 import * as multipleButtons from './blocks/multiple-buttons';
 import * as imageText from './blocks/image-text';

@@ -5,7 +5,7 @@ Contributors     : elmastudio
 Tags             : page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.4
 Tested up to     : 5.4.2
-Stable tag       : 1.0.1
+Stable tag       : 1.1.0
 License          : GPLv2 or later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,7 @@ Yes, you can use block patterns if you have the latest Gutenberg plugin version 
 = 1.1.0 =
 New: Add first block pattern.
 Enhance: Grid block.
+Update: Delete Featured Content block, since it can be replaced by Grid block.
 
 = 1.0.1 =
 Enhance: Card block spacing setting.
