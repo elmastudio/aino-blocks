@@ -1,13 +1,29 @@
 {
 	"name": "grid-item",
 	"attributes": {
-		"gridColumnStart": {
+		"gridColumnStartDesktop": {
 			"type": "number",
 			"default": "1"
 		},
-		"gridColumnEnd": {
+		"gridColumnEndDesktop": {
 			"type": "number",
-			"default": "5"
+			"default": "7"
+		},
+		"gridColumnStartTablet": {
+			"type": "number",
+			"default": "1"
+		},
+		"gridColumnEndTablet": {
+			"type": "number",
+			"default": "7"
+		},
+		"gridColumnStartMobile": {
+			"type": "number",
+			"default": "1"
+		},
+		"gridColumnEndMobile": {
+			"type": "number",
+			"default": "7"
 		},
 		"alignItem": {
 			"type": "string",

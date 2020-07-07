@@ -13,8 +13,12 @@ const {
 export default function save({ attributes, className }) {
 
 	const {
-		gridColumnStart,
-		gridColumnEnd,
+		gridColumnStartDesktop,
+		gridColumnEndDesktop,
+		gridColumnStartTablet,
+		gridColumnEndTablet,
+		gridColumnStartMobile,
+		gridColumnEndMobile,
 		alignItem,
 		justifyItem,
 		stacking,
@@ -25,8 +29,12 @@ export default function save({ attributes, className }) {
 	} = attributes;
 
 	const classNames = classnames(className, {
-		[`grid-column_start__${gridColumnStart}`]: gridColumnStart,
-		[`grid-column_end__${gridColumnEnd}`]: gridColumnEnd,
+		[`grid-column_start_d__${gridColumnStartDesktop}`]: gridColumnStartDesktop,
+		[`grid-column_end_d__${gridColumnEndDesktop}`]: gridColumnEndDesktop,
+		[`grid-column_start_t__${gridColumnStartTablet}`]: gridColumnStartTablet,
+		[`grid-column_end_t__${gridColumnEndTablet}`]: gridColumnEndTablet,
+		[`grid-column_start_m__${gridColumnStartMobile}`]: gridColumnStartMobile,
+		[`grid-column_end_m__${gridColumnEndMobile}`]: gridColumnEndMobile,
 		[`align-self__${alignItem}`]: alignItem,
 		[`justify-self__${justifyItem}`]: justifyItem,
 		[`stack-order__${stackOrder}`]: stackOrder,

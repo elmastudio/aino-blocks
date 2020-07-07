@@ -1,11 +1,17 @@
 .wp-block-ainoblocks-grid-container,
-.site-content .hentry .wp-block-ainoblocks-grid-container.alignwide {
-	padding-left: 0;
-	padding-right: 0;
+.site-content .hentry .wp-block-ainoblocks-grid-container.alignwide,
+.site-content .hentry .alignfull .wp-block-ainoblocks-grid-container.alignwide {
 	overflow: visible;
 	max-width: 100vw;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 
 	@media (min-width: 48em) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	@media (min-width: 64em) {
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
 	}
@@ -17,16 +23,13 @@
 
 	&__inner {
 		position: relative;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		justify-content: center;
+		max-width: 90rem;
+		margin-left: auto;
+		margin-right: auto;
 		word-break: break-word;
 		overflow-wrap: break-word;
-
-		@media (min-width: 48em) {
-			display: grid;
-			grid-template-columns: repeat(12, 1fr);
-			justify-content: center;
-			max-width: 90rem;
-			margin-left: auto;
-			margin-right: auto;
-		}
 	}
 }
