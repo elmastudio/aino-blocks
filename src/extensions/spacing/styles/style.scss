@@ -1,3 +1,4 @@
+/* Responsive Spacing Mixins */
 @mixin s-r-0($property) {
 	#{$property}: 0;
 }
@@ -194,7 +195,7 @@
 	}
 
 	@media (min-width: 80em) {
-		#{$property}: 16rem;
+		#{$property}: 13rem;
 	}
 }
 

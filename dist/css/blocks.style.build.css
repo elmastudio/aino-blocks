@@ -1,3 +1,4 @@
+/* Responsive Spacing Mixins */
 .wp-block-group.pt__0,
 .wp-block-columns.pt__0,
 .wp-block-cover.pt__0,
@@ -296,7 +297,7 @@
     .wp-block-columns.pt__16,
     .wp-block-cover.pt__16,
     .wp-block-ainoblocks-card.pt__16 {
-      padding-top: 16rem; } }
+      padding-top: 13rem; } }
 
 .wp-block-group.pb__0,
 .wp-block-columns.pb__0,
@@ -596,7 +597,7 @@
     .wp-block-columns.pb__16,
     .wp-block-cover.pb__16,
     .wp-block-ainoblocks-card.pb__16 {
-      padding-bottom: 16rem; } }
+      padding-bottom: 13rem; } }
 
 .wp-block-group.pl__0,
 .wp-block-columns.pl__0,
@@ -896,7 +897,7 @@
     .wp-block-columns.pl__16,
     .wp-block-cover.pl__16,
     .wp-block-ainoblocks-card.pl__16 {
-      padding-left: 16rem; } }
+      padding-left: 13rem; } }
 
 .wp-block-group.pr__0,
 .wp-block-columns.pr__0,
@@ -1196,7 +1197,7 @@
     .wp-block-columns.pr__16,
     .wp-block-cover.pr__16,
     .wp-block-ainoblocks-card.pr__16 {
-      padding-right: 16rem; } }
+      padding-right: 13rem; } }
 .wp-block-ainoblocks-grid-item {
   grid-row-start: 1;
   grid-row-end: 2;
