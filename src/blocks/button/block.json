@@ -37,10 +37,6 @@
 			"type": "string",
 			"default": "size-m"
 		},
-		"fontSize": {
-			"type": "string",
-			"default": "fontsize-s"
-		},
 		"borderRadius": {
 			"type": "string",
 			"default": "radius-square"
@@ -59,10 +55,7 @@
 		"textColor": {
 			"type": "string"
 		},
-		"customBackgroundColor": {
-			"type": "string"
-		},
-		"customTextColor": {
+		"gradient": {
 			"type": "string"
 		}
 	}

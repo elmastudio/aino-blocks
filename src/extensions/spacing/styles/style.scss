@@ -1,25 +1,25 @@
 /* Responsive Spacing Mixins */
-@mixin s-r-0($property) {
+@mixin s-r-1($property) {
 	#{$property}: 0;
 }
 
-@mixin s-r-1($property) {
+@mixin s-r-2($property) {
 	#{$property}: 0.25rem;
 }
 
-@mixin s-r-2($property) {
+@mixin s-r-3($property) {
 	#{$property}: 0.5rem;
 }
 
-@mixin s-r-3($property) {
+@mixin s-r-4($property) {
 	#{$property}: 0.75rem;
 }
 
-@mixin s-r-4($property) {
+@mixin s-r-5($property) {
 	#{$property}: 1rem;
 }
 
-@mixin s-r-5($property) {
+@mixin s-r-6($property) {
 	#{$property}: 1rem;
 
 	@media (min-width: 80em) {
@@ -27,7 +27,7 @@
 	}
 }
 
-@mixin s-r-6($property) {
+@mixin s-r-7($property) {
 	#{$property}: 1rem;
 
 	@media (min-width: 64em) {
@@ -39,7 +39,7 @@
 	}
 }
 
-@mixin s-r-7($property) {
+@mixin s-r-8($property) {
 	#{$property}: 1rem;
 
 	@media (min-width: 48em) {
@@ -55,7 +55,7 @@
 	}
 }
 
-@mixin s-r-8($property) {
+@mixin s-r-9($property) {
 	#{$property}: 1.25rem;
 
 	@media (min-width: 48em) {
@@ -71,7 +71,7 @@
 	}
 }
 
-@mixin s-r-9($property) {
+@mixin s-r-10($property) {
 	#{$property}: 1.5rem;
 
 	@media (min-width: 48em) {
@@ -87,7 +87,7 @@
 	}
 }
 
-@mixin s-r-10($property) {
+@mixin s-r-11($property) {
 	#{$property}: 2rem;
 
 	@media (min-width: 48em) {
@@ -103,7 +103,7 @@
 	}
 }
 
-@mixin s-r-11($property) {
+@mixin s-r-12($property) {
 	#{$property}: 2.5rem;
 
 	@media (min-width: 48em) {
@@ -119,7 +119,7 @@
 	}
 }
 
-@mixin s-r-12($property) {
+@mixin s-r-13($property) {
 	#{$property}: 3rem;
 
 	@media (min-width: 48em) {
@@ -132,22 +132,6 @@
 
 	@media (min-width: 80em) {
 		#{$property}: 6rem;
-	}
-}
-
-@mixin s-r-13($property) {
-	#{$property}: 4rem;
-
-	@media (min-width: 48em) {
-		#{$property}: 5rem;
-	}
-
-	@media (min-width: 64em) {
-		#{$property}: 6rem;
-	}
-
-	@media (min-width: 80em) {
-		#{$property}: 7.5rem;
 	}
 }
 
@@ -184,6 +168,22 @@
 }
 
 @mixin s-r-16($property) {
+	#{$property}: 6rem;
+
+	@media (min-width: 48em) {
+		#{$property}: 7.5rem;
+	}
+
+	@media (min-width: 64em) {
+		#{$property}: 9rem;
+	}
+
+	@media (min-width: 80em) {
+		#{$property}: 11rem;
+	}
+}
+
+@mixin s-r-17($property) {
 	#{$property}: 7.5rem;
 
 	@media (min-width: 48em) {
@@ -199,17 +199,52 @@
 	}
 }
 
+@mixin s-r-18($property) {
+	#{$property}: 9rem;
+
+	@media (min-width: 48em) {
+		#{$property}: 11rem;
+	}
+
+	@media (min-width: 64em) {
+		#{$property}: 13rem;
+	}
+
+	@media (min-width: 80em) {
+		#{$property}: 15.5rem;
+	}
+}
+
+@mixin s-r-19($property) {
+	#{$property}: 11rem;
+
+	@media (min-width: 48em) {
+		#{$property}: 13rem;
+	}
+
+	@media (min-width: 64em) {
+		#{$property}: 15.5rem;
+	}
+
+	@media (min-width: 80em) {
+		#{$property}: 18rem;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
 .wp-block-group,
 .wp-block-columns,
 .wp-block-cover,
 .wp-block-ainoblocks-card {
 
 	&.pt {
-
-		&__0 {
-			@include s-r-0(padding-top);
-		}
-
+		
 		&__1 {
 			@include s-r-1(padding-top);
 		}
@@ -273,216 +308,252 @@
 		&__16 {
 			@include s-r-16(padding-top);
 		}
+
+		&__17 {
+			@include s-r-17(padding-top);
+		}
+
+		&__18 {
+			@include s-r-18(padding-top);
+		}
+
+		&__19 {
+			@include s-r-19(padding-top);
+		}
 	}
 
 	&.pb {
 
-		&__0 {
-			@include s-r-0(padding-bottom);
-		}
-
 		&__1 {
 			@include s-r-1(padding-bottom);
 		}
-
+		
 		&__2 {
 			@include s-r-2(padding-bottom);
 		}
-
+		
 		&__3 {
 			@include s-r-3(padding-bottom);
 		}
-
+		
 		&__4 {
 			@include s-r-4(padding-bottom);
 		}
-
+		
 		&__5 {
 			@include s-r-5(padding-bottom);
 		}
-
+		
 		&__6 {
 			@include s-r-6(padding-bottom);
 		}
-
+		
 		&__7 {
 			@include s-r-7(padding-bottom);
 		}
-
+		
 		&__8 {
 			@include s-r-8(padding-bottom);
 		}
-
+		
 		&__9 {
 			@include s-r-9(padding-bottom);
 		}
-
+		
 		&__10 {
 			@include s-r-10(padding-bottom);
 		}
-
+		
 		&__11 {
 			@include s-r-11(padding-bottom);
 		}
-
+		
 		&__12 {
 			@include s-r-12(padding-bottom);
 		}
-
+		
 		&__13 {
 			@include s-r-13(padding-bottom);
 		}
-
+		
 		&__14 {
 			@include s-r-14(padding-bottom);
 		}
-
+		
 		&__15 {
 			@include s-r-15(padding-bottom);
 		}
-
+		
 		&__16 {
 			@include s-r-16(padding-bottom);
+		}
+		
+		&__17 {
+			@include s-r-17(padding-bottom);
+		}
+		
+		&__18 {
+			@include s-r-18(padding-bottom);
+		}
+		
+		&__19 {
+			@include s-r-19(padding-bottom);
 		}
 	}
 
 	&.pl {
-		&__0 {
-			@include s-r-0(padding-left);
-		}
-
 		&__1 {
 			@include s-r-1(padding-left);
 		}
-
+		
 		&__2 {
 			@include s-r-2(padding-left);
 		}
-
+		
 		&__3 {
 			@include s-r-3(padding-left);
 		}
-
+		
 		&__4 {
 			@include s-r-4(padding-left);
 		}
-
+		
 		&__5 {
 			@include s-r-5(padding-left);
 		}
-
+		
 		&__6 {
 			@include s-r-6(padding-left);
 		}
-
+		
 		&__7 {
 			@include s-r-7(padding-left);
 		}
-
+		
 		&__8 {
 			@include s-r-8(padding-left);
 		}
-
+		
 		&__9 {
 			@include s-r-9(padding-left);
 		}
-
+		
 		&__10 {
 			@include s-r-10(padding-left);
 		}
-
+		
 		&__11 {
 			@include s-r-11(padding-left);
 		}
-
+		
 		&__12 {
 			@include s-r-12(padding-left);
 		}
-
+		
 		&__13 {
 			@include s-r-13(padding-left);
 		}
-
+		
 		&__14 {
 			@include s-r-14(padding-left);
 		}
-
+		
 		&__15 {
 			@include s-r-15(padding-left);
 		}
-
+		
 		&__16 {
 			@include s-r-16(padding-left);
+		}
+		
+		&__17 {
+			@include s-r-17(padding-left);
+		}
+		
+		&__18 {
+			@include s-r-18(padding-left);
+		}
+		
+		&__19 {
+			@include s-r-19(padding-left);
 		}
 	}
 
 	&.pr {
-		&__0 {
-			@include s-r-0(padding-right);
-		}
-
 		&__1 {
 			@include s-r-1(padding-right);
 		}
-
+		
 		&__2 {
 			@include s-r-2(padding-right);
 		}
-
+		
 		&__3 {
 			@include s-r-3(padding-right);
 		}
-
+		
 		&__4 {
 			@include s-r-4(padding-right);
 		}
-
+		
 		&__5 {
 			@include s-r-5(padding-right);
 		}
-
+		
 		&__6 {
 			@include s-r-6(padding-right);
 		}
-
+		
 		&__7 {
 			@include s-r-7(padding-right);
 		}
-
+		
 		&__8 {
 			@include s-r-8(padding-right);
 		}
-
+		
 		&__9 {
 			@include s-r-9(padding-right);
 		}
-
+		
 		&__10 {
 			@include s-r-10(padding-right);
 		}
-
+		
 		&__11 {
 			@include s-r-11(padding-right);
 		}
-
+		
 		&__12 {
 			@include s-r-12(padding-right);
 		}
-
+		
 		&__13 {
 			@include s-r-13(padding-right);
 		}
-
+		
 		&__14 {
 			@include s-r-14(padding-right);
 		}
-
+		
 		&__15 {
 			@include s-r-15(padding-right);
 		}
-
+		
 		&__16 {
 			@include s-r-16(padding-right);
+		}
+		
+		&__17 {
+			@include s-r-17(padding-right);
+		}
+		
+		&__18 {
+			@include s-r-18(padding-right);
+		}
+		
+		&__19 {
+			@include s-r-19(padding-right);
 		}
 	}
 }

@@ -3,6 +3,7 @@ import "./i18n.js";
 /**
  * WordPress dependencies
  */
+registerBlockType
 const { registerBlockType } = wp.blocks;
 
 // Category slug and title

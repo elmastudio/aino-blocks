@@ -38,6 +38,10 @@ const settings = {
 		__('aino', 'ainoblocks'),
 	],
 	attributes,
+	supports: {
+		anchor: true,
+		html: true,
+	},
 	edit,
 	save,
 };

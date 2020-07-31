@@ -51,16 +51,16 @@ const settings = {
 			label: __('Outline', 'ainoblocks')
 		},
 		{
-			name: '3doutline',
-			label: __('3D Outline', 'ainoblocks')
-		},
-		{
-			name: 'ghost',
-			label: __('Ghost', 'ainoblocks')
+			name: 'naked',
+			label: __('Naked', 'ainoblocks')
 		},
 	],
 	edit,
 	save,
+	merge: ( a, { text = '' } ) => ( {
+		...a,
+		text: ( a.text || '' ) + text,
+	} ),
 };
 
 export {

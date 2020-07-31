@@ -1,5 +1,13 @@
 const path = require('path');
+
+/**
+ * External dependencies
+ */
+
+// Load webpack for use of certain webpack tools and methods
 const webpack = require('webpack');
+
+// For extracting CSS (and SASS) into separate files
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // Set different CSS extraction for editor only and common block styles

@@ -25,7 +25,6 @@ export default function save({
 		linkTarget,
 		rel,
 		size,
-		fontSize,
 		borderRadius,
 		uppercase,
 	} = attributes;
@@ -33,7 +32,7 @@ export default function save({
 	const textClass = getColorClassName('color', textColor);
 	const backgroundClass = getColorClassName('background-color', backgroundColor);
 
-	const buttonClasses = classnames('wp-block-ainoblocks-button__link', size, fontSize, borderRadius, {
+	const buttonClasses = classnames('wp-block-ainoblocks-button__link', size, borderRadius, {
 		'has-text-color': textColor || customTextColor,
 		[textClass]: textClass,
 		'has-background': backgroundColor || customBackgroundColor,
@@ -49,16 +48,7 @@ export default function save({
 
 	return (
 		<div>
-			<a
-				className={buttonClasses}
-				href={url}
-				title={title}
-				style={buttonStyle}
-				target={linkTarget}
-				rel={rel}
-			>
-			<RichText.Content value={text} />
-			</a>
+
 		</div>
 	);
 }

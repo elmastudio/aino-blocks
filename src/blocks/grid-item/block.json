@@ -34,8 +34,7 @@
 			"default": "start"
 		},
 		"stackOrder": {
-			"type": "number",
-			"default": "1"
+			"type": "number"
 		},
 		"stacking": {
 			"type": "boolean",
@@ -52,6 +51,24 @@
 		"overlapRight": {
 			"type": "boolean",
 			"default": false
+		},
+		"marginTopDesktop": {
+			"type": "number"
+		},
+		"marginBottomDesktop": {
+			"type": "number"
+		},
+		"marginTopTablet": {
+			"type": "number"
+		},
+		"marginBottomTablet": {
+			"type": "number"
+		},
+		"marginTopMobile": {
+			"type": "number"
+		},
+		"marginBottomMobile": {
+			"type": "number"
 		}
 	}
 }

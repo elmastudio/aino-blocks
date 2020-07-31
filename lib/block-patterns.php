@@ -30,20 +30,6 @@ function ainoblocks_register_block_patterns() {
 			'ainoblocks-portfolio',
 				array( 'label' => __( 'Aino Portfolio', 'ainoblocks' ) )
 		);
-
-		/*
-		* Unregister core patterns.
-		*/
-		unregister_block_pattern('core/features-services');
-		unregister_block_pattern('core/testimonials');
-		unregister_block_pattern('core/hero-right-column');
-		unregister_block_pattern('core/its-time');
-		unregister_block_pattern('core/numbered-features');
-		unregister_block_pattern('core/hero-two-columns');
-		unregister_block_pattern('core/two-images');
-		unregister_block_pattern('core/cover-abc');
-		unregister_block_pattern('core/two-buttons');
-		unregister_block_pattern('core/text-two-columns');
 	}
 }
 add_action( 'init', 'ainoblocks_register_block_patterns' );
