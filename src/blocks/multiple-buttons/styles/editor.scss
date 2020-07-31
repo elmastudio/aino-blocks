@@ -33,33 +33,6 @@
 	}
 }
 
-.wp-block-ainoblocks-button {
-	position: relative;
-
-	[contenteditable] {
-		cursor: text;
-	}
-
-	// Make placeholder text white unless custom colors or outline versions are chosen.
-	&:not(.has-text-color):not(.is-style-outline) [data-rich-text-placeholder]::after {
-		color: #ffffff;
-	}
-
-	// Add outline to button on focus to indicate focus-state
-	.block-editor-rich-text__editable:focus {
-		box-shadow: 0 0 0 1px #fff, 0 0 0 3px #00a0d2;
-
-		// Windows' High Contrast mode will show this outline, but not the box-shadow.
-		outline: 2px solid transparent;
-		outline-offset: -2px;
-	}
-
-	// Increase placeholder opacity to meet contrast ratios.
-	[data-rich-text-placeholder]::after {
-		opacity: 0.8;
-	}
-}
-
 .wp-block-ainoblocks-button__inline-link {
 	color:#555d66;
 	height: 0;

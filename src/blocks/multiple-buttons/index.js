@@ -28,7 +28,7 @@ const {
 } = metadata;
 
 const settings = {
-	title: __('Multiple Buttons', 'ainoblocks'),
+	title: __('Buttons', 'ainoblocks'),
 	description: __('A row of buttons with customization options.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
