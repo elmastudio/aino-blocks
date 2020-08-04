@@ -36,6 +36,11 @@ const enableSpacingControlOnBlocks = [
 	'core/columns',
 	'core/heading',
 	'core/paragraph',
+	'core/image',
+	'core/gallery',
+	'core/quote',
+	'core/list',
+	'ainoblocks/multiple-buttons',
 	'ainoblocks/featured-content',
 ];
 

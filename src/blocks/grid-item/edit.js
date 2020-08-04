@@ -23,20 +23,8 @@ const {
 	createHigherOrderComponent,
 } = wp.compose;
 const {
-	InspectorControls,
 	InnerBlocks,
 } = wp.blockEditor;
-const {
-	PanelBody,
-	RangeControl,
-	SelectControl,
-	ToggleControl,
-	TabPanel,
-} = wp.components;
-const {
-	withDispatch,
-	withSelect,
-} = wp.data;
 
 /**
  * Block edit function
@@ -55,28 +43,6 @@ class GridItemEdit extends Component {
 			hasChildBlocks,
 			isSelected,
 		} = this.props;
-
-		const {
-			gridColumnStartDesktop,
-			gridColumnEndDesktop,
-			gridColumnStartTablet,
-			gridColumnEndTablet,
-			gridColumnStartMobile,
-			gridColumnEndMobile,
-			alignItem,
-			justifyItem,
-			stacking,
-			stackOrder,
-			gutter,
-			overlapLeft,
-			overlapRight,
-			marginTopDesktop,
-			marginBottomDesktop,
-			marginTopTablet,
-			marginBottomTablet,
-			marginTopMobile,
-			marginBottomMobile,
-		} = attributes;
 
 		const alignItemOptions = [{
 				value: 'start',

@@ -29,7 +29,7 @@ const {
 
 const settings = {
 	title: __('Buttons', 'ainoblocks'),
-	description: __('A row of buttons with customization options.', 'ainoblocks'),
+	description: __('A row of buttons.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [

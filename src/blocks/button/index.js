@@ -55,12 +55,14 @@ const settings = {
 			label: __('Naked', 'ainoblocks')
 		},
 	],
+	example: {
+		attributes: {
+			className: 'is-style-primary',
+			text: __( 'Call to Action' ),
+		},
+	},
 	edit,
 	save,
-	merge: ( a, { text = '' } ) => ( {
-		...a,
-		text: ( a.text || '' ) + text,
-	} ),
 };
 
 export {

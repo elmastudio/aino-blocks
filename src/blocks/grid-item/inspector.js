@@ -12,12 +12,9 @@ const {
 const {
 	PanelBody,
 	RangeControl,
-	TextControl,
-	NumberControl,
 	SelectControl,
 	ToggleControl,
 	TabPanel,
-	BaseControl,
 } = wp.components;
 const {
 	withDispatch,

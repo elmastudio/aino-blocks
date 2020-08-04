@@ -16,15 +16,15 @@ export default function save({
 }) {
 	const {
 		url,
-		text,
-		title,
+		label,
 		backgroundColor,
 		textColor,
 		customBackgroundColor,
 		customTextColor,
-		linkTarget,
+		target,
 		rel,
 		size,
+		link,
 		borderRadius,
 		uppercase,
 	} = attributes;
@@ -41,14 +41,22 @@ export default function save({
 	});
 
 	const buttonStyle = {
-		backgroundColor: backgroundClass ? undefined : customBackgroundColor,
-		boxShadow: 'inset 0 0 0 1px ' + customBackgroundColor,
-		color: textClass ? undefined : customTextColor,
+		backgroundColor: backgroundClass ? customBackgroundColor : undefined,
+		boxShadow: customBackgroundColor ? 'inset 0 0 0 1px ' + customBackgroundColor : undefined,
+		color: textClass ? customTextColor : undefined,
 	};
 
 	return (
 		<div>
-
+			<RichText.Content
+				tagName="a"
+				className={ buttonClasses }
+				href={ link }
+				style={ buttonStyle }
+				value={ label }
+				target={ target }
+				rel ="noopener noreferrer"
+			/>
 		</div>
 	);
 }

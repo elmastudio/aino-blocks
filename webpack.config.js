@@ -38,7 +38,6 @@ const extractConfig = {
 	],
 };
 
-
 module.exports = {
 	entry: {
 		'./dist/js/editor.blocks.build': './src/blocks.js',
