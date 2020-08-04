@@ -11,8 +11,8 @@ const {
 } = wp.blockEditor;
 
 export default function save({ attributes, className }) {
+
 	const {
-		backgroundColor,
 		items,
 	} = attributes;
 

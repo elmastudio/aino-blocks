@@ -7,46 +7,38 @@ import classnames from 'classnames';
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const { Component } = wp.element;
+const { Component, Fragment } = wp.element;
 const { compose, withInstanceId } = wp.compose;
 const {
 	withFallbackStyles,
 	PanelBody,
-	TextControl,
 	ToggleControl,
-	BaseControl,
 	SelectControl,
+	RangeControl,
+	Popover,
+	ToolbarButton,
+	ToolbarGroup,
 } = wp.components;
 
 const {
-	URLInput,
+	BlockControls,
+	BlockIcon,
 	RichText,
-	ContrastChecker,
 	InspectorControls,
 	withColors,
 	PanelColorSettings,
+	ColorPalette,
+	__experimentalLinkControl,
 } = wp.blockEditor;
+
+/**
+ * Internal dependencies
+ */
+import icons from './icons';
 
 /**
  * Constants
  */
-const { getComputedStyle } = window;
-
-const applyFallbackStyles = withFallbackStyles((node, ownProps) => {
-	if (node) {
-		node.classList.add('wp-block-ainoblocks-button-wrapper');
-	}
-
-	const { textColor, backgroundColor } = ownProps;
-	const backgroundColorValue = backgroundColor && backgroundColor.color;
-	const textColorValue = textColor && textColor.color;
-	const textNode = !textColorValue && node ? node.querySelector('[contenteditable="true"]') : null;
-	return {
-		fallbackBackgroundColor: backgroundColorValue || !node ? undefined : getComputedStyle(node).backgroundColor,
-		fallbackTextColor: textColorValue || !textNode ? undefined : getComputedStyle(textNode).color,
-	};
-});
-
 const NEW_TAB_REL = 'noreferrer noopener';
 
 /**
@@ -55,135 +47,128 @@ const NEW_TAB_REL = 'noreferrer noopener';
 class buttonEdit extends Component {
 
 	constructor() {
-		super(...arguments);
-		this.nodeRef = null;
-		this.bindRef = this.bindRef.bind(this);
-		this.onSetLinkRel = this.onSetLinkRel.bind(this);
-		this.onToggleOpenInNewTab = this.onToggleOpenInNewTab.bind(this);
-	}
-
-	bindRef(node) {
-		if (!node) {
-			return;
+		super( ...arguments )
+		this.onClickLinkSettings = this.onClickLinkSettings.bind(this)
+		this.onChangeOpensInNewTab = this.onChangeOpensInNewTab.bind(this)
+		this.state = {
+			isURLPickerOpen:false,
 		}
-		this.nodeRef = node;
 	}
 
-	onSetLinkRel(value) {
-		this.props.setAttributes({ rel: value });
+	componentDidMount() {
+		// Assigning block_id in the attribute.
+		this.props.setAttributes( { block_id: this.props.clientId.substr( 0, 8 ) } )
+		// Pushing Style tag for this block css.
+		const $style = document.createElement( "style" )
+		$style.setAttribute( "id", "uagb-style-button-" + this.props.clientId.substr( 0, 8 ) )
+		document.head.appendChild( $style )
 	}
 
-	onToggleOpenInNewTab(value) {
-		const { rel } = this.props.attributes;
-		const linkTarget = value ? '_blank' : undefined;
-
-		let updatedRel = rel;
-		if (linkTarget && !rel) {
-			updatedRel = NEW_TAB_REL;
-		} else if (!linkTarget && rel === NEW_TAB_REL) {
-			updatedRel = undefined;
+	onClickLinkSettings () {
+		
+		const { attributes, setAttributes } = this.props
+		const { target } = attributes 
+		if ( "_self" === target ) {
+			setAttributes( { opensInNewTab: false } )
+		} else if ( "_blank" === target ) {
+			setAttributes( { opensInNewTab: true } )
 		}
 
-		this.props.setAttributes({
-			linkTarget,
-			rel: updatedRel,
-		});
+		this.setState( {
+			isURLPickerOpen: true
+		})
+	}
+
+	onChangeOpensInNewTab ( value ) {
+		if ( true === value ) {
+			this.props.setAttributes( { target: '_blank' } )
+		} else {
+			this.props.setAttributes( { target: '_self' } )
+		}
 	}
 
 	render() {
+
 		const {
 			attributes,
+			setAttributes,
 			backgroundColor,
 			textColor,
 			setBackgroundColor,
 			setTextColor,
-			setAttributes,
 			className,
-			instanceId,
 			isSelected,
 		} = this.props;
 
 		const {
-			text,
+			label,
 			url,
-			title,
-			linkTarget,
-			rel,
+			link,
+			target,
 			size,
-			fontSize,
 			borderRadius,
 			borderWidth,
 			uppercase,
+			opensInNewTab
 		} = attributes;
 
 		const sizeOptions = [
-			{ value: 'size-s', label: __('small', 'ainoblocks') },
-			{ value: 'size-m', label: __('medium', 'ainoblocks') },
-			{ value: 'size-l', label: __('large', 'ainoblocks') }
+			{ value: 'size__ssx', label: __('SSX', 'ainoblocks') },
+			{ value: 'size__sx', label: __('SX', 'ainoblocks') },
+			{ value: 'size__s', label: __('S', 'ainoblocks') },
+			{ value: 'size__m', label: __('M', 'ainoblocks') },
+			{ value: 'size__l', label: __('L', 'ainoblocks') },
+			{ value: 'size__xl', label: __('XL', 'ainoblocks') },
+			{ value: 'size__xxl', label: __('XXL', 'ainoblocks') },
+			{ value: 'size__xxxl', label: __('3XL', 'ainoblocks') },
+			{ value: 'size__xxxxl', label: __('4XL', 'ainoblocks') }
 		];
-
-		const fontSizeOptions = [
-			{ value: 'fontsize-s', label: __('small', 'ainoblocks') },
-			{ value: 'fontsize-m', label: __('medium', 'ainoblocks') },
-			{ value: 'fontsize-l', label: __('large', 'ainoblocks') }
-		];
-
+		
 		const borderRadiusOptions = [
 			{ value: 'radius-square', label: __('square', 'ainoblocks') },
 			{ value: 'radius-round', label: __('round', 'ainoblocks') },
 			{ value: 'radius-circular', label: __('circular', 'ainoblocks') }
 		];
 
-		const borderWidthOptions = [
-			{ value: 'border-width-thin', label: __('thin', 'ainoblocks') },
-			{ value: 'border-width-medium', label: __('medium', 'ainoblocks') },
-			{ value: 'border-width-thick', label: __('thick', 'ainoblocks') }
-		];
+		const urlIsSet = !! url;
+		const urlIsSetandSelected = urlIsSet && isSelected;
 
-		const styles = {
-			backgroundColor: backgroundColor.color,
-			color: textColor.color,
-			boxShadow: borderWidth === 'border-width-medium' ? 'inset 0 0 0 2px' + backgroundColor.color : 'inset 0 0 0 1px' + backgroundColor.color,
-			boxShadow: borderWidth === 'border-width-thick' ? 'inset 0 0 0 3px' + backgroundColor.color : 'inset 0 0 0 1px' + backgroundColor.color,
-		};
+		const linkControl = this.state.isURLPickerOpen && (
 
-		const linkId = `wp-block-ainoblocks-button__inline-link-${instanceId}`;
+			<Popover
+				position="bottom center"
+				onClose={ () => this.setState( {
+					isURLPickerOpen: false
+				}) }
+			>
+				<__experimentalLinkControl
+					className="wp-block-navigation-link__inline-link-input"
+					value={ { url:link, opensInNewTab:opensInNewTab } }
+					onChange={( {
+					url: newURL = '',
+					opensInNewTab: newOpensInNewTab,
+					} ) => {
+						setAttributes( { link: newURL } );
+						setAttributes( { opensInNewTab: newOpensInNewTab } );
+						this.onChangeOpensInNewTab( newOpensInNewTab );
+					} }
+				/>
+			</Popover>
+		);
 
 		return (
-			<div className={className} title={title}>
-				<a
-					className={classnames(
-						'wp-block-ainoblocks-button__link', size, fontSize, borderRadius, borderWidth, {
-						'has-custom-background': backgroundColor,
-						'has-custom-text-color': textColor,
-						'is-uppercase': uppercase,
-					}
-					)}
-					style={styles}
-				>
-					<span>
-						<RichText
-							placeholder={__('Enter text…', 'ainoblocks')}
-							value={text}
-							onChange={(value) => setAttributes({ text: value })}
-
+			<Fragment>
+				<BlockControls>
+					<ToolbarGroup>
+						<ToolbarButton
+							name="link"
+							icon={<BlockIcon icon={icons.link} />}
+							title={ __( 'Link', 'ainoblocks' ) }
+							onClick={ this.onClickLinkSettings }
 						/>
-					</span>
-				</a>
-				<BaseControl
-					label={__('Link', 'ainoblocks')}
-					className="wp-block-ainoblocks-button__inline-link"
-					id={linkId}>
-					<URLInput
-						className="wp-block-ainoblocks-button__inline-link-input"
-						value={url}
-						autoFocus={false}
-						onChange={(value) => setAttributes({ url: value })}
-						disableSuggestions={!isSelected}
-						id={linkId}
-						hasBorder
-					/>
-				</BaseControl>
+					</ToolbarGroup>
+				</BlockControls>
+				{ linkControl }
 				<InspectorControls>
 					<PanelBody title={__('Button Settings', 'ainoblocks')}>
 						<SelectControl
@@ -193,22 +178,19 @@ class buttonEdit extends Component {
 							onChange={size => setAttributes({ size })}
 						/>
 						<SelectControl
-							label={__('Font Size', 'ainoblocks')}
-							value={fontSize}
-							options={fontSizeOptions}
-							onChange={fontSize => setAttributes({ fontSize })}
-						/>
-						<SelectControl
 							label={__('Border Radius', 'ainoblocks')}
 							value={borderRadius}
 							options={borderRadiusOptions}
 							onChange={borderRadius => setAttributes({ borderRadius })}
 						/>
-						<SelectControl
+						<RangeControl
 							label={__('Border Width', 'ainoblocks')}
 							value={borderWidth}
-							options={borderWidthOptions}
-							onChange={borderWidth => setAttributes({ borderWidth })}
+							onChange={(borderWidth) => setAttributes({ borderWidth })}
+							min={0}
+							max={20}
+							initialPosition={0}
+							allowReset={true}
 						/>
 						<ToggleControl
 							label={__('Uppercase Text', 'ainoblocks')}
@@ -222,41 +204,52 @@ class buttonEdit extends Component {
 						initialOpen={false}
 						colorSettings={[
 							{
-								value: backgroundColor.color,
+								value: backgroundColor,
 								onChange: setBackgroundColor,
 								label: __('Background Color', 'ainoblocks'),
 							},
 							{
-								value: textColor.color,
+								value: textColor,
 								onChange: setTextColor,
 								label: __('Text Color', 'ainoblocks'),
 							},
 						]}
 					>
 					</PanelColorSettings>
-					<PanelBody
-						title={__('Link Settings', 'ainoblocks')}
-						initialOpen={false}
-					>
-						<ToggleControl
-							label={__('Open in New Tab', 'ainoblocks')}
-							onChange={this.onToggleOpenInNewTab}
-							checked={linkTarget === '_blank'}
-						/>
-						<TextControl
-							label={__('Link Rel', 'ainoblocks')}
-							value={rel || ''}
-							onChange={this.onSetLinkRel}
-						/>
-					</PanelBody>
 				</InspectorControls>
-			</div >
+					<div className={classnames(
+							'wp-block-ainoblocks-button',
+						)}
+					>
+					<RichText
+						placeholder={ __( "Add text…", 'ainoblocks' ) }
+						value={ label }
+						tagName='div'
+						className={ classnames(
+							'wp-block-ainoblocks-button__link', size, borderRadius, {
+								'has-custom-background': backgroundColor,
+								'has-custom-text-color': textColor,
+								'is-uppercase': uppercase,
+								'no-border': borderWidth === 0,
+								}
+						) }
+						style={ {
+							borderWidth: borderWidth
+								? borderWidth + 'px'
+								: undefined,
+						} }
+						onChange={ value => {
+							setAttributes( { label: value })
+						} }
+						allowedFormats={ [ "bold", "italic", "strikethrough" ] }
+						rel ="noopener noreferrer"
+						keepPlaceholderOnFocus
+					/>
+				</div>
+			</Fragment>
 		);
 	}
 }
 
 export default compose([
-	withInstanceId,
-	withColors('backgroundColor', { textColor: 'color' }),
-	applyFallbackStyles,
 ])(buttonEdit);

@@ -34,6 +34,14 @@ const enableSpacingControlOnBlocks = [
 	'core/cover',
 	'core/group',
 	'core/columns',
+	'core/heading',
+	'core/paragraph',
+	'core/image',
+	'core/gallery',
+	'core/quote',
+	'core/list',
+	'ainoblocks/multiple-buttons',
+	'ainoblocks/featured-content',
 ];
 
 /**
@@ -52,19 +60,15 @@ function spacingAttributes(settings) {
 		settings.attributes = Object.assign(settings.attributes, {
 			paddingTop: {
 				type: 'number',
-				default: '0',
 			},
 			paddingBottom: {
 				type: 'number',
-				default: '0',
 			},
 			paddingLeft: {
 				type: 'number',
-				default: '0',
 			},
 			paddingRight: {
 				type: 'number',
-				default: '0',
 			}
 		});
 	}
@@ -114,41 +118,41 @@ function spacingInspectorControls(BlockEdit) {
 								label={__('Padding Top', 'ainoblocks')}
 								value={paddingTop}
 								onChange={(paddingTop) => setAttributes({ paddingTop })}
-								initialPosition={0}
 								min={0}
-								max={11}
+								max={19}
 								allowReset={true}
+								resetFallbackValue={0}
 							/>
 							<RangeControl
 								label={__('Padding Bottom', 'ainoblocks')}
 								value={paddingBottom}
 								onChange={(paddingBottom) => setAttributes({ paddingBottom })}
-								initialPosition={0}
 								min={0}
-								max={11}
+								max={19}
 								allowReset={true}
+								resetFallbackValue={0}
 							/>
 							<RangeControl
 								label={__('Padding Left', 'ainoblocks')}
 								value={paddingLeft}
 								onChange={(paddingLeft) => setAttributes({ paddingLeft })}
-								initialPosition={0}
 								min={0}
-								max={11}
+								max={19}
 								allowReset={true}
+								resetFallbackValue={0}
 							/>
 							<RangeControl
 								label={__('Padding Right', 'ainoblocks')}
 								value={paddingRight}
 								onChange={(paddingRight) => setAttributes({ paddingRight })}
-								initialPosition={0}
 								min={0}
-								max={11}
+								max={19}
 								allowReset={true}
+								resetFallbackValue={0}
 							/>
 						</PanelBody>
 					</InspectorControls>
-				</Fragment >
+				</Fragment>
 			);
 		};
 	});
@@ -179,10 +183,10 @@ const withSpacingClassName = createHigherOrderComponent((BlockListBlock) => {
 		} = attributes;
 
 		const classNames = classnames(className, {
-			[`pt__${paddingTop}`]   : paddingTop,
-			[`pb__${paddingBottom}`]: paddingBottom,
-			[`pl__${paddingLeft}`]  : paddingLeft,
-			[`pr__${paddingRight}`] : paddingRight,
+			[`pt__${paddingTop}`] : paddingTop ? paddingTop : undefined,
+			[`pb__${paddingBottom}`]: paddingBottom ? paddingBottom : undefined,
+			[`pl__${paddingLeft}`] : paddingLeft ? paddingLeft : undefined,
+			[`pr__${paddingRight}`] : paddingRight ? paddingRight : undefined,
 		});
 
 		return <BlockListBlock {...props} className={classNames} />;

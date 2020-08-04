@@ -13,8 +13,12 @@ const {
 export default function save({ attributes, className }) {
 
 	const {
-		gridColumnStart,
-		gridColumnEnd,
+		gridColumnStartDesktop,
+		gridColumnEndDesktop,
+		gridColumnStartTablet,
+		gridColumnEndTablet,
+		gridColumnStartMobile,
+		gridColumnEndMobile,
 		alignItem,
 		justifyItem,
 		stacking,
@@ -22,18 +26,35 @@ export default function save({ attributes, className }) {
 		gutter,
 		overlapLeft,
 		overlapRight,
+		marginTopDesktop,
+		marginBottomDesktop,
+		marginTopTablet,
+		marginBottomTablet,
+		marginTopMobile,
+		marginBottomMobile,
 	} = attributes;
 
 	const classNames = classnames(className, {
-		[`grid-column_start__${gridColumnStart}`]: gridColumnStart,
-		[`grid-column_end__${gridColumnEnd}`]: gridColumnEnd,
+		[`col_start_d__${gridColumnStartDesktop}`]: gridColumnStartDesktop,
+		[`col_end_d__${gridColumnEndDesktop}`]: gridColumnEndDesktop,
+		[`col_start_t__${gridColumnStartTablet}`]: gridColumnStartTablet,
+		[`col_end_t__${gridColumnEndTablet}`]: gridColumnEndTablet,
+		[`col_start_m__${gridColumnStartMobile}`]: gridColumnStartMobile,
+		[`col_end_m__${gridColumnEndMobile}`]: gridColumnEndMobile,
 		[`align-self__${alignItem}`]: alignItem,
 		[`justify-self__${justifyItem}`]: justifyItem,
-		[`stack-order__${stackOrder}`]: stackOrder,
-		'no-gutter': ! gutter,
 		'no-stacking': ! stacking,
+		'has-stacking': stacking === true && stackOrder ? stackOrder : undefined,
+		[`stack-order__${stackOrder}`]: stacking === true && stackOrder ? stackOrder : undefined,
+		'no-gutter': ! gutter,
 		'overlap-left': overlapLeft,
 		'overlap-right': overlapRight,
+		[`mt_d__${marginTopDesktop}`] : marginTopDesktop ? marginTopDesktop : undefined,
+		[`mt_t__${marginTopTablet}`] : marginTopTablet ? marginTopTablet : undefined,
+		[`mt_m__${marginTopMobile}`] : marginTopMobile ? marginTopMobile : undefined,
+		[`mb_d__${marginBottomDesktop}`] : marginBottomDesktop ? marginBottomDesktop : undefined,
+		[`mb_t__${marginBottomTablet}`] : marginBottomTablet ? marginBottomTablet : undefined,
+		[`mb_m__${marginBottomMobile}`] : marginBottomMobile? marginBottomMobile : undefined,
 	});
 
 	return (

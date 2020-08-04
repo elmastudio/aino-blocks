@@ -16,16 +16,15 @@ export default function save({
 }) {
 	const {
 		url,
-		text,
-		title,
+		label,
 		backgroundColor,
 		textColor,
 		customBackgroundColor,
 		customTextColor,
-		linkTarget,
+		target,
 		rel,
 		size,
-		fontSize,
+		link,
 		borderRadius,
 		uppercase,
 	} = attributes;
@@ -33,7 +32,7 @@ export default function save({
 	const textClass = getColorClassName('color', textColor);
 	const backgroundClass = getColorClassName('background-color', backgroundColor);
 
-	const buttonClasses = classnames('wp-block-ainoblocks-button__link', size, fontSize, borderRadius, {
+	const buttonClasses = classnames('wp-block-ainoblocks-button__link', size, borderRadius, {
 		'has-text-color': textColor || customTextColor,
 		[textClass]: textClass,
 		'has-background': backgroundColor || customBackgroundColor,
@@ -42,23 +41,22 @@ export default function save({
 	});
 
 	const buttonStyle = {
-		backgroundColor: backgroundClass ? undefined : customBackgroundColor,
-		boxShadow: 'inset 0 0 0 1px ' + customBackgroundColor,
-		color: textClass ? undefined : customTextColor,
+		backgroundColor: backgroundClass ? customBackgroundColor : undefined,
+		boxShadow: customBackgroundColor ? 'inset 0 0 0 1px ' + customBackgroundColor : undefined,
+		color: textClass ? customTextColor : undefined,
 	};
 
 	return (
 		<div>
-			<a
-				className={buttonClasses}
-				href={url}
-				title={title}
-				style={buttonStyle}
-				target={linkTarget}
-				rel={rel}
-			>
-			<RichText.Content value={text} />
-			</a>
+			<RichText.Content
+				tagName="a"
+				className={ buttonClasses }
+				href={ link }
+				style={ buttonStyle }
+				value={ label }
+				target={ target }
+				rel ="noopener noreferrer"
+			/>
 		</div>
 	);
 }

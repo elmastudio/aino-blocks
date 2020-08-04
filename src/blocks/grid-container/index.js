@@ -28,8 +28,8 @@ const {
 } = metadata;
 
 const settings = {
-	title: __('Grid Container', 'ainoblocks'),
-	description: __('A grid container with a 12-column grid and a flexible number of grid items.', 'ainoblocks'),
+	title: __('Grid', 'ainoblocks'),
+	description: __('A grid container with a 12-column. Add a flexible number of grid items.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [
@@ -41,7 +41,9 @@ const settings = {
 	],
 	attributes,
 	supports: {
-		align: ['wide']
+		align: ['wide'],
+		anchor: true,
+		html: true,
 	},
 	edit,
 	save,

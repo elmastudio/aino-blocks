@@ -51,14 +51,16 @@ const settings = {
 			label: __('Outline', 'ainoblocks')
 		},
 		{
-			name: '3doutline',
-			label: __('3D Outline', 'ainoblocks')
-		},
-		{
-			name: 'ghost',
-			label: __('Ghost', 'ainoblocks')
+			name: 'naked',
+			label: __('Naked', 'ainoblocks')
 		},
 	],
+	example: {
+		attributes: {
+			className: 'is-style-primary',
+			text: __( 'Call to Action' ),
+		},
+	},
 	edit,
 	save,
 };

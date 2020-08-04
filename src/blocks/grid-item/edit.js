@@ -5,9 +5,14 @@ import classnames from 'classnames';
 import get from 'lodash/get';
 
 /**
+ * Internal dependencies
+ */
+import Inspector from './inspector';
+
+/**
  * WordPress dependencies
  */
-const { __, _x } = wp.i18n;
+const { __ } = wp.i18n;
 const { addFilter } = wp.hooks;
 const {
 	Component,
@@ -18,19 +23,8 @@ const {
 	createHigherOrderComponent,
 } = wp.compose;
 const {
-	InspectorControls,
 	InnerBlocks,
 } = wp.blockEditor;
-const {
-	PanelBody,
-	RangeControl,
-	SelectControl,
-	ToggleControl,
-} = wp.components;
-const {
-	withDispatch,
-	withSelect,
-} = wp.data;
 
 /**
  * Block edit function
@@ -47,19 +41,8 @@ class GridItemEdit extends Component {
 			setAttributes,
 			className,
 			hasChildBlocks,
+			isSelected,
 		} = this.props;
-
-		const {
-			gridColumnStart,
-			gridColumnEnd,
-			alignItem,
-			justifyItem,
-			stacking,
-			stackOrder,
-			gutter,
-			overlapLeft,
-			overlapRight,
-		} = attributes;
 
 		const alignItemOptions = [{
 				value: 'start',
@@ -102,86 +85,11 @@ class GridItemEdit extends Component {
 
 		return (
 			<Fragment>
-				<InspectorControls>
-					<PanelBody title={__('Grid Item Settings', 'ainoblocks')}>
-						<RangeControl
-						label={__('Grid Column Start', 'ainoblocks')}
-						value={gridColumnStart}
-						onChange={(gridColumnStart) => setAttributes({ gridColumnStart })}
-						min={1}
-						max={13}
-						allowReset={true}
-						/>
-						<RangeControl
-							label={__('Grid Column End', 'ainoblocks')}
-							value={gridColumnEnd}
-							onChange={(gridColumnEnd) => setAttributes({ gridColumnEnd })}
-							min={1}
-							max={13}
-							allowReset={true}
-						/>
-						<ToggleControl
-							label={__('Add end gutters', 'ainoblocks')}
-							checked={!!gutter}
-							onChange={() => setAttributes({ gutter: !gutter })}
-							help={!!gutter ? __('Toogle off to remove the spacing left and right of the grid item.', 'ainoblocks') : __('Toggle on for space left and right of the grid item.', 'ainoblocks')}
-						/>
-						<ToggleControl
-							label={__('Overlap to left', 'ainoblocks')}
-							checked={!!overlapLeft}
-							onChange={() => setAttributes({ overlapLeft: !overlapLeft })}
-							help={!!overlapLeft ? __('Toogle off to position grid item within grid container.', 'ainoblocks') : __('Toggle on to overlap grid item to left screen edge.', 'ainoblocks')}
-						/>
-						<ToggleControl
-							label={__('Overlap to right', 'ainoblocks')}
-							checked={!!overlapRight}
-							onChange={() => setAttributes({ overlapRight: !overlapRight })}
-							help={!!overlapRight ? __('Toogle off to position grid item within grid container.', 'ainoblocks') : __('Toggle on to overlap grid item to right screen edge.', 'ainoblocks')}
-						/>
-					</PanelBody>
-
-					<PanelBody
-						title={__('Aligment', 'ainoblocks')}
-						initialOpen={false}
-					>
-						<SelectControl
-							label={__('Align item', 'ainoblocks')}
-							help={__('Aligns an item inside its grid area along the vertical column axis.', 'ainoblocks')}
-							value={alignItem}
-							options={alignItemOptions}
-							onChange={alignItem => setAttributes({ alignItem })}
-						/>
-						<SelectControl
-							label={__('Justify item', 'ainoblocks')}
-							help={__('Aligns an item inside its grid area on the horizontal row axis.', 'ainoblocks')}
-							value={justifyItem}
-							options={justifyItemOptions}
-							onChange={justifyItem => setAttributes({ justifyItem })}
-						/>
-					</PanelBody>
-
-					<PanelBody
-						title={__('Stacking', 'ainoblocks')}
-						initialOpen={false}
-					>
-						<ToggleControl
-							label={__('Stacking', 'ainoblocks')}
-							checked={!!stacking}
-							onChange={() => setAttributes({ stacking: !stacking })}
-							help={!!stacking ? __('Toogle off to show grid items below the previous grid item.', 'ainoblocks') : __('Toggle on to allow stacking of grid item.', 'ainoblocks')}
-						/>
-						<RangeControl
-							label={__('Stack Order', 'ainoblocks')}
-							help={__('An item with greater stack order is always in front of an item with a lower stack order.', 'ainoblocks')}
-							value={stackOrder}
-							onChange={(stackOrder) => setAttributes({ stackOrder })}
-							initialPosition={1}
-							min={1}
-							max={10}
-						/>
-					</PanelBody>
-				</InspectorControls>
-
+				{ isSelected && (
+					<Inspector
+						{ ...this.props }
+					/>
+				) }
 				<div className={classNames} >
 					<InnerBlocks
 						templateLock={ false }
@@ -217,8 +125,12 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 		} = props;
 
 		const {
-			gridColumnStart,
-			gridColumnEnd,
+			gridColumnStartDesktop,
+			gridColumnEndDesktop,
+			gridColumnStartTablet,
+			gridColumnEndTablet,
+			gridColumnStartMobile,
+			gridColumnEndMobile,
 			alignItem,
 			justifyItem,
 			stacking,
@@ -226,18 +138,35 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			gutter,
 			overlapLeft,
 			overlapRight,
+			marginTopDesktop,
+			marginBottomDesktop,
+			marginTopTablet,
+			marginBottomTablet,
+			marginTopMobile,
+			marginBottomMobile,
 		} = attributes;
 
 		const classNames = classnames(className, {
-			[`grid-column_start__${gridColumnStart}`]: gridColumnStart,
-			[`grid-column_end__${gridColumnEnd}`]: gridColumnEnd,
+			[`col_start_d__${gridColumnStartDesktop}`]: gridColumnStartDesktop,
+			[`col_end_d__${gridColumnEndDesktop}`]: gridColumnEndDesktop,
+			[`col_start_t__${gridColumnStartTablet}`]: gridColumnStartTablet,
+			[`col_end_t__${gridColumnEndTablet}`]: gridColumnEndTablet,
+			[`col_start_m__${gridColumnStartMobile}`]: gridColumnStartMobile,
+			[`col_end_m__${gridColumnEndMobile}`]: gridColumnEndMobile,
 			[`align-self__${alignItem}`]: alignItem,
 			[`justify-self__${justifyItem}`]: justifyItem,
-			[`stack-order__${stackOrder}`]: stackOrder,
-			'no-gutter': ! gutter,
 			'no-stacking': ! stacking,
+			'has-stacking': stacking === true && stackOrder ? stackOrder : undefined,
+			[`stack-order__${stackOrder}`]: stacking === true && stackOrder ? stackOrder : undefined,
+			'no-gutter': ! gutter,
 			'overlap-left': overlapLeft,
 			'overlap-right': overlapRight,
+			[`mt_d__${marginTopDesktop}`] : marginTopDesktop ? marginTopDesktop : undefined,
+			[`mt_t__${marginTopTablet}`] : marginTopTablet ? marginTopTablet : undefined,
+			[`mt_m__${marginTopMobile}`] : marginTopMobile ? marginTopMobile : undefined,
+			[`mb_d__${marginBottomDesktop}`] : marginBottomDesktop ? marginBottomDesktop : undefined,
+			[`mb_t__${marginBottomTablet}`] : marginBottomTablet ? marginBottomTablet : undefined,
+			[`mb_m__${marginBottomMobile}`] : marginBottomMobile? marginBottomMobile : undefined,
 		});
 
 		return <BlockListBlock {...props} className={classNames} />;

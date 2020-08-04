@@ -17,7 +17,7 @@
 
 		display: block;
 
-		@media (min-width: 37.500em) {
+		@media (min-width: 48em) {
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
@@ -29,7 +29,7 @@
 				margin-bottom: 16px;
 			}
 
-			@media (min-width: 37.500em) {
+			@media (min-width: 48em) {
 				margin-left: 16px;
 
 				&:not(:last-child) {

@@ -2,10 +2,10 @@
 	"name": "button",
 	"attributes": {
 		"url": {
-			"type": "string",
-			"source": "attribute",
-			"selector": "a",
-			"attribute": "href"
+			"type": "string"
+		},
+		"link": {
+			"type": "string"
 		},
 		"title": {
 			"type": "string",
@@ -18,11 +18,9 @@
 			"source": "html",
 			"selector": "a"
 		},
-		"linkTarget": {
+		"target": {
 			"type": "string",
-			"source": "attribute",
-			"selector": "a",
-			"attribute": "target"
+			"default":"_self"
 		},
 		"rel": {
 			"type": "string",
@@ -35,19 +33,14 @@
 		},
 		"size": {
 			"type": "string",
-			"default": "size-m"
-		},
-		"fontSize": {
-			"type": "string",
-			"default": "fontsize-s"
+			"default": "size__m"
 		},
 		"borderRadius": {
 			"type": "string",
 			"default": "radius-square"
 		},
 		"borderWidth": {
-			"type": "string",
-			"default": "border-width-thin"
+			"type": "number"
 		},
 		"uppercase": {
 			"type": "boolean",
@@ -59,11 +52,20 @@
 		"textColor": {
 			"type": "string"
 		},
+		"gradient": {
+			"type": "string"
+		},
 		"customBackgroundColor": {
 			"type": "string"
 		},
 		"customTextColor": {
 			"type": "string"
+		},
+		"label": {
+			"type": "string"
+		},
+		"opensInNewTab": {
+			"type": "boolean"
 		}
 	}
 }

@@ -76,7 +76,7 @@ class MultipleButtonsEdit extends Component {
 						<InnerBlocks
 							allowedBlocks={ALLOWED_BLOCKS}
 							template={getCount(items)}
-							templateLock="all"
+							templateLock={ false }
 							templateInsertUpdatesSelection={false}
 						/>
 					</div>

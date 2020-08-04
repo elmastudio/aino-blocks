@@ -24,21 +24,6 @@ class Inspector extends Component {
 		return (
 			<Fragment>
 				<InspectorControls>
-					<PanelBody title={__('Multiple Buttons Settings', 'ainoblocks')}>
-						<RangeControl
-							label={__('Number of Buttons', 'ainoblocks')}
-							value={items}
-							onChange={(nextCount) => {
-								setAttributes({
-									items: parseInt(nextCount),
-								});
-
-								wp.data.dispatch('core/block-editor').selectBlock(clientId);
-							}}
-							min={1}
-							max={4}
-						/>
-					</PanelBody>
 				</InspectorControls>
 			</Fragment>
 		);
