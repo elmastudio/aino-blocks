@@ -48,6 +48,9 @@ const settings = {
 			iconPositionAfter: true,
 		},
 	},
+	supports: {
+		"anchor": true
+	},
 	edit,
 	save,
 };

@@ -30,6 +30,7 @@ export default function save({
 		uppercase,
 		iconPositionAfter,
 		opensInNewTab,
+		lineHeight,
 		iconRotation,
 		textColor,
 		iconColor,
@@ -37,7 +38,7 @@ export default function save({
 
 	const buttonClasses = classnames('wp-block-ainoblocks-arrow-button__link', {
 		'is-uppercase': uppercase,
-		'icon-after'  : iconPositionAfter,
+		'icon-after': iconPositionAfter,
 	});
 
 	const iconClasses = classnames('wp-block-ainoblocks-arrow-button__icon');
@@ -49,6 +50,7 @@ export default function save({
 
 	const linkStyles = {
 		color: textColor,
+		lineHeight: lineHeight !== 1.5 ? lineHeight : undefined,
 	};
 
 	return (

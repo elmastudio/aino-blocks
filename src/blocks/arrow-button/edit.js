@@ -19,6 +19,7 @@ const {
 	ToolbarGroup,
 	Path,
 	SVG,
+	__experimentalNumberControl,
 } = wp.components;
 
 const {
@@ -96,6 +97,7 @@ class arrowButtonEdit extends Component {
 			iconPositionAfter,
 			iconRotation,
 			opensInNewTab,
+			lineHeight,
 			textColor,
 			iconColor
 		} = attributes;
@@ -125,6 +127,7 @@ class arrowButtonEdit extends Component {
 
 		const linkStyles = {
 			color: textColor,
+			lineHeight: lineHeight !== 1.5 ? lineHeight : undefined,
 		};
 
 		const urlIsSet = !! url;
@@ -173,6 +176,13 @@ class arrowButtonEdit extends Component {
 							value={size}
 							options={sizeOptions}
 							onChange={size => setAttributes({ size })}
+						/>
+						<__experimentalNumberControl
+							label={__('Line height', 'ainoblocks')}
+							isShiftStepEnabled={ true }
+							onChange={ lineHeight => setAttributes({ lineHeight }) }
+							step={ 0.1 }
+							value={ lineHeight }
 						/>
 						<RangeControl
 							label={__('Icon Rotation in degrees', 'ainoblocks')}

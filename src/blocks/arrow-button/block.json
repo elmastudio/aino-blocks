@@ -59,6 +59,10 @@
 		"label": {
 			"type": "string"
 		},
+		"lineHeight": {
+			"type": "number",
+			"default": 1.5
+		},
 		"opensInNewTab": {
 			"type": "boolean"
 		}
