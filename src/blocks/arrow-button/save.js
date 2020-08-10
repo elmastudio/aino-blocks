@@ -50,7 +50,7 @@ export default function save({
 
 	const linkStyles = {
 		color: textColor,
-		lineHeight: lineHeight !== 1.5 ? lineHeight : undefined,
+		lineHeight: lineHeight ? lineHeight : undefined,
 	};
 
 	return (
