@@ -28,6 +28,7 @@ import * as author from './blocks/author';
 import * as testimonial from './blocks/testimonial';
 import * as button from './blocks/button';
 import * as multipleButtons from './blocks/multiple-buttons';
+import * as arrowButton from './blocks/arrow-button';
 import * as imageText from './blocks/image-text';
 
 export function registerBlocks() {
@@ -40,6 +41,7 @@ export function registerBlocks() {
 		testimonial,
 		button,
 		multipleButtons,
+		arrowButton,
 		hero,
 		imageText,
 	].forEach(block => {

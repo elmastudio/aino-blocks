@@ -1,0 +1,705 @@
+.wp-block-ainoblocks-arrow-button {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+
+	&.aligncenter {
+		text-align: center;
+	}
+
+	&.alignright {
+		/*rtl:ignore*/
+		text-align: right;
+	}
+
+	&__icon {
+
+		svg {
+			vertical-align: top;
+			min-width: 8px;
+			min-height: 8px;
+			max-width: 32px;
+			max-height: 32px;
+		}
+	}
+
+	&__link {
+		position: relative;
+		align-self: stretch;
+		cursor: pointer;
+		line-height: 1.5;
+		text-decoration: none;
+		color: #111;
+
+		&.is-uppercase {
+			text-transform: uppercase;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: 0;
+			left: 0;
+			right: 100%;
+			bottom: 0;
+			background: currentColor;
+			-webkit-transition-property: right;
+			transition-property: right;
+			-webkit-transition-duration: .2s;
+			transition-duration: .2s;
+			-webkit-transition-timing-function: ease-out;
+			transition-timing-function: ease-out;
+		}
+
+		&:hover:before {
+			right: 0 !important;
+		}
+	}
+
+	&.size {
+
+		&__ssx {
+			font-size: 0.75rem;
+
+			.wp-block-ainoblocks-arrow-button {
+
+				&__icon {
+					flex-basis: 8px;
+					height: 8px;
+
+					svg {
+						width: 8px;
+						height: 8px;
+					}
+				}
+
+				&__link {
+
+					&:not(.icon-after) {
+						margin-left: 5px;
+					}
+
+					&.icon-after {
+						margin-right: 5px;
+					}
+
+					&::before {
+						height: 1px;
+					}
+				}
+			}
+		}
+
+		&__sx {
+			font-size: 0.875rem;
+
+			.wp-block-ainoblocks-arrow-button {
+
+				&__icon {
+					flex-basis: 10px;
+					height: 10px;
+
+					svg {
+						width: 10px;
+						height: 10px;
+					}
+				}
+
+				&__link {
+
+					&:not(.icon-after) {
+						margin-left: 6px;
+					}
+
+					&.icon-after {
+						margin-right: 6px;
+					}
+
+					&::before {
+						height: 1px;
+					}
+				}
+			}
+		}
+
+		&__s {
+			font-size: 1rem;
+
+			.wp-block-ainoblocks-arrow-button {
+
+				&__icon {
+					flex-basis: 12px;
+					height: 12px;
+
+					svg {
+						width: 12px;
+						height: 12px;
+					}
+				}
+
+				&__link {
+
+					&:not(.icon-after) {
+						margin-left: 7px;
+					}
+
+					&.icon-after {
+						margin-right: 7px;
+					}
+
+					&::before {
+						height: 1px;
+					}
+				}
+			}
+		}
+
+		&__m {
+			font-size: 1.125rem;
+
+			.wp-block-ainoblocks-arrow-button {
+
+				&__icon {
+					flex-basis: 12px;
+					height: 12px;
+
+					svg {
+						width: 12px;
+						height: 12px;
+					}
+				}
+
+				&__link {
+
+					&:not(.icon-after) {
+						margin-left: 8px;
+					}
+
+					&.icon-after {
+						margin-right: 8px;
+					}
+
+					&::before {
+						height: 2px;
+					}
+				}
+			}
+
+			@media (min-width: 80em) {
+				font-size: 1.25rem;
+
+				.wp-block-ainoblocks-arrow-button {
+
+					&__icon {
+						flex-basis: 14px;
+						height: 14px;
+
+						svg {
+							width: 14px;
+							height: 14px;
+						}
+					}
+
+					&__link {
+
+						&:not(.icon-after) {
+							margin-left: 9px;
+						}
+
+						&.icon-after {
+							margin-right: 9px;
+						}
+					}
+				}
+			}
+		}
+
+		&__l {
+			font-size: 1.125rem;
+
+			.wp-block-ainoblocks-arrow-button {
+				&__icon {
+					flex-basis: 14px;
+					height: 14px;
+
+					svg {
+						width: 14px;
+						height: 14px;
+					}
+				}
+
+				&__link {
+
+					&:not(.icon-after) {
+						margin-left: 9px;
+					}
+
+					&.icon-after {
+						margin-right: 9px;
+					}
+
+					&::before {
+						height: 2px;
+					}
+				}
+			}
+
+			@media (min-width: 64em) {
+				font-size: 1.375rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 16px;
+						height: 16px;
+
+						svg {
+							width: 16px;
+							height: 16px;
+						}
+					}
+
+					&__link {
+						&:not(.icon-after) {
+							margin-left: 10px;
+						}
+
+						&.icon-after {
+							margin-right: 10px;
+						}
+					}
+				}
+			}
+
+			@media (min-width: 80em) {
+				font-size: 1.5rem;
+			}
+		}
+
+		&__xl {
+			font-size: 1.375rem;
+
+			.wp-block-ainoblocks-arrow-button {
+				&__icon {
+					flex-basis: 16px;
+					height: 16px;
+
+					svg {
+						width: 16px;
+						height: 16px;
+					}
+				}
+
+				&__link {
+
+					&:not(.icon-after) {
+						margin-left: 10px;
+					}
+
+					&.icon-after {
+						margin-right: 10px;
+					}
+
+					&::before {
+						height: 2px;
+					}
+				}
+			}
+
+			@media (min-width: 48em) {
+				font-size: 1.5rem;
+			}
+
+			@media (min-width: 64em) {
+				font-size: 1.625rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 18px;
+						height: 18px;
+
+						svg {
+							width: 18px;
+							height: 18px;
+						}
+					}
+
+					&__link {
+
+						&:not(.icon-after) {
+							margin-left: 11px;
+						}
+
+						&.icon-after {
+							margin-right: 11px;
+						}
+					}
+				}
+			}
+
+			@media (min-width: 80em) {
+				font-size: 1.75rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 20px;
+						height: 20px;
+
+						svg {
+							width: 20px;
+							height: 20px;
+						}
+					}
+
+					&__link {
+
+						&:not(.icon-after) {
+							margin-left: 12px;
+						}
+
+						&.icon-after {
+							margin-right: 12px;
+						}
+					}
+				}
+			}
+		}
+
+		&__xxl {
+			font-size: 1.5rem;
+
+			.wp-block-ainoblocks-arrow-button {
+				&__icon {
+					flex-basis: 16px;
+					height: 16px;
+
+					svg {
+						width: 16px;
+						height: 16px;
+					}
+				}
+
+				&__link {
+
+					&:not(.icon-after) {
+						margin-left: 11px;
+					}
+
+					&.icon-after {
+						margin-right: 11px;
+					}
+
+					&::before {
+						height: 3px;
+					}
+				}
+			}
+
+			@media (min-width: 48em) {
+				font-size: 1.75rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 20px;
+						height: 20px;
+
+						svg {
+							width: 20px;
+							height: 20px;
+						}
+					}
+
+					&__link {
+						&:not(.icon-after) {
+							margin-left: 13px;
+						}
+
+						&.icon-after {
+							margin-right: 13px;
+						}
+					}
+				}
+			}
+
+			@media (min-width: 64em) {
+				font-size: 1.875rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 22px;
+						height: 22px;
+
+						svg {
+							width: 22px;
+							height: 22px;
+						}
+					}
+
+					&__link {
+
+						&:not(.icon-after) {
+							margin-left: 14px;
+						}
+
+						&.icon-after {
+							margin-right: 14px;
+						}
+					}
+				}
+			}
+
+			@media (min-width: 80em) {
+				font-size: 2.125rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 24px;
+						height: 24px;
+
+						svg {
+							width: 24px;
+							height: 24px;
+						}
+					}
+
+					&__link {
+
+						&:not(.icon-after) {
+							margin-left: 15px;
+						}
+
+						&.icon-after {
+							margin-right: 15px;
+						}
+					}
+				}
+			}
+		}
+
+		&__xxxl {
+			font-size: 1.625rem;
+
+			.wp-block-ainoblocks-arrow-button {
+				&__icon {
+					flex-basis: 18px;
+					height: 18px;
+
+					svg {
+						width: 18px;
+						height: 18px;
+					}
+				}
+
+				&__link {
+
+					&:not(.icon-after) {
+						margin-left: 12px;
+					}
+
+					&.icon-after {
+						margin-right: 12px;
+					}
+
+					&::before {
+						height: 3px;
+					}
+				}
+			}
+
+			@media (min-width: 48em) {
+				font-size: 2rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 24px;
+						height: 24px;
+
+						svg {
+							width: 24px;
+							height: 24px;
+						}
+					}
+
+					&__link {
+
+						&:not(.icon-after) {
+							margin-left: 15px;
+						}
+
+						&.icon-after {
+							margin-right: 15px;
+						}
+					}
+				}
+			}
+
+			@media (min-width: 64em) {
+				font-size: 2.25rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 26px;
+						height: 26px;
+
+						svg {
+							width: 26px;
+							height: 26px;
+						}
+					}
+
+					&__link {
+
+						&:not(.icon-after) {
+							margin-left: 16px;
+						}
+
+						&.icon-after {
+							margin-right: 16px;
+						}
+					}
+				}
+			}
+
+			@media (min-width: 80em) {
+				font-size: 2.5rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 28px;
+						height: 28px;
+
+						svg {
+							width: 28px;
+							height: 28px;
+						}
+					}
+
+					&__link {
+
+						&:not(.icon-after) {
+							margin-left: 17px;
+						}
+
+						&.icon-after {
+							margin-right: 17px;
+						}
+					}
+				}
+			}
+		}
+
+		&__xxxxl {
+			font-size: 1.875rem;
+
+			.wp-block-ainoblocks-arrow-button {
+
+				&__icon {
+					flex-basis: 20px;
+					height: 20px;
+
+					svg {
+						width: 20px;
+						height: 20px;
+					}
+				}
+
+				&__link {
+
+					&:not(.icon-after) {
+						margin-left: 13px;
+					}
+
+					&.icon-after {
+						margin-right: 13px;
+					}
+
+					&::before {
+						height: 3px;
+					}
+				}
+			}
+
+			@media (min-width: 48em) {
+				font-size: 2.25rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 26px;
+						height: 26px;
+
+						svg {
+							width: 26px;
+							height: 26px;
+						}
+					}
+
+					&__link {
+
+						&:not(.icon-after) {
+							margin-left: 16px;
+						}
+
+						&.icon-after {
+							margin-right: 16px;
+						}
+					}
+				}
+			}
+
+			@media (min-width: 64em) {
+				font-size: 2.625rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 30px;
+						height: 30px;
+
+						svg {
+							width: 30px;
+							height: 30px;
+						}
+					}
+
+					&__link {
+
+						&:not(.icon-after) {
+							margin-left: 18px;
+						}
+
+						&.icon-after {
+							margin-right: 18px;
+						}
+					}
+				}
+			}
+
+			@media (min-width: 80em) {
+				font-size: 3rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 32px;
+						height: 32px;
+
+						svg {
+							width: 32px;
+							height: 32px;
+						}
+					}
+
+					&__link {
+
+						&:not(.icon-after) {
+							margin-left: 19px;
+						}
+
+						&.icon-after {
+							margin-right: 19px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

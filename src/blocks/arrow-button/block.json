@@ -1,0 +1,66 @@
+{
+	"name": "arrow-button",
+	"attributes": {
+		"url": {
+			"type": "string"
+		},
+		"link": {
+			"type": "string"
+		},
+		"title": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "title"
+		},
+		"text": {
+			"type": "string",
+			"source": "html",
+			"selector": "a"
+		},
+		"target": {
+			"type": "string",
+			"default":"_self"
+		},
+		"rel": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "rel"
+		},
+		"placeholder": {
+			"type": "string"
+		},
+		"size": {
+			"type": "string",
+			"default": "size__m"
+		},
+		"uppercase": {
+			"type": "boolean",
+			"default": false
+		},
+		"iconPositionAfter": {
+			"type": "boolean",
+			"default": false
+		},
+		"iconRotation": {
+			"type": "number",
+			"default": 0
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"iconColor": {
+			"type": "string"
+		},
+		"underlineColor": {
+			"type": "string"
+		},
+		"label": {
+			"type": "string"
+		},
+		"opensInNewTab": {
+			"type": "boolean"
+		}
+	}
+}

@@ -159,16 +159,16 @@ class CardEdit extends Component {
 				<div
 					className={classnames(className, shadowName, align, {
 						'has-background': backgroundColor,
-						'has-border'    : borderColor,
-						[`pt__${paddingTop}`]   : paddingTop,
+						'has-border': borderColor,
+						[`pt__${paddingTop}`]: paddingTop,
 						[`pb__${paddingBottom}`]: paddingBottom,
-						[`pl__${paddingLeft}`]  : paddingLeft,
-						[`pr__${paddingRight}`] : paddingRight,
+						[`pl__${paddingLeft}`]: paddingLeft,
+						[`pr__${paddingRight}`]: paddingRight,
 					})}
 					style={{
 						backgroundColor: backgroundColor,
-						borderColor    : borderColor,
-						borderRadius   : backgroundRadius,
+						borderColor: borderColor,
+						borderRadius: backgroundRadius,
 					}}>
 					<InnerBlocks />
 				</div>

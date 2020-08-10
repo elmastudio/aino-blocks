@@ -35,6 +35,24 @@ const settings = {
 		align: ['wide', 'full'],
 	},
 	attributes,
+	example: {
+		attributes: {
+			borderRadius: '20',
+			shadowName: 'shadow-a',
+			paddingTop: '10',
+			paddingBottom: '10',
+			paddingLeft: '10',
+			paddingRight: '10',
+		},
+		innerBlocks: [
+			{
+				name: 'core/paragraph',
+				attributes: {
+					content: __( 'Include your content here...', 'ainoblocks' ),
+				},
+			},
+			],
+	},
 	edit,
 	save,
 };

@@ -28,42 +28,25 @@ const {
 } = metadata;
 
 const settings = {
-	title: __('Buttons', 'ainoblocks'),
-	description: __('A row of buttons.', 'ainoblocks'),
+	title: __('Arrow Button', 'ainoblocks'),
+	description: __('A special button within an arrow icon and a unique hover style.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [
 		__('button', 'ainoblocks'),
-		__('buttons', 'ainoblocks'),
 		__('link', 'ainoblocks'),
 		__('cta', 'ainoblocks'),
+		__('icon', 'ainoblocks'),
 		__('aino blocks', 'ainoblocks'),
 	],
 	attributes,
-	supports: {
-		align: ['left', 'right', 'center'],
-	},
 	example: {
-		innerBlocks: [
-		{
-			name: 'ainoblocks/button',
-			attributes: {
-				className: 'is-style-primary',
-				label: __( 'Sign up', 'ainoblocks' ),
-				borderRadius: 'radius-circular',
-				size: 'size__l',
-			},
+		attributes: {
+			className: 'is-style-primary',
+			label: __( 'Tell me more', 'ainoblocks' ),
+			size: 'size__xxl',
+			iconPositionAfter: true,
 		},
-		{
-			name: 'ainoblocks/button',
-			attributes: {
-				className: 'is-style-outline',
-				label: __( 'Learn more', 'ainoblocks' ),
-				borderRadius: 'radius-circular',
-				size: 'size__l',
-			},
-		},
-		],
 	},
 	edit,
 	save,

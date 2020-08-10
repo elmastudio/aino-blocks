@@ -55,12 +55,6 @@ const settings = {
 			label: __('Naked', 'ainoblocks')
 		},
 	],
-	example: {
-		attributes: {
-			className: 'is-style-primary',
-			text: __( 'Call to Action' ),
-		},
-	},
 	edit,
 	save,
 };

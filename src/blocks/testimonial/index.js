@@ -21,7 +21,7 @@ const { attributes, name } = metadata;
 
 const settings = {
 	title: __('Testimonial', 'ainoblocks'),
-	description: __('Insert a testimonial or review with the option to add author information. Works great in combination with the Columns block.', 'ainoblocks'),
+	description: __('Insert a testimonial or review with the option to add author information.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [
