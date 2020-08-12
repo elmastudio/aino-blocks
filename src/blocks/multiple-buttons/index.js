@@ -43,6 +43,28 @@ const settings = {
 	supports: {
 		align: ['left', 'right', 'center'],
 	},
+	example: {
+		innerBlocks: [
+		{
+			name: 'ainoblocks/button',
+			attributes: {
+				className: 'is-style-primary',
+				label: __( 'Sign up', 'ainoblocks' ),
+				borderRadius: 'radius-circular',
+				size: 'size__l',
+			},
+		},
+		{
+			name: 'ainoblocks/button',
+			attributes: {
+				className: 'is-style-outline',
+				label: __( 'Learn more', 'ainoblocks' ),
+				borderRadius: 'radius-circular',
+				size: 'size__l',
+			},
+		},
+		],
+	},
 	edit,
 	save,
 };

@@ -1,5 +1,5 @@
 {
-	"name": "button",
+	"name": "arrow-button",
 	"attributes": {
 		"url": {
 			"type": "string"
@@ -35,28 +35,33 @@
 			"type": "string",
 			"default": "size__m"
 		},
-		"borderRadius": {
-			"type": "number",
-			"default": 0
-		},
-		"borderWidth": {
-			"type": "number"
-		},
 		"uppercase": {
 			"type": "boolean",
 			"default": false
 		},
-		"backgroundColor": {
-			"type": "string"
+		"iconPositionAfter": {
+			"type": "boolean",
+			"default": false
+		},
+		"iconRotation": {
+			"type": "number",
+			"default": 0
 		},
 		"textColor": {
 			"type": "string"
 		},
-		"gradient": {
+		"iconColor": {
+			"type": "string"
+		},
+		"underlineColor": {
 			"type": "string"
 		},
 		"label": {
 			"type": "string"
+		},
+		"lineHeight": {
+			"type": "number",
+			"default": 1.5
 		},
 		"opensInNewTab": {
 			"type": "boolean"

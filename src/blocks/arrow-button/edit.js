@@ -17,6 +17,9 @@ const {
 	Popover,
 	ToolbarButton,
 	ToolbarGroup,
+	Path,
+	SVG,
+	__experimentalNumberControl,
 } = wp.components;
 
 const {
@@ -24,9 +27,7 @@ const {
 	BlockIcon,
 	RichText,
 	InspectorControls,
-	withColors,
 	PanelColorSettings,
-	ColorPalette,
 	__experimentalLinkControl,
 } = wp.blockEditor;
 
@@ -43,7 +44,7 @@ const NEW_TAB_REL = 'noreferrer noopener';
 /**
  * Block edit function
  */
-class buttonEdit extends Component {
+class arrowButtonEdit extends Component {
 
 	constructor() {
 		super( ...arguments )
@@ -87,17 +88,18 @@ class buttonEdit extends Component {
 		} = this.props;
 
 		const {
-			label,
 			url,
+			label,
 			link,
 			target,
 			size,
-			borderRadius,
-			borderWidth,
 			uppercase,
+			iconPositionAfter,
+			iconRotation,
 			opensInNewTab,
-			backgroundColor,
+			lineHeight,
 			textColor,
+			iconColor
 		} = attributes;
 
 		const sizeOptions = [
@@ -112,11 +114,21 @@ class buttonEdit extends Component {
 			{ value: 'size__xxxxl', label: __('4XL', 'ainoblocks') }
 		];
 
-		const styles = {
-			backgroundColor: backgroundColor,
+		const MIN_ICON_ROTATION_VALUE = 0;
+		const MAX_ICON_ROTATION_VALUE = 360;
+		const INITIAL_ICON_ROTATION_POSITION = 0;
+
+		const iconClasses = classnames('wp-block-ainoblocks-arrow-button__icon');
+
+		const iconStyles = {
+			transform: iconRotation ? `rotate(${iconRotation}deg)` : undefined,
+			fill: iconColor,
+		};
+
+		const linkStyles = {
 			color: textColor,
-			borderRadius: borderRadius ? borderRadius + 'px' : undefined,
-			borderWidth: borderWidth ? borderWidth + 'px' : undefined,
+			lineHeight: lineHeight,
+			lineHeight: lineHeight ? lineHeight : undefined,
 		};
 
 		const urlIsSet = !! url;
@@ -159,30 +171,34 @@ class buttonEdit extends Component {
 				</BlockControls>
 				{ linkControl }
 				<InspectorControls>
-					<PanelBody title={__('Button Settings', 'ainoblocks')}>
+					<PanelBody title={__('Arrow Button Settings', 'ainoblocks')}>
 						<SelectControl
 							label={__('Size', 'ainoblocks')}
 							value={size}
 							options={sizeOptions}
 							onChange={size => setAttributes({ size })}
 						/>
-						<RangeControl
-							label={__('Border Radius', 'ainoblocks')}
-							value={borderRadius}
-							onChange={(borderRadius) => setAttributes({ borderRadius })}
-							min={0}
-							max={100}
-							initialPosition={0}
-							allowReset={true}
+						<__experimentalNumberControl
+							label={__('Line height', 'ainoblocks')}
+							isShiftStepEnabled={ true }
+							onChange={ lineHeight => setAttributes({ lineHeight }) }
+							step={ 0.1 }
+							value={ lineHeight }
 						/>
 						<RangeControl
-							label={__('Border Width', 'ainoblocks')}
-							value={borderWidth}
-							onChange={(borderWidth) => setAttributes({ borderWidth })}
-							min={0}
-							max={20}
-							initialPosition={0}
-							allowReset={true}
+							label={__('Icon Rotation in degrees', 'ainoblocks')}
+							value={iconRotation}
+							min={MIN_ICON_ROTATION_VALUE}
+							max={MAX_ICON_ROTATION_VALUE}
+							initialPosition={INITIAL_ICON_ROTATION_POSITION}
+							allowReset
+							onChange={iconRotation => setAttributes({ iconRotation })}
+						/>
+						<ToggleControl
+							label={__('Icon Position', 'ainoblocks')}
+							checked={!!iconPositionAfter}
+							onChange={() => setAttributes({ iconPositionAfter: !iconPositionAfter })}
+							help={!!iconPositionAfter ? __('Icon is placed after text.', 'ainoblocks') : __('Toggle to place icon after text.', 'ainoblocks')}
 						/>
 						<ToggleControl
 							label={__('Uppercase Text', 'ainoblocks')}
@@ -196,49 +212,66 @@ class buttonEdit extends Component {
 						initialOpen={false}
 						colorSettings={[
 							{
-								value: backgroundColor,
-								onChange: backgroundColor => {
-									setAttributes({ backgroundColor });
-								},
-								label: __('Background Color', 'ainoblocks'),
-							},
-							{
 								value: textColor,
 								onChange: textColor => {
 									setAttributes({ textColor });
 								},
 								label: __('Text Color', 'ainoblocks'),
 							},
+							{
+								value: iconColor,
+								onChange: iconColor => {
+									setAttributes({ iconColor });
+								},
+								label: __('Icon Color', 'ainoblocks'),
+							}
 						]}
 					>
 					</PanelColorSettings>
 				</InspectorControls>
-					<div className={classnames(className)}>
-					<RichText
-						placeholder={ __( "Add text…", 'ainoblocks' ) }
-						value={ label }
-						tagName='div'
+				<div className={classnames(
+						'wp-block-ainoblocks-arrow-button', size,
+					)}
+				>
+					{ ! iconPositionAfter && (
+						<span className={iconClasses} style={iconStyles}>
+							<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
+								<Path d="M4 0h28v28h-4l-0.004-21.172-25.168 25.172-2.828-2.828 25.168-25.172h-21.168z"></Path>
+							</SVG>
+						</span>
+					) }
+					<div
 						className={ classnames(
-							'wp-block-ainoblocks-button__link', size, borderRadius, {
-								'has-custom-background': backgroundColor,
-								'has-custom-text-color': textColor,
+							'wp-block-ainoblocks-arrow-button__link', {
 								'is-uppercase': uppercase,
-								'no-border-radius': borderRadius === 0,
-								'no-border': borderWidth === 0,
+								'icon-after': iconPositionAfter,
 								}
 						) }
-						style={styles}
-						onChange={ value => {
-							setAttributes( { label: value })
-						} }
-						formattingControls={ [ 'bold', 'italic' ] }
-						rel ="noopener noreferrer"
-						keepPlaceholderOnFocus
-					/>
+						style={linkStyles}
+						>
+						<RichText
+							value={label}
+							placeholder={ __( "Add text…", 'ainoblocks' ) }
+							tagName='span'
+							multiline= 'false'
+							onChange={ value => {
+								setAttributes( { label: value })
+							} }
+							keepPlaceholderOnFocus
+						/>
+					</div>
+					{ iconPositionAfter && (
+						<span className={iconClasses} style={iconStyles}>
+							<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
+								<Path d="M4 0h28v28h-4l-0.004-21.172-25.168 25.172-2.828-2.828 25.168-25.172h-21.168z"></Path>
+							</SVG>
+						</span>
+					) }
 				</div>
 			</Fragment>
 		);
 	}
 }
 
-export default buttonEdit;
+export default compose([
+])(arrowButtonEdit);

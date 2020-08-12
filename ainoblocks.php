@@ -1,15 +1,17 @@
 <?php
 /**
- * Plugin Name: Aino Blocks - Page Building Blocks
+ * Plugin Name: Aino Blocks - Creative Gutenberg Blocks
  * Plugin URI : https: //wpaino.com
- * Description: A collection of page building blocks for the WordPress Gutenberg editor.
- * Version    : 1.1.0
- * Author     : Elmastudio
- * Author URI : https: //www.elmastudio.de/en/
+ * Description: A collection of page building blocks for creatives. Let's start to build websites that stand out from the crowd.
+ * Version: 1.1.0
+ * Requires at least: 5.5
+ * Tested up to: 5.5
+ * Author: Elmastudio
+ * Author URI: https: //www.elmastudio.de/en/
  * Text Domain: ainoblocks
  * Domain Path: /languages
- * License    : GPL v2 or later
- * License URI: http : //www.gnu.org/licenses/gpl-2.0.txt
+ * License: GPL v2 or later
+ * License URI: http: //www.gnu.org/licenses/gpl-2.0.txt
  *
  * @package ainoblocks
  */

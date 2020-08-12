@@ -3,8 +3,8 @@ Author URI       : https: //www.elmastudio.de/en
 Plugin URI       : https: //wpaino.com
 Contributors     : elmastudio
 Tags             : page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
-Requires at least: 5.4
-Tested up to     : 5.4.2
+Requires at least: 5.5
+Tested up to     : 5.5
 Stable tag       : 1.1.0
 License          : GPLv2 or later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
@@ -16,14 +16,15 @@ A WordPress block collection for page building.
 The Aino blocks plugin brings you a collection of page building blocks for the Gutenberg editor. With Aino blocks and the free <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino theme</a> you can build creative, individual page layouts in the WordPress editor. 
 
 ## Currently available blocks
-* Grid container block
+* Grid block
 * Hero block
 * Featured Content block
 * Card block
 * Badge block
 * Author block
 * Testimonial block
-* Multiple Buttons block
+* Buttons block
+* Arrow button block
 * Image & Text block
 
 == Installation ==
@@ -51,6 +52,7 @@ Yes, you can use block patterns if you have the latest Gutenberg plugin version 
 
 = 1.1.0 =
 New: Add first block pattern.
+New: Arrow Button Block.
 Enhance: Grid block.
 Update: Delete Featured Content block, since it can be replaced by Grid block.
 

@@ -28,40 +28,29 @@ const {
 } = metadata;
 
 const settings = {
-	title: __('Button', 'ainoblocks'),
-	description: __('A single button within a Buttons block.', 'ainoblocks'),
+	title: __('Arrow Button', 'ainoblocks'),
+	description: __('A special button within an arrow icon and a unique hover style.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
-	parent: ['ainoblocks/multiple-buttons'],
 	icon,
 	keywords: [
 		__('button', 'ainoblocks'),
 		__('link', 'ainoblocks'),
 		__('cta', 'ainoblocks'),
-		__('buttons', 'ainoblocks'),
+		__('icon', 'ainoblocks'),
 		__('aino blocks', 'ainoblocks'),
 	],
-	styles: [
-		{
-			name: 'primary',
-			/* translators: block style */
-			label: __( 'Fill', 'ainoblocks' ),
-			isDefault: true,
+	attributes,
+	example: {
+		attributes: {
+			className: 'is-style-primary',
+			label: __( 'Tell me more', 'ainoblocks' ),
+			size: 'size__xxl',
+			iconPositionAfter: true,
 		},
-		{
-			name: 'outline',
-			/* translators: block style */
-			label: __( 'Outline' ),
-		},
-		{ 
-			name: 'naked',
-			/* translators: block style */
-			label: __( 'Naked' ),
-		},
-	],
+	},
 	supports: {
 		"anchor": true
 	},
-	attributes,
 	edit,
 	save,
 };
