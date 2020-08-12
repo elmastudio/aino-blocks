@@ -8,8 +8,8 @@
 
 __Contributors:__ elmastudio  
 __Tags:__ page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks   
-__Requires at least:__ 5.4   
-__Tested up to:__ WordPress 5.4.2  
+__Requires at least:__ 5.5   
+__Tested up to:__ WordPress 5.5  
 __License:__ GPLv2 or later  
 __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -31,6 +31,12 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 
 ### Changelog  
 =======
+
+### 1.1.0  
+**New:** Add first block pattern.  
+**New:** Arrow Button Block.  
+**Enhance:** Grid block.  
+**Update:** Delete Featured Content block, since it can be replaced by Grid block.  
 
 ### 1.0.1.
 **Enhance:** Card block spacing setting.  
