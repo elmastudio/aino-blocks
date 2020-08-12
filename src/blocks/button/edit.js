@@ -10,7 +10,6 @@ const { __ } = wp.i18n;
 const { Component, Fragment } = wp.element;
 const { compose, withInstanceId } = wp.compose;
 const {
-	withFallbackStyles,
 	PanelBody,
 	ToggleControl,
 	SelectControl,
@@ -55,15 +54,6 @@ class buttonEdit extends Component {
 		}
 	}
 
-	componentDidMount() {
-		// Assigning block_id in the attribute.
-		this.props.setAttributes( { block_id: this.props.clientId.substr( 0, 8 ) } )
-		// Pushing Style tag for this block css.
-		const $style = document.createElement( "style" )
-		$style.setAttribute( "id", "uagb-style-button-" + this.props.clientId.substr( 0, 8 ) )
-		document.head.appendChild( $style )
-	}
-
 	onClickLinkSettings () {
 		
 		const { attributes, setAttributes } = this.props
@@ -92,10 +82,6 @@ class buttonEdit extends Component {
 		const {
 			attributes,
 			setAttributes,
-			backgroundColor,
-			textColor,
-			setBackgroundColor,
-			setTextColor,
 			className,
 			isSelected,
 		} = this.props;
@@ -109,7 +95,9 @@ class buttonEdit extends Component {
 			borderRadius,
 			borderWidth,
 			uppercase,
-			opensInNewTab
+			opensInNewTab,
+			backgroundColor,
+			textColor,
 		} = attributes;
 
 		const sizeOptions = [
@@ -123,12 +111,13 @@ class buttonEdit extends Component {
 			{ value: 'size__xxxl', label: __('3XL', 'ainoblocks') },
 			{ value: 'size__xxxxl', label: __('4XL', 'ainoblocks') }
 		];
-		
-		const borderRadiusOptions = [
-			{ value: 'radius-square', label: __('square', 'ainoblocks') },
-			{ value: 'radius-round', label: __('round', 'ainoblocks') },
-			{ value: 'radius-circular', label: __('circular', 'ainoblocks') }
-		];
+
+		const styles = {
+			backgroundColor: backgroundColor,
+			color: textColor,
+			borderRadius: borderRadius ? borderRadius + 'px' : undefined,
+			borderWidth: borderWidth ? borderWidth + 'px' : undefined,
+		};
 
 		const urlIsSet = !! url;
 		const urlIsSetandSelected = urlIsSet && isSelected;
@@ -177,11 +166,14 @@ class buttonEdit extends Component {
 							options={sizeOptions}
 							onChange={size => setAttributes({ size })}
 						/>
-						<SelectControl
+						<RangeControl
 							label={__('Border Radius', 'ainoblocks')}
 							value={borderRadius}
-							options={borderRadiusOptions}
-							onChange={borderRadius => setAttributes({ borderRadius })}
+							onChange={(borderRadius) => setAttributes({ borderRadius })}
+							min={0}
+							max={100}
+							initialPosition={0}
+							allowReset={true}
 						/>
 						<RangeControl
 							label={__('Border Width', 'ainoblocks')}
@@ -205,22 +197,23 @@ class buttonEdit extends Component {
 						colorSettings={[
 							{
 								value: backgroundColor,
-								onChange: setBackgroundColor,
+								onChange: backgroundColor => {
+									setAttributes({ backgroundColor });
+								},
 								label: __('Background Color', 'ainoblocks'),
 							},
 							{
 								value: textColor,
-								onChange: setTextColor,
+								onChange: textColor => {
+									setAttributes({ textColor });
+								},
 								label: __('Text Color', 'ainoblocks'),
 							},
 						]}
 					>
 					</PanelColorSettings>
 				</InspectorControls>
-					<div className={classnames(
-							'wp-block-ainoblocks-button',
-						)}
-					>
+					<div className={classnames(className)}>
 					<RichText
 						placeholder={ __( "Add text…", 'ainoblocks' ) }
 						value={ label }
@@ -230,18 +223,15 @@ class buttonEdit extends Component {
 								'has-custom-background': backgroundColor,
 								'has-custom-text-color': textColor,
 								'is-uppercase': uppercase,
+								'no-border-radius': borderRadius === 0,
 								'no-border': borderWidth === 0,
 								}
 						) }
-						style={ {
-							borderWidth: borderWidth
-								? borderWidth + 'px'
-								: undefined,
-						} }
+						style={styles}
 						onChange={ value => {
 							setAttributes( { label: value })
 						} }
-						allowedFormats={ [ "bold", "italic", "strikethrough" ] }
+						formattingControls={ [ 'bold', 'italic' ] }
 						rel ="noopener noreferrer"
 						keepPlaceholderOnFocus
 					/>
@@ -251,5 +241,4 @@ class buttonEdit extends Component {
 	}
 }
 
-export default compose([
-])(buttonEdit);
+export default buttonEdit;

@@ -29,7 +29,7 @@ const {
 
 const settings = {
 	title: __('Button', 'ainoblocks'),
-	description: __('A single button within a multiple buttons block.', 'ainoblocks'),
+	description: __('A single button within a Buttons block.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	parent: ['ainoblocks/multiple-buttons'],
 	icon,
@@ -40,21 +40,28 @@ const settings = {
 		__('buttons', 'ainoblocks'),
 		__('aino blocks', 'ainoblocks'),
 	],
-	attributes,
-	styles: [{
+	styles: [
+		{
 			name: 'primary',
-			label: _x('Fill', 'ainoblocks'),
-			isDefault: true
+			/* translators: block style */
+			label: __( 'Fill', 'ainoblocks' ),
+			isDefault: true,
 		},
 		{
 			name: 'outline',
-			label: __('Outline', 'ainoblocks')
+			/* translators: block style */
+			label: __( 'Outline' ),
 		},
-		{
+		{ 
 			name: 'naked',
-			label: __('Naked', 'ainoblocks')
+			/* translators: block style */
+			label: __( 'Naked' ),
 		},
 	],
+	supports: {
+		"anchor": true
+	},
+	attributes,
 	edit,
 	save,
 };

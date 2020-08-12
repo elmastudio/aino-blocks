@@ -253,6 +253,7 @@ class arrowButtonEdit extends Component {
 							value={label}
 							placeholder={ __( "Add text…", 'ainoblocks' ) }
 							tagName='span'
+							multiline= 'false'
 							onChange={ value => {
 								setAttributes( { label: value })
 							} }

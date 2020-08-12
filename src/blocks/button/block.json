@@ -36,8 +36,8 @@
 			"default": "size__m"
 		},
 		"borderRadius": {
-			"type": "string",
-			"default": "radius-square"
+			"type": "number",
+			"default": 0
 		},
 		"borderWidth": {
 			"type": "number"
@@ -53,12 +53,6 @@
 			"type": "string"
 		},
 		"gradient": {
-			"type": "string"
-		},
-		"customBackgroundColor": {
-			"type": "string"
-		},
-		"customTextColor": {
 			"type": "string"
 		},
 		"label": {

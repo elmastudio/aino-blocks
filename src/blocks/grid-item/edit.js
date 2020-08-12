@@ -155,10 +155,10 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			[`col_end_m__${gridColumnEndMobile}`]: gridColumnEndMobile,
 			[`align-self__${alignItem}`]: alignItem,
 			[`justify-self__${justifyItem}`]: justifyItem,
+			'no-gutter': ! gutter,
 			'no-stacking': ! stacking,
 			'has-stacking': stacking === true && stackOrder ? stackOrder : undefined,
 			[`stack-order__${stackOrder}`]: stacking === true && stackOrder ? stackOrder : undefined,
-			'no-gutter': ! gutter,
 			'overlap-left': overlapLeft,
 			'overlap-right': overlapRight,
 			[`mt_d__${marginTopDesktop}`] : marginTopDesktop ? marginTopDesktop : undefined,
@@ -171,9 +171,10 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 
 		return <BlockListBlock {...props} className={classNames} />;
 	};
+
 }, 'addCustomClassName');
 
 addFilter('editor.BlockListBlock',
-	'ainoblocks/modify-spacing-save-settings',
+	'ainoblocks/grid-item',
 	addCustomClassName
 );
