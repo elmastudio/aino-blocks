@@ -55,6 +55,7 @@ New: Add first block pattern.
 New: Arrow Button Block.
 Enhance: Grid block.
 Update: Delete Featured Content block, since it can be replaced by Grid block.
+Bugfix: Card block padding.
 
 = 1.0.1 =
 Enhance: Card block spacing setting.
