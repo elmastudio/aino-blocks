@@ -109,7 +109,7 @@ class CardEdit extends Component {
 							onChange={(paddingTop) => setAttributes({ paddingTop })}
 							initialPosition={3}
 							min={0}
-							max={11}
+							max={19}
 							allowReset={true}
 						/>
 						<RangeControl
@@ -118,7 +118,7 @@ class CardEdit extends Component {
 							onChange={(paddingBottom) => setAttributes({ paddingBottom })}
 							initialPosition={3}
 							min={0}
-							max={11}
+							max={19}
 							allowReset={true}
 						/>
 						<RangeControl
@@ -127,7 +127,7 @@ class CardEdit extends Component {
 							onChange={(paddingLeft) => setAttributes({ paddingLeft })}
 							initialPosition={3}
 							min={0}
-							max={11}
+							max={19}
 							allowReset={true}
 						/>
 						<RangeControl
@@ -136,7 +136,7 @@ class CardEdit extends Component {
 							onChange={(paddingRight) => setAttributes({ paddingRight })}
 							initialPosition={3}
 							min={0}
-							max={11}
+							max={19}
 							allowReset={true}
 						/>
 					</PanelBody>
