@@ -33,20 +33,18 @@ export default function save({
 	const textClass = getColorClassName('color', textColor);
 	const backgroundClass = getColorClassName('background-color', backgroundColor);
 
-	const buttonClasses = classnames('wp-block-ainoblocks-button__link', size, {
-		'has-text-color': textColor || customTextColor,
-		[textClass]: textClass,
-		'has-background': backgroundColor || customBackgroundColor,
-		[backgroundClass]: backgroundClass,
+	const buttonClasses = classnames('wp-block-ainoblocks-button__link', size, borderRadius, {
+		'has-custom-background': backgroundColor,
+		'has-custom-text-color': textColor,
 		'is-uppercase': uppercase,
 		'no-border-radius': borderRadius === 0,
-		'no-border-width': borderWidth === 0,
+		'no-border': borderWidth === 0,
 	});
 
-	const buttonStyle = {
-		backgroundColor: backgroundClass ? customBackgroundColor : undefined,
-		boxShadow: customBackgroundColor ? 'inset 0 0 0 1px ' + customBackgroundColor : undefined,
-		color: textClass ? customTextColor : undefined,
+	const styles = {
+		backgroundColor: backgroundColor,
+		color: textColor,
+		borderColor: textColor,
 		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 		borderWidth: borderWidth ? borderWidth + 'px' : undefined,
 	};
@@ -57,7 +55,7 @@ export default function save({
 				tagName="a"
 				className={ buttonClasses }
 				href={ link }
-				style={ buttonStyle }
+				style={ styles }
 				value={ label }
 				target={ target }
 				rel ="noopener noreferrer"
