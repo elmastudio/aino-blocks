@@ -56,6 +56,7 @@ New: Arrow Button Block.
 Enhance: Grid block.
 Update: Delete Featured Content block, since it can be replaced by Grid block.
 Bugfix: Card block padding.
+Bugfix: Aino Buttons block settings.
 
 = 1.0.1 =
 Enhance: Card block spacing setting.

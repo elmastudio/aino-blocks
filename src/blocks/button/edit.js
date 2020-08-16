@@ -115,6 +115,7 @@ class buttonEdit extends Component {
 		const styles = {
 			backgroundColor: backgroundColor,
 			color: textColor,
+			borderColor: textColor,
 			borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 			borderWidth: borderWidth ? borderWidth + 'px' : undefined,
 		};
@@ -220,12 +221,12 @@ class buttonEdit extends Component {
 						tagName='div'
 						className={ classnames(
 							'wp-block-ainoblocks-button__link', size, borderRadius, {
-								'has-custom-background': backgroundColor,
-								'has-custom-text-color': textColor,
-								'is-uppercase': uppercase,
-								'no-border-radius': borderRadius === 0,
-								'no-border': borderWidth === 0,
-								}
+							'has-custom-background': backgroundColor,
+							'has-custom-text-color': textColor,
+							'is-uppercase': uppercase,
+							'no-border-radius': borderRadius === 0,
+							'no-border': borderWidth === 0,
+							}
 						) }
 						style={styles}
 						onChange={ value => {
