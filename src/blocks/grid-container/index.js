@@ -45,6 +45,49 @@ const settings = {
 		anchor: true,
 		html: true,
 	},
+	example: {
+		innerBlocks: [
+			{
+				name: 'ainoblocks/grid-item',
+				attributes: {
+					align: 'full',
+					gridColumnStartDesktop: 1,
+					gridColumnEndDesktop: 7,
+					stackOrder: 2,
+					stacking: false,
+				},
+				innerBlocks: [
+					{
+						name: 'core/image',
+						attributes: {
+							sizeSlug: 'large',
+							url: 'https://www.elmastudio.de/wp-content/uploads/2020/08/example01.jpg',
+						},
+					},
+				],
+			},
+			{
+				name: 'ainoblocks/grid-item',
+				attributes: {
+					align: 'full',
+					gridColumnStartDesktop: 5,
+					gridColumnEndDesktop: 13,
+					marginTopDesktop: 5,
+					stackOrder: 1,
+					stacking: true,
+				},
+				innerBlocks: [
+					{
+						name: 'core/image',
+						attributes: {
+							sizeSlug: 'large',
+							url: 'https://www.elmastudio.de/wp-content/uploads/2020/08/example02.jpg',
+						},
+					},
+				],
+			},
+		],
+	},
 	edit,
 	save,
 };
