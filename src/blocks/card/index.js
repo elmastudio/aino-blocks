@@ -39,19 +39,19 @@ const settings = {
 		attributes: {
 			borderRadius: '20',
 			shadowName: 'shadow-a',
-			paddingTop: '10',
-			paddingBottom: '10',
-			paddingLeft: '10',
-			paddingRight: '10',
+			paddingTop: '9',
+			paddingBottom: '9',
+			paddingLeft: '9',
+			paddingRight: '9',
 		},
 		innerBlocks: [
 			{
 				name: 'core/paragraph',
 				attributes: {
-					content: __( 'Include your content here...', 'ainoblocks' ),
+					content: __( 'You can include any kind of block inside a card. It is a great block to be used on coloured backgrounds.', 'ainoblocks' ),
 				},
 			},
-			],
+		],
 	},
 	edit,
 	save,

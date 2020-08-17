@@ -61,6 +61,15 @@ const settings = {
 	supports: {
 		"anchor": true
 	},
+	example: {
+			name: 'ainoblocks/button',
+			attributes: {
+				className: 'is-style-primary',
+				label: __( 'Call to Action', 'ainoblocks' ),
+				borderRadius: 'radius-circular',
+				size: 'size__l',
+			},
+	},
 	attributes,
 	edit,
 	save,

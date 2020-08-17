@@ -32,6 +32,14 @@ const settings = {
 		__('aino blocks', 'ainoblocks'),
 	],
 	attributes,
+	example: {
+		name: 'ainoblocks/badge',
+		attributes: {
+			content: __( 'Start something new', 'ainoblocks' ),
+			backgroundColor: '#3825b6',
+			borderRadius: 50,
+		},
+},
 	edit,
 	save,
 };
