@@ -31,6 +31,45 @@ const settings = {
 		__('aino blocks', 'ainoblocks'),
 	],
 	attributes,
+	example: {
+		innerBlocks: [
+			{
+			name: 'ainoblocks/card',
+				attributes: {
+					borderRadius: '0',
+					shadowName: 'shadow-b',
+					paddingTop: '3',
+					paddingBottom: '3',
+					paddingLeft: '9',
+					paddingRight: '9',
+					backgroundColor: '#eeeeee',
+				},
+				innerBlocks: [
+					{
+						name: 'core/paragraph',
+						attributes: {
+							content: __( 'We love to create designs for WordPress. The new editor offers exciting new opportunities to take WordPress to the next level.', 'ainoblocks' ),
+							fontSize: 'xl',
+						},
+					},
+					{
+						name: 'ainoblocks/author',
+						attributes: {
+							imgURL: 'https://wpaino.s3.eu-central-1.amazonaws.com/ellen.jpg',
+							imgID: '4637',
+							name: 'Ellen Bauer',
+							info: 'Frontend Developer',
+							imgSize: 'avatar-m',
+							layout: 'floated-left',
+							imgRadius: '100',
+							nameTextColor: '#111',
+							infoTextColor: '#111',
+						},
+					},
+				],
+			},
+		],
+	},
 	edit,
 	save,
 };

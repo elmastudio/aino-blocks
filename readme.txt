@@ -54,7 +54,8 @@ Yes, you can use block patterns if you have the latest Gutenberg plugin version 
 New: Add first block pattern.
 New: Arrow Button Block.
 Enhance: Grid block.
-Update: Delete Featured Content block, since it can be replaced by Grid block.
+Enhance: Add block preview examples.
+Update: Delete Featured Content and Image + Text blocks, since they can be replaced by the Grid block.
 Bugfix: Card block padding.
 Bugfix: Aino Buttons block settings.
 
