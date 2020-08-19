@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Register Custom Aino Block Patterns and Pattern Categories.
+ * Register Aino Block Patterns and Pattern Categories.
  */
 function ainoblocks_register_block_patterns() {
 	if ( function_exists( 'register_block_pattern' ) ) {

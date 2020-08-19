@@ -6,13 +6,10 @@
  * @since 0.0.1
  */
 
-namespace Aino_Blocks;
-
-add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_block_editor_assets' );
 /**
  * Enqueue block editor only JavaScript and CSS.
  */
-function enqueue_block_editor_assets() {
+function ainoblocks_enqueue_block_editor_assets() {
 
 	$block_path = '/dist/js/editor.blocks.build.js';
 	$style_path = '/dist/css/blocks.editor.build.css';
@@ -20,42 +17,43 @@ function enqueue_block_editor_assets() {
 	// Enqueue the bundled block JS file.
 	wp_enqueue_script(
 		'ainoblocks-js',
-		_get_plugin_url() . $block_path,
+		AINOBLOCKS_PLUGIN_URL . $block_path,
 		[ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor' ],
-		filemtime( _get_plugin_directory() . $block_path ),
+		filemtime( AINOBLOCKS_PLUGIN_DIR . $block_path ),
 		true
 	);
 
 	// Enqueue optional editor only styles.
 	wp_enqueue_style(
 		'ainoblocks-editor-css',
-		_get_plugin_url() . $style_path,
+		AINOBLOCKS_PLUGIN_URL . $style_path,
 		[],
-		filemtime( _get_plugin_directory() . $style_path )
+		filemtime( AINOBLOCKS_PLUGIN_DIR . $style_path )
 	);
 }
 
-add_action( 'enqueue_block_assets', __NAMESPACE__ . '\enqueue_assets' );
+add_action( 'enqueue_block_editor_assets', 'ainoblocks_enqueue_block_editor_assets' );
 
 /**
  * Enqueue front end and editor JavaScript and CSS assets.
  */
-function enqueue_assets() {
+function ainoblocks_enqueue_assets() {
 	$style_path = '/dist/css/blocks.style.build.css';
 	wp_enqueue_style(
 		'ainoblocks',
-		_get_plugin_url() . $style_path,
+		AINOBLOCKS_PLUGIN_URL . $style_path,
 		null,
-		filemtime( _get_plugin_directory() . $style_path )
+		filemtime( AINOBLOCKS_PLUGIN_DIR . $style_path )
 	);
 }
 
-add_action( 'enqueue_block_assets', __NAMESPACE__ . '\enqueue_frontend_assets' );
+add_action( 'enqueue_block_assets', 'ainoblocks_enqueue_assets' );
+
 
 /**
  * Enqueue frontend JavaScript and CSS assets.
  */
-function enqueue_frontend_assets() {
+function ainoblocks_enqueue_frontend_assets() {
 
 	// If in the backend, bail out.
 	if ( is_admin() ) {
@@ -65,9 +63,11 @@ function enqueue_frontend_assets() {
 	$block_path = '/dist/js/frontend.blocks.build.js';
 	wp_enqueue_script(
 		'ainoblocks-frontend',
-		_get_plugin_url() . $block_path,
+		AINOBLOCKS_PLUGIN_URL . $block_path,
 		[],
-		filemtime( _get_plugin_directory() . $block_path ),
+		filemtime( AINOBLOCKS_PLUGIN_DIR . $block_path ),
 		true
 	);
 }
+
+add_action( 'enqueue_block_assets', 'ainoblocks_enqueue_frontend_assets' );

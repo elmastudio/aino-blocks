@@ -3,7 +3,7 @@
  * Plugin Name: Aino Blocks - Creative Gutenberg Blocks
  * Plugin URI : https: //wpaino.com
  * Description: A collection of page building blocks for creatives. Let's start to build websites that stand out from the crowd.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Requires at least: 5.5
  * Tested up to: 5.5
  * Author: Elmastudio
@@ -21,40 +21,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Gets this plugin's absolute directory path.
- *
- * @since 0.0.1
- * @ignore
- * @access private
- *
- * @return string
- */
-function _get_plugin_directory() {
-	return __DIR__;
-}
-
-/**
- * Gets this plugin's URL.
- *
- * @since 0.0.1
- * @ignore
- * @access private
- *
- * @return string
- */
-function _get_plugin_url() {
-	static $plugin_url;
-
-	if ( empty( $plugin_url ) ) {
-		$plugin_url = plugins_url( null, __FILE__ );
-	}
-
-	return $plugin_url;
-}
+// Define most essential constants.
+define( 'AINOBLOCKS_VERSION', '1.1.1' );
+define( 'AINOBLOCKS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'AINOBLOCKS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 // Enqueue JS and CSS.
-require_once __DIR__ . '/lib/enqueue-scripts.php';
+require_once AINOBLOCKS_PLUGIN_DIR . '/lib/enqueue-scripts.php';
 
 // Block Patterns.
-require_once __DIR__ . '/lib/block-patterns.php';
+require_once AINOBLOCKS_PLUGIN_DIR . '/lib/block-patterns.php';
