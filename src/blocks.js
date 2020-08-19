@@ -30,7 +30,7 @@ import * as button from './blocks/button';
 import * as multipleButtons from './blocks/multiple-buttons';
 import * as arrowButton from './blocks/arrow-button';
 
-export function registerBlocks() {
+export function registerAinoblocksBlocks() {
 	[
 		gridItem,
 		gridContainer,
@@ -56,4 +56,4 @@ export function registerBlocks() {
 		});
 	});
 }
-registerBlocks();
+registerAinoblocksBlocks();
