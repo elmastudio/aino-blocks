@@ -32,6 +32,9 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+### 1.1.2  
+**Bugfix:** Fixed typo in plugin header information.  
+
 ### 1.1.1  
 **Bugfix:** Added unique function names, namespaces, defines.  
 
