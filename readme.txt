@@ -5,7 +5,7 @@ Contributors     : elmastudio
 Tags             : page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.5
 Tested up to     : 5.5
-Stable tag       : 1.1.1
+Stable tag       : 1.1.2
 License          : GPLv2 or later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,6 +49,9 @@ After the Aino blocks plugin is installed, you will see the Aino blocks collecti
 Yes, you can use block patterns if you have the latest Gutenberg plugin version installed. You can see the first Aino blocks pattern inside the pattern library. We will create more free block patterns shortly.
 
 == Changelog ==
+
+= 1.1.2 =
+Bugfix: Fixed typo in plugin header information.
 
 = 1.1.1 =
 Bugfix: Added unique function names, namespaces, defines.
