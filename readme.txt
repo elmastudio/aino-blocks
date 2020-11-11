@@ -4,8 +4,8 @@ Plugin URI       : https: //wpaino.com
 Contributors     : elmastudio
 Tags             : page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.5
-Tested up to     : 5.5
-Stable tag       : 1.1.2
+Tested up to     : 5.5.3
+Stable tag       : 1.2.0
 License          : GPLv2 or later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
 

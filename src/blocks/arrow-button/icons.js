@@ -16,8 +16,10 @@ icons.linkOff =
 </SVG>
 
 icons.arrow =
-<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
-<Path d="M4 0h28v28h-4l-0.004-21.172-25.168 25.172-2.828-2.828 25.168-25.172h-21.168z"></Path>
+<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+<Path d="M1 8h-1v40h1z"></Path>
+<Path d="M40 48v-1h-40v1z"></Path>
+<Path d="M46.646 0.646l0.707 0.707-46 46-0.707-0.707z"></Path>
 </SVG>
 
 export default icons;

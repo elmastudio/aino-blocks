@@ -4677,8 +4677,8 @@ p.pr__19,
   --n-s-14: -9rem;
   --n-s-15: -11rem;
   --n-s-16: -13rem;
-  --n-s-17: 15.5rem;
-  --n-s-18: 18rem; }
+  --n-s-17: -15.5rem;
+  --n-s-18: -18rem; }
 
 .wp-block-ainoblocks-grid-item {
   grid-row-start: 1;
@@ -5075,18 +5075,24 @@ p.pr__19,
     .site-content .hentry .alignfull .wp-block-ainoblocks-grid-container.alignwide {
       padding-left: 1rem;
       padding-right: 1rem; } }
-  @media (min-width: 64em) {
+  @media (min-width: 80em) {
     .wp-block-ainoblocks-grid-container,
     .site-content .hentry .wp-block-ainoblocks-grid-container.alignwide,
     .site-content .hentry .alignfull .wp-block-ainoblocks-grid-container.alignwide {
       padding-left: 1.5rem;
       padding-right: 1.5rem; } }
+  @media (min-width: 96em) {
+    .wp-block-ainoblocks-grid-container,
+    .site-content .hentry .wp-block-ainoblocks-grid-container.alignwide,
+    .site-content .hentry .alignfull .wp-block-ainoblocks-grid-container.alignwide {
+      padding-left: 0;
+      padding-right: 0; } }
   @media (min-width: 96rem) {
     .wp-block-ainoblocks-grid-container,
     .site-content .hentry .wp-block-ainoblocks-grid-container.alignwide,
     .site-content .hentry .alignfull .wp-block-ainoblocks-grid-container.alignwide {
       width: auto;
-      max-width: 96rem !important; } }
+      max-width: 93rem !important; } }
   .wp-block-ainoblocks-grid-container__inner,
   .site-content .hentry .wp-block-ainoblocks-grid-container.alignwide__inner,
   .site-content .hentry .alignfull .wp-block-ainoblocks-grid-container.alignwide__inner {
@@ -5094,7 +5100,7 @@ p.pr__19,
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     justify-content: center;
-    max-width: 90rem;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     word-break: break-word;
@@ -5103,25 +5109,28 @@ p.pr__19,
   max-width: 90rem;
   display: block;
   margin: 0 auto;
-  padding-top: 48px;
+  padding-top: 100px;
   padding-bottom: 48px; }
   @media (min-width: 48em) {
     .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
-      padding-left: 24px;
-      padding-right: 24px; } }
-  @media (min-width: 96em) {
+      padding: 120px 2rem 64px; } }
+  @media (min-width: 64em) {
+    .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
+      padding-top: 80px;
+      padding-bottom: 80px; } }
+  @media (min-width: 80em) {
     .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
       padding-left: 0;
-      padding-right: 0; } }
+      padding-right: 0;
+      padding-top: 96px;
+      padding-bottom: 96px; } }
   @media (min-width: 48em) {
     .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
-      padding-top: 144px;
-      padding-bottom: 144px;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: 100%;
       align-items: center; } }
-  @media (min-width: 76.5em) {
+  @media (min-width: 80em) {
     .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
       height: auto;
       min-height: 100vh; } }
@@ -5132,11 +5141,10 @@ p.pr__19,
 .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__media,
 .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__content,
 .wp-block-ainoblocks-hero .block-editor-inner-blocks {
-  padding-left: 24px;
-  padding-right: 24px; }
+  padding-left: 16px;
+  padding-right: 16px; }
 
 .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__media {
-  padding-top: 48px;
   grid-column-start: 7;
   grid-column-end: 13;
   grid-row-start: 1; }
@@ -5179,8 +5187,7 @@ p.pr__19,
   .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__content h5,
   .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__content h6 {
     margin-top: 0;
-    margin-bottom: 0;
-    padding: 0; }
+    margin-bottom: 0; }
   .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__content .hero-text {
     margin-top: 16px; }
   .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__content .wp-block-ainoblocks-multiple-buttons {
@@ -5242,10 +5249,7 @@ p.pr__19,
   padding: 0; }
 
 .tpl-hero.has-header-search .wp-block-ainoblocks-hero__container {
-  padding-top: 160px; }
-
-.tpl-hero .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
-  padding-top: 80px; }
+  padding-top: 132px; }
 .wp-block-ainoblocks-card {
   box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.15), 0 0 4px 0 rgba(0, 0, 0, 0.04);
   -webkit-box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.15), 0 0 4px 0 rgba(0, 0, 0, 0.04); }

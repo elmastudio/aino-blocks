@@ -931,8 +931,7 @@
   grid-area: hero-media;
   width: 100% !important; }
 .components-panel__icon {
-  -webkit-filter: none !important;
-          filter: none !important; }
+  filter: none !important; }
 
 .wp-block-ainoblocks-card {
   position: relative; }
