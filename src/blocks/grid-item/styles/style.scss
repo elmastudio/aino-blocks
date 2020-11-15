@@ -505,22 +505,22 @@
 
 	&.overlap-right {
 		grid-column-end: 13;
-		margin-right: -1.5rem;
+		margin-right: -1rem;
 	}
 
 	&.overlap-left {
 		grid-column-start: 1;
-		margin-left: -1.5rem;
+		margin-left: -1rem;
 	}
 
 	@media (min-width: 48em) {
 
 		&.overlap-right {
-			margin-right: -3rem;
+			margin-right: -2rem;
 		}
 
 		&.overlap-left {
-			margin-left: -3rem;
+			margin-left: -2rem;
 		}
 	}
 

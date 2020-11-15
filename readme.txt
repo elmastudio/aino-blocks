@@ -50,6 +50,9 @@ Yes, you can use block patterns if you have the latest Gutenberg plugin version 
 
 == Changelog ==
 
+= 1.2.0 =
+Enhance: Block icon update.
+
 = 1.1.2 =
 Bugfix: Fixed typo in plugin header information.
 
