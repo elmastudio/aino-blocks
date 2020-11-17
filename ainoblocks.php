@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define most essential constants.
-define( 'AINOBLOCKS_VERSION', '1.1.1' );
+define( 'AINOBLOCKS_VERSION', '1.2.0' );
 define( 'AINOBLOCKS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'AINOBLOCKS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 

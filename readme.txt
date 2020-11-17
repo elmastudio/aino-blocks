@@ -1,13 +1,13 @@
 === Aino Blocks ===
-Author URI       : https: //www.elmastudio.de/en
-Plugin URI       : https: //wpaino.com
-Contributors     : elmastudio
-Tags             : page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
+Author URI: https://www.elmastudio.de/en
+Plugin URI: https://wpaino.com
+Contributors: elmastudio
+Tags: page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.5
-Tested up to     : 5.5.3
-Stable tag       : 1.2.0
-License          : GPLv2 or later
-License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
+Tested up to: 5.5.3
+Stable tag: 1.2.0
+License: GPLv2 or later
+License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
 A WordPress block collection for page building.
 
@@ -18,14 +18,13 @@ The Aino blocks plugin brings you a collection of page building blocks for the G
 ## Currently available blocks
 * Grid block
 * Hero block
-* Featured Content block
 * Card block
 * Badge block
 * Author block
 * Testimonial block
 * Buttons block
 * Arrow button block
-* Image & Text block
+* Sticker block
 
 == Installation ==
 
@@ -51,6 +50,7 @@ Yes, you can use block patterns if you have the latest Gutenberg plugin version 
 == Changelog ==
 
 = 1.2.0 =
+New: Sticker block.
 Enhance: Block icon update.
 
 = 1.1.2 =
@@ -61,10 +61,10 @@ Bugfix: Added unique function names, namespaces, defines.
 
 = 1.1.0 =
 New: Add first block pattern.
-New: Arrow Button Block.
+New: Arrow Button block.
 Enhance: Grid block.
 Enhance: Add block preview examples.
-Update: Delete Featured Content and Image + Text blocks, since they can be replaced by the Grid block.
+Update: Delete Featured Content and Image + Text blocks, since they can be replaced with the Grid block.
 Bugfix: Card block padding.
 Bugfix: Aino Buttons block settings.
 

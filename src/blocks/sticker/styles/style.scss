@@ -1,0 +1,13 @@
+.wp-block-ainoblocks-sticker {
+	max-width: auto !important;
+
+	&__content {
+		background: greenyellow;
+		width: 200px;
+		height: 200px;
+		display: flex;
+		color: #111111;
+		justify-content: center;
+		align-items: center;
+	}
+}

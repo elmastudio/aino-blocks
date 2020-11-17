@@ -29,6 +29,7 @@ import * as testimonial from './blocks/testimonial';
 import * as button from './blocks/button';
 import * as multipleButtons from './blocks/multiple-buttons';
 import * as arrowButton from './blocks/arrow-button';
+import * as sticker from './blocks/sticker';
 
 export function registerAinoblocksBlocks() {
 	[
@@ -42,6 +43,7 @@ export function registerAinoblocksBlocks() {
 		multipleButtons,
 		arrowButton,
 		hero,
+		sticker,
 	].forEach(block => {
 		if (!block) {
 			return;
