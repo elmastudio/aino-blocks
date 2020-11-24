@@ -14,9 +14,11 @@ const {
 	ToggleControl,
 	SelectControl,
 	RangeControl,
+	__experimentalNumberControl,
 	Popover,
 	ToolbarButton,
 	ToolbarGroup,
+	TabPanel,
 } = wp.components;
 
 const {
@@ -84,6 +86,7 @@ class stickerEdit extends Component {
 			setAttributes,
 			className,
 			isSelected,
+			onSelect,
 		} = this.props;
 
 		const {
@@ -91,19 +94,33 @@ class stickerEdit extends Component {
 			url,
 			link,
 			target,
-			size,
+			stickerSize,
+			fontSize,
 			borderRadius,
 			borderWidth,
 			uppercase,
 			opensInNewTab,
 			backgroundColor,
 			textColor,
+			borderColor
 		} = attributes;
+
+		const fontSizeOptions = [
+			{ value: 'font__ssx', label: __('SSX', 'ainoblocks') },
+			{ value: 'font__sx', label: __('SX', 'ainoblocks') },
+			{ value: 'font__s', label: __('S', 'ainoblocks') },
+			{ value: 'font__m', label: __('M', 'ainoblocks') },
+			{ value: 'font__l', label: __('L', 'ainoblocks') },
+			{ value: 'font__xl', label: __('XL', 'ainoblocks') },
+			{ value: 'font__xxl', label: __('XXL', 'ainoblocks') },
+			{ value: 'font__xxxl', label: __('3XL', 'ainoblocks') },
+			{ value: 'font__xxxxl', label: __('4XL', 'ainoblocks') }
+		];
 
 		const styles = {
 			backgroundColor: backgroundColor,
 			color: textColor,
-			borderColor: textColor,
+			borderColor: borderColor,
 			borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 			borderWidth: borderWidth ? borderWidth + 'px' : undefined,
 		};
@@ -133,6 +150,10 @@ class stickerEdit extends Component {
 				/>
 			</Popover>
 		);
+		
+		const stickerSizeTooltipContent = stickerSize => `size ${stickerSize}`
+		const borderRadiusTooltipContent = borderRadius => `${borderRadius}px`
+		const borderWidthTooltipContent = borderWidth => `${borderWidth}px`
 
 		return (
 			<Fragment>
@@ -148,24 +169,50 @@ class stickerEdit extends Component {
 				</BlockControls>
 				{ linkControl }
 				<InspectorControls>
-					<PanelBody title={__('Sticker Settings', 'ainoblocks')}>
+				<PanelBody
+						title={__('Sticker Settings', 'ainoblocks')}
+					>
 						<RangeControl
+								label={__('Sitcker Size', 'ainoblocks')}
+								value={stickerSize}
+								onChange={(stickerSize) => setAttributes({ stickerSize })}
+								min={1}
+								max={9}
+								allowReset={true}
+								resetFallbackValue={7}
+								renderTooltipContent={ stickerSizeTooltipContent }
+							/>
+							<RangeControl
 							label={__('Border Radius', 'ainoblocks')}
 							value={borderRadius}
 							onChange={(borderRadius) => setAttributes({ borderRadius })}
 							min={0}
-							max={100}
-							initialPosition={100}
+							max={400}
+							initialPosition={0}
 							allowReset={true}
+							renderTooltipContent={ borderRadiusTooltipContent }
 						/>
 						<RangeControl
 							label={__('Border Width', 'ainoblocks')}
+							help={__('Do not forget to choose a border color in the Color settings.', 'ainoblocks')}
 							value={borderWidth}
 							onChange={(borderWidth) => setAttributes({ borderWidth })}
 							min={0}
-							max={20}
+							max={50}
 							initialPosition={0}
 							allowReset={true}
+							renderTooltipContent={ borderWidthTooltipContent }
+						/>
+				</PanelBody>
+					<PanelBody
+						title={__('Typography', 'ainoblocks')}
+						initialOpen={false}
+					>
+						<SelectControl
+							label={__('Font Size', 'ainoblocks')}
+							value={fontSize}
+							options={fontSizeOptions}
+							onChange={fontSize => setAttributes({ fontSize })}
 						/>
 						<ToggleControl
 							label={__('Uppercase Text', 'ainoblocks')}
@@ -192,22 +239,29 @@ class stickerEdit extends Component {
 								},
 								label: __('Text Color', 'ainoblocks'),
 							},
+							{
+								value: borderColor,
+								onChange: borderColor => {
+									setAttributes({ borderColor });
+								},
+								label: __('Border Color', 'ainoblocks'),
+							},
 						]}
 					>
 					</PanelColorSettings>
 				</InspectorControls>
 					<div className={classnames(className)}>
 					<RichText
-						placeholder={ __( "Start writing…", 'ainoblocks' ) }
+						placeholder={ __( "Add text…", 'ainoblocks' ) }
 						value={ label }
 						tagName='div'
 						className={ classnames(
-							'wp-block-ainoblocks-sticker__content', size, borderRadius, {
+							'wp-block-ainoblocks-sticker__content', fontSize, {
 							'has-custom-background': backgroundColor,
 							'has-custom-text-color': textColor,
+							'has-custom-border-color': borderColor,
 							'is-uppercase': uppercase,
-							'no-border-radius': borderRadius === 0,
-							'no-border': borderWidth === 0,
+							[`size__${stickerSize}`] : stickerSize ? stickerSize : undefined,
 							}
 						) }
 						style={styles}

@@ -29,7 +29,7 @@ const {
 
 const settings = {
 	title: __('Sticker', 'ainoblocks'),
-	description: __('A circle sticker to highlight featured elements or new products on a website.', 'ainoblocks'),
+	description: __('A circle sticker with a text slogan to highlight featured elements.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [

@@ -18,26 +18,32 @@ export default function save({
 		label,
 		backgroundColor,
 		textColor,
+		borderColor,
 		target,
 		link,
+		stickerSize,
 		borderRadius,
 		borderWidth,
 		uppercase,
+		fontSize,
 	} = attributes;
 
 	const textClass = getColorClassName('color', textColor);
+	const borderClass = getColorClassName('border-color', borderColor);
 	const backgroundClass = getColorClassName('background-color', backgroundColor);
 
-	const stickerClasses = classnames('wp-block-ainoblocks-sticker__content', {
+	const stickerClasses = classnames('wp-block-ainoblocks-sticker__content', fontSize, {
+		[`size__${stickerSize}`] : stickerSize ? stickerSize : undefined,
 		'has-custom-background': backgroundColor,
 		'has-custom-text-color': textColor,
+		'has-custom-border-color': borderColor,
 		'is-uppercase': uppercase,
 	});
 
 	const styles = {
 		backgroundColor: backgroundColor,
 		color: textColor,
-		borderColor: textColor,
+		borderColor: borderColor,
 		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 		borderWidth: borderWidth ? borderWidth + 'px' : undefined,
 	};

@@ -6120,10 +6120,222 @@ p.pr__19,
 .wp-block-ainoblocks-sticker {
   max-width: auto !important; }
   .wp-block-ainoblocks-sticker__content {
-    background: greenyellow;
-    width: 200px;
-    height: 200px;
+    background: #ffffff;
     display: flex;
     color: #111111;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center;
+    line-height: 1;
+    border: 0 solid transparent; }
+    .wp-block-ainoblocks-sticker__content.is-uppercase {
+      text-transform: uppercase; }
+    .wp-block-ainoblocks-sticker__content.size__1 {
+      width: 64px;
+      height: 64px;
+      padding: 8px; }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.size__1 {
+          width: 80px;
+          height: 80px; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.size__1 {
+          width: 96px;
+          height: 96px; } }
+    .wp-block-ainoblocks-sticker__content.size__2 {
+      width: 64px;
+      height: 64px;
+      padding: 8px; }
+      @media (min-width: 48em) {
+        .wp-block-ainoblocks-sticker__content.size__2 {
+          width: 80px;
+          height: 80px; } }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.size__2 {
+          width: 96px;
+          height: 96px; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.size__2 {
+          width: 120px;
+          height: 120px; } }
+    .wp-block-ainoblocks-sticker__content.size__3 {
+      width: 80px;
+      height: 80px;
+      padding: 12px; }
+      @media (min-width: 48em) {
+        .wp-block-ainoblocks-sticker__content.size__3 {
+          width: 96px;
+          height: 96px; } }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.size__3 {
+          width: 120px;
+          height: 120px; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.size__3 {
+          width: 144px;
+          height: 144px; } }
+    .wp-block-ainoblocks-sticker__content.size__4 {
+      width: 80px;
+      height: 80px;
+      padding: 12px; }
+      @media (min-width: 48em) {
+        .wp-block-ainoblocks-sticker__content.size__4 {
+          width: 96px;
+          height: 96px; } }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.size__4 {
+          width: 120px;
+          height: 120px; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.size__4 {
+          width: 176px;
+          height: 176px;
+          padding: 20px; } }
+    .wp-block-ainoblocks-sticker__content.size__5 {
+      width: 96px;
+      height: 96px;
+      padding: 12px; }
+      @media (min-width: 48em) {
+        .wp-block-ainoblocks-sticker__content.size__5 {
+          width: 120px;
+          height: 120px;
+          padding: 16px; } }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.size__5 {
+          width: 144px;
+          height: 144px; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.size__5 {
+          width: 208px;
+          height: 208px;
+          padding: 20px; } }
+    .wp-block-ainoblocks-sticker__content.size__6 {
+      width: 120px;
+      height: 120px;
+      padding: 16px; }
+      @media (min-width: 48em) {
+        .wp-block-ainoblocks-sticker__content.size__6 {
+          width: 144px;
+          height: 144px; } }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.size__6 {
+          width: 176px;
+          height: 176px;
+          padding: 20px; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.size__6 {
+          width: 248px;
+          height: 248px; } }
+    .wp-block-ainoblocks-sticker__content.size__7 {
+      width: 144px;
+      height: 144px;
+      padding: 16px; }
+      @media (min-width: 48em) {
+        .wp-block-ainoblocks-sticker__content.size__7 {
+          width: 176px;
+          height: 176px;
+          padding: 20px; } }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.size__7 {
+          width: 208px;
+          height: 208px; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.size__7 {
+          width: 288px;
+          height: 288px; } }
+    .wp-block-ainoblocks-sticker__content.size__8 {
+      width: 176px;
+      height: 176px;
+      padding: 20px; }
+      @media (min-width: 48em) {
+        .wp-block-ainoblocks-sticker__content.size__8 {
+          width: 208px;
+          height: 208px;
+          padding: 24px; } }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.size__8 {
+          width: 248px;
+          height: 248px; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.size__8 {
+          width: 336px;
+          height: 336px; } }
+    .wp-block-ainoblocks-sticker__content.size__9 {
+      width: 208px;
+      height: 208px;
+      padding: 24px; }
+      @media (min-width: 48em) {
+        .wp-block-ainoblocks-sticker__content.size__9 {
+          width: 248px;
+          height: 248px; } }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.size__9 {
+          width: 288px;
+          height: 288px; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.size__9 {
+          width: 400px;
+          height: 400px; } }
+    .wp-block-ainoblocks-sticker__content.font__ssx {
+      font-size: 0.75rem; }
+    .wp-block-ainoblocks-sticker__content.font__sx {
+      font-size: 0.875rem; }
+    .wp-block-ainoblocks-sticker__content.font__s {
+      font-size: 1rem; }
+    .wp-block-ainoblocks-sticker__content.font__m {
+      font-size: 1.125rem; }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.font__m {
+          font-size: 1.25rem; } }
+    .wp-block-ainoblocks-sticker__content.font__l {
+      font-size: 1.125rem; }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.font__l {
+          font-size: 1.375rem; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.font__l {
+          font-size: 1.5rem; } }
+    .wp-block-ainoblocks-sticker__content.font__xl {
+      font-size: 1.375rem; }
+      @media (min-width: 48em) {
+        .wp-block-ainoblocks-sticker__content.font__xl {
+          font-size: 1.5rem; } }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.font__xl {
+          font-size: 1.625rem; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.font__xl {
+          font-size: 1.75rem; } }
+    .wp-block-ainoblocks-sticker__content.font__xxl {
+      font-size: 1.5rem; }
+      @media (min-width: 48em) {
+        .wp-block-ainoblocks-sticker__content.font__xxl {
+          font-size: 1.75rem; } }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.font__xxl {
+          font-size: 1.875rem; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.font__xxl {
+          font-size: 2.125rem; } }
+    .wp-block-ainoblocks-sticker__content.font__xxxl {
+      font-size: 1.625rem; }
+      @media (min-width: 48em) {
+        .wp-block-ainoblocks-sticker__content.font__xxxl {
+          font-size: 2rem; } }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.font__xxxl {
+          font-size: 2.25rem; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.font__xxxl {
+          font-size: 2.5rem; } }
+    .wp-block-ainoblocks-sticker__content.font__xxxxl {
+      font-size: 1.875rem; }
+      @media (min-width: 48em) {
+        .wp-block-ainoblocks-sticker__content.font__xxxxl {
+          font-size: 2.25rem; } }
+      @media (min-width: 64em) {
+        .wp-block-ainoblocks-sticker__content.font__xxxxl {
+          font-size: 2.625rem; } }
+      @media (min-width: 80em) {
+        .wp-block-ainoblocks-sticker__content.font__xxxxl {
+          font-size: 3rem; } }

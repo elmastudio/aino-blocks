@@ -31,13 +31,17 @@
 		"placeholder": {
 			"type": "string"
 		},
-		"size": {
+		"stickerSize": {
+			"type": "number",
+			"default": 7
+		},
+		"fontSize": {
 			"type": "string",
-			"default": "size__m"
+			"default": "font__m"
 		},
 		"borderRadius": {
 			"type": "number",
-			"default": 100
+			"default": 400
 		},
 		"borderWidth": {
 			"type": "number"
@@ -50,6 +54,9 @@
 			"type": "string"
 		},
 		"textColor": {
+			"type": "string"
+		},
+		"borderColor": {
 			"type": "string"
 		},
 		"gradient": {
