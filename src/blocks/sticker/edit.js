@@ -102,7 +102,8 @@ class stickerEdit extends Component {
 			opensInNewTab,
 			backgroundColor,
 			textColor,
-			borderColor
+			borderColor,
+			rotate,
 		} = attributes;
 
 		const fontSizeOptions = [
@@ -117,11 +118,17 @@ class stickerEdit extends Component {
 			{ value: 'font__xxxxl', label: __('4XL', 'ainoblocks') }
 		];
 
+		const rotateOptions = [
+			{ value: 'rotate__none', label: __('none', 'ainoblocks') },
+			{ value: 'rotate__default', label: __('by default', 'ainoblocks') },
+			{ value: 'rotate__hover', label: __('on hover', 'ainoblocks') }
+		];
+
 		const styles = {
 			backgroundColor: backgroundColor,
 			color: textColor,
 			borderColor: borderColor,
-			borderRadius: borderRadius ? borderRadius + 'px' : undefined,
+			borderRadius: borderRadius ? borderRadius + '%' : undefined,
 			borderWidth: borderWidth ? borderWidth + 'px' : undefined,
 		};
 
@@ -187,7 +194,7 @@ class stickerEdit extends Component {
 							value={borderRadius}
 							onChange={(borderRadius) => setAttributes({ borderRadius })}
 							min={0}
-							max={400}
+							max={100}
 							initialPosition={0}
 							allowReset={true}
 							renderTooltipContent={ borderRadiusTooltipContent }
@@ -249,6 +256,17 @@ class stickerEdit extends Component {
 						]}
 					>
 					</PanelColorSettings>
+					<PanelBody
+						title={__('Animation', 'ainoblocks')}
+						initialOpen={false}
+					>
+						<SelectControl
+							label={__('Rotate', 'ainoblocks')}
+							value={rotate}
+							options={rotateOptions}
+							onChange={rotate => setAttributes({ rotate })}
+						/>
+					</PanelBody>
 				</InspectorControls>
 					<div className={classnames(className)}>
 					<RichText
@@ -256,7 +274,7 @@ class stickerEdit extends Component {
 						value={ label }
 						tagName='div'
 						className={ classnames(
-							'wp-block-ainoblocks-sticker__content', fontSize, {
+							'wp-block-ainoblocks-sticker__content', fontSize, rotate, {
 							'has-custom-background': backgroundColor,
 							'has-custom-text-color': textColor,
 							'has-custom-border-color': borderColor,

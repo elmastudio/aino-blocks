@@ -26,13 +26,14 @@ export default function save({
 		borderWidth,
 		uppercase,
 		fontSize,
+		rotate,
 	} = attributes;
 
 	const textClass = getColorClassName('color', textColor);
 	const borderClass = getColorClassName('border-color', borderColor);
 	const backgroundClass = getColorClassName('background-color', backgroundColor);
 
-	const stickerClasses = classnames('wp-block-ainoblocks-sticker__content', fontSize, {
+	const stickerClasses = classnames('wp-block-ainoblocks-sticker__content', fontSize, rotate, {
 		[`size__${stickerSize}`] : stickerSize ? stickerSize : undefined,
 		'has-custom-background': backgroundColor,
 		'has-custom-text-color': textColor,

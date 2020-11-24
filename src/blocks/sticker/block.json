@@ -67,6 +67,9 @@
 		},
 		"opensInNewTab": {
 			"type": "boolean"
+		},
+		"rotate": {
+			"type": "string"
 		}
 	}
 }
