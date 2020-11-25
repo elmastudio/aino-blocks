@@ -27,6 +27,7 @@ export default function save({
 		uppercase,
 		fontSize,
 		rotate,
+		rotateStart,
 	} = attributes;
 
 	const textClass = getColorClassName('color', textColor);
@@ -45,8 +46,9 @@ export default function save({
 		backgroundColor: backgroundColor,
 		color: textColor,
 		borderColor: borderColor,
-		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
+		borderRadius: borderRadius ? borderRadius + '%' : undefined,
 		borderWidth: borderWidth ? borderWidth + 'px' : undefined,
+		transform: `rotateZ(${rotateStart}deg)`
 	};
 
 	return (

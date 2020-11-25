@@ -41,7 +41,7 @@
 		},
 		"borderRadius": {
 			"type": "number",
-			"default": 400
+			"default": 100
 		},
 		"borderWidth": {
 			"type": "number"
@@ -70,6 +70,10 @@
 		},
 		"rotate": {
 			"type": "string"
+		},
+		"rotateStart": {
+			"type": "number",
+			"default": 0
 		}
 	}
 }

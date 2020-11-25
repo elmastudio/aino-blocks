@@ -104,6 +104,7 @@ class stickerEdit extends Component {
 			textColor,
 			borderColor,
 			rotate,
+			rotateStart,
 		} = attributes;
 
 		const fontSizeOptions = [
@@ -120,7 +121,7 @@ class stickerEdit extends Component {
 
 		const rotateOptions = [
 			{ value: 'rotate__none', label: __('none', 'ainoblocks') },
-			{ value: 'rotate__default', label: __('by default', 'ainoblocks') },
+			{ value: 'rotate__infinite', label: __('infinite', 'ainoblocks') },
 			{ value: 'rotate__hover', label: __('on hover', 'ainoblocks') }
 		];
 
@@ -130,6 +131,8 @@ class stickerEdit extends Component {
 			borderColor: borderColor,
 			borderRadius: borderRadius ? borderRadius + '%' : undefined,
 			borderWidth: borderWidth ? borderWidth + 'px' : undefined,
+			transform: borderWidth ? borderWidth + 'px' : undefined,
+			transform: `rotateZ(${rotateStart}deg)`,
 		};
 
 		const urlIsSet = !! url;
@@ -161,6 +164,7 @@ class stickerEdit extends Component {
 		const stickerSizeTooltipContent = stickerSize => `size ${stickerSize}`
 		const borderRadiusTooltipContent = borderRadius => `${borderRadius}px`
 		const borderWidthTooltipContent = borderWidth => `${borderWidth}px`
+		const rotateStartTooltipContent = rotateStart => `${rotateStart}degrees`
 
 		return (
 			<Fragment>
@@ -189,7 +193,7 @@ class stickerEdit extends Component {
 								resetFallbackValue={7}
 								renderTooltipContent={ stickerSizeTooltipContent }
 							/>
-							<RangeControl
+						<RangeControl
 							label={__('Border Radius', 'ainoblocks')}
 							value={borderRadius}
 							onChange={(borderRadius) => setAttributes({ borderRadius })}
@@ -259,12 +263,22 @@ class stickerEdit extends Component {
 					<PanelBody
 						title={__('Animation', 'ainoblocks')}
 						initialOpen={false}
-					>
+						>
 						<SelectControl
 							label={__('Rotate', 'ainoblocks')}
 							value={rotate}
 							options={rotateOptions}
 							onChange={rotate => setAttributes({ rotate })}
+						/>
+						<RangeControl
+							label={__('Starting Position', 'ainoblocks')}
+							value={rotateStart}
+							onChange={(rotateStart) => setAttributes({ rotateStart })}
+							min={-360}
+							max={360}
+							initialPosition={0}
+							allowReset={true}
+							renderTooltipContent={ rotateStartTooltipContent }
 						/>
 					</PanelBody>
 				</InspectorControls>
