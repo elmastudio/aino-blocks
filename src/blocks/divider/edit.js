@@ -11,21 +11,12 @@ const { Component, Fragment } = wp.element;
 const { compose, withInstanceId } = wp.compose;
 const {
 	PanelBody,
-	ToggleControl,
-	SelectControl,
 	RangeControl,
-	__experimentalNumberControl,
-	ToolbarButton,
-	ToolbarGroup,
 } = wp.components;
 
 const {
-	BlockControls,
-	BlockIcon,
 	InspectorControls,
-	withColors,
 	PanelColorSettings,
-	ColorPalette,
 } = wp.blockEditor;
 
 /**
@@ -43,8 +34,6 @@ class dividerEdit extends Component {
 			attributes,
 			setAttributes,
 			className,
-			isSelected,
-			onSelect,
 		} = this.props;
 
 		const {
@@ -69,21 +58,21 @@ class dividerEdit extends Component {
 		return (
 			<Fragment>
 				<InspectorControls>
-				<PanelBody
+					<PanelBody
 						title={__('Divider Settings', 'ainoblocks')}
 					>
-					<RangeControl
-						label={__('Border Width', 'ainoblocks')}
-						help={__('Do not forget to choose a border color in the Color settings.', 'ainoblocks')}
-						value={borderWidth}
-						onChange={(borderWidth) => setAttributes({ borderWidth })}
-						min={0}
-						max={50}
-						initialPosition={0}
-						allowReset={true}
-						renderTooltipContent={ borderWidthTooltipContent }
-					/>
-				</PanelBody>
+						<RangeControl
+							label={__('Border Width', 'ainoblocks')}
+							help={__('Do not forget to choose a border color in the Color settings.', 'ainoblocks')}
+							value={borderWidth}
+							onChange={(borderWidth) => setAttributes({ borderWidth })}
+							min={0}
+							max={50}
+							initialPosition={0}
+							allowReset={true}
+							renderTooltipContent={ borderWidthTooltipContent }
+						/>
+					</PanelBody>
 					<PanelColorSettings
 						title={__('Color Settings', 'ainoblocks')}
 						initialOpen={false}
@@ -113,10 +102,7 @@ class dividerEdit extends Component {
 					>
 					</PanelColorSettings>
 				</InspectorControls>
-				<div 
-				className={classnames(className)}
-				style={styles}
-				>
+				<div className={classnames(className)} style={styles}>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="__icon" style={iconStyles}>
 						<path d="M25.586 6.586l17.414 17.414-17.414 17.414-2.828-2.828 12.585-12.586-30.342 0v-4l30.342-0-12.585-12.586z"></path>
 					</svg>

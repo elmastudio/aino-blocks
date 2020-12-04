@@ -20,9 +20,6 @@ export default function save({
 		borderWidth,
 	} = attributes;
 
-	const borderClass = getColorClassName('border-color', borderColor);
-	const backgroundClass = getColorClassName('background-color', backgroundColor);
-
 	const dividerClasses = classnames( {
 		'has-custom-background': backgroundColor,
 		'has-custom-border-color': borderColor,
