@@ -44,6 +44,7 @@ const enableSpacingControlOnBlocks = [
 	'ainoblocks/multiple-buttons',
 	'ainoblocks/arrow-button',
 	'ainoblocks/featured-content',
+	'ainoblocks/divider',
 ];
 
 /**
