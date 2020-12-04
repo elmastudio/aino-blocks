@@ -28,31 +28,32 @@ const {
 } = metadata;
 
 const settings = {
-	title: __('Sticker', 'ainoblocks'),
-	description: __('A circle sticker with a text slogan to highlight featured elements.', 'ainoblocks'),
+	title: __('Divider', 'ainoblocks'),
+	description: __('A visual divider between sections.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	keywords: [
-		__('sticker', 'ainoblocks'),
-		__('link', 'ainoblocks'),
-		__('featured', 'ainoblocks'),
-		__('sticker', 'ainoblocks'),
+		__('divider', 'ainoblocks'),
+		__('separator', 'ainoblocks'),
+		__('spacer', 'ainoblocks'),
+		__('icon', 'ainoblocks'),
 		__('aino blocks', 'ainoblocks'),
+	],
+	styles: [
+		{
+			name: 'default',
+			/* translators: block style */
+			label: __( 'Default', 'ainoblocks' ),
+			isDefault: true,
+		},
+		{
+			name: 'outline',
+			/* translators: block style */
+			label: __( 'Outline' ),
+		},
 	],
 	supports: {
 		"anchor": true
-	},
-	example: {
-			name: 'ainoblocks/sticker',
-			attributes: {
-				label: __( 'New', 'ainoblocks' ),
-				stickerSize: '4',
-				fontSize: 'font__xxl',
-				backgroundColor: '#4D2CF0',
-				textColor: '#ffffff',
-				rotateStart: '-30',
-				rotate: 'rotate__infinite',
-			},
 	},
 	attributes,
 	edit,

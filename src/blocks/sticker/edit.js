@@ -131,7 +131,6 @@ class stickerEdit extends Component {
 			borderColor: borderColor,
 			borderRadius: borderRadius ? borderRadius + '%' : undefined,
 			borderWidth: borderWidth ? borderWidth + 'px' : undefined,
-			transform: borderWidth ? borderWidth + 'px' : undefined,
 			transform: `rotateZ(${rotateStart}deg)`,
 		};
 

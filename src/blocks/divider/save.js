@@ -1,0 +1,51 @@
+/**
+ * External dependencies
+ */
+import classnames from 'classnames';
+
+/**
+ * WordPress dependencies
+ */
+const {
+	getColorClassName,
+} = wp.blockEditor;
+
+export default function save({
+	attributes
+}) {
+	const {
+		backgroundColor,
+		borderColor,
+		iconColor,
+		borderWidth,
+	} = attributes;
+
+	const borderClass = getColorClassName('border-color', borderColor);
+	const backgroundClass = getColorClassName('background-color', backgroundColor);
+
+	const dividerClasses = classnames( {
+		'has-custom-background': backgroundColor,
+		'has-custom-border-color': borderColor,
+	});
+
+	const styles = {
+		backgroundColor: backgroundColor,
+		borderColor: borderColor,
+		borderWidth: borderWidth ? borderWidth + 'px' : undefined,
+	};
+
+	const iconStyles = {
+		fill: iconColor,
+	};
+
+	return (
+		<div
+			className={dividerClasses}
+			style={ styles }
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="__icon" style={ iconStyles }>
+				<path d="M25.586 6.586l17.414 17.414-17.414 17.414-2.828-2.828 12.585-12.586-30.342 0v-4l30.342-0-12.585-12.586z"></path>
+			</svg>
+		</div>
+	);
+}
