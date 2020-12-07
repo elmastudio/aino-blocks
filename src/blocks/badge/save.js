@@ -14,31 +14,41 @@ export default function save({ attributes }) {
 
 	const {
 		content,
+		size,
 		backgroundColor,
 		textColor,
+		borderColor,
 		alignment,
 		borderRadius,
+		icon,
 	} = attributes;
 
-	const badgeClasses = classnames('wp-block-ainoblocks-badge__content', {
+	const contentClasses = classnames('wp-block-ainoblocks-badge__content', {
 		'has-text-color': textColor,
-		'has-background': backgroundColor,
-		'no-border-radius': borderRadius === 0,
 	});
 
 	return (
 		<div
-			className={classnames}
-			style={{ textAlign: alignment }}
+			className={classnames( 'wp-block-ainoblocks-badge', size,
+			{
+				'has-border-color': borderColor,
+				'has-background': backgroundColor,
+				'no-border-radius': borderRadius === 0,
+				'has-icon': icon,
+			})}
+			style={{
+				textAlign: alignment,
+				background: backgroundColor,
+				borderColor: borderColor,
+				borderRadius: borderRadius ? borderRadius + 'px' : undefined,
+				}}
 		>
 			{!RichText.isEmpty(content) && (
 				<RichText.Content
 					tagName="span"
-					className={badgeClasses}
+					className={contentClasses}
 					style={{
 						color: textColor,
-						background: backgroundColor,
-						borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 					}}
 					value={content}
 				/>

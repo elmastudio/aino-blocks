@@ -6,6 +6,10 @@
 			"source": "html",
 			"selector": "span"
 		},
+		"size": {
+			"type": "string",
+			"default": "size__m"
+		},
 		"placeholder": {
 			"type": "string"
 		},
@@ -13,6 +17,9 @@
 			"type": "string"
 		},
 		"textColor": {
+			"type": "string"
+		},
+		"borderColor": {
 			"type": "string"
 		},
 		"alignment": {
@@ -23,6 +30,10 @@
 		},
 		"gradient": {
 			"type": "string"
+		},
+		"icon": {
+			"type": "boolean",
+			"default": false
 		}
 	}
 }

@@ -25,6 +25,7 @@ The Aino blocks plugin brings you a collection of page building blocks for the G
 * Buttons block
 * Arrow button block
 * Sticker block
+* Divider block
 
 == Installation ==
 
@@ -52,8 +53,9 @@ Yes, you can use block patterns if you have the latest Gutenberg plugin version 
 = 1.2.0 =
 New: Sticker block.
 New: Divider block.
-Enhance: Block icon update.
+Enhance: Block editor icons.
 Enhance: Card block paddings.
+Enhance: Badge block.
 
 = 1.1.2 =
 Bugfix: Fixed typo in plugin header information.
