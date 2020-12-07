@@ -53,6 +53,7 @@ Yes, you can use block patterns if you have the latest Gutenberg plugin version 
 New: Sticker block.
 New: Divider block.
 Enhance: Block icon update.
+Enhance: Card block paddings.
 
 = 1.1.2 =
 Bugfix: Fixed typo in plugin header information.
