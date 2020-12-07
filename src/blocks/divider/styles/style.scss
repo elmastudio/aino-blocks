@@ -5,7 +5,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	
+
 		.__icon {
 			width: 3rem;
 			height: 3rem;
@@ -17,6 +17,8 @@
 	&.is-style-outline {
 
 		.wp-block-ainoblocks-divider__inner {
+			margin-left: auto;
+			margin-right: auto;
 			width: 3rem;
 			height: 3.75rem;
 			border: 1px solid #fff;
@@ -44,7 +46,7 @@
 			.wp-block-ainoblocks-divider__inner {
 				width: 4rem;
 				height: 5rem;
-		
+
 				.__icon {
 					width: 2rem;
 					height: 2rem;
@@ -68,7 +70,7 @@
 			.wp-block-ainoblocks-divider__inner {
 				width: 6rem;
 				height: 7.5rem;
-		
+
 				.__icon {
 					width: 2.5rem;
 					height: 2.5rem;
@@ -92,7 +94,7 @@
 			.wp-block-ainoblocks-divider__inner {
 				width: 7.5rem;
 				height: 9.375rem;
-		
+
 				.__icon {
 					width: 3rem;
 					height: 3rem;
