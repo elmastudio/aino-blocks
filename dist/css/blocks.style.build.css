@@ -6274,14 +6274,83 @@ p.pr__19,
     margin-bottom: 0;
     padding-bottom: 0;
     padding-top: 0; }
-.wp-block-ainoblocks-badge {
+.wp-block-ainoblocks-badge span {
+  color: #111111;
   border: 1px solid #111111;
-  padding: 4px 12px;
-  display: inline-block; }
-  .wp-block-ainoblocks-badge span {
-    font-size: 1.25rem;
-    line-height: 1;
-    color: #111111; }
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1; }
+
+.wp-block-ainoblocks-badge.size__ssx span {
+  padding: 3px 7px;
+  font-size: 0.75rem; }
+
+.wp-block-ainoblocks-badge.size__sx span {
+  padding: 4px 9px;
+  font-size: 0.875rem; }
+
+.wp-block-ainoblocks-badge.size__s span {
+  padding: 4px 11px;
+  font-size: 1rem; }
+
+.wp-block-ainoblocks-badge.size__m span {
+  padding: 5px 13px;
+  font-size: 1.125rem; }
+
+.wp-block-ainoblocks-badge.size__l span {
+  padding: 5px 15px;
+  font-size: 1.25rem; }
+
+.wp-block-ainoblocks-badge.size__xl span {
+  padding: 6px 17px;
+  font-size: 1.375rem; }
+
+.wp-block-ainoblocks-badge.size__xxl span {
+  padding: 6px 19px;
+  font-size: 1.5rem; }
+
+.wp-block-ainoblocks-badge.size__xxxl span {
+  padding: 7px 21px;
+  font-size: 1.625rem; }
+
+.wp-block-ainoblocks-badge.size__xxxxl span {
+  padding: 7px 23px;
+  font-size: 1.875rem; }
+
+@media (min-width: 48em) {
+  .wp-block-ainoblocks-badge.size__xl span {
+    font-size: 1.5rem; }
+  .wp-block-ainoblocks-badge.size__xxl span {
+    font-size: 1.75rem; }
+  .wp-block-ainoblocks-badge.size__xxxl span {
+    font-size: 2rem; }
+  .wp-block-ainoblocks-badge.size__xxxxl span {
+    font-size: 2.25rem; } }
+
+@media (min-width: 64em) {
+  .wp-block-ainoblocks-badge.size__l span {
+    font-size: 1.375rem; }
+  .wp-block-ainoblocks-badge.size__xl span {
+    font-size: 1.625rem; }
+  .wp-block-ainoblocks-badge.size__xxl span {
+    font-size: 1.875rem; }
+  .wp-block-ainoblocks-badge.size__xxxl span {
+    font-size: 2.25rem; }
+  .wp-block-ainoblocks-badge.size__xxxxl span {
+    font-size: 2.625rem; } }
+
+@media (min-width: 80em) {
+  .wp-block-ainoblocks-badge.size__l span {
+    font-size: 1.5rem; }
+  .wp-block-ainoblocks-badge.size__xl span {
+    font-size: 1.75rem; }
+  .wp-block-ainoblocks-badge.size__xxl span {
+    font-size: 2.125rem; }
+  .wp-block-ainoblocks-badge.size__xxxl span {
+    font-size: 2.5rem; }
+  .wp-block-ainoblocks-badge.size__xxxxl span {
+    font-size: 3rem; } }
 .wp-block-ainoblocks-author p {
   margin: 0; }
 

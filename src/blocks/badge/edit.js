@@ -131,28 +131,23 @@ class BadgeEdit extends Component {
 				</InspectorControls>
 
 				<div
-					className={classnames( 'wp-block-ainoblocks-badge', size,
-					{
-						'has-border-color': borderColor,
-						'has-background': backgroundColor,
-						'no-border-radius': borderRadius === 0,
-						'has-icon': icon,
-					})}
-					style={{
-						textAlign: alignment,
-						background: backgroundColor,
-						borderColor: borderColor,
-						borderRadius: borderRadius ? borderRadius + 'px' : undefined,
-					 }}
+					className={classnames( 'wp-block-ainoblocks-badge', size,)}
 				>
 					<RichText
 						multiline="false"
 						tagName="span"
 						className={classnames(`${className}__content`, {
 							'has-text-color': textColor,
+							'has-border-color': borderColor,
+							'has-background': backgroundColor,
+							'no-border-radius': borderRadius === 0,
+							'has-icon': icon,
 						})}
 						style={{
 							color: textColor,
+							background: backgroundColor,
+							borderColor: borderColor,
+							borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 						}}
 						value={content}
 						onChange={(value) => setAttributes({ content: value })}

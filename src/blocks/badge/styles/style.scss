@@ -1,11 +1,193 @@
 .wp-block-ainoblocks-badge {
-	border: 1px solid #111111;
-	padding: 4px 12px;
-	display: inline-block;
 
-	& span {
-		font-size: 1.25rem;
-		line-height: 1;
+	span {
 		color: #111111;
+		border: 1px solid #111111;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 1;
+	}
+
+	&.size {
+
+		&__ssx {
+
+			span {
+				padding: 3px 7px;
+				font-size: 0.75rem;
+			}
+		}
+
+		&__sx {
+
+			span {
+				padding: 4px 9px;
+				font-size: 0.875rem;
+			}
+		}
+
+		&__s {
+
+			span {
+				padding: 4px 11px;
+				font-size: 1rem;
+			}
+		}
+
+		&__m {
+
+			span {
+				padding: 5px 13px;
+				font-size: 1.125rem;
+			}
+		}
+
+		&__l {
+
+			span {
+				padding: 5px 15px;
+				font-size: 1.25rem;
+			}
+		}
+
+		&__xl {
+
+			span {
+				padding: 6px 17px;
+				font-size: 1.375rem;
+			}
+		}
+
+		&__xxl {
+
+			span {
+				padding: 6px 19px;
+				font-size: 1.5rem;
+			}
+		}
+
+		&__xxxl {
+
+			span {
+				padding: 7px 21px;
+				font-size: 1.625rem;
+			}
+		}
+
+		&__xxxxl {
+
+			span {
+				padding: 7px 23px;
+				font-size: 1.875rem;
+			}
+		}
+
+		@media (min-width: 48em) {
+
+			&__xl {
+			
+				span {
+					font-size: 1.5rem;
+				}
+			}
+
+			&__xxl {
+			
+				span {
+					font-size: 1.75rem;
+				}
+			}
+
+			&__xxxl {
+			
+				span {
+					font-size: 2rem;
+				}
+			}
+			
+			&__xxxxl {
+			
+				span {
+					font-size: 2.25rem;
+				}
+			}
+		}
+
+		@media (min-width: 64em) {
+
+			&__l {
+			
+				span {
+					font-size: 1.375rem;
+				}
+			}
+			
+			&__xl {
+			
+				span {
+					font-size: 1.625rem;
+				}
+			}
+			
+			&__xxl {
+			
+				span {
+					font-size: 1.875rem;
+				}
+			}
+			
+			&__xxxl {
+			
+				span {
+					font-size: 2.25rem;
+				}
+			}
+			
+			&__xxxxl {
+			
+				span {
+					font-size: 2.625rem;
+				}
+			}
+		}
+
+		@media (min-width: 80em) {
+
+			&__l {
+	
+				span {
+					font-size: 1.5rem;
+				}
+			}
+	
+			&__xl {
+	
+				span {
+					font-size: 1.75rem;
+				}
+			}
+	
+			&__xxl {
+	
+				span {
+					font-size: 2.125rem;
+				}
+			}
+	
+			&__xxxl {
+	
+				span {
+					font-size: 2.5rem;
+				}
+			}
+	
+			&__xxxxl {
+	
+				span {
+					font-size: 3rem;
+				}
+			}
+		}
 	}
 }
