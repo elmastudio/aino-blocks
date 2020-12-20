@@ -1,4 +1,5 @@
 .wp-block-ainoblocks-badge {
+	display: flex;
 
 	span {
 		color: #111111;
@@ -9,11 +10,23 @@
 		line-height: 1;
 	}
 
+	.badge-icon {
+		position: relative;
+		fill: red;
+
+		svg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+
 	&.size {
 
 		&__ssx {
 
-			span {
+			.badge-content {
 				padding: 3px 7px;
 				font-size: 0.75rem;
 			}
@@ -21,7 +34,7 @@
 
 		&__sx {
 
-			span {
+			.badge-content {
 				padding: 4px 9px;
 				font-size: 0.875rem;
 			}
@@ -29,7 +42,7 @@
 
 		&__s {
 
-			span {
+			.badge-content {
 				padding: 4px 11px;
 				font-size: 1rem;
 			}
@@ -37,15 +50,29 @@
 
 		&__m {
 
-			span {
+			.badge-content {
 				padding: 5px 13px;
 				font-size: 1.125rem;
+			}
+
+			.badge-icon {
+				width: 45px;
+				height: 30px;
+				border-right: none;
+
+				svg {
+					background: red;
+					width: 18px;
+					height: 18px;
+					left: 13px;
+					top: 5px;
+				}
 			}
 		}
 
 		&__l {
 
-			span {
+			.badge-content {
 				padding: 5px 15px;
 				font-size: 1.25rem;
 			}
@@ -53,7 +80,7 @@
 
 		&__xl {
 
-			span {
+			.badge-content {
 				padding: 6px 17px;
 				font-size: 1.375rem;
 			}
@@ -61,7 +88,7 @@
 
 		&__xxl {
 
-			span {
+			.badge-content {
 				padding: 6px 19px;
 				font-size: 1.5rem;
 			}
@@ -69,7 +96,7 @@
 
 		&__xxxl {
 
-			span {
+			.badge-content {
 				padding: 7px 21px;
 				font-size: 1.625rem;
 			}
@@ -77,7 +104,7 @@
 
 		&__xxxxl {
 
-			span {
+			.badge-content {
 				padding: 7px 23px;
 				font-size: 1.875rem;
 			}
@@ -87,28 +114,28 @@
 
 			&__xl {
 			
-				span {
+				.badge-content {
 					font-size: 1.5rem;
 				}
 			}
 
 			&__xxl {
 			
-				span {
+				.badge-content {
 					font-size: 1.75rem;
 				}
 			}
 
 			&__xxxl {
 			
-				span {
+				.badge-content {
 					font-size: 2rem;
 				}
 			}
 			
 			&__xxxxl {
 			
-				span {
+				.badge-content {
 					font-size: 2.25rem;
 				}
 			}
@@ -118,35 +145,35 @@
 
 			&__l {
 			
-				span {
+				.badge-content {
 					font-size: 1.375rem;
 				}
 			}
 			
 			&__xl {
 			
-				span {
+				.badge-content {
 					font-size: 1.625rem;
 				}
 			}
 			
 			&__xxl {
 			
-				span {
+				.badge-content {
 					font-size: 1.875rem;
 				}
 			}
 			
 			&__xxxl {
 			
-				span {
+				.badge-content {
 					font-size: 2.25rem;
 				}
 			}
 			
 			&__xxxxl {
 			
-				span {
+				.badge-content {
 					font-size: 2.625rem;
 				}
 			}
@@ -154,37 +181,54 @@
 
 		@media (min-width: 80em) {
 
+			&__m {
+
+				.badge-content {
+					font-size: 1.25rem;
+				}
+
+				.badge-icon {
+					width: 47px;
+					height: 32px;
+	
+					svg {
+						width: 20px;
+						height: 20px;
+					}
+				}
+			}
+
 			&__l {
 	
-				span {
+				.badge-content {
 					font-size: 1.5rem;
 				}
 			}
 	
 			&__xl {
 	
-				span {
+				.badge-content {
 					font-size: 1.75rem;
 				}
 			}
 	
 			&__xxl {
 	
-				span {
+				.badge-content {
 					font-size: 2.125rem;
 				}
 			}
 	
 			&__xxxl {
 	
-				span {
+				.badge-content {
 					font-size: 2.5rem;
 				}
 			}
 	
 			&__xxxxl {
 	
-				span {
+				.badge-content {
 					font-size: 3rem;
 				}
 			}

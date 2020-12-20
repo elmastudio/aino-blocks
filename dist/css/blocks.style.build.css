@@ -6274,83 +6274,99 @@ p.pr__19,
     margin-bottom: 0;
     padding-bottom: 0;
     padding-top: 0; }
-.wp-block-ainoblocks-badge span {
-  color: #111111;
-  border: 1px solid #111111;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1; }
-
-.wp-block-ainoblocks-badge.size__ssx span {
-  padding: 3px 7px;
-  font-size: 0.75rem; }
-
-.wp-block-ainoblocks-badge.size__sx span {
-  padding: 4px 9px;
-  font-size: 0.875rem; }
-
-.wp-block-ainoblocks-badge.size__s span {
-  padding: 4px 11px;
-  font-size: 1rem; }
-
-.wp-block-ainoblocks-badge.size__m span {
-  padding: 5px 13px;
-  font-size: 1.125rem; }
-
-.wp-block-ainoblocks-badge.size__l span {
-  padding: 5px 15px;
-  font-size: 1.25rem; }
-
-.wp-block-ainoblocks-badge.size__xl span {
-  padding: 6px 17px;
-  font-size: 1.375rem; }
-
-.wp-block-ainoblocks-badge.size__xxl span {
-  padding: 6px 19px;
-  font-size: 1.5rem; }
-
-.wp-block-ainoblocks-badge.size__xxxl span {
-  padding: 7px 21px;
-  font-size: 1.625rem; }
-
-.wp-block-ainoblocks-badge.size__xxxxl span {
-  padding: 7px 23px;
-  font-size: 1.875rem; }
-
-@media (min-width: 48em) {
-  .wp-block-ainoblocks-badge.size__xl span {
-    font-size: 1.5rem; }
-  .wp-block-ainoblocks-badge.size__xxl span {
-    font-size: 1.75rem; }
-  .wp-block-ainoblocks-badge.size__xxxl span {
-    font-size: 2rem; }
-  .wp-block-ainoblocks-badge.size__xxxxl span {
-    font-size: 2.25rem; } }
-
-@media (min-width: 64em) {
-  .wp-block-ainoblocks-badge.size__l span {
+.wp-block-ainoblocks-badge {
+  display: flex; }
+  .wp-block-ainoblocks-badge span {
+    color: #111111;
+    border: 1px solid #111111;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1; }
+  .wp-block-ainoblocks-badge .badge-icon {
+    position: relative;
+    fill: red; }
+    .wp-block-ainoblocks-badge .badge-icon svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0; }
+  .wp-block-ainoblocks-badge.size__ssx .badge-content {
+    padding: 3px 7px;
+    font-size: 0.75rem; }
+  .wp-block-ainoblocks-badge.size__sx .badge-content {
+    padding: 4px 9px;
+    font-size: 0.875rem; }
+  .wp-block-ainoblocks-badge.size__s .badge-content {
+    padding: 4px 11px;
+    font-size: 1rem; }
+  .wp-block-ainoblocks-badge.size__m .badge-content {
+    padding: 5px 13px;
+    font-size: 1.125rem; }
+  .wp-block-ainoblocks-badge.size__m .badge-icon {
+    width: 45px;
+    height: 30px;
+    border-right: none; }
+    .wp-block-ainoblocks-badge.size__m .badge-icon svg {
+      background: red;
+      width: 18px;
+      height: 18px;
+      left: 13px;
+      top: 5px; }
+  .wp-block-ainoblocks-badge.size__l .badge-content {
+    padding: 5px 15px;
+    font-size: 1.25rem; }
+  .wp-block-ainoblocks-badge.size__xl .badge-content {
+    padding: 6px 17px;
     font-size: 1.375rem; }
-  .wp-block-ainoblocks-badge.size__xl span {
-    font-size: 1.625rem; }
-  .wp-block-ainoblocks-badge.size__xxl span {
-    font-size: 1.875rem; }
-  .wp-block-ainoblocks-badge.size__xxxl span {
-    font-size: 2.25rem; }
-  .wp-block-ainoblocks-badge.size__xxxxl span {
-    font-size: 2.625rem; } }
-
-@media (min-width: 80em) {
-  .wp-block-ainoblocks-badge.size__l span {
+  .wp-block-ainoblocks-badge.size__xxl .badge-content {
+    padding: 6px 19px;
     font-size: 1.5rem; }
-  .wp-block-ainoblocks-badge.size__xl span {
-    font-size: 1.75rem; }
-  .wp-block-ainoblocks-badge.size__xxl span {
-    font-size: 2.125rem; }
-  .wp-block-ainoblocks-badge.size__xxxl span {
-    font-size: 2.5rem; }
-  .wp-block-ainoblocks-badge.size__xxxxl span {
-    font-size: 3rem; } }
+  .wp-block-ainoblocks-badge.size__xxxl .badge-content {
+    padding: 7px 21px;
+    font-size: 1.625rem; }
+  .wp-block-ainoblocks-badge.size__xxxxl .badge-content {
+    padding: 7px 23px;
+    font-size: 1.875rem; }
+  @media (min-width: 48em) {
+    .wp-block-ainoblocks-badge.size__xl .badge-content {
+      font-size: 1.5rem; }
+    .wp-block-ainoblocks-badge.size__xxl .badge-content {
+      font-size: 1.75rem; }
+    .wp-block-ainoblocks-badge.size__xxxl .badge-content {
+      font-size: 2rem; }
+    .wp-block-ainoblocks-badge.size__xxxxl .badge-content {
+      font-size: 2.25rem; } }
+  @media (min-width: 64em) {
+    .wp-block-ainoblocks-badge.size__l .badge-content {
+      font-size: 1.375rem; }
+    .wp-block-ainoblocks-badge.size__xl .badge-content {
+      font-size: 1.625rem; }
+    .wp-block-ainoblocks-badge.size__xxl .badge-content {
+      font-size: 1.875rem; }
+    .wp-block-ainoblocks-badge.size__xxxl .badge-content {
+      font-size: 2.25rem; }
+    .wp-block-ainoblocks-badge.size__xxxxl .badge-content {
+      font-size: 2.625rem; } }
+  @media (min-width: 80em) {
+    .wp-block-ainoblocks-badge.size__m .badge-content {
+      font-size: 1.25rem; }
+    .wp-block-ainoblocks-badge.size__m .badge-icon {
+      width: 47px;
+      height: 32px; }
+      .wp-block-ainoblocks-badge.size__m .badge-icon svg {
+        width: 20px;
+        height: 20px; }
+    .wp-block-ainoblocks-badge.size__l .badge-content {
+      font-size: 1.5rem; }
+    .wp-block-ainoblocks-badge.size__xl .badge-content {
+      font-size: 1.75rem; }
+    .wp-block-ainoblocks-badge.size__xxl .badge-content {
+      font-size: 2.125rem; }
+    .wp-block-ainoblocks-badge.size__xxxl .badge-content {
+      font-size: 2.5rem; }
+    .wp-block-ainoblocks-badge.size__xxxxl .badge-content {
+      font-size: 3rem; } }
 .wp-block-ainoblocks-author p {
   margin: 0; }
 

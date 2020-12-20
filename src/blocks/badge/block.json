@@ -2,9 +2,7 @@
 	"name": "badge",
 	"attributes": {
 		"content": {
-			"type": "string",
-			"source": "html",
-			"selector": "span"
+			"type": "string"
 		},
 		"size": {
 			"type": "string",
