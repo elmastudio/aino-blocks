@@ -12,7 +12,6 @@
 
 	.badge-icon {
 		position: relative;
-		fill: red;
 
 		svg {
 			position: absolute;
@@ -30,6 +29,19 @@
 				padding: 3px 7px;
 				font-size: 0.75rem;
 			}
+
+			.badge-icon {
+				width: 26px;
+				height: 20px;
+				border-right: none;
+
+				svg {
+					width: 12px;
+					height: 12px;
+					left: 7px;
+					top: 3px;
+				}
+			}
 		}
 
 		&__sx {
@@ -38,6 +50,19 @@
 				padding: 4px 9px;
 				font-size: 0.875rem;
 			}
+
+			.badge-icon {
+				width: 32px;
+				height: 24px;
+				border-right: none;
+
+				svg {
+					width: 14px;
+					height: 14px;
+					left: 9px;
+					top: 4px;
+				}
+			}
 		}
 
 		&__s {
@@ -45,6 +70,19 @@
 			.badge-content {
 				padding: 4px 11px;
 				font-size: 1rem;
+			}
+
+			.badge-icon {
+				width: 38px;
+				height: 26px;
+				border-right: none;
+
+				svg {
+					width: 16px;
+					height: 16px;
+					left: 11px;
+					top: 4px;
+				}
 			}
 		}
 
@@ -61,7 +99,6 @@
 				border-right: none;
 
 				svg {
-					background: red;
 					width: 18px;
 					height: 18px;
 					left: 13px;
@@ -76,6 +113,19 @@
 				padding: 5px 15px;
 				font-size: 1.25rem;
 			}
+
+			.badge-icon {
+				width: 50px;
+				height: 32px;
+				border-right: none;
+
+				svg {
+					width: 20px;
+					height: 20px;
+					left: 15px;
+					top: 5px;
+				}
+			}
 		}
 
 		&__xl {
@@ -83,6 +133,19 @@
 			.badge-content {
 				padding: 6px 17px;
 				font-size: 1.375rem;
+			}
+
+			.badge-icon {
+				width: 56px;
+				height: 36px;
+				border-right: none;
+
+				svg {
+					width: 22px;
+					height: 22px;
+					left: 17px;
+					top: 6px;
+				}
 			}
 		}
 
@@ -92,6 +155,19 @@
 				padding: 6px 19px;
 				font-size: 1.5rem;
 			}
+
+			.badge-icon {
+				width: 62px;
+				height: 38px;
+				border-right: none;
+
+				svg {
+					width: 24px;
+					height: 24px;
+					left: 19px;
+					top: 6px;
+				}
+			}
 		}
 
 		&__xxxl {
@@ -100,6 +176,19 @@
 				padding: 7px 21px;
 				font-size: 1.625rem;
 			}
+
+			.badge-icon {
+				width: 68px;
+				height: 42px;
+				border-right: none;
+
+				svg {
+					width: 26px;
+					height: 26px;
+					left: 21px;
+					top: 7px;
+				}
+			}
 		}
 
 		&__xxxxl {
@@ -107,6 +196,19 @@
 			.badge-content {
 				padding: 7px 23px;
 				font-size: 1.875rem;
+			}
+
+			.badge-icon {
+				width: 76px;
+				height: 46px;
+				border-right: none;
+
+				svg {
+					width: 30px;
+					height: 30px;
+					left: 23px;
+					top: 7px;
+				}
 			}
 		}
 
@@ -117,12 +219,33 @@
 				.badge-content {
 					font-size: 1.5rem;
 				}
+
+				.badge-icon {
+					width: 58px;
+					height: 38px;
+					border-right: none;
+	
+					svg {
+						width: 24px;
+						height: 24px;
+					}
+				}
 			}
 
 			&__xxl {
 			
 				.badge-content {
 					font-size: 1.75rem;
+				}
+
+				.badge-icon {
+					width: 66px;
+					height: 42px;
+	
+					svg {
+						width: 28px;
+						height: 28px;
+					}
 				}
 			}
 
@@ -131,12 +254,32 @@
 				.badge-content {
 					font-size: 2rem;
 				}
+
+				.badge-icon {
+					width: 74px;
+					height: 48px;
+	
+					svg {
+						width: 32px;
+						height: 32px;
+					}
+				}
 			}
 			
 			&__xxxxl {
 			
 				.badge-content {
 					font-size: 2.25rem;
+				}
+
+				.badge-icon {
+					width: 82px;
+					height: 52px;
+	
+					svg {
+						width: 36px;
+						height: 36px;
+					}
 				}
 			}
 		}
@@ -148,12 +291,33 @@
 				.badge-content {
 					font-size: 1.375rem;
 				}
+
+				.badge-icon {
+					width: 52px;
+					height: 34px;
+					border-right: none;
+	
+					svg {
+						width: 22px;
+						height: 22px;
+					}
+				}
 			}
 			
 			&__xl {
 			
 				.badge-content {
 					font-size: 1.625rem;
+				}
+
+				.badge-icon {
+					width: 60px;
+					height: 40px;
+	
+					svg {
+						width: 26px;
+						height: 26px;
+					}
 				}
 			}
 			
@@ -162,6 +326,16 @@
 				.badge-content {
 					font-size: 1.875rem;
 				}
+
+				.badge-icon {
+					width: 68px;
+					height: 44px;
+	
+					svg {
+						width: 30px;
+						height: 30px;
+					}
+				}
 			}
 			
 			&__xxxl {
@@ -169,12 +343,32 @@
 				.badge-content {
 					font-size: 2.25rem;
 				}
+
+				.badge-icon {
+					width: 78px;
+					height: 52px;
+
+					svg {
+						width: 36px;
+						height: 36px;
+					}
+				}
 			}
 			
 			&__xxxxl {
 			
 				.badge-content {
 					font-size: 2.625rem;
+				}
+
+				.badge-icon {
+					width: 82px;
+					height: 52px;
+	
+					svg {
+						width: 36px;
+						height: 36px;
+					}
 				}
 			}
 		}
@@ -203,12 +397,33 @@
 				.badge-content {
 					font-size: 1.5rem;
 				}
+
+				.badge-icon {
+					width: 54px;
+					height: 36px;
+					border-right: none;
+	
+					svg {
+						width: 24px;
+						height: 24px;
+					}
+				}
 			}
 	
 			&__xl {
 	
 				.badge-content {
 					font-size: 1.75rem;
+				}
+
+				.badge-icon {
+					width: 62px;
+					height: 42px;
+	
+					svg {
+						width: 28px;
+						height: 28px;
+					}
 				}
 			}
 	
@@ -217,6 +432,16 @@
 				.badge-content {
 					font-size: 2.125rem;
 				}
+
+				.badge-icon {
+					width: 72px;
+					height: 48px;
+	
+					svg {
+						width: 34px;
+						height: 34px;
+					}
+				}
 			}
 	
 			&__xxxl {
@@ -224,12 +449,32 @@
 				.badge-content {
 					font-size: 2.5rem;
 				}
+
+				.badge-icon {
+					width: 82px;
+					height: 56px;
+
+					svg {
+						width: 40px;
+						height: 40px;
+					}
+				}
 			}
 	
 			&__xxxxl {
 	
 				.badge-content {
 					font-size: 3rem;
+				}
+
+				.badge-icon {
+					width: 94px;
+					height: 64px;
+	
+					svg {
+						width: 48px;
+						height: 48px;
+					}
 				}
 			}
 		}
