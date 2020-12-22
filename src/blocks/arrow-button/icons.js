@@ -19,7 +19,7 @@ icons.arrow =
 <SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
 <Path d="M1 8h-1v40h1z"></Path>
 <Path d="M40 48v-1h-40v1z"></Path>
-<Path d="M46.646 0.646l0.707 0.707-46 46-0.707-0.707z"></Path>
+<path d="M7.82 43l-2.82-2.82 31.18-31.18h-23.18v-4h30v30h-4v-23.18z"></path>
 </SVG>
 
 export default icons;
