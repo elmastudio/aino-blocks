@@ -10,6 +10,7 @@
 		@media (min-width: 48em) {
 			max-width: 90rem;
 			display: grid;
+			grid-auto-flow: column;
 			grid-template-columns: repeat(12, 1fr);
 			justify-content: center;
 		}

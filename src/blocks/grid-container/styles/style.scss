@@ -29,6 +29,7 @@
 	&__inner {
 		position: relative;
 		display: grid;
+		grid-auto-flow: column;
 		grid-template-columns: repeat(12, 1fr);
 		justify-content: center;
 		max-width: 100%;

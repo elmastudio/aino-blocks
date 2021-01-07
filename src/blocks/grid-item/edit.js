@@ -167,6 +167,12 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			[`mb_d__${marginBottomDesktop}`] : marginBottomDesktop ? marginBottomDesktop : undefined,
 			[`mb_t__${marginBottomTablet}`] : marginBottomTablet ? marginBottomTablet : undefined,
 			[`mb_m__${marginBottomMobile}`] : marginBottomMobile? marginBottomMobile : undefined,
+			'mt_d__0': marginTopDesktop === 0,
+			'mt_t__0': marginTopTablet === 0,
+			'mt_m__0': marginTopMobile === 0,
+			'mb_d__0': marginBottomDesktop === 0,
+			'mb_t__0': marginBottomTablet === 0,
+			'mb_m__0': marginBottomMobile === 0,
 		});
 
 		return <BlockListBlock {...props} className={classNames} />;

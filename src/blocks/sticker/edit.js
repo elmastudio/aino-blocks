@@ -183,7 +183,7 @@ class stickerEdit extends Component {
 						title={__('Sticker Settings', 'ainoblocks')}
 					>
 						<RangeControl
-								label={__('Sitcker Size', 'ainoblocks')}
+								label={__('Sticker Size', 'ainoblocks')}
 								value={stickerSize}
 								onChange={(stickerSize) => setAttributes({ stickerSize })}
 								min={1}
