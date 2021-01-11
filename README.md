@@ -9,7 +9,7 @@
 __Contributors:__ elmastudio  
 __Tags:__ page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks   
 __Requires at least:__ 5.5   
-__Tested up to:__ WordPress 5.5.3  
+__Tested up to:__ WordPress 5.6  
 __License:__ GPLv2 or later  
 __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -31,6 +31,15 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 
 ### Changelog  
 =======
+
+### 1.2.0  
+**New:** Sticker block.  
+**New:** Divider block.  
+**Enhance:** Block editor icons.  
+**Enhance:** Card block paddings.  
+**Enhance:** Badge block.  
+**Enhance:** Arrow Button block.  
+**Enhance:** Grid and Grid item blocks.  
 
 ### 1.1.2  
 **Bugfix:** Fixed typo in plugin header information.  
