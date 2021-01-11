@@ -40,9 +40,11 @@ const enableSpacingControlOnBlocks = [
 	'core/gallery',
 	'core/quote',
 	'core/list',
+	'core/spacer',
 	'ainoblocks/multiple-buttons',
 	'ainoblocks/arrow-button',
 	'ainoblocks/featured-content',
+	'ainoblocks/divider',
 ];
 
 /**

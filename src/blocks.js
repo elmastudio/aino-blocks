@@ -29,6 +29,8 @@ import * as testimonial from './blocks/testimonial';
 import * as button from './blocks/button';
 import * as multipleButtons from './blocks/multiple-buttons';
 import * as arrowButton from './blocks/arrow-button';
+import * as sticker from './blocks/sticker';
+import * as divider from './blocks/divider';
 
 export function registerAinoblocksBlocks() {
 	[
@@ -42,6 +44,8 @@ export function registerAinoblocksBlocks() {
 		multipleButtons,
 		arrowButton,
 		hero,
+		sticker,
+		divider,
 	].forEach(block => {
 		if (!block) {
 			return;

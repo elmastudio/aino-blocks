@@ -61,8 +61,8 @@ export default function save({
 		>
 		{ ! iconPositionAfter && (
 			<span className={iconClasses} style={iconStyles}>
-				<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
-					<Path d="M4 0h28v28h-4l-0.004-21.172-25.168 25.172-2.828-2.828 25.168-25.172h-21.168z"></Path>
+				<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+					<Path d="M7.82 43l-2.82-2.82 31.18-31.18h-23.18v-4h30v30h-4v-23.18z"></Path>
 				</SVG>
 			</span>
 		) }
@@ -77,8 +77,8 @@ export default function save({
 		/>
 			{ iconPositionAfter && (
 			<span className={iconClasses} style={iconStyles}>
-				<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
-					<Path d="M4 0h28v28h-4l-0.004-21.172-25.168 25.172-2.828-2.828 25.168-25.172h-21.168z"></Path>
+				<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+					<Path d="M7.82 43l-2.82-2.82 31.18-31.18h-23.18v-4h30v30h-4v-23.18z"></Path>
 				</SVG>
 			</span>
 		) }

@@ -3,9 +3,9 @@
  * Plugin Name: Aino Blocks - Creative Gutenberg Blocks
  * Plugin URI : https://wpaino.com
  * Description: A collection of page building blocks for creatives. Let's start to build websites that stand out from the crowd.
- * Version: 1.1.2
+ * Version: 1.2.0
  * Requires at least: 5.5
- * Tested up to: 5.5
+ * Tested up to: 5.6
  * Author: Elmastudio
  * Author URI: https://www.elmastudio.de/en/
  * Text Domain: ainoblocks
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define most essential constants.
-define( 'AINOBLOCKS_VERSION', '1.1.1' );
+define( 'AINOBLOCKS_VERSION', '1.2.0' );
 define( 'AINOBLOCKS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'AINOBLOCKS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 

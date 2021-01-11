@@ -18,10 +18,6 @@
 
 		svg {
 			vertical-align: top;
-			min-width: 8px;
-			min-height: 8px;
-			max-width: 32px;
-			max-height: 32px;
 		}
 	}
 
@@ -29,9 +25,9 @@
 		position: relative;
 		align-self: stretch;
 		cursor: pointer;
-		line-height: 1.5;
+		line-height: 1;
 		text-decoration: none;
-		color: #111;
+		color: #000;
 
 		&.is-uppercase {
 			text-transform: uppercase;
@@ -40,17 +36,13 @@
 		&::before {
 			content: '';
 			position: absolute;
+			height: 1px;
 			z-index: 0;
 			left: 0;
 			right: 100%;
 			bottom: 0;
 			background: currentColor;
-			-webkit-transition-property: right;
-			transition-property: right;
-			-webkit-transition-duration: .2s;
-			transition-duration: .2s;
-			-webkit-transition-timing-function: ease-out;
-			transition-timing-function: ease-out;
+			transition: right .2s ease-out;
 		}
 
 		&:hover:before {
@@ -61,64 +53,64 @@
 	&.size {
 
 		&__ssx {
-			font-size: 0.75rem;
+			font-size: .75rem;
 
 			.wp-block-ainoblocks-arrow-button {
 
 				&__icon {
-					flex-basis: 8px;
-					height: 8px;
+					flex-basis: .75rem;
+					height: .75rem;
 
 					svg {
-						width: 8px;
-						height: 8px;
+						width: .75rem;
+						height: .75rem;
 					}
 				}
 
 				&__link {
 
 					&:not(.icon-after) {
-						margin-left: 5px;
+						margin-left: .5rem;
 					}
 
 					&.icon-after {
-						margin-right: 5px;
+						margin-right: .5rem;
 					}
 
 					&::before {
-						height: 1px;
+						bottom: -1px;
 					}
 				}
 			}
 		}
 
 		&__sx {
-			font-size: 0.875rem;
+			font-size: .875rem;
 
 			.wp-block-ainoblocks-arrow-button {
 
 				&__icon {
-					flex-basis: 10px;
-					height: 10px;
+					flex-basis: .875rem;
+					height: .875rem;
 
 					svg {
-						width: 10px;
-						height: 10px;
+						width: .875rem;
+						height: .875rem;
 					}
 				}
 
 				&__link {
 
 					&:not(.icon-after) {
-						margin-left: 6px;
+						margin-left: .625rem;
 					}
 
 					&.icon-after {
-						margin-right: 6px;
+						margin-right: .625rem;
 					}
 
 					&::before {
-						height: 1px;
+						bottom: -2px;
 					}
 				}
 			}
@@ -130,27 +122,27 @@
 			.wp-block-ainoblocks-arrow-button {
 
 				&__icon {
-					flex-basis: 12px;
-					height: 12px;
+					flex-basis: 1rem;
+					height: 1rem;
 
 					svg {
-						width: 12px;
-						height: 12px;
+						width: 1rem;
+						height: 1rem;
 					}
 				}
 
 				&__link {
 
 					&:not(.icon-after) {
-						margin-left: 7px;
+						margin-left: .75rem;
 					}
 
 					&.icon-after {
-						margin-right: 7px;
+						margin-right: .75rem;
 					}
 
 					&::before {
-						height: 1px;
+						bottom: -3px;
 					}
 				}
 			}
@@ -162,27 +154,27 @@
 			.wp-block-ainoblocks-arrow-button {
 
 				&__icon {
-					flex-basis: 12px;
-					height: 12px;
+					flex-basis: 1.125rem;
+					height: 1.125rem;
 
 					svg {
-						width: 12px;
-						height: 12px;
+						width: 1.125rem;
+						height: 1.125rem;
 					}
 				}
 
 				&__link {
 
 					&:not(.icon-after) {
-						margin-left: 8px;
+						margin-left: .875rem;
 					}
 
 					&.icon-after {
-						margin-right: 8px;
+						margin-right: .875rem;
 					}
 
 					&::before {
-						height: 2px;
+						bottom: -4px;
 					}
 				}
 			}
@@ -193,23 +185,12 @@
 				.wp-block-ainoblocks-arrow-button {
 
 					&__icon {
-						flex-basis: 14px;
-						height: 14px;
+						flex-basis: 1.25rem;
+						height: 1.25rem;
 
 						svg {
-							width: 14px;
-							height: 14px;
-						}
-					}
-
-					&__link {
-
-						&:not(.icon-after) {
-							margin-left: 9px;
-						}
-
-						&.icon-after {
-							margin-right: 9px;
+							width: 1.25rem;
+							height: 1.25rem;
 						}
 					}
 				}
@@ -221,27 +202,27 @@
 
 			.wp-block-ainoblocks-arrow-button {
 				&__icon {
-					flex-basis: 14px;
-					height: 14px;
+					flex-basis: 1.125rem;
+					height: 1.125rem;
 
 					svg {
-						width: 14px;
-						height: 14px;
+						width: 1.125rem;
+						height: 1.125rem;
 					}
 				}
 
 				&__link {
 
 					&:not(.icon-after) {
-						margin-left: 9px;
+						margin-left: 1rem;
 					}
 
 					&.icon-after {
-						margin-right: 9px;
+						margin-right: 1rem;
 					}
 
 					&::before {
-						height: 2px;
+						bottom: -5px;
 					}
 				}
 			}
@@ -251,22 +232,12 @@
 
 				.wp-block-ainoblocks-arrow-button {
 					&__icon {
-						flex-basis: 16px;
-						height: 16px;
+						flex-basis: 1.375rem;
+						height: 1.375rem;
 
 						svg {
-							width: 16px;
-							height: 16px;
-						}
-					}
-
-					&__link {
-						&:not(.icon-after) {
-							margin-left: 10px;
-						}
-
-						&.icon-after {
-							margin-right: 10px;
+							width: 1.375rem;
+							height: 1.375rem;
 						}
 					}
 				}
@@ -274,6 +245,18 @@
 
 			@media (min-width: 80em) {
 				font-size: 1.5rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 1.5rem;
+						height: 1.5rem;
+
+						svg {
+							width: 1.5rem;
+							height: 1.5rem;
+						}
+					}
+				}
 			}
 		}
 
@@ -282,33 +265,45 @@
 
 			.wp-block-ainoblocks-arrow-button {
 				&__icon {
-					flex-basis: 16px;
-					height: 16px;
+					flex-basis: 1.375rem;
+					height: 1.375rem;
 
 					svg {
-						width: 16px;
-						height: 16px;
+						width: 1.375rem;
+						height: 1.375rem;
 					}
 				}
 
 				&__link {
 
 					&:not(.icon-after) {
-						margin-left: 10px;
+						margin-left: 1.125rem;
 					}
 
 					&.icon-after {
-						margin-right: 10px;
+						margin-right: 1.125rem;
 					}
 
 					&::before {
-						height: 2px;
+						bottom: -6px;
 					}
 				}
 			}
 
 			@media (min-width: 48em) {
 				font-size: 1.5rem;
+
+				.wp-block-ainoblocks-arrow-button {
+					&__icon {
+						flex-basis: 1.5rem;
+						height: 1.5rem;
+
+						svg {
+							width: 1.5rem;
+							height: 1.5rem;
+						}
+					}
+				}
 			}
 
 			@media (min-width: 64em) {
@@ -316,23 +311,12 @@
 
 				.wp-block-ainoblocks-arrow-button {
 					&__icon {
-						flex-basis: 18px;
-						height: 18px;
+						flex-basis: 1.625rem;
+						height: 1.625rem;
 
 						svg {
-							width: 18px;
-							height: 18px;
-						}
-					}
-
-					&__link {
-
-						&:not(.icon-after) {
-							margin-left: 11px;
-						}
-
-						&.icon-after {
-							margin-right: 11px;
+							width: 1.625rem;
+							height: 1.625rem;
 						}
 					}
 				}
@@ -343,23 +327,12 @@
 
 				.wp-block-ainoblocks-arrow-button {
 					&__icon {
-						flex-basis: 20px;
-						height: 20px;
+						flex-basis: 1.75rem;
+						height: 1.75rem;
 
 						svg {
-							width: 20px;
-							height: 20px;
-						}
-					}
-
-					&__link {
-
-						&:not(.icon-after) {
-							margin-left: 12px;
-						}
-
-						&.icon-after {
-							margin-right: 12px;
+							width: 1.75rem;
+							height: 1.75rem;
 						}
 					}
 				}
@@ -371,27 +344,27 @@
 
 			.wp-block-ainoblocks-arrow-button {
 				&__icon {
-					flex-basis: 16px;
-					height: 16px;
+					flex-basis: 1.5rem;
+					height: 1.5rem;
 
 					svg {
-						width: 16px;
-						height: 16px;
+						width: 1.5rem;
+						height: 1.5rem;
 					}
 				}
 
 				&__link {
 
 					&:not(.icon-after) {
-						margin-left: 11px;
+						margin-left: 1.25rem;
 					}
 
 					&.icon-after {
-						margin-right: 11px;
+						margin-right: 1.25rem;
 					}
 
 					&::before {
-						height: 3px;
+						bottom: -7px;
 					}
 				}
 			}
@@ -401,22 +374,12 @@
 
 				.wp-block-ainoblocks-arrow-button {
 					&__icon {
-						flex-basis: 20px;
-						height: 20px;
+						flex-basis: 1.75rem;
+						height: 1.75rem;
 
 						svg {
-							width: 20px;
-							height: 20px;
-						}
-					}
-
-					&__link {
-						&:not(.icon-after) {
-							margin-left: 13px;
-						}
-
-						&.icon-after {
-							margin-right: 13px;
+							width: 1.75rem;
+							height: 1.75rem;
 						}
 					}
 				}
@@ -427,23 +390,12 @@
 
 				.wp-block-ainoblocks-arrow-button {
 					&__icon {
-						flex-basis: 22px;
-						height: 22px;
+						flex-basis: 1.875rem;
+						height: 1.875rem;
 
 						svg {
-							width: 22px;
-							height: 22px;
-						}
-					}
-
-					&__link {
-
-						&:not(.icon-after) {
-							margin-left: 14px;
-						}
-
-						&.icon-after {
-							margin-right: 14px;
+							width: 1.875rem;
+							height: 1.875rem;
 						}
 					}
 				}
@@ -453,24 +405,14 @@
 				font-size: 2.125rem;
 
 				.wp-block-ainoblocks-arrow-button {
+
 					&__icon {
-						flex-basis: 24px;
-						height: 24px;
+						flex-basis: 2.125rem;
+						height: 2.125rem;
 
 						svg {
-							width: 24px;
-							height: 24px;
-						}
-					}
-
-					&__link {
-
-						&:not(.icon-after) {
-							margin-left: 15px;
-						}
-
-						&.icon-after {
-							margin-right: 15px;
+							width: 2.125rem;
+							height: 2.125rem;
 						}
 					}
 				}
@@ -482,27 +424,27 @@
 
 			.wp-block-ainoblocks-arrow-button {
 				&__icon {
-					flex-basis: 18px;
-					height: 18px;
+					flex-basis: 1.625rem;
+					height: 1.625rem;
 
 					svg {
-						width: 18px;
-						height: 18px;
+						width: 1.625rem;
+						height: 1.625rem;
 					}
 				}
 
 				&__link {
 
 					&:not(.icon-after) {
-						margin-left: 12px;
+						margin-left: 22px;
 					}
 
 					&.icon-after {
-						margin-right: 12px;
+						margin-right: 22px;
 					}
 
 					&::before {
-						height: 3px;
+						bottom: -8px;
 					}
 				}
 			}
@@ -512,23 +454,12 @@
 
 				.wp-block-ainoblocks-arrow-button {
 					&__icon {
-						flex-basis: 24px;
-						height: 24px;
+						flex-basis: 2rem;
+						height: 2rem;
 
 						svg {
-							width: 24px;
-							height: 24px;
-						}
-					}
-
-					&__link {
-
-						&:not(.icon-after) {
-							margin-left: 15px;
-						}
-
-						&.icon-after {
-							margin-right: 15px;
+							width: 2rem;
+							height: 2rem;
 						}
 					}
 				}
@@ -539,23 +470,12 @@
 
 				.wp-block-ainoblocks-arrow-button {
 					&__icon {
-						flex-basis: 26px;
-						height: 26px;
+						flex-basis: 2.25rem;
+						height: 2.25rem;
 
 						svg {
-							width: 26px;
-							height: 26px;
-						}
-					}
-
-					&__link {
-
-						&:not(.icon-after) {
-							margin-left: 16px;
-						}
-
-						&.icon-after {
-							margin-right: 16px;
+							width: 2.25rem;
+							height: 2.25rem;
 						}
 					}
 				}
@@ -566,23 +486,12 @@
 
 				.wp-block-ainoblocks-arrow-button {
 					&__icon {
-						flex-basis: 28px;
-						height: 28px;
+						flex-basis: 2.5rem;
+						height: 2.5rem;
 
 						svg {
-							width: 28px;
-							height: 28px;
-						}
-					}
-
-					&__link {
-
-						&:not(.icon-after) {
-							margin-left: 17px;
-						}
-
-						&.icon-after {
-							margin-right: 17px;
+							width: 2.5rem;
+							height: 2.5rem;
 						}
 					}
 				}
@@ -595,27 +504,27 @@
 			.wp-block-ainoblocks-arrow-button {
 
 				&__icon {
-					flex-basis: 20px;
-					height: 20px;
+					flex-basis: 1.875rem;
+					height: 1.875rem;
 
 					svg {
-						width: 20px;
-						height: 20px;
+						width: 1.875rem;
+						height: 1.875rem;
 					}
 				}
 
 				&__link {
 
 					&:not(.icon-after) {
-						margin-left: 13px;
+						margin-left: 24px;
 					}
 
 					&.icon-after {
-						margin-right: 13px;
+						margin-right: 24px;
 					}
 
 					&::before {
-						height: 3px;
+						bottom: -9px;
 					}
 				}
 			}
@@ -633,17 +542,6 @@
 							height: 26px;
 						}
 					}
-
-					&__link {
-
-						&:not(.icon-after) {
-							margin-left: 16px;
-						}
-
-						&.icon-after {
-							margin-right: 16px;
-						}
-					}
 				}
 			}
 
@@ -652,23 +550,12 @@
 
 				.wp-block-ainoblocks-arrow-button {
 					&__icon {
-						flex-basis: 30px;
-						height: 30px;
+						flex-basis: 2.625rem;
+						height: 2.625rem;
 
 						svg {
-							width: 30px;
-							height: 30px;
-						}
-					}
-
-					&__link {
-
-						&:not(.icon-after) {
-							margin-left: 18px;
-						}
-
-						&.icon-after {
-							margin-right: 18px;
+							width: 2.625rem;
+							height: 2.625rem;
 						}
 					}
 				}
@@ -679,23 +566,12 @@
 
 				.wp-block-ainoblocks-arrow-button {
 					&__icon {
-						flex-basis: 32px;
-						height: 32px;
+						flex-basis: 3rem;
+						height: 3rem;
 
 						svg {
-							width: 32px;
-							height: 32px;
-						}
-					}
-
-					&__link {
-
-						&:not(.icon-after) {
-							margin-left: 19px;
-						}
-
-						&.icon-after {
-							margin-right: 19px;
+							width: 3rem;
+							height: 3rem;
 						}
 					}
 				}

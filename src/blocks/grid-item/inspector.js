@@ -76,26 +76,33 @@ class Inspector extends Component {
 	const justifyItemOptions = [{
 		value: 'start',
 		label: __('start', 'ainoblocks')
-	},
-	{
-		value: 'end',
-		label: __('end', 'ainoblocks')
-	},
-	{
-		value: 'center',
-		label: __('center', 'ainoblocks')
-	},
-	{
-		value: 'stretch',
-		label: __('stretch', 'ainoblocks')
-	}
-];
+		},
+		{
+			value: 'end',
+			label: __('end', 'ainoblocks')
+		},
+		{
+			value: 'center',
+			label: __('center', 'ainoblocks')
+		},
+		{
+			value: 'stretch',
+			label: __('stretch', 'ainoblocks')
+		}
+	];
+
+	const gridColumnStartDesktopTooltipContent = gridColumnStartDesktop => `line ${gridColumnStartDesktop}`
+	const gridColumnEndDesktopTooltipContent = gridColumnEndDesktop => `line ${gridColumnEndDesktop}`
+	const gridColumnStartTabletTooltipContent = gridColumnStartTablet => `line ${gridColumnStartTablet}`
+	const gridColumnEndTabletTooltipContent = gridColumnEndTablet => `line ${gridColumnEndTablet}`
+	const gridColumnStartMobileTooltipContent = gridColumnStartMobile => `line ${gridColumnStartMobile}`
+	const gridColumnEndMobileTooltipContent = gridColumnEndMobile => `line ${gridColumnEndMobile}`
 
 		return (
 			<Fragment>
 				<InspectorControls>
 					<PanelBody title={__('Positioning', 'ainoblocks')}>
-					<p><em>{ __( 'Use the Desktop, Tablet and Mobile Preview option to view your layout in different screen widths.', 'ainoblocks' ) }</em></p>
+					<p><em>{ __( 'Use Preview for Desktop, Tablet and Mobile view.', 'ainoblocks' ) }</em></p>
 						<TabPanel className="aino-device-panel"
 							activeClass="is-active"
 							initialTabName="desktop"
@@ -124,12 +131,13 @@ class Inspector extends Component {
 											return (
 												<Fragment>
 													<RangeControl
-													label={__('Grid Column Start', 'ainoblocks')}
-													value={gridColumnStartDesktop}
-													onChange={(gridColumnStartDesktop) => setAttributes({ gridColumnStartDesktop })}
-													min={1}
-													max={13}
-													allowReset={true}
+														label={__('Grid Column Start', 'ainoblocks')}
+														value={gridColumnStartDesktop}
+														onChange={(gridColumnStartDesktop) => setAttributes({ gridColumnStartDesktop })}
+														min={1}
+														max={13}
+														allowReset={true}
+														renderTooltipContent={ gridColumnStartDesktopTooltipContent }
 													/>
 													<RangeControl
 														label={__('Grid Column End', 'ainoblocks')}
@@ -138,6 +146,7 @@ class Inspector extends Component {
 														min={1}
 														max={13}
 														allowReset={true}
+														renderTooltipContent={gridColumnEndDesktopTooltipContent }
 													/>
 												</Fragment>
 											);
@@ -151,6 +160,7 @@ class Inspector extends Component {
 													min={1}
 													max={13}
 													allowReset={true}
+													renderTooltipContent={ gridColumnStartTabletTooltipContent }
 													/>
 													<RangeControl
 														label={__('Grid Column End', 'ainoblocks')}
@@ -159,6 +169,7 @@ class Inspector extends Component {
 														min={1}
 														max={13}
 														allowReset={true}
+														renderTooltipContent={ gridColumnEndTabletTooltipContent }
 													/>
 												</Fragment>
 											];
@@ -173,6 +184,7 @@ class Inspector extends Component {
 													min={1}
 													max={13}
 													allowReset={true}
+													renderTooltipContent={ gridColumnStartMobileTooltipContent }
 													/>
 													<RangeControl
 														label={__('Grid Column End', 'ainoblocks')}
@@ -181,6 +193,7 @@ class Inspector extends Component {
 														min={1}
 														max={13}
 														allowReset={true}
+														renderTooltipContent={ gridColumnEndMobileTooltipContent }
 													/>
 												</Fragment>
 											];

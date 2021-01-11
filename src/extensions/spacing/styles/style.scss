@@ -238,6 +238,8 @@ h4,
 h5,
 h6,
 p,
+.single .wp-block-ainoblocks-card p,
+.page-template-default .wp-block-ainoblocks-card p
 .entry-content ul,
 .entry-content ol,
 .wp-block-group,
@@ -248,7 +250,8 @@ p,
 .wp-block-quote,
 .wp-block-ainoblocks-arrow-button,
 .wp-block-ainoblocks-multiple-buttons,
-.wp-block-ainoblocks-card {
+.wp-block-ainoblocks-card,
+.wp-block-ainoblocks-divider {
 
 	&.pt {
 		

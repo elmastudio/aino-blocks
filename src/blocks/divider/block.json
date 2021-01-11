@@ -1,0 +1,17 @@
+{
+	"name": "divider",
+	"attributes": {
+		"backgroundColor": {
+			"type": "string"
+		},
+		"borderColor": {
+			"type": "string"
+		},
+		"iconColor": {
+			"type": "string"
+		},
+		"borderWidth": {
+			"type": "number"
+		}
+	}
+}
