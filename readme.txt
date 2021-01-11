@@ -57,6 +57,7 @@ Enhance: Block editor icons.
 Enhance: Card block paddings.
 Enhance: Badge block.
 Enhance: Arrow Button block.
+Enhance: Grid and Grid item blocks.
 
 = 1.1.2 =
 Bugfix: Fixed typo in plugin header information.
