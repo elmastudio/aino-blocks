@@ -26,7 +26,7 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 
 1. We recommend to install the [Gutenberg](https://wordpress.org/plugins/gutenberg/) plugin.
 2. Install and activate the Aino theme from the [WordPress theme directory](https://wordpress.org/themes/aino/).
-3. Download and install the Aino blocks plugin [via Github](https://github.com/elmastudio/aino-blocks/archive/master.zip).
+3. Download and install the Aino blocks plugin [via WordPress.org](https://wordpress.org/plugins/aino-blocks/).
 4. Start to have fun building your website with blocks.
 
 ### Changelog  
