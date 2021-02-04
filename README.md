@@ -32,6 +32,12 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+### 1.2.1  
+**New:** First 'Arty Portfolio' block pattern.  
+**Bugfix:** Sticker block URL input.  
+**Bugfix:** Arror button block URL input.  
+  
+  
 ### 1.2.0  
 **New:** Sticker block.  
 **New:** Divider block.  
