@@ -91,6 +91,7 @@ class arrowButtonEdit extends Component {
 			url,
 			label,
 			link,
+			text,
 			target,
 			size,
 			uppercase,
@@ -250,12 +251,13 @@ class arrowButtonEdit extends Component {
 						style={linkStyles}
 						>
 						<RichText
-							value={label}
+							value={text}
 							placeholder={ __( "Add text…", 'ainoblocks' ) }
 							tagName='span'
 							multiline= 'false'
+							formattingControls={ [ 'bold', 'italic' ] }
 							onChange={ value => {
-								setAttributes( { label: value })
+								setAttributes( { text: value })
 							} }
 							keepPlaceholderOnFocus
 						/>

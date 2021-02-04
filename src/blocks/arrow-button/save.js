@@ -24,6 +24,7 @@ export default function save({
 	const {
 		url,
 		label,
+		text,
 		link,
 		target,
 		size,
@@ -68,7 +69,7 @@ export default function save({
 		) }
 		<RichText.Content
 			tagName='a'
-			value={ label }
+			value={ text }
 			className={ buttonClasses }
 			style={ linkStyles }
 			href={ link }
