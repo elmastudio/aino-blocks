@@ -5,7 +5,7 @@ Contributors: elmastudio
 Tags: page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.5
 Tested up to: 5.6.1
-Stable tag: 1.2.1
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,8 +50,11 @@ Yes, you can use block patterns if you have the latest Gutenberg plugin version 
 
 == Changelog ==
 
+= 1.3.0 =
+New: 'Freestyle' block patterns set.
+
 = 1.2.1 =
-New: First 'Arty Portfolio' block pattern.
+New: First 'Freestyle' block pattern.
 Bugfix: Sticker block URL input.
 Bugfix: Arror button block URL input.
 
