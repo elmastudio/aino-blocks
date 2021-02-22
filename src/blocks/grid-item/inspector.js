@@ -8,6 +8,7 @@ const {
 } = wp.element;
 const {
 	InspectorControls,
+	PanelColorSettings,
 } = wp.blockEditor;
 const {
 	PanelBody,
@@ -53,6 +54,7 @@ class Inspector extends Component {
 			marginBottomTablet,
 			marginTopMobile,
 			marginBottomMobile,
+			backgroundColor,
 		} = attributes;
 
 		const alignItemOptions = [{
@@ -373,6 +375,20 @@ class Inspector extends Component {
 							onChange={justifyItem => setAttributes({ justifyItem })}
 						/>
 					</PanelBody>
+					<PanelColorSettings
+						title={__('Color Settings', 'ainoblocks')}
+						initialOpen={false}
+						colorSettings={[
+							{
+								value: backgroundColor,
+								onChange: backgroundColor => {
+									setAttributes({ backgroundColor });
+								},
+								label: __('Background Color', 'ainoblocks'),
+							},
+						]}
+					>
+					</PanelColorSettings>
 				</InspectorControls>
 			</Fragment>
 		);

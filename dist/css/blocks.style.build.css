@@ -6104,6 +6104,16 @@ p.pr__19,
     margin-right: auto;
     word-break: break-word;
     overflow-wrap: break-word; }
+
+.site-content .hentry .wp-block-ainoblocks-grid-container.alignfull,
+.site-content .hentry .alignfull .wp-block-ainoblocks-grid-container.alignfull {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 100% !important; }
+  .site-content .hentry .wp-block-ainoblocks-grid-container.alignfull .wp-block-ainoblocks-grid-item,
+  .site-content .hentry .alignfull .wp-block-ainoblocks-grid-container.alignfull .wp-block-ainoblocks-grid-item {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
 .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
   max-width: 90rem;
   display: block;

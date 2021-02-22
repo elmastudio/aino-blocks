@@ -34,6 +34,9 @@ const settings = {
 	supports: {
 		align: ['wide', 'full'],
 	},
+	color: {
+		gradients: true
+	},
 	attributes,
 	example: {
 		attributes: {

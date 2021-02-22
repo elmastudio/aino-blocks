@@ -14,10 +14,7 @@ import Inspector from './inspector';
  */
 const { __ } = wp.i18n;
 const { addFilter } = wp.hooks;
-const {
-	Component,
-	Fragment,
-} = wp.element;
+const {Component,Fragment,} = wp.element;
 const {
 	compose,
 	createHigherOrderComponent,
@@ -144,6 +141,7 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			marginBottomTablet,
 			marginTopMobile,
 			marginBottomMobile,
+			backgroundColor,
 		} = attributes;
 
 		const classNames = classnames(className, {
@@ -175,7 +173,11 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			'mb_m__0': marginBottomMobile === 0,
 		});
 
-		return <BlockListBlock {...props} className={classNames} />;
+		const styles = {
+			backgroundColor: backgroundColor,
+		};
+
+		return <BlockListBlock {...props} className={classNames} style={styles} />;
 	};
 
 }, 'addCustomClassName');

@@ -39,3 +39,16 @@
 		overflow-wrap: break-word;
 	}
 }
+
+.site-content .hentry .wp-block-ainoblocks-grid-container.alignfull,
+.site-content .hentry .alignfull .wp-block-ainoblocks-grid-container.alignfull {
+	padding-left: 0;
+	padding-right: 0;
+	max-width: 100% !important;
+
+
+	.wp-block-ainoblocks-grid-item {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
