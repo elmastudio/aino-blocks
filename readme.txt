@@ -52,8 +52,9 @@ Yes, you can use block patterns if you have the latest Gutenberg plugin version 
 
 = 1.3.0 =
 New: 'Freestyle' block patterns set.
-New: Grid full width mode.
-New: Grid item background colour.
+New: Grid full width toolbar button.
+New: Grid item background colour setting.
+Enhance: Card block border settings.
 
 = 1.2.1 =
 New: First 'Freestyle' block pattern.

@@ -205,55 +205,6 @@ class Inspector extends Component {
 						</TabPanel>
 					</PanelBody>
 					<PanelBody
-						title={__('Gutter', 'ainoblocks')}
-						initialOpen={false}
-					>
-						<ToggleControl
-							label={__('Add end gutters', 'ainoblocks')}
-							checked={!!gutter}
-							onChange={() => setAttributes({ gutter: !gutter })}
-							help={!!gutter ? __('Toogle off to remove the spacing left and right of the grid item.', 'ainoblocks') : __('Toggle on for space left and right of the grid item.', 'ainoblocks')}
-						/>
-					</PanelBody>
-					<PanelBody
-						title={__('Overlapping', 'ainoblocks')}
-						initialOpen={false}
-					>
-					<ToggleControl
-							label={__('Overlap to left', 'ainoblocks')}
-							checked={!!overlapLeft}
-							onChange={() => setAttributes({ overlapLeft: !overlapLeft })}
-							help={!!overlapLeft ? __('Toogle off to position grid item within grid container.', 'ainoblocks') : __('Toggle on to overlap grid item to left screen edge.', 'ainoblocks')}
-						/>
-						<ToggleControl
-							label={__('Overlap to right', 'ainoblocks')}
-							checked={!!overlapRight}
-							onChange={() => setAttributes({ overlapRight: !overlapRight })}
-							help={!!overlapRight ? __('Toogle off to position grid item within grid container.', 'ainoblocks') : __('Toggle on to overlap grid item to right screen edge.', 'ainoblocks')}
-						/>
-					</PanelBody>
-					<PanelBody
-						title={__('Stacking', 'ainoblocks')}
-						initialOpen={false}
-					>
-						<ToggleControl
-							label={__('Stacking', 'ainoblocks')}
-							checked={!!stacking}
-							onChange={() => setAttributes({ stacking: !stacking })}
-							help={!!stacking ? __('Toogle off to show grid items below the previous grid item.', 'ainoblocks') : __('Toggle on to allow stacking of grid item.', 'ainoblocks')}
-						/>
-						{ stacking === true && (
-						<RangeControl
-							label={__('Stack Order', 'ainoblocks')}
-							help={__('An item with greater stack order is always in front of an item with a lower stack order.', 'ainoblocks')}
-							value={stackOrder}
-							onChange={(stackOrder) => setAttributes({ stackOrder })}
-							min={1}
-							max={20}
-						/>
-						) }
-					</PanelBody>
-					<PanelBody
 						title={__('Margins', 'ainoblocks')}
 						initialOpen={false}
 					>
@@ -356,6 +307,69 @@ class Inspector extends Component {
 							}
 						</TabPanel>
 					</PanelBody>
+					<PanelColorSettings
+						title={__('Color Settings', 'ainoblocks')}
+						initialOpen={false}
+						colorSettings={[
+							{
+								value: backgroundColor,
+								onChange: backgroundColor => {
+									setAttributes({ backgroundColor });
+								},
+								label: __('Background Color', 'ainoblocks'),
+							},
+						]}
+					>
+					</PanelColorSettings>
+					<PanelBody
+						title={__('Gutter', 'ainoblocks')}
+						initialOpen={false}
+					>
+						<ToggleControl
+							label={__('Add end gutters', 'ainoblocks')}
+							checked={!!gutter}
+							onChange={() => setAttributes({ gutter: !gutter })}
+							help={!!gutter ? __('Toogle off to remove the spacing left and right of the grid item.', 'ainoblocks') : __('Toggle on for space left and right of the grid item.', 'ainoblocks')}
+						/>
+					</PanelBody>
+					<PanelBody
+						title={__('Overlapping', 'ainoblocks')}
+						initialOpen={false}
+					>
+					<ToggleControl
+							label={__('Overlap to left', 'ainoblocks')}
+							checked={!!overlapLeft}
+							onChange={() => setAttributes({ overlapLeft: !overlapLeft })}
+							help={!!overlapLeft ? __('Toogle off to position grid item within grid container.', 'ainoblocks') : __('Toggle on to overlap grid item to left screen edge.', 'ainoblocks')}
+						/>
+						<ToggleControl
+							label={__('Overlap to right', 'ainoblocks')}
+							checked={!!overlapRight}
+							onChange={() => setAttributes({ overlapRight: !overlapRight })}
+							help={!!overlapRight ? __('Toogle off to position grid item within grid container.', 'ainoblocks') : __('Toggle on to overlap grid item to right screen edge.', 'ainoblocks')}
+						/>
+					</PanelBody>
+					<PanelBody
+						title={__('Stacking', 'ainoblocks')}
+						initialOpen={false}
+					>
+						<ToggleControl
+							label={__('Stacking', 'ainoblocks')}
+							checked={!!stacking}
+							onChange={() => setAttributes({ stacking: !stacking })}
+							help={!!stacking ? __('Toogle off to show grid items below the previous grid item.', 'ainoblocks') : __('Toggle on to allow stacking of grid item.', 'ainoblocks')}
+						/>
+						{ stacking === true && (
+						<RangeControl
+							label={__('Stack Order', 'ainoblocks')}
+							help={__('An item with greater stack order is always in front of an item with a lower stack order.', 'ainoblocks')}
+							value={stackOrder}
+							onChange={(stackOrder) => setAttributes({ stackOrder })}
+							min={1}
+							max={20}
+						/>
+						) }
+					</PanelBody>
 					<PanelBody
 						title={__('Aligment', 'ainoblocks')}
 						initialOpen={false}
@@ -375,20 +389,6 @@ class Inspector extends Component {
 							onChange={justifyItem => setAttributes({ justifyItem })}
 						/>
 					</PanelBody>
-					<PanelColorSettings
-						title={__('Color Settings', 'ainoblocks')}
-						initialOpen={false}
-						colorSettings={[
-							{
-								value: backgroundColor,
-								onChange: backgroundColor => {
-									setAttributes({ backgroundColor });
-								},
-								label: __('Background Color', 'ainoblocks'),
-							},
-						]}
-					>
-					</PanelColorSettings>
 				</InspectorControls>
 			</Fragment>
 		);

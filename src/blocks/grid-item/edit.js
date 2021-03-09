@@ -41,6 +41,10 @@ class GridItemEdit extends Component {
 			isSelected,
 		} = this.props;
 
+		const {
+			backgroundColor,
+		} = attributes;
+
 		const alignItemOptions = [{
 				value: 'start',
 				label: __('start', 'ainoblocks')
@@ -80,6 +84,10 @@ class GridItemEdit extends Component {
 		const classNames = classnames(className, {
 		});
 
+		const styles = {
+			backgroundColor: backgroundColor,
+		};
+
 		return (
 			<Fragment>
 				{ isSelected && (
@@ -87,7 +95,7 @@ class GridItemEdit extends Component {
 						{ ...this.props }
 					/>
 				) }
-				<div className={classNames} >
+				<div className={classNames} style={styles}>
 					<InnerBlocks
 						templateLock={ false }
 						renderAppender={
@@ -173,11 +181,7 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			'mb_m__0': marginBottomMobile === 0,
 		});
 
-		const styles = {
-			backgroundColor: backgroundColor,
-		};
-
-		return <BlockListBlock {...props} className={classNames} style={styles} />;
+		return <BlockListBlock {...props} className={classNames} />;
 	};
 
 }, 'addCustomClassName');

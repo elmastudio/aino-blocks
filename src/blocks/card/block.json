@@ -15,23 +15,24 @@
 			"default": 0
 		},
 		"shadowName": {
-			"type": "string"
+			"type": "string",
+			"default": "shadow-none"
 		},
 		"paddingTop": {
 			"type": "number",
-			"default": 3
+			"default": 0
 		},
 		"paddingBottom": {
 			"type": "number",
-			"default": 3
+			"default": 0
 		},
 		"paddingLeft": {
 			"type": "number",
-			"default": 3
+			"default": 0
 		},
 		"paddingRight": {
 			"type": "number",
-			"default": 3
+			"default": 0
 		}
 	}
 }

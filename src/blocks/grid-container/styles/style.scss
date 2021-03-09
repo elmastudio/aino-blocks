@@ -21,11 +21,6 @@
 		padding-right: 0;
 	}
 
-	@media (min-width: 96rem) {
-		width: auto;
-		max-width: 93rem !important;
-	}
-
 	&__inner {
 		position: relative;
 		display: grid;
@@ -37,6 +32,14 @@
 		margin-right: auto;
 		word-break: break-word;
 		overflow-wrap: break-word;
+	}
+}
+
+.wp-block-ainoblocks-grid-container.alignwide {
+
+	@media (min-width: 96rem) {
+		width: auto;
+		max-width: 93rem !important;
 	}
 }
 
