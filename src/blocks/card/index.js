@@ -37,7 +37,6 @@ const settings = {
 	color: {
 		gradients: true
 	},
-	attributes,
 	example: {
 		attributes: {
 			borderRadius: '20',
@@ -56,6 +55,7 @@ const settings = {
 			},
 		],
 	},
+	attributes,
 	edit,
 	save,
 };
