@@ -49,3 +49,11 @@
 	padding-right: 0;
 	max-width: 100% !important;
 }
+
+.wp-block-ainoblocks-grid-container {
+
+	&.no-outer-gap {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
