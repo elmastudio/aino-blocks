@@ -41,6 +41,7 @@ const enableSpacingControlOnBlocks = [
 	'core/quote',
 	'core/list',
 	'core/spacer',
+	'core/separator',
 	'ainoblocks/multiple-buttons',
 	'ainoblocks/arrow-button',
 	'ainoblocks/featured-content',

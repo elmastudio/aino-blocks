@@ -55,6 +55,7 @@ New: 'Freestyle' block patterns set.
 New: Grid full width toolbar button.
 New: Grid item background colour setting.
 Enhance: Card block border settings.
+Enhance: Add spacing setting to Core Separator block.
 
 = 1.2.1 =
 New: First 'Freestyle' block pattern.
