@@ -48,6 +48,9 @@ After the Aino blocks plugin is installed, you will see the Aino blocks collecti
 = Does Aino come with Block patterns? =
 Yes, you can use block patterns if you have the latest Gutenberg plugin version installed. You can see the first Aino blocks pattern inside the pattern library. We will create more free block patterns shortly.
 
+== Resources ==
+* Block Pattern Images by Slitshire.com, CC0 Creative Commons License, https://www.splitshire.com/
+
 == Changelog ==
 
 = 1.3.0 =
