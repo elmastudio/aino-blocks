@@ -34,7 +34,9 @@ const settings = {
 	supports: {
 		align: ['wide', 'full'],
 	},
-	attributes,
+	color: {
+		gradients: true
+	},
 	example: {
 		attributes: {
 			borderRadius: '20',
@@ -53,6 +55,7 @@ const settings = {
 			},
 		],
 	},
+	attributes,
 	edit,
 	save,
 };

@@ -14,10 +14,7 @@ import Inspector from './inspector';
  */
 const { __ } = wp.i18n;
 const { addFilter } = wp.hooks;
-const {
-	Component,
-	Fragment,
-} = wp.element;
+const {Component,Fragment,} = wp.element;
 const {
 	compose,
 	createHigherOrderComponent,
@@ -43,6 +40,10 @@ class GridItemEdit extends Component {
 			hasChildBlocks,
 			isSelected,
 		} = this.props;
+
+		const {
+			backgroundColor,
+		} = attributes;
 
 		const alignItemOptions = [{
 				value: 'start',
@@ -83,6 +84,10 @@ class GridItemEdit extends Component {
 		const classNames = classnames(className, {
 		});
 
+		const styles = {
+			backgroundColor: backgroundColor,
+		};
+
 		return (
 			<Fragment>
 				{ isSelected && (
@@ -90,7 +95,7 @@ class GridItemEdit extends Component {
 						{ ...this.props }
 					/>
 				) }
-				<div className={classNames} >
+				<div className={classNames} style={styles}>
 					<InnerBlocks
 						templateLock={ false }
 						renderAppender={
@@ -144,6 +149,7 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			marginBottomTablet,
 			marginTopMobile,
 			marginBottomMobile,
+			backgroundColor,
 		} = attributes;
 
 		const classNames = classnames(className, {

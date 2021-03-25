@@ -32,6 +32,7 @@ export default function save({ attributes, className }) {
 		marginBottomTablet,
 		marginTopMobile,
 		marginBottomMobile,
+		backgroundColor,
 	} = attributes;
 
 	const classNames = classnames(className, {
@@ -63,8 +64,12 @@ export default function save({ attributes, className }) {
 		'mb_m__0': marginBottomMobile === 0,
 	});
 
+	const styles = {
+		backgroundColor: backgroundColor,
+	};
+
 	return (
-		<div className={classNames} >
+		<div className={classNames} style={styles} >
 			< InnerBlocks.Content />
 		</div >
 	);

@@ -21,11 +21,6 @@
 		padding-right: 0;
 	}
 
-	@media (min-width: 96rem) {
-		width: auto;
-		max-width: 93rem !important;
-	}
-
 	&__inner {
 		position: relative;
 		display: grid;
@@ -37,5 +32,28 @@
 		margin-right: auto;
 		word-break: break-word;
 		overflow-wrap: break-word;
+	}
+}
+
+.wp-block-ainoblocks-grid-container.alignwide {
+
+	@media (min-width: 96rem) {
+		width: auto;
+		max-width: 93rem !important;
+	}
+}
+
+.site-content .hentry .wp-block-ainoblocks-grid-container.alignfull,
+.site-content .hentry .alignfull .wp-block-ainoblocks-grid-container.alignfull {
+	padding-left: 0;
+	padding-right: 0;
+	max-width: 100% !important;
+}
+
+.wp-block-ainoblocks-grid-container {
+
+	&.no-outer-gap {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
 	}
 }

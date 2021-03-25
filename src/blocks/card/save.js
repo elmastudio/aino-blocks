@@ -6,21 +6,31 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
+const { __ } = wp.i18n;
 const {
 	InnerBlocks,
+	RichText,
 } = wp.blockEditor;
 
-export default function save({ attributes }) {
+export default function save({
+	attributes
+}) {
 
 	const {
+		align,
 		backgroundColor,
 		borderColor,
-		backgroundRadius,
+		borderRadius,
 		shadowName,
 		paddingTop,
 		paddingBottom,
 		paddingLeft,
 		paddingRight,
+		borderTopWidth,
+		borderRightWidth,
+		borderBottomWidth,
+		borderLeftWidth,
+		borderWidth,
 	} = attributes;
 
 	const classes = classnames(classnames, shadowName, {
@@ -38,7 +48,11 @@ export default function save({ attributes }) {
 			style={{
 				backgroundColor: backgroundColor,
 				borderColor: borderColor,
-				borderRadius: backgroundRadius,
+				borderRadius: borderRadius ? borderRadius + 'px' : undefined,
+				borderTopWidth: borderTopWidth ? borderTopWidth + 'px' : undefined,
+				borderRightWidth: borderRightWidth ? borderRightWidth + 'px' : undefined,
+				borderBottomWidth: borderBottomWidth ? borderBottomWidth + 'px' : undefined,
+				borderLeftWidth: borderLeftWidth ? borderLeftWidth + 'px' : undefined,
 			}}>
 			<InnerBlocks.Content />
 		</div >

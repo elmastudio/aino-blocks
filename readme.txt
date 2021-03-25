@@ -4,8 +4,8 @@ Plugin URI: https://wpaino.com
 Contributors: elmastudio
 Tags: page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.5
-Tested up to: 5.6.1
-Stable tag: 1.2.1
+Tested up to: 5.7
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,10 +48,20 @@ After the Aino blocks plugin is installed, you will see the Aino blocks collecti
 = Does Aino come with Block patterns? =
 Yes, you can use block patterns if you have the latest Gutenberg plugin version installed. You can see the first Aino blocks pattern inside the pattern library. We will create more free block patterns shortly.
 
+== Resources ==
+* Block Pattern Images by Slitshire.com, CC0 Creative Commons License, https://www.splitshire.com/
+
 == Changelog ==
 
+= 1.3.0 =
+New: 'Freestyle' block patterns set.
+New: Grid full width toolbar button.
+New: Grid item background colour setting.
+Enhance: Card block border settings.
+Enhance: Add spacing setting to Core Separator block.
+
 = 1.2.1 =
-New: First 'Arty Portfolio' block pattern.
+New: First 'Freestyle' block pattern.
 Bugfix: Sticker block URL input.
 Bugfix: Arror button block URL input.
 

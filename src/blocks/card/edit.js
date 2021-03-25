@@ -8,6 +8,7 @@ import classnames from 'classnames';
  */
 const { __, _x } = wp.i18n;
 const { Component, Fragment } = wp.element;
+const { compose, withInstanceId } = wp.compose;
 const {
 	InspectorControls,
 	PanelColorSettings,
@@ -23,7 +24,7 @@ const {
 /**
  * Block edit function
  */
-class CardEdit extends Component {
+class cardEdit extends Component {
 
 	constructor() {
 		super(...arguments);
@@ -32,20 +33,25 @@ class CardEdit extends Component {
 	render() {
 		const {
 			attributes,
-			className,
 			setAttributes,
+			className,
 		} = this.props;
 
 		const {
 			align,
 			backgroundColor,
 			borderColor,
-			backgroundRadius,
+			borderRadius,
 			shadowName,
 			paddingTop,
 			paddingBottom,
 			paddingLeft,
 			paddingRight,
+			borderTopWidth,
+			borderRightWidth,
+			borderBottomWidth,
+			borderLeftWidth,
+			borderWidth,
 		} = attributes;
 
 		const shadowNameOptions = [
@@ -57,15 +63,6 @@ class CardEdit extends Component {
 		const MIN_BORDER_RADIUS_VALUE = 0;
 		const MAX_BORDER_RADIUS_VALUE = 50;
 		const INITIAL_BORDER_RADIUS_POSITION = 0;
-
-		const classes = classnames(classnames, shadowName, align, {
-			'has-background'        : backgroundColor,
-			'has-border'            : borderColor,
-			[`pt__${paddingTop}`]   : paddingTop,
-			[`pb__${paddingBottom}`]: paddingBottom,
-			[`pl__${paddingLeft}`]  : paddingLeft,
-			[`pr__${paddingRight}`] : paddingRight,
-		});
 
 		return (
 			<Fragment>
@@ -100,6 +97,56 @@ class CardEdit extends Component {
 					>
 					</PanelColorSettings>
 					<PanelBody
+						title={__('Border', 'ainoblocks')}
+						initialOpen={false}
+					>
+						<RangeControl
+							label={__('Border Width Top', 'ainoblocks')}
+							value={borderTopWidth}
+							initialPosition={0}
+							min={0}
+							max={100}
+							allowReset={true}
+							onChange={borderTopWidth => setAttributes({ borderTopWidth })}
+						/>
+						<RangeControl
+							label={__('Border Width Right', 'ainoblocks')}
+							value={borderRightWidth}
+							initialPosition={0}
+							min={0}
+							max={100}
+							allowReset={true}
+							onChange={borderRightWidth => setAttributes({ borderRightWidth })}
+						/>
+						<RangeControl
+							label={__('Border Width Bottom', 'ainoblocks')}
+							value={borderBottomWidth}
+							initialPosition={0}
+							min={0}
+							max={100}
+							allowReset={true}
+							onChange={borderBottomWidth => setAttributes({ borderBottomWidth })}
+						/>
+						<RangeControl
+							label={__('Border Width Left', 'ainoblocks')}
+							value={borderLeftWidth}
+							initialPosition={0}
+							min={0}
+							max={100}
+							allowReset={true}
+							onChange={borderLeftWidth => setAttributes({ borderLeftWidth })}
+						/>
+						<RangeControl
+							label={__('Border Radius', 'ainoblocks')}
+							value={borderRadius}
+							min={MIN_BORDER_RADIUS_VALUE}
+							max={MAX_BORDER_RADIUS_VALUE}
+							initialPosition={INITIAL_BORDER_RADIUS_POSITION}
+							allowReset
+							onChange={borderRadius => setAttributes({ borderRadius })}
+						/>
+					</PanelBody>
+					<PanelBody
 						title={__('Spacing', 'ainoblocks')}
 						initialOpen={false}
 					>
@@ -107,7 +154,7 @@ class CardEdit extends Component {
 							label={__('Padding Top', 'ainoblocks')}
 							value={paddingTop}
 							onChange={(paddingTop) => setAttributes({ paddingTop })}
-							initialPosition={3}
+							initialPosition={7}
 							min={0}
 							max={19}
 							allowReset={true}
@@ -116,7 +163,7 @@ class CardEdit extends Component {
 							label={__('Padding Bottom', 'ainoblocks')}
 							value={paddingBottom}
 							onChange={(paddingBottom) => setAttributes({ paddingBottom })}
-							initialPosition={3}
+							initialPosition={7}
 							min={0}
 							max={19}
 							allowReset={true}
@@ -125,7 +172,7 @@ class CardEdit extends Component {
 							label={__('Padding Left', 'ainoblocks')}
 							value={paddingLeft}
 							onChange={(paddingLeft) => setAttributes({ paddingLeft })}
-							initialPosition={3}
+							initialPosition={7}
 							min={0}
 							max={19}
 							allowReset={true}
@@ -134,24 +181,10 @@ class CardEdit extends Component {
 							label={__('Padding Right', 'ainoblocks')}
 							value={paddingRight}
 							onChange={(paddingRight) => setAttributes({ paddingRight })}
-							initialPosition={3}
+							initialPosition={7}
 							min={0}
 							max={19}
 							allowReset={true}
-						/>
-					</PanelBody>
-					<PanelBody
-						title={__('Border', 'ainoblocks')}
-						initialOpen={false}
-					>
-						<RangeControl
-							label={__('Border Radius', 'ainoblocks')}
-							value={backgroundRadius}
-							min={MIN_BORDER_RADIUS_VALUE}
-							max={MAX_BORDER_RADIUS_VALUE}
-							initialPosition={INITIAL_BORDER_RADIUS_POSITION}
-							allowReset
-							onChange={backgroundRadius => setAttributes({ backgroundRadius })}
 						/>
 					</PanelBody>
 				</InspectorControls>
@@ -168,7 +201,11 @@ class CardEdit extends Component {
 					style={{
 						backgroundColor: backgroundColor,
 						borderColor: borderColor,
-						borderRadius: backgroundRadius,
+						borderRadius: borderRadius ? borderRadius + 'px' : undefined,
+						borderTopWidth: borderTopWidth ? borderTopWidth + 'px' : undefined,
+						borderRightWidth: borderRightWidth ? borderRightWidth + 'px' : undefined,
+						borderBottomWidth: borderBottomWidth ? borderBottomWidth + 'px' : undefined,
+						borderLeftWidth: borderLeftWidth ? borderLeftWidth + 'px' : undefined,
 					}}>
 					<InnerBlocks />
 				</div>
@@ -176,4 +213,6 @@ class CardEdit extends Component {
 		);
 	}
 }
-export default CardEdit;
+
+export default compose([
+])(cardEdit);

@@ -69,6 +69,12 @@
 		},
 		"marginBottomMobile": {
 			"type": "number"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"borderColor": {
+			"type": "string"
 		}
 	}
 }
