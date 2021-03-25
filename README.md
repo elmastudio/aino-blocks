@@ -4,7 +4,7 @@
 
 [Aino](https://wpaino.com/) is a WordPress editor block collection for page building. It's recommended to use Aino blocks in combination with the free [Aino theme](https://wordpress.org/themes/aino/).
 
-[![Aino Blocks - A collection of Gutenberg blocks for page building](https://user-images.githubusercontent.com/17613630/85094515-113d3b80-b243-11ea-931e-27d954fe0fa7.png)](https://wpaino.com/)
+[![Aino Blocks - A collection of Gutenberg blocks for page building](https://user-images.githubusercontent.com/17613630/112424789-e9fb3800-8d99-11eb-8ab1-2f2b818d00b2.jpeg)](https://wpaino.com/)
 
 __Contributors:__ elmastudio  
 __Tags:__ page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks   
