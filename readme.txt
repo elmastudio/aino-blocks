@@ -4,16 +4,16 @@ Plugin URI: https://wpaino.com
 Contributors: elmastudio
 Tags: page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks
 Requires at least: 5.5
-Tested up to: 5.7
-Stable tag: 1.3.0
+Tested up to: 5.7.1
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
-A WordPress block collection for page building.
+Create beautiful and unique page and post layouts with blocks and block patterns. Combine with the free Aino theme and start to build a website that stands out from the crowd.
 
 == Description ==
 
-The Aino blocks plugin brings you a collection of page building blocks for the Gutenberg editor. With Aino blocks and the free <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino theme</a> you can build creative, individual page layouts in the WordPress editor. 
+The Aino blocks plugin brings you a collection of blocks and block patterns for the WordPress Gutenberg editor. With Aino blocks and the free <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino theme</a> you can build creative, fun and unique page layouts in the WordPress editor. 
 
 ## Currently available blocks
 * Grid block
