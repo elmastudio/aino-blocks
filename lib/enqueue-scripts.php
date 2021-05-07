@@ -68,6 +68,13 @@ function ainoblocks_enqueue_frontend_assets() {
 		filemtime( AINOBLOCKS_PLUGIN_DIR . $block_path ),
 		true
 	);
+
+	$animate_style_path = '/dist/css/animate.min.css';
+	wp_enqueue_style(
+		'animate-css',
+		AINOBLOCKS_PLUGIN_URL . $animate_style_path,
+		array(),
+	);
 }
 
 add_action( 'enqueue_block_assets', 'ainoblocks_enqueue_frontend_assets' );

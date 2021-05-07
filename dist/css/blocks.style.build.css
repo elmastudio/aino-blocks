@@ -5334,6 +5334,45 @@ p.pr__19,
     .wp-block-ainoblocks-card.pr__19,
     .wp-block-ainoblocks-divider.pr__19 {
       padding-right: 18rem; } }
+.animate-delay__100 {
+  -webkit-animation-delay: 100ms;
+  animation-delay: 100ms; }
+
+.animate-delay__200 {
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms; }
+
+.animate-delay__300 {
+  -webkit-animation-delay: 300ms;
+  animation-delay: 300ms; }
+
+.animate-delay__400 {
+  -webkit-animation-delay: 400ms;
+  animation-delay: 400ms; }
+
+.animate-delay__500 {
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms; }
+
+.animate-delay__600 {
+  -webkit-animation-delay: 600ms;
+  animation-delay: 600ms; }
+
+.animate-delay__700 {
+  -webkit-animation-delay: 700ms;
+  animation-delay: 700ms; }
+
+.animate-delay__800 {
+  -webkit-animation-delay: 800ms;
+  animation-delay: 800ms; }
+
+.animate-delay__900 {
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms; }
+
+.animate-delay__1000 {
+  -webkit-animation-delay: 1000ms;
+  animation-delay: 1000ms; }
 :root {
   /* Spacing */
   --s-0: 0;
@@ -7049,8 +7088,7 @@ p.pr__19,
             width: 3rem;
             height: 3rem; } }
 .wp-block-ainoblocks-sticker {
-  max-width: 100%;
-  overflow: hidden; }
+  max-width: 100%; }
   .wp-block-ainoblocks-sticker__content {
     background: #ffffff;
     display: flex;

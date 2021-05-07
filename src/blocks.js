@@ -17,6 +17,7 @@ import './utils/block-category';
 
 // Register extensions
 import './extensions/spacing';
+import './extensions/animation';
 
 // Register blocks
 import * as gridItem from './blocks/grid-item';
