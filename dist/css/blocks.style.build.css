@@ -1,3 +1,5 @@
+.wp-block-image.btl__xxs {
+  border-top-left-radius: 10px; }
 /* Responsive Spacing Mixins */
 h1.pt__1,
 h2.pt__1,
@@ -7049,8 +7051,7 @@ p.pr__19,
             width: 3rem;
             height: 3rem; } }
 .wp-block-ainoblocks-sticker {
-  max-width: 100%;
-  overflow: hidden; }
+  max-width: 100%; }
   .wp-block-ainoblocks-sticker__content {
     background: #ffffff;
     display: flex;
