@@ -16,6 +16,7 @@ const category = {
 import './utils/block-category';
 
 // Register extensions
+import './extensions/border-radius';
 import './extensions/spacing';
 
 // Register blocks
