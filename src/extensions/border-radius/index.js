@@ -47,6 +47,9 @@ function borderRadiusAttributes(settings) {
 	if (typeof settings.attributes !== 'undefined' && enableBorderRadiusControlOnBlocks.includes(settings.name)) {
 
 		settings.attributes = Object.assign(settings.attributes, {
+			borderRadius: {
+				type: 'string',
+			},
 			borderTopLeft: {
 				type: 'string',
 			},
@@ -89,6 +92,7 @@ function borderRadiusInspectorControls(BlockEdit) {
 			} = props;
 
 			const {
+				borderRadius,
 				borderTopLeft,
 				borderTopRight,
 				borderBottomLeft,
@@ -96,7 +100,7 @@ function borderRadiusInspectorControls(BlockEdit) {
 			} = attributes;
 
 			const borderRadiusOptions = [
-				{ value: "none", label: __('none', 'ainoblocks') },
+				{ value: "Not set", label: __('Not set', 'ainoblocks') },
 				{ value: "xxs", label   : __('SSX', 'ainoblocks') },
 				{ value: "xs", label   : __('XS', 'ainoblocks') },
 				{ value: "s", label   : __('S', 'ainoblocks') },
@@ -117,29 +121,44 @@ function borderRadiusInspectorControls(BlockEdit) {
 							initialOpen={false}
 						>
 							<SelectControl
-								label={__('Border Top Left', 'ainoblocks')}
-								value={borderTopLeft}
+								label={__('Border Radius (all)', 'ainoblocks')}
+								value={borderRadius}
 								options={borderRadiusOptions}
-								onChange={borderTopLeft => setAttributes({ borderTopLeft })}
+								onChange={borderRadius => setAttributes({ borderRadius })}
 							/>
-							<SelectControl
-								label={__('Border Top Right', 'ainoblocks')}
-								value={borderTopRight}
-								options={borderRadiusOptions}
-								onChange={borderTopRight => setAttributes({ borderTopRight })}
-							/>
-							<SelectControl
+
+							{borderRadius === 'Not set' && (
+								<SelectControl
+									label={__('Border Top Left', 'ainoblocks')}
+									value={borderTopLeft}
+									options={borderRadiusOptions}
+									onChange={borderTopLeft => setAttributes({ borderTopLeft })}
+								/>
+							)}
+							{borderRadius === 'Not set' && (
+								<SelectControl
+									label={__('Border Top Right', 'ainoblocks')}
+									value={borderTopRight}
+									options={borderRadiusOptions}
+									onChange={borderTopRight => setAttributes({ borderTopRight })}
+								/>
+							)}
+							{borderRadius === 'Not set' && (
+								<SelectControl
 								label={__('Border Bottom Right', 'ainoblocks')}
 								value={borderBottomRight}
 								options={borderRadiusOptions}
 								onChange={borderBottomRight => setAttributes({ borderBottomRight })}
 							/>
-							<SelectControl
-								label={__('Border Bottom Left', 'ainoblocks')}
-								value={borderBottomLeft}
-								options={borderRadiusOptions}
-								onChange={borderBottomLeft => setAttributes({ borderBottomLeft })}
-							/>
+							)}
+							{borderRadius === 'Not set' && (
+								<SelectControl
+									label={__('Border Bottom Left', 'ainoblocks')}
+									value={borderBottomLeft}
+									options={borderRadiusOptions}
+									onChange={borderBottomLeft => setAttributes({ borderBottomLeft })}
+								/>
+							)}
 						</PanelBody>
 					</InspectorControls>
 				</Fragment>
@@ -166,6 +185,7 @@ const withBorderRadiusClassName = createHigherOrderComponent((BlockListBlock) =>
 		} = props;
 
 		const {
+			borderRadius,
 			borderTopLeft,
 			borderTopRight,
 			borderBottomLeft,
@@ -177,6 +197,7 @@ const withBorderRadiusClassName = createHigherOrderComponent((BlockListBlock) =>
 			[`btr__${borderTopRight}`] : borderTopRight ? borderTopRight : undefined,
 			[`bbl__${borderBottomLeft}`]: borderBottomLeft ? borderBottomLeft : undefined,
 			[`bbr__${borderBottomRight}`] : borderBottomRight ? borderBottomRight : undefined,
+			[`br-all__${borderRadius}`] : borderRadius ? borderRadius : undefined,
 		});
 
 		return <BlockListBlock {...props} className={classNames} />;
@@ -197,6 +218,7 @@ function modifyBorderRadiusSaveSettings(el, block, attributes) {
 	if (enableBorderRadiusControlOnBlocks.includes(block.name)) {
 
 		const {
+			borderRadius,
 			borderTopLeft,
 			borderTopRight,
 			borderBottomLeft,
@@ -217,6 +239,10 @@ function modifyBorderRadiusSaveSettings(el, block, attributes) {
 
 		if (borderBottomRight) {
 			el.props.className = classnames(el.props.className, `bbr__${borderBottomRight}`);
+		}
+
+		if (borderRadius) {
+			el.props.className = classnames(el.props.className, `br-all__${borderRadius}`);
 		}
 	}
 
