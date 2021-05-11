@@ -3,7 +3,7 @@
  * Plugin Name: Aino Blocks - Creative Gutenberg Blocks
  * Plugin URI : https://wpaino.com
  * Description: A collection of page building blocks for creatives. Let's start to build websites that stand out from the crowd.
- * Version: 1.4.0
+ * Version: 1.4.1
  * Requires at least: 5.5
  * Tested up to: 5.7.1
  * Author: Elmastudio

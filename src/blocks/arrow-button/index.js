@@ -1,13 +1,8 @@
 /**
  * WordPress dependencies
  */
-const {
-	__,
-	_x
-} = wp.i18n;
-const {
-	registerBlockCollection
-} = wp.blocks;
+const {__, _x} = wp.i18n;
+const {registerBlockCollection} = wp.blocks;
 
 /**
  * Internal dependencies
@@ -22,10 +17,7 @@ import './styles/editor.scss';
 /**
  * Register block
  */
-const {
-	attributes,
-	name
-} = metadata;
+const {attributes,name} = metadata;
 
 const settings = {
 	title: __('Arrow Button', 'ainoblocks'),
