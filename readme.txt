@@ -5,11 +5,11 @@ Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks, block patterns
 Requires at least: 5.5
 Tested up to: 5.7.1
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
-A WordPress block collection for page building.
+A block collection to build creative WordPress websites.
 
 == Description ==
 
@@ -52,6 +52,9 @@ Yes, you can use block patterns if you have the latest Gutenberg plugin version 
 * Block Pattern Images by Slitshire.com, CC0 Creative Commons License, https://www.splitshire.com/
 
 == Changelog ==
+
+= 1.4.1 =
+Bugfix: Core Image block border radius settings, when border radius is not set.
 
 = 1.4.0 =
 New: Core Image block border radius settings.

@@ -127,7 +127,7 @@ function borderRadiusInspectorControls(BlockEdit) {
 								onChange={borderRadius => setAttributes({ borderRadius })}
 							/>
 
-							{borderRadius === 'Not set' && (
+							{borderRadius === 'Not set' || borderRadius === undefined && (
 								<SelectControl
 									label={__('Border Top Left', 'ainoblocks')}
 									value={borderTopLeft}
@@ -135,7 +135,7 @@ function borderRadiusInspectorControls(BlockEdit) {
 									onChange={borderTopLeft => setAttributes({ borderTopLeft })}
 								/>
 							)}
-							{borderRadius === 'Not set' && (
+							{borderRadius === 'Not set' || borderRadius === undefined && (
 								<SelectControl
 									label={__('Border Top Right', 'ainoblocks')}
 									value={borderTopRight}
@@ -143,7 +143,7 @@ function borderRadiusInspectorControls(BlockEdit) {
 									onChange={borderTopRight => setAttributes({ borderTopRight })}
 								/>
 							)}
-							{borderRadius === 'Not set' && (
+							{borderRadius === 'Not set' || borderRadius === undefined && (
 								<SelectControl
 								label={__('Border Bottom Right', 'ainoblocks')}
 								value={borderBottomRight}
@@ -151,7 +151,7 @@ function borderRadiusInspectorControls(BlockEdit) {
 								onChange={borderBottomRight => setAttributes({ borderBottomRight })}
 							/>
 							)}
-							{borderRadius === 'Not set' && (
+							{borderRadius === 'Not set' || borderRadius === undefined && (
 								<SelectControl
 									label={__('Border Bottom Left', 'ainoblocks')}
 									value={borderBottomLeft}
