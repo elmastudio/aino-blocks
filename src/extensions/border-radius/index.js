@@ -31,6 +31,8 @@ const {
 // Enable border-radius control on the following blocks
 const enableBorderRadiusControlOnBlocks = [
 	'core/image',
+	'core/code',
+	'core/preformatted',
 ];
 
 /**

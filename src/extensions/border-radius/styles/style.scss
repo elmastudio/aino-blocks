@@ -71,37 +71,356 @@
 	&.btl {
 			
 		&__xxs {
+
+			img {
+				@include br-xxs(border-top-left-radius);
+			}
+		}
+		
+		&__xs {
+		
+			img {
+				@include br-xs(border-top-left-radius);
+			}
+		}
+		
+		&__s {
+		
+			img {
+				@include br-s(border-top-left-radius);
+			}
+		}
+		
+		&__m {
+		
+			img {
+				@include br-m(border-top-left-radius);
+			}
+		}
+		
+		&__l {
+		
+			img {
+				@include br-l(border-top-left-radius);
+			}
+		}
+		
+		&__xl {
+		
+			img {
+				@include br-xl(border-top-left-radius);
+			}
+		}
+		
+		&__xxl {
+			img {
+				@include br-xxl(border-top-left-radius);
+			}
+		}
+		
+		&__xxxl {
+			img {
+				@include br-xxxl(border-top-left-radius);
+			}
+		}
+		
+		&__xxxxl {
+			img {
+				@include br-xxxxl(border-top-left-radius);
+			}
+		}
+	}
+
+	&.btr {
+			
+		&__xxs {
+
+			img {
+				@include br-xxs(border-top-right-radius);
+			}
+		}
+		
+		&__xs {
+		
+			img {
+				@include br-xs(border-top-right-radius);
+			}
+		}
+		
+		&__s {
+		
+			img {
+				@include br-s(border-top-right-radius);
+			}
+		}
+		
+		&__m {
+		
+			img {
+				@include br-m(border-top-right-radius);
+			}
+		}
+		
+		&__l {
+		
+			img {
+				@include br-l(border-top-right-radius);
+			}
+		}
+		
+		&__xl {
+		
+			img {
+				@include br-xl(border-top-right-radius);
+			}
+		}
+		
+		&__xxl {
+			img {
+				@include br-xxl(border-top-right-radius);
+			}
+		}
+		
+		&__xxxl {
+			img {
+				@include br-xxxl(border-top-right-radius);
+			}
+		}
+		
+		&__xxxxl {
+			img {
+				@include br-xxxxl(border-top-right-radius);
+			}
+		}
+	}
+
+	&.bbl {
+			
+		&__xxs {
+
+			img {
+				@include br-xxs(border-bottom-left-radius);
+			}
+		}
+		
+		&__xs {
+		
+			img {
+				@include br-xs(border-bottom-left-radius);
+			}
+		}
+		
+		&__s {
+		
+			img {
+				@include br-s(border-bottom-left-radius);
+			}
+		}
+		
+		&__m {
+		
+			img {
+				@include br-m(border-bottom-left-radius);
+			}
+		}
+		
+		&__l {
+		
+			img {
+				@include br-l(border-bottom-left-radius);
+			}
+		}
+		
+		&__xl {
+		
+			img {
+				@include br-xl(border-bottom-left-radius);
+			}
+		}
+		
+		&__xxl {
+			img {
+				@include br-xxl(border-bottom-left-radius);
+			}
+		}
+		
+		&__xxxl {
+			img {
+				@include br-xxxl(border-bottom-left-radius);
+			}
+		}
+		
+		&__xxxxl {
+			img {
+				@include br-xxxxl(border-bottom-left-radius);
+			}
+		}
+	}
+
+	&.bbr {
+			
+		&__xxs {
+
+			img {
+				@include br-xxs(border-bottom-right-radius);
+			}
+		}
+		
+		&__xs {
+		
+			img {
+				@include br-xs(border-bottom-right-radius);
+			}
+		}
+		
+		&__s {
+		
+			img {
+				@include br-s(border-bottom-right-radius);
+			}
+		}
+		
+		&__m {
+		
+			img {
+				@include br-m(border-bottom-right-radius);
+			}
+		}
+		
+		&__l {
+		
+			img {
+				@include br-l(border-bottom-right-radius);
+			}
+		}
+		
+		&__xl {
+		
+			img {
+				@include br-xl(border-bottom-right-radius);
+			}
+		}
+		
+		&__xxl {
+			img {
+				@include br-xxl(border-bottom-right-radius);
+			}
+		}
+		
+		&__xxxl {
+			img {
+				@include br-xxxl(border-bottom-right-radius);
+			}
+		}
+		
+		&__xxxxl {
+			img {
+				@include br-xxxxl(border-bottom-right-radius);
+			}
+		}
+	}
+
+	&.br-all {
+			
+		&__xxs {
+
+			img {
+				@include br-xxs(border-radius);
+			}
+		}
+		
+		&__xs {
+
+			img {
+				@include br-xs(border-radius);
+			}
+		}
+		
+		&__s {
+
+			img {
+				@include br-s(border-radius);
+			}
+		}
+		
+		&__m {
+
+			img {
+				@include br-m(border-radius);
+			}
+		}
+		
+		&__l {
+
+			img {
+				@include br-l(border-radius);
+			}
+		}
+		
+		&__xl {
+
+			img {
+				@include br-xl(border-radius);
+			}
+		}
+		
+		&__xxl {
+			img {
+				@include br-xxl(border-radius);
+			}
+		}
+		
+		&__xxxl {
+			img {
+				@include br-xxxl(border-radius);
+			}
+		}
+		
+		&__xxxxl {
+			img {
+				@include br-xxxxl(border-radius);
+			}
+		}
+	}
+}
+
+.wp-block-code,
+.wp-block-preformatted {
+
+	&.btl {
+			
+		&__xxs {
 			@include br-xxs(border-top-left-radius);
 		}
-
+		
 		&__xs {
 			@include br-xs(border-top-left-radius);
 		}
-
+		
 		&__s {
 			@include br-s(border-top-left-radius);
 		}
-
+		
 		&__m {
 			@include br-m(border-top-left-radius);
 		}
-
+		
 		&__l {
 			@include br-l(border-top-left-radius);
 		}
-
+		
 		&__xl {
 			@include br-xl(border-top-left-radius);
 		}
-
+		
 		&__xxl {
 			@include br-xxl(border-top-left-radius);
 		}
-
+		
 		&__xxxl {
-			@include br-xxxl(border-top-left-radius);
-		}
-
+				@include br-xxxl(border-top-left-radius);
+			}
+		
 		&__xxxxl {
 			@include br-xxxxl(border-top-left-radius);
 		}
@@ -112,35 +431,35 @@
 		&__xxs {
 			@include br-xxs(border-top-right-radius);
 		}
-	
+		
 		&__xs {
 			@include br-xs(border-top-right-radius);
 		}
-	
+		
 		&__s {
 			@include br-s(border-top-right-radius);
 		}
-	
+		
 		&__m {
 			@include br-m(border-top-right-radius);
 		}
-	
+		
 		&__l {
 			@include br-l(border-top-right-radius);
 		}
-	
+		
 		&__xl {
 			@include br-xl(border-top-right-radius);
 		}
-	
+		
 		&__xxl {
 			@include br-xxl(border-top-right-radius);
 		}
-	
+		
 		&__xxxl {
 			@include br-xxxl(border-top-right-radius);
 		}
-	
+		
 		&__xxxxl {
 			@include br-xxxxl(border-top-right-radius);
 		}
@@ -151,35 +470,35 @@
 		&__xxs {
 			@include br-xxs(border-bottom-left-radius);
 		}
-	
+		
 		&__xs {
 			@include br-xs(border-bottom-left-radius);
 		}
-	
+		
 		&__s {
 			@include br-s(border-bottom-left-radius);
 		}
-	
+		
 		&__m {
 			@include br-m(border-bottom-left-radius);
 		}
-	
+		
 		&__l {
 			@include br-l(border-bottom-left-radius);
 		}
-	
+		
 		&__xl {
 			@include br-xl(border-bottom-left-radius);
 		}
-	
+		
 		&__xxl {
 			@include br-xxl(border-bottom-left-radius);
 		}
-	
+		
 		&__xxxl {
 			@include br-xxxl(border-bottom-left-radius);
 		}
-	
+		
 		&__xxxxl {
 			@include br-xxxxl(border-bottom-left-radius);
 		}
@@ -190,35 +509,35 @@
 		&__xxs {
 			@include br-xxs(border-bottom-right-radius);
 		}
-	
+		
 		&__xs {
 			@include br-xs(border-bottom-right-radius);
 		}
-	
+		
 		&__s {
 			@include br-s(border-bottom-right-radius);
 		}
-	
+		
 		&__m {
 			@include br-m(border-bottom-right-radius);
 		}
-	
+		
 		&__l {
 			@include br-l(border-bottom-right-radius);
 		}
-	
+		
 		&__xl {
 			@include br-xl(border-bottom-right-radius);
 		}
-	
+		
 		&__xxl {
 			@include br-xxl(border-bottom-right-radius);
 		}
-	
+		
 		&__xxxl {
 			@include br-xxxl(border-bottom-right-radius);
 		}
-	
+		
 		&__xxxxl {
 			@include br-xxxxl(border-bottom-right-radius);
 		}

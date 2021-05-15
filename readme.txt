@@ -4,8 +4,8 @@ Plugin URI: https://wpaino.com
 Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks, block patterns
 Requires at least: 5.5
-Tested up to: 5.7.1
-Stable tag: 1.4.1
+Tested up to: 5.7.2
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,11 @@ Yes, you can use block patterns if you have the latest Gutenberg plugin version 
 * Block Pattern Images by Slitshire.com, CC0 Creative Commons License, https://www.splitshire.com/
 
 == Changelog ==
+
+= 1.5.0 =
+New: Latest Post 'Freestyle' block pattern.
+Bugfix: Core Image block border radius for images with link.
+Enhance: Border radius setting for core Code and Preformatted block.
 
 = 1.4.1 =
 Bugfix: Core Image block border radius settings, when border radius is not set.
