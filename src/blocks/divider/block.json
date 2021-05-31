@@ -1,5 +1,6 @@
 {
 	"name": "divider",
+	"apiVersion": 2,
 	"attributes": {
 		"backgroundColor": {
 			"type": "string"

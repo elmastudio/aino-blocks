@@ -1,13 +1,20 @@
 /**
  * WordPress dependencies
  */
-
-const { BlockControls, BlockIcon, MediaPlaceholder, MediaUpload } = wp.blockEditor;
-const { IconButton, ResizableBox, Toolbar, withNotices } = wp.components;
 const { Component, Fragment } = wp.element;
 const { __ } = wp.i18n;
-const { compose } = wp.compose;
-const { withDispatch } = wp.data;
+const {
+	BlockControls,
+	BlockIcon,
+	MediaPlaceholder,
+	MediaUpload
+} = wp.blockEditor;
+const {
+	IconButton,
+	ResizableBox,
+	Toolbar,
+	withNotices
+} = wp.components;
 
 /**
  * Internal dependencies

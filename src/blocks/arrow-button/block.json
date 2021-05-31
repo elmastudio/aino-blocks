@@ -1,8 +1,12 @@
 {	
 	"name": "arrow-button",
+	"apiVersion": 2,
 	"attributes": {
 		"url": {
-			"type": "string"
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "href"
 		},
 		"link": {
 			"type": "string"
@@ -18,7 +22,7 @@
 			"source": "html",
 			"selector": "a"
 		},
-		"target": {
+		"linkTarget": {
 			"type": "string",
 			"default":"_self"
 		},
@@ -62,9 +66,6 @@
 		"lineHeight": {
 			"type": "number",
 			"default": 1.5
-		},
-		"opensInNewTab": {
-			"type": "boolean"
 		}
 	}
 }

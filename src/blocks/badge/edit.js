@@ -7,16 +7,14 @@ import classnames from 'classnames';
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const {
-	Component,
-	Fragment,
-} = wp.element;
+const { Component,Fragment } = wp.element;
 const {
 	AlignmentToolbar,
 	BlockControls,
 	InspectorControls,
 	PanelColorSettings,
 	RichText,
+	useBlockProps,
 } = wp.blockEditor;
 const {
 	Path,
@@ -30,18 +28,8 @@ const {
 /**
  * Block edit function
  */
-class BadgeEdit extends Component {
 
-	constructor() {
-		super(...arguments);
-	}
-
-	render() {
-		const {
-			attributes,
-			className,
-			setAttributes,
-		} = this.props;
+export default function BadgeEdit( { attributes, setAttributes, className } ) {
 
 		const {
 			content,
@@ -94,6 +82,17 @@ class BadgeEdit extends Component {
 			borderTopLeftRadius: borderRadius ? borderRadius + 'px' : undefined,
 			borderBottomLeftRadius: borderRadius ? borderRadius + 'px' : undefined,
 		};
+
+		const badgeClasses = classnames(className, size, {
+			'no-icon': icon,
+		});
+
+		const blockProps = useBlockProps( {
+			className: badgeClasses,
+			style: {
+				color: textColor,
+			},
+		} );
 
 		return (
 			<Fragment>
@@ -157,14 +156,7 @@ class BadgeEdit extends Component {
 					</PanelColorSettings>
 				</InspectorControls>
 
-				<div
-					className={classnames( 'wp-block-ainoblocks-badge', size, {
-						'no-icon': icon,
-					})}
-					style={{
-						color: textColor,
-					}}
-				>
+				<div { ...blockProps }>
 					{ icon && (
 						<span className={iconClasses} style={iconStyles}>
 							<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
@@ -182,7 +174,5 @@ class BadgeEdit extends Component {
 				</div>
 			</Fragment>
 		);
-	}
 }
 
-export default BadgeEdit;

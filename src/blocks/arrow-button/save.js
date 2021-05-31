@@ -7,34 +7,29 @@ import classnames from 'classnames';
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const {
-	Path,
-	SVG,
-} = wp.components;
+const {Path,SVG,} = wp.components;
 const {
 	RichText,
+	useBlockProps,
 } = wp.blockEditor;
 
 /**
  * Block edit function
  */
-export default function save({
-	attributes
-}) {
+export default function save( { attributes } ) {
+
 	const {
 		url,
-		label,
 		text,
-		link,
-		target,
+		linkTarget,
 		size,
 		uppercase,
 		iconPositionAfter,
-		opensInNewTab,
 		lineHeight,
 		iconRotation,
 		textColor,
 		iconColor,
+		rel,
 	} = attributes;
 
 	const buttonClasses = classnames('wp-block-ainoblocks-arrow-button__link', {
@@ -54,12 +49,10 @@ export default function save({
 		lineHeight: lineHeight ? lineHeight : undefined,
 	};
 
+	const wrapperClasses = classnames(classnames, size, {});
+
 	return (
-		<div
-		className={classnames(
-			'wp-block-ainoblocks-arrow-button', size,
-		)}
-		>
+		<div { ...useBlockProps.save( { className: wrapperClasses } ) }>
 		{ ! iconPositionAfter && (
 			<span className={iconClasses} style={iconStyles}>
 				<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
@@ -72,9 +65,9 @@ export default function save({
 			value={ text }
 			className={ buttonClasses }
 			style={ linkStyles }
-			href={ link }
-			target={ target }
-			rel ='noopener noreferrer'
+			href={ url }
+			target={ linkTarget }
+			rel={ rel }
 		/>
 			{ iconPositionAfter && (
 			<span className={iconClasses} style={iconStyles}>

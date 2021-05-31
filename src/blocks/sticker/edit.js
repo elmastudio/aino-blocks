@@ -7,17 +7,18 @@ import classnames from 'classnames';
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const { Component, Fragment } = wp.element;
+const { Component, Fragment, useCallback, useState } = wp.element;
 const { compose, withInstanceId } = wp.compose;
 const {
 	PanelBody,
+	TextControl,
+	ToolbarGroup,
+	ToolbarButton,
 	ToggleControl,
 	SelectControl,
 	RangeControl,
 	__experimentalNumberControl,
 	Popover,
-	ToolbarButton,
-	ToolbarGroup,
 	TabPanel,
 } = wp.components;
 
@@ -30,6 +31,8 @@ const {
 	PanelColorSettings,
 	ColorPalette,
 	__experimentalLinkControl,
+	useBlockProps,
+	InspectorAdvancedControls,
 } = wp.blockEditor;
 
 /**
@@ -45,61 +48,18 @@ const NEW_TAB_REL = 'noreferrer noopener';
 /**
  * Block edit function
  */
-class stickerEdit extends Component {
-
-	constructor() {
-		super( ...arguments )
-		this.onClickLinkSettings = this.onClickLinkSettings.bind(this)
-		this.onChangeOpensInNewTab = this.onChangeOpensInNewTab.bind(this)
-		this.state = {
-			isURLPickerOpen:false,
-		}
-	}
-
-	onClickLinkSettings () {
-		
-		const { attributes, setAttributes } = this.props
-		const { target } = attributes 
-		if ( "_self" === target ) {
-			setAttributes( { opensInNewTab: false } )
-		} else if ( "_blank" === target ) {
-			setAttributes( { opensInNewTab: true } )
-		}
-
-		this.setState( {
-			isURLPickerOpen: true
-		})
-	}
-
-	onChangeOpensInNewTab ( value ) {
-		if ( true === value ) {
-			this.props.setAttributes( { target: '_blank' } )
-		} else {
-			this.props.setAttributes( { target: '_self' } )
-		}
-	}
-
-	render() {
-
-		const {
-			attributes,
-			setAttributes,
-			className,
-			isSelected,
-			onSelect,
-		} = this.props;
+export default function stickerEdit( { attributes, setAttributes, className, isSelected, opensInNewTab } ) {
 
 		const {
 			label,
 			url,
-			link,
-			target,
+			linkTarget,
+			rel,
 			stickerSize,
 			fontSize,
 			borderRadius,
 			borderWidth,
 			uppercase,
-			opensInNewTab,
 			backgroundColor,
 			textColor,
 			borderColor,
@@ -134,48 +94,106 @@ class stickerEdit extends Component {
 			transform: `rotateZ(${rotateStart}deg)`,
 		};
 
+		const onToggleOpenInNewTab = useCallback(
+			( value ) => {
+				const newLinkTarget = value ? '_blank' : undefined;
+	
+				let updatedRel = rel;
+				if ( newLinkTarget && ! rel ) {
+					updatedRel = NEW_TAB_REL;
+				} else if ( ! newLinkTarget && rel === NEW_TAB_REL ) {
+					updatedRel = undefined;
+				}
+	
+				setAttributes( {
+					linkTarget: newLinkTarget,
+					rel: updatedRel,
+				} );
+			},
+			[ rel, setAttributes ]
+		);
+	
+
+		const onSetLinkRel = useCallback(
+			( value ) => {
+				setAttributes( { rel: value } );
+			},
+			[ setAttributes ]
+		);
+
+		const [ isURLPickerOpen, setIsURLPickerOpen ] = useState( false );
 		const urlIsSet = !! url;
 		const urlIsSetandSelected = urlIsSet && isSelected;
 
-		const linkControl = this.state.isURLPickerOpen && (
+		const openLinkControl = () => {
+			setIsURLPickerOpen( true );
+			return false; // prevents default behaviour for event
+		};
+	
+		const unlinkButton = () => {
+			setAttributes( {
+				url: undefined,
+				linkTarget: undefined,
+				rel: undefined,
+			} );
+			setIsURLPickerOpen( false );
+		};
+
+		const linkControl = ( isURLPickerOpen || urlIsSetandSelected ) && (
 
 			<Popover
-				position="bottom center"
-				onClose={ () => this.setState( {
-					isURLPickerOpen: false
-				}) }
-			>
-				<__experimentalLinkControl
-					className="wp-block-navigation-link__inline-link-input"
-					value={ { url:link, opensInNewTab:opensInNewTab } }
-					onChange={( {
+			position="bottom center"
+			onClose={ () => setIsURLPickerOpen( false ) }
+		>
+			<__experimentalLinkControl
+				className="wp-block-navigation-link__inline-link-input"
+				value={ { url, opensInNewTab } }
+				onChange={ ( {
 					url: newURL = '',
 					opensInNewTab: newOpensInNewTab,
-					} ) => {
-						setAttributes( { link: newURL } );
-						setAttributes( { opensInNewTab: newOpensInNewTab } );
-						this.onChangeOpensInNewTab( newOpensInNewTab );
-					} }
-				/>
-			</Popover>
-		);
+				} ) => {
+					setAttributes( { url: newURL } );
+
+					if ( opensInNewTab !== newOpensInNewTab ) {
+						onToggleOpenInNewTab( newOpensInNewTab );
+					}
+				} }
+			/>
+		</Popover>
+	);
 		
 		const stickerSizeTooltipContent = stickerSize => `size ${stickerSize}`
 		const borderRadiusTooltipContent = borderRadius => `${borderRadius}px`
 		const borderWidthTooltipContent = borderWidth => `${borderWidth}px`
 		const rotateStartTooltipContent = rotateStart => `${rotateStart}degrees`
 
+		const stickerClasses = classnames(className, {});
+		const blockProps = useBlockProps( {
+			className: stickerClasses,
+		} );
+
 		return (
 			<Fragment>
 				<BlockControls>
-					<ToolbarGroup>
-						<ToolbarButton
-							name="link"
-							icon={<BlockIcon icon={icons.link} />}
-							title={ __( 'Link', 'ainoblocks' ) }
-							onClick={ this.onClickLinkSettings }
-						/>
-					</ToolbarGroup>
+				<ToolbarGroup>
+				{ ! urlIsSet && (
+					<ToolbarButton
+						name="link"
+						icon={<BlockIcon icon={icons.link} />}
+						title={ __( 'Link', 'ainoblocks' ) }
+						onClick={ openLinkControl }
+					/>
+					) }
+				{ urlIsSetandSelected && (
+					<ToolbarButton
+						name="link"
+						icon={<BlockIcon icon={icons.linkOff} />}
+						title={ __( 'Unlink','ainoblocks' ) }
+						onClick={ unlinkButton }
+						isActive={ true }
+					/>
+				) }
+				</ToolbarGroup>
 				</BlockControls>
 				{ linkControl }
 				<InspectorControls>
@@ -281,32 +299,38 @@ class stickerEdit extends Component {
 						/>
 					</PanelBody>
 				</InspectorControls>
-					<div className={classnames(className)}>
-					<RichText
-						placeholder={ __( "Add text…", 'ainoblocks' ) }
-						value={ label }
-						tagName='div'
-						className={ classnames(
-							'wp-block-ainoblocks-sticker__content', fontSize, rotate, {
-							'has-custom-background': backgroundColor,
-							'has-custom-text-color': textColor,
-							'has-custom-border-color': borderColor,
-							'is-uppercase': uppercase,
-							[`size__${stickerSize}`] : stickerSize ? stickerSize : undefined,
-							}
-						) }
-						style={styles}
-						onChange={ value => {
-							setAttributes( { label: value })
-						} }
-						formattingControls={ [ 'bold', 'italic' ] }
-						rel ="noopener noreferrer"
-						keepPlaceholderOnFocus
-					/>
-				</div>
-			</Fragment>
-		);
-	}
-}
+				<InspectorAdvancedControls>
+				<TextControl
+					label={ __( 'Link rel' ) }
+					value={ rel || '' }
+					onChange={ onSetLinkRel }
+				/>
+			</InspectorAdvancedControls>
 
-export default stickerEdit;
+			<div { ...blockProps }>
+				<RichText
+					placeholder={ __( "Add text…", 'ainoblocks' ) }
+					value={ label }
+					tagName='div'
+					className={ classnames(
+						'wp-block-ainoblocks-sticker__content', fontSize, rotate, {
+						'has-custom-background': backgroundColor,
+						'has-custom-text-color': textColor,
+						'has-custom-border-color': borderColor,
+						'is-uppercase': uppercase,
+						[`size__${stickerSize}`] : stickerSize ? stickerSize : undefined,
+						}
+					) }
+					style={styles}
+					onChange={ value => {
+						setAttributes( { label: value })
+					} }
+					formattingControls={ [ 'bold', 'italic' ] }
+					rel ="noopener noreferrer"
+					opensInNewTab={ linkTarget === '_blank' }
+					onToggleOpenInNewTab={ onToggleOpenInNewTab }
+				/>
+			</div>
+		</Fragment>
+	);
+}

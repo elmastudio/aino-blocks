@@ -55,6 +55,7 @@ export function registerAinoblocksBlocks() {
 		const { name, icon, settings } = block;
 
 		registerBlockType(`ainoblocks/${name}`, {
+			apiVersion: 2,
 			category: category.slug,
 			icon: { src: icon },
 			...settings,

@@ -8,6 +8,7 @@ import classnames from 'classnames';
  */
 const {
 	InnerBlocks,
+	useBlockProps,
 } = wp.blockEditor;
 
 export default function save({ attributes, className }) {
@@ -68,8 +69,13 @@ export default function save({ attributes, className }) {
 		backgroundColor: backgroundColor,
 	};
 
+	const blockProps = useBlockProps.save( {
+		className: classNames,
+		style: styles,
+	} );
+
 	return (
-		<div className={classNames} style={styles} >
+		<div { ...blockProps }>
 			< InnerBlocks.Content />
 		</div >
 	);

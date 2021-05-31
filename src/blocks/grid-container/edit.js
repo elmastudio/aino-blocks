@@ -18,7 +18,8 @@ const {
 	Fragment
 } = wp.element;
 const {
-	InnerBlocks
+	InnerBlocks,
+	useBlockProps,
 } = wp.blockEditor;
 
 /**
@@ -40,32 +41,24 @@ const getCount = memoize((count) => {
 /**
  * Block edit function
  */
-class GridContainerEdit extends Component {
 
-	render() {
-			const {
-				attributes,
-				className,
-				isSelected,
-				setAttributes,
-			} = this.props;
+export default function GridContainerEdit( { attributes, setAttributes, className, isSelected } ) {
 
-			const {
-				align,
-				items,
-			} = attributes;
+		const {
+			align,
+			items,
+		} = attributes;
 
-			const classNames = classnames(className, `align${align}`, {});
+		const gridContainerClasses = classnames(className, `align${align}`,
+		);
+	
+		const blockProps = useBlockProps( {
+			className: gridContainerClasses,
+		} );
 
 		return (
 			<Fragment>
-				{isSelected && (
-					<Inspector
-						{...this.props}
-					/>
-				)}
-
-				<div className={classNames}>
+				<div { ...blockProps }>
 					<InnerBlocks
 						allowedBlocks={ALLOWED_BLOCKS}
 						template={getCount(items)}
@@ -73,9 +66,6 @@ class GridContainerEdit extends Component {
 						templateInsertUpdatesSelection={true}
 					/>
 				</div>
-			</Fragment>
-		);
-	}
+		</Fragment>
+	);
 }
-
-export default GridContainerEdit;

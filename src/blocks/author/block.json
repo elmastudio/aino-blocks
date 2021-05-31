@@ -1,5 +1,6 @@
 {
 	"name": "author",
+	"apiVersion": 2,
 	"attributes": {
 		"imgURL": {
 			"type": "string",

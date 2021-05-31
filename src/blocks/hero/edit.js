@@ -13,17 +13,14 @@ import icons from './icons';
  * WordPress dependencies
  */
 const {__, _x } = wp.i18n;
-const {
-	Component,
-	Fragment
-} = wp.element;
+const { Fragment, useState } = wp.element;
 const {
 	BlockControls,
 	BlockVerticalAlignmentToolbar,
 	InnerBlocks,
 	InspectorControls,
 	PanelColorSettings,
-	withColors,
+	useBlockProps,
 } = wp.blockEditor;
 const {
 	PanelBody,
@@ -32,9 +29,6 @@ const {
 	SelectControl,
 	ToggleControl,
 } = wp.components;
-const {
-	compose,
-} = wp.compose;
 
 /**
  * Internal dependencies
@@ -66,23 +60,26 @@ const TEMPLATE = [
 /**
  * Block edit function
  */
-class heroEdit extends Component {
+export default function heroEdit( { attributes, setAttributes, className, isSelected } ) {
 
-	constructor() {
-		super(...arguments);
+	const {
+		align,
+		mediaAlt,
+		mediaPosition,
+		mediaHeight,
+		mediaType,
+		verticalContentAlignment,
+		imageFill,
+		contentGridColumnStart,
+		contentGridColumnEnd,
+		mediaGridColumnStart,
+		mediaGridColumnEnd,
+		backgroundColor,
+	} = attributes;
 
-		this.onSelectMedia = this.onSelectMedia.bind(this);
-		this.onWidthChange = this.onWidthChange.bind(this);
-		this.commitWidthChange = this.commitWidthChange.bind(this);
-		this.state = {
-			mediaWidth: null,
-		};
-	}
+	const [mediaWidth, setmediaWidth] = useState(0);
 
-	onSelectMedia(media) {
-		const {
-			setAttributes
-		} = this.props;
+	const onSelectMedia = (media) => {
 
 		let mediaType;
 		let src;
@@ -113,29 +110,24 @@ class heroEdit extends Component {
 		});
 	}
 
-	onWidthChange(width) {
-		this.setState({
+	const onWidthChange = (width) => {
+		setmediaWidth({
 			mediaWidth: applyWidthConstraints(width),
 		});
+
 	}
 
-	commitWidthChange(width) {
-		const {
-			setAttributes
-		} = this.props;
-
+	const commitWidthChange = (width) => {
 		setAttributes({
 			mediaWidth: applyWidthConstraints(width),
 		});
-		this.setState({
-			mediaWidth: null,
+
+		setmediaWidth({
+			mediaWidth: 0,
 		});
 	}
 
-	renderMediaArea() {
-		const {
-			attributes
-		} = this.props;
+	const renderMediaArea = (width) => {
 
 		const {
 			mediaAlt,
@@ -144,21 +136,21 @@ class heroEdit extends Component {
 			mediaHeight,
 			mediaType,
 			mediaUrl,
-			mediaWidth,
 			imageFill,
 		} = attributes;
 
-		if ('hide' !== mediaPosition) {
-			return ( <
+		if ('media-hide' !== mediaPosition) {
+			return (
+				<
 				MediaContainer className = "wp-block-ainoblocks-hero__media"
 				onSelectMedia = {
-					this.onSelectMedia
+					onSelectMedia
 				}
 				onWidthChange = {
-					this.onWidthChange
+					onWidthChange
 				}
 				commitWidthChange = {
-					this.commitWidthChange
+					commitWidthChange
 				} {
 					...{
 						mediaAlt,
@@ -166,7 +158,6 @@ class heroEdit extends Component {
 						mediaType,
 						mediaUrl,
 						mediaPosition,
-						mediaWidth,
 						imageFill
 					}
 				}
@@ -175,211 +166,184 @@ class heroEdit extends Component {
 		}
 	}
 
-	render() {
+	const mediaPositionOptions = [{
+			value: 'media-right',
+			label: __('Media right', 'ainoblocks')
+		},
+		{
+			value: 'media-left',
+			label: __('Media left', 'ainoblocks')
+		},
+		{
+			value: 'media-below',
+			label: __('Media below', 'ainoblocks')
+		},
+		{
+			value: 'media-hide',
+			label: __('Hide media', 'ainoblocks')
+		}
+	];
 
-			const {
-				attributes,
-				className,
-				backgroundColor,
-				isSelected,
-				setAttributes,
-				setBackgroundColor,
-			} = this.props;
+	const temporaryMediaWidth = mediaWidth;
 
-			const {
-				align,
-				mediaAlt,
-				mediaPosition,
-				mediaHeight,
-				mediaType,
-				mediaWidth,
-				verticalContentAlignment,
-				imageFill,
-				contentGridColumnStart,
-				contentGridColumnEnd,
-				mediaGridColumnStart,
-				mediaGridColumnEnd,
-			} = attributes;
+	const styleContent = {
+		gridColumnStart: contentGridColumnStart,
+		gridColumnEnd: contentGridColumnEnd,
+	};
 
-			const mediaPositionOptions = [{
-					value: 'media-right',
-					label: __('Media right', 'ainoblocks')
-				},
-				{
-					value: 'media-left',
-					label: __('Media left', 'ainoblocks')
-				},
-				{
-					value: 'media-below',
-					label: __('Media below', 'ainoblocks')
-				},
-				{
-					value: 'media-hide',
-					label: __('Hide media', 'ainoblocks')
-				}
-			];
+	const styleMedia = {
+		gridColumnStart: mediaGridColumnStart,
+		gridColumnEnd: mediaGridColumnEnd,
+	};
 
-			const temporaryMediaWidth = this.state.mediaWidth;
+	const widthString = `${temporaryMediaWidth || mediaWidth}%`;
 
-			const classNames = classnames(className, {
-				[`align${align}`]: align,
-				'media-right'     : 'media-right'      === mediaPosition,
-				'media-left'      : 'media-left'       === mediaPosition,
-				'media-below'     : 'media-below'      === mediaPosition,
-				'media-hide'      : 'media-hide'       === mediaPosition,
-				'media-fullheight': mediaHeight,
-				'is-selected': isSelected,
-				[backgroundColor.class]: backgroundColor.class,
-				[`content-vertically-aligned-${verticalContentAlignment}`]: verticalContentAlignment,
-				'is-image-fill': imageFill,
-			});
+	const onMediaAltChange = (newMediaAlt) => {
+		setAttributes({
+			mediaAlt: newMediaAlt
+		});
+	};
 
-			const styleContent = {
-				gridColumnStart: contentGridColumnStart,
-				gridColumnEnd: contentGridColumnEnd,
-			};
+	const onVerticalContentAlignmentChange = (alignment) => {
+		setAttributes({
+			verticalContentAlignment: alignment
+		});
+	};
 
-			const styleMedia = {
-				gridColumnStart: mediaGridColumnStart,
-				gridColumnEnd: mediaGridColumnEnd,
-			};
+	const heroSettings = (
+		<PanelBody
+			title={__('Hero Settings', 'ainoblocks')}
+			initialOpen={true}
+		>
+			<SelectControl
+				label={__('Media Position', 'ainoblocks')}
+				value={mediaPosition}
+				options={mediaPositionOptions}
+				onChange={mediaPosition => setAttributes({ mediaPosition })}
+			/>
+			<ToggleControl
+				label={__('Media height 100%', 'ainoblocks')}
+				checked={!!mediaHeight}
+				onChange={() => setAttributes({ mediaHeight: !mediaHeight })}
+				help={!!mediaHeight ? __('Media is full-height.', 'ainoblocks') : __('Toggle for full-height media.', 'ainoblocks')}
+			/>
+			{mediaType === 'image' && (<TextareaControl
+				label={__('Alt text (alternative text)', 'ainoblocks')}
+				value={mediaAlt}
+				onChange={onMediaAltChange}
+				help={__('Describe the purpose of the image. Leave empty if the image is purely decorative.', 'ainoblocks')}
+			/>)}
+		</PanelBody>
+	);
 
-			const widthString = `${temporaryMediaWidth || mediaWidth}%`;
+	const contentGridSettings = (
+		<PanelBody
+			title={__('Content Grid Settings', 'ainoblocks')}
+			initialOpen={false}
+		>
+			<RangeControl
+				label={__('Grid Column Start', 'ainoblocks')}
+				value={contentGridColumnStart}
+				onChange={(contentGridColumnStart) => setAttributes({ contentGridColumnStart })}
+				min={1}
+				max={13}
+				allowReset={true}
+			/>
+			<RangeControl
+				label={__('Grid Column End', 'ainoblocks')}
+				value={contentGridColumnEnd}
+				onChange={(contentGridColumnEnd) => setAttributes({ contentGridColumnEnd })}
+				min={1}
+				max={13}
+				allowReset={true}
+			/>
+		</PanelBody>
+	);
 
-			const styleBackground = {
-				backgroundColor: backgroundColor.color,
-			};
+	const mediaGridSettings = (
+		<PanelBody
+			title={__('Media Grid Settings', 'ainoblocks')}
+			initialOpen={false}
+		>
+			<RangeControl
+				label={__('Grid Column Start', 'ainoblocks')}
+				value={mediaGridColumnStart}
+				onChange={(mediaGridColumnStart) => setAttributes({ mediaGridColumnStart })}
+				min={1}
+				max={13}
+				allowReset={true}
+			/>
+			<RangeControl
+				label={__('Grid Column End', 'ainoblocks')}
+				value={mediaGridColumnEnd}
+				onChange={(mediaGridColumnEnd) => setAttributes({ mediaGridColumnEnd })}
+				min={1}
+				max={13}
+				allowReset={true}
+			/>
+		</PanelBody>
+	);
 
-			const colorSettings = [{
-				value: backgroundColor.color,
-				onChange: setBackgroundColor,
-				label: __('Background Color', 'ainoblocks'),
-			}];
+	const heroClasses = classnames(className, {
+		[`align${align}`]: align,
+		'media-right'     : 'media-right'      === mediaPosition,
+		'media-left'      : 'media-left'       === mediaPosition,
+		'media-below'     : 'media-below'      === mediaPosition,
+		'media-hide'      : 'media-hide'       === mediaPosition,
+		'media-fullheight': mediaHeight,
+		'is-selected': isSelected,
+		[`content-vertically-aligned-${verticalContentAlignment}`]: verticalContentAlignment,
+		'is-image-fill': imageFill,
+	});
 
-			const onMediaAltChange = (newMediaAlt) => {
-				setAttributes({
-					mediaAlt: newMediaAlt
-				});
-			};
+	const blockProps = useBlockProps( {
+		className: heroClasses,
+		style: {
+			backgroundColor: backgroundColor,
+		},
+	} );
 
-			const onVerticalContentAlignmentChange = (alignment) => {
-				setAttributes({
-					verticalContentAlignment: alignment
-				});
-			};
-
-		const heroSettings = (
-			<PanelBody
-				title={__('Hero Settings', 'ainoblocks')}
-				initialOpen={true}
-			>
-				<SelectControl
-					label={__('Media Position', 'ainoblocks')}
-					value={mediaPosition}
-					options={mediaPositionOptions}
-					onChange={mediaPosition => setAttributes({ mediaPosition })}
+	return (
+		<Fragment>
+			<InspectorControls>
+				{heroSettings}
+				<PanelColorSettings
+					title={__('Color Settings', 'ainoblocks')}
+					initialOpen={false}
+					colorSettings={[
+						{
+							value: backgroundColor,
+							onChange: backgroundColor => {
+								setAttributes({ backgroundColor });
+							},
+							label: __('Background Color', 'ainoblocks'),
+						},
+					]}
 				/>
-				<ToggleControl
-					label={__('Media height 100%', 'ainoblocks')}
-					checked={!!mediaHeight}
-					onChange={() => setAttributes({ mediaHeight: !mediaHeight })}
-					help={!!mediaHeight ? __('Media is full-height.', 'ainoblocks') : __('Toggle for full-height media.', 'ainoblocks')}
+				{contentGridSettings}
+				{mediaGridSettings}
+			</InspectorControls>
+			<BlockControls>
+				<BlockVerticalAlignmentToolbar
+					onChange={onVerticalContentAlignmentChange}
+					value={verticalContentAlignment}
 				/>
-				{mediaType === 'image' && (<TextareaControl
-					label={__('Alt text (alternative text)', 'ainoblocks')}
-					value={mediaAlt}
-					onChange={onMediaAltChange}
-					help={__('Describe the purpose of the image. Leave empty if the image is purely decorative.', 'ainoblocks')}
-				/>)}
-			</PanelBody>
-		);
+			</BlockControls>
 
-		const contentGridSettings = (
-			<PanelBody
-				title={__('Content Grid Settings', 'ainoblocks')}
-				initialOpen={false}
-			>
-				<RangeControl
-					label={__('Grid Column Start', 'ainoblocks')}
-					value={contentGridColumnStart}
-					onChange={(contentGridColumnStart) => setAttributes({ contentGridColumnStart })}
-					min={1}
-					max={13}
-					allowReset={true}
-				/>
-				<RangeControl
-					label={__('Grid Column End', 'ainoblocks')}
-					value={contentGridColumnEnd}
-					onChange={(contentGridColumnEnd) => setAttributes({ contentGridColumnEnd })}
-					min={1}
-					max={13}
-					allowReset={true}
-				/>
-			</PanelBody>
-		);
+			<div { ...blockProps }>
+				<div className="wp-block-ainoblocks-hero__inner-container">
 
-		const mediaGridSettings = (
-			<PanelBody
-				title={__('Media Grid Settings', 'ainoblocks')}
-				initialOpen={false}
-			>
-				<RangeControl
-					label={__('Grid Column Start', 'ainoblocks')}
-					value={mediaGridColumnStart}
-					onChange={(mediaGridColumnStart) => setAttributes({ mediaGridColumnStart })}
-					min={1}
-					max={13}
-					allowReset={true}
-				/>
-				<RangeControl
-					label={__('Grid Column End', 'ainoblocks')}
-					value={mediaGridColumnEnd}
-					onChange={(mediaGridColumnEnd) => setAttributes({ mediaGridColumnEnd })}
-					min={1}
-					max={13}
-					allowReset={true}
-				/>
-			</PanelBody>
-		);
-
-		return (
-			<Fragment>
-				<InspectorControls>
-					{heroSettings}
-					<PanelColorSettings
-						title={__('Color Settings', 'ainoblocks')}
-						initialOpen={false}
-						colorSettings={colorSettings}
-					/>
-					{contentGridSettings}
-					{mediaGridSettings}
-				</InspectorControls>
-				<BlockControls>
-					<BlockVerticalAlignmentToolbar
-						onChange={onVerticalContentAlignmentChange}
-						value={verticalContentAlignment}
-					/>
-				</BlockControls>
-
-				<div className={classNames} style={styleBackground}>
-					<div className="wp-block-ainoblocks-hero__container">
-
-						<div className="wp-block-ainoblocks-hero__content" style={styleContent}>
-							<InnerBlocks
-								template={TEMPLATE}
-								templateInsertUpdatesSelection={false}
-							/>
-						</div>
-						<div className="wp-block-ainoblocks-hero__media" style={styleMedia}>
-							{this.renderMediaArea()}
-						</div>
+					<div className="wp-block-ainoblocks-hero__content" style={styleContent}>
+						<InnerBlocks
+							template={TEMPLATE}
+							templateInsertUpdatesSelection={false}
+						/>
+					</div>
+					<div className="wp-block-ainoblocks-hero__media" style={styleMedia}>
+						{renderMediaArea()}
 					</div>
 				</div>
-			</Fragment >
-		);
-	}
+			</div>
+		</Fragment >
+	);
 }
-
-export default compose([
-	withColors('backgroundColor'),
-])(heroEdit);

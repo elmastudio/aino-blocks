@@ -1,11 +1,12 @@
 {
 	"name": "sticker",
+	"apiVersion": 2,
 	"attributes": {
 		"url": {
-			"type": "string"
-		},
-		"link": {
-			"type": "string"
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "href"
 		},
 		"title": {
 			"type": "string",
@@ -18,7 +19,7 @@
 			"source": "html",
 			"selector": "a"
 		},
-		"target": {
+		"linkTarget": {
 			"type": "string",
 			"default":"_self"
 		},

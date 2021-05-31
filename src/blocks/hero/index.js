@@ -1,13 +1,8 @@
 /**
  * WordPress dependencies
  */
-const {
-	__,
-	_x
-} = wp.i18n;
-const {
-	registerBlockCollection
-} = wp.blocks;
+const { __, _x } = wp.i18n;
+const { registerBlockCollection } = wp.blocks;
 
 /**
  * Internal dependencies

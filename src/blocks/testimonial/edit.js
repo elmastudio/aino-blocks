@@ -7,21 +7,16 @@ import classnames from 'classnames';
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const {
-	Component,
-	Fragment,
-} = wp.element;
+const { Component, Fragment } = wp.element;
 const {
 	BlockAlignmentToolbar,
 	BlockControls,
 	InnerBlocks,
+	useBlockProps,
 } = wp.blockEditor;
 
 /**
  * Allowed blocks and template constant is passed to InnerBlocks precisely as specified here.
- * The contents of the array should never change.
- * The array should contain the name of each block that is allowed.
- * In standout block, the only block we allow is 'core/list'.
  *
  * @constant
  * @type {string[]}
@@ -39,34 +34,24 @@ const TEMPLATE = [
 /**
  * Block edit function
  */
-class TestimonialEdit extends Component {
+export default function TestimonialEdit( { attributes, setAttributes, className } ) {
 
-	constructor() {
-		super(...arguments);
-	}
+	const testimonialClasses = classnames(className, {});
 
-	render() {
-		const {
-			attributes,
-			className,
-			setAttributes,
-		} = this.props;
+	const blockProps = useBlockProps( {
+		className: testimonialClasses,
+	} );
 
-		return (
-			<Fragment>
-
-				<div
-					className={classnames(className)}
-				>
-					<InnerBlocks
-						template={TEMPLATE}
-						allowedBlocks={ALLOWED_BLOCKS}
-						templateLock="insert"
-						templateInsertUpdatesSelection={false}
-					/>
-				</div>
-			</Fragment>
-		);
-	}
+	return (
+		<Fragment>
+			<div { ...blockProps }>
+				<InnerBlocks
+					template={TEMPLATE}
+					allowedBlocks={ALLOWED_BLOCKS}
+					templateLock="insert"
+					templateInsertUpdatesSelection={false}
+				/>
+			</div>
+		</Fragment>
+	);
 }
-export default TestimonialEdit;

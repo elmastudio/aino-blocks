@@ -1,11 +1,12 @@
 {
 	"name": "button",
+	"apiVersion": 2,
 	"attributes": {
 		"url": {
-			"type": "string"
-		},
-		"link": {
-			"type": "string"
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "href"
 		},
 		"title": {
 			"type": "string",
@@ -18,9 +19,11 @@
 			"source": "html",
 			"selector": "a"
 		},
-		"target": {
+		"linkTarget": {
 			"type": "string",
-			"default":"_self"
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "target"
 		},
 		"rel": {
 			"type": "string",
@@ -57,9 +60,6 @@
 		},
 		"label": {
 			"type": "string"
-		},
-		"opensInNewTab": {
-			"type": "boolean"
 		}
 	}
 }

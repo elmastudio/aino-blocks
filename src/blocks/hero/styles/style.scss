@@ -1,6 +1,6 @@
 .wp-block-ainoblocks-hero {
 
-	.wp-block-ainoblocks-hero__container {
+	.wp-block-ainoblocks-hero__inner-container {
 		max-width: 90rem;
 		display: block;
 		margin: 0 auto;
@@ -65,7 +65,7 @@
 		grid-column-end: 7;
 	}
 
-	&.media-below .wp-block-ainoblocks-hero__container {
+	&.media-below .wp-block-ainoblocks-hero__inner-container {
 
 		grid-template-rows: auto auto;
 
@@ -178,7 +178,7 @@
 // Frontend only
 .entry-content .wp-block-ainoblocks-hero {
 
-	&.media-below .wp-block-ainoblocks-hero__container {
+	&.media-below .wp-block-ainoblocks-hero__inner-container {
 
 		@media (min-width: e48m) {
 			padding-top: 144px;
@@ -208,7 +208,7 @@
 
 	&.has-header-search {
 
-		.wp-block-ainoblocks-hero__container {
+		.wp-block-ainoblocks-hero__inner-container {
 			padding-top: 132px;
 		}
 	}

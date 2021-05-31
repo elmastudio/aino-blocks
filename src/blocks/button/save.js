@@ -9,22 +9,19 @@ import classnames from 'classnames';
 const {
 	RichText,
 	getColorClassName,
+	useBlockProps,
 } = wp.blockEditor;
 
-export default function save({
-	attributes
-}) {
+export default function save( { attributes } ) {
+
 	const {
 		url,
 		label,
 		backgroundColor,
 		textColor,
-		customBackgroundColor,
-		customTextColor,
-		target,
+		linkTarget,
 		rel,
 		size,
-		link,
 		borderRadius,
 		borderWidth,
 		uppercase,
@@ -49,16 +46,18 @@ export default function save({
 		borderWidth: borderWidth ? borderWidth + 'px' : undefined,
 	};
 
+	const wrapperClasses = classnames(classnames, {});
+
 	return (
-		<div>
+		<div { ...useBlockProps.save( { className: wrapperClasses } ) }>
 			<RichText.Content
 				tagName="a"
 				className={ buttonClasses }
-				href={ link }
+				href={ url }
 				style={ styles }
 				value={ label }
-				target={ target }
-				rel ="noopener noreferrer"
+				target={ linkTarget }
+				rel={ rel }
 			/>
 		</div>
 	);
