@@ -46,7 +46,7 @@ Any block-ready WordPress theme will work with Aino blocks. Since we created the
 After the Aino blocks plugin is installed, you will see the Aino blocks collection in your Blocks library on any page and post. You can now choose a block and insert it into your editor.
 
 = Does Aino come with Block patterns? =
-Yes, you can use block patterns if you have the latest Gutenberg plugin version installed. You can see the first Aino blocks pattern inside the pattern library. We will create more free block patterns shortly.
+Yes, you can find the first Aino blocks patterns inside the pattern library. We will create more block patterns shortly.
 
 == Resources ==
 * Block Pattern Images by Slitshire.com, CC0 Creative Commons License, https://www.splitshire.com/
