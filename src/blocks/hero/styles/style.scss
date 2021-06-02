@@ -4,7 +4,7 @@
 		max-width: 93rem;
 		display: block;
 		margin: 0 auto;
-		padding-top: 6.25rem 1rem 3rem;
+		padding: 6.25rem 1rem 3rem;
 
 		@media (min-width: 48em) {
 			padding: 7.5rem 2rem 4rem;
@@ -125,8 +125,11 @@
 		grid-column-start: 1;
 		grid-column-end: 7;
 		grid-row-start: 1;
+		padding-bottom: 2rem;
 
 		@media (min-width: 48em) {
+
+			padding-bottom: 2rem;
 
 			.wp-block-image {
 				margin-bottom: 1.5rem;
@@ -205,24 +208,6 @@
 		overflow: hidden;
 		clip: rect(0, 0, 0, 0);
 		border: 0;
-	}
-}
-
-// Frontend only
-.entry-content .wp-block-ainoblocks-hero {
-
-	&.media-below .wp-block-ainoblocks-hero__inner-container {
-
-		@media (min-width: e48m) {
-			padding-top: 9rem;
-		}
-
-		.wp-block-ainoblocks-hero__media {
-
-			@media (min-width: 48em) {
-				padding-top: 4.5rem;
-			}
-		}
 	}
 }
 
