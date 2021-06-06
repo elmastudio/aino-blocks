@@ -55,10 +55,10 @@ Yes, you can find the first Aino blocks patterns inside the pattern library. We 
 
 = 1.5.0 =
 New: Latest Post 'Freestyle' block pattern.
-Bugfix: Core Image block border radius for images with link.
 Enhance: Border radius setting for Code, Preformatted, Group and Card blocks.
 Enhance: Update to API version 2.
-Enhance: Freestyle Block Patterns.
+Bugfix: Freestyle Block Patterns.
+Bugfix: Core Image block border radius for images with link.
 
 = 1.4.1 =
 Bugfix: Core Image block border radius settings, when border radius is not set.
