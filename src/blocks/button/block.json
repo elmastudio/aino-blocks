@@ -55,6 +55,12 @@
 		"textColor": {
 			"type": "string"
 		},
+		"linkBackgroundColor": {
+			"type": "string"
+		},
+		"linkTextColor": {
+			"type": "string"
+		},
 		"gradient": {
 			"type": "string"
 		},

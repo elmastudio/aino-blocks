@@ -5,7 +5,7 @@
 
 		.wp-block-ainoblocks-button__link {
 			color: #111;
-			background-color: transparent !important;
+			background-color: transparent;
 			border: 1px solid #111;
 		}
 	}
@@ -30,14 +30,12 @@
 		text-align: center;
 		text-decoration: none;
 		overflow-wrap: break-word;
-		-webkit-transition: all 0.2s ease;
-		transition: all 0.2s ease;
+		transition: all 0.25s ease;
 		color: #ffffff;
-		background-color: #111;
+		background-color: #000000;
 
-		&:hover {
-			-webkit-transform: translateY(-2px);
-			transform: translateY(-2px);
+		&.has-link-bg:hover {
+			background-color: transparent !important;
 		}
 
 		&.aligncenter {
@@ -51,123 +49,123 @@
 
 		&.size {
 
-			&__ssx {
-				padding: 0.75rem;
+			&__xxs {
+				padding: 0.75rem 1rem;
 				font-size: 0.75rem;
 			}
 
-			&__sx {
-				padding: 0.875rem;
+			&__xs {
+				padding: 0.875rem 1.5rem;
 				font-size: 0.875rem;
 			}
 
 			&__s {
-				padding: 1rem;
+				padding: 1rem 2rem;
 				font-size: 1rem;
 			}
 
 			&__m {
-				padding: 1.125rem;
+				padding: 1rem 2rem;
 				font-size: 1.125rem;
 
 				@media (min-width: 80em) {
-					padding: 1.25rem;
+					padding: 1.25rem 2.5rem;
 					font-size: 1.25rem;
 				}
 			}
 
 			&__l {
-				padding: 1.125rem;
+				padding: 1rem 2rem;
 				font-size: 1.125rem;
 
 				@media (min-width: 64em) {
-					padding: 1.375rem;
+					padding: 1.25rem 2.5rem;
 					font-size: 1.375rem;
 				}
 
 				@media (min-width: 80em) {
-					padding: 1.5rem;
+					padding: 1.5rem 3rem;
 					font-size: 1.5rem;
 				}
 			}
 
 			&__xl {
-				padding: 1.375rem;
+				padding: 1rem 2rem;
 				font-size: 1.375rem;
 
 				@media (min-width: 48em) {
-					padding: 1.5rem;
+					padding: 1.25rem 2.5rem;
 					font-size: 1.5rem;
 				}
 
 				@media (min-width: 64em) {
-					padding: 1.625rem;
+					padding: 1.5rem 3rem;
 					font-size: 1.625rem;
 				}
 
 				@media (min-width: 80em) {
-					padding: 1.75rem;
+					padding: 2rem 4rem;
 					font-size: 1.75rem;
 				}
 			}
 
 			&__xxl {
-				padding: 1.5rem;
-				font-size: 1.5rem;
+				padding: 1.5rem 3rem;
+				font-size: 1.375rem;
 
 				@media (min-width: 48em) {
-					padding: 1.75rem;
-					font-size: 1.75rem;
+					padding: 2rem 4rem;
+					font-size: 1.5rem;
 				}
 
 				@media (min-width: 64em) {
-					padding: 1.875rem;
-					font-size: 1.875rem;
+					padding: 2.5rem 5rem;
+					font-size: 1.625rem;
 				}
 
 				@media (min-width: 80em) {
-					padding: 2.125rem;
-					font-size: 2.125rem;
+					padding: 3rem 6rem;
+					font-size: 1.75rem;
 				}
 			}
 
 			&__xxxl {
-				padding: 1.625rem;
-				font-size: 1.625rem;
+				padding: 2.5rem 5rem;
+				font-size: 1.375rem;
 
 				@media (min-width: 48em) {
-					padding: 2rem;
-					font-size: 2rem;
+					padding: 3rem 6rem;
+					font-size: 1.5rem;
 				}
 
 				@media (min-width: 64em) {
-					padding: 2.25rem;
-					font-size: 2.25rem;
+					padding: 4rem 8rem;
+					font-size: 1.625rem;
 				}
 
 				@media (min-width: 80em) {
-					padding: 2.5rem;
-					font-size: 2.5rem;
+					padding: 5rem 10rem;
+					font-size: 1.75rem;
 				}
 			}
 
 			&__xxxxl {
-				padding: 1.875rem;
-				font-size: 1.875rem;
+				padding: 4rem 8rem;
+				font-size: 1.375rem;
 
 				@media (min-width: 48em) {
-					padding: 2.25rem;
-					font-size: 2.25rem;
+					padding: 5rem 10rem;
+					font-size: 1.5rem;
 				}
 
 				@media (min-width: 64em) {
-					padding: 2.625rem;
-					font-size: 2.625rem;
+					padding: 6rem 12rem;
+					font-size: 1.625rem;
 				}
 
 				@media (min-width: 80em) {
-					padding: 3rem;
-					font-size: 3rem;
+					padding: 7.5rem 15rem;
+					font-size: 1.75rem;
 				}
 			}
 		}

@@ -121,7 +121,7 @@ function borderRadiusInspectorControls(BlockEdit) {
 					<BlockEdit {...props} />
 					<InspectorControls>
 						<PanelBody
-							title={__('Aino Border Radius', 'ainoblocks')}
+							title={__('Aino Responsive Border Radius', 'ainoblocks')}
 							initialOpen={false}
 						>
 							<SelectControl

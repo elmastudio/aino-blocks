@@ -4,7 +4,7 @@ Plugin URI: https://wpaino.com
 Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks, block patterns
 Requires at least: 5.6
-Tested up to: 5.7.2
+Tested up to: 5.8.0
 Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
@@ -54,11 +54,13 @@ Yes, you can find the first Aino blocks patterns inside the pattern library. We 
 == Changelog ==
 
 = 1.5.0 =
-New: Latest Post 'Freestyle' block pattern.
-Enhance: Border radius setting for Code, Preformatted, Group and Card blocks.
-Enhance: Update to API version 2.
 Bugfix: Freestyle Block Patterns.
 Bugfix: Core Image block border radius for images with link.
+Enhance: Border radius setting for Code, Preformatted, Group and Card blocks.
+Enhance: Update to API version 2.
+Enhance: Button Block Background Link Color.
+Enhance: Grid Block Small gap styles.
+
 
 = 1.4.1 =
 Bugfix: Core Image block border radius settings, when border radius is not set.

@@ -410,11 +410,6 @@ export default function GridItemEdit( { hasChildBlocks, attributes, setAttribute
 				<div { ...blockProps }>
 					<InnerBlocks
 						templateLock={ false }
-						renderAppender={
-							hasChildBlocks
-								? undefined
-								: () => <InnerBlocks.ButtonBlockAppender />
-						}
 					/>
 				</div>
 			</Fragment>

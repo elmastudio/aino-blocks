@@ -25,9 +25,9 @@ const {
 	RichText,
 	InspectorControls,
 	PanelColorSettings,
-	__experimentalLinkControl,
 	useBlockProps,
 	InspectorAdvancedControls,
+	__experimentalLinkControl,
 } = wp.blockEditor;
 
 /**
@@ -56,11 +56,12 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 		uppercase,
 		backgroundColor,
 		textColor,
+		linkBackgroundColor,
 	} = attributes;
 
 	const sizeOptions = [
-		{ value: 'size__ssx', label: __('SSX', 'ainoblocks') },
-		{ value: 'size__sx', label: __('SX', 'ainoblocks') },
+		{ value: 'size__xxs', label: __('XXS', 'ainoblocks') },
+		{ value: 'size__xs', label: __('XS', 'ainoblocks') },
 		{ value: 'size__s', label: __('S', 'ainoblocks') },
 		{ value: 'size__m', label: __('M', 'ainoblocks') },
 		{ value: 'size__l', label: __('L', 'ainoblocks') },
@@ -70,12 +71,16 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 		{ value: 'size__xxxxl', label: __('4XL', 'ainoblocks') }
 	];
 
-	const styles = {
+	const styleButton = {
 		backgroundColor: backgroundColor,
 		color: textColor,
-		borderColor: textColor,
 		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 		borderWidth: borderWidth ? borderWidth + 'px' : undefined,
+	};
+
+	const styleBg = {
+		backgroundColor:linkBackgroundColor,
+		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 	};
 
 	const onSetLinkRel = useCallback(
@@ -148,6 +153,7 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 	const buttonClasses = classnames(className, {});
 	const blockProps = useBlockProps( {
 		className: buttonClasses,
+		style: styleBg,
 	} );
 
 	return (
@@ -187,7 +193,7 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 						value={borderRadius}
 						onChange={(borderRadius) => setAttributes({ borderRadius })}
 						min={0}
-						max={100}
+						max={200}
 						initialPosition={0}
 						allowReset={true}
 					/>
@@ -225,6 +231,13 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 							},
 							label: __('Text Color', 'ainoblocks'),
 						},
+						{
+							value: linkBackgroundColor,
+							onChange: linkBackgroundColor => {
+								setAttributes({ linkBackgroundColor });
+							},
+							label: __('Link Background Color', 'ainoblocks'),
+						},
 					]}
 				>
 				</PanelColorSettings>
@@ -246,12 +259,13 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 						'wp-block-ainoblocks-button__link', size, borderRadius, {
 						'has-custom-background': backgroundColor,
 						'has-custom-text-color': textColor,
+						'has-link-bg': linkBackgroundColor,
 						'is-uppercase': uppercase,
 						'no-border-radius': borderRadius === 0,
 						'no-border': borderWidth === 0,
 						}
 					) }
-					style={styles}
+					style={styleButton}
 					onChange={ value => {
 						setAttributes( { label: value })
 					} }
