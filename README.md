@@ -9,7 +9,7 @@
 __Contributors:__ elmastudio  
 __Tags:__ page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks   
 __Requires at least:__ 5.5   
-__Tested up to:__ WordPress 5.7.1  
+__Tested up to:__ WordPress 5.8.0  
 __License:__ GPLv2 or later  
 __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -32,6 +32,15 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+### 1.5.0  
+**Bugfix:** Freestyle Block Patterns.  
+**Bugfix:** Core Image block border radius for images with link.  
+**Enhance:** Border radius setting for Code, Preformatted, Group and Card blocks.  
+**Enhance:** Update to API version 2.  
+**Enhance:** Button Block Background Link Color.  
+**Enhance:** Grid Block Small gap styles.  
+
+
 ### 1.4.0  
 **New:** Core Image block border radius settings.  
 
@@ -45,7 +54,7 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### 1.2.1  
 **New:** First 'Arty Portfolio' block pattern.  
 **Bugfix:** Sticker block URL input.  
-**Bugfix:** Arror button block URL input.  
+**Bugfix:** Arrow button block URL input.  
   
   
 ### 1.2.0  
