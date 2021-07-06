@@ -894,8 +894,8 @@
     margin-left: auto;
     margin-right: auto; } }
 
-.block-editor-block-list__block[data-type="ainoblocks/grid-container"].is-selected .wp-block-ainoblocks-grid-container > .block-editor-inner-blocks > .block-editor-block-list__layout,
-.block-editor-block-list__block[data-type="ainoblocks/grid-container"].has-child-selected .wp-block-ainoblocks-grid-container > .block-editor-inner-blocks > .block-editor-block-list__layout {
+.wp-block-ainoblocks-grid-container.is-selected > .block-editor-inner-blocks > .block-editor-block-list__layout,
+.wp-block-ainoblocks-grid-container.has-child-selected > .block-editor-inner-blocks > .block-editor-block-list__layout {
   background: linear-gradient(#3399FF, #3399FF) 100% 1px/1px, linear-gradient(#3399FF, #3399FF) 91.66667% 1px/1px, linear-gradient(#3399FF, #3399FF) 83.33333% 1px/1px, linear-gradient(#3399FF, #3399FF) 75.0% 1px/1px, linear-gradient(#3399FF, #3399FF) 66.66667% 1px/1px, linear-gradient(#3399FF, #3399FF) 58.33333% 1px/1px, linear-gradient(#3399FF, #3399FF) 50.0% 1px/1px, linear-gradient(#3399FF, #3399FF) 41.66667% 1px/1px, linear-gradient(#3399FF, #3399FF) 33.33333% 1px/1px, linear-gradient(#3399FF, #3399FF) 25.0% 1px/1px, linear-gradient(#3399FF, #3399FF) 16.66667% 1px/1px, linear-gradient(#3399FF, #3399FF) 8.33333% 1px/1px, linear-gradient(#3399FF, #3399FF) 0% 1px/1px, linear-gradient(#3399FF, #3399FF) 1px 100%/100% 1px, linear-gradient(#3399FF, #3399FF) 1px 0%/100% 1px;
   background-repeat: no-repeat; }
 
@@ -923,7 +923,7 @@
   margin-right: 0;
   max-width: unset; }
 
-.block-editor-block-list__layout .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__container {
+.block-editor-block-list__layout .wp-block-ainoblocks-hero .wp-block-ainoblocks-hero__inner-container {
   padding-top: 0;
   padding-bottom: 0; }
 
@@ -972,52 +972,52 @@
   width: 100%; }
 
 .editor-styles-wrapper[style*="width: 780px;"] .wp-block-ainoblocks-button__link.size__m {
-  padding: 1.125rem;
+  padding: 1rem 2rem;
   font-size: 1.125rem; }
 
 .editor-styles-wrapper[style*="width: 780px;"] .wp-block-ainoblocks-button__link.size__l {
-  padding: 1.375rem;
+  padding: 1.25rem 2.5rem;
   font-size: 1.375rem; }
 
 .editor-styles-wrapper[style*="width: 780px;"] .wp-block-ainoblocks-button__link.size__xl {
-  padding: 1.5rem;
+  padding: 1.25rem 2.5rem;
   font-size: 1.5rem; }
 
 .editor-styles-wrapper[style*="width: 780px;"] .wp-block-ainoblocks-button__link.size__xxl {
-  padding: 1.75rem;
-  font-size: 1.75rem; }
+  padding: 2rem 4rem;
+  font-size: 1.5rem; }
 
 .editor-styles-wrapper[style*="width: 780px;"] .wp-block-ainoblocks-button__link.size__xxxl {
-  padding: 2rem;
-  font-size: 2rem; }
+  padding: 3rem 6rem;
+  font-size: 1.5rem; }
 
 .editor-styles-wrapper[style*="width: 780px;"] .wp-block-ainoblocks-button__link.size__xxxxl {
-  padding: 2.25rem;
-  font-size: 2.25rem; }
+  padding: 5rem 10rem;
+  font-size: 1.5rem; }
 
 .editor-styles-wrapper[style*="width: 360px;"] .wp-block-ainoblocks-button__link.size__m {
-  padding: 1.125rem;
+  padding: 1rem 2rem;
   font-size: 1.125rem; }
 
 .editor-styles-wrapper[style*="width: 360px;"] .wp-block-ainoblocks-button__link.size__l {
-  padding: 1.125rem;
+  padding: 1rem 2rem;
   font-size: 1.125rem; }
 
 .editor-styles-wrapper[style*="width: 360px;"] .wp-block-ainoblocks-button__link.size__xl {
-  padding: 1.375rem;
+  padding: 1rem 2rem;
   font-size: 1.375rem; }
 
 .editor-styles-wrapper[style*="width: 360px;"] .wp-block-ainoblocks-button__link.size__xxl {
-  padding: 1.5rem;
-  font-size: 1.5rem; }
+  padding: 1.5rem 3rem;
+  font-size: 1.375rem; }
 
 .editor-styles-wrapper[style*="width: 360px;"] .wp-block-ainoblocks-button__link.size__xxxl {
-  padding: 1.625rem;
-  font-size: 1.625rem; }
+  padding: 2.5rem 5rem;
+  font-size: 1.375rem; }
 
 .editor-styles-wrapper[style*="width: 360px;"] .wp-block-ainoblocks-button__link.size__xxxxl {
-  padding: 1.875rem;
-  font-size: 1.875rem; }
+  padding: 4rem 8rem;
+  font-size: 1.375rem; }
 .block-editor-block-list__layout .block-editor-block-list__block[data-type="ainoblocks/multiple-buttons"] .block-editor-block-list__block-edit {
   float: none;
   margin-right: 0; }

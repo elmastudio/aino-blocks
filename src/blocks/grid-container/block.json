@@ -1,5 +1,6 @@
 {
 	"name": "grid-container",
+	"apiVersion": 2,
 	"attributes": {
 		"align": {
 			"type": "string",

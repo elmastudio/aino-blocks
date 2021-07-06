@@ -13,7 +13,8 @@ const {
 } = wp.components;
 const {
 	RichText,
-} = wp.editor;
+	useBlockProps,
+} = wp.blockEditor;
 
 export default function save({ attributes }) {
 
@@ -53,15 +54,19 @@ export default function save({ attributes }) {
 		borderBottomLeftRadius: borderRadius ? borderRadius + 'px' : undefined,
 	};
 
+	const badgeClasses = classnames(classnames, size, {
+		'no-icon': icon,
+	});
+
+	const blockProps = useBlockProps.save( {
+		className: badgeClasses,
+		style: {
+			color: textColor,
+		},
+	} );
+
 	return (
-		<div
-			className={classnames( 'wp-block-ainoblocks-badge', size,{
-				'no-icon': icon,
-			})}
-			style={{
-				color: textColor,
-			}}
-		>
+		<div { ...blockProps }>
 			{ icon && (
 				<span className={iconClasses} style={iconStyles}>
 					<SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">

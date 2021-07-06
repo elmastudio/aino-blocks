@@ -6,8 +6,10 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies.
  */
+const { __ } = wp.i18n;
 const {
-	InnerBlocks
+	InnerBlocks,
+	useBlockProps,
 } = wp.blockEditor;
 
 export default function save({ attributes, className }) {
@@ -20,8 +22,14 @@ export default function save({ attributes, className }) {
 		'wp-block-ainoblocks-grid-container__inner', {}
 	);
 
+	const gridContainerClasses = classnames(classnames);
+
+	const blockProps = useBlockProps.save( {
+		className: gridContainerClasses,
+	} );
+
 	return (
-		<div className={className}>
+		<div { ...blockProps }>
 			<div className={innerClasses}>
 				<InnerBlocks.Content />
 			</div>

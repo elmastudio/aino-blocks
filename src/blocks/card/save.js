@@ -9,12 +9,10 @@ import classnames from 'classnames';
 const { __ } = wp.i18n;
 const {
 	InnerBlocks,
-	RichText,
+	useBlockProps,
 } = wp.blockEditor;
 
-export default function save({
-	attributes
-}) {
+export default function save( { attributes } ) {
 
 	const {
 		align,
@@ -33,7 +31,7 @@ export default function save({
 		borderWidth,
 	} = attributes;
 
-	const classes = classnames(classnames, shadowName, {
+	const cardClasses = classnames(classnames, shadowName, {
 		'has-background'        : backgroundColor,
 		'has-border'            : borderColor,
 		[`pt__${paddingTop}`]   : paddingTop,
@@ -42,18 +40,22 @@ export default function save({
 		[`pr__${paddingRight}`] : paddingRight,
 	});
 
+	const blockProps = useBlockProps.save( {
+		className: cardClasses,
+		style: {
+			backgroundColor: backgroundColor,
+			borderColor: borderColor,
+			borderRadius: borderRadius ? borderRadius + 'px' : undefined,
+			borderTopWidth: borderTopWidth ? borderTopWidth + 'px' : undefined,
+			borderRightWidth: borderRightWidth ? borderRightWidth + 'px' : undefined,
+			borderBottomWidth: borderBottomWidth ? borderBottomWidth + 'px' : undefined,
+			borderLeftWidth: borderLeftWidth ? borderLeftWidth + 'px' : undefined,
+		},
+	} );
+
 	return (
-		<div
-			className={classes}
-			style={{
-				backgroundColor: backgroundColor,
-				borderColor: borderColor,
-				borderRadius: borderRadius ? borderRadius + 'px' : undefined,
-				borderTopWidth: borderTopWidth ? borderTopWidth + 'px' : undefined,
-				borderRightWidth: borderRightWidth ? borderRightWidth + 'px' : undefined,
-				borderBottomWidth: borderBottomWidth ? borderBottomWidth + 'px' : undefined,
-				borderLeftWidth: borderLeftWidth ? borderLeftWidth + 'px' : undefined,
-			}}>
+
+		<div { ...blockProps }>
 			<InnerBlocks.Content />
 		</div >
 	);

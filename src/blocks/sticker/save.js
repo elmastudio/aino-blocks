@@ -9,18 +9,19 @@ import classnames from 'classnames';
 const {
 	RichText,
 	getColorClassName,
+	useBlockProps,
 } = wp.blockEditor;
 
-export default function save({
-	attributes
-}) {
+export default function save( { attributes } ) {
+
 	const {
+		url,
 		label,
 		backgroundColor,
 		textColor,
 		borderColor,
-		target,
-		link,
+		linkTarget,
+		rel,
 		stickerSize,
 		borderRadius,
 		borderWidth,
@@ -51,16 +52,18 @@ export default function save({
 		transform: `rotateZ(${rotateStart}deg)`
 	};
 
+	const wrapperClasses = classnames(classnames, {});
+
 	return (
-		<div>
+		<div { ...useBlockProps.save( { className: wrapperClasses } ) }>
 			<RichText.Content
 				tagName="a"
 				className={ stickerClasses }
 				style={ styles }
-				href={ link }
+				href={ url }
 				value={ label }
-				target={ target }
-				rel ="noopener noreferrer"
+				target={ linkTarget }
+				rel={ rel }
 			/>
 		</div>
 	);

@@ -33,6 +33,30 @@
 		word-break: break-word;
 		overflow-wrap: break-word;
 	}
+
+	&.gap-s {
+
+		@media (min-width: 48em) {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+
+		@media (min-width: 80em) {
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+		}
+
+		@media (min-width: 96em) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+	}
+
+	&.no-outer-gap {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
 }
 
 .wp-block-ainoblocks-grid-container.alignwide {
@@ -48,12 +72,4 @@
 	padding-left: 0;
 	padding-right: 0;
 	max-width: 100% !important;
-}
-
-.wp-block-ainoblocks-grid-container {
-
-	&.no-outer-gap {
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-	}
 }

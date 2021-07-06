@@ -6,9 +6,11 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
+const { __ } = wp.i18n;
 const {
 	RichText,
-} = wp.editor;
+	useBlockProps,
+} = wp.blockEditor;
 
 export default function save({ attributes }) {
 
@@ -26,11 +28,17 @@ export default function save({ attributes }) {
 		layout,
 	} = attributes;
 
+	const authorClasses = classnames(classnames, layout, imgSize, {});
+
+	const blockProps = useBlockProps.save( {
+		className: authorClasses,
+		style: {
+			textAlign: alignment,
+		},
+	} );
+
 	return (
-		<div
-			className={classnames(layout, imgSize)}
-			style={{ textAlign: alignment }}
-		>
+		<div { ...blockProps }>
 			{imgURL && (
 				<div className={classnames('wp-block-ainoblocks-author__avatar')}>
 					<img style={{

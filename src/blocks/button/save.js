@@ -9,22 +9,21 @@ import classnames from 'classnames';
 const {
 	RichText,
 	getColorClassName,
+	useBlockProps,
 } = wp.blockEditor;
 
-export default function save({
-	attributes
-}) {
+export default function save( { attributes } ) {
+
 	const {
 		url,
 		label,
 		backgroundColor,
 		textColor,
-		customBackgroundColor,
-		customTextColor,
-		target,
+		linkBackgroundColor,
+		linkTextColor,
+		linkTarget,
 		rel,
 		size,
-		link,
 		borderRadius,
 		borderWidth,
 		uppercase,
@@ -36,29 +35,41 @@ export default function save({
 	const buttonClasses = classnames('wp-block-ainoblocks-button__link', size, borderRadius, {
 		'has-custom-background': backgroundColor,
 		'has-custom-text-color': textColor,
+		'has-link-bg': linkBackgroundColor,
 		'is-uppercase': uppercase,
 		'no-border-radius': borderRadius === 0,
 		'no-border': borderWidth === 0,
 	});
 
-	const styles = {
+	const styleButton = {
 		backgroundColor: backgroundColor,
 		color: textColor,
-		borderColor: textColor,
 		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 		borderWidth: borderWidth ? borderWidth + 'px' : undefined,
 	};
 
+	const styleBg = {
+		backgroundColor:linkBackgroundColor,
+		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
+	};
+
+	const wrapperClasses = classnames(classnames, {});
+
+	const blockProps = useBlockProps.save( {
+		className: wrapperClasses,
+		style: styleBg,
+	} );
+
 	return (
-		<div>
+		<div { ...blockProps }>
 			<RichText.Content
 				tagName="a"
 				className={ buttonClasses }
-				href={ link }
-				style={ styles }
+				href={ url }
+				style={ styleButton}
 				value={ label }
-				target={ target }
-				rel ="noopener noreferrer"
+				target={ linkTarget }
+				rel={ rel }
 			/>
 		</div>
 	);

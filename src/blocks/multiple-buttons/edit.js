@@ -6,19 +6,14 @@ import memoize from 'memize';
 import times from 'lodash/times';
 
 /**
- * Internal dependencies
- */
-import Inspector from './inspector';
-
-/**
  * WordPress dependencies
  */
+const { __, _x } = wp.i18n;
+const { Component, Fragment } = wp.element;
 const {
-	Component,
-	Fragment
-} = wp.element;
-const {
-	InnerBlocks
+	InspectorControls,
+	InnerBlocks,
+	useBlockProps,
 } = wp.blockEditor;
 
 /**
@@ -40,50 +35,36 @@ const getCount = memoize((count) => {
 /**
  * Block edit function
  */
-class MultipleButtonsEdit extends Component {
+export default function MultipleButtonsEdit( { attributes, setAttributes, className, isSelected } ) {
 
-	render() {
-			const {
-				attributes,
-				className,
-				isSelected,
-				setAttributes,
-			} = this.props;
+	const {
+		align,
+		items,
+	} = attributes;
 
-			const {
-				align,
-				items,
-			} = attributes;
+	const buttonsClasses = classnames(className, `align${align}`, {});
 
-			const classNames = classnames(className, `align${align}`, {});
+	const innerClasses = classnames(
+		'wp-block-ainoblocks-multiple-buttons__inner', {
+		}
+	);
 
-			const classes = classnames(
-				'wp-block-ainoblocks-multiple-buttons__inner', {
+	const blockProps = useBlockProps( {
+		className: buttonsClasses,
+	} );
 
-				}
-			);
-
-		return (
-			<Fragment>
-				{isSelected && (
-					<Inspector
-						{...this.props}
+	return (
+		<Fragment>
+			<div { ...blockProps }>
+				<div className={innerClasses}>
+					<InnerBlocks
+						allowedBlocks={ALLOWED_BLOCKS}
+						template={getCount(items)}
+						templateLock={ false }
+						templateInsertUpdatesSelection={false}
 					/>
-				)}
-
-				<div className={classNames}>
-					<div className={classes}>
-						<InnerBlocks
-							allowedBlocks={ALLOWED_BLOCKS}
-							template={getCount(items)}
-							templateLock={ false }
-							templateInsertUpdatesSelection={false}
-						/>
-					</div>
 				</div>
-			</Fragment>
-		);
-	}
+			</div>
+		</Fragment>
+	);
 }
-
-export default MultipleButtonsEdit;

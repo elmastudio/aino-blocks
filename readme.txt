@@ -3,9 +3,9 @@ Author URI: https://www.elmastudio.de/en
 Plugin URI: https://wpaino.com
 Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks, block patterns
-Requires at least: 5.5
-Tested up to: 5.7.1
-Stable tag: 1.4.1
+Requires at least: 5.6
+Tested up to: 5.8.0
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,19 +13,19 @@ A block collection to build creative WordPress websites.
 
 == Description ==
 
-The Aino blocks plugin brings you a collection of blocks and block patterns for the block editor. With Aino blocks and the free <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino theme</a> you can build creative, individual page layouts ease.
+The Aino blocks plugin brings you a collection of blocks and block patterns for the WordPress block editor. With Aino blocks and the free <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino theme</a> you can build creative, individual page layouts with ease.
 
 ## Currently available blocks
+* Arrow button block
+* Author block
+* Badge block
+* Buttons block
+* Card block
+* Divider block
 * Grid block
 * Hero block
-* Card block
-* Badge block
-* Author block
-* Testimonial block
-* Buttons block
-* Arrow button block
 * Sticker block
-* Divider block
+* Testimonial block
 
 == Installation ==
 
@@ -46,12 +46,21 @@ Any block-ready WordPress theme will work with Aino blocks. Since we created the
 After the Aino blocks plugin is installed, you will see the Aino blocks collection in your Blocks library on any page and post. You can now choose a block and insert it into your editor.
 
 = Does Aino come with Block patterns? =
-Yes, you can use block patterns if you have the latest Gutenberg plugin version installed. You can see the first Aino blocks pattern inside the pattern library. We will create more free block patterns shortly.
+Yes, you can find the first Aino blocks patterns inside the pattern library. We will create more block patterns shortly.
 
 == Resources ==
 * Block Pattern Images by Slitshire.com, CC0 Creative Commons License, https://www.splitshire.com/
 
 == Changelog ==
+
+= 1.5.0 =
+Bugfix: Freestyle Block Patterns.
+Bugfix: Core Image block border radius for images with link.
+Enhance: Border radius setting for Code, Preformatted, Group and Card blocks.
+Enhance: Update to API version 2.
+Enhance: Button Block Background Link Color.
+Enhance: Grid Block Small gap styles.
+
 
 = 1.4.1 =
 Bugfix: Core Image block border radius settings, when border radius is not set.

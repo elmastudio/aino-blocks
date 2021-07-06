@@ -10,38 +10,26 @@ const { __ } = wp.i18n;
 const { Component, Fragment } = wp.element;
 const { compose, withInstanceId } = wp.compose;
 const {
+	InspectorControls,
+	PanelColorSettings,
+	useBlockProps,
+} = wp.blockEditor;
+const {
 	PanelBody,
 	RangeControl,
 } = wp.components;
 
-const {
-	InspectorControls,
-	PanelColorSettings,
-} = wp.blockEditor;
-
 /**
  * Block edit function
  */
-class dividerEdit extends Component {
+export default function dividerEdit( { attributes, setAttributes, className } ) {
 
-	constructor() {
-		super(...arguments);
-	}
-
-	render() {
-
-		const {
-			attributes,
-			setAttributes,
-			className,
-		} = this.props;
-
-		const {
-			backgroundColor,
-			borderColor,
-			iconColor,
-			borderWidth,
-		} = attributes;
+	const {
+		backgroundColor,
+		borderColor,
+		iconColor,
+		borderWidth,
+	} = attributes;
 
 		const styles = {
 			backgroundColor: backgroundColor,
@@ -54,6 +42,10 @@ class dividerEdit extends Component {
 		};
 
 		const borderWidthTooltipContent = borderWidth => `${borderWidth}px`
+
+		const blockProps = useBlockProps( {
+			className: className,
+		} );
 
 		return (
 			<Fragment>
@@ -102,7 +94,7 @@ class dividerEdit extends Component {
 					>
 					</PanelColorSettings>
 				</InspectorControls>
-				<div className={classnames(className)}>
+				<div { ...blockProps }>
 					<span class="wp-block-ainoblocks-divider__inner" style={ styles }>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="__icon" style={iconStyles}>
 							<path d="M25.586 6.586l17.414 17.414-17.414 17.414-2.828-2.828 12.585-12.586-30.342 0v-4l30.342-0-12.585-12.586z"></path>
@@ -110,8 +102,5 @@ class dividerEdit extends Component {
 					</span>
 				</div>
 			</Fragment>
-		);
-	}
+	);
 }
-
-export default dividerEdit;

@@ -24,8 +24,8 @@
 	}
 }
 
-.block-editor-block-list__block[data-type="ainoblocks/grid-container"].is-selected .wp-block-ainoblocks-grid-container>.block-editor-inner-blocks>.block-editor-block-list__layout,
-.block-editor-block-list__block[data-type="ainoblocks/grid-container"].has-child-selected .wp-block-ainoblocks-grid-container>.block-editor-inner-blocks>.block-editor-block-list__layout {
+.wp-block-ainoblocks-grid-container.is-selected>.block-editor-inner-blocks>.block-editor-block-list__layout,
+.wp-block-ainoblocks-grid-container.has-child-selected>.block-editor-inner-blocks>.block-editor-block-list__layout {
 	background:
 		linear-gradient(#3399FF, #3399FF) 100% 1px / 1px,
 		linear-gradient(#3399FF, #3399FF) 91.6666666% 1px / 1px,

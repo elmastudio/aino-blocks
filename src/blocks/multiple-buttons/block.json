@@ -1,12 +1,13 @@
 {
 	"name": "multiple-buttons",
+	"apiVersion": 2,
 	"attributes": {
 		"align": {
 			"type": "string"
 		},
 		"items": {
 			"type": "number",
-			"default": "2"
+			"default": "1"
 		}
 	}
 }

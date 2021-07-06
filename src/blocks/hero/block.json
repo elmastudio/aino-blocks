@@ -1,5 +1,6 @@
 {
 	"name": "hero",
+	"apiVersion": 2,
 	"attributes": {
 		"align": {
 			"type": "string",

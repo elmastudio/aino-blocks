@@ -7,26 +7,26 @@ import classnames from 'classnames';
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const { Component, Fragment } = wp.element;
+const { Component, Fragment, useCallback, useState } = wp.element;
 const { compose, withInstanceId } = wp.compose;
 const {
 	PanelBody,
+	TextControl,
+	ToolbarGroup,
+	ToolbarButton,
+	Popover,
 	ToggleControl,
 	SelectControl,
 	RangeControl,
-	Popover,
-	ToolbarButton,
-	ToolbarGroup,
 } = wp.components;
-
 const {
 	BlockControls,
 	BlockIcon,
 	RichText,
 	InspectorControls,
-	withColors,
 	PanelColorSettings,
-	ColorPalette,
+	useBlockProps,
+	InspectorAdvancedControls,
 	__experimentalLinkControl,
 } = wp.blockEditor;
 
@@ -43,203 +43,238 @@ const NEW_TAB_REL = 'noreferrer noopener';
 /**
  * Block edit function
  */
-class buttonEdit extends Component {
+export default function buttonEdit( { attributes, setAttributes, className, isSelected, opensInNewTab } ) {
 
-	constructor() {
-		super( ...arguments )
-		this.onClickLinkSettings = this.onClickLinkSettings.bind(this)
-		this.onChangeOpensInNewTab = this.onChangeOpensInNewTab.bind(this)
-		this.state = {
-			isURLPickerOpen:false,
-		}
-	}
+	const {
+		label,
+		url,
+		linkTarget,
+		rel,
+		size,
+		borderRadius,
+		borderWidth,
+		uppercase,
+		backgroundColor,
+		textColor,
+		linkBackgroundColor,
+	} = attributes;
 
-	onClickLinkSettings () {
-		
-		const { attributes, setAttributes } = this.props
-		const { target } = attributes 
-		if ( "_self" === target ) {
-			setAttributes( { opensInNewTab: false } )
-		} else if ( "_blank" === target ) {
-			setAttributes( { opensInNewTab: true } )
-		}
+	const sizeOptions = [
+		{ value: 'size__xxs', label: __('XXS', 'ainoblocks') },
+		{ value: 'size__xs', label: __('XS', 'ainoblocks') },
+		{ value: 'size__s', label: __('S', 'ainoblocks') },
+		{ value: 'size__m', label: __('M', 'ainoblocks') },
+		{ value: 'size__l', label: __('L', 'ainoblocks') },
+		{ value: 'size__xl', label: __('XL', 'ainoblocks') },
+		{ value: 'size__xxl', label: __('XXL', 'ainoblocks') },
+		{ value: 'size__xxxl', label: __('3XL', 'ainoblocks') },
+		{ value: 'size__xxxxl', label: __('4XL', 'ainoblocks') }
+	];
 
-		this.setState( {
-			isURLPickerOpen: true
-		})
-	}
+	const styleButton = {
+		backgroundColor: backgroundColor,
+		color: textColor,
+		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
+		borderWidth: borderWidth ? borderWidth + 'px' : undefined,
+	};
 
-	onChangeOpensInNewTab ( value ) {
-		if ( true === value ) {
-			this.props.setAttributes( { target: '_blank' } )
-		} else {
-			this.props.setAttributes( { target: '_self' } )
-		}
-	}
+	const styleBg = {
+		backgroundColor:linkBackgroundColor,
+		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
+	};
 
-	render() {
+	const onSetLinkRel = useCallback(
+		( value ) => {
+			setAttributes( { rel: value } );
+		},
+		[ setAttributes ]
+	);
 
-		const {
-			attributes,
-			setAttributes,
-			className,
-			isSelected,
-		} = this.props;
+	const onToggleOpenInNewTab = useCallback(
+		( value ) => {
+			const newLinkTarget = value ? '_blank' : undefined;
 
-		const {
-			label,
-			url,
-			link,
-			target,
-			size,
-			borderRadius,
-			borderWidth,
-			uppercase,
-			opensInNewTab,
-			backgroundColor,
-			textColor,
-		} = attributes;
+			let updatedRel = rel;
+			if ( newLinkTarget && ! rel ) {
+				updatedRel = NEW_TAB_REL;
+			} else if ( ! newLinkTarget && rel === NEW_TAB_REL ) {
+				updatedRel = undefined;
+			}
 
-		const sizeOptions = [
-			{ value: 'size__ssx', label: __('SSX', 'ainoblocks') },
-			{ value: 'size__sx', label: __('SX', 'ainoblocks') },
-			{ value: 'size__s', label: __('S', 'ainoblocks') },
-			{ value: 'size__m', label: __('M', 'ainoblocks') },
-			{ value: 'size__l', label: __('L', 'ainoblocks') },
-			{ value: 'size__xl', label: __('XL', 'ainoblocks') },
-			{ value: 'size__xxl', label: __('XXL', 'ainoblocks') },
-			{ value: 'size__xxxl', label: __('3XL', 'ainoblocks') },
-			{ value: 'size__xxxxl', label: __('4XL', 'ainoblocks') }
-		];
+			setAttributes( {
+				linkTarget: newLinkTarget,
+				rel: updatedRel,
+			} );
+		},
+		[ rel, setAttributes ]
+	);
 
-		const styles = {
-			backgroundColor: backgroundColor,
-			color: textColor,
-			borderColor: textColor,
-			borderRadius: borderRadius ? borderRadius + 'px' : undefined,
-			borderWidth: borderWidth ? borderWidth + 'px' : undefined,
-		};
+	const [ isURLPickerOpen, setIsURLPickerOpen ] = useState( false );
+	const urlIsSet = !! url;
+	const urlIsSetandSelected = urlIsSet && isSelected;
 
-		const urlIsSet = !! url;
-		const urlIsSetandSelected = urlIsSet && isSelected;
+	const openLinkControl = () => {
+		setIsURLPickerOpen( true );
+		return false; // prevents default behaviour for event
+	};
 
-		const linkControl = this.state.isURLPickerOpen && (
+	const unlinkButton = () => {
+		setAttributes( {
+			url: undefined,
+			linkTarget: undefined,
+			rel: undefined,
+		} );
+		setIsURLPickerOpen( false );
+	};
 
-			<Popover
-				position="bottom center"
-				onClose={ () => this.setState( {
-					isURLPickerOpen: false
-				}) }
-			>
-				<__experimentalLinkControl
-					className="wp-block-navigation-link__inline-link-input"
-					value={ { url:link, opensInNewTab:opensInNewTab } }
-					onChange={( {
+	const linkControl = ( isURLPickerOpen || urlIsSetandSelected ) && (
+
+		<Popover
+			position="bottom center"
+			onClose={ () => setIsURLPickerOpen( false ) }
+		>
+			<__experimentalLinkControl
+				className="wp-block-navigation-link__inline-link-input"
+				value={ { url, opensInNewTab } }
+				onChange={ ( {
 					url: newURL = '',
 					opensInNewTab: newOpensInNewTab,
-					} ) => {
-						setAttributes( { link: newURL } );
-						setAttributes( { opensInNewTab: newOpensInNewTab } );
-						this.onChangeOpensInNewTab( newOpensInNewTab );
-					} }
-				/>
-			</Popover>
-		);
+				} ) => {
+					setAttributes( { url: newURL } );
 
-		return (
-			<Fragment>
-				<BlockControls>
-					<ToolbarGroup>
-						<ToolbarButton
-							name="link"
-							icon={<BlockIcon icon={icons.link} />}
-							title={ __( 'Link', 'ainoblocks' ) }
-							onClick={ this.onClickLinkSettings }
-						/>
-					</ToolbarGroup>
-				</BlockControls>
-				{ linkControl }
-				<InspectorControls>
-					<PanelBody title={__('Button Settings', 'ainoblocks')}>
-						<SelectControl
-							label={__('Size', 'ainoblocks')}
-							value={size}
-							options={sizeOptions}
-							onChange={size => setAttributes({ size })}
-						/>
-						<RangeControl
-							label={__('Border Radius', 'ainoblocks')}
-							value={borderRadius}
-							onChange={(borderRadius) => setAttributes({ borderRadius })}
-							min={0}
-							max={100}
-							initialPosition={0}
-							allowReset={true}
-						/>
-						<RangeControl
-							label={__('Border Width', 'ainoblocks')}
-							value={borderWidth}
-							onChange={(borderWidth) => setAttributes({ borderWidth })}
-							min={0}
-							max={20}
-							initialPosition={0}
-							allowReset={true}
-						/>
-						<ToggleControl
-							label={__('Uppercase Text', 'ainoblocks')}
-							checked={!!uppercase}
-							onChange={() => setAttributes({ uppercase: !uppercase })}
-							help={!!uppercase ? __('Uppercase text is used.', 'ainoblocks') : __('Toggle for uppercase text.', 'ainoblocks')}
-						/>
-					</PanelBody>
-					<PanelColorSettings
-						title={__('Color Settings', 'ainoblocks')}
-						initialOpen={false}
-						colorSettings={[
-							{
-								value: backgroundColor,
-								onChange: backgroundColor => {
-									setAttributes({ backgroundColor });
-								},
-								label: __('Background Color', 'ainoblocks'),
-							},
-							{
-								value: textColor,
-								onChange: textColor => {
-									setAttributes({ textColor });
-								},
-								label: __('Text Color', 'ainoblocks'),
-							},
-						]}
-					>
-					</PanelColorSettings>
-				</InspectorControls>
-					<div className={classnames(className)}>
-					<RichText
-						placeholder={ __( "Add text…", 'ainoblocks' ) }
-						value={ label }
-						tagName='div'
-						className={ classnames(
-							'wp-block-ainoblocks-button__link', size, borderRadius, {
-							'has-custom-background': backgroundColor,
-							'has-custom-text-color': textColor,
-							'is-uppercase': uppercase,
-							'no-border-radius': borderRadius === 0,
-							'no-border': borderWidth === 0,
-							}
-						) }
-						style={styles}
-						onChange={ value => {
-							setAttributes( { label: value })
-						} }
-						formattingControls={ [ 'bold', 'italic' ] }
-						rel ="noopener noreferrer"
-						keepPlaceholderOnFocus
+					if ( opensInNewTab !== newOpensInNewTab ) {
+						onToggleOpenInNewTab( newOpensInNewTab );
+					}
+				} }
+			/>
+		</Popover>
+	);
+
+	const buttonClasses = classnames(className, {});
+	const blockProps = useBlockProps( {
+		className: buttonClasses,
+		style: styleBg,
+	} );
+
+	return (
+		<Fragment>
+			<BlockControls>
+				<ToolbarGroup>
+				{ ! urlIsSet && (
+					<ToolbarButton
+						name="link"
+						icon={<BlockIcon icon={icons.link} />}
+						title={ __( 'Link', 'ainoblocks' ) }
+						onClick={ openLinkControl }
 					/>
-				</div>
-			</Fragment>
-		);
-	}
-}
+					) }
+				{ urlIsSetandSelected && (
+					<ToolbarButton
+						name="link"
+						icon={<BlockIcon icon={icons.linkOff} />}
+						title={ __( 'Unlink','ainoblocks' ) }
+						onClick={ unlinkButton }
+						isActive={ true }
+					/>
+				) }
+				</ToolbarGroup>
+			</BlockControls>
+			{ linkControl }
+			<InspectorControls>
+				<PanelBody title={__('Button Settings', 'ainoblocks')}>
+					<SelectControl
+						label={__('Size', 'ainoblocks')}
+						value={size}
+						options={sizeOptions}
+						onChange={size => setAttributes({ size })}
+					/>
+					<RangeControl
+						label={__('Border Radius', 'ainoblocks')}
+						value={borderRadius}
+						onChange={(borderRadius) => setAttributes({ borderRadius })}
+						min={0}
+						max={200}
+						initialPosition={0}
+						allowReset={true}
+					/>
+					<RangeControl
+						label={__('Border Width', 'ainoblocks')}
+						value={borderWidth}
+						onChange={(borderWidth) => setAttributes({ borderWidth })}
+						min={0}
+						max={20}
+						initialPosition={0}
+						allowReset={true}
+					/>
+					<ToggleControl
+						label={__('Uppercase Text', 'ainoblocks')}
+						checked={!!uppercase}
+						onChange={() => setAttributes({ uppercase: !uppercase })}
+						help={!!uppercase ? __('Uppercase text is used.', 'ainoblocks') : __('Toggle for uppercase text.', 'ainoblocks')}
+					/>
+				</PanelBody>
+				<PanelColorSettings
+					title={__('Color Settings', 'ainoblocks')}
+					initialOpen={false}
+					colorSettings={[
+						{
+							value: backgroundColor,
+							onChange: backgroundColor => {
+								setAttributes({ backgroundColor });
+							},
+							label: __('Background Color', 'ainoblocks'),
+						},
+						{
+							value: textColor,
+							onChange: textColor => {
+								setAttributes({ textColor });
+							},
+							label: __('Text Color', 'ainoblocks'),
+						},
+						{
+							value: linkBackgroundColor,
+							onChange: linkBackgroundColor => {
+								setAttributes({ linkBackgroundColor });
+							},
+							label: __('Link Background Color', 'ainoblocks'),
+						},
+					]}
+				>
+				</PanelColorSettings>
+			</InspectorControls>
+			<InspectorAdvancedControls>
+				<TextControl
+					label={ __( 'Link rel' ) }
+					value={ rel || '' }
+					onChange={ onSetLinkRel }
+				/>
+			</InspectorAdvancedControls>
 
-export default buttonEdit;
+			<div { ...blockProps }>
+				<RichText
+					placeholder={ __( "Add text…", 'ainoblocks' ) }
+					value={ label }
+					tagName='div'
+					className={ classnames(
+						'wp-block-ainoblocks-button__link', size, borderRadius, {
+						'has-custom-background': backgroundColor,
+						'has-custom-text-color': textColor,
+						'has-link-bg': linkBackgroundColor,
+						'is-uppercase': uppercase,
+						'no-border-radius': borderRadius === 0,
+						'no-border': borderWidth === 0,
+						}
+					) }
+					style={styleButton}
+					onChange={ value => {
+						setAttributes( { label: value })
+					} }
+					formattingControls={ [ 'bold', 'italic' ] }
+					rel ="noopener noreferrer"
+					opensInNewTab={ linkTarget === '_blank' }
+					onToggleOpenInNewTab={ onToggleOpenInNewTab }
+				/>
+			</div>
+		</Fragment>
+	);
+}

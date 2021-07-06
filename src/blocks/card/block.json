@@ -1,5 +1,6 @@
 {
 	"name": "card",
+	"apiVersion": 2,
 	"attributes": {
 		"align": {
 			"type": "string"
