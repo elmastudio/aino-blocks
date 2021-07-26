@@ -3,9 +3,9 @@ Author URI: https://www.elmastudio.de/en
 Plugin URI: https://wpaino.com
 Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks, block patterns
-Requires at least: 5.6
-Tested up to: 5.8.0
-Stable tag: 1.5.0
+Requires at least: 5.5
+Tested up to: 5.8
+Stable tag: 1.5.1
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
