@@ -12,7 +12,31 @@
 			grid-auto-flow: column;
 			grid-template-columns: repeat(12, 1fr);
 			justify-content: center;
+			column-gap: 2rem; // 32px
 		}
+
+		@media (min-width: 80rem) {
+			column-gap: 3rem; // 48px
+		}
+}
+
+.wp-block-ainoblocks-grid-container.no-gap-mobile > .block-editor-inner-blocks > .block-editor-block-list__layout {
+	column-gap: 0;
+
+}
+
+@media (min-width: 48rem) {
+	.wp-block-ainoblocks-grid-container.no-gap-tablet > .block-editor-inner-blocks > .block-editor-block-list__layout {
+		column-gap: 0;
+
+	}
+}
+
+@media (min-width: 80rem) {
+	.wp-block-ainoblocks-grid-container.no-gap-desktop > .block-editor-inner-blocks > .block-editor-block-list__layout {
+		column-gap: 0;
+
+	}
 }
 
 .block-editor-block-list__block[data-type="ainoblocks/grid-container"][data-align="wide"],

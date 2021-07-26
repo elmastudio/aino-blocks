@@ -46,8 +46,11 @@
 .wp-block-ainoblocks-grid-item {
 	grid-row-start: 1;
 	grid-row-end: 2;
-	padding-left: .5rem;
-	padding-right: .5rem;
+
+	.wp-block-ainoblocks-grid-item {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
 	&.no-stacking {
 		grid-row-start: auto;
@@ -60,32 +63,18 @@
 	}
 
 	@media (min-width: 48em) {
-		padding-left: 1rem;
-		padding-right: 1rem;
 
 		&.no-gutter {
 			padding-left: 0;
 			padding-right: 0;
-		}
-
-		.gap-s & {
-			padding-left: 0.5rem;
-			padding-right: 0.5rem;
 		}
 	}
 
 	@media (min-width: 80em) {
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
 
 		&.no-gutter {
 			padding-left: 0;
 			padding-right: 0;
-		}
-
-		.gap-s & {
-			padding-left: 0.5rem;
-			padding-right: 0.5rem;
 		}
 	}
 
