@@ -8319,6 +8319,8 @@ p.pr__19,
   color: #111;
   background-color: transparent;
   border: 1px solid #111; }
+  .wp-block-ainoblocks-button.is-style-outline .wp-block-ainoblocks-button__link:hover {
+    text-decoration: none; }
 
 .wp-block-ainoblocks-button.is-style-naked .wp-block-ainoblocks-button__link {
   color: #111;
@@ -8339,6 +8341,8 @@ p.pr__19,
   transition: all 0.25s ease;
   color: #ffffff;
   background-color: #000000; }
+  .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link:hover {
+    text-decoration: none; }
   .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.has-link-bg:hover {
     background-color: transparent !important; }
   .wp-block-ainoblocks-button .wp-block-ainoblocks-button__link.aligncenter {
