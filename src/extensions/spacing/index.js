@@ -46,6 +46,7 @@ const enableSpacingControlOnBlocks = [
 	'ainoblocks/featured-content',
 	'ainoblocks/divider',
 	'ainoblocks/grid-container',
+	'ainoblocks/grid-item',
 ];
 
 /**
