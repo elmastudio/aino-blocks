@@ -50,8 +50,12 @@ Yes, you can find the first Aino blocks patterns inside the pattern library. We 
 
 == Changelog ==
 
+= 1.5.1 =
+New: Responsive spacing extension for Grid Container and Grid Item.
+Enhance: Border radius setting for Code, Preformatted, Group and Card blocks.
+
 = 1.5.0 =
-New: Responsive spacing extension for Grid Container.
+New: Responsive spacing extension for Grid Container and Grid Item.
 Enhance: Border radius setting for Code, Preformatted, Group and Card blocks.
 Enhance: Update to API version 2.
 Enhance: Button Block Background Link Color.
