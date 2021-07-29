@@ -32,6 +32,16 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+### 1.5.1  
+**New:** Responsive spacing extension for Grid Container and Grid Item.  
+**Enhance:** Border radius setting for Code, Preformatted, Group and Card blocks.  
+**Enhance:** Update to API version 2.  
+**Enhance:** Button Block Background Link Color.  
+**Enhance:** Grid Block Small gap styles.  
+**Enhance:** Delete Freestyle block patterns in order to update and rearrange patterns.  
+**Bugfix:** Freestyle Block Patterns.  
+**Bugfix:** Core Image block border radius for images with link.  
+
 ### 1.5.0  
 **Bugfix:** Freestyle Block Patterns.  
 **Bugfix:** Core Image block border radius for images with link.  
