@@ -7,6 +7,10 @@
 			color: #111;
 			background-color: transparent;
 			border: 1px solid #111;
+
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 
@@ -33,6 +37,10 @@
 		transition: all 0.25s ease;
 		color: #ffffff;
 		background-color: #000000;
+
+		&:hover {
+			text-decoration: none;
+		}
 
 		&.has-link-bg:hover {
 			background-color: transparent !important;
