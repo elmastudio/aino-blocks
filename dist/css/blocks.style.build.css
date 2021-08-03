@@ -1,256 +1,341 @@
-.wp-block-image.btl__xxs img {
+.wp-block-image.btl__xxs img,
+.wp-block-post-featured-image.btl__xxs img {
   border-top-left-radius: 0.625rem; }
 
-.wp-block-image.btl__xs img {
+.wp-block-image.btl__xs img,
+.wp-block-post-featured-image.btl__xs img {
   border-top-left-radius: 0.938rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btl__xs img {
+    .wp-block-image.btl__xs img,
+    .wp-block-post-featured-image.btl__xs img {
       border-top-left-radius: 1.25rem; } }
 
-.wp-block-image.btl__s img {
+.wp-block-image.btl__s img,
+.wp-block-post-featured-image.btl__s img {
   border-top-left-radius: 1.25rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btl__s img {
+    .wp-block-image.btl__s img,
+    .wp-block-post-featured-image.btl__s img {
       border-top-left-radius: 1.875rem; } }
 
-.wp-block-image.btl__m img {
+.wp-block-image.btl__m img,
+.wp-block-post-featured-image.btl__m img {
   border-top-left-radius: 1.563rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btl__m img {
+    .wp-block-image.btl__m img,
+    .wp-block-post-featured-image.btl__m img {
       border-top-left-radius: 2.5rem; } }
 
-.wp-block-image.btl__l img {
+.wp-block-image.btl__l img,
+.wp-block-post-featured-image.btl__l img {
   border-top-left-radius: 1.875rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btl__l img {
+    .wp-block-image.btl__l img,
+    .wp-block-post-featured-image.btl__l img {
       border-top-left-radius: 3.125rem; } }
 
-.wp-block-image.btl__xl img {
+.wp-block-image.btl__xl img,
+.wp-block-post-featured-image.btl__xl img {
   border-top-left-radius: 2.5rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btl__xl img {
+    .wp-block-image.btl__xl img,
+    .wp-block-post-featured-image.btl__xl img {
       border-top-left-radius: 3.75rem; } }
 
-.wp-block-image.btl__xxl img {
+.wp-block-image.btl__xxl img,
+.wp-block-post-featured-image.btl__xxl img {
   border-top-left-radius: 3.125rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btl__xxl img {
+    .wp-block-image.btl__xxl img,
+    .wp-block-post-featured-image.btl__xxl img {
       border-top-left-radius: 4.375rem; } }
 
-.wp-block-image.btl__xxxl img {
+.wp-block-image.btl__xxxl img,
+.wp-block-post-featured-image.btl__xxxl img {
   border-top-left-radius: 3.75rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btl__xxxl img {
+    .wp-block-image.btl__xxxl img,
+    .wp-block-post-featured-image.btl__xxxl img {
       border-top-left-radius: 5rem; } }
 
-.wp-block-image.btl__xxxxl img {
+.wp-block-image.btl__xxxxl img,
+.wp-block-post-featured-image.btl__xxxxl img {
   border-top-left-radius: 4.375rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btl__xxxxl img {
+    .wp-block-image.btl__xxxxl img,
+    .wp-block-post-featured-image.btl__xxxxl img {
       border-top-left-radius: 5.625rem; } }
 
-.wp-block-image.btr__xxs img {
+.wp-block-image.btr__xxs img,
+.wp-block-post-featured-image.btr__xxs img {
   border-top-right-radius: 0.625rem; }
 
-.wp-block-image.btr__xs img {
+.wp-block-image.btr__xs img,
+.wp-block-post-featured-image.btr__xs img {
   border-top-right-radius: 0.938rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btr__xs img {
+    .wp-block-image.btr__xs img,
+    .wp-block-post-featured-image.btr__xs img {
       border-top-right-radius: 1.25rem; } }
 
-.wp-block-image.btr__s img {
+.wp-block-image.btr__s img,
+.wp-block-post-featured-image.btr__s img {
   border-top-right-radius: 1.25rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btr__s img {
+    .wp-block-image.btr__s img,
+    .wp-block-post-featured-image.btr__s img {
       border-top-right-radius: 1.875rem; } }
 
-.wp-block-image.btr__m img {
+.wp-block-image.btr__m img,
+.wp-block-post-featured-image.btr__m img {
   border-top-right-radius: 1.563rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btr__m img {
+    .wp-block-image.btr__m img,
+    .wp-block-post-featured-image.btr__m img {
       border-top-right-radius: 2.5rem; } }
 
-.wp-block-image.btr__l img {
+.wp-block-image.btr__l img,
+.wp-block-post-featured-image.btr__l img {
   border-top-right-radius: 1.875rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btr__l img {
+    .wp-block-image.btr__l img,
+    .wp-block-post-featured-image.btr__l img {
       border-top-right-radius: 3.125rem; } }
 
-.wp-block-image.btr__xl img {
+.wp-block-image.btr__xl img,
+.wp-block-post-featured-image.btr__xl img {
   border-top-right-radius: 2.5rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btr__xl img {
+    .wp-block-image.btr__xl img,
+    .wp-block-post-featured-image.btr__xl img {
       border-top-right-radius: 3.75rem; } }
 
-.wp-block-image.btr__xxl img {
+.wp-block-image.btr__xxl img,
+.wp-block-post-featured-image.btr__xxl img {
   border-top-right-radius: 3.125rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btr__xxl img {
+    .wp-block-image.btr__xxl img,
+    .wp-block-post-featured-image.btr__xxl img {
       border-top-right-radius: 4.375rem; } }
 
-.wp-block-image.btr__xxxl img {
+.wp-block-image.btr__xxxl img,
+.wp-block-post-featured-image.btr__xxxl img {
   border-top-right-radius: 3.75rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btr__xxxl img {
+    .wp-block-image.btr__xxxl img,
+    .wp-block-post-featured-image.btr__xxxl img {
       border-top-right-radius: 5rem; } }
 
-.wp-block-image.btr__xxxxl img {
+.wp-block-image.btr__xxxxl img,
+.wp-block-post-featured-image.btr__xxxxl img {
   border-top-right-radius: 4.375rem; }
   @media (min-width: 48em) {
-    .wp-block-image.btr__xxxxl img {
+    .wp-block-image.btr__xxxxl img,
+    .wp-block-post-featured-image.btr__xxxxl img {
       border-top-right-radius: 5.625rem; } }
 
-.wp-block-image.bbl__xxs img {
+.wp-block-image.bbl__xxs img,
+.wp-block-post-featured-image.bbl__xxs img {
   border-bottom-left-radius: 0.625rem; }
 
-.wp-block-image.bbl__xs img {
+.wp-block-image.bbl__xs img,
+.wp-block-post-featured-image.bbl__xs img {
   border-bottom-left-radius: 0.938rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbl__xs img {
+    .wp-block-image.bbl__xs img,
+    .wp-block-post-featured-image.bbl__xs img {
       border-bottom-left-radius: 1.25rem; } }
 
-.wp-block-image.bbl__s img {
+.wp-block-image.bbl__s img,
+.wp-block-post-featured-image.bbl__s img {
   border-bottom-left-radius: 1.25rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbl__s img {
+    .wp-block-image.bbl__s img,
+    .wp-block-post-featured-image.bbl__s img {
       border-bottom-left-radius: 1.875rem; } }
 
-.wp-block-image.bbl__m img {
+.wp-block-image.bbl__m img,
+.wp-block-post-featured-image.bbl__m img {
   border-bottom-left-radius: 1.563rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbl__m img {
+    .wp-block-image.bbl__m img,
+    .wp-block-post-featured-image.bbl__m img {
       border-bottom-left-radius: 2.5rem; } }
 
-.wp-block-image.bbl__l img {
+.wp-block-image.bbl__l img,
+.wp-block-post-featured-image.bbl__l img {
   border-bottom-left-radius: 1.875rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbl__l img {
+    .wp-block-image.bbl__l img,
+    .wp-block-post-featured-image.bbl__l img {
       border-bottom-left-radius: 3.125rem; } }
 
-.wp-block-image.bbl__xl img {
+.wp-block-image.bbl__xl img,
+.wp-block-post-featured-image.bbl__xl img {
   border-bottom-left-radius: 2.5rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbl__xl img {
+    .wp-block-image.bbl__xl img,
+    .wp-block-post-featured-image.bbl__xl img {
       border-bottom-left-radius: 3.75rem; } }
 
-.wp-block-image.bbl__xxl img {
+.wp-block-image.bbl__xxl img,
+.wp-block-post-featured-image.bbl__xxl img {
   border-bottom-left-radius: 3.125rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbl__xxl img {
+    .wp-block-image.bbl__xxl img,
+    .wp-block-post-featured-image.bbl__xxl img {
       border-bottom-left-radius: 4.375rem; } }
 
-.wp-block-image.bbl__xxxl img {
+.wp-block-image.bbl__xxxl img,
+.wp-block-post-featured-image.bbl__xxxl img {
   border-bottom-left-radius: 3.75rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbl__xxxl img {
+    .wp-block-image.bbl__xxxl img,
+    .wp-block-post-featured-image.bbl__xxxl img {
       border-bottom-left-radius: 5rem; } }
 
-.wp-block-image.bbl__xxxxl img {
+.wp-block-image.bbl__xxxxl img,
+.wp-block-post-featured-image.bbl__xxxxl img {
   border-bottom-left-radius: 4.375rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbl__xxxxl img {
+    .wp-block-image.bbl__xxxxl img,
+    .wp-block-post-featured-image.bbl__xxxxl img {
       border-bottom-left-radius: 5.625rem; } }
 
-.wp-block-image.bbr__xxs img {
+.wp-block-image.bbr__xxs img,
+.wp-block-post-featured-image.bbr__xxs img {
   border-bottom-right-radius: 0.625rem; }
 
-.wp-block-image.bbr__xs img {
+.wp-block-image.bbr__xs img,
+.wp-block-post-featured-image.bbr__xs img {
   border-bottom-right-radius: 0.938rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbr__xs img {
+    .wp-block-image.bbr__xs img,
+    .wp-block-post-featured-image.bbr__xs img {
       border-bottom-right-radius: 1.25rem; } }
 
-.wp-block-image.bbr__s img {
+.wp-block-image.bbr__s img,
+.wp-block-post-featured-image.bbr__s img {
   border-bottom-right-radius: 1.25rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbr__s img {
+    .wp-block-image.bbr__s img,
+    .wp-block-post-featured-image.bbr__s img {
       border-bottom-right-radius: 1.875rem; } }
 
-.wp-block-image.bbr__m img {
+.wp-block-image.bbr__m img,
+.wp-block-post-featured-image.bbr__m img {
   border-bottom-right-radius: 1.563rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbr__m img {
+    .wp-block-image.bbr__m img,
+    .wp-block-post-featured-image.bbr__m img {
       border-bottom-right-radius: 2.5rem; } }
 
-.wp-block-image.bbr__l img {
+.wp-block-image.bbr__l img,
+.wp-block-post-featured-image.bbr__l img {
   border-bottom-right-radius: 1.875rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbr__l img {
+    .wp-block-image.bbr__l img,
+    .wp-block-post-featured-image.bbr__l img {
       border-bottom-right-radius: 3.125rem; } }
 
-.wp-block-image.bbr__xl img {
+.wp-block-image.bbr__xl img,
+.wp-block-post-featured-image.bbr__xl img {
   border-bottom-right-radius: 2.5rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbr__xl img {
+    .wp-block-image.bbr__xl img,
+    .wp-block-post-featured-image.bbr__xl img {
       border-bottom-right-radius: 3.75rem; } }
 
-.wp-block-image.bbr__xxl img {
+.wp-block-image.bbr__xxl img,
+.wp-block-post-featured-image.bbr__xxl img {
   border-bottom-right-radius: 3.125rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbr__xxl img {
+    .wp-block-image.bbr__xxl img,
+    .wp-block-post-featured-image.bbr__xxl img {
       border-bottom-right-radius: 4.375rem; } }
 
-.wp-block-image.bbr__xxxl img {
+.wp-block-image.bbr__xxxl img,
+.wp-block-post-featured-image.bbr__xxxl img {
   border-bottom-right-radius: 3.75rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbr__xxxl img {
+    .wp-block-image.bbr__xxxl img,
+    .wp-block-post-featured-image.bbr__xxxl img {
       border-bottom-right-radius: 5rem; } }
 
-.wp-block-image.bbr__xxxxl img {
+.wp-block-image.bbr__xxxxl img,
+.wp-block-post-featured-image.bbr__xxxxl img {
   border-bottom-right-radius: 4.375rem; }
   @media (min-width: 48em) {
-    .wp-block-image.bbr__xxxxl img {
+    .wp-block-image.bbr__xxxxl img,
+    .wp-block-post-featured-image.bbr__xxxxl img {
       border-bottom-right-radius: 5.625rem; } }
 
-.wp-block-image.br-all__xxs img {
+.wp-block-image.br-all__xxs img,
+.wp-block-post-featured-image.br-all__xxs img {
   border-radius: 0.625rem; }
 
-.wp-block-image.br-all__xs img {
+.wp-block-image.br-all__xs img,
+.wp-block-post-featured-image.br-all__xs img {
   border-radius: 0.938rem; }
   @media (min-width: 48em) {
-    .wp-block-image.br-all__xs img {
+    .wp-block-image.br-all__xs img,
+    .wp-block-post-featured-image.br-all__xs img {
       border-radius: 1.25rem; } }
 
-.wp-block-image.br-all__s img {
+.wp-block-image.br-all__s img,
+.wp-block-post-featured-image.br-all__s img {
   border-radius: 1.25rem; }
   @media (min-width: 48em) {
-    .wp-block-image.br-all__s img {
+    .wp-block-image.br-all__s img,
+    .wp-block-post-featured-image.br-all__s img {
       border-radius: 1.875rem; } }
 
-.wp-block-image.br-all__m img {
+.wp-block-image.br-all__m img,
+.wp-block-post-featured-image.br-all__m img {
   border-radius: 1.563rem; }
   @media (min-width: 48em) {
-    .wp-block-image.br-all__m img {
+    .wp-block-image.br-all__m img,
+    .wp-block-post-featured-image.br-all__m img {
       border-radius: 2.5rem; } }
 
-.wp-block-image.br-all__l img {
+.wp-block-image.br-all__l img,
+.wp-block-post-featured-image.br-all__l img {
   border-radius: 1.875rem; }
   @media (min-width: 48em) {
-    .wp-block-image.br-all__l img {
+    .wp-block-image.br-all__l img,
+    .wp-block-post-featured-image.br-all__l img {
       border-radius: 3.125rem; } }
 
-.wp-block-image.br-all__xl img {
+.wp-block-image.br-all__xl img,
+.wp-block-post-featured-image.br-all__xl img {
   border-radius: 2.5rem; }
   @media (min-width: 48em) {
-    .wp-block-image.br-all__xl img {
+    .wp-block-image.br-all__xl img,
+    .wp-block-post-featured-image.br-all__xl img {
       border-radius: 3.75rem; } }
 
-.wp-block-image.br-all__xxl img {
+.wp-block-image.br-all__xxl img,
+.wp-block-post-featured-image.br-all__xxl img {
   border-radius: 3.125rem; }
   @media (min-width: 48em) {
-    .wp-block-image.br-all__xxl img {
+    .wp-block-image.br-all__xxl img,
+    .wp-block-post-featured-image.br-all__xxl img {
       border-radius: 4.375rem; } }
 
-.wp-block-image.br-all__xxxl img {
+.wp-block-image.br-all__xxxl img,
+.wp-block-post-featured-image.br-all__xxxl img {
   border-radius: 3.75rem; }
   @media (min-width: 48em) {
-    .wp-block-image.br-all__xxxl img {
+    .wp-block-image.br-all__xxxl img,
+    .wp-block-post-featured-image.br-all__xxxl img {
       border-radius: 5rem; } }
 
-.wp-block-image.br-all__xxxxl img {
+.wp-block-image.br-all__xxxxl img,
+.wp-block-post-featured-image.br-all__xxxxl img {
   border-radius: 4.375rem; }
   @media (min-width: 48em) {
-    .wp-block-image.br-all__xxxxl img {
+    .wp-block-image.br-all__xxxxl img,
+    .wp-block-post-featured-image.br-all__xxxxl img {
       border-radius: 5.625rem; } }
 
 .wp-block-code.btl__xxs,
