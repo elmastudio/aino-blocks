@@ -1,0 +1,10 @@
+{
+	"apiVersion": 2,
+	"name": "ainoblocks/flex-item",
+	"title": "Flex Item",
+	"attributes": {
+
+	},
+	"editorStyle": "wp-block--ainoblocks-flex-item-editor",
+	"style": "wp-block-ainoblocks-flex-item"
+}
