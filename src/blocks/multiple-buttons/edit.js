@@ -15,6 +15,10 @@ const {
 	InnerBlocks,
 	useBlockProps,
 } = wp.blockEditor;
+const {
+	PanelBody,
+	SelectControl,
+} = wp.components;
 
 /**
  * Constants
@@ -40,9 +44,17 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 	const {
 		align,
 		items,
+		flexDirection,
 	} = attributes;
 
-	const buttonsClasses = classnames(className, `align${align}`, {});
+	const flexDirectionOptions = [
+		{ value: "direction__row", label   : __('row', 'ainoblocks') },
+		{ value: "direction__rowrev", label: __('row-reverse', 'ainoblocks') },
+		{ value: "direction__col", label   : __('column', 'ainoblocks') },
+		{ value: "direction__colrev", label: __('column-reverse', 'ainoblocks') }
+	];
+
+	const buttonsClasses = classnames(className, flexDirection, `align${align}`, {});
 
 	const innerClasses = classnames(
 		'wp-block-ainoblocks-multiple-buttons__inner', {
@@ -55,6 +67,17 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 
 	return (
 		<Fragment>
+			<InspectorControls>
+				<PanelBody title={__('Buttons settings', 'ainoblocks')}>
+					<SelectControl
+						label={__("Flex Direction", "ainoblocks")}
+						value={flexDirection}
+						options={flexDirectionOptions}
+						onChange={flexDirection => setAttributes({ flexDirection })}
+					/>
+				</PanelBody>
+			</InspectorControls>
+
 			<div { ...blockProps }>
 				<div className={innerClasses}>
 					<InnerBlocks

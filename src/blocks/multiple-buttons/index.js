@@ -19,16 +19,11 @@ import save from './save';
 import './styles/style.scss';
 import './styles/editor.scss';
 
-/**
- * Register block
- */
-const {
-	attributes,
-	name
-} = metadata;
+const { name } = metadata;
 
-const settings = {
-	title: __('Buttons', 'ainoblocks'),
+export { metadata, name };
+
+export const settings = {
 	description: __('A row of buttons.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
@@ -39,7 +34,6 @@ const settings = {
 		__('cta', 'ainoblocks'),
 		__('aino blocks', 'ainoblocks'),
 	],
-	attributes,
 	supports: {
 		align: ['left', 'right', 'center'],
 	},
@@ -67,9 +61,4 @@ const settings = {
 	},
 	edit,
 	save,
-};
-
-export {
-	name,
-	settings
 };

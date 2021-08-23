@@ -52,8 +52,10 @@ Yes, you can find the first Aino blocks patterns inside the pattern library. We 
 == Changelog ==
 
 = 1.6.0 =
-New: Flexbox container and item blocks.
+New: Flexbox and Flex Item blocks.
+New: Flex direction setting for Buttons block.
 Enhance: Color settings update to support global styles.
+Enhance: Block and block category icons.
 
 = 1.5.1 =
 New: Responsive spacing extension for Grid Container and Grid Item.

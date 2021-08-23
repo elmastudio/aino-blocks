@@ -17,6 +17,7 @@ export default function save({ attributes, className }) {
 	const {
 		align,
 		items,
+		flexDirection,
 	} = attributes;
 
 	const innerClasses = classnames(
@@ -25,7 +26,7 @@ export default function save({ attributes, className }) {
 		}
 	);
 
-	const buttonsClasses = classnames(classnames, {});
+	const buttonsClasses = classnames(classnames, flexDirection, {});
 
 	const blockProps = useBlockProps.save( {
 		className: buttonsClasses,
