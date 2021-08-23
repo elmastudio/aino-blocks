@@ -3,7 +3,7 @@
  * Plugin Name: Aino Blocks - Creative Block Collection
  * Plugin URI : https://wpaino.com
  * Description: A collection of blocks and block patterns for creative WordPress users. Let's start to build websites that stand out from the crowd.
- * Version: 1.5.1
+ * Version: 1.6.0
  * Requires at least: 5.5
  * Tested up to: 5.8
  * Author: Elmastudio
