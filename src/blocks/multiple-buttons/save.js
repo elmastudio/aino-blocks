@@ -18,11 +18,13 @@ export default function save({ attributes, className }) {
 		align,
 		items,
 		flexDirection,
+		fullWidth,
 	} = attributes;
 
 	const innerClasses = classnames(
 			'wp-block-ainoblocks-multiple-buttons__inner', {
 			'has-margins': items > 1,
+			'stretch': fullWidth ? fullWidth : undefined,
 		}
 	);
 

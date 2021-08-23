@@ -18,6 +18,7 @@ const {
 const {
 	PanelBody,
 	SelectControl,
+	ToggleControl,
 } = wp.components;
 
 /**
@@ -45,6 +46,7 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 		align,
 		items,
 		flexDirection,
+		fullWidth,
 	} = attributes;
 
 	const flexDirectionOptions = [
@@ -58,6 +60,7 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 
 	const innerClasses = classnames(
 		'wp-block-ainoblocks-multiple-buttons__inner', {
+			'stretch': fullWidth ? fullWidth : undefined,
 		}
 	);
 
@@ -74,6 +77,12 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 						value={flexDirection}
 						options={flexDirectionOptions}
 						onChange={flexDirection => setAttributes({ flexDirection })}
+					/>
+					<ToggleControl
+						label={__('Inner buttons 100% width', 'ainoblocks')}
+						checked={!!fullWidth}
+						onChange={() => setAttributes({ fullWidth: !fullWidth })}
+						help={!!fullWidth ? __('Inner buttons are 100% width.', 'ainoblocks') : __('Toggle for inner buttons with 100% width.', 'ainoblocks')}
 					/>
 				</PanelBody>
 			</InspectorControls>

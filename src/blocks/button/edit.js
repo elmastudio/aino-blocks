@@ -150,7 +150,8 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 		</Popover>
 	);
 
-	const buttonClasses = classnames(className, {});
+	const buttonClasses = classnames(className, {
+	});
 	const blockProps = useBlockProps( {
 		className: buttonClasses,
 		style: styleBg,

@@ -12,6 +12,10 @@
 		},
 		"flexDirection": {
 			"type": "string"
+		},
+		"fullWidth": {
+			"type": "boolean",
+			"default": false
 		}
 	}
 }

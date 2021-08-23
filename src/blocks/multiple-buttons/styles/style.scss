@@ -42,6 +42,14 @@
 			align-items: center;
 		}
 
+		&.stretch {
+			width: 100% !important;
+
+			.wp-block-ainoblocks-button {
+				width: 100% !important;
+			}
+		}
+
 		.wp-block-ainoblocks-button {
 
 			&:not(:last-child) {

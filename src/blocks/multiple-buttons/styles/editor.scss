@@ -9,6 +9,18 @@
 	.wp-block-ainoblocks-multiple-buttons.alignright {
 		max-width: 100%;
 	}
+
+	.wp-block-ainoblocks-multiple-buttons__inner {
+
+		&.stretch {
+			width: 100% !important;
+
+			.block-editor-inner-blocks,
+			.wp-block-ainoblocks-button__link {
+				width: 100% !important;
+			}
+		}
+	}
 }
 
 .wp-block-ainoblocks-multiple-buttons {

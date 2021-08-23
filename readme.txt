@@ -53,7 +53,8 @@ Yes, you can find the first Aino blocks patterns inside the pattern library. We 
 
 = 1.6.0 =
 New: Flexbox and Flex Item blocks.
-New: Flex direction setting for Buttons block.
+New: Flex direction setting in Buttons block.
+New: 100% button width option in Buttons block.
 Enhance: Color settings update to support global styles.
 Enhance: Block and block category icons.
 
