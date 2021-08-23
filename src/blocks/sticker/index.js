@@ -19,16 +19,11 @@ import save from './save';
 import './styles/style.scss';
 import './styles/editor.scss';
 
-/**
- * Register block
- */
-const {
-	attributes,
-	name
-} = metadata;
+const { name } = metadata;
 
-const settings = {
-	title: __('Sticker', 'ainoblocks'),
+export { metadata, name };
+
+export const settings = {
 	description: __('A circle sticker with a text slogan to highlight featured elements.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
@@ -48,18 +43,12 @@ const settings = {
 				label: __( 'New', 'ainoblocks' ),
 				stickerSize: '4',
 				fontSize: 'font__xxl',
-				backgroundColor: '#4D2CF0',
-				textColor: '#ffffff',
+				backgroundColor: '#f7a12c',
+				textColor: '#121212',
 				rotateStart: '-30',
 				rotate: 'rotate__infinite',
 			},
 	},
-	attributes,
 	edit,
 	save,
-};
-
-export {
-	name,
-	settings
 };

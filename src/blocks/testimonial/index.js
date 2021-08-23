@@ -14,13 +14,11 @@ import save from './save';
 import "./styles/style.scss";
 import './styles/editor.scss';
 
-/**
- * Register block
- */
-const { attributes, name } = metadata;
+const { name } = metadata;
 
-const settings = {
-	title: __('Testimonial', 'ainoblocks'),
+export { metadata, name };
+
+export const settings = {
 	description: __('Insert a testimonial or review with the option to add author information.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
@@ -30,7 +28,6 @@ const settings = {
 		__('feedback', 'ainoblocks'),
 		__('aino blocks', 'ainoblocks'),
 	],
-	attributes,
 	example: {
 		innerBlocks: [
 			{
@@ -73,5 +70,3 @@ const settings = {
 	edit,
 	save,
 };
-
-export { name, settings };

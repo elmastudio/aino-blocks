@@ -14,13 +14,11 @@ import save from './save';
 import './styles/style.scss';
 import './styles/editor.scss';
 
-/**
- * Register block
- */
-const {attributes,name} = metadata;
+const { name } = metadata;
 
-const settings = {
-	title: __('Arrow Button', 'ainoblocks'),
+export { metadata, name };
+
+export const settings = {
 	description: __('A special button within an arrow icon and a unique hover style.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
@@ -31,7 +29,6 @@ const settings = {
 		__('icon', 'ainoblocks'),
 		__('aino blocks', 'ainoblocks'),
 	],
-	attributes,
 	example: {
 		attributes: {
 			className: 'is-style-primary',
@@ -40,14 +37,6 @@ const settings = {
 			iconPositionAfter: true,
 		},
 	},
-	supports: {
-		"anchor": true
-	},
 	edit,
 	save,
-};
-
-export {
-	name,
-	settings
 };

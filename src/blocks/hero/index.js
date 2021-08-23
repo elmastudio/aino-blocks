@@ -14,16 +14,11 @@ import save from './save';
 import './styles/style.scss';
 import './styles/editor.scss';
 
-/**
- * Register block
- */
-const {
-	attributes,
-	name
-} = metadata;
+const { name } = metadata;
 
-const settings = {
-	title: __('Hero', 'ainoblocks'),
+export { metadata, name };
+
+export const settings = {
 	description: __('Include a fullscreen featured header area at the top of your front page.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
@@ -37,12 +32,6 @@ const settings = {
 	supports: {
 		align: ['full'],
 	},
-	attributes,
 	edit,
 	save,
-};
-
-export {
-	name,
-	settings
 };

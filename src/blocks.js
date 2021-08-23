@@ -4,7 +4,11 @@ import "./i18n.js";
  * WordPress dependencies
  */
 registerBlockType
-const { registerBlockType } = wp.blocks;
+const { registerBlockType,
+	setDefaultBlockName,
+	setFreeformContentHandlerName,
+	setUnregisteredTypeHandlerName,
+	setGroupingBlockName } = wp.blocks;
 
 // Category slug and title
 const category = {
@@ -32,34 +36,48 @@ import * as multipleButtons from './blocks/multiple-buttons';
 import * as arrowButton from './blocks/arrow-button';
 import * as sticker from './blocks/sticker';
 import * as divider from './blocks/divider';
+import * as flexbox from './blocks/flexbox';
+import * as flexItem from './blocks/flex-item';
 
-export function registerAinoblocksBlocks() {
-	[
-		gridItem,
-		gridContainer,
-		card,
-		badge,
+/**
+ * Function to register an individual block.
+ *
+ * @param {Object} block The block to be registered.
+ *
+ */
+const registerBlock = ( block ) => {
+	if ( ! block ) {
+		return;
+	}
+
+	const {metadata, settings, name } = block;
+
+	registerBlockType( name, {
+		...metadata,
+		...settings,
+	} );
+};
+
+/**
+ * Function to register blocks provided by CoBlocks.
+ */
+export const registerAinoblocksBlocks = () => {
+	[	
 		author,
-		testimonial,
+		badge,
 		button,
+		card,
+		divider,
+		gridContainer,
+		gridItem,
+		hero,
 		multipleButtons,
 		arrowButton,
-		hero,
 		sticker,
-		divider,
-	].forEach(block => {
-		if (!block) {
-			return;
-		}
+		testimonial,
+		flexbox,
+		flexItem,
+	].forEach( registerBlock );
+};
 
-		const { name, icon, settings } = block;
-
-		registerBlockType(`ainoblocks/${name}`, {
-			apiVersion: 2,
-			category: category.slug,
-			icon: { src: icon },
-			...settings,
-		});
-	});
-}
 registerAinoblocksBlocks();

@@ -1,6 +1,8 @@
 {	
-	"name": "arrow-button",
 	"apiVersion": 2,
+	"name": "ainoblocks/arrow-button",
+	"title": "Arrow Button",
+	"category": "design",
 	"attributes": {
 		"url": {
 			"type": "string",
@@ -67,5 +69,8 @@
 			"type": "number",
 			"default": 1.5
 		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ]
 	}
 }

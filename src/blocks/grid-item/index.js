@@ -16,16 +16,11 @@ import save from './save';
 import './styles/style.scss';
 import './styles/editor.scss';
 
-/**
- * Register block
- */
-const {
-	attributes,
-	name
-} = metadata;
+const { name } = metadata;
 
-const settings = {
-	title: __('Grid Item', 'ainoblocks'),
+export { metadata, name };
+
+export const settings = {
 	description: __('A grid item in a grid container block.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	parent: ['ainoblocks/grid-container'],
@@ -37,16 +32,10 @@ const settings = {
 		__('rows', 'ainoblocks'),
 		__('aino', 'ainoblocks'),
 	],
-	attributes,
 	supports: {
 		anchor: true,
 		html: true,
 	},
 	edit,
 	save,
-};
-
-export {
-	name,
-	settings
 };

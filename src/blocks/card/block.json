@@ -1,12 +1,14 @@
 {
-	"name": "card",
 	"apiVersion": 2,
+	"name": "ainoblocks/card",
+	"title": "Card",
 	"attributes": {
 		"align": {
 			"type": "string"
 		},
 		"backgroundColor": {
-			"type": "string"
+			"type": "string",
+			"default": "background-secondary"
 		},
 		"borderColor": {
 			"type": "string"
@@ -51,5 +53,16 @@
 			"type": "number",
 			"default": 0
 		}
+	},
+	"supports": {
+		"spacing": {
+			"margin": false,
+			"padding": false
+		},
+		"color": {
+			"gradients": true,
+			"text": false
+		},
+		"align": [ "wide", "full" ]
 	}
 }

@@ -1,6 +1,7 @@
-{
-	"name": "sticker",
+{	
 	"apiVersion": 2,
+	"name": "ainoblocks/sticker",
+	"title": "Sticker",
 	"attributes": {
 		"url": {
 			"type": "string",

@@ -1,13 +1,8 @@
 /**
  * WordPress dependencies
  */
-const {
-	__,
-	_x
-} = wp.i18n;
-const {
-	registerBlockCollection
-} = wp.blocks;
+const {__,_x} = wp.i18n;
+const {registerBlockCollection} = wp.blocks;
 
 /**
  * Internal dependencies
@@ -19,16 +14,11 @@ import save from './save';
 import './styles/style.scss';
 import './styles/editor.scss';
 
-/**
- * Register block
- */
-const {
-	attributes,
-	name
-} = metadata;
+const { name } = metadata;
 
-const settings = {
-	title: __('Divider', 'ainoblocks'),
+export { metadata, name };
+
+export const settings = {
 	description: __('A visual divider between sections.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
@@ -55,12 +45,6 @@ const settings = {
 	supports: {
 		"anchor": true
 	},
-	attributes,
 	edit,
 	save,
-};
-
-export {
-	name,
-	settings
 };

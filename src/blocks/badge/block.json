@@ -1,6 +1,7 @@
 {
-	"name": "badge",
 	"apiVersion": 2,
+	"name": "ainoblocks/badge",
+	"title": "Badge",
 	"attributes": {
 		"content": {
 			"type": "string"
