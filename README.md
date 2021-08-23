@@ -32,6 +32,13 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+### 1.6.0  
+New: Flexbox and Flex Item blocks.  
+New: Flex direction setting in Buttons block.  
+New: 100% button width option in Buttons block.  
+Enhance: Color settings update to support global styles.  
+Enhance: Block and block category icons.  
+
 ### 1.5.1  
 **New:** Responsive spacing extension for Grid Container and Grid Item.  
 **Enhance:** Border radius setting for Code, Preformatted, Group and Card blocks.  
