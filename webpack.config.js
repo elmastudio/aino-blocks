@@ -72,4 +72,7 @@ module.exports = {
 		blocksCSSPlugin,
 		editBlocksCSSPlugin,
 	],
+	externals: {
+		'lodash': 'lodash'
+	}
 };
