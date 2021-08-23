@@ -4,7 +4,6 @@
 	&.is-style-outline {
 
 		.wp-block-ainoblocks-button__link {
-			color: #111;
 			background-color: transparent;
 			border: 1px solid #111;
 
@@ -17,7 +16,6 @@
 	&.is-style-naked {
 
 		.wp-block-ainoblocks-button__link {
-			color: #111;
 			border: none;
 			background-color: transparent;
 		}
@@ -35,8 +33,6 @@
 		text-decoration: none;
 		overflow-wrap: break-word;
 		transition: all 0.25s ease;
-		color: #ffffff;
-		background-color: #000000;
 
 		&:hover {
 			text-decoration: none;
@@ -183,4 +179,31 @@
 		}
 	}
 
+	&.has-282828-background-color {
+
+		.wp-block-ainoblocks-button__link {
+			background: #282828;
+		}
+	}
+
+	&.has-777-b-7-d-background-color {
+
+		.wp-block-ainoblocks-button__link {
+			background: #777B7D;
+		}
+	}
+
+	&.has-fcfcfc-color {
+
+		.wp-block-ainoblocks-button__link {
+			color: #fcfcfc;
+		}
+	}
+
+	&.has-ffffff-color {
+
+		.wp-block-ainoblocks-button__link {
+			color: #ffffff;
+		}
+	}
 }
