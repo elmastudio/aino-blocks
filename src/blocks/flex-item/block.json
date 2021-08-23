@@ -2,9 +2,41 @@
 	"apiVersion": 2,
 	"name": "ainoblocks/flex-item",
 	"title": "Flex Item",
-	"attributes": {
-
+	"description": "Child block inside Flexbox container block.",
+	"category": "ainoblocks",
+	"keywords": [ "flexbox", "flex", "flex item", "child", "box", "ainoblocks"],
+	"textdomain": "ainoblocks",
+	"parent": [ "ainoblocks/flexbox" ],
+	"supports": {
+		"anchor": true,
+		"color": {
+			"text": false,
+			"background": false
+		}
 	},
-	"editorStyle": "wp-block--ainoblocks-flex-item-editor",
-	"style": "wp-block-ainoblocks-flex-item"
+	"attributes": {
+		"flexOrder": {
+			"type": "number",
+			"default": 0
+		},
+		"flexGrow": {
+			"type": "number",
+			"default": 0
+		},
+		"flexBasis": {
+			"type": "number"
+		},
+		"alignSelfDesktop": {
+			"type": "string",
+			"default": "auto"
+		},
+		"alignSelfTablet": {
+			"type": "string",
+			"default": "auto"
+		},
+		"alignSelfMobile": {
+			"type": "string",
+			"default": "auto"
+		}
+	}
 }

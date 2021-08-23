@@ -14,26 +14,15 @@ import save from './save';
 import './styles/style.scss';
 import './styles/editor.scss';
 
+/**
+ * Register block
+ */
 const { name } = metadata;
 
 export { metadata, name };
 
 export const settings = {
-	description: __('Flex item inside flex container.', 'ainoblocks'),
-	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
-	parent: ['ainoblocks/flexbox'],
 	icon,
-	keywords: [
-		__('flexbox', 'ainoblocks'),
-		__('container', 'ainoblocks'),
-		__('flex', 'ainoblocks'),
-		__('box', 'ainoblocks'),
-		__('aino', 'ainoblocks'),
-	],
-	supports: {
-		anchor: true,
-		html: true,
-	},
 	edit,
 	save,
 };

@@ -202,7 +202,7 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 	return (
 		<Fragment>
 			<InspectorControls>
-				<PanelBody title={__('Flexbox', 'ainoblocks')}>
+				<PanelBody title={__('Flexbox settings', 'ainoblocks')}>
 					<p><em>{ __( 'Use Preview for Desktop, Tablet and Mobile view.', 'ainoblocks' ) }</em></p>
 					<TabPanel className="aino-device-panel"
 						activeClass="is-active"
