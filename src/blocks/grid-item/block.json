@@ -1,6 +1,7 @@
-{
-	"name": "grid-item",
+{	
 	"apiVersion": 2,
+	"name": "ainoblocks/grid-item",
+	"title": "Grid Item",
 	"attributes": {
 		"gridColumnStartDesktop": {
 			"type": "number",

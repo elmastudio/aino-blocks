@@ -57,14 +57,6 @@
 	}
 }
 
-.wp-block-ainoblocks-grid-container.alignwide {
-
-	@media (min-width: 96rem) {
-		width: auto;
-		max-width: 90rem !important;
-	}
-}
-
 .site-content .hentry .wp-block-ainoblocks-grid-container.alignfull,
 .site-content .hentry .alignfull .wp-block-ainoblocks-grid-container.alignfull {
 	padding-left: 0;

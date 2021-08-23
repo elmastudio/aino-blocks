@@ -14,13 +14,11 @@ import save from './save';
 import './styles/style.scss';
 import './styles/editor.scss';
 
-/**
- * Register block
- */
-const { attributes, name } = metadata;
+const { name } = metadata;
 
-const settings = {
-	title: __('Badge', 'ainoblocks'),
+export { metadata, name };
+
+export const settings = {
 	description: __('This is a badge block.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
@@ -31,7 +29,6 @@ const settings = {
 		__('info', 'ainoblocks'),
 		__('aino blocks', 'ainoblocks'),
 	],
-	attributes,
 	example: {
 		name: 'ainoblocks/badge',
 		attributes: {
@@ -43,5 +40,3 @@ const settings = {
 	edit,
 	save,
 };
-
-export { name, settings };

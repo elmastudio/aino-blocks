@@ -14,13 +14,11 @@ import save from './save';
 import './styles/style.scss';
 import './styles/editor.scss';
 
-/**
- * Register block
- */
-const { attributes, name } = metadata;
+const { name } = metadata;
 
-const settings = {
-	title: __('Author', 'ainoblocks'),
+export { metadata, name };
+
+export const settings = {
 	description: __('This is an author block.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
@@ -29,7 +27,6 @@ const settings = {
 		__('avatar', 'ainoblocks'),
 		__('aino blocks', 'ainoblocks'),
 	],
-	attributes,
 	example: {
 		attributes: {
 			imgURL: 'https://wpaino.s3.eu-central-1.amazonaws.com/ellen.jpg',
@@ -46,5 +43,3 @@ const settings = {
 	edit,
 	save,
 };
-
-export { name, settings };

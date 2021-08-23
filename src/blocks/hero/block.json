@@ -1,6 +1,7 @@
 {
-	"name": "hero",
 	"apiVersion": 2,
+	"name": "ainoblocks/hero",
+	"title": "Hero",
 	"attributes": {
 		"align": {
 			"type": "string",

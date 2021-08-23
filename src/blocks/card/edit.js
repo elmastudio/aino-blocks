@@ -65,8 +65,6 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 	const blockProps = useBlockProps( {
 		className: cardClasses,
 		style: {
-			backgroundColor: backgroundColor,
-			borderColor: borderColor,
 			borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 			borderTopWidth: borderTopWidth ? borderTopWidth + 'px' : undefined,
 			borderRightWidth: borderRightWidth ? borderRightWidth + 'px' : undefined,

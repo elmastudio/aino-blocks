@@ -17,15 +17,18 @@ export default function save({ attributes, className }) {
 	const {
 		align,
 		items,
+		flexDirection,
+		fullWidth,
 	} = attributes;
 
 	const innerClasses = classnames(
 			'wp-block-ainoblocks-multiple-buttons__inner', {
 			'has-margins': items > 1,
+			'stretch': fullWidth ? fullWidth : undefined,
 		}
 	);
 
-	const buttonsClasses = classnames(classnames, {});
+	const buttonsClasses = classnames(classnames, flexDirection, {});
 
 	const blockProps = useBlockProps.save( {
 		className: buttonsClasses,

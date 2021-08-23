@@ -43,8 +43,6 @@ export default function save( { attributes } ) {
 	const blockProps = useBlockProps.save( {
 		className: cardClasses,
 		style: {
-			backgroundColor: backgroundColor,
-			borderColor: borderColor,
 			borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 			borderTopWidth: borderTopWidth ? borderTopWidth + 'px' : undefined,
 			borderRightWidth: borderRightWidth ? borderRightWidth + 'px' : undefined,

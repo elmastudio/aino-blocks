@@ -15,6 +15,11 @@ const {
 	InnerBlocks,
 	useBlockProps,
 } = wp.blockEditor;
+const {
+	PanelBody,
+	SelectControl,
+	ToggleControl,
+} = wp.components;
 
 /**
  * Constants
@@ -40,12 +45,22 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 	const {
 		align,
 		items,
+		flexDirection,
+		fullWidth,
 	} = attributes;
 
-	const buttonsClasses = classnames(className, `align${align}`, {});
+	const flexDirectionOptions = [
+		{ value: "direction__row", label   : __('row', 'ainoblocks') },
+		{ value: "direction__rowrev", label: __('row-reverse', 'ainoblocks') },
+		{ value: "direction__col", label   : __('column', 'ainoblocks') },
+		{ value: "direction__colrev", label: __('column-reverse', 'ainoblocks') }
+	];
+
+	const buttonsClasses = classnames(className, flexDirection, `align${align}`, {});
 
 	const innerClasses = classnames(
 		'wp-block-ainoblocks-multiple-buttons__inner', {
+			'stretch': fullWidth ? fullWidth : undefined,
 		}
 	);
 
@@ -55,6 +70,23 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 
 	return (
 		<Fragment>
+			<InspectorControls>
+				<PanelBody title={__('Buttons settings', 'ainoblocks')}>
+					<SelectControl
+						label={__("Flex Direction", "ainoblocks")}
+						value={flexDirection}
+						options={flexDirectionOptions}
+						onChange={flexDirection => setAttributes({ flexDirection })}
+					/>
+					<ToggleControl
+						label={__('Inner buttons 100% width', 'ainoblocks')}
+						checked={!!fullWidth}
+						onChange={() => setAttributes({ fullWidth: !fullWidth })}
+						help={!!fullWidth ? __('Inner buttons are 100% width.', 'ainoblocks') : __('Toggle for inner buttons with 100% width.', 'ainoblocks')}
+					/>
+				</PanelBody>
+			</InspectorControls>
+
 			<div { ...blockProps }>
 				<div className={innerClasses}>
 					<InnerBlocks

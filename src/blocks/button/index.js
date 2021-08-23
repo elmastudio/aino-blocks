@@ -1,17 +1,13 @@
 /**
  * WordPress dependencies
  */
-const {
-	__,
-	_x
-} = wp.i18n;
-const {
-	registerBlockCollection
-} = wp.blocks;
+const {__,_x} = wp.i18n;
+const {registerBlockCollection} = wp.blocks;
 
 /**
  * Internal dependencies
  */
+import deprecated from './deprecated';
 import icon from './icon';
 import edit from './edit';
 import metadata from './block.json';
@@ -19,16 +15,11 @@ import save from './save';
 import './styles/style.scss';
 import './styles/editor.scss';
 
-/**
- * Register block
- */
-const {
-	attributes,
-	name
-} = metadata;
+const { name } = metadata;
 
-const settings = {
-	title: __('Button', 'ainoblocks'),
+export { metadata, name };
+
+export const settings = {
 	description: __('A single button within a Buttons block.', 'ainoblocks'),
 	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	parent: ['ainoblocks/multiple-buttons'],
@@ -58,9 +49,6 @@ const settings = {
 			label: __( 'Naked' ),
 		},
 	],
-	supports: {
-		"anchor": true
-	},
 	example: {
 			name: 'ainoblocks/button',
 			attributes: {
@@ -70,12 +58,7 @@ const settings = {
 				size: 'size__l',
 			},
 	},
-	attributes,
 	edit,
 	save,
-};
-
-export {
-	name,
-	settings
+	deprecated,
 };

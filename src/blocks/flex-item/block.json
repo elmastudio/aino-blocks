@@ -1,0 +1,42 @@
+{
+	"apiVersion": 2,
+	"name": "ainoblocks/flex-item",
+	"title": "Flex Item",
+	"description": "Child block inside Flexbox container block.",
+	"category": "ainoblocks",
+	"keywords": [ "flexbox", "flex", "flex item", "child", "box", "ainoblocks"],
+	"textdomain": "ainoblocks",
+	"parent": [ "ainoblocks/flexbox" ],
+	"supports": {
+		"anchor": true,
+		"color": {
+			"text": false,
+			"background": false
+		}
+	},
+	"attributes": {
+		"flexOrder": {
+			"type": "number",
+			"default": 0
+		},
+		"flexGrow": {
+			"type": "number",
+			"default": 0
+		},
+		"flexBasis": {
+			"type": "number"
+		},
+		"alignSelfDesktop": {
+			"type": "string",
+			"default": "auto"
+		},
+		"alignSelfTablet": {
+			"type": "string",
+			"default": "auto"
+		},
+		"alignSelfMobile": {
+			"type": "string",
+			"default": "auto"
+		}
+	}
+}

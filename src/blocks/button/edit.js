@@ -54,9 +54,6 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 		borderRadius,
 		borderWidth,
 		uppercase,
-		backgroundColor,
-		textColor,
-		linkBackgroundColor,
 	} = attributes;
 
 	const sizeOptions = [
@@ -72,14 +69,11 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 	];
 
 	const styleButton = {
-		backgroundColor: backgroundColor,
-		color: textColor,
 		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 		borderWidth: borderWidth ? borderWidth + 'px' : undefined,
 	};
 
 	const styleBg = {
-		backgroundColor:linkBackgroundColor,
 		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 	};
 
@@ -150,7 +144,8 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 		</Popover>
 	);
 
-	const buttonClasses = classnames(className, {});
+	const buttonClasses = classnames(className, {
+	});
 	const blockProps = useBlockProps( {
 		className: buttonClasses,
 		style: styleBg,
@@ -213,34 +208,6 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 						help={!!uppercase ? __('Uppercase text is used.', 'ainoblocks') : __('Toggle for uppercase text.', 'ainoblocks')}
 					/>
 				</PanelBody>
-				<PanelColorSettings
-					title={__('Color Settings', 'ainoblocks')}
-					initialOpen={false}
-					colorSettings={[
-						{
-							value: backgroundColor,
-							onChange: backgroundColor => {
-								setAttributes({ backgroundColor });
-							},
-							label: __('Background Color', 'ainoblocks'),
-						},
-						{
-							value: textColor,
-							onChange: textColor => {
-								setAttributes({ textColor });
-							},
-							label: __('Text Color', 'ainoblocks'),
-						},
-						{
-							value: linkBackgroundColor,
-							onChange: linkBackgroundColor => {
-								setAttributes({ linkBackgroundColor });
-							},
-							label: __('Link Background Color', 'ainoblocks'),
-						},
-					]}
-				>
-				</PanelColorSettings>
 			</InspectorControls>
 			<InspectorAdvancedControls>
 				<TextControl
@@ -257,9 +224,6 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 					tagName='div'
 					className={ classnames(
 						'wp-block-ainoblocks-button__link', size, borderRadius, {
-						'has-custom-background': backgroundColor,
-						'has-custom-text-color': textColor,
-						'has-link-bg': linkBackgroundColor,
 						'is-uppercase': uppercase,
 						'no-border-radius': borderRadius === 0,
 						'no-border': borderWidth === 0,

@@ -1,6 +1,7 @@
-{
-	"name": "multiple-buttons",
+{	
 	"apiVersion": 2,
+	"name": "ainoblocks/multiple-buttons",
+	"title": "Buttons",
 	"attributes": {
 		"align": {
 			"type": "string"
@@ -8,6 +9,13 @@
 		"items": {
 			"type": "number",
 			"default": "1"
+		},
+		"flexDirection": {
+			"type": "string"
+		},
+		"fullWidth": {
+			"type": "boolean",
+			"default": false
 		}
 	}
 }

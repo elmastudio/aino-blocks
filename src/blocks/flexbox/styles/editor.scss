@@ -1,0 +1,38 @@
+// Make coloured block plugin icon possible.
+.components-panel__icon {
+	filter: none !important;
+}
+
+ .wp-block-ainoblocks-flexbox {
+	position: relative;
+}
+
+.editor-styles-wrapper {
+
+	.wp-block-ainoblocks-flexbox {
+		display: block;
+
+		.block-editor-inner-blocks {
+
+			.block-editor-block-list__layout {
+				display: flex;
+			}
+
+			p {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+
+		.wp-block-ainoblocks-flex-item {
+			display: block;
+	
+			.block-editor-inner-blocks {
+	
+				.block-editor-block-list__layout {
+					display: block;
+				}
+			}
+		}
+	}
+}

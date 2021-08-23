@@ -1,6 +1,7 @@
 {
-	"name": "button",
 	"apiVersion": 2,
+	"name": "ainoblocks/button",
+	"title": "Button",
 	"attributes": {
 		"url": {
 			"type": "string",
@@ -49,23 +50,24 @@
 			"type": "boolean",
 			"default": false
 		},
-		"backgroundColor": {
-			"type": "string"
-		},
-		"textColor": {
-			"type": "string"
-		},
-		"linkBackgroundColor": {
-			"type": "string"
-		},
-		"linkTextColor": {
-			"type": "string"
-		},
 		"gradient": {
 			"type": "string"
 		},
 		"label": {
 			"type": "string"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "primary"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "button-color-primary"
+		}
+	},
+	"supports": {
+		"color": {
+			"gradients": true
 		}
 	}
 }

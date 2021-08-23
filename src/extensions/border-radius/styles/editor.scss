@@ -1,0 +1,264 @@
+@mixin br-xxs($property) {
+	#{$property}: 0.625rem;
+}
+
+@mixin br-xs($property) {
+	#{$property}: 0.938rem;
+
+	@media (min-width: 48em) {
+		#{$property}: 1.25rem;
+	}
+}
+
+@mixin br-s($property) {
+	#{$property}: 1.25rem;
+
+	@media (min-width: 48em) {
+		#{$property}: 1.875rem;
+	}
+}
+
+@mixin br-m($property) {
+	#{$property}: 1.563rem;
+
+	@media (min-width: 48em) {
+		#{$property}: 2.5rem;
+	}
+}
+
+@mixin br-l($property) {
+	#{$property}: 1.875rem;
+
+	@media (min-width: 48em) {
+		#{$property}: 3.125rem;
+	}
+}
+
+@mixin br-xl($property) {
+	#{$property}: 2.5rem;
+
+	@media (min-width: 48em) {
+		#{$property}: 3.75rem;
+	}
+}
+
+@mixin br-xxl($property) {
+	#{$property}: 3.125rem;
+
+	@media (min-width: 48em) {
+		#{$property}: 4.375rem;
+	}
+}
+
+@mixin br-xxxl($property) {
+	#{$property}: 3.75rem;
+
+	@media (min-width: 48em) {
+		#{$property}: 5rem;
+	}
+}
+
+@mixin br-xxxxl($property) {
+	#{$property}: 4.375rem;
+
+	@media (min-width: 48em) {
+		#{$property}: 5.625rem;
+	}
+}
+
+
+
+	.btl {
+			
+		&__xxs {
+			@include br-xxs(border-top-left-radius);
+		}
+		
+		&__xs {
+			@include br-xs(border-top-left-radius);
+		}
+		
+		&__s {
+			@include br-s(border-top-left-radius);
+		}
+		
+		&__m {
+			@include br-m(border-top-left-radius);
+		}
+		
+		&__l {
+			@include br-l(border-top-left-radius);
+		}
+		
+		&__xl {
+			@include br-xl(border-top-left-radius);
+		}
+		
+		&__xxl {
+			@include br-xxl(border-top-left-radius);
+		}
+		
+		&__xxxl {
+				@include br-xxxl(border-top-left-radius);
+			}
+		
+		&__xxxxl {
+			@include br-xxxxl(border-top-left-radius);
+		}
+	}
+
+	.btr {
+			
+		&__xxs {
+			@include br-xxs(border-top-right-radius);
+		}
+		
+		&__xs {
+			@include br-xs(border-top-right-radius);
+		}
+		
+		&__s {
+			@include br-s(border-top-right-radius);
+		}
+		
+		&__m {
+			@include br-m(border-top-right-radius);
+		}
+		
+		&__l {
+			@include br-l(border-top-right-radius);
+		}
+		
+		&__xl {
+			@include br-xl(border-top-right-radius);
+		}
+		
+		&__xxl {
+			@include br-xxl(border-top-right-radius);
+		}
+		
+		&__xxxl {
+			@include br-xxxl(border-top-right-radius);
+		}
+		
+		&__xxxxl {
+			@include br-xxxxl(border-top-right-radius);
+		}
+	}
+
+	.bbl {
+			
+		&__xxs {
+			@include br-xxs(border-bottom-left-radius);
+		}
+		
+		&__xs {
+			@include br-xs(border-bottom-left-radius);
+		}
+		
+		&__s {
+			@include br-s(border-bottom-left-radius);
+		}
+		
+		&__m {
+			@include br-m(border-bottom-left-radius);
+		}
+		
+		&__l {
+			@include br-l(border-bottom-left-radius);
+		}
+		
+		&__xl {
+			@include br-xl(border-bottom-left-radius);
+		}
+		
+		&__xxl {
+			@include br-xxl(border-bottom-left-radius);
+		}
+		
+		&__xxxl {
+			@include br-xxxl(border-bottom-left-radius);
+		}
+		
+		&__xxxxl {
+			@include br-xxxxl(border-bottom-left-radius);
+		}
+	}
+
+	.bbr {
+			
+		&__xxs {
+			@include br-xxs(border-bottom-right-radius);
+		}
+		
+		&__xs {
+			@include br-xs(border-bottom-right-radius);
+		}
+		
+		&__s {
+			@include br-s(border-bottom-right-radius);
+		}
+		
+		&__m {
+			@include br-m(border-bottom-right-radius);
+		}
+		
+		&__l {
+			@include br-l(border-bottom-right-radius);
+		}
+		
+		&__xl {
+			@include br-xl(border-bottom-right-radius);
+		}
+		
+		&__xxl {
+			@include br-xxl(border-bottom-right-radius);
+		}
+		
+		&__xxxl {
+			@include br-xxxl(border-bottom-right-radius);
+		}
+		
+		&__xxxxl {
+			@include br-xxxxl(border-bottom-right-radius);
+		}
+	}
+
+	.br-all {
+			
+		&__xxs {
+			@include br-xxs(border-radius);
+		}
+		
+		&__xs {
+			@include br-xs(border-radius);
+		}
+		
+		&__s {
+			@include br-s(border-radius);
+		}
+		
+		&__m {
+			@include br-m(border-radius);
+		}
+		
+		&__l {
+			@include br-l(border-radius);
+		}
+		
+		&__xl {
+			@include br-xl(border-radius);
+		}
+		
+		&__xxl {
+			@include br-xxl(border-radius);
+		}
+		
+		&__xxxl {
+			@include br-xxxl(border-radius);
+		}
+		
+		&__xxxxl {
+			@include br-xxxxl(border-radius);
+		}
+	}

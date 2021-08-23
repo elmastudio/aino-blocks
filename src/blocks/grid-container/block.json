@@ -1,6 +1,7 @@
 {
-	"name": "grid-container",
+	"name": "ainoblocks/grid-container",
 	"apiVersion": 2,
+	"title": "Grid Container",
 	"attributes": {
 		"align": {
 			"type": "string",

@@ -1,6 +1,8 @@
 {
-	"name": "author",
 	"apiVersion": 2,
+	"name": "ainoblocks/author",
+	"title": "Author",
+	"category": "design",
 	"attributes": {
 		"imgURL": {
 			"type": "string",

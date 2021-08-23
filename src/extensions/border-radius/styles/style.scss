@@ -66,7 +66,8 @@
 	}
 }
 
-.wp-block-image {
+.wp-block-image,
+.wp-block-post-featured-image {
 
 	&.btl {
 			
@@ -387,7 +388,8 @@
 .wp-block-code,
 .wp-block-preformatted,
 .wp-block-group,
-.wp-block-ainoblocks-card {
+.wp-block-ainoblocks-card,
+.wp-block-ainoblocks-flexbox {
 
 	&.btl {
 			
