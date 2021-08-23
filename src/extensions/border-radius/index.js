@@ -7,6 +7,7 @@ import get from 'lodash/get';
 /**
  * Internal Dependencies
  */
+import './styles/editor.scss';
 import './styles/style.scss';
 
 /**
@@ -35,6 +36,7 @@ const enableBorderRadiusControlOnBlocks = [
 	'core/preformatted',
 	'core/group',
 	'ainoblocks/card',
+	'ainoblocks/flexbox',
 ];
 
 /**
