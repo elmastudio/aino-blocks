@@ -5,7 +5,7 @@ Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks, block patterns
 Requires at least: 5.5
 Tested up to: 5.8
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,7 +23,7 @@ The Aino blocks plugin brings you a collection of blocks and block patterns for 
 * Card block
 * Divider block
 * Grid block and Grid item blocks
-* Flexbox block and Flex item blocks
+* Flexbox block and Flex item blocks (New!)
 * Hero block
 * Sticker block
 * Testimonial block
@@ -50,6 +50,9 @@ After the Aino blocks plugin is installed, you will see the Aino blocks collecti
 Yes, you can find the first Aino blocks patterns inside the pattern library. We will create more block patterns shortly.
 
 == Changelog ==
+
+= 1.6.1 =
+Bugfix:
 
 = 1.6.0 =
 New: Flexbox and Flex Item blocks.
