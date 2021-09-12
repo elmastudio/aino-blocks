@@ -12,11 +12,11 @@
 			grid-auto-flow: column;
 			grid-template-columns: repeat(12, 1fr);
 			justify-content: center;
-			column-gap: 2rem; // 32px
+			column-gap: 2rem;
 		}
 
 		@media (min-width: 80rem) {
-			column-gap: 3rem; // 48px
+			column-gap: 3rem;
 		}
 }
 

@@ -8,13 +8,13 @@ const path = require('path');
 const webpack = require('webpack');
 
 // For extracting CSS (and SASS) into separate files
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Set different CSS extraction for editor only and common block styles
-const blocksCSSPlugin = new ExtractTextPlugin({
+const blocksCSSPlugin = new MiniCssExtractPlugin({
 	filename: './dist/css/blocks.style.build.css',
 });
-const editBlocksCSSPlugin = new ExtractTextPlugin({
+const editBlocksCSSPlugin = new MiniCssExtractPlugin({
 	filename: './dist/css/blocks.editor.build.css',
 });
 
@@ -48,7 +48,6 @@ module.exports = {
 		filename: '[name].js',
 	},
 	watch: 'production' !== process.env.NODE_ENV,
-	devtool: 'cheap-eval-source-map',
 	module: {
 		rules: [
 			{
@@ -60,11 +59,11 @@ module.exports = {
 			},
 			{
 				test: /style\.s?css$/,
-				use: blocksCSSPlugin.extract(extractConfig),
+				use: [MiniCssExtractPlugin.loader, "css-loader","sass-loader"],
 			},
 			{
 				test: /editor\.s?css$/,
-				use: editBlocksCSSPlugin.extract(extractConfig),
+				use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
 			},
 		],
 	},
