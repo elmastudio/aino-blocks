@@ -22,6 +22,7 @@ const { name } = metadata;
 export { metadata, name };
 
 export const settings = {
+	category: typeof registerBlockCollection === 'function' ? 'design' : 'ainoblocks',
 	icon,
 	edit,
 	save,

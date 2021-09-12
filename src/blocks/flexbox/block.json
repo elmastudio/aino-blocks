@@ -3,7 +3,6 @@
 	"name": "ainoblocks/flexbox",
 	"title": "Flexbox",
 	"description": "Flexbox container. Use the Flex Item block as child blocks.",
-	"category": "ainoblocks",
 	"keywords": [ "flexbox", "flex", "container", "wrapper", "box", "ainoblocks"],
 	"textdomain": "ainoblocks",
 	"supports": {
