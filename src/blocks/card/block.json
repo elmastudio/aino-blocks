@@ -7,8 +7,7 @@
 			"type": "string"
 		},
 		"backgroundColor": {
-			"type": "string",
-			"default": "background-secondary"
+			"type": "string"
 		},
 		"borderColor": {
 			"type": "string"
@@ -62,6 +61,12 @@
 		"color": {
 			"gradients": true,
 			"text": false
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": false,
+			"style": true,
+			"width": false
 		},
 		"align": [ "wide", "full" ]
 	}

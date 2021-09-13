@@ -23,7 +23,7 @@ The Aino blocks plugin brings you a collection of blocks and block patterns for 
 * Card block
 * Divider block
 * Grid block and Grid item blocks
-* Flexbox block and Flex item blocks (New!)
+* Flexbox block and Flex item blocks
 * Hero block
 * Sticker block
 * Testimonial block
@@ -52,7 +52,7 @@ Yes, you can find the first Aino blocks patterns inside the pattern library. We 
 == Changelog ==
 
 = 1.6.1 =
-Bugfix:
+Bugfix: Card color settings.
 
 = 1.6.0 =
 New: Flexbox and Flex Item blocks.
