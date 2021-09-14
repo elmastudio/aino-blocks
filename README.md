@@ -32,6 +32,9 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+### 1.7.1  
+Bugfix: Primary Button Border.  
+  
 ### 1.7.0  
 New: Card border style setting.  
 New: Flexbox absolute positioning.  
