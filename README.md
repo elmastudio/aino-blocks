@@ -9,7 +9,7 @@
 __Contributors:__ elmastudio  
 __Tags:__ page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks   
 __Requires at least:__ 5.5   
-__Tested up to:__ WordPress 5.8.0  
+__Tested up to:__ WordPress 5.8.1  
 __License:__ GPLv2 or later  
 __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -31,6 +31,15 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 
 ### Changelog  
 =======
+
+### 1.7.0  
+New: Card border style setting.  
+New: Flexbox absolute positioning.  
+Enhance: Card border color setting.  
+Enhance: Button sizes.  
+Enhance: Badge settings.  
+Bugfix: Button color settings.  
+Bugfix: Card color settings.  
 
 ### 1.6.0  
 New: Flexbox and Flex Item blocks.  
