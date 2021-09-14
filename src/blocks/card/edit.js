@@ -29,7 +29,6 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 	const {
 		align,
 		backgroundColor,
-		borderColor,
 		borderRadius,
 		shadowName,
 		paddingTop,
@@ -54,8 +53,6 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 	const INITIAL_BORDER_RADIUS_POSITION = 0;
 
 	const cardClasses = classnames(className, shadowName, align, {
-		'has-background': backgroundColor,
-		'has-border': borderColor,
 		[`pt__${paddingTop}`]: paddingTop,
 		[`pb__${paddingBottom}`]: paddingBottom,
 		[`pl__${paddingLeft}`]: paddingLeft,
@@ -76,7 +73,9 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 	return (
 		<Fragment>
 			<InspectorControls>
-				<PanelBody title={__('Card Settings', 'ainoblocks')}>
+				<PanelBody title={__('Shadow', 'ainoblocks')}
+				initialOpen={false}
+				>
 					<SelectControl
 						label={__("Shadow", "ainoblocks")}
 						value={shadowName}
@@ -84,29 +83,8 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 						onChange={shadowName => setAttributes({ shadowName })}
 					/>
 				</PanelBody>
-				<PanelColorSettings
-					title={__('Color Settings', 'ainoblocks')}
-					initialOpen={false}
-					colorSettings={[
-						{
-							value: backgroundColor,
-							onChange: backgroundColor => {
-								setAttributes({ backgroundColor });
-							},
-							label: __('Background Color', 'ainoblocks'),
-						},
-						{
-							value: borderColor,
-							onChange: borderColor => {
-								setAttributes({ borderColor });
-							},
-							label: __('Border Color', 'ainoblocks'),
-						},
-					]}
-				>
-				</PanelColorSettings>
 				<PanelBody
-					title={__('Border', 'ainoblocks')}
+					title={__('Border Width', 'ainoblocks')}
 					initialOpen={false}
 				>
 					<RangeControl
@@ -156,8 +134,8 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 					/>
 				</PanelBody>
 				<PanelBody
-					title={__('Spacing', 'ainoblocks')}
-					initialOpen={false}
+					title={__('Responsive Spacing', 'ainoblocks')}
+					initialOpen={true}
 				>
 					<RangeControl
 						label={__('Padding Top', 'ainoblocks')}

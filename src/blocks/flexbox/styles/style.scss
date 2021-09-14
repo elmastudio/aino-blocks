@@ -109,6 +109,33 @@
 		padding: 0 !important;
 	}
 
+	&.pos-tl,
+	&.pos-tr,
+	&.pos-br,
+	&.pos-bl {
+		position: absolute;
+	}
+
+	&.pos-tl {
+		top: 0;
+		left: 0;
+	}
+
+	&.pos-tr {
+		top: 0;
+		right: 0;
+	}
+
+	&.pos-br {
+		bottom: 0;
+		right: 0;
+	}
+
+	&.pos-bl {
+		bottom: 0;
+		left: 0;
+	}
+
 	[class*='wp-block-'] {
 		margin-top: 0;
 		margin-bottom: 0;

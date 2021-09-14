@@ -38,6 +38,7 @@
 
 		@media (min-width: 48em) {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: flex-start;
 			align-items: center;
 		}

@@ -7,7 +7,7 @@ const { registerBlockCollection } = wp.blocks;
 /**
  * Internal dependencies
  */
-
+import deprecated from './deprecated';
 import edit from './edit';
 import metadata from './block.json';
 import icon from './icon';
@@ -50,4 +50,5 @@ export const settings = {
 	},
 	edit,
 	save,
+	deprecated,
 };

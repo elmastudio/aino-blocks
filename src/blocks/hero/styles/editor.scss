@@ -37,7 +37,5 @@
 
 .wp-block-ainoblocks-hero .editor-media-container__resizer {
 	grid-area: hero-media;
-	// The resizer sets a inline width but as we are using a grid layout,
-	// we set the width on container.
 	width: 100% !important;
 }

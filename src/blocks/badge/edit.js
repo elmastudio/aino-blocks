@@ -127,7 +127,7 @@ export default function BadgeEdit( { attributes, setAttributes, className } ) {
 						/>
 					</PanelBody>
 					<PanelColorSettings
-						title={__('Color Settings', 'ainoblocks')}
+						title={__('Color', 'ainoblocks')}
 						initialOpen={false}
 						colorSettings={[
 							{

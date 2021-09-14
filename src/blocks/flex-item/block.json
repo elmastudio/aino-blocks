@@ -3,7 +3,6 @@
 	"name": "ainoblocks/flex-item",
 	"title": "Flex Item",
 	"description": "Child block inside Flexbox container block.",
-	"category": "ainoblocks",
 	"keywords": [ "flexbox", "flex", "flex item", "child", "box", "ainoblocks"],
 	"textdomain": "ainoblocks",
 	"parent": [ "ainoblocks/flexbox" ],
