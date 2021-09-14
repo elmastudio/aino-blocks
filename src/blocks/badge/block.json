@@ -35,5 +35,10 @@
 			"type": "boolean",
 			"default": false
 		}
+	},
+	"supports": {
+		"color": {
+			"gradients": true
+		}
 	}
 }
