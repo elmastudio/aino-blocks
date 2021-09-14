@@ -5,7 +5,7 @@ Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks, block patterns
 Requires at least: 5.5
 Tested up to: 5.8.1
-Stable tag: 1.7.0
+Stable tag: 1.7.1
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,15 +41,18 @@ The Aino blocks plugin brings you a collection of blocks and block patterns for 
 You only need to have the latest version of WordPress on your website, to begin with. We also recommend installing and activating the Gutenberg plugin.
 
 = What WordPress themes work with Aino blocks? =
-Any block-ready WordPress theme will work with Aino blocks. Since we created the free [Aino theme](https://wordpress.org/themes/aino/) specifically to work in combination with the Aino blocks we recommend you to check it out.
+Any Gutenberg-ready WordPress theme will work with Aino blocks. Since we created the free [Aino theme](https://wordpress.org/themes/aino/) specifically to work in combination with the Aino blocks we recommend you to use our Aino theme with Aino blocks.
 
 = How do I get started using Aino blocks? =
 After the Aino blocks plugin is installed, you will see the Aino blocks collection in your Blocks library on any page and post. You can now choose a block and insert it into your editor.
 
 = Does Aino come with Block patterns? =
-Yes, you can find the first Aino blocks patterns inside the pattern library. We will create more block patterns shortly.
+Yes, you can find the first patterns inside the pattern library once you install the Aino theme.
 
 == Changelog ==
+
+= 1.7.1 =
+Bugfix: Primary Button Border.
 
 = 1.7.0 =
 New: Card border style setting.
