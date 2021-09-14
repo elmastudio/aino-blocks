@@ -4,8 +4,8 @@ Plugin URI: https://wpaino.com
 Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks, block patterns
 Requires at least: 5.5
-Tested up to: 5.8
-Stable tag: 1.6.1
+Tested up to: 5.8.1
+Stable tag: 1.7.0
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,8 +51,12 @@ Yes, you can find the first Aino blocks patterns inside the pattern library. We 
 
 == Changelog ==
 
-= 1.6.1 =
+= 1.7.0 =
+New: Card border style setting.
+Enhance: Card border color setting.
 Bugfix: Card color settings.
+Enhance: Button sizes.
+Bugfix: Button color settings.
 
 = 1.6.0 =
 New: Flexbox and Flex Item blocks.

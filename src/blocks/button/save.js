@@ -6,7 +6,10 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-const {RichText,useBlockProps,} = wp.blockEditor;
+const {
+	RichText,
+	useBlockProps,
+} = wp.blockEditor;
 
 export default function save( { attributes } ) {
 

@@ -11,7 +11,10 @@ import metadata from './block.json';
 /**
  * WordPress dependencies
  */
-const {RichText,useBlockProps,} = wp.blockEditor;
+const {
+	RichText,
+	useBlockProps,
+} = wp.blockEditor;
 
 const deprecated = [
 	{
@@ -30,6 +33,7 @@ const deprecated = [
 				type: 'string'
 			},
 		},
+
 		save( { attributes } ) {
 			const {
 				linkBackgroundColor,

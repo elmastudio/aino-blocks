@@ -57,17 +57,21 @@
 			"type": "string"
 		},
 		"backgroundColor": {
-			"type": "string",
-			"default": "primary"
+			"type": "string"
 		},
 		"textColor": {
-			"type": "string",
-			"default": "button-color-primary"
+			"type": "string"
 		}
 	},
 	"supports": {
 		"color": {
 			"gradients": true
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": false,
+			"style": true,
+			"width": true
 		}
 	}
 }

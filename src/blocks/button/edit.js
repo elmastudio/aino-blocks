@@ -24,7 +24,6 @@ const {
 	BlockIcon,
 	RichText,
 	InspectorControls,
-	PanelColorSettings,
 	useBlockProps,
 	InspectorAdvancedControls,
 	__experimentalLinkControl,
@@ -57,6 +56,7 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 	} = attributes;
 
 	const sizeOptions = [
+		{ value: 'size__xxxs', label: __('3XS', 'ainoblocks') },
 		{ value: 'size__xxs', label: __('XXS', 'ainoblocks') },
 		{ value: 'size__xs', label: __('XS', 'ainoblocks') },
 		{ value: 'size__s', label: __('S', 'ainoblocks') },
