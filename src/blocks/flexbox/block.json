@@ -80,6 +80,9 @@
 		"shadowName": {
 			"type": "string",
 			"default": "shadow-none"
+		},
+		"position": {
+			"type": "string"
 		}
 	}
 }

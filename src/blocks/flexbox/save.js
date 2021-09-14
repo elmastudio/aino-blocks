@@ -32,6 +32,7 @@ export default function save( { attributes } ) {
 		alignContentTablet,
 		alignContentMobile,
 		shadowName,
+		position,
 	} = attributes;
 
 	const flexboxClasses = classnames(
@@ -52,7 +53,8 @@ export default function save( { attributes } ) {
 		alignContentTablet,
 		alignContentMobile,
 		shadowName,
-		align, {
+		align,
+		position, {
 	});
 
 	const blockProps = useBlockProps.save( {

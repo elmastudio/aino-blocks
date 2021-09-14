@@ -53,8 +53,10 @@ Yes, you can find the first Aino blocks patterns inside the pattern library. We 
 
 = 1.7.0 =
 New: Card border style setting.
+New: Flexbox absolute positioning.
 Enhance: Card border color setting.
 Enhance: Button sizes.
+Enhance: Badge settings.
 Bugfix: Button color settings.
 Bugfix: Card color settings.
 
