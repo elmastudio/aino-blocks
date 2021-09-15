@@ -10,7 +10,7 @@
 		"anchor": true,
 		"color": {
 			"text": false,
-			"background": false
+			"background": true
 		}
 	},
 	"attributes": {
