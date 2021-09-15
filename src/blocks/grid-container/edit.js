@@ -13,14 +13,20 @@ import Inspector from './inspector';
 /**
  * WordPress dependencies
  */
+const { __ } = wp.i18n;
 const {
 	Component,
 	Fragment
 } = wp.element;
 const {
+	InspectorControls,
 	InnerBlocks,
 	useBlockProps,
 } = wp.blockEditor;
+const {
+	PanelBody,
+	SelectControl,
+} = wp.components;
 
 /**
  * Constants
@@ -47,17 +53,40 @@ export default function GridContainerEdit( { attributes, setAttributes, classNam
 		const {
 			align,
 			items,
+			columnGap,
 		} = attributes;
 
-		const gridContainerClasses = classnames(className, `align${align}`,
+		const columnGapOptions = [
+			{ value: "col-gap-none", label: __('none', 'ainoblocks') },
+			{ value: "col-gap-s", label  : __('small', 'ainoblocks') },
+			{ value: "col-gap-m", label  : __('medium', 'ainoblocks') },
+			{ value: "col-gap-l", label  : __('large', 'ainoblocks') }
+		];
+
+		const gridClasses = classnames(
+			className,
+			`align${align}`,
+			columnGap,
 		);
 	
 		const blockProps = useBlockProps( {
-			className: gridContainerClasses,
+			className: gridClasses,
 		} );
 
 		return (
 			<Fragment>
+				<InspectorControls>
+					<PanelBody
+						title={__('Gap', 'ainoblocks')}
+					>
+					<SelectControl
+						label={__("Column Gap", "ainoblocks")}
+						value={columnGap}
+						options={columnGapOptions}
+						onChange={columnGap => setAttributes({ columnGap })}
+					/>
+					</PanelBody>
+				</InspectorControls>
 				<div { ...blockProps }>
 					<InnerBlocks
 						allowedBlocks={ALLOWED_BLOCKS}

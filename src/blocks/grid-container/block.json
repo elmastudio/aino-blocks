@@ -1,7 +1,10 @@
 {
 	"name": "ainoblocks/grid-container",
 	"apiVersion": 2,
-	"title": "Grid Container",
+	"title": "Grid",
+	"description": "A responsive grid container. Arrange multiple grid items on the grid to build flexible layouts.",
+	"keywords": [ "grid", "container", "columns", "layout", "aino", "ainoblocks"],
+	"textdomain": "ainoblocks",
 	"attributes": {
 		"align": {
 			"type": "string",
@@ -13,6 +16,14 @@
 		"items": {
 			"type": "number",
 			"default": "1"
+		},
+		"columnGap": {
+			"type": "string"
 		}
+	},
+	"supports": {
+		"align": ["wide", "full"],
+		"anchor": true,
+		"html": true
 	}
 }

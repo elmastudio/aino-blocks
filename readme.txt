@@ -5,7 +5,7 @@ Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks, block patterns
 Requires at least: 5.5
 Tested up to: 5.8.1
-Stable tag: 1.7.1
+Stable tag: 1.8.0
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,10 +16,10 @@ A block collection to build creative WordPress websites.
 The Aino blocks plugin brings you a collection of blocks and block patterns for the WordPress block editor. With Aino blocks and the free <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino theme</a> you can build creative, individual page layouts with ease.
 
 ## Currently available blocks
-* Arrow button block
 * Author block
 * Badge block
 * Buttons block
+* Icon Button block
 * Card block
 * Divider block
 * Grid block and Grid item blocks
@@ -50,6 +50,12 @@ After the Aino blocks plugin is installed, you will see the Aino blocks collecti
 Yes, you can find the first patterns inside the pattern library once you install the Aino theme.
 
 == Changelog ==
+
+= 1.8.0 =
+New: Small, medium, large Grid column gap option.
+Enhance: Grid block CSS styles.
+Enhance: Renamed 'Grid Container' to 'Grid'.
+Enhance: Renamed 'Arrow Button' to 'Icon Button'.
 
 = 1.7.1 =
 Bugfix: Primary Button Border.
