@@ -15,17 +15,22 @@ const {
 export default function save({ attributes, className }) {
 
 	const {
+		align,
 		items,
+		columnGap,
 	} = attributes;
 
 	const innerClasses = classnames(
 		'wp-block-ainoblocks-grid-container__inner', {}
 	);
 
-	const gridContainerClasses = classnames(classnames);
+	const gridClasses = classnames(
+		classnames,
+		columnGap,
+	);
 
 	const blockProps = useBlockProps.save( {
-		className: gridContainerClasses,
+		className: gridClasses,
 	} );
 
 	return (

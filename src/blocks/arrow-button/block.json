@@ -1,7 +1,7 @@
 {	
 	"apiVersion": 2,
 	"name": "ainoblocks/arrow-button",
-	"title": "Arrow Button",
+	"title": "Icon Button",
 	"category": "design",
 	"attributes": {
 		"url": {
