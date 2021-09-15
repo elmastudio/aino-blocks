@@ -32,6 +32,15 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+### 1.8.1  
+Enhance: Compress CSS files.  
+  
+### 1.8.0  
+New: Small, medium, large Grid column gap option.  
+Enhance: Grid block CSS styles.  
+Enhance: Renamed 'Grid Container' to 'Grid'.  
+Enhance: Renamed 'Arrow Button' to 'Icon Button'.  
+  
 ### 1.7.1  
 Bugfix: Primary Button Border.  
   
