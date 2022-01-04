@@ -17,9 +17,9 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Let's socialize
 
 -   [Download the Aino theme WordPress.org](https://wordpress.org/themes/aino/)
--   [Follow us on Twitter](https://twitter.com/ainodesign)
--   [Like Aino on Facebook](https://www.facebook.com/wpainodesign/)
--   [Follow us on Insta](https://www.instagram.com/aino.design/)
+-   [Follow us on Twitter](https://twitter.com/ainoblocks)
+-   [Like Aino on Facebook](https://www.facebook.com/wpainoblocks/)
+-   [Follow us on Insta](https://www.instagram.com/ainoblocks/)
 -   [Join the conversation on Slack](https://join.slack.com/t/ainodesign/shared_invite/zt-9yvwt8ac-aZ2bLY9wpmwSimPjVLfqmw)
 
 ### Installation
