@@ -5,7 +5,7 @@ Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks
 Requires at least: 5.5
 Tested up to: 5.8.2
-Stable tag: 1.8.1
+Stable tag: 1.8.2
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,10 @@ After the Aino blocks plugin is installed, you will see the Aino blocks collecti
 Yes, you can find the first patterns inside the pattern library once you install the Aino theme.
 
 == Changelog ==
+
+= 1.8.2 =
+Enhance: Badge block.
+Enhance: Change plugin home URL.
 
 = 1.8.1 =
 Enhance: Compress CSS files.
