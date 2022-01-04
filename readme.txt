@@ -1,10 +1,10 @@
 === Aino Blocks ===
 Author URI: https://www.elmastudio.de/en
-Plugin URI: https://wpaino.com
+Plugin URI: https://ainoblocks.io
 Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks, block patterns
 Requires at least: 5.5
-Tested up to: 5.8.1
+Tested up to: 5.8.2
 Stable tag: 1.8.1
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html

@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Aino Blocks - Creative Block Collection
- * Plugin URI : https://wpaino.com
+ * Plugin URI : https://ainoblocks.io
  * Description: A collection of blocks and block patterns for creative WordPress users. Let's start to build websites that stand out from the crowd.
  * Version: 1.8.1
  * Requires at least: 5.5
