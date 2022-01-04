@@ -48,11 +48,6 @@
 	grid-row-start: 1;
 	grid-row-end: 3;
 
-	.wp-block-ainoblocks-grid-item {
-		padding-left: 0;
-		padding-right: 0;
-	}
-
 	&.no-stacking {
 		grid-row-start: auto;
 		grid-row-end: auto;

@@ -3,7 +3,6 @@
  * Enqueue Scripts.
  *
  * @package ainoblocks
- * @since 0.0.1
  */
 
 /**
@@ -48,26 +47,3 @@ function ainoblocks_enqueue_assets() {
 }
 
 add_action( 'enqueue_block_assets', 'ainoblocks_enqueue_assets' );
-
-
-/**
- * Enqueue frontend JavaScript and CSS assets.
- */
-function ainoblocks_enqueue_frontend_assets() {
-
-	// If in the backend, bail out.
-	if ( is_admin() ) {
-		return;
-	}
-
-	$block_path = '/dist/js/frontend.blocks.build.js';
-	wp_enqueue_script(
-		'ainoblocks-frontend',
-		AINOBLOCKS_PLUGIN_URL . $block_path,
-		[],
-		filemtime( AINOBLOCKS_PLUGIN_DIR . $block_path ),
-		true
-	);
-}
-
-add_action( 'enqueue_block_assets', 'ainoblocks_enqueue_frontend_assets' );

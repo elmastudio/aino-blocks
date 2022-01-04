@@ -2,8 +2,8 @@
 	display: flex;
 
 	span {
-		color: #111111;
-		border: 1px solid #111111;
+		color: #000000;
+		border: 1px solid #000000;
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
@@ -23,32 +23,55 @@
 
 	&.size {
 
-		&__ssx {
+		&__xxxs {
 
 			.badge-content {
-				padding: 3px 7px;
-				font-size: 0.75rem;
+				padding: 1px 4px;
+				font-size: .75rem;
 			}
 
 			.badge-icon {
-				width: 26px;
-				height: 20px;
+				width: 20px;
+				height: 18px;
 				border-right: none;
 
 				svg {
 					width: 12px;
 					height: 12px;
-					left: 7px;
-					top: 3px;
+					left: 4px;
+					top: 2px;
 				}
 			}
 		}
 
-		&__sx {
+		&__ssx,
+		&__xxs {
 
 			.badge-content {
-				padding: 0.188rem 0.5rem;
+				padding: 3px 5px;
 				font-size: 0.875rem;
+			}
+
+			.badge-icon {
+				width: 20px;
+				height: 22px;
+				border-right: none;
+
+				svg {
+					width: 12px;
+					height: 12px;
+					left: 4px;
+					top: 4px;
+				}
+			}
+		}
+
+		&__sx,
+		&__xs {
+
+			.badge-content {
+				padding: 3px 7px;
+				font-size: 1rem;
 			}
 
 			.badge-icon {
@@ -57,10 +80,10 @@
 				border-right: none;
 
 				svg {
-					width: 14px;
-					height: 14px;
-					left: 9px;
-					top: 4px;
+					width: 16px;
+					height: 16px;
+					left: 7px;
+					top: 2px;
 				}
 			}
 		}
@@ -68,20 +91,20 @@
 		&__s {
 
 			.badge-content {
-				padding: 4px 11px;
-				font-size: 1rem;
+				padding: 5px 10px;
+				font-size: 1.25rem;
 			}
 
 			.badge-icon {
 				width: 38px;
-				height: 26px;
+				height: 30px;
 				border-right: none;
 
 				svg {
-					width: 16px;
-					height: 16px;
-					left: 11px;
-					top: 4px;
+					width: 20px;
+					height: 20px;
+					left: 10px;
+					top: 5px;
 				}
 			}
 		}
@@ -110,20 +133,20 @@
 		&__l {
 
 			.badge-content {
-				padding: 5px 15px;
-				font-size: 1.25rem;
+				padding: 6px 10px;
+				font-size: 1.5rem;
 			}
 
 			.badge-icon {
-				width: 50px;
-				height: 32px;
+				width: 40px;
+				height: 40px;
 				border-right: none;
 
 				svg {
-					width: 20px;
-					height: 20px;
-					left: 15px;
-					top: 5px;
+					width: 24px;
+					height: 24px;
+					left: 10px;
+					top: 6px;
 				}
 			}
 		}
@@ -131,19 +154,19 @@
 		&__xl {
 
 			.badge-content {
-				padding: 6px 17px;
-				font-size: 1.375rem;
+				padding: 6px 10px;
+				font-size: 1.5rem;
 			}
 
 			.badge-icon {
-				width: 56px;
-				height: 36px;
+				width: 40px;
+				height: 40px;
 				border-right: none;
 
 				svg {
-					width: 22px;
-					height: 22px;
-					left: 17px;
+					width: 24px;
+					height: 24px;
+					left: 10px;
 					top: 6px;
 				}
 			}
@@ -152,20 +175,20 @@
 		&__xxl {
 
 			.badge-content {
-				padding: 6px 19px;
-				font-size: 1.5rem;
+				padding: 5px 10px;
+				font-size: 1.625rem;
 			}
 
 			.badge-icon {
-				width: 62px;
+				width: 46px;
 				height: 38px;
 				border-right: none;
 
 				svg {
-					width: 24px;
-					height: 24px;
-					left: 19px;
-					top: 6px;
+					width: 26px;
+					height: 26px;
+					left: 10px;
+					top: 5px;
 				}
 			}
 		}
@@ -173,20 +196,20 @@
 		&__xxxl {
 
 			.badge-content {
-				padding: 7px 21px;
-				font-size: 1.625rem;
+				padding: 5px 11px;
+				font-size: 1.75rem;
 			}
 
 			.badge-icon {
-				width: 68px;
-				height: 42px;
+				width: 50px;
+				height: 40px;
 				border-right: none;
 
 				svg {
-					width: 26px;
-					height: 26px;
-					left: 21px;
-					top: 7px;
+					width: 28px;
+					height: 28px;
+					left: 11px;
+					top: 5px;
 				}
 			}
 		}
@@ -194,19 +217,19 @@
 		&__xxxxl {
 
 			.badge-content {
-				padding: 7px 23px;
+				padding: 5px 12px;
 				font-size: 1.875rem;
 			}
 
 			.badge-icon {
-				width: 76px;
-				height: 46px;
+				width: 54px;
+				height: 44px;
 				border-right: none;
 
 				svg {
 					width: 30px;
 					height: 30px;
-					left: 23px;
+					left: 12px;
 					top: 7px;
 				}
 			}
@@ -215,265 +238,85 @@
 		@media (min-width: 48em) {
 
 			&__xl {
-			
-				.badge-content {
-					font-size: 1.5rem;
-				}
 
-				.badge-icon {
-					width: 58px;
-					height: 38px;
-					border-right: none;
-	
-					svg {
-						width: 24px;
-						height: 24px;
-					}
-				}
-			}
-
-			&__xxl {
-			
 				.badge-content {
+					padding: 5px 10px;
 					font-size: 1.75rem;
 				}
-
-				.badge-icon {
-					width: 66px;
-					height: 42px;
 	
-					svg {
-						width: 28px;
-						height: 28px;
-					}
-				}
-			}
-
-			&__xxxl {
-			
-				.badge-content {
-					font-size: 2rem;
-				}
-
 				.badge-icon {
-					width: 74px;
-					height: 48px;
-	
-					svg {
-						width: 32px;
-						height: 32px;
-					}
-				}
-			}
-			
-			&__xxxxl {
-			
-				.badge-content {
-					font-size: 2.25rem;
-				}
-
-				.badge-icon {
-					width: 82px;
-					height: 52px;
-	
-					svg {
-						width: 36px;
-						height: 36px;
-					}
-				}
-			}
-		}
-
-		@media (min-width: 64em) {
-
-			&__l {
-			
-				.badge-content {
-					font-size: 1.375rem;
-				}
-
-				.badge-icon {
-					width: 52px;
-					height: 34px;
-					border-right: none;
-	
-					svg {
-						width: 22px;
-						height: 22px;
-					}
-				}
-			}
-			
-			&__xl {
-			
-				.badge-content {
-					font-size: 1.625rem;
-				}
-
-				.badge-icon {
-					width: 60px;
+					width: 48px;
 					height: 40px;
-	
-					svg {
-						width: 26px;
-						height: 26px;
-					}
-				}
-			}
-			
-			&__xxl {
-			
-				.badge-content {
-					font-size: 1.875rem;
-				}
-
-				.badge-icon {
-					width: 68px;
-					height: 44px;
-	
-					svg {
-						width: 30px;
-						height: 30px;
-					}
-				}
-			}
-			
-			&__xxxl {
-			
-				.badge-content {
-					font-size: 2.25rem;
-				}
-
-				.badge-icon {
-					width: 78px;
-					height: 52px;
-
-					svg {
-						width: 36px;
-						height: 36px;
-					}
-				}
-			}
-			
-			&__xxxxl {
-			
-				.badge-content {
-					font-size: 2.625rem;
-				}
-
-				.badge-icon {
-					width: 82px;
-					height: 52px;
-	
-					svg {
-						width: 36px;
-						height: 36px;
-					}
-				}
-			}
-		}
-
-		@media (min-width: 80em) {
-
-			&__m {
-
-				.badge-content {
-					font-size: 1.25rem;
-				}
-
-				.badge-icon {
-					width: 47px;
-					height: 32px;
-	
-					svg {
-						width: 20px;
-						height: 20px;
-					}
-				}
-			}
-
-			&__l {
-	
-				.badge-content {
-					font-size: 1.5rem;
-				}
-
-				.badge-icon {
-					width: 54px;
-					height: 36px;
 					border-right: none;
-	
-					svg {
-						width: 24px;
-						height: 24px;
-					}
-				}
-			}
-	
-			&__xl {
-	
-				.badge-content {
-					font-size: 1.75rem;
-				}
-
-				.badge-icon {
-					width: 62px;
-					height: 42px;
 	
 					svg {
 						width: 28px;
 						height: 28px;
+						left: 10px;
+						top: 5px;
 					}
 				}
 			}
-	
+
 			&__xxl {
-	
+
 				.badge-content {
+					padding: 7px 12px;
 					font-size: 2.125rem;
 				}
-
+	
 				.badge-icon {
-					width: 72px;
-					height: 48px;
+					width: 58px;
+					height: 50px;
+					border-right: none;
 	
 					svg {
 						width: 34px;
 						height: 34px;
+						left: 12px;
+						top: 7px;
 					}
 				}
 			}
-	
+
 			&__xxxl {
-	
+
 				.badge-content {
+					padding: 7px 14px;
 					font-size: 2.5rem;
 				}
-
+	
 				.badge-icon {
-					width: 82px;
-					height: 56px;
-
+					width: 68px;
+					height: 58px;
+					border-right: none;
+	
 					svg {
 						width: 40px;
 						height: 40px;
+						left: 14px;
+						top: 7px;
 					}
 				}
 			}
-	
+
 			&__xxxxl {
-	
+
 				.badge-content {
+					padding: 8px 16px;
 					font-size: 3rem;
 				}
-
+	
 				.badge-icon {
-					width: 94px;
-					height: 64px;
+					width: 80px;
+					height: 66px;
+					border-right: none;
 	
 					svg {
 						width: 48px;
 						height: 48px;
+						left: 16px;
+						top: 8px;
 					}
 				}
 			}

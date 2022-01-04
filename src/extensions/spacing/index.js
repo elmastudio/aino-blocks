@@ -14,19 +14,16 @@ import './styles/style.scss';
  */
 const { __ } = wp.i18n;
 const { addFilter } = wp.hooks;
-const { Component, Fragment } = wp.element;
-const { hasBlockSupport } = wp.blocks;
+const { Fragment } = wp.element;
 const {
 	InspectorControls
 } = wp.blockEditor;
 const {
 	PanelBody,
-	SelectControl,
 	RangeControl,
 } = wp.components;
 const {
-	createHigherOrderComponent,
-	compose,
+	createHigherOrderComponent
 } = wp.compose;
 
 // Enable spacing control on the following blocks
@@ -119,7 +116,7 @@ function spacingInspectorControls(BlockEdit) {
 					<BlockEdit {...props} />
 					<InspectorControls>
 						<PanelBody
-							title={__('Responsive Spacing', 'ainoblocks')}
+							title={__('Aino Spacing', 'ainoblocks')}
 							initialOpen={false}
 						>
 							<RangeControl

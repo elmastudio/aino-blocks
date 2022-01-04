@@ -16,10 +16,10 @@
 		"backgroundColor": {
 			"type": "string"
 		},
-		"textColor": {
+		"borderColor": {
 			"type": "string"
 		},
-		"borderColor": {
+		"iconColor": {
 			"type": "string"
 		},
 		"alignment": {
