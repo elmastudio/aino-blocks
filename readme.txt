@@ -2,18 +2,18 @@
 Author URI: https://www.elmastudio.de/en
 Plugin URI: https://ainoblocks.io
 Contributors: elmastudio
-Tags: block, WordPress blocks, gutenberg, blocks, block patterns
+Tags: block, WordPress blocks, gutenberg, blocks
 Requires at least: 5.5
 Tested up to: 5.8.2
 Stable tag: 1.8.1
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
-A block collection to build creative WordPress websites.
+A block collection to build creative WordPress websites in the Gutenberg editor.
 
 == Description ==
 
-The Aino blocks plugin brings you a collection of blocks and block patterns for the WordPress block editor. With Aino blocks and the free <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino theme</a> you can build creative, individual page layouts with ease.
+The Aino blocks plugin brings you a collection of blocks for the Gutenberg block editor. With Aino blocks and the free <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino theme</a> you can build creative, individual page layouts with ease.
 
 ## Currently available blocks
 * Author block
