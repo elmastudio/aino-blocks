@@ -43,8 +43,9 @@ export default function BadgeEdit( { attributes, setAttributes, className } ) {
 		} = attributes;
 
 		const sizeOptions = [
-			{ value: 'size__ssx', label: __('SSX', 'ainoblocks') },
-			{ value: 'size__sx', label: __('SX', 'ainoblocks') },
+			{ value: 'size__xxxs', label: __('XXXS', 'ainoblocks') },
+			{ value: 'size__xxs', label: __('XXS', 'ainoblocks') },
+			{ value: 'size__sx', label: __('XS', 'ainoblocks') },
 			{ value: 'size__s', label: __('S', 'ainoblocks') },
 			{ value: 'size__m', label: __('M', 'ainoblocks') },
 			{ value: 'size__l', label: __('L', 'ainoblocks') },

@@ -53,6 +53,7 @@ Yes, you can find the first patterns inside the pattern library once you install
 
 = 1.8.1 =
 Enhance: Compress CSS files.
+Enhance: Badge block.
 
 = 1.8.0 =
 New: Small, medium, large Grid column gap option.

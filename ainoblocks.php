@@ -5,7 +5,7 @@
  * Description: A collection of blocks and block patterns for creative WordPress users. Let's start to build websites that stand out from the crowd.
  * Version: 1.8.1
  * Requires at least: 5.5
- * Tested up to: 5.8.1
+ * Tested up to: 5.8.2
  * Author: Elma Studio
  * Author URI: https://www.elmastudio.de/en/
  * Text Domain: ainoblocks
