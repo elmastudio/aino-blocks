@@ -1,7 +1,6 @@
 /**
  * External dependencies
  */
-import { omit } from 'lodash';
 import classnames from 'classnames';
 
 /**
@@ -12,64 +11,64 @@ const {
 	useBlockProps,
 } = wp.blockEditor;
 
-const attributes = {
-	"align": {
-		"type": "string"
-	},
-	"backgroundColor": {
-		"type": "string"
-	},
-	"borderColor": {
-		"type": "string"
-	},
-	"borderRadius": {
-		"type": "number",
-		"default": 0
-	},
-	"shadowName": {
-		"type": "string",
-		"default": "shadow-none"
-	},
-	"paddingTop": {
-		"type": "number",
-		"default": 7
-	},
-	"paddingBottom": {
-		"type": "number",
-		"default": 7
-	},
-	"paddingLeft": {
-		"type": "number",
-		"default": 7
-	},
-	"paddingRight": {
-		"type": "number",
-		"default": 7
-	},
-	"borderTopWidth": {
-		"type": "number",
-		"default": 0
-	},
-	"borderRightWidth": {
-		"type": "number",
-		"default": 0
-	},
-	"borderBottomWidth": {
-		"type": "number",
-		"default": 0
-	},
-	"borderLeftWidth": {
-		"type": "number",
-		"default": 0
-	}
-};
-
-deprecated: [
+const deprecated = [
 	{
+
+		attributes: {
+			align: {
+				type: 'string'
+			},
+			backgroundColor: {
+				type: 'string'
+			},
+			borderColor: {
+				type: 'string'
+			},
+			borderRadius: {
+				type: 'number',
+				default: 0
+			},
+			shadowName: {
+				type: 'string',
+				default: "shadow-none"
+			},
+			paddingTop: {
+				type: 'number',
+				default: 7
+			},
+			paddingBottom: {
+				type: 'number',
+				default: 7
+			},
+			paddingLeft: {
+				type: 'number',
+				default: 7
+			},
+			paddingRight: {
+				type: 'number',
+				default: 7
+			},
+			borderTopWidth: {
+				type: 'number',
+				default: 0
+			},
+			borderRightWidth: {
+				type: 'number',
+				default: 0
+			},
+			borderBottomWidth: {
+				type: 'number',
+				default: 0
+			},
+			borderLeftWidth: {
+				type: 'number',
+				default: 0
+			}
+		},
+
 		save( attributes ) {
 
 			const {
-				align,
 				backgroundColor,
 				borderColor,
 				borderRadius,
@@ -114,4 +113,6 @@ deprecated: [
 			);
 		}
 	}
-]
+];
+
+export default deprecated;

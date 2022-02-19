@@ -4,29 +4,34 @@
 import classnames from 'classnames';
 
 /**
+ * Internal dependencies
+ */
+import icons from './icons';
+
+/**
  * WordPress dependencies
  */
 const {
-	InnerBlocks,
 	useBlockProps,
 } = wp.blockEditor;
 
-export default function save( { attributes } ) {
+export default function save({ attributes }) {
 
 	const {
-		style,
+		iconType,
+		iconSize,
+		alignment,
 	} = attributes;
 
-	const testimonialClasses = classnames(classnames, style, {});
+	const iconClasses = classnames(classnames, iconSize, alignment, {});
 
 	const blockProps = useBlockProps.save( {
-		className: testimonialClasses,
+		className: iconClasses,
 	} );
 
 	return (
-
 		<div { ...blockProps }>
-			<InnerBlocks.Content />
+			{icons.quote}
 		</div>
 	);
 }

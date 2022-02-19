@@ -1,0 +1,46 @@
+{	
+	"apiVersion": 2,
+	"name": "ainoblocks/profile-image",
+	"title": "Profile Image",
+	"category": "design",
+	"parent": [ "ainoblocks/author" ],
+	"description": "Show a name, a short description text and avatar profile image.",
+	"keywords": [ "ainoblocks", "author", "profile", "avatar", "image" ],
+	"attributes": {
+		"imgURL": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "src",
+			"selector": "img"
+		},
+		"imgID": {
+			"type": "number"
+		},
+		"imgAlt": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "alt",
+			"selector": "img"
+		},
+		"imgSize": {
+			"type": "string"
+		},
+		"imgRadius": {
+			"type": "number",
+			"default": 0
+		},
+		"borderWidth": {
+			"type": "number",
+			"default": 0
+		},
+		"borderColor": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"color": {
+			"gradients": true,
+			"text": false
+		}
+	}
+}

@@ -7,36 +7,50 @@ import classnames from 'classnames';
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const { Component, Fragment } = wp.element;
+const { Fragment } = wp.element;
 const {
-	BlockAlignmentToolbar,
-	BlockControls,
+	InspectorControls,
 	InnerBlocks,
 	useBlockProps,
 } = wp.blockEditor;
-
-/**
- * Allowed blocks and template constant is passed to InnerBlocks precisely as specified here.
- *
- * @constant
- * @type {string[]}
-*/
-const ALLOWED_BLOCKS = ['core/image', 'core/paragraph', 'ainoblocks/card', 'ainoblocks/author'];
-const TEMPLATE = [
-
-	['ainoblocks/card', {}, [
-		['core/paragraph', { placeholder: 'Write testimonial text...' }],
-		['ainoblocks/author'],
-	]
-	]
-];
+const {
+	PanelBody,
+	SelectControl,
+} = wp.components;
 
 /**
  * Block edit function
  */
 export default function TestimonialEdit( { attributes, setAttributes, className } ) {
 
-	const testimonialClasses = classnames(className, {});
+	const {
+		style,
+	} = attributes;
+
+	const TEMPLATE = [
+
+		['ainoblocks/card', {},
+			[
+				['ainoblocks/icon'],
+
+				['core/group', {},
+			[
+				['core/paragraph', { placeholder: 'Write testimonial text...' }],
+				['ainoblocks/author'],
+			]
+		]
+
+			]
+		]
+	];
+
+	const styleOptions = [
+		{ value: 'indent-none', label: __('default', 'ainoblocks') },
+		{ value: 'indent-l', label: __('indented left', 'ainoblocks') },
+		{ value: 'indent-r', label: __('indented right', 'ainoblocks') }
+	];
+
+	const testimonialClasses = classnames(className, style, {});
 
 	const blockProps = useBlockProps( {
 		className: testimonialClasses,
@@ -44,13 +58,21 @@ export default function TestimonialEdit( { attributes, setAttributes, className 
 
 	return (
 		<Fragment>
+			<InspectorControls>
+				<PanelBody title={__('Testimonial Settings', 'ainoblocks')}>
+					<SelectControl
+						label={__('Style', 'ainoblocks')}
+						value={style}
+						options={styleOptions}
+						onChange={style => setAttributes({ style })}
+					/>
+				</PanelBody>
+			</InspectorControls>
+
 			<div { ...blockProps }>
-				<InnerBlocks
-					template={TEMPLATE}
-					allowedBlocks={ALLOWED_BLOCKS}
-					templateLock="insert"
-					templateInsertUpdatesSelection={false}
-				/>
+			<InnerBlocks
+				template={ TEMPLATE }
+			/>
 			</div>
 		</Fragment>
 	);

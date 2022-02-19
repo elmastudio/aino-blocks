@@ -2,5 +2,15 @@
 	"apiVersion": 2,
 	"name": "ainoblocks/testimonial",
 	"title": "Testimonial",
-	"attributes": {}
+	"category": "design",
+	"description": "Insert a testimonial or review with the option to add author information.",
+	"keywords": [ "ainoblocks", "testimonial", "quote", "feedback"],
+	"attributes": {
+		"style": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ]
+	}
 }

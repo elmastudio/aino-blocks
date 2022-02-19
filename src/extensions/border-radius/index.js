@@ -15,8 +15,7 @@ import './styles/style.scss';
  */
 const { __ } = wp.i18n;
 const { addFilter } = wp.hooks;
-const { Component, Fragment } = wp.element;
-const { hasBlockSupport } = wp.blocks;
+const { Fragment } = wp.element;
 const {
 	InspectorControls
 } = wp.blockEditor;
@@ -26,7 +25,6 @@ const {
 } = wp.components;
 const {
 	createHigherOrderComponent,
-	compose,
 } = wp.compose;
 
 // Enable border-radius control on the following blocks

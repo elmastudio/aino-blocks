@@ -1,0 +1,34 @@
+.wp-block-ainoblocks-icon {
+	display: flex;
+
+	svg {
+		fill: currentColor;
+	}
+
+	&.size-m,
+	&.size-l {
+
+		svg {
+			width: 2rem;
+			height: 2rem;
+		}
+	}
+
+	&.size-l {
+
+		@media (min-width: 48em) {
+			svg {
+				width: 4rem;
+				height: 4rem;
+			}
+		}
+	}
+
+	&.center {
+		justify-content: center;
+	}
+
+	&.right {
+		justify-content: flex-end;
+	}
+}

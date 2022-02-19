@@ -6,7 +6,6 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-const { __ } = wp.i18n;
 const {
 	InnerBlocks,
 	useBlockProps,
@@ -15,9 +14,6 @@ const {
 export default function save( { attributes } ) {
 
 	const {
-		align,
-		backgroundColor,
-		borderRadius,
 		shadowName,
 		paddingTop,
 		paddingBottom,
@@ -27,7 +23,6 @@ export default function save( { attributes } ) {
 		borderRightWidth,
 		borderBottomWidth,
 		borderLeftWidth,
-		borderWidth,
 	} = attributes;
 
 	const cardClasses = classnames(classnames, shadowName, {
@@ -40,7 +35,6 @@ export default function save( { attributes } ) {
 	const blockProps = useBlockProps.save( {
 		className: cardClasses,
 		style: {
-			borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 			borderTopWidth: borderTopWidth ? borderTopWidth + 'px' : undefined,
 			borderRightWidth: borderRightWidth ? borderRightWidth + 'px' : undefined,
 			borderBottomWidth: borderBottomWidth ? borderBottomWidth + 'px' : undefined,

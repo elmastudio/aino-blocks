@@ -237,6 +237,12 @@ h3,
 h4,
 h5,
 h6,
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6,
 .single .post-content h1,
 .single .post-content h2,
 .single .post-content h3,
@@ -267,7 +273,8 @@ ul,
 .wp-block-ainoblocks-grid-item,
 .wp-block-ainoblocks-flexbox,
 .wp-block-ainoblocks-flex-item,
-.wp-block-ainoblocks-badge {
+.wp-block-ainoblocks-badge,
+.wp-block-ainoblocks-testimonial {
 
 	&.pt {
 		

@@ -1,3 +1,32 @@
 .wp-block-ainoblocks-testimonial {
 	position: relative;
+
+	&.indent-l,
+	&.indent-r {
+
+		.wp-block-ainoblocks-card {
+
+			.block-editor-inner-blocks {
+
+				.block-editor-block-list__layout:first-child {
+					display: flex;
+					align-items: flex-start;
+					align-content: stretch;
+				}
+			}
+		}
+	}
+
+	&.indent-r {
+
+		.wp-block-ainoblocks-card {
+
+			.block-editor-inner-blocks {
+
+				.block-editor-block-list__layout:first-child {
+					flex-direction: row-reverse;
+				}
+			}
+		}
+	}
 }

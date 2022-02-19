@@ -1,31 +1,11 @@
-{
+{	
 	"apiVersion": 2,
 	"name": "ainoblocks/author",
 	"title": "Author",
 	"category": "design",
+	"description": "Show a name, a short description text and avatar profile image.",
+	"keywords": [ "ainoblocks", "author", "profile", "avatar", "name" ],
 	"attributes": {
-		"imgURL": {
-			"type": "string",
-			"source": "attribute",
-			"attribute": "src",
-			"selector": "img"
-		},
-		"imgID": {
-			"type": "number"
-		},
-		"imgAlt": {
-			"type": "string",
-			"source": "attribute",
-			"attribute": "alt",
-			"selector": "img"
-		},
-		"imgSize": {
-			"type": "string"
-		},
-		"imgRadius": {
-			"type": "number",
-			"default": 0
-		},
 		"name": {
 			"type": "string"
 		},

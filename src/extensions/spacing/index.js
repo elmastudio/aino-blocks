@@ -47,6 +47,7 @@ const enableSpacingControlOnBlocks = [
 	'ainoblocks/flexbox',
 	'ainoblocks/flex-item',
 	'ainoblocks/badge',
+	'ainoblocks/testimonial',
 ];
 
 /**
@@ -116,7 +117,7 @@ function spacingInspectorControls(BlockEdit) {
 					<BlockEdit {...props} />
 					<InspectorControls>
 						<PanelBody
-							title={__('Aino Spacing', 'ainoblocks')}
+							title={__('Responsive Spacing', 'ainoblocks')}
 							initialOpen={false}
 						>
 							<RangeControl

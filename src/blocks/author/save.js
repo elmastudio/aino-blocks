@@ -6,20 +6,15 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-const { __ } = wp.i18n;
 const {
 	RichText,
+	InnerBlocks,
 	useBlockProps,
 } = wp.blockEditor;
 
 export default function save({ attributes }) {
 
 	const {
-		imgID,
-		imgURL,
-		imgAlt,
-		imgSize,
-		imgRadius,
 		name,
 		info,
 		infoTextColor,
@@ -28,27 +23,15 @@ export default function save({ attributes }) {
 		layout,
 	} = attributes;
 
-	const authorClasses = classnames(classnames, layout, imgSize, {});
+	const authorClasses = classnames(classnames, layout, alignment, {});
 
 	const blockProps = useBlockProps.save( {
 		className: authorClasses,
-		style: {
-			textAlign: alignment,
-		},
 	} );
 
 	return (
 		<div { ...blockProps }>
-			{imgURL && (
-				<div className={classnames('wp-block-ainoblocks-author__avatar')}>
-					<img style={{
-						borderRadius: imgRadius + '%',
-					}}
-						src={imgURL}
-						alt={imgAlt}
-					/>
-				</div>
-			)}
+			<InnerBlocks.Content />
 			<div className={'wp-block-ainoblocks-author__text-wrapper'}>
 				<div className={'wp-block-ainoblocks-author__author'}>
 					{!RichText.isEmpty(name) && (

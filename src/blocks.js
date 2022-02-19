@@ -4,11 +4,7 @@ import "./i18n.js";
  * WordPress dependencies
  */
 registerBlockType
-const { registerBlockType,
-	setDefaultBlockName,
-	setFreeformContentHandlerName,
-	setUnregisteredTypeHandlerName,
-	setGroupingBlockName } = wp.blocks;
+const { registerBlockType } = wp.blocks;
 
 // Category slug and title
 const category = {
@@ -30,6 +26,8 @@ import * as hero from './blocks/hero';
 import * as card from './blocks/card';
 import * as badge from './blocks/badge';
 import * as author from './blocks/author';
+import * as profileImage from './blocks/profile-image';
+import * as icon from './blocks/icon';
 import * as testimonial from './blocks/testimonial';
 import * as button from './blocks/button';
 import * as multipleButtons from './blocks/multiple-buttons';
@@ -64,6 +62,8 @@ const registerBlock = ( block ) => {
 export const registerAinoblocksBlocks = () => {
 	[	
 		author,
+		profileImage,
+		icon,
 		badge,
 		button,
 		card,
