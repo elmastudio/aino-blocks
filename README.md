@@ -9,7 +9,7 @@
 __Contributors:__ elmastudio  
 __Tags:__ page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks   
 __Requires at least:__ 5.5   
-__Tested up to:__ WordPress 5.8.2  
+__Tested up to:__ WordPress 5.9.3  
 __License:__ GPLv2 or later  
 __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -18,7 +18,6 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 
 -   [Download the Aino theme WordPress.org](https://wordpress.org/themes/aino/)
 -   [Follow us on Twitter](https://twitter.com/ainoblocks)
--   [Like Aino on Facebook](https://www.facebook.com/wpainoblocks/)
 -   [Follow us on Insta](https://www.instagram.com/ainoblocks/)
 -   [Join the conversation on Slack](https://join.slack.com/t/ainodesign/shared_invite/zt-9yvwt8ac-aZ2bLY9wpmwSimPjVLfqmw)
 
@@ -32,6 +31,15 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+### 1.9.0  
+New: Icon block (sinple first version, block will be improved in future updates).  
+New: Profile Image block (Author block child).  
+New: Grid Item block responsive margins left and right.  
+Enhance: Testimonial block.  
+Enhance: Flexbox Item block.  
+Enhance: Grid Item block color settings.  
+Enhance: Author block.  
+  
 ### 1.8.2  
 Enhance: Badge block.  
 Enhance: Change plugin home URL.  
