@@ -11,19 +11,24 @@
 		"color": {
 			"text": false,
 			"background": true
+		},
+		"__experimentalBorder": {
+			"radius": true
 		}
 	},
 	"attributes": {
 		"flexOrder": {
-			"type": "number",
-			"default": 0
-		},
-		"flexGrow": {
-			"type": "number",
-			"default": 0
+			"type": "number"
 		},
 		"flexBasis": {
 			"type": "number"
+		},
+		"flexGrow": {
+			"type": "number"
+		},
+		"flexShrink": {
+			"type": "boolean",
+			"default": false
 		},
 		"alignSelfDesktop": {
 			"type": "string",

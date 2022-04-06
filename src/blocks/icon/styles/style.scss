@@ -5,12 +5,19 @@
 		fill: currentColor;
 	}
 
+	&.size-xs {
+		svg {
+			width: 18px;
+			height: 18px;
+		}
+	}
+
 	&.size-m,
 	&.size-l {
 
 		svg {
-			width: 2rem;
-			height: 2rem;
+			width: 32px;
+			height: 32px;
 		}
 	}
 
@@ -18,8 +25,8 @@
 
 		@media (min-width: 48em) {
 			svg {
-				width: 4rem;
-				height: 4rem;
+				width: 64px;
+				height: 64px;
 			}
 		}
 	}

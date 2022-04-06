@@ -1,11 +1,14 @@
-
 .wp-block-ainoblocks-button {
+	background-color: #000;
 	color: #fff;
 	border: 0px solid;
 
-	&.is-style-outline {
-		background-color: transparent !important;
-		color: #121212;
+	&.is-style-outline,
+	&.is-style-outline.has-border-color {
+		background-color: transparent;
+		color: #000;
+		border-width: 1px;
+		border-style: solid;
 
 		.wp-block-ainoblocks-button__link {
 
@@ -18,7 +21,7 @@
 	&.is-style-naked {
 		border: none;
 		background-color: transparent !important;
-		color: #121212;
+		color: #000;
 
 		.wp-block-ainoblocks-button__link {
 			padding-left: 0 !important;
@@ -28,6 +31,19 @@
 				background-color: transparent !important;
 				text-decoration: underline;
 			}
+		}
+	}
+
+	&.is-style-raised {
+		box-shadow: -4px 4px 0px 0 var(--wp--preset--color--button-color-primary);
+		border-width: 1px;
+		border-style: solid;
+		transition: all 150ms ease;
+
+		&:hover {
+			box-shadow: none;
+			transform: translate(-4px, 4px);
+			color: inherit;
 		}
 	}
 
@@ -63,12 +79,12 @@
 		&.size {
 
 			&__xxxs {
-				padding: 0.375rem 0.75rem;
+				padding: 0.563rem 1.125rem;
 				font-size: 0.75rem;
 			}
 
 			&__xxs {
-				padding: 0.563rem 1.125rem;
+				padding: 0.625rem 1.313rem;
 				font-size: 0.875rem;
 			}
 
@@ -78,62 +94,45 @@
 			}
 
 			&__s {
-				padding: 0.938rem 1.875rem;
+				padding: 0.875rem 1.688rem;
 				font-size: 1.125rem;
 			}
 
 			&__m {
-				padding: 1.125rem 2.25rem;
-				font-size: 1.25rem;
+				padding: 0.938rem 1.875rem;
+				font-size: clamp(1.125rem, 1.08333rem + 0.208333vw, 1.25rem);
 			}
 
 			&__l {
 				padding: 1.125rem 2.25rem;
-				font-size: 1.25rem;
-
-				@media (min-width: 64em) {
-					padding: 1.25rem 2.5rem;
-					font-size: 1.5rem;
-				}
+				font-size: clamp(1.25rem, 1.16667rem + 0.416667vw, 1.5rem);
 			}
 
 			&__xl {
-				padding: 1.25rem 2.5rem;
-				font-size: 1.5rem;
-
-				@media (min-width: 64em) {
-					padding: 1.625rem 3.25rem;
-					font-size: 1.75rem;
-				}
+				padding: 1.375rem 2.813rem;
+				font-size: clamp(1.5rem, 1.375rem + 0.625vw, 1.875rem);
 			}
 
 			&__xxl {
-				padding: 2.25rem 4.5rem;
-				font-size: 1.5rem;
-
-				@media (min-width: 64em) {
-					padding: 2.875rem 5.75rem;
-					font-size: 1.75rem;
-				}
+				padding: 1.688rem 3.375rem;
+				font-size: clamp(1.875rem, 1.75rem + 0.625vw, 2.25rem);
 			}
 
 			&__xxxl {
-				padding: 3rem 6rem;
-				font-size: 1.5rem;
+				padding: 1.688rem 3.375rem;
+				font-size: clamp(2.25rem, 2rem + 1.25vw, 3rem);
 
 				@media (min-width: 64em) {
-					padding: 3.625rem 7.25rem;
-					font-size: 1.75rem;
+					padding: 2.25rem 4.5rem;
 				}
 			}
 
 			&__xxxxl {
-				padding: 3.75rem 7.5rem;
-				font-size: 1.5rem;
+				padding: 1.688rem 3.375rem;
+				font-size: clamp(2.25rem, 1.75rem + 2.5vw, 3.75rem);
 
 				@media (min-width: 64em) {
-					padding: 5.625rem 11.25rem;
-					font-size: 1.75rem;
+					padding: 2.813rem 5.625rem;
 				}
 			}
 		}
@@ -143,31 +142,55 @@
 		}
 	}
 
-	&.has-282828-background-color {
+	&.is-style-outline {
 
 		.wp-block-ainoblocks-button__link {
-			background: #282828;
-		}
-	}
 
-	&.has-777-b-7-d-background-color {
+			&.size {
+				&__xxxs {
+					padding: calc(0.563rem - 1px) calc(1.125rem - 1px);
+				}
 
-		.wp-block-ainoblocks-button__link {
-			background: #777B7D;
-		}
-	}
+				&__xxs {
+					padding: calc(0.625rem - 1px) calc(1.313rem - 1px);
+				}
+	
+				&__xs {
+					padding: calc(0.75rem - 1px) calc(1.5rem - 1px);
+				}
+	
+				&__s {
+					padding: calc(0.875rem - 1px) calc(1.688rem - 1px);
+				}
+	
+				&__m {
+					padding: calc(0.938rem - 1px) calc(1.875rem - 1px);
+				}
 
-	&.has-fcfcfc-color {
+				&__l {
+					padding: calc(1.125rem - 1px) calc(2.25rem - 1px);
+				}
 
-		.wp-block-ainoblocks-button__link {
-			color: #fcfcfc;
-		}
-	}
+				&__xl {
+					padding: calc(1.375rem - 1px) calc(2.813rem - 1px);
+				}
 
-	&.has-ffffff-color {
+				&__xxl,
+				&__xxxl,
+				&__xxxxl {
+					padding: calc(1.688rem - 1px) calc(3.375rem - 1px);
+				}
 
-		.wp-block-ainoblocks-button__link {
-			color: #ffffff;
+				@media (min-width: 64em) {
+					&__xxxl {
+						padding: calc(2.25rem - 1px) calc(4.5rem - 1px);
+					}
+
+					&__xxxxl {
+						padding: calc(2.813rem - 1px) calc(5.625rem - 1px);
+					}
+				}
+			}
 		}
 	}
 }

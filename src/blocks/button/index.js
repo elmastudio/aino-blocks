@@ -48,6 +48,11 @@ export const settings = {
 			/* translators: block style */
 			label: __( 'Naked' ),
 		},
+		{ 
+			name: 'raised',
+			/* translators: block style */
+			label: __( 'Raised' ),
+		},
 	],
 	example: {
 			name: 'ainoblocks/button',

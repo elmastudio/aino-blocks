@@ -6,12 +6,6 @@ import "./i18n.js";
 registerBlockType
 const { registerBlockType } = wp.blocks;
 
-// Category slug and title
-const category = {
-	slug: 'ainoblocks',
-	title: 'Aino Blocks',
-};
-
 // Register block category
 import './utils/block-category';
 
@@ -57,7 +51,7 @@ const registerBlock = ( block ) => {
 };
 
 /**
- * Function to register blocks provided by CoBlocks.
+ * Function to register blocks.
  */
 export const registerAinoblocksBlocks = () => {
 	[	

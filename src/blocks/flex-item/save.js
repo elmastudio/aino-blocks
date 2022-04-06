@@ -14,6 +14,7 @@ export default function save( { attributes } ) {
 	const {
 		flexOrder,
 		flexGrow,
+		flexShrink,
 		flexBasis,
 		alignSelfDesktop,
 		alignSelfTablet,
@@ -32,6 +33,7 @@ export default function save( { attributes } ) {
 		order: flexOrder ? flexOrder : undefined,
 		flexGrow: flexGrow ? flexGrow : undefined,
 		flexBasis: flexBasis ? flexBasis + 'px' : undefined,
+		flexShrink: flexShrink ? "0" : undefined,
 	};
 
 	const blockProps = useBlockProps.save( {

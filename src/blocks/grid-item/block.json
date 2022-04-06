@@ -1,7 +1,10 @@
 {	
-	"apiVersion": 2,
 	"name": "ainoblocks/grid-item",
+	"apiVersion": 2,
 	"title": "Grid Item",
+	"description": "A grid item in a grid container block.",
+	"keywords": [ "grid", "container", "columns", "layout", "aino", "ainoblocks"],
+	"textdomain": "ainoblocks",
 	"attributes": {
 		"gridColumnStartDesktop": {
 			"type": "number",
@@ -57,26 +60,53 @@
 		"marginTopDesktop": {
 			"type": "number"
 		},
+		"marginRightDesktop": {
+			"type": "number"
+		},
 		"marginBottomDesktop": {
+			"type": "number"
+		},
+		"marginLeftDesktop": {
 			"type": "number"
 		},
 		"marginTopTablet": {
 			"type": "number"
 		},
+		"marginRightTablet": {
+			"type": "number"
+		},
 		"marginBottomTablet": {
+			"type": "number"
+		},
+		"marginLeftTablet": {
 			"type": "number"
 		},
 		"marginTopMobile": {
 			"type": "number"
 		},
+		"marginRightMobile": {
+			"type": "number"
+		},
 		"marginBottomMobile": {
 			"type": "number"
 		},
-		"backgroundColor": {
-			"type": "string"
+		"marginLeftMobile": {
+			"type": "number"
+		}
+	},
+	"supports": {
+		"color": {
+			"gradients": true,
+			"text": false,
+			"__experimentalDefaultControls": {
+				"background": true
+			}
 		},
-		"borderColor": {
-			"type": "string"
+		"__experimentalBorder": {
+			"color": true,
+			"width": true,
+			"style": false,
+			"radius": false
 		}
 	}
 }

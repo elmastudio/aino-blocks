@@ -7,8 +7,7 @@ import classnames from 'classnames';
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const { Component, Fragment, useCallback, useState } = wp.element;
-const { compose, withInstanceId } = wp.compose;
+const { Fragment, useCallback, useState } = wp.element;
 const {
 	PanelBody,
 	TextControl,
@@ -70,11 +69,11 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 
 	const styleButton = {
 		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
-		borderWidth: borderWidth ? borderWidth + 'px' : undefined,
 	};
 
 	const styleBg = {
 		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
+		borderWidth: borderWidth ? borderWidth + 'px' : undefined,
 	};
 
 	const onSetLinkRel = useCallback(
@@ -146,6 +145,7 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 
 	const buttonClasses = classnames(className, {
 	});
+
 	const blockProps = useBlockProps( {
 		className: buttonClasses,
 		style: styleBg,

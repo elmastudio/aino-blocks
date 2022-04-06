@@ -75,7 +75,52 @@
 	#{$property}: clamp(11rem, 8.1754rem + 12.2807vw, 18rem);
 }
 
-h1, h2, h3, h4, h5, h6, .single .post-content h1, .single .post-content h2, .single .post-content h3, .single .post-content h4, .single .post-content h5, .single .post-content h6, p, ul, .single .post-content p, .single .wp-block-ainoblocks-card p, .single .post-content ul, .single .post-content ol, .wp-block-group.has-background, *[class*="wp-container-"].wp-block-group.alignfull.has-background, *[class^="wp-block-"], *[class^="wp-block-ainoblocks-"], .wp-block-group {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6,
+.single .post-content h1,
+.single .post-content h2,
+.single .post-content h3,
+.single .post-content h4,
+.single .post-content h5,
+.single .post-content h6,
+p,
+ul,
+.single .post-content p,
+.wp-block-paragraph,
+.single .wp-block-ainoblocks-card p,
+.page-template-default .wp-block-ainoblocks-card p
+.single .post-content ul,
+.single .post-content ol,
+.wp-block-group,
+.wp-block-group.has-background,
+*[class*="wp-container-"].wp-block-group.alignfull.has-background,
+.wp-block-columns,
+.wp-block-cover,
+.wp-block-gallery,
+.wp-block-image,
+.wp-block-quote,
+.wp-block-ainoblocks-arrow-button,
+.wp-block-ainoblocks-multiple-buttons,
+.wp-block-ainoblocks-card,
+.wp-block-ainoblocks-divider,
+.wp-block-ainoblocks-grid-container,
+.wp-block-ainoblocks-grid-item,
+.wp-block-ainoblocks-flexbox,
+.wp-block-ainoblocks-flex-item,
+.wp-block-ainoblocks-badge,
+.wp-block-ainoblocks-testimonial,
+.wp-block-ainoblocks-timeline-block,
+.wp-block-ainoblocks-timeline-event-block {
 
 	&.pt {
 		

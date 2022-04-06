@@ -2,26 +2,17 @@
  * External dependencies
  */
 import classnames from 'classnames';
-import get from 'lodash/get';
-
-/**
- * Internal dependencies
- */
-import Inspector from './inspector';
 
 /**
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const { addFilter } = wp.hooks;
-const {Component,Fragment,} = wp.element;
+const {Fragment} = wp.element;
 const {
-	compose,
 	createHigherOrderComponent,
 } = wp.compose;
 const {
 	InspectorControls,
-	PanelColorSettings,
 	InnerBlocks,
 	useBlockProps,
 } = wp.blockEditor;
@@ -36,10 +27,9 @@ const {
 /**
  * Block edit function
  */
-export default function GridItemEdit( { hasChildBlocks, attributes, setAttributes, className, isSelected, onSelect } ) {
+export default function GridItemEdit( { attributes, setAttributes, className, onSelect } ) {
 
 		const {
-			backgroundColor,
 			gridColumnStartDesktop,
 			gridColumnEndDesktop,
 			gridColumnStartTablet,
@@ -54,11 +44,17 @@ export default function GridItemEdit( { hasChildBlocks, attributes, setAttribute
 			overlapLeft,
 			overlapRight,
 			marginTopDesktop,
+			marginRightDesktop,
 			marginBottomDesktop,
+			marginLeftDesktop,
 			marginTopTablet,
+			marginRightTablet,
 			marginBottomTablet,
+			marginLeftTablet,
 			marginTopMobile,
+			marginRightMobile,
 			marginBottomMobile,
+			marginLeftMobile,
 		} = attributes;
 
 		const alignItemOptions = [{
@@ -107,13 +103,8 @@ export default function GridItemEdit( { hasChildBlocks, attributes, setAttribute
 		const classNames = classnames(className, {
 		});
 
-		const styles = {
-			backgroundColor: backgroundColor,
-		};
-
 		const blockProps = useBlockProps( {
 			className: classNames,
-			style: styles,
 		} );
 	
 		return (
@@ -261,9 +252,27 @@ export default function GridItemEdit( { hasChildBlocks, attributes, setAttribute
 														resetFallbackValue={0}
 													/>
 													<RangeControl
+														label={__('Margin Right', 'ainoblocks')}
+														value={marginRightDesktop}
+														onChange={(marginRightDesktop) => setAttributes({ marginRightDesktop })}
+														min={-18}
+														max={18}
+														allowReset={true}
+														resetFallbackValue={0}
+													/>
+													<RangeControl
 														label={__('Margin Bottom', 'ainoblocks')}
 														value={marginBottomDesktop}
 														onChange={(marginBottomDesktop) => setAttributes({ marginBottomDesktop })}
+														min={-18}
+														max={18}
+														allowReset={true}
+														resetFallbackValue={0}
+													/>
+													<RangeControl
+														label={__('Margin Left', 'ainoblocks')}
+														value={marginLeftDesktop}
+														onChange={(marginLeftDesktop) => setAttributes({ marginLeftDesktop })}
 														min={-18}
 														max={18}
 														allowReset={true}
@@ -275,18 +284,36 @@ export default function GridItemEdit( { hasChildBlocks, attributes, setAttribute
 											return [
 												<Fragment>
 													<RangeControl
-													label={__('Margin Top', 'ainoblocks')}
-													value={marginTopTablet}
-													onChange={(marginTopTablet) => setAttributes({ marginTopTablet })}
-													min={-18}
-													max={18}
-													allowReset={true}
-													resetFallbackValue={0}
+														label={__('Margin Top', 'ainoblocks')}
+														value={marginTopTablet}
+														onChange={(marginTopTablet) => setAttributes({ marginTopTablet })}
+														min={-18}
+														max={18}
+														allowReset={true}
+														resetFallbackValue={0}
+													/>
+													<RangeControl
+														label={__('Margin Right', 'ainoblocks')}
+														value={marginRightTablet}
+														onChange={(marginRightTablet) => setAttributes({ marginRightTablet })}
+														min={-18}
+														max={18}
+														allowReset={true}
+														resetFallbackValue={0}
 													/>
 													<RangeControl
 														label={__('Margin Bottom', 'ainoblocks')}
 														value={marginBottomTablet}
 														onChange={(marginBottomTablet) => setAttributes({ marginBottomTablet })}
+														min={-18}
+														max={18}
+														allowReset={true}
+														resetFallbackValue={0}
+													/>
+													<RangeControl
+														label={__('Margin Left', 'ainoblocks')}
+														value={marginLeftTablet}
+														onChange={(marginLeftTablet) => setAttributes({ marginLeftTablet })}
 														min={-18}
 														max={18}
 														allowReset={true}
@@ -299,18 +326,36 @@ export default function GridItemEdit( { hasChildBlocks, attributes, setAttribute
 											return [
 												<Fragment>
 													<RangeControl
-													label={__('Margin Top', 'ainoblocks')}
-													value={marginTopMobile}
-													onChange={(marginTopMobile) => setAttributes({ marginTopMobile })}
-													min={-18}
-													max={18}
-													allowReset={true}
-													resetFallbackValue={0}
+														label={__('Margin Top', 'ainoblocks')}
+														value={marginTopMobile}
+														onChange={(marginTopMobile) => setAttributes({ marginTopMobile })}
+														min={-18}
+														max={18}
+														allowReset={true}
+														resetFallbackValue={0}
+													/>
+													<RangeControl
+														label={__('Margin Right', 'ainoblocks')}
+														value={marginRightMobile}
+														onChange={(marginRightMobile) => setAttributes({ marginRightMobile })}
+														min={-18}
+														max={18}
+														allowReset={true}
+														resetFallbackValue={0}
 													/>
 													<RangeControl
 														label={__('Margin Bottom', 'ainoblocks')}
 														value={marginBottomMobile}
 														onChange={(marginBottomMobile) => setAttributes({ marginBottomMobile })}
+														min={-18}
+														max={18}
+														allowReset={true}
+														resetFallbackValue={0}
+													/>
+													<RangeControl
+														label={__('Margin Left', 'ainoblocks')}
+														value={marginLeftMobile}
+														onChange={(marginLeftMobile) => setAttributes({ marginLeftMobile })}
 														min={-18}
 														max={18}
 														allowReset={true}
@@ -323,20 +368,6 @@ export default function GridItemEdit( { hasChildBlocks, attributes, setAttribute
 							}
 						</TabPanel>
 					</PanelBody>
-					<PanelColorSettings
-						title={__('Color Settings', 'ainoblocks')}
-						initialOpen={false}
-						colorSettings={[
-							{
-								value: backgroundColor,
-								onChange: backgroundColor => {
-									setAttributes({ backgroundColor });
-								},
-								label: __('Background Color', 'ainoblocks'),
-							},
-						]}
-					>
-					</PanelColorSettings>
 					<PanelBody
 						title={__('Gutter', 'ainoblocks')}
 						initialOpen={false}
@@ -447,12 +478,17 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			overlapLeft,
 			overlapRight,
 			marginTopDesktop,
+			marginRightDesktop,
 			marginBottomDesktop,
+			marginLeftDesktop,
 			marginTopTablet,
+			marginRightTablet,
 			marginBottomTablet,
+			marginLeftTablet,
 			marginTopMobile,
+			marginRightMobile,
 			marginBottomMobile,
-			backgroundColor,
+			marginLeftMobile,
 		} = attributes;
 
 		const classNames = classnames(className, {
@@ -471,16 +507,28 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			'overlap-left': overlapLeft,
 			'overlap-right': overlapRight,
 			[`mt_d__${marginTopDesktop}`] : marginTopDesktop ? marginTopDesktop : undefined,
-			[`mt_t__${marginTopTablet}`] : marginTopTablet ? marginTopTablet : undefined,
-			[`mt_m__${marginTopMobile}`] : marginTopMobile ? marginTopMobile : undefined,
+			[`mr_d__${marginRightDesktop}`] : marginRightDesktop ? marginRightDesktop : undefined,
 			[`mb_d__${marginBottomDesktop}`] : marginBottomDesktop ? marginBottomDesktop : undefined,
+			[`ml_d__${marginLeftDesktop}`] : marginLeftDesktop ? marginLeftDesktop : undefined,
+			[`mt_t__${marginTopTablet}`] : marginTopTablet ? marginTopTablet : undefined,
+			[`mr_t__${marginRightTablet}`] : marginRightTablet ? marginRightTablet : undefined,
 			[`mb_t__${marginBottomTablet}`] : marginBottomTablet ? marginBottomTablet : undefined,
+			[`ml_t__${marginLeftTablet}`] : marginLeftTablet ? marginLeftTablet : undefined,
+			[`mt_m__${marginTopMobile}`] : marginTopMobile ? marginTopMobile : undefined,
+			[`mr_m__${marginRightMobile}`] : marginRightMobile ? marginRightMobile : undefined,
 			[`mb_m__${marginBottomMobile}`] : marginBottomMobile? marginBottomMobile : undefined,
+			[`ml_m__${marginLeftMobile}`] : marginLeftMobile ? marginLeftMobile : undefined,
 			'mt_d__0': marginTopDesktop === 0,
-			'mt_t__0': marginTopTablet === 0,
-			'mt_m__0': marginTopMobile === 0,
+			'mr_d__0': marginRightDesktop === 0,
+			'ml_d__0': marginLeftDesktop === 0,
 			'mb_d__0': marginBottomDesktop === 0,
+			'mt_t__0': marginTopTablet === 0,
+			'mr_t__0': marginRightTablet === 0,
+			'ml_t__0': marginLeftTablet === 0,
 			'mb_t__0': marginBottomTablet === 0,
+			'mt_m__0': marginTopMobile === 0,
+			'mr_m__0': marginRightMobile === 0,
+			'ml_m__0': marginLeftMobile === 0,
 			'mb_m__0': marginBottomMobile === 0,
 		});
 

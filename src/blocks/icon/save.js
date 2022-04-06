@@ -23,15 +23,28 @@ export default function save({ attributes }) {
 		alignment,
 	} = attributes;
 
-	const iconClasses = classnames(classnames, iconSize, alignment, {});
+	const iconClasses = classnames(classnames, iconType, iconSize, alignment, {});
 
 	const blockProps = useBlockProps.save( {
 		className: iconClasses,
 	} );
 
+	const icon = (iconType === 'quote') ? (icons.quote)
+	: (iconType === 'attachment') ? (icons.attachment)
+	: (iconType === 'baggage') ? (icons.baggage)
+	: (iconType === 'bookmark') ? (icons.bookmark)
+	: (iconType === 'calendar') ? (icons.calendar)
+	: (iconType === 'clock') ? (icons.clock)
+	: (iconType === 'flash') ? (icons.flash)
+	: (iconType === 'heart') ? (icons.heart)
+	: (iconType === 'pin') ? (icons.pin)
+	: (iconType === 'trophy') ? (icons.trophy)
+	: (iconType === 'view') ? (icons.view)
+	: (icons.attachment);
+
 	return (
 		<div { ...blockProps }>
-			{icons.quote}
+			{icon}
 		</div>
 	);
 }

@@ -34,39 +34,16 @@
 	}
 
 	.wp-block-ainoblocks-multiple-buttons__inner {
-		display: block;
-
-		@media (min-width: 48em) {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: flex-start;
-			align-items: center;
-		}
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
 
 		&.stretch {
 			width: 100% !important;
 
 			.wp-block-ainoblocks-button {
 				width: 100% !important;
-			}
-		}
-
-		.wp-block-ainoblocks-button {
-
-			&:not(:last-child) {
-				margin-bottom: 16px;
-			}
-
-			@media (min-width: 48em) {
-				margin-left: 16px;
-
-				&:not(:last-child) {
-					margin-bottom: 0;
-				}
-
-				&:first-of-type {
-					margin-left: 0;
-				}
 			}
 		}
 	}

@@ -6,22 +6,19 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-const { __, _x } = wp.i18n;
-const { Fragment, useCallback, useState } = wp.element;
-const { compose, withInstanceId } = wp.compose;
+const { __ } = wp.i18n;
+const { Fragment, useState } = wp.element;
 const {
 	InspectorControls,
 	InnerBlocks,
 	useBlockProps,
-	BlockControls,
-	RichText,
 } = wp.blockEditor;
 const {
 	PanelBody,
-	TextControl,
 	SelectControl,
 	RangeControl,
 	TabPanel,
+	ToggleControl,
 } = wp.components;
 
 /**
@@ -32,6 +29,7 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 	const {
 		flexOrder,
 		flexGrow,
+		flexShrink,
 		flexBasis,
 		alignSelfDesktop,
 		alignSelfTablet,
@@ -77,6 +75,7 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 		order: flexOrder ? flexOrder : undefined,
 		flexGrow: flexGrow ? flexGrow : undefined,
 		flexBasis: flexBasis ? flexBasis + 'px' : undefined,
+		flexShrink: flexShrink ? "0" : undefined,
 	};
 
 	const blockProps = useBlockProps( {
@@ -94,8 +93,13 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 						onChange={(flexOrder) => setAttributes({ flexOrder })}
 						min={0}
 						max={100}
-						initialPosition={0}
-						allowReset={true}
+					/>
+					<RangeControl
+						label={__('Flex Basis (in pixels)', 'ainoblocks')}
+						value={flexBasis}
+						onChange={(flexBasis) => setAttributes({ flexBasis })}
+						min={0}
+						max={1800}
 					/>
 					<RangeControl
 						label={__('Flex Grow', 'ainoblocks')}
@@ -103,17 +107,12 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 						onChange={(flexGrow) => setAttributes({ flexGrow })}
 						min={0}
 						max={100}
-						initialPosition={0}
-						allowReset={true}
 					/>
-					<RangeControl
-						label={__('Flex Basis (in pixels)', 'ainoblocks')}
-						value={flexBasis}
-						onChange={(flexBasis) => setAttributes({ flexBasis })}
-						min={0}
-						max={1440}
-						initialPosition={0}
-						allowReset={true}
+					<ToggleControl
+						label={__('Flex Shrink', 'ainoblocks')}
+						checked={!!flexShrink}
+						onChange={() => setAttributes({ flexShrink: !flexShrink })}
+						help={!!flexShrink ? __('Icon is set to zero.', 'ainoblocks') : __('Toggle to set flex shrink to zero.', 'ainoblocks')}
 					/>
 				</PanelBody>
 				<PanelBody title={__('Item Alignment', 'ainoblocks')}>

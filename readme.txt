@@ -4,7 +4,7 @@ Plugin URI: https://ainoblocks.io
 Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks
 Requires at least: 5.5
-Tested up to: 5.9
+Tested up to: 5.9.3
 Stable tag: 1.9
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
@@ -53,11 +53,15 @@ Yes, you can find the first patterns inside the pattern library once you install
 
 = 1.9.0 =
 
-Release date: February 20th, 2022
+Release date: April 6th, 2022
 
-Enhance: Testimonial block.
+New: Icon block (sinple first version, block will be improved in future updates).
 New: Profile Image block (Author block child).
-New: Icon block (simple first version inside Testimonial block).
+New: Grid Item block responsive margins left and right.
+Enhance: Testimonial block.
+Enhance: Flexbox Item block.
+Enhance: Grid Item block color settings.
+Enhance: Author block.
 
 = 1.8.2 =
 Enhance: Badge block.

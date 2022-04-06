@@ -34,7 +34,9 @@ const enableBorderRadiusControlOnBlocks = [
 	'core/preformatted',
 	'core/group',
 	'ainoblocks/card',
+	'ainoblocks/grid-item',
 	'ainoblocks/flexbox',
+	'ainoblocks/timeline-event-block',
 ];
 
 /**
@@ -113,7 +115,8 @@ function borderRadiusInspectorControls(BlockEdit) {
 				{ value: "xl", label   : __('XL', 'ainoblocks') },
 				{ value: "xxl", label   : __('XXL', 'ainoblocks') },
 				{ value: "xxxl", label   : __('3XL', 'ainoblocks') },
-				{ value: "xxxxl", label   : __('4XL', 'ainoblocks') }
+				{ value: "xxxxl", label   : __('4XL', 'ainoblocks') },
+				{ value: "rounded-full", label   : __('rounded full', 'ainoblocks') }
 			];
 
 			return (
@@ -121,7 +124,7 @@ function borderRadiusInspectorControls(BlockEdit) {
 					<BlockEdit {...props} />
 					<InspectorControls>
 						<PanelBody
-							title={__('Responsive Border Radius', 'ainoblocks')}
+							title={__('Border Radius', 'ainoblocks')}
 							initialOpen={false}
 						>
 							<SelectControl
