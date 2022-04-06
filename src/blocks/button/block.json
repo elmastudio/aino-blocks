@@ -65,13 +65,23 @@
 	},
 	"supports": {
 		"color": {
-			"gradients": true
+			"gradients": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
 		},
 		"__experimentalBorder": {
 			"color": true,
-			"radius": false,
 			"style": true,
-			"width": true
+			"radius": false,
+			"width": false
+		},
+		"spacing": {
+			"margin": true,
+			"__experimentalDefaultControls": {
+				"margin": true
+			}
 		}
 	}
 }

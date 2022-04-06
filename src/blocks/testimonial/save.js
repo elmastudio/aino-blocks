@@ -6,15 +6,18 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-const { __ } = wp.i18n;
 const {
 	InnerBlocks,
 	useBlockProps,
-} = wp.editor;
+} = wp.blockEditor;
 
-export default function save( {} ) {
+export default function save( { attributes } ) {
 
-	const testimonialClasses = classnames(classnames, {});
+	const {
+		style,
+	} = attributes;
+
+	const testimonialClasses = classnames(classnames, style, {});
 
 	const blockProps = useBlockProps.save( {
 		className: testimonialClasses,

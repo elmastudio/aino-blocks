@@ -6,10 +6,8 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-const { __, _x } = wp.i18n;
-const { addFilter } = wp.hooks;
-const { Fragment, Component } = wp.element;
-const { compose, withInstanceId, createHigherOrderComponent, } = wp.compose;
+const { __ } = wp.i18n;
+const { Fragment } = wp.element;
 const {
 	InspectorControls,
 	InnerBlocks,
@@ -18,8 +16,6 @@ const {
 const {
 	PanelBody,
 	SelectControl,
-	RangeControl,
-	ToggleControl,
 	TabPanel,
 } = wp.components;
 
@@ -214,7 +210,7 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 			<InspectorControls>
 				<PanelBody 
 					title={__('Flexbox settings', 'ainoblocks')}
-					initialOpen={false}
+					initialOpen={true}
 				>
 				<p><em>{ __( 'Use Preview for Desktop, Tablet and Mobile view.', 'ainoblocks' ) }</em></p>
 				<TabPanel className="aino-device-panel"

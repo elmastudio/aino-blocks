@@ -11,7 +11,7 @@
 function ainoblocks_enqueue_block_editor_assets() {
 
 	$block_path = '/dist/js/editor.blocks.build.js';
-	$style_path = '/dist/css/blocks.editor.build.css';
+	$style_path = '/dist/blocks.editor.build.css';
 
 	// Enqueue the bundled block JS file.
 	wp_enqueue_script(
@@ -37,7 +37,8 @@ add_action( 'enqueue_block_editor_assets', 'ainoblocks_enqueue_block_editor_asse
  * Enqueue front end and editor JavaScript and CSS assets.
  */
 function ainoblocks_enqueue_assets() {
-	$style_path = '/dist/css/blocks.style.build.css';
+	$style_path = '/dist/blocks.style.build.css';
+
 	wp_enqueue_style(
 		'ainoblocks',
 		AINOBLOCKS_PLUGIN_URL . $style_path,

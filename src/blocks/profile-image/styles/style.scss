@@ -1,0 +1,10 @@
+.wp-block-ainoblocks-profile-image {
+
+	&.img-l {
+		max-width: 6rem;
+
+		@media (min-width: 64em) {
+			max-width: 100%;
+		}
+	}
+}

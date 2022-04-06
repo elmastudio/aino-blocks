@@ -1,0 +1,40 @@
+{	
+	"apiVersion": 2,
+	"name": "ainoblocks/icon",
+	"title": "Icon",
+	"category": "design",
+	"description": "An icon block.",
+	"keywords": [ "ainoblocks", "icon", "svg", "image"],
+	"attributes": {
+		"iconType": {
+			"type": "string"
+		},
+		"iconSize": {
+			"type": "string"
+		},
+		"alignment": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"color": {
+			"gradients": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"spacing": {
+			"padding": true,
+			"__experimentalDefaultControls": {
+				"padding": true
+			}
+		},
+		"__experimentalBorder": {
+			"radius": true,
+			"__experimentalDefaultControls": {
+				"radius": true
+			}
+		}
+	}
+}

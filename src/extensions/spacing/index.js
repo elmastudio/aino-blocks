@@ -2,12 +2,12 @@
  * External dependencies
  */
 import classnames from 'classnames';
-import get from 'lodash/get';
 
 /**
  * Internal Dependencies
  */
 import './styles/style.scss';
+import './styles/editor.scss';
 
 /**
  * WordPress Dependencies
@@ -39,14 +39,14 @@ const enableSpacingControlOnBlocks = [
 	'core/list',
 	'core/spacer',
 	'ainoblocks/multiple-buttons',
-	'ainoblocks/arrow-button',
-	'ainoblocks/featured-content',
 	'ainoblocks/divider',
 	'ainoblocks/grid-container',
 	'ainoblocks/grid-item',
 	'ainoblocks/flexbox',
 	'ainoblocks/flex-item',
-	'ainoblocks/badge',
+	'ainoblocks/testimonial',
+	'ainoblocks/timeline-block',
+	'ainoblocks/timeline-event-block',
 ];
 
 /**
@@ -116,8 +116,8 @@ function spacingInspectorControls(BlockEdit) {
 					<BlockEdit {...props} />
 					<InspectorControls>
 						<PanelBody
-							title={__('Aino Spacing', 'ainoblocks')}
-							initialOpen={false}
+							title={__('Spacing', 'ainoblocks')}
+							initialOpen={true}
 						>
 							<RangeControl
 								label={__('Padding Top', 'ainoblocks')}

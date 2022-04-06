@@ -19,21 +19,33 @@
 		"borderColor": {
 			"type": "string"
 		},
-		"iconColor": {
-			"type": "string"
-		},
 		"alignment": {
 			"type": "string"
 		},
 		"borderRadius": {
 			"type": "number"
+		}
+	},
+	"supports": {
+		"color": {
+			"gradients": true,
+			"text": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
 		},
-		"gradient": {
-			"type": "string"
-		},
-		"icon": {
-			"type": "boolean",
-			"default": false
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
 		}
 	}
 }

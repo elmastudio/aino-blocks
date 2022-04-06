@@ -1,0 +1,438 @@
+/* Responsive Spacing Mixins */
+@mixin s-r-1($property) {
+	#{$property}: 0;
+}
+
+@mixin s-r-2($property) {
+	#{$property}: clamp(0.125rem, 0.0746rem + 0.2193vw, 0.25rem);
+}
+
+@mixin s-r-3($property) {
+	#{$property}: clamp(0.25rem, 0.1491rem + 0.4386vw, 0.5rem);
+}
+
+@mixin s-r-4($property) {
+	#{$property}: clamp(0.375rem, 0.2237rem + 0.6579vw, 0.75rem);
+}
+
+@mixin s-r-5($property) {
+	#{$property}: clamp(0.5rem, 0.2982rem + 0.8772vw, 1rem);
+}
+
+@mixin s-r-6($property) {
+	#{$property}: clamp(1rem, 0.9167rem + 0.4167vw, 1.25rem);
+}
+
+@mixin s-r-7($property) {
+	#{$property}: clamp(1rem, 0.7982rem + 0.8772vw, 1.5rem);
+}
+
+@mixin s-r-8($property) {
+	#{$property}: clamp(1rem, 0.5965rem + 1.7544vw, 2rem);
+}
+
+@mixin s-r-9($property) {
+	#{$property}: clamp(1.25rem, 0.7456rem + 2.193vw, 2.5rem);
+}
+
+@mixin s-r-10($property) {
+	#{$property}: clamp(1.5rem, 0.8947rem + 2.6316vw, 3rem);
+}
+
+@mixin s-r-11($property) {
+	#{$property}: clamp(2rem, 1.193rem + 3.5088vw, 4rem);
+}
+
+@mixin s-r-12($property) {
+	#{$property}: clamp(2.5rem, 1.4912rem + 4.386vw, 5rem);
+}
+
+@mixin s-r-13($property) {
+	#{$property}: clamp(3rem, 1.7895rem + 5.2632vw, 6rem);
+}
+
+@mixin s-r-14($property) {
+	#{$property}: clamp(4rem, 2.5877rem + 6.1404vw, 7.5rem);
+}
+
+@mixin s-r-15($property) {
+	#{$property}: clamp(5rem, 3.386rem + 7.0175vw, 9rem);
+}
+
+@mixin s-r-16($property) {
+	#{$property}: clamp(6rem, 3.9825rem + 8.7719vw, 11rem);
+}
+
+@mixin s-r-17($property) {
+	#{$property}: clamp(7.5rem, 5.2807rem + 9.6491vw, 13rem);
+}
+
+@mixin s-r-18($property) {
+	#{$property}: clamp(9rem, 6.3772rem + 11.4035vw, 15.5rem);
+}
+
+@mixin s-r-19($property) {
+	#{$property}: clamp(11rem, 8.1754rem + 12.2807vw, 18rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6,
+.single .post-content h1,
+.single .post-content h2,
+.single .post-content h3,
+.single .post-content h4,
+.single .post-content h5,
+.single .post-content h6,
+p,
+ul,
+.single .post-content p,
+.wp-block-paragraph,
+.single .wp-block-ainoblocks-card p,
+.page-template-default .wp-block-ainoblocks-card p
+.single .post-content ul,
+.single .post-content ol,
+.wp-block-group,
+.wp-block-group.has-background,
+*[class*="wp-container-"].wp-block-group.alignfull.has-background,
+.wp-block-columns,
+.wp-block-cover,
+.wp-block-gallery,
+.wp-block-image,
+.wp-block-quote,
+.wp-block-ainoblocks-arrow-button,
+.wp-block-ainoblocks-multiple-buttons,
+.wp-block-ainoblocks-card,
+.wp-block-ainoblocks-divider,
+.wp-block-ainoblocks-grid-container,
+.wp-block-ainoblocks-grid-item,
+.wp-block-ainoblocks-flexbox,
+.wp-block-ainoblocks-flex-item,
+.wp-block-ainoblocks-badge,
+.wp-block-ainoblocks-testimonial,
+.wp-block-ainoblocks-timeline-block,
+.wp-block-ainoblocks-timeline-event-block {
+
+	&.pt {
+		
+		&__1 {
+			@include s-r-1(padding-top);
+		}
+
+		&__2 {
+			@include s-r-2(padding-top);
+		}
+
+		&__3 {
+			@include s-r-3(padding-top);
+		}
+
+		&__4 {
+			@include s-r-4(padding-top);
+		}
+
+		&__5 {
+			@include s-r-5(padding-top);
+		}
+
+		&__6 {
+			@include s-r-6(padding-top);
+		}
+
+		&__7 {
+			@include s-r-7(padding-top);
+		}
+
+		&__8 {
+			@include s-r-8(padding-top);
+		}
+
+		&__9 {
+			@include s-r-9(padding-top);
+		}
+
+		&__10 {
+			@include s-r-10(padding-top);
+		}
+
+		&__11 {
+			@include s-r-11(padding-top);
+		}
+
+		&__12 {
+			@include s-r-12(padding-top);
+		}
+
+		&__13 {
+			@include s-r-13(padding-top);
+		}
+
+		&__14 {
+			@include s-r-14(padding-top);
+		}
+
+		&__15 {
+			@include s-r-15(padding-top);
+		}
+
+		&__16 {
+			@include s-r-16(padding-top);
+		}
+
+		&__17 {
+			@include s-r-17(padding-top);
+		}
+
+		&__18 {
+			@include s-r-18(padding-top);
+		}
+
+		&__19 {
+			@include s-r-19(padding-top);
+		}
+	}
+
+	&.pb {
+
+		&__1 {
+			@include s-r-1(padding-bottom);
+		}
+		
+		&__2 {
+			@include s-r-2(padding-bottom);
+		}
+		
+		&__3 {
+			@include s-r-3(padding-bottom);
+		}
+		
+		&__4 {
+			@include s-r-4(padding-bottom);
+		}
+		
+		&__5 {
+			@include s-r-5(padding-bottom);
+		}
+		
+		&__6 {
+			@include s-r-6(padding-bottom);
+		}
+		
+		&__7 {
+			@include s-r-7(padding-bottom);
+		}
+		
+		&__8 {
+			@include s-r-8(padding-bottom);
+		}
+		
+		&__9 {
+			@include s-r-9(padding-bottom);
+		}
+		
+		&__10 {
+			@include s-r-10(padding-bottom);
+		}
+		
+		&__11 {
+			@include s-r-11(padding-bottom);
+		}
+		
+		&__12 {
+			@include s-r-12(padding-bottom);
+		}
+		
+		&__13 {
+			@include s-r-13(padding-bottom);
+		}
+		
+		&__14 {
+			@include s-r-14(padding-bottom);
+		}
+		
+		&__15 {
+			@include s-r-15(padding-bottom);
+		}
+		
+		&__16 {
+			@include s-r-16(padding-bottom);
+		}
+		
+		&__17 {
+			@include s-r-17(padding-bottom);
+		}
+		
+		&__18 {
+			@include s-r-18(padding-bottom);
+		}
+		
+		&__19 {
+			@include s-r-19(padding-bottom);
+		}
+	}
+
+	&.pl {
+		&__1 {
+			@include s-r-1(padding-left);
+		}
+		
+		&__2 {
+			@include s-r-2(padding-left);
+		}
+		
+		&__3 {
+			@include s-r-3(padding-left);
+		}
+		
+		&__4 {
+			@include s-r-4(padding-left);
+		}
+		
+		&__5 {
+			@include s-r-5(padding-left);
+		}
+		
+		&__6 {
+			@include s-r-6(padding-left);
+		}
+		
+		&__7 {
+			@include s-r-7(padding-left);
+		}
+		
+		&__8 {
+			@include s-r-8(padding-left);
+		}
+		
+		&__9 {
+			@include s-r-9(padding-left);
+		}
+		
+		&__10 {
+			@include s-r-10(padding-left);
+		}
+		
+		&__11 {
+			@include s-r-11(padding-left);
+		}
+		
+		&__12 {
+			@include s-r-12(padding-left);
+		}
+		
+		&__13 {
+			@include s-r-13(padding-left);
+		}
+		
+		&__14 {
+			@include s-r-14(padding-left);
+		}
+		
+		&__15 {
+			@include s-r-15(padding-left);
+		}
+		
+		&__16 {
+			@include s-r-16(padding-left);
+		}
+		
+		&__17 {
+			@include s-r-17(padding-left);
+		}
+		
+		&__18 {
+			@include s-r-18(padding-left);
+		}
+		
+		&__19 {
+			@include s-r-19(padding-left);
+		}
+	}
+
+	&.pr {
+		&__1 {
+			@include s-r-1(padding-right);
+		}
+		
+		&__2 {
+			@include s-r-2(padding-right);
+		}
+		
+		&__3 {
+			@include s-r-3(padding-right);
+		}
+		
+		&__4 {
+			@include s-r-4(padding-right);
+		}
+		
+		&__5 {
+			@include s-r-5(padding-right);
+		}
+		
+		&__6 {
+			@include s-r-6(padding-right);
+		}
+		
+		&__7 {
+			@include s-r-7(padding-right);
+		}
+		
+		&__8 {
+			@include s-r-8(padding-right);
+		}
+		
+		&__9 {
+			@include s-r-9(padding-right);
+		}
+		
+		&__10 {
+			@include s-r-10(padding-right);
+		}
+		
+		&__11 {
+			@include s-r-11(padding-right);
+		}
+		
+		&__12 {
+			@include s-r-12(padding-right);
+		}
+		
+		&__13 {
+			@include s-r-13(padding-right);
+		}
+		
+		&__14 {
+			@include s-r-14(padding-right);
+		}
+		
+		&__15 {
+			@include s-r-15(padding-right);
+		}
+		
+		&__16 {
+			@include s-r-16(padding-right);
+		}
+		
+		&__17 {
+			@include s-r-17(padding-right);
+		}
+		
+		&__18 {
+			@include s-r-18(padding-right);
+		}
+		
+		&__19 {
+			@include s-r-19(padding-right);
+		}
+	}
+}

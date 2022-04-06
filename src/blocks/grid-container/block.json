@@ -24,6 +24,10 @@
 	"supports": {
 		"align": ["wide", "full"],
 		"anchor": true,
-		"html": true
+		"html": true,
+		"color": {
+			"gradients": true,
+			"text": false
+		}
 	}
 }

@@ -6,12 +6,10 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-const { __, _x } = wp.i18n;
+const { __ } = wp.i18n;
 const { Fragment } = wp.element;
-const { compose, withInstanceId } = wp.compose;
 const {
 	InspectorControls,
-	PanelColorSettings,
 	InnerBlocks,
 	useBlockProps,
 } = wp.blockEditor;
@@ -28,8 +26,6 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 
 	const {
 		align,
-		backgroundColor,
-		borderRadius,
 		shadowName,
 		paddingTop,
 		paddingBottom,
@@ -39,7 +35,6 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 		borderRightWidth,
 		borderBottomWidth,
 		borderLeftWidth,
-		borderWidth,
 	} = attributes;
 
 	const shadowNameOptions = [
@@ -47,10 +42,6 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 		{ value: "shadow-a", label   : __('small', 'ainoblocks') },
 		{ value: "shadow-b", label   : __('large', 'ainoblocks') }
 	];
-
-	const MIN_BORDER_RADIUS_VALUE = 0;
-	const MAX_BORDER_RADIUS_VALUE = 50;
-	const INITIAL_BORDER_RADIUS_POSITION = 0;
 
 	const cardClasses = classnames(className, shadowName, align, {
 		[`pt__${paddingTop}`]: paddingTop,
@@ -62,7 +53,6 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 	const blockProps = useBlockProps( {
 		className: cardClasses,
 		style: {
-			borderRadius: borderRadius ? borderRadius + 'px' : undefined,
 			borderTopWidth: borderTopWidth ? borderTopWidth + 'px' : undefined,
 			borderRightWidth: borderRightWidth ? borderRightWidth + 'px' : undefined,
 			borderBottomWidth: borderBottomWidth ? borderBottomWidth + 'px' : undefined,
@@ -123,25 +113,16 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 						allowReset={true}
 						onChange={borderLeftWidth => setAttributes({ borderLeftWidth })}
 					/>
-					<RangeControl
-						label={__('Border Radius', 'ainoblocks')}
-						value={borderRadius}
-						min={MIN_BORDER_RADIUS_VALUE}
-						max={MAX_BORDER_RADIUS_VALUE}
-						initialPosition={INITIAL_BORDER_RADIUS_POSITION}
-						allowReset
-						onChange={borderRadius => setAttributes({ borderRadius })}
-					/>
 				</PanelBody>
 				<PanelBody
 					title={__('Responsive Spacing', 'ainoblocks')}
-					initialOpen={true}
+					initialOpen={false}
 				>
 					<RangeControl
 						label={__('Padding Top', 'ainoblocks')}
 						value={paddingTop}
 						onChange={(paddingTop) => setAttributes({ paddingTop })}
-						initialPosition={7}
+						initialPosition={0}
 						min={0}
 						max={19}
 						allowReset={true}

@@ -3,9 +3,13 @@
 	filter: none !important;
 }
 
-.wp-block-ainoblocks-flexbox,
-.wp-block-ainoblocks-flexbox .block-editor-block-list__layout {
+.wp-block-ainoblocks-flexbox .block-editor-inner-blocks .block-editor-block-list__layout {
 	display: flex;
+	position: relative;
+
+	.block-editor-inner-blocks .block-editor-block-list__layout {
+		display: block;
+	}
 
 	&.direction__row__m {
 

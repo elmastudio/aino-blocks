@@ -32,11 +32,11 @@ export default function save( { attributes } ) {
 
 	const styleButton = {
 		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
-		borderWidth: borderWidth ? borderWidth + 'px' : undefined,
 	};
 
 	const styleBg = {
 		borderRadius: borderRadius ? borderRadius + 'px' : undefined,
+		borderWidth: borderWidth ? borderWidth + 'px' : undefined,
 	};
 
 	const wrapperClasses = classnames(classnames, {
