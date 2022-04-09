@@ -10,6 +10,7 @@
 		"anchor": true,
 		"color": {
 			"text": false,
+			"gradients": true,
 			"background": true
 		},
 		"__experimentalBorder": {
