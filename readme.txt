@@ -5,7 +5,7 @@ Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks
 Requires at least: 5.5
 Tested up to: 5.9.3
-Stable tag: 1.9
+Stable tag: 1.9.1
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,12 @@ After the Aino blocks plugin is installed, you will see the Aino blocks collecti
 Yes, you can find the first patterns inside the pattern library once you install the Aino theme.
 
 == Changelog ==
+
+= 1.9.1 =
+
+Release date: 2022
+
+New: Gradient background for Flexbox Item block.
 
 = 1.9.0 =
 
