@@ -11,6 +11,10 @@
 		display: block;
 	}
 
+	.wp-block-ainoblocks-flexbox .block-editor-inner-blocks .block-editor-block-list__layout {
+		display: flex;
+	}
+
 	&.direction__row__m {
 
 		.block-editor-block-list__layout {
