@@ -47,6 +47,10 @@
 		}
 	}
 
+	&.is-style-raised.variant {
+		box-shadow: -4px 4px 0px 0 var(--wp--preset--color--variant-button-color-primary);
+	}
+
 	.wp-block-ainoblocks-button__link {
 		border: none;
 		border-radius: 0;
