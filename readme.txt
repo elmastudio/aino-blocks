@@ -53,9 +53,10 @@ Yes, you can find the first patterns inside the pattern library once you install
 
 = 1.9.1 =
 
-Release date: 2022
+Release date: April 25th 2022
 
-New: Gradient background for Flexbox Item block.
+Enhance: Gradient background for Flexbox Item block.
+Bugfix: Flexbox issue in header in editor view.
 
 = 1.9.0 =
 
