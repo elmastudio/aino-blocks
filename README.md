@@ -31,6 +31,10 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+### 1.9.1  
+Enhance: Gradient background for Flexbox Item block.  
+Bugfix: Flexbox issue in header in editor view.  
+
 ### 1.9.0  
 New: Icon block (sinple first version, block will be improved in future updates).  
 New: Profile Image block (Author block child).  
