@@ -237,3 +237,68 @@
 		}
 	}
 }
+
+.wp-block-post-featured-image {
+
+		&.br-all {
+			
+			&__xxs {
+				img {
+					@include br-xxs(border-radius);
+				}
+			}
+			
+			&__xs {
+				img {
+					@include br-xs(border-radius);
+				}
+			}
+			&__s {
+				img {
+					@include br-s(border-radius);
+				}
+			}
+			
+			&__m {
+				img {
+					@include br-m(border-radius);
+				}
+			}
+			
+			&__l {
+				img {
+					@include br-l(border-radius);
+				}
+			}
+			
+			&__xl {
+				img {
+					@include br-xl(border-radius);
+				}
+			}
+			
+			&__xxl {
+				img {
+					@include br-xxl(border-radius);
+				}
+			}
+			
+			&__xxxl {
+				img {
+					@include br-xxxl(border-radius);
+				}
+			}
+			
+			&__xxxxl {
+				img {
+					@include br-xxxxl(border-radius);
+				}
+			}
+	
+			&__rounded-full {
+				img {
+					border-radius: 9999px;
+				}
+			}
+		}
+}

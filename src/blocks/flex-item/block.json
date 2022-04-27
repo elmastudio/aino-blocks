@@ -9,8 +9,11 @@
 	"supports": {
 		"anchor": true,
 		"color": {
+			"gradients": true,
 			"text": false,
-			"background": true
+			"__experimentalDefaultControls": {
+				"background": true
+			}
 		},
 		"__experimentalBorder": {
 			"radius": true

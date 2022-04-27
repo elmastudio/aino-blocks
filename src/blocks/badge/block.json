@@ -24,6 +24,9 @@
 		},
 		"borderRadius": {
 			"type": "number"
+		},
+		"fontSize": {
+			"type": "string"
 		}
 	},
 	"supports": {
@@ -45,6 +48,12 @@
 				"radius": true,
 				"style": true,
 				"width": true
+			}
+		},
+		"typography": {
+			"fontSize": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
 			}
 		}
 	}
