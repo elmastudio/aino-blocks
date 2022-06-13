@@ -1,53 +1,53 @@
-=== Aino Blocks ===
+=== AinoBlocks - Essential Gutenberg Blocks Collection ===
 Author URI: https://www.elmastudio.de/en
 Plugin URI: https://ainoblocks.io
 Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks
 Requires at least: 5.5
-Tested up to: 5.9.3
-Stable tag: 1.9.1
+Tested up to: 6.0
+Stable tag: 1.9.2
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
-A block collection to build creative WordPress websites in the Gutenberg editor.
+A collection of essential blocks to build professional WordPress websites.
 
 == Description ==
 
-The Aino blocks plugin brings you a collection of blocks for the Gutenberg block editor. With Aino blocks and the free <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino theme</a> you can build creative, individual page layouts with ease.
+The AinoBlocks Block Collection plugin brings you a collection of essential blocks for the Gutenberg block editor. With AinoBlocks and the free starter block theme <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino</a> you can create professional websites with ease.
 
 ## Currently available blocks
+* Grid block and Grid item blocks
+* Flexbox block and Flex item blocks
 * Author block
 * Badge block
 * Buttons block
 * Icon Button block
 * Card block
 * Divider block
-* Grid block and Grid item blocks
-* Flexbox block and Flex item blocks
 * Hero block
 * Sticker block
 * Testimonial block
 
 == Installation ==
 
-1. Install the Aino Blocks plugin either via the WordPress plugin directory or by uploading the files to your server at wp-content/plugins.
+1. Install the AinoBlocks Block Collection plugin either via the WordPress plugin directory or by uploading the files to your server at wp-content/plugins.
 2. Activate the Aino Blocks WordPress plugin through the 'Plugins' menu in WordPress.
 3. Use the Aino Blocks blocks on your next page or post.
 
 == Frequently Asked Questions ==
 
-= What are the requirements to use the Aino Blocks plugin? =
+= What are the requirements to use the AinoBlocks Block Collection plugin? =
 
 You only need to have the latest version of WordPress on your website, to begin with. We also recommend installing and activating the Gutenberg plugin.
 
 = What WordPress themes work with Aino blocks? =
-Any Gutenberg-ready WordPress theme will work with Aino blocks. Since we created the free [Aino theme](https://wordpress.org/themes/aino/) specifically to work in combination with the Aino blocks we recommend you to use our Aino theme with Aino blocks.
+Any Gutenberg-ready WordPress theme will work with Aino blocks. Since we created the free [Aino theme](https://wordpress.org/themes/aino/) specifically to work in combination with our block collection we recommend you to use our Aino theme with AinoBlocks.
 
-= How do I get started using Aino blocks? =
-After the Aino blocks plugin is installed, you will see the Aino blocks collection in your Blocks library on any page and post. You can now choose a block and insert it into your editor.
+= How do I get started using AinoBlocks? =
+After the AinoBlocks plugin is installed, you will see the Aino blocks collection in your Blocks library on any page and post. You can now choose a block and insert it into your editor.
 
-= Does Aino come with Block patterns? =
-Yes, you can find the first patterns inside the pattern library once you install the Aino theme.
+= Does Aino come with patterns? =
+Yes, you can find the patterns inside the pattern library once you install the Aino theme.
 
 == Changelog ==
 

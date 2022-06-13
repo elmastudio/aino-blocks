@@ -1,9 +1,9 @@
 {
 	"name": "ainoblocks",
-	"title": "Aino Blocks",
-	"description": "A block collection to build creative WordPress websites in the Gutenberg editor.",
-	"version": "1.9.1",
-	"tested_up_to": "5.9.3",
+	"title": "AinoBlocks - Essential Gutenberg Blocks Collection",
+	"description": "A collection of essential blocks to build professional WordPress websites.",
+	"version": "1.9.2",
+	"tested_up_to": "6.0",
 	"license": "GPL-2.0",
 	"author": "Elmastudio",
 	"repository": "elmastudio/aino-blocks",

@@ -1,12 +1,12 @@
 <?php
  /**
- * Plugin Name:       AinoBlocks - Block Collection
+ * Plugin Name:       AinoBlocks - Essential Gutenberg Blocks Collection
  * Plugin URI:        https://ainoblocks.io/
- * Description:       A collection of blocks to help you build professional WordPress websites. Let's start to build websites that stand out from the crowd.
+ * Description:       A collection of essential blocks to build professional WordPress websites.
  * Requires at least: 5.9
- * Tested up to:      5.9.3
+ * Tested up to:      6.0
  * Requires PHP:      7.0
- * Version:           1.9.1
+ * Version:           1.9.2
  * Author:            Elma Studio
  * Author URI:        https://elmastudio.de/en/
  * License:           GPL-2.0-or-later
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define most essential constants.
-define( 'AINOBLOCKS_VERSION', '1.9.1' );
+define( 'AINOBLOCKS_VERSION', '1.9.2' );
 define( 'AINOBLOCKS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'AINOBLOCKS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
