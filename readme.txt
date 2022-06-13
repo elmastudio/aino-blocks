@@ -13,7 +13,7 @@ A collection of essential blocks to build professional WordPress websites.
 
 == Description ==
 
-The AinoBlocks Block Collection plugin brings you a collection of essential blocks for the Gutenberg block editor. With AinoBlocks and the free starter block theme <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino</a> you can create professional websites with ease.
+The AinoBlocks Block Collection plugin brings you a collection of essential blocks for the Gutenberg block editor. With AinoBlocks and the free starter FSE block theme <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino</a> you can create professional websites with ease.
 
 ## Currently available blocks
 * Grid block and Grid item blocks
@@ -41,10 +41,10 @@ The AinoBlocks Block Collection plugin brings you a collection of essential bloc
 You only need to have the latest version of WordPress on your website, to begin with. We also recommend installing and activating the Gutenberg plugin.
 
 = What WordPress themes work with Aino blocks? =
-Any Gutenberg-ready WordPress theme will work with Aino blocks. Since we created the free [Aino theme](https://wordpress.org/themes/aino/) specifically to work in combination with our block collection we recommend you to use our Aino theme with AinoBlocks.
+Any Gutenberg-ready WordPress theme will work with Aino blocks. Since we created the free FSE block [Aino theme](https://wordpress.org/themes/aino/) specifically to work in combination with our block collection we recommend you to use our Aino theme with AinoBlocks.
 
 = How do I get started using AinoBlocks? =
-After the AinoBlocks plugin is installed, you will see the Aino blocks collection in your Blocks library on any page and post. You can now choose a block and insert it into your editor.
+After the AinoBlocks plugin is installed, you will see the AinoBlocks Block collection in your Blocks library on any page and post. You can now choose a block and insert it into your editor.
 
 = Does Aino come with patterns? =
 Yes, you can find the patterns inside the pattern library once you install the Aino theme.
