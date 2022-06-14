@@ -116,7 +116,7 @@ function spacingInspectorControls(BlockEdit) {
 					<BlockEdit {...props} />
 					<InspectorControls>
 						<PanelBody
-							title={__('Spacing', 'ainoblocks')}
+							title={__('Responsive Spacing', 'ainoblocks')}
 							initialOpen={true}
 						>
 							<RangeControl
