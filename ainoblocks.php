@@ -16,15 +16,33 @@
  * @package           ainoblocks
  */
 
-// Exit if accessed directly.
+/**
+ * Exit if accessed directly.
+ */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Define most essential constants.
+/**
+ * Define most essential constants.
+ */
 define( 'AINOBLOCKS_VERSION', '1.9.2' );
 define( 'AINOBLOCKS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'AINOBLOCKS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
-// Enqueue JS and CSS.
+/**
+ * Enqueue JS and CSS.
+ */
 require_once AINOBLOCKS_PLUGIN_DIR . '/lib/enqueue-scripts.php';
+
+/**
+ * Add CTA link to plugin list
+ */
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'add_action_links' );
+
+function add_action_links ( $links ) {
+ $mylinks = array(
+ '<a href="https://ainoblocks.io/pricing/" target="_blank">Upgrade</a>',
+ );
+return array_merge( $links, $mylinks );
+}

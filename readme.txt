@@ -13,7 +13,7 @@ A collection of essential blocks to build professional WordPress websites.
 
 == Description ==
 
-The AinoBlocks Block Collection plugin brings you a collection of essential blocks for the Gutenberg block editor. With AinoBlocks and the free starter FSE block theme <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino</a> you can create professional websites with ease.
+The AinoBlocks Block Collection plugin brings you a collection of essential, minimal blocks for the Gutenberg block editor. With AinoBlocks and the free starter FSE block theme <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino</a> you can create professional websites with ease.
 
 ## Currently available blocks
 * Grid block and Grid item blocks
@@ -50,6 +50,14 @@ After the AinoBlocks plugin is installed, you will see the AinoBlocks Block coll
 Yes, you can find the patterns inside the pattern library once you install the Aino theme.
 
 == Changelog ==
+
+= 1.9.2 =
+
+Release date: June 14th 2022
+
+Enhance: Plugin name and description.
+Enhance: Extend grid gap sizes (l = 32px and xl = 48px).
+Enhance: Card shadows.
 
 = 1.9.1 =
 

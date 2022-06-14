@@ -112,6 +112,21 @@
 			column-gap: 1rem;
 
 			@media (min-width: 48rem) {
+				column-gap: 1.5rem;
+			}
+	
+			@media (min-width: 80rem) {
+				column-gap: 2rem;
+			}
+		}
+	}
+
+	&.col-gap-xl {
+
+		.block-editor-block-list__layout {
+			column-gap: 1rem;
+
+			@media (min-width: 48rem) {
 				column-gap: 2rem;
 			}
 	

@@ -2,7 +2,6 @@
  * External dependencies
  */
 import classnames from 'classnames';
-import get from 'lodash/get';
 
 /**
  * Internal Dependencies
@@ -107,7 +106,7 @@ function borderRadiusInspectorControls(BlockEdit) {
 
 			const borderRadiusOptions = [
 				{ value: "none", label: __('Not set', 'ainoblocks') },
-				{ value: "xxs", label   : __('SSX', 'ainoblocks') },
+				{ value: "xxs", label   : __('XXS', 'ainoblocks') },
 				{ value: "xs", label   : __('XS', 'ainoblocks') },
 				{ value: "s", label   : __('S', 'ainoblocks') },
 				{ value: "m", label   : __('M', 'ainoblocks') },
@@ -124,7 +123,7 @@ function borderRadiusInspectorControls(BlockEdit) {
 					<BlockEdit {...props} />
 					<InspectorControls>
 						<PanelBody
-							title={__('Border Radius', 'ainoblocks')}
+							title={__('Responsive Border Radius', 'ainoblocks')}
 							initialOpen={false}
 						>
 							<SelectControl

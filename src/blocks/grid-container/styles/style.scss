@@ -68,6 +68,25 @@
 	&.col-gap-l {
 
 		.wp-block-ainoblocks-grid-container__inner {
+			column-gap: 1rem;
+
+			@media (min-width: 48rem) {
+				column-gap: 1.25rem;
+			}
+
+			@media (min-width: 64rem) {
+				column-gap: 1.5rem;
+			}
+	
+			@media (min-width: 80rem) {
+				column-gap: 2rem;
+			}
+		}
+	}
+
+	&.col-gap-xl {
+
+		.wp-block-ainoblocks-grid-container__inner {
 			column-gap: 1.5rem;
 
 			@media (min-width: 48rem) {

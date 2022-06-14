@@ -6,16 +6,10 @@ import memoize from 'memize';
 import times from 'lodash/times';
 
 /**
- * Internal dependencies
- */
-import Inspector from './inspector';
-
-/**
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
 const {
-	Component,
 	Fragment
 } = wp.element;
 const {
@@ -48,7 +42,7 @@ const getCount = memoize((count) => {
  * Block edit function
  */
 
-export default function GridContainerEdit( { attributes, setAttributes, className, isSelected } ) {
+export default function GridContainerEdit( { attributes, setAttributes, className } ) {
 
 		const {
 			align,
@@ -58,9 +52,10 @@ export default function GridContainerEdit( { attributes, setAttributes, classNam
 
 		const columnGapOptions = [
 			{ value: "col-gap-none", label: __('none', 'ainoblocks') },
-			{ value: "col-gap-s", label  : __('small', 'ainoblocks') },
-			{ value: "col-gap-m", label  : __('medium', 'ainoblocks') },
-			{ value: "col-gap-l", label  : __('large', 'ainoblocks') }
+			{ value: "col-gap-s", label  : __('s', 'ainoblocks') },
+			{ value: "col-gap-m", label  : __('m', 'ainoblocks') },
+			{ value: "col-gap-l", label  : __('l', 'ainoblocks') },
+			{ value: "col-gap-xl", label  : __('xl', 'ainoblocks') }
 		];
 
 		const gridClasses = classnames(
