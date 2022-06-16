@@ -5,7 +5,6 @@ const { Path, SVG } = wp.components;
 
 export default 
 <SVG className="components-ainoblocks-svg" aria-hidden role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-<path fill="#ce99ff" d="M24 12c0 6.627-5.373 12-12 12s-12-5.373-12-12c0-6.627 5.373-12 12-12s12 5.373 12 12z"></path>
-<path fill="#ad55ff" d="M20 12c0 4.418-3.582 8-8 8s-8-3.582-8-8c0-4.418 3.582-8 8-8s8 3.582 8 8z"></path>
-<path fill="#6a00cc" d="M16 12c0 2.209-1.791 4-4 4s-4-1.791-4-4c0-2.209 1.791-4 4-4s4 1.791 4 4z"></path>
+<path fill="#ff763a" d="M17 12c0 2.761-2.239 5-5 5s-5-2.239-5-5c0-2.761 2.239-5 5-5s5 2.239 5 5z"></path>
+<path fill="#ff763a" d="M23.834 14c-0.952 5.675-5.888 10-11.834 10-6.627 0-12-5.373-12-12s5.373-12 12-12c5.946 0 10.882 4.325 11.834 10h-5.124c-0.861-2.891-3.539-5-6.71-5-3.866 0-7 3.134-7 7s3.134 7 7 7c3.171 0 5.85-2.109 6.71-5h5.124z"></path>
 </SVG >;

@@ -53,8 +53,9 @@ Yes, you can find the patterns inside the pattern library once you install the A
 
 = 1.9.2 =
 
-Release date: June 14th 2022
+Release date: June 16th 2022
 
+Enhance: Block icons.
 Enhance: Plugin name and description.
 Enhance: Extend grid gap sizes (l = 32px and xl = 48px).
 Enhance: Card shadows.

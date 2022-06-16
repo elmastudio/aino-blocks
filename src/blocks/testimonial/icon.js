@@ -1,11 +1,10 @@
 /**
  * WordPress dependencies
  */
-const { Path, SVG } = wp.components;
+const { SVG } = wp.components;
 
 export default 
 <SVG className="components-ainoblocks-svg" aria-hidden role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-<path fill="#e58cf4" d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12h24z"></path>
-<path fill="#d136ec" d="M20.75 12c0-4.832-3.918-8.75-8.75-8.75s-8.75 3.918-8.75 8.75h17.5z"></path>
-<path fill="#820e96" d="M20.75 12c0 2.551-1.092 4.847-2.833 6.446l-5.917 5.554v-3.25c-4.832 0-8.75-3.918-8.75-8.75h17.5z"></path>
+<path fill="#2bcecb" d="M24 12c0-3.183-1.264-6.235-3.515-8.485s-5.303-3.515-8.485-3.515c-3.183 0-6.235 1.264-8.485 3.515s-3.515 5.303-3.515 8.485h4c0-4.418 3.582-8 8-8s8 3.582 8 8h4z"></path>
+<path fill="#2bcecb" d="M18 12c0 2.612-1.67 4.835-4 5.659v6.341h-4v-6.341c-2.33-0.824-4-3.046-4-5.659 0-3.314 2.686-6 6-6s6 2.686 6 6z"></path>
 </SVG>
