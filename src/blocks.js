@@ -25,7 +25,6 @@ import * as icon from './blocks/icon';
 import * as testimonial from './blocks/testimonial';
 import * as button from './blocks/button';
 import * as multipleButtons from './blocks/multiple-buttons';
-import * as arrowButton from './blocks/arrow-button';
 import * as sticker from './blocks/sticker';
 import * as divider from './blocks/divider';
 import * as flexbox from './blocks/flexbox';
@@ -66,7 +65,6 @@ export const registerAinoblocksBlocks = () => {
 		gridItem,
 		hero,
 		multipleButtons,
-		arrowButton,
 		sticker,
 		testimonial,
 		flexbox,

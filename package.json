@@ -1,10 +1,10 @@
 {
 	"name": "ainoblocks",
+	"version": "1.9.2",
 	"title": "AinoBlocks - Essential Gutenberg Blocks Collection",
 	"description": "A collection of essential blocks to build professional WordPress websites.",
-	"version": "1.9.2",
 	"tested_up_to": "6.0",
-	"license": "GPL-2.0",
+	"license": "GPL-2.0-or-later",
 	"author": "Elmastudio",
 	"repository": "elmastudio/aino-blocks",
 	"homepage": "https://ainoblocks.io",
@@ -26,27 +26,27 @@
 		"test:unit": "wp-scripts test-unit-js"
 	},
 	"devDependencies": {
-		"@wordpress/babel-preset-default": "^1.2.0",
-		"@wordpress/scripts": "^18.1.0",
+		"@wordpress/babel-preset-default": "^6.13.0",
+		"@wordpress/scripts": "^23.3.0",
 		"babel-core": "^6.26.3",
 		"babel-eslint": "^8.2.3",
-		"babel-loader": "^7.1.4",
+		"babel-loader": "^8.2.5",
 		"classnames": "^2.3.1",
-		"cross-env": "^5.1.5",
-		"css-loader": "^3.5.3",
-		"eslint": "^4.19.1",
-		"memize": "^1.0.5",
-		"mini-css-extract-plugin": "^2.2.2",
-		"node-sass": "^6.0.1",
-		"postcss": "^8.4.12",
-		"postcss-loader": "^2.1.6",
-		"raw-loader": "^0.5.1",
-		"sass-loader": "^12.1.0",
-		"style-loader": "^0.19.1",
-		"webpack": "^5.52.1"
+		"cross-env": "^7.0.3",
+		"css-loader": "^6.7.1",
+		"eslint": "^8.17.0",
+		"memize": "^1.1.0",
+		"mini-css-extract-plugin": "^2.6.1",
+		"node-sass": "^7.0.1",
+		"postcss": "^8.4.14",
+		"postcss-loader": "^7.0.0",
+		"raw-loader": "^4.0.2",
+		"sass-loader": "^13.0.0",
+		"style-loader": "^3.3.1",
+		"webpack": "^5.73.0"
 	},
 	"dependencies": {
-		"@types/lodash.memoize": "^4.1.6",
-		"memize": "^1.0.5"
+		"@types/lodash.memoize": "^4.1.7",
+		"memize": "^1.1.0"
 	}
 }

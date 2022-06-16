@@ -9,16 +9,6 @@
  */
 (self["webpackChunkainoblocks"] = self["webpackChunkainoblocks"] || []).push([["style"],{
 
-/***/ "./src/blocks/arrow-button/styles/style.scss":
-/*!***************************************************!*\
-  !*** ./src/blocks/arrow-button/styles/style.scss ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://ainoblocks/./src/blocks/arrow-button/styles/style.scss?");
-
-/***/ }),
-
 /***/ "./src/blocks/author/styles/style.scss":
 /*!*********************************************!*\
   !*** ./src/blocks/author/styles/style.scss ***!
