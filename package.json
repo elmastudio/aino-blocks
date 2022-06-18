@@ -1,8 +1,8 @@
 {
 	"name": "ainoblocks",
 	"version": "1.9.2",
-	"title": "AinoBlocks - Essential Gutenberg Blocks Collection",
-	"description": "A collection of essential blocks to build professional WordPress websites.",
+	"title": "AinoBlocks - Essential Gutenberg Page Builder Blocks",
+	"description": "A collection of page builder blocks for professional WordPress websites.",
 	"tested_up_to": "6.0",
 	"license": "GPL-2.0-or-later",
 	"author": "Elmastudio",
