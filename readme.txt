@@ -16,12 +16,13 @@ A collection of essential blocks to build professional WordPress websites.
 The AinoBlocks Block Collection plugin brings you a collection of essential, minimal blocks for the Gutenberg block editor. With AinoBlocks and the free starter FSE block theme <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino</a> you can create professional websites with ease.
 
 ## Currently available blocks
-* Grid block and Grid item blocks
-* Flexbox block and Flex item blocks
+* Grid block
+* Grid item block
+* Flexbox block
+* Flex item block
 * Author block
 * Badge block
 * Buttons block
-* Icon Button block
 * Card block
 * Divider block
 * Hero block
@@ -53,12 +54,14 @@ Yes, you can find the patterns inside the pattern library once you install the A
 
 = 1.9.2 =
 
-Release date: June 16th 2022
+Release date: June 17th 2022
 
-Enhance: Block icons.
+Enhance: New block icons.
 Enhance: Plugin name and description.
+Enhance: Add upgrade button to plugin list view.
 Enhance: Extend grid gap sizes (l = 32px and xl = 48px).
 Enhance: Card shadows.
+Enhance: Remove Icon Button block from Block collection. The block will be rebuild into a single block.
 
 = 1.9.1 =
 
