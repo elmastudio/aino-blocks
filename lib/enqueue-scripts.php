@@ -22,7 +22,7 @@ function ainoblocks_enqueue_block_editor_assets() {
 		true
 	);
 
-	// Enqueue optional editor only styles.
+	// Enqueue editor only styles.
 	wp_enqueue_style(
 		'ainoblocks-editor-css',
 		AINOBLOCKS_PLUGIN_URL . $style_path,
