@@ -1,3 +1,7 @@
-{
-	"presets": [ "@wordpress/default" ]
+{	
+	"plugins": ["lodash"],
+	"presets": [
+		["@babel/env", { "targets": { "node": 6 } }],
+		[ "@wordpress/default" ]
+	]
 }
