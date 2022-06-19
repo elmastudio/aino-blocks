@@ -1,4 +1,5 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 /**
  * External dependencies
@@ -16,10 +17,9 @@ const editBlocksCSSPlugin = new MiniCssExtractPlugin({
 	filename: './dist/css/blocks.editor.build.css',
 });
 
-
 module.exports = {
 	entry: {
-		'./dist/js/editor.blocks.build': './src/blocks.js',
+		'./js/editor.blocks.build': './src/blocks.js',
     },
     optimization: {
         splitChunks: {
@@ -71,5 +71,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'blocks.[name].build.css'
         }),
+
+        new CleanWebpackPlugin(['dist'])
     ],
 };
