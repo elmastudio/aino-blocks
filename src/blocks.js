@@ -54,21 +54,21 @@ const registerBlock = ( block ) => {
  */
 export const registerAinoblocksBlocks = () => {
 	[	
+		gridContainer,
+		gridItem,
+		card,
+		multipleButtons,
+		button,
+		flexbox,
+		flexItem,
+		testimonial,
+		badge,
 		author,
 		profileImage,
 		icon,
-		badge,
-		button,
-		card,
-		divider,
-		gridContainer,
-		gridItem,
 		hero,
-		multipleButtons,
 		sticker,
-		testimonial,
-		flexbox,
-		flexItem,
+		divider,
 	].forEach( registerBlock );
 };
 
