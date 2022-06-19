@@ -1,4 +1,4 @@
-# Aino Blocks: A WordPress blocks collection  
+# AinoBlocks: A WordPress blocks collection  
 	
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/elmastudio/aino-blocks) [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/elmastudio/aino-blocks/blob/master/LICENSE) ![Twitter URL](https://img.shields.io/twitter/url?label=Tweet%20about%20it&style=social&url=https%3A%2F%2Fwpaino.com%2F)
 
@@ -8,8 +8,8 @@
 
 __Contributors:__ elmastudio  
 __Tags:__ page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks   
-__Requires at least:__ 5.5   
-__Tested up to:__ WordPress 5.9.3  
+__Requires at least:__ 5.9   
+__Tested up to:__ WordPress 6.0
 __License:__ GPLv2 or later  
 __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -31,6 +31,14 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+### 1.9.2  
+Enhance: New block icons.  
+Enhance: Plugin name and description.  
+Enhance: Add upgrade button to plugin list view.  
+Enhance: Extend grid gap sizes (l = 32px and xl = 48px).  
+Enhance: Card shadows.  
+Enhance: Remove Icon Button block from Block collection. The block will be rebuild into a single block.  
+  
 ### 1.9.1  
 Enhance: Gradient background for Flexbox Item block.  
 Bugfix: Flexbox issue in header in editor view.  
