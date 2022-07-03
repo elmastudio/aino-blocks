@@ -1,7 +1,6 @@
 /**
 * WordPress dependencies
 */
-const { __, _x } = wp.i18n;
 const { registerBlockCollection } = wp.blocks;
 
 /**
@@ -12,7 +11,6 @@ import edit from './edit';
 import metadata from './block.json';
 import save from './save';
 import './styles/style.scss';
-import './styles/editor.scss';
 
 /**
  * Register block

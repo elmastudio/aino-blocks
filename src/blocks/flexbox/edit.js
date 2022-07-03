@@ -10,8 +10,8 @@ const { __ } = wp.i18n;
 const { Fragment } = wp.element;
 const {
 	InspectorControls,
-	InnerBlocks,
 	useBlockProps,
+	useInnerBlocksProps,
 } = wp.blockEditor;
 const {
 	PanelBody,
@@ -201,15 +201,14 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 		position, {
 	});
 
-	const blockProps = useBlockProps( {
-		className: flexboxClasses,
-	} );
+	const blockProps = useBlockProps( { className: flexboxClasses } );
+	const innerBlocksProps = useInnerBlocksProps( blockProps, {} );
 
 	return (
 		<Fragment>
 			<InspectorControls>
 				<PanelBody 
-					title={__('Flexbox settings', 'ainoblocks')}
+					title={__('Flexbox Properties', 'ainoblocks')}
 					initialOpen={true}
 				>
 				<p><em>{ __( 'Use Preview for Desktop, Tablet and Mobile view.', 'ainoblocks' ) }</em></p>
@@ -244,30 +243,35 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 										<Fragment>
 											<SelectControl
 												label={__("Flex Direction", "ainoblocks")}
+												help={__("Establishes the main-axis, thus defining the direction flex items are placed in the flex container.", "ainoblocks")}
 												value={flexDirectionDesktop}
 												options={flexDirectionDesktopOptions}
 												onChange={flexDirectionDesktop => setAttributes({ flexDirectionDesktop })}
 											/>
 											<SelectControl
 												label={__("Flex Wrap", "ainoblocks")}
+												help={__("Allow items to wrap as needed.", "ainoblocks")}
 												value={flexWrapDesktop}
 												options={flexWrapDesktopOptions}
 												onChange={flexWrapDesktop => setAttributes({ flexWrapDesktop })}
 											/>
 											<SelectControl
 												label={__("Justify Content", "ainoblocks")}
+												help={__("Define the alignment along the main axis.", "ainoblocks")}
 												value={justifyContentDesktop}
 												options={justifyContentDesktopOptions}
 												onChange={justifyContentDesktop => setAttributes({ justifyContentDesktop })}
 											/>
 											<SelectControl
 												label={__("Align Items", "ainoblocks")}
+												help={__("Defines how items are laid out along the cross axis on the current line. ", "ainoblocks")}
 												value={alignItemsDesktop}
 												options={alignItemsDesktopOptions}
 												onChange={alignItemsDesktop => setAttributes({ alignItemsDesktop })}
 											/>
 											<SelectControl
 												label={__("Align Content", "ainoblocks")}
+												help={__("Align the flex container’s lines within when there is extra space in the cross-axis.", "ainoblocks")}
 												value={alignContentDesktop}
 												options={alignContentDesktopOptions}
 												onChange={alignContentDesktop => setAttributes({ alignContentDesktop })}
@@ -279,30 +283,35 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 										<Fragment>
 											<SelectControl
 												label={__("Flex Direction", "ainoblocks")}
+												help={__("Establishes the main-axis, thus defining the direction flex items are placed in the flex container.", "ainoblocks")}
 												value={flexDirectionTablet}
 												options={flexDirectionTabletOptions}
 												onChange={flexDirectionTablet => setAttributes({ flexDirectionTablet })}
 											/>
 											<SelectControl
 												label={__("Flex Wrap", "ainoblocks")}
+												help={__("Allow items to wrap as needed.", "ainoblocks")}
 												value={flexWrapTablet}
 												options={flexWrapTabletOptions}
 												onChange={flexWrapTablet => setAttributes({ flexWrapTablet })}
 											/>
 											<SelectControl
 												label={__("Justify Content", "ainoblocks")}
+												help={__("Define the alignment along the main axis.", "ainoblocks")}
 												value={justifyContentTablet}
 												options={justifyContentTabletOptions}
 												onChange={justifyContentTablet => setAttributes({ justifyContentTablet })}
 											/>
 											<SelectControl
 												label={__("Align Items", "ainoblocks")}
+												help={__("Defines how items are laid out along the cross axis on the current line. ", "ainoblocks")}
 												value={alignItemsTablet}
 												options={alignItemsTabletOptions}
 												onChange={alignItemsTablet => setAttributes({ alignItemsTablet })}
 											/>
 											<SelectControl
 												label={__("Align Content", "ainoblocks")}
+												help={__("Align the flex container’s lines within when there is extra space in the cross-axis.", "ainoblocks")}
 												value={alignContentTablet}
 												options={alignContentTabletOptions}
 												onChange={alignContentTablet => setAttributes({ alignContentTablet })}
@@ -315,30 +324,35 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 										<Fragment>
 											<SelectControl
 												label={__("Flex Direction", "ainoblocks")}
+												help={__("Establishes the main-axis, thus defining the direction flex items are placed in the flex container.", "ainoblocks")}
 												value={flexDirectionMobile}
 												options={flexDirectionMobileOptions}
 												onChange={flexDirectionMobile => setAttributes({ flexDirectionMobile })}
 											/>
 											<SelectControl
 												label={__("Flex Wrap", "ainoblocks")}
+												help={__("Allow items to wrap as needed.", "ainoblocks")}
 												value={flexWrapMobile}
 												options={flexWrapMobileOptions}
 												onChange={flexWrapMobile => setAttributes({ flexWrapMobile })}
 											/>
 											<SelectControl
 												label={__("Justify Content", "ainoblocks")}
+												help={__("Define the alignment along the main axis.", "ainoblocks")}
 												value={justifyContentMobile}
 												options={justifyContentMobileOptions}
 												onChange={justifyContentMobile => setAttributes({ justifyContentMobile })}
 											/>
 											<SelectControl
 												label={__("Align Items", "ainoblocks")}
+												help={__("Defines how items are laid out along the cross axis on the current line. ", "ainoblocks")}
 												value={alignItemsMobile}
 												options={alignItemsMobileOptions}
 												onChange={alignItemsMobile => setAttributes({ alignItemsMobile })}
 											/>
 											<SelectControl
 												label={__("Align Content", "ainoblocks")}
+												help={__("Align the flex container’s lines within when there is extra space in the cross-axis.", "ainoblocks")}
 												value={alignContentMobile}
 												options={alignContentMobileOptions}
 												onChange={alignContentMobile => setAttributes({ alignContentMobile })}
@@ -351,7 +365,8 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 					</TabPanel>
 					</PanelBody>
 					<PanelBody
-						title={__('Positioning', 'ainoblocks')}
+						title={__('Absolute Positioning', 'ainoblocks')}
+						description={__("Specify the positioning for the Flexbox container.", "ainoblocks")}
 						initialOpen={false}
 					>
 					<SelectControl
@@ -373,10 +388,7 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 					/>
 					</PanelBody>
 			</InspectorControls>
-
-			<div { ...blockProps }>
-				<InnerBlocks />
-			</div>
+			<div { ...innerBlocksProps } />
 		</Fragment>
 	);
 }

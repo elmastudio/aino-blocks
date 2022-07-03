@@ -37,21 +37,21 @@
 .wp-block-ainoblocks-grid-container.is-selected>.block-editor-inner-blocks>.block-editor-block-list__layout,
 .wp-block-ainoblocks-grid-container.has-child-selected>.block-editor-inner-blocks>.block-editor-block-list__layout {
 	background:
-		linear-gradient(#3399FF, #3399FF) 100% 1px / 1px,
-		linear-gradient(#3399FF, #3399FF) 91.6666666% 1px / 1px,
-		linear-gradient(#3399FF, #3399FF) 83.333333333333334% 1px / 1px,
-		linear-gradient(#3399FF, #3399FF) 75.000000003333334% 1px / 1px,
-		linear-gradient(#3399FF, #3399FF) 66.666666673333334% 1px / 1px,
-		linear-gradient(#3399FF, #3399FF) 58.333333343333334% 1px / 1px,
-		linear-gradient(#3399FF, #3399FF) 50.000000013333334% 1px / 1px,
-		linear-gradient(#3399FF, #3399FF) 41.666666683333334% 1px / 1px,
-		linear-gradient(#3399FF, #3399FF) 33.333333353333334% 1px / 1px,
-		linear-gradient(#3399FF, #3399FF) 25.000000023333334% 1px / 1px,
-		linear-gradient(#3399FF, #3399FF) 16.666666693333334% 1px / 1px,
-		linear-gradient(#3399FF, #3399FF) 8.333333363333334% 1px / 1px,
-		linear-gradient(#3399FF, #3399FF) 0% 1px / 1px,
-		linear-gradient(#3399FF, #3399FF) 1px 100% / 100% 1px,
-		linear-gradient(#3399FF, #3399FF) 1px 0% / 100% 1px;
+		linear-gradient(#EF4444, #EF4444) 100% 1px / 1px,
+		linear-gradient(#EF4444, #EF4444) 91.6666666% 1px / 1px,
+		linear-gradient(#EF4444, #EF4444) 83.333333333333334% 1px / 1px,
+		linear-gradient(#EF4444, #EF4444) 75.000000003333334% 1px / 1px,
+		linear-gradient(#EF4444, #EF4444) 66.666666673333334% 1px / 1px,
+		linear-gradient(#EF4444, #EF4444) 58.333333343333334% 1px / 1px,
+		linear-gradient(#EF4444, #EF4444) 50.000000013333334% 1px / 1px,
+		linear-gradient(#EF4444, #EF4444) 41.666666683333334% 1px / 1px,
+		linear-gradient(#EF4444, #EF4444) 33.333333353333334% 1px / 1px,
+		linear-gradient(#EF4444, #EF4444) 25.000000023333334% 1px / 1px,
+		linear-gradient(#EF4444, #EF4444) 16.666666693333334% 1px / 1px,
+		linear-gradient(#EF4444, #EF4444) 8.333333363333334% 1px / 1px,
+		linear-gradient(#EF4444, #EF4444) 0% 1px / 1px,
+		linear-gradient(#EF4444, #EF4444) 1px 100% / 100% 1px,
+		linear-gradient(#EF4444, #EF4444) 1px 0% / 100% 1px;
 	background-repeat: no-repeat;
 }
 
@@ -92,7 +92,12 @@
 			@media (min-width: 64rem) {
 				column-gap: 1rem;
 			}
+
+			.block-editor-block-list__layout {
+				column-gap: 0;
+			}
 		}
+
 	}
 
 	&.col-gap-m {
@@ -102,6 +107,10 @@
 
 			@media (min-width: 64rem) {
 				column-gap: 2rem;
+			}
+
+			.block-editor-block-list__layout {
+				column-gap: 0;
 			}
 		}
 	}
@@ -118,6 +127,10 @@
 			@media (min-width: 80rem) {
 				column-gap: 2rem;
 			}
+
+			.block-editor-block-list__layout {
+				column-gap: 0;
+			}
 		}
 	}
 
@@ -132,6 +145,10 @@
 	
 			@media (min-width: 80rem) {
 				column-gap: 3rem;
+			}
+
+			.block-editor-block-list__layout {
+				column-gap: 0;
 			}
 		}
 	}

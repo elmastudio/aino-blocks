@@ -6,10 +6,9 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-const { __ } = wp.i18n;
 const {
-	InnerBlocks,
 	useBlockProps,
+	useInnerBlocksProps,
 } = wp.blockEditor;
 
 export default function save( { attributes } ) {
@@ -57,14 +56,10 @@ export default function save( { attributes } ) {
 		position, {
 	});
 
-	const blockProps = useBlockProps.save( {
-		className: flexboxClasses,
-	} );
+	const blockProps = useBlockProps.save( { className: flexboxClasses } );
+	const innerBlocksProps = useInnerBlocksProps.save( blockProps );
 
 	return (
-
-		<div { ...blockProps }>
-			<InnerBlocks.Content />
-		</div >
+		<div {...innerBlocksProps} />
 	);
 }

@@ -36,17 +36,18 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 	} = attributes;
 
 	const iconTypeOptions = [
-		{ value: 'attachment', label: __('Attachment', 'ainoblocks') },
-		{ value: 'baggage', label: __('Baggage', 'ainoblocks') },
-		{ value: 'bookmark', label: __('Bookmark', 'ainoblocks') },
-		{ value: 'calendar', label: __('Calendar', 'ainoblocks') },
-		{ value: 'clock', label: __('Clock', 'ainoblocks') },
-		{ value: 'flash', label: __('Flash', 'ainoblocks') },
-		{ value: 'heart', label: __('Heart', 'ainoblocks') },
-		{ value: 'pin', label: __('Pin', 'ainoblocks') },
-		{ value: 'quote', label: __('Quote', 'ainoblocks') },
-		{ value: 'trophy', label: __('Trophy', 'ainoblocks') },
-		{ value: 'view', label: __('View', 'ainoblocks') },
+		{ value: 'attachment', label : __('Attachment', 'ainoblocks') },
+		{ value: 'baggage', label    : __('Baggage', 'ainoblocks') },
+		{ value: 'bookmark', label   : __('Bookmark', 'ainoblocks') },
+		{ value: 'calendar', label   : __('Calendar', 'ainoblocks') },
+		{ value: 'clock', label      : __('Clock', 'ainoblocks') },
+		{ value: 'flash', label      : __('Flash', 'ainoblocks') },
+		{ value: 'heart', label      : __('Heart', 'ainoblocks') },
+		{ value: 'pin', label        : __('Pin', 'ainoblocks') },
+		{ value: 'quote', label      : __('Quote', 'ainoblocks') },
+		{ value: 'trophy', label     : __('Trophy', 'ainoblocks') },
+		{ value: 'view', label       : __('View', 'ainoblocks') },
+		{ value: 'checkcircle', label: __('Check Circle', 'ainoblocks') },
 	];
 
 	const icon = (iconType === 'quote') ? (icons.quote)
@@ -60,6 +61,7 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 	: (iconType === 'pin') ? (icons.pin)
 	: (iconType === 'trophy') ? (icons.trophy)
 	: (iconType === 'view') ? (icons.view)
+	: (iconType === 'checkcircle') ? (icons.checkcircle)
 	: (icons.attachment);
 
 	const iconSizeOptions = [

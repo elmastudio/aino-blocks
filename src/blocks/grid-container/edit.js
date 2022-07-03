@@ -14,8 +14,8 @@ const {
 } = wp.element;
 const {
 	InspectorControls,
-	InnerBlocks,
 	useBlockProps,
+	useInnerBlocksProps,
 } = wp.blockEditor;
 const {
 	PanelBody,
@@ -52,20 +52,25 @@ export default function GridContainerEdit( { attributes, setAttributes, classNam
 
 		const columnGapOptions = [
 			{ value: "col-gap-none", label: __('none', 'ainoblocks') },
-			{ value: "col-gap-s", label  : __('s', 'ainoblocks') },
-			{ value: "col-gap-m", label  : __('m', 'ainoblocks') },
-			{ value: "col-gap-l", label  : __('l', 'ainoblocks') },
-			{ value: "col-gap-xl", label  : __('xl', 'ainoblocks') }
+			{ value: "col-gap-s", label  : __('S', 'ainoblocks') },
+			{ value: "col-gap-m", label  : __('M', 'ainoblocks') },
+			{ value: "col-gap-l", label  : __('L', 'ainoblocks') },
+			{ value: "col-gap-xl", label  : __('XL', 'ainoblocks') }
 		];
 
 		const gridClasses = classnames(
 			className,
+			'ab-grid-block',
 			`align${align}`,
 			columnGap,
 		);
 	
-		const blockProps = useBlockProps( {
-			className: gridClasses,
+		const blockProps = useBlockProps( { className: gridClasses } );
+		const innerBlocksProps = useInnerBlocksProps( blockProps, {
+			allowedBlocks: ALLOWED_BLOCKS,
+			template: getCount(items),
+			templateLock: false,
+			templateInsertUpdatesSelection: true,
 		} );
 
 		return (
@@ -82,14 +87,7 @@ export default function GridContainerEdit( { attributes, setAttributes, classNam
 					/>
 					</PanelBody>
 				</InspectorControls>
-				<div { ...blockProps }>
-					<InnerBlocks
-						allowedBlocks={ALLOWED_BLOCKS}
-						template={getCount(items)}
-						templateLock={ false }
-						templateInsertUpdatesSelection={true}
-					/>
-				</div>
-		</Fragment>
+				<div { ...innerBlocksProps } />
+			</Fragment>
 	);
 }
