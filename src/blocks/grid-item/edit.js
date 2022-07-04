@@ -106,12 +106,12 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 		const blockProps = useBlockProps( {
 			className: classNames,
 		} );
-	
+
 		return (
 			<Fragment>
 				<InspectorControls>
-					<PanelBody title={__('Positioning', 'ainoblocks')}>
-					<p><em>{ __( 'Use Preview for Desktop, Tablet and Mobile view.', 'ainoblocks' ) }</em></p>
+					<PanelBody title={__('Location', 'ainoblocks')}>
+					<p><em>{ __( 'Determine the Grid Item’s block location within the grid by referring to specific grid lines. Use Preview for Desktop, Tablet, and Mobile views.', 'ainoblocks' ) }</em></p>
 						<TabPanel className="aino-device-panel"
 							activeClass="is-active"
 							initialTabName="desktop"
@@ -210,6 +210,25 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 								}
 							}
 						</TabPanel>
+					</PanelBody>
+					<PanelBody
+						title={__('Aligment', 'ainoblocks')}
+						initialOpen={true}
+					>
+						<SelectControl
+							label={__('Align item', 'ainoblocks')}
+							help={__('Aligns the Grid Item block inside its Grid area along the vertical column axis.', 'ainoblocks')}
+							value={alignItem}
+							options={alignItemOptions}
+							onChange={alignItem => setAttributes({ alignItem })}
+						/>
+						<SelectControl
+							label={__('Justify item', 'ainoblocks')}
+							help={__('Aligns the Grid Item block inside its Grid area on the horizontal row axis.', 'ainoblocks')}
+							value={justifyItem}
+							options={justifyItemOptions}
+							onChange={justifyItem => setAttributes({ justifyItem })}
+						/>
 					</PanelBody>
 					<PanelBody
 						title={__('Margins', 'ainoblocks')}
@@ -369,34 +388,6 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 						</TabPanel>
 					</PanelBody>
 					<PanelBody
-						title={__('Gutter', 'ainoblocks')}
-						initialOpen={false}
-					>
-						<ToggleControl
-							label={__('Add end gutters', 'ainoblocks')}
-							checked={!!gutter}
-							onChange={() => setAttributes({ gutter: !gutter })}
-							help={!!gutter ? __('Toogle off to remove the spacing left and right of the grid item.', 'ainoblocks') : __('Toggle on for space left and right of the grid item.', 'ainoblocks')}
-						/>
-					</PanelBody>
-					<PanelBody
-						title={__('Overlapping', 'ainoblocks')}
-						initialOpen={false}
-					>
-					<ToggleControl
-							label={__('Overlap to left', 'ainoblocks')}
-							checked={!!overlapLeft}
-							onChange={() => setAttributes({ overlapLeft: !overlapLeft })}
-							help={!!overlapLeft ? __('Toogle off to position grid item within grid container.', 'ainoblocks') : __('Toggle on to overlap grid item to left screen edge.', 'ainoblocks')}
-						/>
-						<ToggleControl
-							label={__('Overlap to right', 'ainoblocks')}
-							checked={!!overlapRight}
-							onChange={() => setAttributes({ overlapRight: !overlapRight })}
-							help={!!overlapRight ? __('Toogle off to position grid item within grid container.', 'ainoblocks') : __('Toggle on to overlap grid item to right screen edge.', 'ainoblocks')}
-						/>
-					</PanelBody>
-					<PanelBody
 						title={__('Stacking', 'ainoblocks')}
 						initialOpen={false}
 					>
@@ -418,22 +409,31 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 						) }
 					</PanelBody>
 					<PanelBody
-						title={__('Aligment', 'ainoblocks')}
+						title={__('Overlapping', 'ainoblocks')}
 						initialOpen={false}
 					>
-						<SelectControl
-							label={__('Align item', 'ainoblocks')}
-							help={__('Aligns an item inside its grid area along the vertical column axis.', 'ainoblocks')}
-							value={alignItem}
-							options={alignItemOptions}
-							onChange={alignItem => setAttributes({ alignItem })}
+					<ToggleControl
+							label={__('Overlap to left', 'ainoblocks')}
+							checked={!!overlapLeft}
+							onChange={() => setAttributes({ overlapLeft: !overlapLeft })}
+							help={!!overlapLeft ? __('Toogle off to position grid item within grid container.', 'ainoblocks') : __('Toggle on to overlap grid item to left screen edge.', 'ainoblocks')}
 						/>
-						<SelectControl
-							label={__('Justify item', 'ainoblocks')}
-							help={__('Aligns an item inside its grid area on the horizontal row axis.', 'ainoblocks')}
-							value={justifyItem}
-							options={justifyItemOptions}
-							onChange={justifyItem => setAttributes({ justifyItem })}
+						<ToggleControl
+							label={__('Overlap to right', 'ainoblocks')}
+							checked={!!overlapRight}
+							onChange={() => setAttributes({ overlapRight: !overlapRight })}
+							help={!!overlapRight ? __('Toogle off to position grid item within grid container.', 'ainoblocks') : __('Toggle on to overlap grid item to right screen edge.', 'ainoblocks')}
+						/>
+					</PanelBody>
+					<PanelBody
+						title={__('Gutter', 'ainoblocks')}
+						initialOpen={false}
+					>
+						<ToggleControl
+							label={__('Add end gutters', 'ainoblocks')}
+							checked={!!gutter}
+							onChange={() => setAttributes({ gutter: !gutter })}
+							help={!!gutter ? __('Toogle off to remove the spacing left and right of the grid item.', 'ainoblocks') : __('Toggle on for space left and right of the grid item.', 'ainoblocks')}
 						/>
 					</PanelBody>
 				</InspectorControls>

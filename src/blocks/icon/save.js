@@ -40,6 +40,7 @@ export default function save({ attributes }) {
 	: (iconType === 'pin') ? (icons.pin)
 	: (iconType === 'trophy') ? (icons.trophy)
 	: (iconType === 'view') ? (icons.view)
+	: (iconType === 'checkcircle') ? (icons.checkcircle)
 	: (icons.attachment);
 
 	return (

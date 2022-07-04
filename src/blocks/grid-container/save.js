@@ -6,38 +6,27 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies.
  */
-const { __ } = wp.i18n;
 const {
-	InnerBlocks,
 	useBlockProps,
+	useInnerBlocksProps,
 } = wp.blockEditor;
 
-export default function save({ attributes, className }) {
+export default function save({ attributes }) {
 
 	const {
-		align,
-		items,
 		columnGap,
 	} = attributes;
 
-	const innerClasses = classnames(
-		'wp-block-ainoblocks-grid-container__inner', {}
-	);
-
 	const gridClasses = classnames(
 		classnames,
+		'ab-grid-block',
 		columnGap,
 	);
 
-	const blockProps = useBlockProps.save( {
-		className: gridClasses,
-	} );
+	const blockProps = useBlockProps.save( { className: gridClasses } );
+	const innerBlocksProps = useInnerBlocksProps.save( blockProps );
 
 	return (
-		<div { ...blockProps }>
-			<div className={innerClasses}>
-				<InnerBlocks.Content />
-			</div>
-		</div>
+		<div {...innerBlocksProps} />
 	);
 }
