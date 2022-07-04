@@ -3,9 +3,9 @@ Author URI: https://www.elmastudio.de/en
 Plugin URI: https://ainoblocks.io
 Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks
-Requires at least: 5.5
+Requires at least: 5.9
 Tested up to: 6.0
-Stable tag: 1.9.2
+Stable tag: 1.10.0
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,8 @@ After the AinoBlocks plugin is installed, you will see the AinoBlocks blocks col
 Yes, you can find the patterns inside the pattern library once you install the Aino FSE block theme.
 
 == Changelog ==
+
+= 1.10.0 =
 
 = 1.9.2 =
 
