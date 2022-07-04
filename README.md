@@ -31,6 +31,11 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+### 1.10.0  
+Enhance: Icon block with new icon.  
+Enhance: Grid Container block use useInnerBlocksProps.  
+Enhance: Flexbox block use useInnerBlocksProps.  
+
 ### 1.9.2  
 Enhance: New block icons.  
 Enhance: Plugin name and description.  
