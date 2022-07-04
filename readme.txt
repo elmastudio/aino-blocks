@@ -54,9 +54,15 @@ Yes, you can find the patterns inside the pattern library once you install the A
 
 = 1.10.0 =
 
+Release date: July 4, 2022
+
+Enhance: Icon block with new icon.
+Enhance: Grid Container block use useInnerBlocksProps.
+Enhance: Flexbox block use useInnerBlocksProps.
+
 = 1.9.2 =
 
-Release date: June 19th 2022
+Release date: June 19, 2022
 
 Enhance: New block icons.
 Enhance: Plugin name and description.
@@ -67,14 +73,14 @@ Enhance: Remove Icon Button block from Block collection. The block will be rebui
 
 = 1.9.1 =
 
-Release date: April 25th 2022
+Release date: April 25, 2022
 
 Enhance: Gradient background for Flexbox Item block.
 Bugfix: Flexbox issue in header in editor view.
 
 = 1.9.0 =
 
-Release date: April 6th, 2022
+Release date: April 6, 2022
 
 New: Icon block (sinple first version, block will be improved in future updates).
 New: Profile Image block (Author block child).
