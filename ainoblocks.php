@@ -1,12 +1,12 @@
 <?php
  /**
- * Plugin Name:       AinoBlocks - Essential Gutenberg Page Builder Blocks
+ * Plugin Name:       AinoBlocks - Gutenberg Page Builder Blocks
  * Plugin URI:        https://ainoblocks.io/
- * Description:       A collection of page builder blocks for professional WordPress websites.
+ * Description:       A collection of creative page builder blocks for professional WordPress websites.
  * Requires at least: 5.9
  * Tested up to:      6.0
  * Requires PHP:      7.0
- * Version:           1.10.0
+ * Version:           1.11.0
  * Author:            Elma Studio
  * Author URI:        https://elmastudio.de/en/
  * License:           GPL-2.0-or-later

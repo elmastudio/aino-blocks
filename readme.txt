@@ -1,11 +1,11 @@
-=== AinoBlocks - Essential Gutenberg Page Builder Blocks ===
+=== AinoBlocks - Gutenberg Page Builder Blocks ===
 Author URI: https://www.elmastudio.de/en
 Plugin URI: https://ainoblocks.io
 Contributors: elmastudio
 Tags: block, WordPress blocks, gutenberg, blocks
 Requires at least: 5.9
 Tested up to: 6.0
-Stable tag: 1.10.0
+Stable tag: 1.11.0
 License: GPLv2 or later
 License URI: https: //www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,9 +13,9 @@ A collection of page builder blocks for professional WordPress websites.
 
 == Description ==
 
-The AinoBlocks page builder blocks collection brings you a collection of essential, minimal blocks for the Gutenberg block editor. With AinoBlocks and our free starter FSE block theme <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino</a> you can create professional websites with ease.
+The AinoBlocks page builder blocks are a collection of creative blocks for the Gutenberg block editor. With AinoBlocks and our free starter FSE block theme <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino</a> you can create professional websites with ease.
 
-## Currently available blocks
+## Blocks included
 * Grid block
 * Grid item block
 * Flexbox block
