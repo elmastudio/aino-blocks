@@ -6,8 +6,7 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies
  */
-const { __ } = wp.i18n;
-const {InnerBlocks, useBlockProps,} = wp.blockEditor;
+const {InnerBlocks, useBlockProps} = wp.blockEditor;
 
 export default function save( { attributes } ) {
 
@@ -29,10 +28,12 @@ export default function save( { attributes } ) {
 		{
 	});
 
+	const flexBasisWithUnit = Number.isFinite( flexBasis ) ? flexBasis + '%' : flexBasis;
+
 	const flexItemStyles = {
 		order: flexOrder ? flexOrder : undefined,
 		flexGrow: flexGrow ? flexGrow : undefined,
-		flexBasis: flexBasis ? flexBasis + 'px' : undefined,
+		flexBasis: flexBasisWithUnit ? flexBasisWithUnit : undefined,
 		flexShrink: flexShrink ? "0" : undefined,
 	};
 

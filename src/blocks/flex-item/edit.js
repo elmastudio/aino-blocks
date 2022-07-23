@@ -12,6 +12,7 @@ const {
 	InspectorControls,
 	InnerBlocks,
 	useBlockProps,
+	useSetting,
 } = wp.blockEditor;
 const {
 	PanelBody,
@@ -19,6 +20,8 @@ const {
 	RangeControl,
 	TabPanel,
 	ToggleControl,
+	__experimentalUseCustomUnits,
+	__experimentalUnitControl,
 } = wp.components;
 
 /**
@@ -35,6 +38,18 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 		alignSelfTablet,
 		alignSelfMobile
 	} = attributes;
+
+	const units = __experimentalUseCustomUnits( {
+		availableUnits: useSetting( 'spacing.units' ) || [
+			'%',
+			'px',
+			'em',
+			'rem',
+			'vw',
+		],
+	} );
+
+	const flexBasisWithUnit = Number.isFinite( flexBasis ) ? flexBasis + '%' : flexBasis;
 
 	const alignSelfDesktopOptions = [
 		{ value: "align__auto__d", label     : __('auto', 'ainoblocks') },
@@ -74,7 +89,7 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 	const flexItemStyles = {
 		order: flexOrder ? flexOrder : undefined,
 		flexGrow: flexGrow ? flexGrow : undefined,
-		flexBasis: flexBasis ? flexBasis + 'px' : undefined,
+		flexBasis: flexBasisWithUnit ? flexBasisWithUnit : undefined,
 		flexShrink: flexShrink ? "0" : undefined,
 	};
 
@@ -88,25 +103,30 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 			<InspectorControls>
 				<PanelBody title={__('Flex Item settings', 'ainoblocks')}>
 					<RangeControl
-						label={__('Flex Order', 'ainoblocks')}
+						label={__('Flex order', 'ainoblocks')}
 						value={flexOrder}
 						onChange={(flexOrder) => setAttributes({ flexOrder })}
 						min={0}
 						max={100}
+						allowReset={true}
+						initialPosition={0}
 					/>
 					<RangeControl
-						label={__('Flex Basis (in pixels)', 'ainoblocks')}
-						value={flexBasis}
-						onChange={(flexBasis) => setAttributes({ flexBasis })}
-						min={0}
-						max={1800}
-					/>
-					<RangeControl
-						label={__('Flex Grow', 'ainoblocks')}
+						label={__('Flex grow', 'ainoblocks')}
 						value={flexGrow}
 						onChange={(flexGrow) => setAttributes({ flexGrow })}
 						min={0}
 						max={100}
+						allowReset={true}
+						initialPosition={0}
+					/>
+					<__experimentalUnitControl
+						label={ __( 'Flex basis' ) }
+						labelPosition="edge"
+						__unstableInputWidth="80px"
+						value={ flexBasis || '' }
+						onChange={(flexBasis) => setAttributes({ flexBasis })}
+						units={ units }
 					/>
 					<ToggleControl
 						label={__('Flex Shrink', 'ainoblocks')}

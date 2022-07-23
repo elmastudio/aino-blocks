@@ -24,7 +24,7 @@
 			"type": "number"
 		},
 		"flexBasis": {
-			"type": "number"
+			"type": "string"
 		},
 		"flexGrow": {
 			"type": "number"
