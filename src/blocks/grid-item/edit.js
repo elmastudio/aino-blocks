@@ -111,7 +111,7 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 			<Fragment>
 				<InspectorControls>
 					<PanelBody title={__('Location', 'ainoblocks')}>
-					<p><em>{ __( 'Determine the Grid Item’s block location within the grid by referring to specific grid lines. Use Preview for Desktop, Tablet, and Mobile views.', 'ainoblocks' ) }</em></p>
+					<p><em>{ __( 'Determine the Grid Item block location within the 12 column grid by referring to specific grid lines. Use Preview for Desktop, Tablet, and Mobile views.', 'ainoblocks' ) }</em></p>
 						<TabPanel className="aino-device-panel"
 							activeClass="is-active"
 							initialTabName="desktop"

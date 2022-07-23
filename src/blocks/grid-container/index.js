@@ -14,6 +14,7 @@ import edit from './edit';
 import metadata from './block.json';
 import save from './save';
 import './styles/style.scss';
+import './styles/editor.scss';
 
 const { name } = metadata;
 

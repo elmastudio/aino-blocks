@@ -1,16 +1,13 @@
 .wp-block-ainoblocks-grid-container .wp-block-ainoblocks-grid-item {
 	margin-top: 0;
 	margin-bottom: 0;
+	grid-row-start: 1;
+	grid-row-end: 2;
 
 	.wp-block-ainoblocks-grid-item {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
-
-	width: 100%;
-	max-width: 100%;
-	grid-row-start: 1;
-	grid-row-end: 2;
 
 	&.no-gutter {
 		padding-left: 0;
@@ -32,8 +29,6 @@
 	}
 
 	.wp-block-ainoblocks-grid-item {
-		width: 100%;
-		height: 100%;
 
 		.wp-block {
 			max-width: 100%;
