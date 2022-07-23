@@ -52,6 +52,13 @@ Yes, you can find the patterns inside the pattern library once you install the A
 
 == Changelog ==
 
+= 1.11.0 =
+
+Release date: July , 2022
+
+Enhance: Flexbox settings.
+Enhance: Multiple Buttons block use useInnerBlocksProps.
+
 = 1.10.0 =
 
 Release date: July 4, 2022
