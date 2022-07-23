@@ -111,6 +111,8 @@ function spacingInspectorControls(BlockEdit) {
 				paddingRight,
 			} = attributes;
 
+			const url = 'https://ainoblocks.io/docs/styles/spacing/';
+
 			return (
 				<Fragment>
 					<BlockEdit {...props} />
@@ -119,23 +121,24 @@ function spacingInspectorControls(BlockEdit) {
 							title={__('Responsive Spacing', 'ainoblocks')}
 							initialOpen={true}
 						>
+							<p>Use the spacing scale to add padding. See <a href={url} target="_blank">Docs</a> for value to pixels translation.</p>
 							<RangeControl
 								label={__('Padding Top', 'ainoblocks')}
 								value={paddingTop}
 								onChange={(paddingTop) => setAttributes({ paddingTop })}
-								min={0}
+								min={1}
 								max={19}
 								allowReset={true}
-								resetFallbackValue={0}
+								resetFallbackValue={1}
 							/>
 							<RangeControl
 								label={__('Padding Bottom', 'ainoblocks')}
 								value={paddingBottom}
 								onChange={(paddingBottom) => setAttributes({ paddingBottom })}
-								min={0}
+								min={1}
 								max={19}
 								allowReset={true}
-								resetFallbackValue={0}
+								resetFallbackValue={1}
 							/>
 							<RangeControl
 								label={__('Padding Left', 'ainoblocks')}
@@ -144,7 +147,7 @@ function spacingInspectorControls(BlockEdit) {
 								min={0}
 								max={19}
 								allowReset={true}
-								resetFallbackValue={0}
+								resetFallbackValue={1}
 							/>
 							<RangeControl
 								label={__('Padding Right', 'ainoblocks')}
@@ -153,7 +156,7 @@ function spacingInspectorControls(BlockEdit) {
 								min={0}
 								max={19}
 								allowReset={true}
-								resetFallbackValue={0}
+								resetFallbackValue={1}
 							/>
 						</PanelBody>
 					</InspectorControls>

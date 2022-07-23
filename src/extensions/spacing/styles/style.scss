@@ -75,7 +75,19 @@
 	#{$property}: clamp(11rem, 8.1754rem + 12.2807vw, 18rem);
 }
 
-h1, h2, h3, h4, h5, h6, .single .post-content h1, .single .post-content h2, .single .post-content h3, .single .post-content h4, .single .post-content h5, .single .post-content h6, p, ul, .single .post-content p, .single .wp-block-ainoblocks-card p, .single .post-content ul, .single .post-content ol, .wp-block-group.has-background, *[class*="wp-container-"].wp-block-group.alignfull.has-background, *[class^="wp-block-"], *[class^="wp-block-ainoblocks-"], .wp-block-group {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+.wp-block-group.has-background,
+*[class*="wp-container-"].wp-block-group.alignfull.has-background,
+*[class^="wp-block-"],
+.wp-block-group {
 
 	&.pt {
 		
