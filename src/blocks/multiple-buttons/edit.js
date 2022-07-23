@@ -8,12 +8,12 @@ import times from 'lodash/times';
 /**
  * WordPress dependencies
  */
-const { __, _x } = wp.i18n;
-const { Component, Fragment } = wp.element;
+const { __ } = wp.i18n;
+const { Fragment } = wp.element;
 const {
 	InspectorControls,
-	InnerBlocks,
 	useBlockProps,
+	useInnerBlocksProps,
 } = wp.blockEditor;
 const {
 	PanelBody,
@@ -40,7 +40,7 @@ const getCount = memoize((count) => {
 /**
  * Block edit function
  */
-export default function MultipleButtonsEdit( { attributes, setAttributes, className, isSelected } ) {
+export default function MultipleButtonsEdit( { attributes, setAttributes, className } ) {
 
 	const {
 		align,
@@ -56,16 +56,19 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 		{ value: "direction__colrev", label: __('column-reverse', 'ainoblocks') }
 	];
 
-	const buttonsClasses = classnames(className, flexDirection, `align${align}`, {});
-
-	const innerClasses = classnames(
-		'wp-block-ainoblocks-multiple-buttons__inner', {
-			'stretch': fullWidth ? fullWidth : undefined,
-		}
-	);
+	const buttonsClasses = classnames(className, flexDirection, `align${align}`, {
+		'stretch': fullWidth ? fullWidth : undefined,
+	});
 
 	const blockProps = useBlockProps( {
 		className: buttonsClasses,
+	} );
+
+	const innerBlocksProps = useInnerBlocksProps( blockProps, {
+		allowedBlocks: ALLOWED_BLOCKS,
+		template: getCount(items),
+		templateLock: false,
+		templateInsertUpdatesSelection: true,
 	} );
 
 	return (
@@ -86,17 +89,7 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 					/>
 				</PanelBody>
 			</InspectorControls>
-
-			<div { ...blockProps }>
-				<div className={innerClasses}>
-					<InnerBlocks
-						allowedBlocks={ALLOWED_BLOCKS}
-						template={getCount(items)}
-						templateLock={ false }
-						templateInsertUpdatesSelection={false}
-					/>
-				</div>
-			</div>
+			<div { ...innerBlocksProps } />
 		</Fragment>
 	);
 }

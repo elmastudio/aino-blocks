@@ -1,5 +1,8 @@
 .wp-block-ainoblocks-multiple-buttons {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
 
 	&.aligncenter {
 		justify-content: center;
@@ -24,12 +27,13 @@
 		}
 
 		&__col {
-
 			flex-direction: column;
+			align-items: stretch;
 		}
 
 		&__colrev {
 			flex-direction: column-reverse;
+			align-items: stretch;
 		}
 	}
 

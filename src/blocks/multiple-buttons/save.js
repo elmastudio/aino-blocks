@@ -6,13 +6,12 @@ import classnames from 'classnames';
 /**
  * WordPress dependencies.
  */
-const { __ } = wp.i18n;
 const {
-	InnerBlocks,
 	useBlockProps,
+	useInnerBlocksProps,
 } = wp.blockEditor;
 
-export default function save({ attributes, className }) {
+export default function save({ attributes }) {
 
 	const {
 		align,
@@ -21,24 +20,14 @@ export default function save({ attributes, className }) {
 		fullWidth,
 	} = attributes;
 
-	const innerClasses = classnames(
-			'wp-block-ainoblocks-multiple-buttons__inner', {
-			'has-margins': items > 1,
-			'stretch': fullWidth ? fullWidth : undefined,
-		}
-	);
-
 	const buttonsClasses = classnames(classnames, flexDirection, {});
 
 	const blockProps = useBlockProps.save( {
 		className: buttonsClasses,
 	} );
+	const innerBlocksProps = useInnerBlocksProps.save( blockProps );
 
 	return (
-		<div { ...blockProps }>
-			<div className={innerClasses}>
-				<InnerBlocks.Content />
-			</div>
-		</div>
+		<div {...innerBlocksProps} />
 	);
 }
