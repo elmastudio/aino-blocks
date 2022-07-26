@@ -17,9 +17,10 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Let's socialize
 
 -   [Download the Aino theme WordPress.org](https://wordpress.org/themes/aino/)
--   [Follow us on Twitter](https://twitter.com/ainoblocks)
--   [Follow us on Insta](https://www.instagram.com/ainoblocks/)
+-   [Get updates on Twitter](https://twitter.com/ainoblocks)
+-   [Watch tutorials on YouTube]([https://twitter.com/ainoblocks](https://www.youtube.com/channel/UCghI7dxtX19kG4ecfuNNOfw))
 -   [Join the conversation on Slack](https://ainoblocks.slack.com/)
+-   [Follow us on Insta](https://www.instagram.com/ainoblocks/)
 
 ### Installation
 
@@ -32,11 +33,22 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 =======
 
 ### 1.10.0  
+Release date: July 26, 2022  
+
+Enhance: Block type registering.  
+Enhance: Flexbox settings.  
+Enhance: Multiple Buttons block use useInnerBlocksProps.  
+
+### 1.10.0  
+Release date: July 4, 2022  
+
 Enhance: Icon block with new icon.  
 Enhance: Grid Container block use useInnerBlocksProps.  
 Enhance: Flexbox block use useInnerBlocksProps.  
 
 ### 1.9.2  
+Release date: June 19, 2022  
+
 Enhance: New block icons.  
 Enhance: Plugin name and description.  
 Enhance: Add upgrade button to plugin list view.  
@@ -45,10 +57,14 @@ Enhance: Card shadows.
 Enhance: Remove Icon Button block from Block collection. The block will be rebuild into a single block.  
   
 ### 1.9.1  
+Release date: April 25, 2022  
+
 Enhance: Gradient background for Flexbox Item block.  
 Bugfix: Flexbox issue in header in editor view.  
 
 ### 1.9.0  
+Release date: April 6, 2022  
+
 New: Icon block (sinple first version, block will be improved in future updates).  
 New: Profile Image block (Author block child).  
 New: Grid Item block responsive margins left and right.  
