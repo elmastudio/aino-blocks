@@ -30,7 +30,7 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
-### 1.10.0  
+### 1.11.0  
 Release date: July 26, 2022  
 
 Enhance: Block type registering.  
