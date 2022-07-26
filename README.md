@@ -2,7 +2,7 @@
 	
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/elmastudio/aino-blocks) [![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg)](https://github.com/elmastudio/aino-blocks/blob/master/LICENSE)
 
-[Aino](https://ainoblocks.io/) is a WordPress editor block collection for page building. It's recommended to use Aino blocks in combination with the free [Aino theme](https://wordpress.org/themes/aino/).
+[AinoBlocks](https://ainoblocks.io/) is a WordPress editor block collection for page building. It's recommended to use Aino blocks in combination with the free [Aino theme](https://wordpress.org/themes/aino/).
 
 __Contributors:__ elmastudio  
 __Tags:__ page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks   
