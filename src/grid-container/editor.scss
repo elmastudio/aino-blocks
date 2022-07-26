@@ -1,0 +1,23 @@
+.ab-grid-block {
+
+	&.is-selected,
+	&.has-child-selected {
+		background:
+	linear-gradient(#EF4444, #EF4444) 100% 1px / 1px,
+	linear-gradient(#EF4444, #EF4444) 91.6666666% 1px / 1px,
+	linear-gradient(#EF4444, #EF4444) 83.333333333333334% 1px / 1px,
+	linear-gradient(#EF4444, #EF4444) 75.000000003333334% 1px / 1px,
+	linear-gradient(#EF4444, #EF4444) 66.666666673333334% 1px / 1px,
+	linear-gradient(#EF4444, #EF4444) 58.333333343333334% 1px / 1px,
+	linear-gradient(#EF4444, #EF4444) 50.000000013333334% 1px / 1px,
+	linear-gradient(#EF4444, #EF4444) 41.666666683333334% 1px / 1px,
+	linear-gradient(#EF4444, #EF4444) 33.333333353333334% 1px / 1px,
+	linear-gradient(#EF4444, #EF4444) 25.000000023333334% 1px / 1px,
+	linear-gradient(#EF4444, #EF4444) 16.666666693333334% 1px / 1px,
+	linear-gradient(#EF4444, #EF4444) 8.333333363333334% 1px / 1px,
+	linear-gradient(#EF4444, #EF4444) 0% 1px / 1px,
+	linear-gradient(#EF4444, #EF4444) 1px 100% / 100% 1px,
+	linear-gradient(#EF4444, #EF4444) 1px 0% / 100% 1px;
+	background-repeat: no-repeat;
+	}
+}

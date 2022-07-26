@@ -1,0 +1,29 @@
+{
+  "apiVersion": 2,
+  "name": "ainoblocks/testimonial",
+  "title": "Testimonial",
+  "version": "1.0.0",
+  "category": "ainoblocks",
+  "description": "Insert a testimonial or review with the option to add author information.",
+  "keywords": [
+    "ainoblocks",
+    "testimonial",
+    "quote",
+    "feedback"
+  ],
+  "textdomain": "ainoblocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "style": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

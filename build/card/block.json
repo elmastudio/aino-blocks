@@ -1,0 +1,91 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "ainoblocks/card",
+  "title": "Card",
+  "version": "1.0.0",
+  "category": "ainoblocks",
+  "description": "Insert a card to highlight important content such as quotes or special notices. The card has a box style format that can be customised.",
+  "keywords": [
+    "ainoblocks",
+    "card",
+    "container",
+    "wrapper",
+    "box"
+  ],
+  "textdomain": "ainoblocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "align": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "borderColor": {
+      "type": "string"
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 0
+    },
+    "shadowName": {
+      "type": "string",
+      "default": "shadow-none"
+    },
+    "paddingTop": {
+      "type": "number",
+      "default": 7
+    },
+    "paddingBottom": {
+      "type": "number",
+      "default": 7
+    },
+    "paddingLeft": {
+      "type": "number",
+      "default": 7
+    },
+    "paddingRight": {
+      "type": "number",
+      "default": 7
+    },
+    "borderTopWidth": {
+      "type": "number",
+      "default": 0
+    },
+    "borderRightWidth": {
+      "type": "number",
+      "default": 0
+    },
+    "borderBottomWidth": {
+      "type": "number",
+      "default": 0
+    },
+    "borderLeftWidth": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "supports": {
+    "spacing": {
+      "margin": false,
+      "padding": false
+    },
+    "color": {
+      "gradients": true,
+      "text": false
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": false,
+      "style": true,
+      "width": false
+    },
+    "align": [
+      "wide",
+      "full"
+    ]
+  }
+}

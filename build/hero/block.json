@@ -1,0 +1,84 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "ainoblocks/hero",
+  "title": "Hero",
+  "version": "1.0.0",
+  "category": "ainoblocks",
+  "description": "A hero block.",
+  "keywords": [
+    "hero",
+    "cta",
+    "feature",
+    "ainoblocks"
+  ],
+  "textdomain": "ainoblocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "customBackgroundColor": {
+      "type": "string"
+    },
+    "mediaAlt": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "figure img",
+      "attribute": "alt",
+      "default": ""
+    },
+    "mediaPosition": {
+      "type": "string"
+    },
+    "mediaHeight": {
+      "type": "boolean",
+      "default": false
+    },
+    "mediaId": {
+      "type": "number"
+    },
+    "mediaUrl": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "figure video,figure img",
+      "attribute": "src"
+    },
+    "mediaType": {
+      "type": "string"
+    },
+    "mediaWidth": {
+      "type": "number",
+      "default": "50"
+    },
+    "verticalContentAlignment": {
+      "type": "string"
+    },
+    "imageFill": {
+      "type": "boolean"
+    },
+    "contentGridColumnStart": {
+      "type": "number"
+    },
+    "contentGridColumnEnd": {
+      "type": "number"
+    },
+    "mediaGridColumnStart": {
+      "type": "number"
+    },
+    "mediaGridColumnEnd": {
+      "type": "number"
+    }
+  },
+  "supports": {
+    "align": [
+      "full"
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "ainoblocks/button",
+  "title": "Button",
+  "description": "A single button within a Buttons block.",
+  "version": "1.0.0",
+  "category": "ainoblocks",
+  "parent": [
+    "ainoblocks/multiple-buttons"
+  ],
+  "keywords": [
+    "ainoblocks",
+    "button",
+    "link",
+    "cta",
+    "buttons"
+  ],
+  "textdomain": "ainoblocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "url": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "href"
+    },
+    "title": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "title"
+    },
+    "text": {
+      "type": "string",
+      "source": "html",
+      "selector": "a"
+    },
+    "linkTarget": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "target"
+    },
+    "rel": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "rel"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string",
+      "default": "size__m"
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 0
+    },
+    "borderWidth": {
+      "type": "number"
+    },
+    "uppercase": {
+      "type": "boolean",
+      "default": false
+    },
+    "gradient": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "color": {
+      "gradients": true,
+      "__experimentalDefaultControls": {
+        "background": true,
+        "text": true
+      }
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "style": true,
+      "radius": false,
+      "width": false
+    },
+    "spacing": {
+      "margin": true,
+      "__experimentalDefaultControls": {
+        "margin": true
+      }
+    }
+  }
+}

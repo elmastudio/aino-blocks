@@ -1,22 +1,22 @@
 <?php
- /**
- * Plugin Name:       AinoBlocks - Essential Gutenberg Page Builder Blocks
+/**
+ * Plugin Name:       AinoBlocks - Gutenberg Page Builder Blocks
  * Plugin URI:        https://ainoblocks.io/
- * Description:       A collection of page builder blocks for professional WordPress websites.
+ * Description:       A collection of page builder blocks to build professional WordPress websites.
  * Requires at least: 5.9
  * Tested up to:      6.0
  * Requires PHP:      7.0
- * Version:           1.10.0
+ * Version:           1.11.0
  * Author:            Elma Studio
  * Author URI:        https://elmastudio.de/en/
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       ainoblocks
  *
- * @package           ainoblocks
+ * @package            ainoblocks
  */
 
-/**
+ /**
  * Exit if accessed directly.
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,23 +26,89 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define most essential constants.
  */
-define( 'AINOBLOCKS_VERSION', '1.10.0' );
-define( 'AINOBLOCKS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'AINOBLOCKS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'AINOBLOCKS_VERSION', '1.11.0' );
+define( 'AINOBLOCKS_DIR', plugin_dir_path( __FILE__ ) );
+define( 'AINOBLOCKS_URL', plugin_dir_url( __FILE__ ) );
+
+ /**
+ * Registers the custom block category
+ */
+add_filter( 'block_categories_all', function( $categories, $post ) {
+	return array_merge(
+		$categories,
+		array(
+			array(
+				'slug'  => 'ainoblocks',
+				'title' => 'AinoBlocks',
+			),
+		)
+	);
+}, 10, 2 );
 
 /**
- * Enqueue JS and CSS.
+ * Registers the blocks
  */
-require_once AINOBLOCKS_PLUGIN_DIR . '/lib/enqueue-scripts.php';
+function create_block_ainoblocks_block_init() {
 
-/**
- * Add CTA link to plugin list
- */
-add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'add_action_links' );
-
-function add_action_links ( $links ) {
- $mylinks = array(
- '<a href="https://ainoblocks.io/pricing/" target="_blank">Upgrade</a>',
- );
-return array_merge( $links, $mylinks );
+	register_block_type( __DIR__ . '/build/testimonial' );
+	register_block_type( __DIR__ . '/build/sticker' );
+	register_block_type( __DIR__ . '/build/button' );
+	register_block_type( __DIR__ . '/build/multiple-buttons' );
+	register_block_type( __DIR__ . '/build/icon' );
+	register_block_type( __DIR__ . '/build/hero' );
+	register_block_type( __DIR__ . '/build/grid-item' );
+	register_block_type( __DIR__ . '/build/grid-container' );
+	register_block_type( __DIR__ . '/build/flexbox' );
+	register_block_type( __DIR__ . '/build/flex-item' );
+	register_block_type( __DIR__ . '/build/divider' );
+	register_block_type( __DIR__ . '/build/card' );
+	register_block_type( __DIR__ . '/build/author' );
+	register_block_type( __DIR__ . '/build/profile-image' );
+	register_block_type( __DIR__ . '/build/badge' );
 }
+
+add_action( 'init', 'create_block_ainoblocks_block_init' );
+
+/**
+ * Enqueue editor assets
+ */
+function ainoblocks_editor_assets() {
+
+	$filters_path = '/assets/js/filters.js';
+	$editor_style_path = '/assets/css/editor.css';
+
+	// Enqueue the bundled block JS file.
+	wp_enqueue_script(
+		'ainoblocks-js',
+		plugin_dir_url( __FILE__ ) . 'assets/js/filters.js',
+		[ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor' ],
+		filemtime( AINOBLOCKS_DIR . $filters_path ),
+		true
+	);
+
+	// Enqueue editor only styles.
+	wp_enqueue_style(
+		'ainoblocks-editor-style',
+		plugin_dir_url( __FILE__ ) . 'assets/css/editor.css',
+		[],
+		filemtime( AINOBLOCKS_DIR . $editor_style_path )
+	);
+}
+
+add_action( 'enqueue_block_editor_assets', 'ainoblocks_editor_assets' );
+
+
+/**
+ * Enqueue frontend CSS
+ */
+function ainoblocks_frontend_assets() {
+	$frontend_style_path = '/assets/css/frontend.css';
+
+	wp_enqueue_style(
+	  'ainoblocks-frontend-style',
+	  plugin_dir_url( __FILE__ ) . 'assets/css/frontend.css',
+	  null,
+	  filemtime( AINOBLOCKS_DIR . $frontend_style_path )
+	);
+  }
+add_action( 'enqueue_block_assets', 'ainoblocks_frontend_assets' );

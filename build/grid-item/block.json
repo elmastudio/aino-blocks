@@ -1,0 +1,128 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "ainoblocks/grid-item",
+  "title": "Grid Item",
+  "version": "1.0.0",
+  "category": "ainoblocks",
+  "description": "A grid item in a grid container block.",
+  "keywords": [
+    "grid",
+    "container",
+    "columns",
+    "layout",
+    "aino",
+    "ainoblocks"
+  ],
+  "parent": [
+    "ainoblocks/grid-container"
+  ],
+  "textdomain": "ainoblocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "gridColumnStartDesktop": {
+      "type": "number",
+      "default": "1"
+    },
+    "gridColumnEndDesktop": {
+      "type": "number",
+      "default": "7"
+    },
+    "gridColumnStartTablet": {
+      "type": "number",
+      "default": "1"
+    },
+    "gridColumnEndTablet": {
+      "type": "number",
+      "default": "7"
+    },
+    "gridColumnStartMobile": {
+      "type": "number",
+      "default": "1"
+    },
+    "gridColumnEndMobile": {
+      "type": "number",
+      "default": "7"
+    },
+    "alignItem": {
+      "type": "string",
+      "default": "start"
+    },
+    "justifyItem": {
+      "type": "string",
+      "default": "start"
+    },
+    "stackOrder": {
+      "type": "number"
+    },
+    "stacking": {
+      "type": "boolean",
+      "default": false
+    },
+    "gutter": {
+      "type": "boolean",
+      "default": true
+    },
+    "overlapLeft": {
+      "type": "boolean",
+      "default": false
+    },
+    "overlapRight": {
+      "type": "boolean",
+      "default": false
+    },
+    "marginTopDesktop": {
+      "type": "number"
+    },
+    "marginRightDesktop": {
+      "type": "number"
+    },
+    "marginBottomDesktop": {
+      "type": "number"
+    },
+    "marginLeftDesktop": {
+      "type": "number"
+    },
+    "marginTopTablet": {
+      "type": "number"
+    },
+    "marginRightTablet": {
+      "type": "number"
+    },
+    "marginBottomTablet": {
+      "type": "number"
+    },
+    "marginLeftTablet": {
+      "type": "number"
+    },
+    "marginTopMobile": {
+      "type": "number"
+    },
+    "marginRightMobile": {
+      "type": "number"
+    },
+    "marginBottomMobile": {
+      "type": "number"
+    },
+    "marginLeftMobile": {
+      "type": "number"
+    }
+  },
+  "supports": {
+    "color": {
+      "gradients": true,
+      "text": false,
+      "__experimentalDefaultControls": {
+        "background": true
+      }
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "width": true,
+      "style": false,
+      "radius": false
+    }
+  }
+}
