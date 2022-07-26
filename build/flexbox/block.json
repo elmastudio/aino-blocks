@@ -1,0 +1,104 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "ainoblocks/flexbox",
+  "title": "Flexbox",
+  "description": "Flexbox container. Use the Flex Item block as child blocks.",
+  "version": "1.0.0",
+  "category": "ainoblocks",
+  "keywords": [
+    "flexbox",
+    "flex",
+    "container",
+    "wrapper",
+    "box",
+    "ainoblocks"
+  ],
+  "textdomain": "ainoblocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "supports": {
+    "anchor": true,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "color": {
+      "text": false,
+      "gradients": true
+    }
+  },
+  "attributes": {
+    "align": {
+      "type": "string"
+    },
+    "flexDirectionDesktop": {
+      "type": "string",
+      "default": "direction__row__d"
+    },
+    "flexDirectionTablet": {
+      "type": "string",
+      "default": "direction__row__t"
+    },
+    "flexDirectionMobile": {
+      "type": "string",
+      "default": "direction__row__m"
+    },
+    "flexWrapDesktop": {
+      "type": "string",
+      "default": "nowrap__d"
+    },
+    "flexWrapTablet": {
+      "type": "string",
+      "default": "nowrap_t"
+    },
+    "flexWrapMobile": {
+      "type": "string",
+      "default": "nowrap_m"
+    },
+    "justifyContentDesktop": {
+      "type": "string",
+      "default": "justify__flexstart__d"
+    },
+    "justifyContentTablet": {
+      "type": "string",
+      "default": "justify__flexstart__t"
+    },
+    "justifyContentMobile": {
+      "type": "string",
+      "default": "justify__flexstart__m"
+    },
+    "alignItemsDesktop": {
+      "type": "string",
+      "default": "align-items__stretch__d"
+    },
+    "alignItemsTablet": {
+      "type": "string",
+      "default": "align-items__stretch__t"
+    },
+    "alignItemsMobile": {
+      "type": "string",
+      "default": "align-itms__stretch__m"
+    },
+    "alignContentDesktop": {
+      "type": "string",
+      "default": "align-cont__stretch__d"
+    },
+    "alignContentTablet": {
+      "type": "string",
+      "default": "align-cont__stretch__t"
+    },
+    "alignContentMobile": {
+      "type": "string",
+      "default": "align-cont__stretch__m"
+    },
+    "shadowName": {
+      "type": "string",
+      "default": "shadow-none"
+    },
+    "position": {
+      "type": "string"
+    }
+  }
+}

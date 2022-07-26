@@ -2,56 +2,24 @@
 	"name": "ainoblocks",
 	"version": "1.11.0",
 	"title": "AinoBlocks - Essential Gutenberg Page Builder Blocks",
-	"description": "A collection of page builder blocks for professional WordPress websites.",
-	"tested_up_to": "6.0",
+	"author": "elmastudio",
 	"license": "GPL-2.0-or-later",
-	"author": "Elmastudio",
-	"repository": "elmastudio/aino-blocks",
-	"homepage": "https://ainoblocks.io",
-	"bugs": {
-		"url": "https://github.com/elmastudio/aino-blocks/issues"
-	},
-	"main": "scr/blocks.js",
+	"main": "build/index.js",
 	"scripts": {
-		"dev": "webpack --mode development",
-		"prod": "webpack --mode production",
 		"build": "wp-scripts build",
-		"start": "wp-scripts start",
-		"check-engines": "wp-scripts check-engines",
-		"check-licenses": "wp-scripts check-licenses",
+		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
-		"lint:pkg-json": "wp-scripts lint-pkg-json",
-		"test:e2e": "wp-scripts test-e2e",
-		"test:unit": "wp-scripts test-unit-js"
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@babel/cli": "^7.17.10",
-		"@babel/preset-env": "^7.18.2",
-		"@wordpress/babel-preset-default": "^6.13.0",
-		"@wordpress/scripts": "^23.3.0",
-		"babel-core": "^6.26.3",
-		"babel-eslint": "^8.2.3",
-		"babel-loader": "^8.2.5",
-		"babel-plugin-lodash": "^3.3.4",
-		"classnames": "^2.3.1",
-		"clean-webpack-plugin": "^0.1.18",
-		"cross-env": "^7.0.3",
-		"css-loader": "^6.7.1",
-		"eslint": "^8.17.0",
-		"memize": "^1.1.0",
-		"mini-css-extract-plugin": "^2.6.1",
-		"node-sass": "^7.0.1",
-		"postcss": "^8.4.14",
-		"postcss-loader": "^7.0.0",
-		"raw-loader": "^4.0.2",
-		"sass-loader": "^13.0.0",
-		"style-loader": "^3.3.1",
-		"webpack": "^5.73.0"
+		"@wordpress/babel-preset-default": "^6.15.0",
+		"@wordpress/scripts": "^23.5.0"
 	},
 	"dependencies": {
-		"@types/lodash.memoize": "^4.1.7",
-		"lodash": "^4.17.21",
+		"classnames": "^2.3.1",
 		"memize": "^1.1.0"
 	}
 }

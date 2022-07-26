@@ -1,0 +1,99 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "ainoblocks/sticker",
+  "title": "Sticker",
+  "version": "1.0.0",
+  "category": "ainoblocks",
+  "description": "A circle sticker with a text slogan to highlight featured elements.",
+  "keywords": [
+    "ainoblocks",
+    "sticker",
+    "feature",
+    "badge",
+    "highlight"
+  ],
+  "textdomain": "ainoblocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "url": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "href"
+    },
+    "title": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "title"
+    },
+    "text": {
+      "type": "string",
+      "source": "html",
+      "selector": "a"
+    },
+    "linkTarget": {
+      "type": "string",
+      "default": "_self"
+    },
+    "rel": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "rel"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "stickerSize": {
+      "type": "number",
+      "default": 7
+    },
+    "fontSize": {
+      "type": "string",
+      "default": "font__m"
+    },
+    "borderRadius": {
+      "type": "number",
+      "default": 100
+    },
+    "borderWidth": {
+      "type": "number"
+    },
+    "uppercase": {
+      "type": "boolean",
+      "default": false
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
+    },
+    "borderColor": {
+      "type": "string"
+    },
+    "gradient": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "opensInNewTab": {
+      "type": "boolean"
+    },
+    "rotate": {
+      "type": "string"
+    },
+    "rotateStart": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "supports": {
+    "anchor": true
+  }
+}

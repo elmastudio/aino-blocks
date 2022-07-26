@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "name": "ainoblocks/grid-container",
+  "apiVersion": 2,
+  "title": "Grid",
+  "description": "A responsive grid container. Arrange multiple grid items on the grid to build flexible layouts.",
+  "version": "1.0.0",
+  "category": "ainoblocks",
+  "keywords": [
+    "grid",
+    "container",
+    "columns",
+    "layout",
+    "aino",
+    "ainoblocks"
+  ],
+  "textdomain": "ainoblocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "wide"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "items": {
+      "type": "number",
+      "default": "1"
+    },
+    "columnGap": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "anchor": true,
+    "html": true,
+    "color": {
+      "gradients": true,
+      "text": false
+    }
+  }
+}

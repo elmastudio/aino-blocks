@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "ainoblocks/author",
+  "version": "1.0.0",
+  "title": "Author",
+  "category": "ainoblocks",
+  "description": "Show a name, a short description text and avatar profile image.",
+  "keywords": [
+    "ainoblocks",
+    "author",
+    "profile",
+    "avatar",
+    "name"
+  ],
+  "textdomain": "ainoblocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "info": {
+      "type": "string"
+    },
+    "infoTextColor": {
+      "type": "string"
+    },
+    "nameTextColor": {
+      "type": "string"
+    },
+    "alignment": {
+      "type": "string"
+    },
+    "layout": {
+      "type": "string"
+    }
+  }
+}

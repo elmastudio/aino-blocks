@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "ainoblocks/divider",
+  "title": "Divider",
+  "description": "A visual divider between sections.",
+  "category": "ainoblocks",
+  "version": "1.0.0",
+  "keywords": [
+    "separator",
+    "divider",
+    "spacer",
+    "icon",
+    "ainoblocks"
+  ],
+  "textdomain": "ainoblocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "backgroundColor": {
+      "type": "string"
+    },
+    "borderColor": {
+      "type": "string"
+    },
+    "iconColor": {
+      "type": "string"
+    },
+    "borderWidth": {
+      "type": "number"
+    }
+  }
+}

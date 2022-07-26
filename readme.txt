@@ -1,19 +1,19 @@
 === AinoBlocks - Gutenberg Page Builder Blocks ===
-Author URI: https://www.elmastudio.de/en
-Plugin URI: https://ainoblocks.io
-Contributors: elmastudio
-Tags: block, WordPress blocks, gutenberg, blocks
+Author URI       : https: //www.elmastudio.de/en
+Plugin URI       : https: //ainoblocks.io
+Contributors     : elmastudio
+Tags             : block, WordPress blocks, gutenberg, blocks
 Requires at least: 5.9
-Tested up to: 6.0
-Stable tag: 1.11.0
-License: GPLv2 or later
-License URI: https: //www.gnu.org/licenses/gpl-2.0.html
+Tested up to     : 6.0
+Stable tag       : 1.11.0
+License          : GPL-2.0-or-later
+License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
 
-A collection of page builder blocks for professional WordPress websites.
+ A collection of page builder blocks to build professional WordPress websites.
 
 == Description ==
 
-The AinoBlocks page builder blocks are a collection of creative blocks for the Gutenberg block editor. With AinoBlocks and our free starter FSE block theme <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino</a> you can create professional websites with ease.
+The AinoBlocks page builder blocks are a collection of page builder blocks for the Gutenberg block editor. With AinoBlocks and our free starter FSE block theme <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino</a> you can create professional websites with ease.
 
 ## Blocks included
 * Grid block
@@ -54,8 +54,9 @@ Yes, you can find the patterns inside the pattern library once you install the A
 
 = 1.11.0 =
 
-Release date: July , 2022
+Release date: July 26, 2022
 
+Enhance: Block type registering.
 Enhance: Flexbox settings.
 Enhance: Multiple Buttons block use useInnerBlocksProps.
 

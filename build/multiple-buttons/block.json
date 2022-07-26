@@ -1,0 +1,43 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "ainoblocks/multiple-buttons",
+  "title": "Buttons",
+  "version": "1.0.0",
+  "category": "ainoblocks",
+  "description": "Multiple buttons in a row or column.",
+  "keywords": [
+    "ainoblocks",
+    "buttons",
+    "contailinkner",
+    "cta",
+    "button"
+  ],
+  "textdomain": "ainoblocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "align": {
+      "type": "string"
+    },
+    "items": {
+      "type": "number",
+      "default": "1"
+    },
+    "flexDirection": {
+      "type": "string"
+    },
+    "fullWidth": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "align": [
+      "left",
+      "right",
+      "center"
+    ]
+  }
+}

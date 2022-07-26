@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "ainoblocks/flex-item",
+  "title": "Flex Item",
+  "version": "1.0.0",
+  "category": "ainoblocks",
+  "description": "Child block inside Flexbox container block.",
+  "keywords": [
+    "flexbox",
+    "flex",
+    "flex item",
+    "child",
+    "box",
+    "ainoblocks"
+  ],
+  "textdomain": "ainoblocks",
+  "parent": [
+    "ainoblocks/flexbox"
+  ],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "supports": {
+    "anchor": true,
+    "color": {
+      "gradients": true,
+      "text": false,
+      "__experimentalDefaultControls": {
+        "background": true
+      }
+    },
+    "__experimentalBorder": {
+      "radius": true
+    }
+  },
+  "attributes": {
+    "flexOrder": {
+      "type": "number"
+    },
+    "flexBasis": {
+      "type": "string"
+    },
+    "flexGrow": {
+      "type": "number"
+    },
+    "flexShrink": {
+      "type": "boolean",
+      "default": false
+    },
+    "alignSelfDesktop": {
+      "type": "string",
+      "default": "auto"
+    },
+    "alignSelfTablet": {
+      "type": "string",
+      "default": "auto"
+    },
+    "alignSelfMobile": {
+      "type": "string",
+      "default": "auto"
+    }
+  }
+}
