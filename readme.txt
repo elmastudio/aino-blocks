@@ -5,11 +5,12 @@ Contributors     : elmastudio
 Tags             : block, WordPress blocks, gutenberg, blocks
 Requires at least: 5.9
 Tested up to     : 6.0
-Stable tag       : 1.11.0
 License          : GPL-2.0-or-later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
+Tags             : blocks, layout, grid, design, block
 
  A collection of page builder blocks to build professional WordPress websites.
+
 
 == Description ==
 
@@ -29,11 +30,13 @@ The AinoBlocks page builder blocks are a collection of page builder blocks for t
 * Sticker block
 * Testimonial block
 
+
 == Installation ==
 
 1. Install the AinoBlocks plugin either via the WordPress plugin directory or by uploading the files to your server at wp-content/plugins.
 2. Activate the AinoBlocks WordPress plugin through the 'Plugins' menu in WordPress.
 3. Use the AinoBlocks blocks on your next page or post.
+
 
 == Frequently Asked Questions ==
 
@@ -49,6 +52,17 @@ After the AinoBlocks plugin is installed, you will see the AinoBlocks blocks col
 
 = Does AinoBlocks come with patterns? =
 Yes, you can find the patterns inside the pattern library once you install the Aino FSE block theme.
+
+
+== Resources ==
+
+AinoBlocks WordPress plugin bundles the following third-party resources:
+
+Phosphor Icons
+Copyright (c) 2020 Phosphor Icons
+License: MIT License, https://raw.githubusercontent.com/phosphor-icons/phosphor-home/master/LICENSE
+Source https://phosphoricons.com/
+
 
 == Changelog ==
 
