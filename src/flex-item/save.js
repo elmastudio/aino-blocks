@@ -7,8 +7,8 @@ import classnames from 'classnames';
  * WordPress dependencies
  */
 import {
-	InnerBlocks,
-	useBlockProps
+	useBlockProps,
+	useInnerBlocksProps,
 } from '@wordpress/block-editor';
 
 export default function save( { attributes } ) {
@@ -45,10 +45,10 @@ export default function save( { attributes } ) {
 		style: flexItemStyles,
 	} );
 
+	const innerBlocksProps = useInnerBlocksProps.save( blockProps );
+
 	return (
 
-		<div { ...blockProps }>
-			<InnerBlocks.Content />
-		</div >
+		<div {...innerBlocksProps} />
 	);
 }

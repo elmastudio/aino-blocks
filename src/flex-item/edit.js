@@ -17,9 +17,9 @@ import {
 } from '@wordpress/components';
 import {
 	InspectorControls,
-	InnerBlocks,
 	useBlockProps,
 	useSetting,
+	useInnerBlocksProps,
 } from '@wordpress/block-editor';
 import { Fragment } from '@wordpress/element';
 import { __, _x } from '@wordpress/i18n';
@@ -105,6 +105,8 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 		className: flexItemClasses,
 		style: flexItemStyles,
 	} );
+
+	const innerBlocksProps = useInnerBlocksProps( blockProps, {} );
 
 	return (
 		<Fragment>
@@ -210,9 +212,7 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 				</PanelBody>
 			</InspectorControls>
 
-			<div { ...blockProps }>
-				<InnerBlocks />
-			</div>
+			<div { ...innerBlocksProps } />
 		</Fragment>
 	);
 }

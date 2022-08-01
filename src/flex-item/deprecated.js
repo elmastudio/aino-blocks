@@ -61,20 +61,23 @@ const deprecated = [
 				alignSelfMobile,
 				{
 			});
+
+			const flexBasisWithUnit = Number.isFinite( flexBasis ) ? flexBasis + '%' : flexBasis;
 		
 			const flexItemStyles = {
 				order: flexOrder ? flexOrder : undefined,
 				flexGrow: flexGrow ? flexGrow : undefined,
-				flexBasis: flexBasis ? flexBasis + 'px' : undefined,
+				flexBasis: flexBasisWithUnit ? flexBasisWithUnit : undefined,
 				flexShrink: flexShrink ? "0" : undefined,
 			};
-		
+
 			const blockProps = useBlockProps.save( {
 				className: flexItemClasses,
 				style: flexItemStyles,
 			} );
-
+		
 			return (
+		
 				<div { ...blockProps }>
 					<InnerBlocks.Content />
 				</div >
