@@ -1,0 +1,68 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "ainoblocks/accordion-faq-block",
+  "version": "1.1.3",
+  "title": "Accordion FAQ Block",
+  "category": "ainoblocks",
+  "description": "Create Frequently Asked Question's and Accordion toggles with Aino's Accordion and FAQ Block",
+  "keywords": [
+    "faq",
+    "accordion",
+    "Q&A",
+    "toggle",
+    "aino",
+    "ainoblocks"
+  ],
+  "textdomain": "ainoblocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "backgroundColor": {
+      "type": "string"
+    },
+    "borderRadius": {
+      "type": "string"
+    },
+    "iconPosition": {
+      "type": "string",
+      "default": "icon__right"
+    },
+    "border": {
+      "type": "boolean",
+      "default": false
+    },
+    "question": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "anchor": true,
+    "color": {
+      "gradients": true,
+      "text": true
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "width": true,
+      "radius": false,
+      "style": false
+    }
+  },
+  "styles": [
+    {
+      "name": "faq",
+      "label": "FAQ",
+      "isDefault": true
+    },
+    {
+      "name": "toggle",
+      "label": "Content Toggle"
+    }
+  ]
+}

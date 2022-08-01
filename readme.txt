@@ -66,6 +66,13 @@ Source https://phosphoricons.com/
 
 == Changelog ==
 
+= 1.12.0 =
+
+Release date: August , 2022
+
+New: Accordion/FAQ block added to blocks collection.
+Bugfix: Hide left,right and top borders if bottom border is set.
+
 = 1.11.0 =
 
 Release date: July 26, 2022
