@@ -19,6 +19,7 @@ import './style.scss';
 /**
  * Internal dependencies
  */
+import deprecated from './deprecated';
 import icon from './icon';
 import Edit from './edit';
 import save from './save';
@@ -31,4 +32,5 @@ registerBlockType( metadata.name, {
 	icon,
 	edit: Edit,
 	save,
+	deprecated,
 } );

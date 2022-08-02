@@ -7,7 +7,7 @@ import classnames from 'classnames';
  * WordPress dependencies
  */
 import {
-	InnerBlocks,
+	useInnerBlocksProps,
 	useBlockProps,
 } from '@wordpress/block-editor';
 
@@ -86,9 +86,9 @@ export default function save({ attributes, className }) {
 		className: classNames,
 	} );
 
+	const innerBlocksProps = useInnerBlocksProps.save( blockProps );
+
 	return (
-		<div { ...blockProps }>
-			< InnerBlocks.Content />
-		</div >
+		<div {...innerBlocksProps} />
 	);
 }

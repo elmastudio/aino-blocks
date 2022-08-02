@@ -18,8 +18,8 @@ import {
 } from '@wordpress/compose';
 import {
 	InspectorControls,
-	InnerBlocks,
 	useBlockProps,
+	useInnerBlocksProps,
 } from '@wordpress/block-editor';
 import { Fragment } from '@wordpress/element';
 import { __, _x } from '@wordpress/i18n';
@@ -112,6 +112,10 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 
 		const blockProps = useBlockProps( {
 			className: classNames,
+		} );
+
+		const innerBlocksProps = useInnerBlocksProps( blockProps, {
+			templateLock: false,
 		} );
 
 		return (
@@ -445,11 +449,7 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 					</PanelBody>
 				</InspectorControls>
 
-				<div { ...blockProps }>
-					<InnerBlocks
-						templateLock={ false }
-					/>
-				</div>
+				<div { ...innerBlocksProps } />
 			</Fragment>
 		);
 }
@@ -507,10 +507,10 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			[`col_end_m__${gridColumnEndMobile}`]: gridColumnEndMobile,
 			[`align-self__${alignItem}`]: alignItem,
 			[`justify-self__${justifyItem}`]: justifyItem,
-			'no-gutter': ! gutter,
 			'no-stacking': ! stacking,
 			'has-stacking': stacking === true && stackOrder ? stackOrder : undefined,
 			[`stack-order__${stackOrder}`]: stacking === true && stackOrder ? stackOrder : undefined,
+			'no-gutter': ! gutter,
 			'overlap-left': overlapLeft,
 			'overlap-right': overlapRight,
 			[`mt_d__${marginTopDesktop}`] : marginTopDesktop ? marginTopDesktop : undefined,
