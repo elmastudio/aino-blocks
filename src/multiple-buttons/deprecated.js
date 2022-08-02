@@ -46,7 +46,9 @@ const deprecated = [
 				}
 			);
 
-			const buttonsClasses = classnames(classnames, flexDirection, {});
+			const buttonsClasses = classnames(classnames, flexDirection,`align${align}`, {
+				'stretch': fullWidth ? fullWidth : undefined,
+			});
 
 			const blockProps = useBlockProps.save( {
 				className: buttonsClasses,

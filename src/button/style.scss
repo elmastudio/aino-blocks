@@ -1,11 +1,11 @@
 .wp-block-ainoblocks-button {
-	background-color: #000;
+	background: #000;
 	color: #fff;
 	border: 0px solid;
 
 	&.is-style-outline,
 	&.is-style-outline.has-border-color {
-		background-color: transparent;
+		background: transparent;
 		color: #000;
 		border-width: 1px;
 		border-style: solid;
@@ -69,7 +69,7 @@
 		}
 
 		&.has-link-bg:hover {
-			background-color: transparent !important;
+			background: transparent !important;
 		}
 
 		&.aligncenter {
