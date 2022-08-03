@@ -50,7 +50,23 @@
       "type": "string",
       "default": "start"
     },
+    "alignItemTablet": {
+      "type": "string",
+      "default": "start"
+    },
+    "alignItemMobile": {
+      "type": "string",
+      "default": "start"
+    },
     "justifyItem": {
+      "type": "string",
+      "default": "start"
+    },
+    "justifyItemTablet": {
+      "type": "string",
+      "default": "start"
+    },
+    "justifyItemMobile": {
       "type": "string",
       "default": "start"
     },
