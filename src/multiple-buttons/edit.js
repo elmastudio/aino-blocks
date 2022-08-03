@@ -12,6 +12,7 @@ import {
 	PanelBody,
 	SelectControl,
 	ToggleControl,
+	TabPanel,
 } from '@wordpress/components';
 import {
 	InspectorControls,
@@ -20,6 +21,13 @@ import {
 } from '@wordpress/block-editor';
 import { Fragment } from '@wordpress/element';
 import { __, _x } from '@wordpress/i18n';
+
+/**
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * Those files can contain any CSS code that gets applied to the editor.
+ *
+ */
+import './editor.scss';
 
 /**
  * Constants
@@ -40,24 +48,49 @@ const getCount = memoize((count) => {
 /**
  * Block edit function
  */
-export default function MultipleButtonsEdit( { attributes, setAttributes, className } ) {
+export default function MultipleButtonsEdit( { attributes, setAttributes, className, onSelect } ) {
 
 	const {
-		align,
 		items,
 		flexDirection,
+		flexDirectionTablet,
+		flexDirectionMobile,
 		fullWidth,
+		fullWidthTablet,
+		fullWidthMobile,
+		gapDesktop,
+		gapTablet,
+		gapMobile,
 	} = attributes;
 
 	const flexDirectionOptions = [
-		{ value: "direction__row", label   : __('row', 'ainoblocks') },
-		{ value: "direction__rowrev", label: __('row-reverse', 'ainoblocks') },
-		{ value: "direction__col", label   : __('column', 'ainoblocks') },
-		{ value: "direction__colrev", label: __('column-reverse', 'ainoblocks') }
+		{ value: "d__row", label   : __('row', 'ainoblocks') },
+		{ value: "d__rowrev", label: __('row-reverse', 'ainoblocks') },
+		{ value: "d__col", label   : __('column', 'ainoblocks') },
+		{ value: "d__colrev", label: __('column-reverse', 'ainoblocks') }
 	];
 
-	const buttonsClasses = classnames(className, flexDirection, `align${align}`, {
-		'stretch': fullWidth ? fullWidth : undefined,
+	const flexTabletOptions = [
+		{ value: "t__row", label   : __('row', 'ainoblocks') },
+		{ value: "t__rowrev", label: __('row-reverse', 'ainoblocks') },
+		{ value: "t__col", label   : __('column', 'ainoblocks') },
+		{ value: "t__colrev", label: __('column-reverse', 'ainoblocks') }
+	];
+
+	const flexMobileOptions = [
+		{ value: "m__row", label   : __('row', 'ainoblocks') },
+		{ value: "m__rowrev", label: __('row-reverse', 'ainoblocks') },
+		{ value: "m__col", label   : __('column', 'ainoblocks') },
+		{ value: "m__colrev", label: __('column-reverse', 'ainoblocks') }
+	];
+
+	const buttonsClasses = classnames(className, flexDirectionMobile, flexDirectionTablet, flexDirection, {
+		'm__stretch': fullWidthMobile ? fullWidthMobile : undefined,
+		't__stretch': fullWidthTablet ? fullWidthTablet : undefined,
+		'd__stretch': fullWidth ? fullWidth : undefined,
+		'm__gap': gapMobile ? gapMobile : undefined,
+		't__gap': gapTablet ? gapTablet : undefined,
+		'd__gap': gapDesktop ? gapDesktop : undefined,
 	});
 
 	const blockProps = useBlockProps( { className: buttonsClasses } );
@@ -72,19 +105,105 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 	return (
 		<Fragment>
 			<InspectorControls>
-				<PanelBody title={__('Buttons settings', 'ainoblocks')}>
-					<SelectControl
-						label={__("Flex Direction", "ainoblocks")}
-						value={flexDirection}
-						options={flexDirectionOptions}
-						onChange={flexDirection => setAttributes({ flexDirection })}
-					/>
-					<ToggleControl
-						label={__('Inner buttons 100% width', 'ainoblocks')}
-						checked={!!fullWidth}
-						onChange={() => setAttributes({ fullWidth: !fullWidth })}
-						help={!!fullWidth ? __('Inner buttons are 100% width.', 'ainoblocks') : __('Toggle for inner buttons with 100% width.', 'ainoblocks')}
-					/>
+			<PanelBody title={__('Buttons settings', 'ainoblocks')}>
+			<TabPanel className="aino-device-panel"
+							activeClass="is-active"
+							initialTabName="desktop"
+							onSelect={ onSelect }
+							tabs={ [
+								{
+									name: 'desktop',
+									title: 'Desktop',
+									className: 'device-d',
+								},
+								{
+									name: 'tablet',
+									title: 'Tablet',
+									className: 'device-t',
+								},
+								{
+									name: 'mobile',
+									title: 'Mobile',
+									className: 'device-m',
+								},
+							] }>
+							{
+								( tab ) => {
+									switch ( tab.name ) {
+										case 'desktop':
+											return (
+												<Fragment>
+													<SelectControl
+														label={__("Flex Direction", "ainoblocks")}
+														value={flexDirection}
+														options={flexDirectionOptions}
+														onChange={flexDirection => setAttributes({ flexDirection })}
+													/>
+													<ToggleControl
+														label={__('Inner buttons 100% width', 'ainoblocks')}
+														checked={!!fullWidth}
+														onChange={() => setAttributes({ fullWidth: !fullWidth })}
+														help={!!fullWidth ? __('Inner buttons are 100% width.', 'ainoblocks') : __('Toggle for inner buttons with 100% width.', 'ainoblocks')}
+													/>
+													<ToggleControl
+														label={__('Flexbox gap', 'ainoblocks')}
+														checked={!!gapDesktop}
+														onChange={() => setAttributes({ gapDesktop: !gapDesktop })}
+														help={!!gapDesktop ? __('16px gap added.', 'ainoblocks') : __('Toggle for 16px gap between buttons.', 'ainoblocks')}
+													/>
+												</Fragment>
+											);
+										case 'tablet':
+											return [
+												<Fragment>
+													<SelectControl
+														label={__("Flex Direction", "ainoblocks")}
+														value={flexDirectionTablet}
+														options={flexTabletOptions}
+														onChange={flexDirectionTablet => setAttributes({ flexDirectionTablet })}
+													/>
+													<ToggleControl
+														label={__('Inner buttons 100% width', 'ainoblocks')}
+														checked={!!fullWidthTablet}
+														onChange={() => setAttributes({ fullWidthTablet: !fullWidthTablet })}
+														help={!!fullWidthTablet ? __('Inner buttons are 100% width.', 'ainoblocks') : __('Toggle for inner buttons with 100% width.', 'ainoblocks')}
+													/>
+													<ToggleControl
+														label={__('Flexbox gap', 'ainoblocks')}
+														checked={!!gapTablet}
+														onChange={() => setAttributes({ gapTablet: !gapTablet })}
+														help={!!gapTablet ? __('16px gap added.', 'ainoblocks') : __('Toggle for 16px gap between buttons.', 'ainoblocks')}
+													/>
+												</Fragment>
+											];
+										
+										case 'mobile':
+											return [
+												<Fragment>
+													<SelectControl
+														label={__("Flex Direction", "ainoblocks")}
+														value={flexDirectionMobile}
+														options={flexMobileOptions}
+														onChange={flexDirectionMobile => setAttributes({ flexDirectionMobile })}
+													/>
+													<ToggleControl
+														label={__('Inner buttons 100% width', 'ainoblocks')}
+														checked={!!fullWidthMobile}
+														onChange={() => setAttributes({ fullWidthMobile: !fullWidthMobile })}
+														help={!!fullWidthMobile ? __('Inner buttons are 100% width.', 'ainoblocks') : __('Toggle for inner buttons with 100% width.', 'ainoblocks')}
+													/>
+													<ToggleControl
+														label={__('Flexbox gap', 'ainoblocks')}
+														checked={!!gapMobile}
+														onChange={() => setAttributes({ gapMobile: !gapMobile })}
+														help={!!gapMobile ? __('16px gap added.', 'ainoblocks') : __('Toggle for 16px gap between buttons.', 'ainoblocks')}
+													/>
+												</Fragment>
+											];
+									}
+								}
+							}
+						</TabPanel>
 				</PanelBody>
 			</InspectorControls>
 			<div { ...innerBlocksProps } />

@@ -22,7 +22,33 @@
 		"flexDirection": {
 			"type": "string"
 		},
+		"flexDirectionTablet": {
+			"type": "string"
+		},
+		"flexDirectionMobile": {
+			"type": "string"
+		},
 		"fullWidth": {
+			"type": "boolean",
+			"default": false
+		},
+		"fullWidthTablet": {
+			"type": "boolean",
+			"default": false
+		},
+		"fullWidthMobile": {
+			"type": "boolean",
+			"default": false
+		},
+		"gapDesktop": {
+			"type": "boolean",
+			"default": false
+		},
+		"gapTablet": {
+			"type": "boolean",
+			"default": false
+		},
+		"gapMobile": {
 			"type": "boolean",
 			"default": false
 		}
