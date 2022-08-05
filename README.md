@@ -30,6 +30,20 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+
+### 1.12.0  
+Release date: August 5, 2022  
+
+New: Accordion/FAQ block added to blocks collection.  
+New: Buttons block responsive flex direction settings.  
+New: Buttons block responsive flexbox gap settings.  
+New: Grit Item block aligment tablet and mobile settings.  
+Enhance: Grid item block InnerBlocks to useInnerBlocksProps.  
+Bugfix: Hide left,right and top borders if bottom border is set.  
+Bugfix: Flexbox editor view.  
+Bugfix: Buttons block 100% width setting.  
+Bugfix: List block padding missing on frontend.  
+  
 ### 1.11.0  
 Release date: July 26, 2022  
 
