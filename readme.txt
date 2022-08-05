@@ -48,6 +48,10 @@ Source https://phosphoricons.com/
 
 == Changelog ==
 
+= 1.12.1 =
+
+Release date: August , 2022
+
 = 1.12.0 =
 
 Release date: August 5, 2022
