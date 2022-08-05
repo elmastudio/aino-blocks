@@ -140,16 +140,16 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 														onChange={flexDirection => setAttributes({ flexDirection })}
 													/>
 													<ToggleControl
-														label={__('Inner buttons 100% width', 'ainoblocks')}
+														label={__('Buttons stretch to container width', 'ainoblocks')}
 														checked={!!fullWidth}
 														onChange={() => setAttributes({ fullWidth: !fullWidth })}
-														help={!!fullWidth ? __('Inner buttons are 100% width.', 'ainoblocks') : __('Toggle for inner buttons with 100% width.', 'ainoblocks')}
+														help={!!fullWidth ? __('Buttons stretch to width of container.', 'ainoblocks') : __('Toggle to stretch buttons to width of their outer container.', 'ainoblocks')}
 													/>
 													<ToggleControl
 														label={__('Flexbox gap', 'ainoblocks')}
 														checked={!!gapDesktop}
 														onChange={() => setAttributes({ gapDesktop: !gapDesktop })}
-														help={!!gapDesktop ? __('16px gap added.', 'ainoblocks') : __('Toggle for 16px gap between buttons.', 'ainoblocks')}
+														help={!!gapDesktop ? __('16px gap added.', 'ainoblocks') : __('Toggle to add a 16px gap between buttons.', 'ainoblocks')}
 													/>
 												</Fragment>
 											);
@@ -163,16 +163,16 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 														onChange={flexDirectionTablet => setAttributes({ flexDirectionTablet })}
 													/>
 													<ToggleControl
-														label={__('Inner buttons 100% width', 'ainoblocks')}
+														label={__('Buttons stretch to container width', 'ainoblocks')}
 														checked={!!fullWidthTablet}
 														onChange={() => setAttributes({ fullWidthTablet: !fullWidthTablet })}
-														help={!!fullWidthTablet ? __('Inner buttons are 100% width.', 'ainoblocks') : __('Toggle for inner buttons with 100% width.', 'ainoblocks')}
+														help={!!fullWidthTablet ? __('Buttons stretch to width of container.', 'ainoblocks') : __('Toggle to stretch buttons to width of their outer container.', 'ainoblocks')}
 													/>
 													<ToggleControl
 														label={__('Flexbox gap', 'ainoblocks')}
 														checked={!!gapTablet}
 														onChange={() => setAttributes({ gapTablet: !gapTablet })}
-														help={!!gapTablet ? __('16px gap added.', 'ainoblocks') : __('Toggle for 16px gap between buttons.', 'ainoblocks')}
+														help={!!gapTablet ? __('16px gap added.', 'ainoblocks') : __('Toggle to add a 16px gap between buttons.', 'ainoblocks')}
 													/>
 												</Fragment>
 											];
@@ -187,16 +187,16 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 														onChange={flexDirectionMobile => setAttributes({ flexDirectionMobile })}
 													/>
 													<ToggleControl
-														label={__('Inner buttons 100% width', 'ainoblocks')}
+														label={__('Buttons stretch to container width', 'ainoblocks')}
 														checked={!!fullWidthMobile}
 														onChange={() => setAttributes({ fullWidthMobile: !fullWidthMobile })}
-														help={!!fullWidthMobile ? __('Inner buttons are 100% width.', 'ainoblocks') : __('Toggle for inner buttons with 100% width.', 'ainoblocks')}
+														help={!!fullWidthMobile ? __('Buttons stretch to width of container.', 'ainoblocks') : __('Toggle to stretch buttons to width of their outer container.', 'ainoblocks')}
 													/>
 													<ToggleControl
 														label={__('Flexbox gap', 'ainoblocks')}
 														checked={!!gapMobile}
 														onChange={() => setAttributes({ gapMobile: !gapMobile })}
-														help={!!gapMobile ? __('16px gap added.', 'ainoblocks') : __('Toggle for 16px gap between buttons.', 'ainoblocks')}
+														help={!!gapMobile ? __('16px gap added.', 'ainoblocks') : __('Toggle to add a 16px gap between buttons.', 'ainoblocks')}
 													/>
 												</Fragment>
 											];
