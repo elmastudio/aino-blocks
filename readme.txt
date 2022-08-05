@@ -11,32 +11,15 @@ Tags             : blocks, layout, grid, design, block
 
  A collection of page builder blocks to build professional WordPress websites.
 
-
 == Description ==
 
 The AinoBlocks page builder blocks are a collection of page builder blocks for the Gutenberg block editor. With AinoBlocks and our free starter FSE block theme <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino</a> you can create professional websites with ease.
-
-## Blocks included
-* Grid block
-* Grid item block
-* Flexbox block
-* Flex Item block
-* Author block
-* Badge block
-* Buttons block
-* Card block
-* Divider block
-* Hero block
-* Sticker block
-* Testimonial block
-
 
 == Installation ==
 
 1. Install the AinoBlocks plugin either via the WordPress plugin directory or by uploading the files to your server at wp-content/plugins.
 2. Activate the AinoBlocks WordPress plugin through the 'Plugins' menu in WordPress.
 3. Use the AinoBlocks blocks on your next page or post.
-
 
 == Frequently Asked Questions ==
 
@@ -53,7 +36,6 @@ After the AinoBlocks plugin is installed, you will see the AinoBlocks blocks col
 = Does AinoBlocks come with patterns? =
 Yes, you can find the patterns inside the pattern library once you install the Aino FSE block theme.
 
-
 == Resources ==
 
 AinoBlocks WordPress plugin bundles the following third-party resources:
@@ -68,10 +50,17 @@ Source https://phosphoricons.com/
 
 = 1.12.0 =
 
-Release date: August , 2022
+Release date: August 5, 2022
 
 New: Accordion/FAQ block added to blocks collection.
+New: Buttons block responsive flex direction settings.
+New: Buttons block responsive flexbox gap settings.
+New: Grit Item block aligment tablet and mobile settings.
+Enhance: Grid item block InnerBlocks to useInnerBlocksProps.
 Bugfix: Hide left,right and top borders if bottom border is set.
+Bugfix: Flexbox editor view.
+Bugfix: Buttons block 100% width setting.
+Bugfix: List block padding missing on frontend.
 
 = 1.11.0 =
 
