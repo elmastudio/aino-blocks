@@ -6,8 +6,8 @@
  * Requires at least: 5.9
  * Tested up to:      6.0
  * Requires PHP:      7.0
- * Version:           1.11.0
- * Author:            Elma Studio
+ * Version:           1.12.0
+ * Author:            ElmaStudio
  * Author URI:        https://elmastudio.de/en/
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define most essential constants.
  */
-define( 'AINOBLOCKS_VERSION', '1.11.0' );
+define( 'AINOBLOCKS_VERSION', '1.12.0' );
 define( 'AINOBLOCKS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'AINOBLOCKS_URL', plugin_dir_url( __FILE__ ) );
 
@@ -65,6 +65,7 @@ function create_block_ainoblocks_block_init() {
 	register_block_type( __DIR__ . '/build/author' );
 	register_block_type( __DIR__ . '/build/profile-image' );
 	register_block_type( __DIR__ . '/build/badge' );
+	register_block_type( __DIR__ . '/build/accordion-faq' );
 }
 
 add_action( 'init', 'create_block_ainoblocks_block_init' );
@@ -110,5 +111,17 @@ function ainoblocks_frontend_assets() {
 	  null,
 	  filemtime( AINOBLOCKS_DIR . $frontend_style_path )
 	);
-  }
+
+	// automatically load dependencies and version
+	$asset_file = include( plugin_dir_path( __FILE__ ) . 'assets/frontend.asset.php');
+
+	wp_enqueue_script(
+		'-frontend',
+		plugins_url( 'assets/js/frontend.js', __FILE__ ),
+		$asset_file['dependencies'],
+		$asset_file['version'],
+		true
+	);
+
+}
 add_action( 'enqueue_block_assets', 'ainoblocks_frontend_assets' );

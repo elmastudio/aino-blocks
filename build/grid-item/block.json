@@ -47,12 +47,22 @@
       "default": "7"
     },
     "alignItem": {
-      "type": "string",
-      "default": "start"
+      "type": "string"
+    },
+    "alignItemTablet": {
+      "type": "string"
+    },
+    "alignItemMobile": {
+      "type": "string"
     },
     "justifyItem": {
-      "type": "string",
-      "default": "start"
+      "type": "string"
+    },
+    "justifyItemTablet": {
+      "type": "string"
+    },
+    "justifyItemMobile": {
+      "type": "string"
     },
     "stackOrder": {
       "type": "number"

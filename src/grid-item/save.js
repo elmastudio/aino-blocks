@@ -7,7 +7,7 @@ import classnames from 'classnames';
  * WordPress dependencies
  */
 import {
-	InnerBlocks,
+	useInnerBlocksProps,
 	useBlockProps,
 } from '@wordpress/block-editor';
 
@@ -21,7 +21,11 @@ export default function save({ attributes, className }) {
 			gridColumnStartMobile,
 			gridColumnEndMobile,
 			alignItem,
+			alignItemTablet,
+			alignItemMobile,
 			justifyItem,
+			justifyItemTablet,
+			justifyItemMobile,
 			stacking,
 			stackOrder,
 			gutter,
@@ -48,8 +52,28 @@ export default function save({ attributes, className }) {
 		[`col_end_t__${gridColumnEndTablet}`]: gridColumnEndTablet,
 		[`col_start_m__${gridColumnStartMobile}`]: gridColumnStartMobile,
 		[`col_end_m__${gridColumnEndMobile}`]: gridColumnEndMobile,
-		[`align-self__${alignItem}`]: alignItem,
-		[`justify-self__${justifyItem}`]: justifyItem,
+		'as__start': alignItem === 'start' && alignItem ? alignItem : undefined,
+		'as__end': alignItem === 'end' && alignItem ? alignItem : undefined,
+		'as__center': alignItem === 'center' && alignItem ? alignItem : undefined,
+		'as__stretch': alignItem === 'stretch' && alignItem ? alignItem : undefined,
+		'as__t__start': alignItemTablet === 'start' && alignItemTablet ? alignItemTablet : undefined,
+		'as__t__end': alignItemTablet === 'end' && alignItemTablet ? alignItemTablet : undefined,
+		'as__t__center': alignItemTablet === 'center' && alignItemTablet ? alignItemTablet : undefined,
+		'as__t__stretch': alignItemTablet === 'stretch' && alignItemTablet ? alignItemTablet : undefined,
+		'as__m__end': alignItemMobile === 'end' && alignItemMobile ? alignItemMobile : undefined,
+		'as__m__center': alignItemMobile === 'center' && alignItemMobile ? alignItemMobile : undefined,
+		'as__m__stretch': alignItemMobile === 'stretch' && alignItemMobile ? alignItemMobile : undefined,
+		'js__start': justifyItem === 'start' && justifyItem ? justifyItem : undefined,
+		'js__end': justifyItem === 'end' && justifyItem ? justifyItem : undefined,
+		'js__center': justifyItem === 'center' && justifyItem ? justifyItem : undefined,
+		'js__stretch': justifyItem === 'stretch' && justifyItem ? justifyItem : undefined,
+		'js__t__start': justifyItemTablet === 'start' && justifyItemTablet ? justifyItemTablet : undefined,
+		'js__t__end': justifyItemTablet === 'end' && justifyItemTablet ? justifyItemTablet : undefined,
+		'js__t__center': justifyItemTablet === 'center' && justifyItemTablet ? justifyItemTablet : undefined,
+		'js__t__stretch': justifyItemTablet === 'stretch' && justifyItemTablet ? justifyItemTablet : undefined,
+		'js__m__end': justifyItemMobile === 'end' && justifyItemMobile ? justifyItemMobile : undefined,
+		'js__m__center': justifyItemMobile === 'center' && justifyItemMobile ? justifyItemMobile : undefined,
+		'js__m__stretch': justifyItemMobile === 'stretch' && justifyItemMobile ? justifyItemMobile : undefined,
 		'no-stacking': ! stacking,
 		'has-stacking': stacking === true && stackOrder ? stackOrder : undefined,
 		[`stack-order__${stackOrder}`]: stacking === true && stackOrder ? stackOrder : undefined,
@@ -86,9 +110,9 @@ export default function save({ attributes, className }) {
 		className: classNames,
 	} );
 
+	const innerBlocksProps = useInnerBlocksProps.save( blockProps );
+
 	return (
-		<div { ...blockProps }>
-			< InnerBlocks.Content />
-		</div >
+		<div {...innerBlocksProps} />
 	);
 }

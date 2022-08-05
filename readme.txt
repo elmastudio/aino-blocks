@@ -5,29 +5,15 @@ Contributors     : elmastudio
 Tags             : block, WordPress blocks, gutenberg, blocks
 Requires at least: 5.9
 Tested up to     : 6.0
-Stable tag       : 1.11.0
 License          : GPL-2.0-or-later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
+Tags             : blocks, layout, grid, design, block
 
  A collection of page builder blocks to build professional WordPress websites.
 
 == Description ==
 
 The AinoBlocks page builder blocks are a collection of page builder blocks for the Gutenberg block editor. With AinoBlocks and our free starter FSE block theme <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino</a> you can create professional websites with ease.
-
-## Blocks included
-* Grid block
-* Grid item block
-* Flexbox block
-* Flex Item block
-* Author block
-* Badge block
-* Buttons block
-* Card block
-* Divider block
-* Hero block
-* Sticker block
-* Testimonial block
 
 == Installation ==
 
@@ -50,7 +36,31 @@ After the AinoBlocks plugin is installed, you will see the AinoBlocks blocks col
 = Does AinoBlocks come with patterns? =
 Yes, you can find the patterns inside the pattern library once you install the Aino FSE block theme.
 
+== Resources ==
+
+AinoBlocks WordPress plugin bundles the following third-party resources:
+
+Phosphor Icons
+Copyright (c) 2020 Phosphor Icons
+License: MIT License, https://raw.githubusercontent.com/phosphor-icons/phosphor-home/master/LICENSE
+Source https://phosphoricons.com/
+
+
 == Changelog ==
+
+= 1.12.0 =
+
+Release date: August 5, 2022
+
+New: Accordion/FAQ block added to blocks collection.
+New: Buttons block responsive flex direction settings.
+New: Buttons block responsive flexbox gap settings.
+New: Grit Item block aligment tablet and mobile settings.
+Enhance: Grid item block InnerBlocks to useInnerBlocksProps.
+Bugfix: Hide left,right and top borders if bottom border is set.
+Bugfix: Flexbox editor view.
+Bugfix: Buttons block 100% width setting.
+Bugfix: List block padding missing on frontend.
 
 = 1.11.0 =
 

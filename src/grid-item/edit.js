@@ -18,8 +18,8 @@ import {
 } from '@wordpress/compose';
 import {
 	InspectorControls,
-	InnerBlocks,
 	useBlockProps,
+	useInnerBlocksProps,
 } from '@wordpress/block-editor';
 import { Fragment } from '@wordpress/element';
 import { __, _x } from '@wordpress/i18n';
@@ -44,7 +44,11 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 			gridColumnStartMobile,
 			gridColumnEndMobile,
 			alignItem,
+			alignItemTablet,
+			alignItemMobile,
 			justifyItem,
+			justifyItemTablet,
+			justifyItemMobile,
 			stacking,
 			stackOrder,
 			gutter,
@@ -64,40 +68,46 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 			marginLeftMobile,
 		} = attributes;
 
-		const alignItemOptions = [{
-				value: 'start',
-				label: __('start', 'ainoblocks')
-			},
-			{
-				value: 'end',
-				label: __('end', 'ainoblocks')
-			},
-			{
-				value: 'center',
-				label: __('center', 'ainoblocks')
-			},
-			{
-				value: 'stretch',
-				label: __('stretch', 'ainoblocks')
-			}
+		const alignItemOptions = [
+			{ value: 'start', label: __('start', 'ainoblocks') },
+			{ value: 'end', label: __('end', 'ainoblocks') },
+			{ value: 'center', label: __('center', 'ainoblocks') },
+			{ value: 'stretch', label: __('stretch', 'ainoblocks') }
 		];
 
-		const justifyItemOptions = [{
-				value: 'start',
-				label: __('start', 'ainoblocks')
-			},
-			{
-				value: 'end',
-				label: __('end', 'ainoblocks')
-			},
-			{
-				value: 'center',
-				label: __('center', 'ainoblocks')
-			},
-			{
-				value: 'stretch',
-				label: __('stretch', 'ainoblocks')
-			}
+		const alignItemTabletOptions = [
+			{ value: 'start', label: __('start', 'ainoblocks') },
+			{ value: 'end', label: __('end', 'ainoblocks') },
+			{ value: 'center', label: __('center', 'ainoblocks') },
+			{ value: 'stretch', label: __('stretch', 'ainoblocks') }
+		];
+
+		const alignItemMobileOptions = [
+			{ value: 'start', label: __('start', 'ainoblocks') },
+			{ value: 'end', label: __('end', 'ainoblocks') },
+			{ value: 'center', label: __('center', 'ainoblocks') },
+			{ value: 'stretch', label: __('stretch', 'ainoblocks') }
+		];
+
+		const justifyItemOptions = [
+			{ value: 'start', label: __('start', 'ainoblocks') },
+			{ value: 'end', label: __('end', 'ainoblocks') },
+			{ value: 'center', label: __('center', 'ainoblocks') },
+			{ value: 'stretch', label: __('stretch', 'ainoblocks')}
+		];
+
+		const justifyItemTabletOptions = [
+			{ value: 'start', label: __('start', 'ainoblocks') },
+			{ value: 'end', label: __('end', 'ainoblocks') },
+			{ value: 'center', label: __('center', 'ainoblocks') },
+			{ value: 'stretch', label: __('stretch', 'ainoblocks')}
+		];
+
+		const justifyItemMobileOptions = [
+			{ value: 'start', label: __('start', 'ainoblocks') },
+			{ value: 'end', label: __('end', 'ainoblocks') },
+			{ value: 'center', label: __('center', 'ainoblocks') },
+			{ value: 'stretch', label: __('stretch', 'ainoblocks')}
 		];
 
 		const gridColumnStartDesktopTooltipContent = gridColumnStartDesktop => `line ${gridColumnStartDesktop}`
@@ -112,6 +122,10 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 
 		const blockProps = useBlockProps( {
 			className: classNames,
+		} );
+
+		const innerBlocksProps = useInnerBlocksProps( blockProps, {
+			templateLock: false,
 		} );
 
 		return (
@@ -220,22 +234,94 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 					</PanelBody>
 					<PanelBody
 						title={__('Aligment', 'ainoblocks')}
-						initialOpen={true}
+						initialOpen={false}
 					>
-						<SelectControl
-							label={__('Align item', 'ainoblocks')}
-							help={__('Aligns the Grid Item block inside its Grid area along the vertical column axis.', 'ainoblocks')}
-							value={alignItem}
-							options={alignItemOptions}
-							onChange={alignItem => setAttributes({ alignItem })}
-						/>
-						<SelectControl
-							label={__('Justify item', 'ainoblocks')}
-							help={__('Aligns the Grid Item block inside its Grid area on the horizontal row axis.', 'ainoblocks')}
-							value={justifyItem}
-							options={justifyItemOptions}
-							onChange={justifyItem => setAttributes({ justifyItem })}
-						/>
+					<TabPanel className="aino-device-panel"
+						activeClass="is-active"
+						initialTabName="desktop"
+						onSelect={ onSelect }
+						tabs={ [
+							{
+								name: 'desktop',
+								title: 'Desktop',
+								className: 'device-d',
+							},
+							{
+								name: 'tablet',
+								title: 'Tablet',
+								className: 'device-t',
+							},
+							{
+								name: 'mobile',
+								title: 'Mobile',
+								className: 'device-m',
+							},
+						] }>
+						{
+							( tab ) => {
+								switch ( tab.name ) {
+									case 'desktop':
+										return (
+											<Fragment>
+												<SelectControl
+													label={__('Align item', 'ainoblocks')}
+													help={__('Aligns the Grid Item block inside its Grid area along the vertical column axis.', 'ainoblocks')}
+													value={alignItem}
+													options={alignItemOptions}
+													onChange={alignItem => setAttributes({ alignItem })}
+												/>
+												<SelectControl
+													label={__('Justify item', 'ainoblocks')}
+													help={__('Aligns the Grid Item block inside its Grid area on the horizontal row axis.', 'ainoblocks')}
+													value={justifyItem}
+													options={justifyItemOptions}
+													onChange={justifyItem => setAttributes({ justifyItem })}
+												/>
+											</Fragment>
+										);
+									case 'tablet':
+										return [
+											<Fragment>
+												<SelectControl
+													label={__('Align item', 'ainoblocks')}
+													help={__('Aligns the Grid Item block inside its Grid area along the vertical column axis.', 'ainoblocks')}
+													value={alignItemTablet}
+													options={alignItemTabletOptions}
+													onChange={alignItemTablet => setAttributes({ alignItemTablet })}
+												/>
+												<SelectControl
+													label={__('Justify item', 'ainoblocks')}
+													help={__('Aligns the Grid Item block inside its Grid area on the horizontal row axis.', 'ainoblocks')}
+													value={justifyItemTablet}
+													options={justifyItemTabletOptions}
+													onChange={justifyItemTablet => setAttributes({ justifyItemTablet })}
+												/>
+											</Fragment>
+										];
+									
+									case 'mobile':
+										return [
+											<Fragment>
+												<SelectControl
+													label={__('Align item', 'ainoblocks')}
+													help={__('Aligns the Grid Item block inside its Grid area along the vertical column axis.', 'ainoblocks')}
+													value={alignItemMobile}
+													options={alignItemMobileOptions}
+													onChange={alignItemMobile => setAttributes({ alignItemMobile })}
+												/>
+												<SelectControl
+													label={__('Justify item', 'ainoblocks')}
+													help={__('Aligns the Grid Item block inside its Grid area on the horizontal row axis.', 'ainoblocks')}
+													value={justifyItemMobile}
+													options={justifyItemMobileOptions}
+													onChange={justifyItemMobile => setAttributes({ justifyItemMobile })}
+												/>
+											</Fragment>
+										];
+								}
+							}
+						}
+					</TabPanel>
 					</PanelBody>
 					<PanelBody
 						title={__('Margins', 'ainoblocks')}
@@ -445,11 +531,7 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 					</PanelBody>
 				</InspectorControls>
 
-				<div { ...blockProps }>
-					<InnerBlocks
-						templateLock={ false }
-					/>
-				</div>
+				<div { ...innerBlocksProps } />
 			</Fragment>
 		);
 }
@@ -478,7 +560,11 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			gridColumnStartMobile,
 			gridColumnEndMobile,
 			alignItem,
+			alignItemTablet,
+			alignItemMobile,
 			justifyItem,
+			justifyItemTablet,
+			justifyItemMobile,
 			stacking,
 			stackOrder,
 			gutter,
@@ -506,11 +592,32 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			[`col_start_m__${gridColumnStartMobile}`]: gridColumnStartMobile,
 			[`col_end_m__${gridColumnEndMobile}`]: gridColumnEndMobile,
 			[`align-self__${alignItem}`]: alignItem,
-			[`justify-self__${justifyItem}`]: justifyItem,
-			'no-gutter': ! gutter,
+			'as__start': alignItem === 'start' && alignItem ? alignItem : undefined,
+			'as__end': alignItem === 'end' && alignItem ? alignItem : undefined,
+			'as__center': alignItem === 'center' && alignItem ? alignItem : undefined,
+			'as__stretch': alignItem === 'stretch' && alignItem ? alignItem : undefined,
+			'as__t__start': alignItemTablet === 'start' && alignItemTablet ? alignItemTablet : undefined,
+			'as__t__end': alignItemTablet === 'end' && alignItemTablet ? alignItemTablet : undefined,
+			'as__t__center': alignItemTablet === 'center' && alignItemTablet ? alignItemTablet : undefined,
+			'as__t__stretch': alignItemTablet === 'stretch' && alignItemTablet ? alignItemTablet : undefined,
+			'as__m__end': alignItemMobile === 'end' && alignItemMobile ? alignItemMobile : undefined,
+			'as__m__center': alignItemMobile === 'center' && alignItemMobile ? alignItemMobile : undefined,
+			'as__m__stretch': alignItemMobile === 'stretch' && alignItemMobile ? alignItemMobile : undefined,
+			'js__start': justifyItem === 'start' && justifyItem ? justifyItem : undefined,
+			'js__end': justifyItem === 'end' && justifyItem ? justifyItem : undefined,
+			'js__center': justifyItem === 'center' && justifyItem ? justifyItem : undefined,
+			'js__stretch': justifyItem === 'stretch' && justifyItem ? justifyItem : undefined,
+			'js__t__start': justifyItemTablet === 'start' && justifyItemTablet ? justifyItemTablet : undefined,
+			'js__t__end': justifyItemTablet === 'end' && justifyItemTablet ? justifyItemTablet : undefined,
+			'js__t__center': justifyItemTablet === 'center' && justifyItemTablet ? justifyItemTablet : undefined,
+			'js__t__stretch': justifyItemTablet === 'stretch' && justifyItemTablet ? justifyItemTablet : undefined,
+			'js__m__end': justifyItemMobile === 'end' && justifyItemMobile ? justifyItemMobile : undefined,
+			'js__m__center': justifyItemMobile === 'center' && justifyItemMobile ? justifyItemMobile : undefined,
+			'js__m__stretch': justifyItemMobile === 'stretch' && justifyItemMobile ? justifyItemMobile : undefined,
 			'no-stacking': ! stacking,
 			'has-stacking': stacking === true && stackOrder ? stackOrder : undefined,
 			[`stack-order__${stackOrder}`]: stacking === true && stackOrder ? stackOrder : undefined,
+			'no-gutter': ! gutter,
 			'overlap-left': overlapLeft,
 			'overlap-right': overlapRight,
 			[`mt_d__${marginTopDesktop}`] : marginTopDesktop ? marginTopDesktop : undefined,
