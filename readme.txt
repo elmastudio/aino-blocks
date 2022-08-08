@@ -52,6 +52,8 @@ Source https://phosphoricons.com/
 
 Release date: August , 2022
 
+Bugfix: Grit Item block aligment desktop setting.
+
 = 1.12.0 =
 
 Release date: August 5, 2022
