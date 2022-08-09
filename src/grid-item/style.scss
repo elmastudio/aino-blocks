@@ -456,7 +456,6 @@
 	}
 
 	@media (min-width: 64em) {
-		&.align-self,
 		&.justify-self {
 			&__start {
 				justify-self: start;
@@ -472,6 +471,24 @@
 
 			&__stretch {
 				justify-self: stretch;
+			}
+		}
+
+		&.align-self {
+			&__start {
+				align-self: start;
+			}
+
+			&__end {
+				align-self: end;
+			}
+
+			&__center {
+				align-self: center;
+			}
+
+			&__stretch {
+				align-self: stretch;
 			}
 		}
 	}
