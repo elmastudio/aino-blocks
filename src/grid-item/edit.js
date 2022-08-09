@@ -25,13 +25,6 @@ import { Fragment } from '@wordpress/element';
 import { __, _x } from '@wordpress/i18n';
 
 /**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- */
-import './editor.scss';
-
-/**
  * Block edit function
  */
 export default function GridItemEdit( { attributes, setAttributes, className, onSelect } ) {
