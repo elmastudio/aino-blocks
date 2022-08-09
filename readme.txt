@@ -48,9 +48,15 @@ Source https://phosphoricons.com/
 
 == Changelog ==
 
+= 1.12.2 =
+
+Release date: August 9, 2022
+
+Bugfix: CSS update for Grit Item block.
+
 = 1.12.1 =
 
-Release date: August , 2022
+Release date: August 8, 2022
 
 Bugfix: Grit Item block aligment desktop setting.
 
