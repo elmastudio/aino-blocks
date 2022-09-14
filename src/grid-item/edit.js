@@ -159,6 +159,7 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 														onChange={(gridColumnStartDesktop) => setAttributes({ gridColumnStartDesktop })}
 														min={1}
 														max={13}
+														initialPosition={1}
 														allowReset={true}
 														renderTooltipContent={ gridColumnStartDesktopTooltipContent }
 													/>
@@ -168,6 +169,7 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 														onChange={(gridColumnEndDesktop) => setAttributes({ gridColumnEndDesktop })}
 														min={1}
 														max={13}
+														initialPosition={7}
 														allowReset={true}
 														renderTooltipContent={gridColumnEndDesktopTooltipContent }
 													/>
@@ -182,6 +184,7 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 													onChange={(gridColumnStartTablet) => setAttributes({ gridColumnStartTablet })}
 													min={1}
 													max={13}
+													initialPosition={1}
 													allowReset={true}
 													renderTooltipContent={ gridColumnStartTabletTooltipContent }
 													/>
@@ -191,6 +194,7 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 														onChange={(gridColumnEndTablet) => setAttributes({ gridColumnEndTablet })}
 														min={1}
 														max={13}
+														initialPosition={13}
 														allowReset={true}
 														renderTooltipContent={ gridColumnEndTabletTooltipContent }
 													/>
@@ -206,6 +210,7 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 													onChange={(gridColumnStartMobile) => setAttributes({ gridColumnStartMobile })}
 													min={1}
 													max={13}
+													initialPosition={1}
 													allowReset={true}
 													renderTooltipContent={ gridColumnStartMobileTooltipContent }
 													/>
@@ -215,6 +220,7 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 														onChange={(gridColumnEndMobile) => setAttributes({ gridColumnEndMobile })}
 														min={1}
 														max={13}
+														initialPosition={13}
 														allowReset={true}
 														renderTooltipContent={ gridColumnEndMobileTooltipContent }
 													/>
@@ -226,8 +232,8 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 						</TabPanel>
 					</PanelBody>
 					<PanelBody
-						title={__('Aligment', 'ainoblocks')}
-						initialOpen={false}
+						title={__('Aligments', 'ainoblocks')}
+						initialOpen={true}
 					>
 					<TabPanel className="aino-device-panel"
 						activeClass="is-active"
@@ -255,7 +261,7 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 								switch ( tab.name ) {
 									case 'desktop':
 										return (
-											<Fragment>
+											<Fragment className='css-1jerldp'>
 												<SelectControl
 													label={__('Align item', 'ainoblocks')}
 													help={__('Aligns the Grid Item block inside its Grid area along the vertical column axis.', 'ainoblocks')}

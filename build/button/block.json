@@ -101,5 +101,24 @@
         "margin": true
       }
     }
-  }
+  },
+  "styles": [
+    {
+      "name": "primary",
+      "label": "Fill",
+      "isDefault": true
+    },
+    {
+      "name": "outline",
+      "label": "Outline"
+    },
+    {
+      "name": "naked",
+      "label": "Ghost"
+    },
+    {
+      "name": "raised",
+      "label": "Raised"
+    }
+  ]
 }
