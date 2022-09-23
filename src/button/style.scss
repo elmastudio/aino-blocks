@@ -63,60 +63,92 @@
 		&.size {
 
 			&__xxxs {
-				padding: 0.563rem 1.125rem;
+				padding: 0.375rem 0.5rem;
 				font-size: 0.75rem;
 			}
 
 			&__xxs {
-				padding: 0.625rem 1.313rem;
+				padding: 0.5rem 0.625rem;
 				font-size: 0.875rem;
 			}
 
 			&__xs {
-				padding: 0.75rem 1.5rem;
-				font-size: 1rem;
+				padding: 0.625rem 0.813rem;
+				font-size: 0.875rem;
 			}
 
 			&__s {
-				padding: 0.875rem 1.688rem;
-				font-size: 1.125rem;
+				padding: 0.75rem 1rem;
+				font-size: 1rem;
 			}
 
 			&__m {
-				padding: 0.938rem 1.875rem;
-				font-size: clamp(1.125rem, 1.08333rem + 0.208333vw, 1.25rem);
+				padding: 1rem 1.313rem;
+				font-size: 1rem;
 			}
 
 			&__l {
-				padding: 1.125rem 2.25rem;
-				font-size: clamp(1.25rem, 1.16667rem + 0.416667vw, 1.5rem);
+				padding: 1.25rem 1.625rem;
+				font-size: 1rem;
 			}
 
 			&__xl {
-				padding: 1.375rem 2.813rem;
-				font-size: clamp(1.5rem, 1.375rem + 0.625vw, 1.875rem);
+				padding: 1.5rem 2rem;
+				font-size: 1.125rem;
 			}
 
-			&__xxl {
-				padding: 1.688rem 3.375rem;
-				font-size: clamp(1.875rem, 1.75rem + 0.625vw, 2.25rem);
-			}
-
+			&__xxl,
 			&__xxxl {
-				padding: 1.688rem 3.375rem;
-				font-size: clamp(2.25rem, 2rem + 1.25vw, 3rem);
-
-				@media (min-width: 64em) {
-					padding: 2.25rem 4.5rem;
-				}
+				padding: 2rem 2.625rem;
+				font-size: clamp(1.125rem, 1.08333rem + 0.208333vw, 1.25rem);
 			}
 
-			&__xxxxl {
-				padding: 1.688rem 3.375rem;
-				font-size: clamp(2.25rem, 1.75rem + 2.5vw, 3.75rem);
+			&__xxxl,
+			&__xxxxl,
+			&__5xl,
+			&__6xl,
+			&__7xl,
+			&__8xl,
+			&__9xl {
+				padding: 2.5rem 3.25rem;
+				font-size: clamp(1.25rem, 1.16667rem + 0.416667vw, 1.5rem);
+			}
 
-				@media (min-width: 64em) {
-					padding: 2.813rem 5.625rem;
+			@media (min-width: 64em) {
+
+				&__xxxl {
+				padding: 2.5rem 3.25rem;
+				font-size: clamp(1.25rem, 1.16667rem + 0.416667vw, 1.5rem);
+				}
+
+				&__xxxxl {
+					padding: 3rem 3.875rem;
+					font-size: clamp(1.5rem, 1.375rem + 0.625vw, 1.875rem);	
+				}
+
+				&__5xl {
+					padding: 4rem 5.188rem;
+					font-size: clamp(1.875rem, 1.75rem + 0.625vw, 2.25rem);
+				}
+				
+				&__6xl {
+					padding: 5rem 6.5rem;
+					font-size: clamp(2.25rem, 2rem + 1.25vw, 3rem);
+				}
+
+				&__7xl {
+					padding: 6rem 5.188rem;
+					font-size: clamp(2.25rem, 1.75rem + 2.5vw, 3.75rem);
+				}
+
+				&__8xl {
+					padding: 7.5rem 6.5rem;
+					font-size: clamp(3rem, 2.5rem + 2.5vw, 4.5rem);
+				}
+
+				&__9xl {
+					padding: 9rem 11.688rem;
+					font-size: clamp(3.75rem, 3rem + 3.75vw, 6rem);
 				}
 			}
 		}
