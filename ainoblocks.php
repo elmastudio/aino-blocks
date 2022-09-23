@@ -6,7 +6,7 @@
  * Requires at least: 5.9
  * Tested up to:      6.0
  * Requires PHP:      7.0
- * Version:           1.12.2
+ * Version:           1.12.3
  * Author:            ElmaStudio
  * Author URI:        https://elmastudio.de/en/
  * License:           GPL-2.0-or-later

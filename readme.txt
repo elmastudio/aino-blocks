@@ -48,6 +48,12 @@ Source https://phosphoricons.com/
 
 == Changelog ==
 
+= 1.12.3 =
+
+Release date: August , 2022
+
+Enhance: Button sizes.
+
 = 1.12.2 =
 
 Release date: August 9, 2022
