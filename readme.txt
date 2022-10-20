@@ -9,11 +9,11 @@ License          : GPL-2.0-or-later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
 Tags             : blocks, layout, grid, design, block
 
- A collection of page builder blocks to build professional WordPress websites.
+ A collection of blocks for the Gutenberg block editor to build professional WordPress websites.
 
 == Description ==
 
-The AinoBlocks website builder blocks are a collection of blocks for the Gutenberg block and site editors. With AinoBlocks and our Full Site Editing block themes you can create professional websites with ease.
+The AinoBlocks website builder blocks are a collection of blocks for the Gutenberg block editor. With AinoBlocks and our Full Site Editing block themes you can create professional websites with ease.
 
 == Installation ==
 
@@ -48,10 +48,11 @@ Source https://phosphoricons.com/
 
 == Changelog ==
 
-= 1.12.3 =
+= 1.13.0 =
 
-Release date: August , 2022
+Release date: October 20, 2022
 
+New: Icon block new icons added.
 Enhance: Button sizes.
 
 = 1.12.2 =
