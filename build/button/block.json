@@ -53,6 +53,10 @@
     "placeholder": {
       "type": "string"
     },
+    "mode": {
+      "type": "boolean",
+      "default": false
+    },
     "size": {
       "type": "string",
       "default": "size__m"
@@ -105,7 +109,7 @@
   "styles": [
     {
       "name": "primary",
-      "label": "Fill",
+      "label": "Primary",
       "isDefault": true
     },
     {
@@ -117,8 +121,8 @@
       "label": "Ghost"
     },
     {
-      "name": "raised",
-      "label": "Raised"
+      "name": "text",
+      "label": "Text"
     }
   ]
 }

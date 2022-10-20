@@ -45,6 +45,10 @@
 		"placeholder": {
 			"type": "string"
 		},
+		"mode": {
+			"type": "boolean",
+			"default": false
+		},
 		"size": {
 			"type": "string",
 			"default": "size__m"
@@ -95,9 +99,9 @@
 		}
 	},
 	"styles": [
-		{ "name": "primary", "label": "Fill", "isDefault": true },
+		{ "name": "primary", "label": "Primary", "isDefault": true },
 		{ "name": "outline", "label": "Outline" },
 		{ "name": "naked", "label": "Ghost" },
-		{ "name": "raised", "label": "Raised" }
+		{ "name": "text", "label": "Text" }
 	]
 }

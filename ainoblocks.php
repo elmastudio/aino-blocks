@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name:       AinoBlocks - Gutenberg Page Builder Blocks
+ * Plugin Name:       AinoBlocks - Gutenberg Website Builder Blocks
  * Plugin URI:        https://ainoblocks.io/
- * Description:       A collection of page builder blocks to build professional WordPress websites.
+ * Description:       A collection of website builder blocks for the Gutenberg block and site editor.
  * Requires at least: 5.9
  * Tested up to:      6.0
  * Requires PHP:      7.0

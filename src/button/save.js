@@ -22,6 +22,7 @@ export default function save( { attributes } ) {
 		borderRadius,
 		borderWidth,
 		uppercase,
+		mode,
 	} = attributes;
 
 	const buttonClasses = classnames('wp-block-ainoblocks-button__link', size, borderRadius, {
@@ -40,6 +41,7 @@ export default function save( { attributes } ) {
 	};
 
 	const wrapperClasses = classnames(classnames, {
+		'variant': mode,
 	});
 
 	const blockProps = useBlockProps.save( {

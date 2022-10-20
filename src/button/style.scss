@@ -14,27 +14,11 @@
 		}
 	}
 
-	&.is-style-raised {
-		box-shadow: -4px 4px 0px 0 var(--wp--preset--color--button-color-primary);
-		border-width: 1px;
-		border-style: solid;
-		transition: all 150ms ease;
-
-		&:hover {
-			box-shadow: none;
-			transform: translate(-4px, 4px);
-			color: inherit;
-		}
-	}
-
-	&.is-style-raised.variant {
-		box-shadow: -4px 4px 0px 0 var(--wp--preset--color--variant-button-color-primary);
-	}
-
 	.wp-block-ainoblocks-button__link {
 		border: none;
 		border-radius: 0;
 		color: inherit;
+		background-color: inherit;
 		cursor: pointer;
 		display: block;
 		margin: 0;
