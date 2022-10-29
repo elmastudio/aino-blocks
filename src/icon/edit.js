@@ -125,7 +125,20 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 		{ value: 'X', label                  : __('X', 'ainoblocks') },
 		{ value: 'XCircle', label            : __('X Circle', 'ainoblocks') },
 		{ value: 'DotsThree', label          : __('Dots Three', 'ainoblocks') },
-		{ value: 'DotsThreeVertical', label  : __('Dots Three Vertical', 'ainoblocks') },
+		{ value: 'DotsThreeVertical', label: __('Dots Three Vertical', 'ainoblocks') },
+		{ value: 'applepay', label         : __('Applepay', 'ainoblocks') },
+		{ value: 'applepayIconOnly', label : __('Applepay icon only', 'ainoblocks') },
+		{ value: 'dinersclub', label       : __('Dinersclub', 'ainoblocks') },
+		{ value: 'dinersclubColor', label  : __('dinersclub color', 'ainoblocks') },
+		{ value: 'discover', label         : __('Discover', 'ainoblocks') },
+		{ value: 'googlepay', label        : __('Googlepay', 'ainoblocks') },
+		{ value: 'googlepayColor', label   : __('Googlepay color', 'ainoblocks') },
+		{ value: 'mastercard', label       : __('Mastercard', 'ainoblocks') },
+		{ value: 'mastercardColor', label  : __('Mastercard', 'ainoblocks') },
+		{ value: 'paypal', label           : __('Paypal', 'ainoblocks') },
+		{ value: 'paypalColor', label      : __('Paypal color', 'ainoblocks') },
+		{ value: 'visa', label             : __('Visa', 'ainoblocks') },
+		{ value: 'visaColor', label        : __('Visa color', 'ainoblocks') },
 	];
 
 	const icon = (iconType === 'quote') ? (icons.quote)
@@ -218,6 +231,20 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 	: (iconType === 'XCircle') ? (icons.XCircle)
 	: (iconType === 'DotsThree') ? (icons.DotsThree)
 	: (iconType === 'DotsThreeVertical') ? (icons.DotsThreeVertical)
+	: (iconType === 'applepay') ? (icons.applepay)
+	: (iconType === 'applepayIconOnly') ? (icons.applepayIconOnly)
+	: (iconType === 'dinersclub') ? (icons.dinersclub)
+	: (iconType === 'dinersclubColor') ? (icons.dinersclubColor)
+	: (iconType === 'discover') ? (icons.discover)
+	: (iconType === 'googlepay') ? (icons.googlepay)
+	: (iconType === 'googlepayColor') ? (icons.googlepayColor)
+	: (iconType === 'mastercard') ? (icons.mastercard)
+	: (iconType === 'mastercardColor') ? (icons.mastercardColor)
+	: (iconType === 'paypal') ? (icons.paypal)
+	: (iconType === 'paypalColor') ? (icons.paypalColor)
+	: (iconType === 'visa') ? (icons.visa)
+	: (iconType === 'visaColor') ? (icons.visaColor)
+	
 	: (icons.attachment);
 
 	const iconSizeOptions = [

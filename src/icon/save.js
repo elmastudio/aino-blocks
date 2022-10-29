@@ -118,6 +118,19 @@ export default function save({ attributes }) {
 	: (iconType === 'XCircle') ? (icons.XCircle)
 	: (iconType === 'DotsThree') ? (icons.DotsThree)
 	: (iconType === 'DotsThreeVertical') ? (icons.DotsThreeVertical)
+	: (iconType === 'applepay') ? (icons.applepay)
+	: (iconType === 'applepayIconOnly') ? (icons.applepayIconOnly)
+	: (iconType === 'dinersclub') ? (icons.dinersclub)
+	: (iconType === 'dinersclubColor') ? (icons.dinersclubColor)
+	: (iconType === 'discover') ? (icons.discover)
+	: (iconType === 'googlepay') ? (icons.googlepay)
+	: (iconType === 'googlepayColor') ? (icons.googlepayColor)
+	: (iconType === 'mastercard') ? (icons.mastercard)
+	: (iconType === 'mastercardColor') ? (icons.mastercardColor)
+	: (iconType === 'paypal') ? (icons.paypal)
+	: (iconType === 'paypalColor') ? (icons.paypalColor)
+	: (iconType === 'visa') ? (icons.visa)
+	: (iconType === 'visaColor') ? (icons.visaColor)
 	: (icons.attachment);
 
 	return (
