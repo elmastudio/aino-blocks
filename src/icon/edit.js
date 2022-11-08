@@ -134,7 +134,7 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 		{ value: 'googlepay', label        : __('Googlepay', 'ainoblocks') },
 		{ value: 'googlepayColor', label   : __('Googlepay color', 'ainoblocks') },
 		{ value: 'mastercard', label       : __('Mastercard', 'ainoblocks') },
-		{ value: 'mastercardColor', label  : __('Mastercard', 'ainoblocks') },
+		{ value: 'mastercardColor', label  : __('Mastercard Color', 'ainoblocks') },
 		{ value: 'paypal', label           : __('Paypal', 'ainoblocks') },
 		{ value: 'paypalColor', label      : __('Paypal color', 'ainoblocks') },
 		{ value: 'visa', label             : __('Visa', 'ainoblocks') },
