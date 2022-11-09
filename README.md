@@ -7,7 +7,7 @@
 __Contributors:__ elmastudio  
 __Tags:__ page builder, Gutenberg blocks, WordPress blocks, gutenberg, blocks   
 __Requires at least:__ 5.9   
-__Tested up to:__ WordPress 6.0
+__Tested up to:__ WordPress 6.1  
 __License:__ GPLv2 or later  
 __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -30,6 +30,11 @@ __License URI:__ https://www.gnu.org/licenses/gpl-2.0.html
 ### Changelog  
 =======
 
+### 1.13.0  
+Release date: Nov  10, 2022  
+New: Icon block new icons added.  
+Enhance: Button sizes.  
+  
 ### 1.12.2  
 Release date: August  9, 2022  
 
