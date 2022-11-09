@@ -4,7 +4,7 @@
  * Plugin URI:        https://ainoblocks.io/
  * Description:       A collection of website builder blocks for the Gutenberg block editor.
  * Requires at least: 5.9
- * Tested up to:      6.0
+ * Tested up to:      6.1
  * Requires PHP:      7.0
  * Version:           1.13.0
  * Author:            ElmaStudio
