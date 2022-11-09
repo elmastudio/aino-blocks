@@ -50,7 +50,7 @@ Source https://phosphoricons.com/
 
 = 1.13.0 =
 
-Release date: Nov 9, 2022
+Release date: Nov 10, 2022
 
 New: Icon block new icons added.
 Enhance: Button sizes.
