@@ -32,36 +32,13 @@ import metadata from './block.json';
  */
 registerBlockType( metadata.name, {
 	icon,
-	styles: [
-		{
-			name: 'primary',
-			/* translators: block style */
-			label: __( 'Fill', 'ainoblocks' ),
-			isDefault: true,
-		},
-		{
-			name: 'outline',
-			/* translators: block style */
-			label: __( 'Outline' ),
-		},
-		{ 
-			name: 'naked',
-			/* translators: block style */
-			label: __( 'Naked' ),
-		},
-		{ 
-			name: 'raised',
-			/* translators: block style */
-			label: __( 'Raised' ),
-		},
-	],
 	example: {
 		name: 'ainoblocks/button',
 		attributes: {
 			className: 'is-style-primary',
 			label: __( 'Call to Action', 'ainoblocks' ),
-			borderRadius: 'radius-circular',
-			size: 'size__l',
+			borderRadius: 200,
+			size: 'size__m',
 		},
 	},
 	edit: Edit,

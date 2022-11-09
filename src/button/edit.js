@@ -64,6 +64,7 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 		borderRadius,
 		borderWidth,
 		uppercase,
+		mode,
 	} = attributes;
 
 	const sizeOptions = [
@@ -155,11 +156,12 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 		</Popover>
 	);
 
-	const buttonClasses = classnames(className, {
+	const wrapperClasses = classnames(className, {
+		'variant': mode,
 	});
 
 	const blockProps = useBlockProps( {
-		className: buttonClasses,
+		className: wrapperClasses,
 		style: styleBg,
 	} );
 
@@ -189,6 +191,11 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 			{ linkControl }
 			<InspectorControls>
 				<PanelBody title={__('Button Settings', 'ainoblocks')}>
+					<ToggleControl
+						label={__('Variant color mode', 'ainoblocks')}
+						checked={!!mode}
+						onChange={() => setAttributes({ mode: !mode })}
+					/>
 					<SelectControl
 						label={__('Size', 'ainoblocks')}
 						value={size}
@@ -214,7 +221,7 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 						allowReset={true}
 					/>
 					<ToggleControl
-						label={__('Uppercase Text', 'ainoblocks')}
+						label={__('Uppercase', 'ainoblocks')}
 						checked={!!uppercase}
 						onChange={() => setAttributes({ uppercase: !uppercase })}
 						help={!!uppercase ? __('Uppercase text is used.', 'ainoblocks') : __('Toggle for uppercase text.', 'ainoblocks')}

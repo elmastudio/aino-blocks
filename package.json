@@ -1,7 +1,7 @@
 {
 	"name": "ainoblocks",
-	"version": "1.12.2",
-	"title": "AinoBlocks - Essential Gutenberg Page Builder Blocks",
+	"version": "1.13.0",
+	"title": "AinoBlocks - Gutenberg Website Builder Blocks",
 	"author": "elmastudio",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",

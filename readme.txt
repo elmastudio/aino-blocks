@@ -1,19 +1,19 @@
-=== AinoBlocks - Gutenberg Page Builder Blocks ===
+=== AinoBlocks - Gutenberg Website Builder Blocks ===
 Author URI       : https: //www.elmastudio.de/en
 Plugin URI       : https: //ainoblocks.io
 Contributors     : elmastudio
 Tags             : block, WordPress blocks, gutenberg, blocks
 Requires at least: 5.9
-Tested up to     : 6.0
+Tested up to     : 6.1
 License          : GPL-2.0-or-later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
 Tags             : blocks, layout, grid, design, block
 
- A collection of page builder blocks to build professional WordPress websites.
+ A collection of blocks for the Gutenberg block editor to build professional WordPress websites.
 
 == Description ==
 
-The AinoBlocks page builder blocks are a collection of page builder blocks for the Gutenberg block editor. With AinoBlocks and our free starter FSE block theme <a href="https://wordpress.org/themes/aino/" target="_blank" rel="">Aino</a> you can create professional websites with ease.
+The AinoBlocks website builder blocks are a collection of blocks for the Gutenberg block editor. With AinoBlocks and our Full Site Editing block themes you can create professional websites with ease.
 
 == Installation ==
 
@@ -25,7 +25,7 @@ The AinoBlocks page builder blocks are a collection of page builder blocks for t
 
 = What are the requirements to use the AinoBlocks blocks plugin? =
 
-You only need to have the latest version of WordPress on your website, to begin with. We also recommend installing and activating the Gutenberg plugin.
+You only need to have the latest version of WordPress on your website, to begin with. We do not recommend to use the Gutenberg plugin or WooCommerce blocks plugin on your live websites.
 
 = What WordPress themes work with AinoBlocks blocks? =
 Any Gutenberg-ready WordPress theme will work with the AinoBlocks plugin. Since we created the free FSE block [Aino theme](https://wordpress.org/themes/aino/) specifically to work in combination with our block collection we recommend you to use our Aino theme with AinoBlocks.
@@ -34,7 +34,7 @@ Any Gutenberg-ready WordPress theme will work with the AinoBlocks plugin. Since 
 After the AinoBlocks plugin is installed, you will see the AinoBlocks blocks collection in your blocks library on any page and post. You can now choose a block and insert it into your editor.
 
 = Does AinoBlocks come with patterns? =
-Yes, you can find the patterns inside the pattern library once you install the Aino FSE block theme.
+Yes, you can find the patterns inside the pattern library once you install one of our FSE block themes.
 
 == Resources ==
 
@@ -47,6 +47,13 @@ Source https://phosphoricons.com/
 
 
 == Changelog ==
+
+= 1.13.0 =
+
+Release date: Nov 10, 2022
+
+New: Icon block new icons added.
+Enhance: Button sizes.
 
 = 1.12.2 =
 

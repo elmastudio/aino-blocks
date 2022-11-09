@@ -5,16 +5,32 @@
 		fill: currentColor;
 	}
 
-	&.size-xs {
+	&.size-xxxs {
 
 		svg {
-			width: 18px;
-			height: 18px;
+			width: 16px;
+			height: 16px;
 		}
 	}
 
-	&.size-m,
-	&.size-l {
+	&.size-xxs {
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&.size-xs {
+
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	&.size-s,
+	&.size-xl {
 
 		svg {
 			width: 32px;
@@ -22,12 +38,51 @@
 		}
 	}
 
-	&.size-l {
+	&.size-m {
 
-		@media (min-width: 48em) {
+		svg {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	&.size-l,
+	&.size-xxl {
+
+		svg {
+			width: 48px;
+			height: 48px;
+		}
+	}
+
+	&.size-xxxl {
+
+		svg {
+			width: 64px;
+			height: 64px;
+		}
+	}
+
+	@media (min-width: 48em) {
+
+		&.size-xl {
 			svg {
 				width: 64px;
 				height: 64px;
+			}
+		}
+
+		&.size-xxl {
+			svg {
+				width: 80px;
+				height: 80px;
+			}
+		}
+
+		&.size-xxxl {
+			svg {
+				width: 96px;
+				height: 96px;
 			}
 		}
 	}

@@ -53,6 +53,10 @@
     "placeholder": {
       "type": "string"
     },
+    "mode": {
+      "type": "boolean",
+      "default": false
+    },
     "size": {
       "type": "string",
       "default": "size__m"
@@ -101,5 +105,24 @@
         "margin": true
       }
     }
-  }
+  },
+  "styles": [
+    {
+      "name": "primary",
+      "label": "Primary",
+      "isDefault": true
+    },
+    {
+      "name": "outline",
+      "label": "Outline"
+    },
+    {
+      "name": "naked",
+      "label": "Ghost"
+    },
+    {
+      "name": "text",
+      "label": "Text"
+    }
+  ]
 }

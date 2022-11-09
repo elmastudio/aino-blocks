@@ -27,7 +27,7 @@
 		},
 		"gridColumnEndTablet": {
 			"type": "number",
-			"default": "7"
+			"default": "13"
 		},
 		"gridColumnStartMobile": {
 			"type": "number",
@@ -35,7 +35,7 @@
 		},
 		"gridColumnEndMobile": {
 			"type": "number",
-			"default": "7"
+			"default": "13"
 		},
 		"alignItem": {
 			"type": "string"
