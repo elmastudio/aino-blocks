@@ -50,8 +50,21 @@
     "__experimentalBorder": {
       "color": true,
       "width": true,
-      "radius": false,
-      "style": false
+      "radius": true,
+      "style": false,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "width": true,
+        "radius": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "padding": false,
+      "blockGap": false,
+      "__experimentalDefaultControls": {
+        "margin": true
+      }
     }
   },
   "styles": [

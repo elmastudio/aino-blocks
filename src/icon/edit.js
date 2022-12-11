@@ -2,6 +2,7 @@
  * External dependencies
  */
 import classnames from 'classnames';
+import { Check } from "phosphor-react";
 
 /**
  * WordPress dependencies
@@ -47,7 +48,6 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 		{ value: 'quote', label              : __('Quote', 'ainoblocks') },
 		{ value: 'trophy', label             : __('Trophy', 'ainoblocks') },
 		{ value: 'view', label               : __('View', 'ainoblocks') },
-		{ value: 'checkcircle', label        : __('Check Circle', 'ainoblocks') },
 		{ value: 'ArrowClockwise', label     : __('Arrow Clockwise', 'ainoblocks') },
 		{ value: 'ArrowLeft', label          : __('Arrow Left', 'ainoblocks') },
 		{ value: 'ArrowRight', label         : __('Arrow Right', 'ainoblocks') },
@@ -60,6 +60,7 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 		{ value: 'CaretRight', label         : __('Caret Right', 'ainoblocks') },
 		{ value: 'CaretUp', label            : __('Caret Up', 'ainoblocks') },
 		{ value: 'ChartBar', label           : __('Chart Bar', 'ainoblocks') },
+		{ value: 'Check', label              : __('Check', 'ainoblocks') },
 		{ value: 'CheckCircle', label        : __('Check Circle', 'ainoblocks') },
 		{ value: 'Coffee', label             : __('Coffee', 'ainoblocks') },
 		{ value: 'Confetti', label           : __('Confetti', 'ainoblocks') },
@@ -152,7 +153,6 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 	: (iconType === 'pin') ? (icons.pin)
 	: (iconType === 'trophy') ? (icons.trophy)
 	: (iconType === 'view') ? (icons.view)
-	: (iconType === 'checkcircle') ? (icons.checkcircle)
 	: (iconType === 'ArrowClockwise') ? (icons.ArrowClockwise)
 	: (iconType === 'ArrowLeft') ? (icons.ArrowLeft)
 	: (iconType === 'ArrowRight') ? (icons.ArrowRight)

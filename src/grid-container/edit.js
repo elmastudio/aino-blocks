@@ -57,10 +57,11 @@ export default function GridContainerEdit( { attributes, setAttributes, classNam
 
 		const columnGapOptions = [
 			{ value: "col-gap-none", label: __('none', 'ainoblocks') },
-			{ value: "col-gap-s", label  : __('S', 'ainoblocks') },
-			{ value: "col-gap-m", label  : __('M', 'ainoblocks') },
-			{ value: "col-gap-l", label  : __('L', 'ainoblocks') },
-			{ value: "col-gap-xl", label  : __('XL', 'ainoblocks') }
+			{ value: "col-gap-s", label   : __('S', 'ainoblocks') },
+			{ value: "col-gap-m", label   : __('M', 'ainoblocks') },
+			{ value: "col-gap-l", label   : __('L', 'ainoblocks') },
+			{ value: "col-gap-xl", label  : __('XL', 'ainoblocks') },
+			{ value: "col-gap-xxl", label : __('XXL', 'ainoblocks') }
 		];
 
 		const gridClasses = classnames(

@@ -149,7 +149,7 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 														label={__('Flexbox gap', 'ainoblocks')}
 														checked={!!gapDesktop}
 														onChange={() => setAttributes({ gapDesktop: !gapDesktop })}
-														help={!!gapDesktop ? __('16px gap added.', 'ainoblocks') : __('Toggle to add a 16px gap between buttons.', 'ainoblocks')}
+														help={!!gapDesktop ? __('Gap added.', 'ainoblocks') : __('Toggle to add a gap between buttons.', 'ainoblocks')}
 													/>
 												</Fragment>
 											);
@@ -172,7 +172,7 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 														label={__('Flexbox gap', 'ainoblocks')}
 														checked={!!gapTablet}
 														onChange={() => setAttributes({ gapTablet: !gapTablet })}
-														help={!!gapTablet ? __('16px gap added.', 'ainoblocks') : __('Toggle to add a 16px gap between buttons.', 'ainoblocks')}
+														help={!!gapTablet ? __('Gap added.', 'ainoblocks') : __('Toggle to add a gap between buttons.', 'ainoblocks')}
 													/>
 												</Fragment>
 											];
@@ -196,7 +196,7 @@ export default function MultipleButtonsEdit( { attributes, setAttributes, classN
 														label={__('Flexbox gap', 'ainoblocks')}
 														checked={!!gapMobile}
 														onChange={() => setAttributes({ gapMobile: !gapMobile })}
-														help={!!gapMobile ? __('16px gap added.', 'ainoblocks') : __('Toggle to add a 16px gap between buttons.', 'ainoblocks')}
+														help={!!gapMobile ? __('Gap added.', 'ainoblocks') : __('Toggle to add a gap between buttons.', 'ainoblocks')}
 													/>
 												</Fragment>
 											];

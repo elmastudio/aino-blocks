@@ -2,6 +2,7 @@
  * External dependencies
  */
 import classnames from 'classnames';
+import { Check } from "phosphor-react";
 
 /**
  * Internal dependencies
@@ -40,7 +41,6 @@ export default function save({ attributes }) {
 	: (iconType === 'pin') ? (icons.pin)
 	: (iconType === 'trophy') ? (icons.trophy)
 	: (iconType === 'view') ? (icons.view)
-	: (iconType === 'checkcircle') ? (icons.checkcircle)
 	: (iconType === 'ArrowClockwise') ? (icons.ArrowClockwise)
 	: (iconType === 'ArrowLeft') ? (icons.ArrowLeft)
 	: (iconType === 'BookmarkSimple') ? (icons.BookmarkSimple)

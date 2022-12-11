@@ -103,11 +103,11 @@ add_action( 'enqueue_block_editor_assets', 'ainoblocks_editor_assets' );
  * Enqueue frontend CSS
  */
 function ainoblocks_frontend_assets() {
-	$frontend_style_path = '/assets/css/frontend.css';
+	$frontend_style_path = '/assets/css/style.css';
 
 	wp_enqueue_style(
 	  'ainoblocks-frontend-style',
-	  plugin_dir_url( __FILE__ ) . 'assets/css/frontend.css',
+	  plugin_dir_url( __FILE__ ) . 'assets/css/style.css',
 	  null,
 	  filemtime( AINOBLOCKS_DIR . $frontend_style_path )
 	);
