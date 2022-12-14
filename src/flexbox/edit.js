@@ -18,7 +18,7 @@ import {
 } from '@wordpress/block-editor';
 import { Fragment } from '@wordpress/element';
 import { __, _x } from '@wordpress/i18n';
- 
+
 /**
  * Block edit function
  */
@@ -43,6 +43,7 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 		alignContentMobile,
 		shadowName,
 		position,
+		gap,
 	} = attributes;
 
 	const flexDirectionDesktopOptions = [
@@ -179,6 +180,15 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 		{ value: "pos-br", label  : __('bottom right', 'ainoblocks') }
 	];
 
+	const gapOptions = [
+		{ value: "gap-none", label: __('none', 'ainoblocks') },
+		{ value: "gap-s", label   : __('S', 'ainoblocks') },
+		{ value: "gap-m", label   : __('M', 'ainoblocks') },
+		{ value: "gap-l", label   : __('L', 'ainoblocks') },
+		{ value: "gap-xl", label  : __('XL', 'ainoblocks') },
+		{ value: "gap-xxl", label : __('XXL', 'ainoblocks') }
+	];
+
 	const flexboxClasses = classnames(
 		className,
 		flexDirectionDesktop,
@@ -198,7 +208,8 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 		alignContentMobile,
 		shadowName,
 		align,
-		position, {
+		position,
+		gap, {
 	});
 
 	const blockProps = useBlockProps( { className: flexboxClasses } );
@@ -363,6 +374,16 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 						}
 					}
 					</TabPanel>
+					</PanelBody>
+					<PanelBody
+						title={__('Gap', 'ainoblocks')}
+					>
+					<SelectControl
+						label={__("Gap", "ainoblocks")}
+						value={gap}
+						options={gapOptions}
+						onChange={gap => setAttributes({ gap })}
+					/>
 					</PanelBody>
 					<PanelBody
 						title={__('Absolute Positioning', 'ainoblocks')}

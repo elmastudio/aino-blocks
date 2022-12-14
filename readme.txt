@@ -3,7 +3,7 @@ Author URI       : https: //www.elmastudio.de/en
 Plugin URI       : https: //ainoblocks.io
 Contributors     : elmastudio
 Tags             : block, WordPress blocks, gutenberg, blocks
-Requires at least: 5.9
+Requires at least: 6.1
 Tested up to     : 6.1
 License          : GPL-2.0-or-later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
@@ -47,6 +47,12 @@ Source https://phosphoricons.com/
 
 
 == Changelog ==
+
+= 1.14.0 =
+
+Release date: Dec 15, 2022
+
+New: Flexbox gap setting.
 
 = 1.13.0 =
 

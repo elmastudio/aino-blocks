@@ -25,7 +25,7 @@ export default function save( { attributes } ) {
 		mode,
 	} = attributes;
 
-	const buttonClasses = classnames('wp-block-ainoblocks-button__link', size, borderRadius, {
+	const buttonClasses = classnames('wp-block-ainoblocks-wp-block-ab-btn__link', size, borderRadius, {
 		'is-uppercase': uppercase,
 		'no-border-radius': borderRadius === 0,
 		'no-border': borderWidth === 0,

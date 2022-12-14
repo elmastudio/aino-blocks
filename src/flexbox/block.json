@@ -89,6 +89,9 @@
 		},
 		"position": {
 			"type": "string"
+		},
+		"gap": {
+			"type": "string"
 		}
 	}
 }

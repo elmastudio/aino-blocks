@@ -32,6 +32,7 @@ export default function save( { attributes } ) {
 		alignContentMobile,
 		shadowName,
 		position,
+		gap,
 	} = attributes;
 
 	const flexboxClasses = classnames(
@@ -53,7 +54,8 @@ export default function save( { attributes } ) {
 		alignContentMobile,
 		shadowName,
 		align,
-		position, {
+		position,
+		gap, {
 	});
 
 	const blockProps = useBlockProps.save( { className: flexboxClasses } );
