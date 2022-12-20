@@ -53,6 +53,7 @@ Source https://phosphoricons.com/
 Release date: Dec 15, 2022
 
 New: Flexbox gap setting.
+New: Flexbox Item border support.
 
 = 1.13.0 =
 

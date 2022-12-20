@@ -17,7 +17,6 @@ export default function save( { attributes } ) {
 		url,
 		label,
 		linkTarget,
-		rel,
 		size,
 		borderRadius,
 		borderWidth,
@@ -25,7 +24,7 @@ export default function save( { attributes } ) {
 		mode,
 	} = attributes;
 
-	const buttonClasses = classnames('wp-block-ainoblocks-wp-block-ab-btn__link', size, borderRadius, {
+	const buttonClasses = classnames('wp-block-ainoblocks-button__link', size, borderRadius, {
 		'is-uppercase': uppercase,
 		'no-border-radius': borderRadius === 0,
 		'no-border': borderWidth === 0,
@@ -58,7 +57,6 @@ export default function save( { attributes } ) {
 				style={ styleButton}
 				value={ label }
 				target={ linkTarget }
-				rel={ rel }
 			/>
 		</div>
 	);

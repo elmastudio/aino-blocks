@@ -3,10 +3,10 @@
  * Plugin Name:       AinoBlocks - Gutenberg Website Builder Blocks
  * Plugin URI:        https://ainoblocks.io/
  * Description:       A collection of website builder blocks for the Gutenberg block editor.
- * Requires at least: 5.9
+ * Requires at least: 6.1
  * Tested up to:      6.1
  * Requires PHP:      7.0
- * Version:           1.13.0
+ * Version:           1.14.0
  * Author:            ElmaStudio
  * Author URI:        https://elmastudio.de/en/
  * License:           GPL-2.0-or-later

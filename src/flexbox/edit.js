@@ -182,11 +182,11 @@ export default function flexboxEdit( { attributes, setAttributes, className, onS
 
 	const gapOptions = [
 		{ value: "gap-none", label: __('none', 'ainoblocks') },
-		{ value: "gap-s", label   : __('S', 'ainoblocks') },
-		{ value: "gap-m", label   : __('M', 'ainoblocks') },
-		{ value: "gap-l", label   : __('L', 'ainoblocks') },
-		{ value: "gap-xl", label  : __('XL', 'ainoblocks') },
-		{ value: "gap-xxl", label : __('XXL', 'ainoblocks') }
+		{ value: "gap-s", label   : __('S (16px)', 'ainoblocks') },
+		{ value: "gap-m", label   : __('M (24px)', 'ainoblocks') },
+		{ value: "gap-l", label   : __('L (32px)', 'ainoblocks') },
+		{ value: "gap-xl", label  : __('XL (48px)', 'ainoblocks') },
+		{ value: "gap-xxl", label : __('XXL (64px)', 'ainoblocks') }
 	];
 
 	const flexboxClasses = classnames(

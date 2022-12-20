@@ -253,7 +253,6 @@ export default function buttonEdit( { attributes, setAttributes, className, isSe
 						setAttributes( { label: value })
 					} }
 					formattingControls={ [ 'bold', 'italic' ] }
-					rel ="noopener noreferrer"
 					opensInNewTab={ linkTarget === '_blank' }
 					onToggleOpenInNewTab={ onToggleOpenInNewTab }
 				/>
