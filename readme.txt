@@ -50,10 +50,14 @@ Source https://phosphoricons.com/
 
 = 1.14.0 =
 
-Release date: Dec 15, 2022
+Release date: Dec 22, 2022
 
+New: Icon block sizes.
+New: Icon block icons TextAa, CalendarBlank, ChatsTeardrop, Code, Pencil.
+Bugfix: Icon block delete old Calendar icon.
 New: Flexbox gap setting.
 New: Flexbox Item border support.
+Enhance: Block icons.
 
 = 1.13.0 =
 

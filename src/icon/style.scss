@@ -63,6 +63,14 @@
 		}
 	}
 
+	&.size-xxxxl {
+
+		svg {
+			width: 96px;
+			height: 96px;
+		}
+	}
+
 	@media (min-width: 48em) {
 
 		&.size-xl {
@@ -83,6 +91,14 @@
 			svg {
 				width: 96px;
 				height: 96px;
+			}
+		}
+
+		&.size-xxxxl {
+
+			svg {
+				width: 120px;
+				height: 120px;
 			}
 		}
 	}

@@ -40,7 +40,6 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 		{ value: 'attachment', label         : __('Attachment', 'ainoblocks') },
 		{ value: 'baggage', label            : __('Baggage', 'ainoblocks') },
 		{ value: 'bookmark', label           : __('Bookmark', 'ainoblocks') },
-		{ value: 'calendar', label           : __('Calendar', 'ainoblocks') },
 		{ value: 'clock', label              : __('Clock', 'ainoblocks') },
 		{ value: 'flash', label              : __('Flash', 'ainoblocks') },
 		{ value: 'heart', label              : __('Heart', 'ainoblocks') },
@@ -54,20 +53,24 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 		{ value: 'BookmarkSimple', label     : __('Bookmark Simple', 'ainoblocks') },
 		{ value: 'BookOpen', label           : __('Book Open', 'ainoblocks') },
 		{ value: 'BoundingBox', label        : __('Bounding Box', 'ainoblocks') },
+		{ value: 'CalendarBlank', label      : __('CalendarBlank', 'ainoblocks') },
 		{ value: 'Camera', label             : __('Camera', 'ainoblocks') },
 		{ value: 'CaretDown', label          : __('Caret Down', 'ainoblocks') },
 		{ value: 'CaretLeft', label          : __('Caret Left', 'ainoblocks') },
 		{ value: 'CaretRight', label         : __('Caret Right', 'ainoblocks') },
 		{ value: 'CaretUp', label            : __('Caret Up', 'ainoblocks') },
 		{ value: 'ChartBar', label           : __('Chart Bar', 'ainoblocks') },
+		{ value: 'ChatsTeardrop', label      : __('ChatsTeardrop', 'ainoblocks') },
 		{ value: 'Check', label              : __('Check', 'ainoblocks') },
 		{ value: 'CheckCircle', label        : __('Check Circle', 'ainoblocks') },
+		{ value: 'Code', label               : __('Code', 'ainoblocks') },
 		{ value: 'Coffee', label             : __('Coffee', 'ainoblocks') },
 		{ value: 'Confetti', label           : __('Confetti', 'ainoblocks') },
 		{ value: 'CreditCard', label         : __('Credit Card', 'ainoblocks') },
 		{ value: 'Crown', label              : __('Crown', 'ainoblocks') },
 		{ value: 'Fire', label               : __('Fire', 'ainoblocks') },
 		{ value: 'Flag', label               : __('Flag', 'ainoblocks') },
+		{ value: 'Gauge', label              : __('Gauge', 'ainoblocks') },
 		{ value: 'GlobeStand', label         : __('Globe Stand', 'ainoblocks') },
 		{ value: 'GridFour', label           : __('Grid Four', 'ainoblocks') },
 		{ value: 'HandPalm', label           : __('Hand Palm', 'ainoblocks') },
@@ -97,6 +100,7 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 		{ value: 'NumberZero', label         : __('Number Zero', 'ainoblocks') },
 		{ value: 'Paperclip', label          : __('Paperclip', 'ainoblocks') },
 		{ value: 'PaperPlaneRight', label    : __('Paper Plane Right', 'ainoblocks') },
+		{ value: 'Pencil', label             : __('Pencil', 'ainoblocks') },
 		{ value: 'Play', label               : __('Play', 'ainoblocks') },
 		{ value: 'Plus', label               : __('Plus', 'ainoblocks') },
 		{ value: 'PushPin', label            : __('Push Pin', 'ainoblocks') },
@@ -112,6 +116,7 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 		{ value: 'Sun', label                : __('Sun', 'ainoblocks') },
 		{ value: 'Swap', label               : __('Swap', 'ainoblocks') },
 		{ value: 'Tag', label                : __('Tag', 'ainoblocks') },
+		{ value: 'TextAa', label             : __('TextAa', 'ainoblocks') },
 		{ value: 'Timer', label              : __('Timer', 'ainoblocks') },
 		{ value: 'Translate', label          : __('Translate', 'ainoblocks') },
 		{ value: 'Trash', label              : __('Trash', 'ainoblocks') },
@@ -126,27 +131,26 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 		{ value: 'X', label                  : __('X', 'ainoblocks') },
 		{ value: 'XCircle', label            : __('X Circle', 'ainoblocks') },
 		{ value: 'DotsThree', label          : __('Dots Three', 'ainoblocks') },
-		{ value: 'DotsThreeVertical', label: __('Dots Three Vertical', 'ainoblocks') },
-		{ value: 'applepay', label         : __('Applepay', 'ainoblocks') },
-		{ value: 'applepayIconOnly', label : __('Applepay icon only', 'ainoblocks') },
-		{ value: 'dinersclub', label       : __('Dinersclub', 'ainoblocks') },
-		{ value: 'dinersclubColor', label  : __('dinersclub color', 'ainoblocks') },
-		{ value: 'discover', label         : __('Discover', 'ainoblocks') },
-		{ value: 'googlepay', label        : __('Googlepay', 'ainoblocks') },
-		{ value: 'googlepayColor', label   : __('Googlepay color', 'ainoblocks') },
-		{ value: 'mastercard', label       : __('Mastercard', 'ainoblocks') },
-		{ value: 'mastercardColor', label  : __('Mastercard Color', 'ainoblocks') },
-		{ value: 'paypal', label           : __('Paypal', 'ainoblocks') },
-		{ value: 'paypalColor', label      : __('Paypal color', 'ainoblocks') },
-		{ value: 'visa', label             : __('Visa', 'ainoblocks') },
-		{ value: 'visaColor', label        : __('Visa color', 'ainoblocks') },
+		{ value: 'DotsThreeVertical', label  : __('Dots Three Vertical', 'ainoblocks') },
+		{ value: 'applepay', label           : __('Applepay', 'ainoblocks') },
+		{ value: 'applepayIconOnly', label   : __('Applepay icon only', 'ainoblocks') },
+		{ value: 'dinersclub', label         : __('Dinersclub', 'ainoblocks') },
+		{ value: 'dinersclubColor', label    : __('dinersclub color', 'ainoblocks') },
+		{ value: 'discover', label           : __('Discover', 'ainoblocks') },
+		{ value: 'googlepay', label          : __('Googlepay', 'ainoblocks') },
+		{ value: 'googlepayColor', label     : __('Googlepay color', 'ainoblocks') },
+		{ value: 'mastercard', label         : __('Mastercard', 'ainoblocks') },
+		{ value: 'mastercardColor', label    : __('Mastercard Color', 'ainoblocks') },
+		{ value: 'paypal', label             : __('Paypal', 'ainoblocks') },
+		{ value: 'paypalColor', label        : __('Paypal color', 'ainoblocks') },
+		{ value: 'visa', label               : __('Visa', 'ainoblocks') },
+		{ value: 'visaColor', label          : __('Visa color', 'ainoblocks') },
 	];
 
 	const icon = (iconType === 'quote') ? (icons.quote)
 	: (iconType === 'attachment') ? (icons.attachment)
 	: (iconType === 'baggage') ? (icons.baggage)
 	: (iconType === 'bookmark') ? (icons.bookmark)
-	: (iconType === 'calendar') ? (icons.calendar)
 	: (iconType === 'clock') ? (icons.clock)
 	: (iconType === 'flash') ? (icons.flash)
 	: (iconType === 'heart') ? (icons.heart)
@@ -155,24 +159,27 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 	: (iconType === 'view') ? (icons.view)
 	: (iconType === 'ArrowClockwise') ? (icons.ArrowClockwise)
 	: (iconType === 'ArrowLeft') ? (icons.ArrowLeft)
-	: (iconType === 'ArrowRight') ? (icons.ArrowRight)
 	: (iconType === 'BookmarkSimple') ? (icons.BookmarkSimple)
 	: (iconType === 'BookOpen') ? (icons.BookOpen)
 	: (iconType === 'BoundingBox') ? (icons.BoundingBox)
+	: (iconType === 'CalendarBlank') ? (icons.CalendarBlank)
 	: (iconType === 'Camera') ? (icons.Camera)
 	: (iconType === 'CaretDown') ? (icons.CaretDown)
 	: (iconType === 'CaretLeft') ? (icons.CaretLeft)
 	: (iconType === 'CaretRight') ? (icons.CaretRight)
 	: (iconType === 'CaretUp') ? (icons.CaretUp)
 	: (iconType === 'ChartBar') ? (icons.ChartBar)
+	: (iconType === 'ChatsTeardrop') ? (icons.ChatsTeardrop)
 	: (iconType === 'Check') ? (icons.Check)
 	: (iconType === 'CheckCircle') ? (icons.CheckCircle)
+	: (iconType === 'Code') ? (icons.Code)
 	: (iconType === 'Coffee') ? (icons.Coffee)
 	: (iconType === 'Confetti') ? (icons.Confetti)
 	: (iconType === 'CreditCard') ? (icons.CreditCard)
 	: (iconType === 'Crown') ? (icons.Crown)
 	: (iconType === 'Fire') ? (icons.Fire)
 	: (iconType === 'Flag') ? (icons.Flag)
+	: (iconType === 'Gauge') ? (icons.Gauge)
 	: (iconType === 'GlobeStand') ? (icons.GlobeStand)
 	: (iconType === 'GridFour') ? (icons.GridFour)
 	: (iconType === 'HandPalm') ? (icons.HandPalm)
@@ -202,6 +209,7 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 	: (iconType === 'NumberZero') ? (icons.NumberZero)
 	: (iconType === 'Paperclip') ? (icons.Paperclip)
 	: (iconType === 'PaperPlaneRight') ? (icons.PaperPlaneRight)
+	: (iconType === 'Pencil') ? (icons.Pencil)
 	: (iconType === 'Play') ? (icons.Play)
 	: (iconType === 'Plus') ? (icons.Plus)
 	: (iconType === 'PushPin') ? (icons.PushPin)
@@ -210,12 +218,14 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 	: (iconType === 'SelectionBackground') ? (icons.SelectionBackground)
 	: (iconType === 'ShieldWarning') ? (icons.ShieldWarning)
 	: (iconType === 'Smiley') ? (icons.Smiley)
+	: (iconType === 'SmileySad') ? (icons.SmileySad)
 	: (iconType === 'Sparkle') ? (icons.Sparkle)
 	: (iconType === 'Star') ? (icons.Star)
 	: (iconType === 'Storefront') ? (icons.Storefront)
 	: (iconType === 'Sun') ? (icons.Sun)
 	: (iconType === 'Swap') ? (icons.Swap)
 	: (iconType === 'Tag') ? (icons.Tag)
+	: (iconType === 'TextAa') ? (icons.TextAa)
 	: (iconType === 'Timer') ? (icons.Timer)
 	: (iconType === 'Translate') ? (icons.Translate)
 	: (iconType === 'Trash') ? (icons.Trash)
@@ -244,7 +254,6 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 	: (iconType === 'paypalColor') ? (icons.paypalColor)
 	: (iconType === 'visa') ? (icons.visa)
 	: (iconType === 'visaColor') ? (icons.visaColor)
-	
 	: (icons.attachment);
 
 	const iconSizeOptions = [
@@ -254,9 +263,10 @@ export default function iconEdit( { attributes, setAttributes, className } ) {
 		{ value: 'size-s', label   : __('S (32px)', 'ainoblocks') },
 		{ value: 'size-m', label   : __('M (40px)', 'ainoblocks') },
 		{ value: 'size-l', label   : __('L (48px)', 'ainoblocks') },
-		{ value: 'size-xl', label  : __('L (64px)', 'ainoblocks') },
-		{ value: 'size-xxl', label : __('L (80px)', 'ainoblocks') },
-		{ value: 'size-xxxl', label: __('L (96px)', 'ainoblocks') }
+		{ value: 'size-xl', label  : __('XL (64px)', 'ainoblocks') },
+		{ value: 'size-xxl', label : __('XXL (80px)', 'ainoblocks') },
+		{ value: 'size-xxxl', label: __('3XL (96px)', 'ainoblocks') },
+		{ value: 'size-xxxxl', label: __('4XL (120px)', 'ainoblocks') }
 	];
 
 	const iconClasses = classnames(className, iconType, iconSize, alignment, {});
