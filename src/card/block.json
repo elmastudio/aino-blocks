@@ -5,7 +5,7 @@
 	"title": "Card",
 	"version": "1.0.0",
 	"category": "ainoblocks",
-	"description": "Insert a card to highlight important content such as quotes or special notices. The card has a box style format that can be customised.",
+	"description": "Card container block.",
 	"keywords": [ "ainoblocks", "card", "container", "wrapper", "box" ],
 	"textdomain": "ainoblocks",
 	"editorScript": "file:./index.js",
@@ -78,5 +78,8 @@
 			"width": false
 		},
 		"align": [ "wide", "full" ]
-	}
+	},
+	"styles": [
+		{ "name": "bright-100-120", "label": "Bright 100→120" }
+	]
 }

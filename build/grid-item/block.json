@@ -134,5 +134,11 @@
       "style": false,
       "radius": false
     }
-  }
+  },
+  "styles": [
+    {
+      "name": "bright-100-120",
+      "label": "Bright 100→120"
+    }
+  ]
 }

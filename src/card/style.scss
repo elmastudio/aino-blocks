@@ -88,4 +88,13 @@
 			border-left-width: 0 !important;
 		}
 	}
+
+	// Block Styles
+	&.is-style-bright-100-120 {
+		transition: all .2s ease;
+
+		&:hover {
+			filter: brightness(120%);
+		}
+	}
 }
