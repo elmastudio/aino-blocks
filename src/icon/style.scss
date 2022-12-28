@@ -1,6 +1,10 @@
 .wp-block-ainoblocks-icon {
 	display: flex;
 
+	&.has-background {
+		display: inline-flex;
+	}
+
 	svg {
 		fill: currentColor;
 	}
