@@ -19,10 +19,6 @@ export default function save( { attributes } ) {
 		paddingBottom,
 		paddingLeft,
 		paddingRight,
-		borderTopWidth,
-		borderRightWidth,
-		borderBottomWidth,
-		borderLeftWidth,
 	} = attributes;
 
 	const cardClasses = classnames(classnames, shadowName, {
@@ -34,12 +30,6 @@ export default function save( { attributes } ) {
 
 	const blockProps = useBlockProps.save( {
 		className: cardClasses,
-		style: {
-			borderTopWidth: borderTopWidth ? borderTopWidth + 'px' : undefined,
-			borderRightWidth: borderRightWidth ? borderRightWidth + 'px' : undefined,
-			borderBottomWidth: borderBottomWidth ? borderBottomWidth + 'px' : undefined,
-			borderLeftWidth: borderLeftWidth ? borderLeftWidth + 'px' : undefined,
-		},
 	} );
 
 	return (

@@ -1,20 +1,31 @@
 .wp-block-ainoblocks-card {
-	border-style: solid;
-	border-width: 0;
 
 	p.has-background {
 		padding: 0 !important;
 	}
 
-	box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.15), 0 0 4px 0 rgba(0, 0, 0, 0.04);
-	-webkit-box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.15), 0 0 4px 0 rgba(0, 0, 0, 0.04);
-
 	&.shadow-a {
-		box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.15), 0 0 4px 0 rgba(0, 0, 0, 0.04);
-		-webkit-box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.15), 0 0 4px 0 rgba(0, 0, 0, 0.04);
+		box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.04);
 	}
+
 	&.shadow-b {
-		filter: drop-shadow(0px 20px 42px rgba(0, 0, 0, 0.07)) drop-shadow(0px 12.963px 24.5972px rgba(0, 0, 0, 0.0531481)) drop-shadow(0px 7.7037px 13.3778px rgba(0, 0, 0, 0.0425185)) drop-shadow(0px 4px 6.825px rgba(0, 0, 0, 0.035)) drop-shadow(0px 1.62963px 3.42222px rgba(0, 0, 0, 0.0274815)) drop-shadow(0px 0.37037px 1.65278px rgba(0, 0, 0, 0.0168519));
+		box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.08);
+	}
+
+	&.shadow-c {
+		box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.24), 0px 4px 8px rgba(0, 0, 0, 0.24);
+	}
+
+	&.shadow-d {
+		box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.24);
+	}
+
+	&.shadow-e {
+		box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.32);
+	}
+
+	&.shadow-f {
+		box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.48), 0px 4px 8px rgba(0, 0, 0, 0.48);
 	}
 
 	&.shadow-none {
@@ -32,62 +43,6 @@
 		}
 	}
 
-	@media (max-width: 48em) {
-
-		&.hide-border-top-mobile {
-			border-top-width: 0 !important;
-		}
-
-		&.hide-border-right-mobile {
-			border-right-width: 0 !important;
-		}
-
-		&.hide-border-bottom-mobile {
-			border-bottom-width: 0 !important;
-		}
-
-		&.hide-border-left-mobile {
-			border-left-width: 0 !important;
-		}
-	}
-
-	@media (min-width: 48em) and (max-width: 80em) {
-
-		&.hide-border-top-tablet {
-			border-top-width: 0 !important;
-		}
-
-		&.hide-border-right-tablet {
-			border-right-width: 0 !important;
-		}
-
-		&.hide-border-bottom-tablet {
-			border-bottom-width: 0 !important;
-		}
-
-		&.hide-border-left-tablet {
-			border-left-width: 0 !important;
-		}
-	}
-
-	@media (min-width: 80em) {
-
-		&.hide-border-top-desktop {
-			border-top-width: 0 !important;
-		}
-
-		&.hide-border-right-desktop {
-			border-right-width: 0 !important;
-		}
-
-		&.hide-border-bottom-desktop {
-			border-bottom-width: 0 !important;
-		}
-
-		&.hide-border-left-desktop {
-			border-left-width: 0 !important;
-		}
-	}
 
 	// Block Styles
 	&.is-style-bright-100-120 {

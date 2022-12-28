@@ -1,4 +1,4 @@
-=== AinoBlocks - Gutenberg Website Builder Blocks ===
+=== AinoBlocks - Builder Blocks for Gutenberg ===
 Author URI       : https: //www.elmastudio.de/en
 Plugin URI       : https: //ainoblocks.io
 Contributors     : elmastudio
@@ -13,7 +13,7 @@ Tags             : blocks, layout, grid, design, block
 
 == Description ==
 
-The AinoBlocks website builder blocks are a collection of blocks for the Gutenberg block editor. With AinoBlocks and our Full Site Editing block themes you can create professional websites with ease.
+The AinoBlocks builder blocks are a collection of blocks for the Gutenberg block editor. With AinoBlocks and our Full Site Editing block themes you can create professional websites with ease.
 
 == Installation ==
 
@@ -50,14 +50,16 @@ Source https://phosphoricons.com/
 
 = 1.14.0 =
 
-Release date: Dec 22, 2022
+Release date: Dec 28, 2022
 
-New: Icon block sizes.
-New: Icon block icons TextAa, CalendarBlank, ChatsTeardrop, Code, Pencil.
+New: Icon block size.
+New: Icon block new icons.
 Bugfix: Icon block delete old Calendar icon.
 New: Flexbox gap setting.
 New: Flexbox Item border support.
+New: Block style 'Bright' for FAQ/Accordion and Card block.
 Enhance: Block icons.
+Enhance: Update Card block to support default Border setting.
 
 = 1.13.0 =
 

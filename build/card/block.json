@@ -50,22 +50,6 @@
     "paddingRight": {
       "type": "number",
       "default": 7
-    },
-    "borderTopWidth": {
-      "type": "number",
-      "default": 0
-    },
-    "borderRightWidth": {
-      "type": "number",
-      "default": 0
-    },
-    "borderBottomWidth": {
-      "type": "number",
-      "default": 0
-    },
-    "borderLeftWidth": {
-      "type": "number",
-      "default": 0
     }
   },
   "supports": {
@@ -79,9 +63,8 @@
     },
     "__experimentalBorder": {
       "color": true,
-      "radius": false,
       "style": true,
-      "width": false
+      "width": true
     },
     "align": [
       "wide",

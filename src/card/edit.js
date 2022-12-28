@@ -38,16 +38,16 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 		paddingBottom,
 		paddingLeft,
 		paddingRight,
-		borderTopWidth,
-		borderRightWidth,
-		borderBottomWidth,
-		borderLeftWidth,
 	} = attributes;
 
 	const shadowNameOptions = [
 		{ value: "shadow-none", label: __('none', 'ainoblocks') },
-		{ value: "shadow-a", label   : __('small', 'ainoblocks') },
-		{ value: "shadow-b", label   : __('large', 'ainoblocks') }
+		{ value: "shadow-a", label   : __('1', 'ainoblocks') },
+		{ value: "shadow-b", label   : __('2', 'ainoblocks') },
+		{ value: "shadow-c", label   : __('3', 'ainoblocks') },
+		{ value: "shadow-d", label   : __('4', 'ainoblocks') },
+		{ value: "shadow-e", label   : __('5', 'ainoblocks') },
+		{ value: "shadow-f", label   : __('6', 'ainoblocks') }
 	];
 
 	const cardClasses = classnames(className, shadowName, align, {
@@ -59,12 +59,6 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 
 	const blockProps = useBlockProps( {
 		className: cardClasses,
-		style: {
-			borderTopWidth: borderTopWidth ? borderTopWidth + 'px' : undefined,
-			borderRightWidth: borderRightWidth ? borderRightWidth + 'px' : undefined,
-			borderBottomWidth: borderBottomWidth ? borderBottomWidth + 'px' : undefined,
-			borderLeftWidth: borderLeftWidth ? borderLeftWidth + 'px' : undefined,
-		},
 	} );
 
 	return (
@@ -78,47 +72,6 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 						value={shadowName}
 						options={shadowNameOptions}
 						onChange={shadowName => setAttributes({ shadowName })}
-					/>
-				</PanelBody>
-				<PanelBody
-					title={__('Border Width', 'ainoblocks')}
-					initialOpen={false}
-				>
-					<RangeControl
-						label={__('Border Width Top', 'ainoblocks')}
-						value={borderTopWidth}
-						initialPosition={0}
-						min={0}
-						max={100}
-						allowReset={true}
-						onChange={borderTopWidth => setAttributes({ borderTopWidth })}
-					/>
-					<RangeControl
-						label={__('Border Width Right', 'ainoblocks')}
-						value={borderRightWidth}
-						initialPosition={0}
-						min={0}
-						max={100}
-						allowReset={true}
-						onChange={borderRightWidth => setAttributes({ borderRightWidth })}
-					/>
-					<RangeControl
-						label={__('Border Width Bottom', 'ainoblocks')}
-						value={borderBottomWidth}
-						initialPosition={0}
-						min={0}
-						max={100}
-						allowReset={true}
-						onChange={borderBottomWidth => setAttributes({ borderBottomWidth })}
-					/>
-					<RangeControl
-						label={__('Border Width Left', 'ainoblocks')}
-						value={borderLeftWidth}
-						initialPosition={0}
-						min={0}
-						max={100}
-						allowReset={true}
-						onChange={borderLeftWidth => setAttributes({ borderLeftWidth })}
 					/>
 				</PanelBody>
 				<PanelBody
