@@ -59,6 +59,7 @@
 	},
 	"styles": [
 		{ "name": "faq", "label": "FAQ", "isDefault": true },
-		{ "name": "toggle", "label": "Content Toggle" }
+		{ "name": "toggle", "label": "Content Toggle" },
+		{ "name": "bright-100-120", "label": "Bright 100→120" }
 	]
 }
