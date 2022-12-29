@@ -59,6 +59,7 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 			marginRightMobile,
 			marginBottomMobile,
 			marginLeftMobile,
+			shadowName,
 		} = attributes;
 
 		const alignItemOptions = [
@@ -103,6 +104,16 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 			{ value: 'stretch', label: __('stretch', 'ainoblocks')}
 		];
 
+		const shadowNameOptions = [
+			{ value: "shadow-none", label: __('none', 'ainoblocks') },
+			{ value: "shadow-a", label   : __('a', 'ainoblocks') },
+			{ value: "shadow-b", label   : __('b', 'ainoblocks') },
+			{ value: "shadow-c", label   : __('c', 'ainoblocks') },
+			{ value: "shadow-d", label   : __('d', 'ainoblocks') },
+			{ value: "shadow-e", label   : __('e', 'ainoblocks') },
+			{ value: "shadow-f", label   : __('f', 'ainoblocks') }
+		];
+
 		const gridColumnStartDesktopTooltipContent = gridColumnStartDesktop => `line ${gridColumnStartDesktop}`
 		const gridColumnEndDesktopTooltipContent = gridColumnEndDesktop => `line ${gridColumnEndDesktop}`
 		const gridColumnStartTabletTooltipContent = gridColumnStartTablet => `line ${gridColumnStartTablet}`
@@ -110,7 +121,7 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 		const gridColumnStartMobileTooltipContent = gridColumnStartMobile => `line ${gridColumnStartMobile}`
 		const gridColumnEndMobileTooltipContent = gridColumnEndMobile => `line ${gridColumnEndMobile}`
 
-		const classNames = classnames(className, {
+		const classNames = classnames(className, shadowName, {
 		});
 
 		const blockProps = useBlockProps( {
@@ -528,6 +539,16 @@ export default function GridItemEdit( { attributes, setAttributes, className, on
 							help={!!gutter ? __('Toogle off to remove the spacing left and right of the grid item.', 'ainoblocks') : __('Toggle on for space left and right of the grid item.', 'ainoblocks')}
 						/>
 					</PanelBody>
+					<PanelBody title={__('Shadow', 'ainoblocks')}
+						initialOpen={false}
+					>
+					<SelectControl
+						label={__("Shadow", "ainoblocks")}
+						value={shadowName}
+						options={shadowNameOptions}
+						onChange={shadowName => setAttributes({ shadowName })}
+					/>
+					</PanelBody>
 				</InspectorControls>
 
 				<div { ...innerBlocksProps } />
@@ -581,9 +602,10 @@ const addCustomClassName = createHigherOrderComponent((BlockListBlock) => {
 			marginRightMobile,
 			marginBottomMobile,
 			marginLeftMobile,
+			shadowName,
 		} = attributes;
 
-		const classNames = classnames(className, {
+		const classNames = classnames(className, shadowName, {
 			[`col_start_d__${gridColumnStartDesktop}`]: gridColumnStartDesktop,
 			[`col_end_d__${gridColumnEndDesktop}`]: gridColumnEndDesktop,
 			[`col_start_t__${gridColumnStartTablet}`]: gridColumnStartTablet,

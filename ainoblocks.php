@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name:       AinoBlocks - Gutenberg Website Builder Blocks
+ * Plugin Name:       AinoBlocks - Gutenberg Blocks, Templates and Patterns Library
  * Plugin URI:        https://ainoblocks.io/
- * Description:       A collection of website builder blocks for the Gutenberg block editor.
+ * Description:       A collection of advanced website builder blocks, professionally designed patterns and templates library for the Gutenberg block editor.
  * Requires at least: 6.1
- * Tested up to:      6.1
+ * Tested up to:      6.1.1
  * Requires PHP:      7.0
  * Version:           1.14.0
  * Author:            ElmaStudio
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define most essential constants.
  */
-define( 'AINOBLOCKS_VERSION', '1.13.0' );
+define( 'AINOBLOCKS_VERSION', '1.14.0' );
 define( 'AINOBLOCKS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'AINOBLOCKS_URL', plugin_dir_url( __FILE__ ) );
 
@@ -50,22 +50,21 @@ add_filter( 'block_categories_all', function( $categories, $post ) {
  */
 function create_block_ainoblocks_block_init() {
 
-	register_block_type( __DIR__ . '/build/testimonial' );
 	register_block_type( __DIR__ . '/build/sticker' );
 	register_block_type( __DIR__ . '/build/button' );
 	register_block_type( __DIR__ . '/build/multiple-buttons' );
 	register_block_type( __DIR__ . '/build/icon' );
-	register_block_type( __DIR__ . '/build/hero' );
 	register_block_type( __DIR__ . '/build/grid-item' );
 	register_block_type( __DIR__ . '/build/grid-container' );
 	register_block_type( __DIR__ . '/build/flexbox' );
 	register_block_type( __DIR__ . '/build/flex-item' );
 	register_block_type( __DIR__ . '/build/divider' );
 	register_block_type( __DIR__ . '/build/card' );
-	register_block_type( __DIR__ . '/build/author' );
-	register_block_type( __DIR__ . '/build/profile-image' );
 	register_block_type( __DIR__ . '/build/badge' );
 	register_block_type( __DIR__ . '/build/accordion-faq' );
+	register_block_type( __DIR__ . '/build/testimonial' );
+	register_block_type( __DIR__ . '/build/author' );
+	register_block_type( __DIR__ . '/build/profile-image' );
 }
 
 add_action( 'init', 'create_block_ainoblocks_block_init' );
@@ -122,6 +121,10 @@ function ainoblocks_frontend_assets() {
 		$asset_file['version'],
 		true
 	);
-
 }
+
 add_action( 'enqueue_block_assets', 'ainoblocks_frontend_assets' );
+
+
+// Block Patterns.
+require_once AINOBLOCKS_DIR . '/inc/block-patterns.php';

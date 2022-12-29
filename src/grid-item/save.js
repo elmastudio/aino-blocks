@@ -43,9 +43,10 @@ export default function save({ attributes, className }) {
 			marginRightMobile,
 			marginBottomMobile,
 			marginLeftMobile,
+			shadowName,
 	} = attributes;
 
-	const classNames = classnames(className, {
+	const classNames = classnames(className, shadowName, {
 		[`col_start_d__${gridColumnStartDesktop}`]: gridColumnStartDesktop,
 		[`col_end_d__${gridColumnEndDesktop}`]: gridColumnEndDesktop,
 		[`col_start_t__${gridColumnStartTablet}`]: gridColumnStartTablet,

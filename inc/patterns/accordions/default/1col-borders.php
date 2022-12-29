@@ -1,0 +1,34 @@
+<?php
+return array(
+	'title'      => __( '1 col borders, default', 'abpatterns' ),
+	'categories' => array( 'accordions' ),
+	'content'    => '<!-- wp:group {"align":"full","layout":{"type":"constrained"},"backgroundColor":"background-primary","paddingTop":13,"paddingBottom":13} -->
+	<div class="wp-block-group alignfull has-background-primary-background-color has-background pt__13 pb__13"><!-- wp:ainoblocks/grid-container {"columnGap":"col-gap-m"} -->
+	<div class="wp-block-ainoblocks-grid-container alignwide ab-grid-block col-gap-m"><!-- wp:ainoblocks/grid-item {"gridColumnStartDesktop":4,"gridColumnEndDesktop":10,"gridColumnStartTablet":3,"gridColumnEndTablet":11,"gridColumnStartMobile":1,"gridColumnEndMobile":13,"justifyItem":"stretch","className":"align-self__start"} -->
+	<div class="wp-block-ainoblocks-grid-item col_start_d__4 col_end_d__10 col_start_t__3 col_end_t__11 col_start_m__1 col_end_m__13 justify-self__stretch no-stacking align-self__start"><!-- wp:ainoblocks/accordion-faq-block {"borderRadius":"none","question":"What do you think is the best way to keep learning?","style":{"border":{"width":"1px","radius":"8px"},"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}},"borderColor":"border-secondary","textColor":"font-secondary","className":"br__xs","paddingTop":7,"paddingBottom":7,"paddingLeft":7,"paddingRight":7} -->
+	<div class="wp-block-ainoblocks-accordion-faq-block icon__right br__xs has-border-color has-border-secondary-border-color has-font-secondary-color has-text-color br-all__none pt__7 pb__7 pl__7 pr__7" style="border-width:1px;border-radius:8px;margin-bottom:var(--wp--preset--spacing--6)" x-data="{ open: false }" @click="open = !open" :class="{\'open\': open, \'close\': ! open }"><div class="accordion"><h3 class="has-xxs-font-size">What do you think is the best way to keep learning?</h3></div><div class="panel"><!-- wp:paragraph {"placeholder":"Write an answer ...","textColor":"font-primary","fontSize":"text-xs","paddingTop":7} -->
+	<p class="has-font-primary-color has-text-color has-text-xs-font-size pt__7">Great question! My answer is there\'s no one right way to go about it. Even though today\'s fast-paced business world can demand optimised time management, self-accelerated education resources is critical for any entrepreneur looking to gain more knowledge on.</p>
+	<!-- /wp:paragraph --></div></div>
+	<!-- /wp:ainoblocks/accordion-faq-block -->
+	
+	<!-- wp:ainoblocks/accordion-faq-block {"borderRadius":"none","question":"What is the best digital marketing strategy that you have used?","style":{"border":{"radius":"8px","width":"1px"},"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}},"borderColor":"border-secondary","textColor":"font-primary","className":"br__xs","paddingTop":7,"paddingBottom":7,"paddingLeft":7,"paddingRight":7} -->
+	<div class="wp-block-ainoblocks-accordion-faq-block icon__right br__xs has-border-color has-border-secondary-border-color has-font-primary-color has-text-color br-all__none pt__7 pb__7 pl__7 pr__7" style="border-width:1px;border-radius:8px;margin-bottom:var(--wp--preset--spacing--6)" x-data="{ open: false }" @click="open = !open" :class="{\'open\': open, \'close\': ! open }"><div class="accordion"><h3 class="has-xxs-font-size">What is the best digital marketing strategy that you have used?</h3></div><div class="panel"><!-- wp:paragraph {"placeholder":"Write an answer ...","textColor":"font-secondary","fontSize":"text-xs","paddingTop":7} -->
+	<p class="has-font-secondary-color has-text-color has-text-xs-font-size pt__7">We have used a diversified digital marketing strategy to grow our business including SEO, Social Media Marketing, PPC, Content Marketing, Email Marketing and even Mobile Marketing.</p>
+	<!-- /wp:paragraph --></div></div>
+	<!-- /wp:ainoblocks/accordion-faq-block -->
+	
+	<!-- wp:ainoblocks/accordion-faq-block {"borderRadius":"none","question":"What\'s your favourite type of marketing?","style":{"border":{"width":"1px","radius":"8px"},"spacing":{"margin":{"bottom":"var:preset|spacing|6"}}},"borderColor":"border-secondary","textColor":"font-primary","className":"br__xs","paddingTop":7,"paddingBottom":7,"paddingLeft":7,"paddingRight":7} -->
+	<div class="wp-block-ainoblocks-accordion-faq-block icon__right br__xs has-border-color has-border-secondary-border-color has-font-primary-color has-text-color br-all__none pt__7 pb__7 pl__7 pr__7" style="border-width:1px;border-radius:8px;margin-bottom:var(--wp--preset--spacing--6)" x-data="{ open: false }" @click="open = !open" :class="{\'open\': open, \'close\': ! open }"><div class="accordion"><h3 class="has-xxs-font-size">What\'s your favourite type of marketing?</h3></div><div class="panel"><!-- wp:paragraph {"placeholder":"Write an answer ...","textColor":"font-secondary","fontSize":"text-xs","paddingTop":7} -->
+	<p class="has-font-secondary-color has-text-color has-text-xs-font-size pt__7">Marketing is the communication of your brand vision, mission and value through a variety of channels.</p>
+	<!-- /wp:paragraph --></div></div>
+	<!-- /wp:ainoblocks/accordion-faq-block -->
+	
+	<!-- wp:ainoblocks/accordion-faq-block {"borderRadius":"none","question":"What are some things you do to help run your business?","style":{"border":{"width":"1px","radius":"8px"},"spacing":{"margin":{"top":"0","right":"0","bottom":"0","left":"0"}}},"borderColor":"border-secondary","textColor":"font-primary","className":"br__xs is-style-faq","paddingTop":7,"paddingBottom":7,"paddingLeft":7,"paddingRight":7} -->
+	<div class="wp-block-ainoblocks-accordion-faq-block icon__right br__xs is-style-faq has-border-color has-border-secondary-border-color has-font-primary-color has-text-color br-all__none pt__7 pb__7 pl__7 pr__7" style="border-width:1px;border-radius:8px;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0" x-data="{ open: false }" @click="open = !open" :class="{\'open\': open, \'close\': ! open }"><div class="accordion"><h3 class="has-xxs-font-size">What are some things you do to help run your business?</h3></div><div class="panel"><!-- wp:paragraph {"placeholder":"Write an answer ...","textColor":"font-secondary","fontSize":"text-xs","paddingTop":7} -->
+	<p class="has-font-secondary-color has-text-color has-text-xs-font-size pt__7">We offer a wide variety of marketing, communication and technical services to improve your business. Our solutions are fully adaptable and have proved successful time and time again.</p>
+	<!-- /wp:paragraph --></div></div>
+	<!-- /wp:ainoblocks/accordion-faq-block --></div>
+	<!-- /wp:ainoblocks/grid-item --></div>
+	<!-- /wp:ainoblocks/grid-container --></div>
+	<!-- /wp:group -->',
+);

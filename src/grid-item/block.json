@@ -109,6 +109,9 @@
 		},
 		"marginLeftMobile": {
 			"type": "number"
+		},
+		"shadowName": {
+			"type": "string"
 		}
 	},
 	"supports": {
@@ -127,6 +130,7 @@
 		}
 	},
 	"styles": [
-		{ "name": "bright-100-120", "label": "Bright 100→120" }
+		{ "name": "bright-100-120", "label": "Bright 100→120" },
+		{ "name": "scale-100-130", "label": "Scale 100→130" }
 	]
 }

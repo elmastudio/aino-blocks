@@ -1,19 +1,19 @@
-=== AinoBlocks - Builder Blocks for Gutenberg ===
+=== AinoBlocks - Gutenberg Blocks, Templates and Patterns Library ===
 Author URI       : https: //www.elmastudio.de/en
 Plugin URI       : https: //ainoblocks.io
 Contributors     : elmastudio
-Tags             : block, WordPress blocks, gutenberg, blocks
+Tags             : block, WordPress blocks, gutenberg, patterns
 Requires at least: 6.1
-Tested up to     : 6.1
+Tested up to     : 6.1.1
 License          : GPL-2.0-or-later
 License URI      : https: //www.gnu.org/licenses/gpl-2.0.html
 Tags             : blocks, layout, grid, design, block
 
- A collection of blocks for the Gutenberg block editor to build professional WordPress websites.
+A collection of advanced website builder blocks, professionally designed patterns and templates library for the Gutenberg block editor.
 
 == Description ==
 
-The AinoBlocks builder blocks are a collection of blocks for the Gutenberg block editor. With AinoBlocks and our Full Site Editing block themes you can create professional websites with ease.
+The AinoBlocks builder blocks are a collection of blocks, patterns and page templates for the Gutenberg block editor. With AinoBlocks and our block themes you can create professional websites with ease.
 
 == Installation ==
 
@@ -50,8 +50,9 @@ Source https://phosphoricons.com/
 
 = 1.14.0 =
 
-Release date: Dec 28, 2022
+Release date: Dec 29, 2022
 
+New: Patterns library.
 New: Icon block size.
 New: Icon block new icons.
 Bugfix: Icon block delete old Calendar icon.

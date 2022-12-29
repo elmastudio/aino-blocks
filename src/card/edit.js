@@ -42,12 +42,12 @@ export default function cardEdit( { attributes, setAttributes, className } ) {
 
 	const shadowNameOptions = [
 		{ value: "shadow-none", label: __('none', 'ainoblocks') },
-		{ value: "shadow-a", label   : __('1', 'ainoblocks') },
-		{ value: "shadow-b", label   : __('2', 'ainoblocks') },
-		{ value: "shadow-c", label   : __('3', 'ainoblocks') },
-		{ value: "shadow-d", label   : __('4', 'ainoblocks') },
-		{ value: "shadow-e", label   : __('5', 'ainoblocks') },
-		{ value: "shadow-f", label   : __('6', 'ainoblocks') }
+		{ value: "shadow-a", label   : __('a', 'ainoblocks') },
+		{ value: "shadow-b", label   : __('b', 'ainoblocks') },
+		{ value: "shadow-c", label   : __('c', 'ainoblocks') },
+		{ value: "shadow-d", label   : __('d', 'ainoblocks') },
+		{ value: "shadow-e", label   : __('e', 'ainoblocks') },
+		{ value: "shadow-f", label   : __('f', 'ainoblocks') }
 	];
 
 	const cardClasses = classnames(className, shadowName, align, {
