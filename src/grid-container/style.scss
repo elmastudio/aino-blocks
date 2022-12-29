@@ -40,7 +40,6 @@
 	}
 
 	&.col-gap-xl {
-
 		column-gap: 1.5rem;
 
 		@media (min-width: 48rem) {
@@ -49,7 +48,6 @@
 	}
 
 	&.col-gap-xxl {
-
 		column-gap: 2rem;
 
 		@media (min-width: 48rem) {
@@ -58,6 +56,50 @@
 
 		@media (min-width: 64rem) {
 			column-gap: 4rem;
+		}
+	}
+
+	&.row-gap-none {
+		row-gap: 0;
+	}
+
+	&.row-gap-s {
+		row-gap: 0.5rem;
+
+		@media (min-width: 48rem) {
+			row-gap: 1rem;
+		}
+	}
+
+	&.row-gap-m {
+		row-gap: clamp(0.75rem, calc(0.38rem + 1.57vw), 1.5rem)
+	}
+
+	&.row-gap-l {
+		row-gap: 1rem;
+
+		@media (min-width: 48rem) {
+			row-gap: 2rem;
+		}
+	}
+
+	&.row-gap-xl {
+		row-gap: 1.5rem;
+
+		@media (min-width: 48rem) {
+			row-gap: 3rem;
+		}
+	}
+
+	&.row-gap-xxl {
+		row-gap: 2rem;
+
+		@media (min-width: 48rem) {
+			row-gap: 3rem;
+		}
+
+		@media (min-width: 64rem) {
+			row-gap: 4rem;
 		}
 	}
 

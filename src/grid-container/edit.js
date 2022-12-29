@@ -53,6 +53,7 @@ export default function GridContainerEdit( { attributes, setAttributes, classNam
 			align,
 			items,
 			columnGap,
+			rowGap,
 		} = attributes;
 
 		const columnGapOptions = [
@@ -64,11 +65,21 @@ export default function GridContainerEdit( { attributes, setAttributes, classNam
 			{ value: "col-gap-xxl", label : __('XXL (64px)', 'ainoblocks') }
 		];
 
+		const rowGapOptions = [
+			{ value: "row-gap-none", label: __('none', 'ainoblocks') },
+			{ value: "row-gap-s", label   : __('S (16px)', 'ainoblocks') },
+			{ value: "row-gap-m", label   : __('M (24px)', 'ainoblocks') },
+			{ value: "row-gap-l", label   : __('L (32px)', 'ainoblocks') },
+			{ value: "row-gap-xl", label  : __('XL (48px)', 'ainoblocks') },
+			{ value: "row-gap-xxl", label : __('XXL (64px)', 'ainoblocks') }
+		];
+
 		const gridClasses = classnames(
 			className,
 			'ab-grid-block',
 			`align${align}`,
 			columnGap,
+			rowGap,
 		);
 	
 		const blockProps = useBlockProps( { className: gridClasses } );
@@ -84,13 +95,19 @@ export default function GridContainerEdit( { attributes, setAttributes, classNam
 			<Fragment>
 				<InspectorControls>
 					<PanelBody
-						title={__('Gap', 'ainoblocks')}
+						title={__('Grid Gap', 'ainoblocks')}
 					>
 					<SelectControl
 						label={__("Column Gap", "ainoblocks")}
 						value={columnGap}
 						options={columnGapOptions}
 						onChange={columnGap => setAttributes({ columnGap })}
+					/>
+					<SelectControl
+						label={__("Row Gap", "ainoblocks")}
+						value={rowGap}
+						options={rowGapOptions}
+						onChange={rowGap => setAttributes({ rowGap })}
 					/>
 					</PanelBody>
 				</InspectorControls>

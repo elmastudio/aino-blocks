@@ -32,6 +32,9 @@
     },
     "columnGap": {
       "type": "string"
+    },
+    "rowGap": {
+      "type": "string"
     }
   },
   "supports": {

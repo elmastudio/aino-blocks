@@ -50,7 +50,7 @@ Source https://phosphoricons.com/
 
 = 1.14.0 =
 
-Release date: Dec 29, 2022
+Release date: Dec 30, 2022
 
 New: Patterns library.
 New: Icon block size.
@@ -59,6 +59,7 @@ Bugfix: Icon block delete old Calendar icon.
 New: Flexbox gap setting.
 New: Flexbox Item border support.
 New: Block style 'Bright' for FAQ/Accordion and Card block.
+New: Gap row gap.
 Enhance: Block icons.
 Enhance: Update Card block to support default Border setting.
 

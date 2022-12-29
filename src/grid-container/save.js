@@ -15,12 +15,14 @@ export default function save({ attributes }) {
 
 	const {
 		columnGap,
+		rowGap,
 	} = attributes;
 
 	const gridClasses = classnames(
 		classnames,
 		'ab-grid-block',
 		columnGap,
+		rowGap,
 	);
 
 	const blockProps = useBlockProps.save( { className: gridClasses } );
