@@ -1,0 +1,62 @@
+{
+  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/block.json",
+  "apiVersion": 2,
+  "name": "ainoblocks/timeline-event",
+  "version": "1.0.0",
+  "title": "Timeline Event",
+  "category": "ainoblocks",
+  "description": "A child block for the timeline block.",
+  "keywords": [
+    "timeline",
+    "CV",
+    "about",
+    "event",
+    "aino",
+    "ainoblocks"
+  ],
+  "parent": [
+    "ainoblocks/timeline"
+  ],
+  "textdomain": "ainoblocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "eventPosition": {
+      "type": "string",
+      "default": "right"
+    },
+    "eventOverlap": {
+      "type": "boolean",
+      "default": false
+    },
+    "markerPosition": {
+      "type": "string"
+    },
+    "markerStyle": {
+      "type": "string"
+    },
+    "eventLineTop": {
+      "type": "string"
+    },
+    "eventLineBottom": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide"
+    ],
+    "anchor": true,
+    "__experimentalBorder": {
+      "color": true,
+      "radius": false,
+      "style": false,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "width": true
+      }
+    }
+  }
+}

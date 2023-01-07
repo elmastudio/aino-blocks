@@ -65,6 +65,8 @@ function create_block_ainoblocks_block_init() {
 	register_block_type( __DIR__ . '/build/testimonial' );
 	register_block_type( __DIR__ . '/build/author' );
 	register_block_type( __DIR__ . '/build/profile-image' );
+	register_block_type( __DIR__ . '/build/timeline' );
+	register_block_type( __DIR__ . '/build/timeline-event' );
 }
 
 add_action( 'init', 'create_block_ainoblocks_block_init' );

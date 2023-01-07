@@ -62,7 +62,8 @@ export default function GridContainerEdit( { attributes, setAttributes, classNam
 			{ value: "col-gap-m", label   : __('M (24px)', 'ainoblocks') },
 			{ value: "col-gap-l", label   : __('L (32px)', 'ainoblocks') },
 			{ value: "col-gap-xl", label  : __('XL (48px)', 'ainoblocks') },
-			{ value: "col-gap-xxl", label : __('XXL (64px)', 'ainoblocks') }
+			{ value: "col-gap-xxl", label : __('XXL (64px)', 'ainoblocks') },
+			{ value: "col-gap-xxxl", label: __('3XL (96px)', 'ainoblocks') }
 		];
 
 		const rowGapOptions = [
@@ -71,7 +72,8 @@ export default function GridContainerEdit( { attributes, setAttributes, classNam
 			{ value: "row-gap-m", label   : __('M (24px)', 'ainoblocks') },
 			{ value: "row-gap-l", label   : __('L (32px)', 'ainoblocks') },
 			{ value: "row-gap-xl", label  : __('XL (48px)', 'ainoblocks') },
-			{ value: "row-gap-xxl", label : __('XXL (64px)', 'ainoblocks') }
+			{ value: "row-gap-xxl", label : __('XXL (64px)', 'ainoblocks') },
+			{ value: "row-gap-xxxl", label: __('3XL (96px)', 'ainoblocks') }
 		];
 
 		const gridClasses = classnames(

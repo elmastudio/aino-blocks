@@ -40,7 +40,7 @@
 	}
 
 	&.col-gap-xl {
-		column-gap: 1.5rem;
+		column-gap: 1rem;
 
 		@media (min-width: 48rem) {
 			column-gap: 3rem;
@@ -48,14 +48,26 @@
 	}
 
 	&.col-gap-xxl {
-		column-gap: 2rem;
+		column-gap: 1rem;
 
 		@media (min-width: 48rem) {
-			column-gap: 3rem;
+			column-gap: 1.5rem;
 		}
 
 		@media (min-width: 64rem) {
 			column-gap: 4rem;
+		}
+	}
+
+	&.col-gap-xxxl {
+		column-gap: 1rem;
+
+		@media (min-width: 48rem) {
+			column-gap: 2rem;
+		}
+
+		@media (min-width: 64rem) {
+			column-gap: 6rem;
 		}
 	}
 
@@ -100,6 +112,18 @@
 
 		@media (min-width: 64rem) {
 			row-gap: 4rem;
+		}
+	}
+
+	&.row-gap-xxxl {
+		row-gap: 3rem;
+
+		@media (min-width: 48rem) {
+			row-gap: 4.5rem;
+		}
+
+		@media (min-width: 64rem) {
+			row-gap: 6rem;
 		}
 	}
 

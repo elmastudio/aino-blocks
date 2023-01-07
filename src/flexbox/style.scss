@@ -366,19 +366,19 @@
 	}
 
 	&.gap-s {
-		gap: 0.5rem;
-
-		@media (min-width: 48rem) {
-			gap: 1rem;
-		}
+		gap: 1rem;
 	}
 
 	&.gap-m {
-		gap: clamp(0.75rem, calc(0.38rem + 1.57vw), 1.5rem)
+		gap: 1rem;
+
+		@media (min-width: 48rem) {
+			gap: 1.5rem;
+		}
 	}
 
 	&.gap-l {
-		gap: 1rem;
+		gap: 1.25rem;
 
 		@media (min-width: 48rem) {
 			gap: 2rem;
