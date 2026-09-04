@@ -15,12 +15,22 @@
 		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@wordpress/babel-preset-default": "^6.15.0",
-		"@wordpress/scripts": "^23.6.0"
+		"@wordpress/babel-preset-default": "^8.54.0",
+		"@wordpress/scripts": "^34.2.0"
 	},
 	"dependencies": {
-		"alpinejs": "^3.10.3",
-		"classnames": "^2.3.1",
-		"memize": "^1.1.0"
+		"alpinejs": "^3.17.1",
+		"classnames": "^2.5.1",
+		"memize": "^2.1.1",
+		"lodash": "^4.17.23"
+	},
+	"overrides": {
+		"@opentelemetry/core": "^2.8.0",
+		"linkify-it": "^5.0.2",
+		"markdown-it": "^14.2.0",
+		"minimatch@3": "^3.1.4",
+		"qs": "^6.16.0",
+		"serialize-javascript": "^7.0.5",
+		"uuid@8": "^11.1.1"
 	}
 }
