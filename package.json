@@ -32,6 +32,7 @@
 		"qs": "^6.16.0",
 		"serialize-javascript": "^7.0.5",
 		"uuid@8": "^11.1.1",
-		"@sentry/node": "^10.76.2"
+		"@sentry/node": "^10.76.2",
+		"postcss-selector-parser": "^7.1.6"
 	}
 }
